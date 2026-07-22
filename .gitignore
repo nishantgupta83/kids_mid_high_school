@@ -1,0 +1,21 @@
+# Dependencies / build outputs
+node_modules/
+out/
+.next/
+.wrangler/
+
+# Local-only data (PII rule: raw email text, snapshots, digests, quarantine NEVER committed)
+data/local/
+data/snapshots/
+data/digests/
+
+# Logs
+logs/
+*.log
+
+# Env / secrets (secrets live in macOS Keychain, never files — belt & braces)
+.env
+.env.*
+
+# OS noise
+.DS_Store

@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "school_year": "2026-27",
+  "district": "SRVUSD",
+  "source": "https://www.srvusd.net/documents/District/Instructional-Calendar/2026-27-Instructional-Calendar-Board-Approved-3-5-24.pdf",
+  "verified": "2026-07-21",
+  "dates": {
+    "first_day": "2026-08-13",
+    "thanksgiving_break": { "start": "2026-11-23", "end": "2026-11-27" },
+    "winter_break": { "start": "2026-12-21", "end": null, "note": "end date not yet verified against the PDF — confirm on first scan" },
+    "spring_break": { "start": "2027-04-02", "end": "2027-04-09" },
+    "last_day": "2027-06-03"
+  },
+  "testing": {
+    "psat_nmsqt": {
+      "date": "2026-10-17",
+      "location": "California High School (school of enrollment)",
+      "registration_deadline": "2026-09-20",
+      "registration_fee_usd": 40,
+      "accommodations_deadline": "2026-08-17",
+      "note": "digital, on school Chromebooks; practice test for a sophomore"
+    }
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "version": 1,
+  "events": [
+    {
+      "id": "evt-seed-001",
+      "dedupe_key": "both|2026-08-13|first-day-of-school",
+      "kid": "both",
+      "title": "First day of school (Cal High + Pine Valley)",
+      "date": "2026-08-13",
+      "end_date": null,
+      "time": null,
+      "type": "school",
+      "action": null,
+      "source": { "kind": "static", "ref": "school_year.json", "first_seen": "2026-07-21" },
+      "status": "active"
+    },
+    {
+      "id": "evt-seed-002",
+      "dedupe_key": "ridhi|2026-08-17|psat-accommodations-deadline",
+      "kid": "ridhi",
+      "title": "PSAT accommodations request deadline (if needed)",
+      "date": "2026-08-17",
+      "end_date": null,
+      "time": null,
+      "type": "deadline",
+      "action": { "required": true, "what": "Submit accommodations request via the school if applicable", "due": "2026-08-17" },
+      "source": { "kind": "static", "ref": "school_year.json", "first_seen": "2026-07-21" },
+      "status": "active"
+    },
+    {
+      "id": "evt-seed-003",
+      "dedupe_key": "ridhi|2026-09-20|psat-registration-deadline",
+      "kid": "ridhi",
+      "title": "PSAT/NMSQT registration deadline ($40, via school link)",
+      "date": "2026-09-20",
+      "end_date": null,
+      "time": null,
+      "type": "deadline",
+      "action": { "required": true, "what": "Register Ridhi for the PSAT/NMSQT", "due": "2026-09-20" },
+      "source": { "kind": "static", "ref": "school_year.json", "first_seen": "2026-07-21" },
+      "status": "active"
+    },
+    {
+      "id": "evt-seed-004",
+      "dedupe_key": "ridhi|2026-10-17|psat-nmsqt",
+      "kid": "ridhi",
+      "title": "PSAT/NMSQT at Cal High (digital, school Chromebooks)",
+      "date": "2026-10-17",
+      "end_date": null,
+      "time": "08:00",
+      "type": "test",
+      "action": null,
+      "source": { "kind": "static", "ref": "school_year.json", "first_seen": "2026-07-21" },
+      "status": "active"
+    },
+    {
+      "id": "evt-seed-005",
+      "dedupe_key": "both|2026-11-23|thanksgiving-break",
+      "kid": "both",
+      "title": "Thanksgiving break",
+      "date": "2026-11-23",
+      "end_date": "2026-11-27",
+      "time": null,
+      "type": "break",
+      "action": null,
+      "source": { "kind": "static", "ref": "school_year.json", "first_seen": "2026-07-21" },
+      "status": "active"
+    },
+    {
+      "id": "evt-seed-006",
+      "dedupe_key": "both|2026-12-21|winter-break-begins",
+      "kid": "both",
+      "title": "Winter break begins (end date TBC) — prime window for volunteer commitments",
+      "date": "2026-12-21",
+      "end_date": null,
+      "time": null,
+      "type": "break",
+      "action": null,
+      "source": { "kind": "static", "ref": "school_year.json", "first_seen": "2026-07-21" },
+      "status": "active"
+    },
+    {
+      "id": "evt-seed-007",
+      "dedupe_key": "both|2027-04-02|spring-break",
+      "kid": "both",
+      "title": "Spring break",
+      "date": "2027-04-02",
+      "end_date": "2027-04-09",
+      "time": null,
+      "type": "break",
+      "action": null,
+      "source": { "kind": "static", "ref": "school_year.json", "first_seen": "2026-07-21" },
+      "status": "active"
+    },
+    {
+      "id": "evt-seed-008",
+      "dedupe_key": "both|2027-06-03|last-day-of-school",
+      "kid": "both",
+      "title": "Last day of school",
+      "date": "2027-06-03",
+      "end_date": null,
+      "time": null,
+      "type": "school",
+      "action": null,
+      "source": { "kind": "static", "ref": "school_year.json", "first_seen": "2026-07-21" },
+      "status": "active"
+    }
+  ]
+}

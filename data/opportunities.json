@@ -1,0 +1,71 @@
+{
+  "version": 1,
+  "opportunities": [
+    {
+      "id": "opp-seed-001",
+      "dedupe_key": "john-muir-health|hs-volunteer|2026",
+      "kid": "ridhi",
+      "title": "High School Student Volunteer",
+      "org": "John Muir Health",
+      "url": "https://www.johnmuirhealth.com/get-involved/volunteer-services.html",
+      "category": "volunteer-bio",
+      "region": "bay-area",
+      "location": "Walnut Creek / Concord medical centers",
+      "eligibility": { "eligible_now": "yes", "reason": "requires 14.5+ and past second-semester freshman with GPA >= 3.0 — Ridhi (15, rising 10th) qualifies" },
+      "window": { "opens": null, "closes": null, "deadline": null, "confidence": "estimated" },
+      "commitment": "~3 hrs/week, year-round",
+      "pipeline": {
+        "status": "new",
+        "updated_at": "2026-07-21T21:30:00-07:00",
+        "updated_by": "agent",
+        "history": [{ "status": "new", "at": "2026-07-21T21:30:00-07:00" }]
+      },
+      "provenance": { "source_id": "john-muir-hs-volunteer", "first_seen": "2026-07-21", "last_seen": "2026-07-21", "evidence": "seeded from live research 2026-07-21; HS deep-link 404'd, confirm details on volunteer hub before applying" },
+      "notes": "Hospital setting — strongest currently-eligible bio/med option. Application via johnmuir.vsyslive.com portal."
+    },
+    {
+      "id": "opp-seed-002",
+      "dedupe_key": "city-of-san-ramon|teen-service-leadership|2026",
+      "kid": "both",
+      "title": "Teen Service & Leadership (city events, Forest Home Farms)",
+      "org": "City of San Ramon",
+      "url": "https://www.sanramon.ca.gov/our_city/departments_and_divisions/parks_community_services/teens/teen_service___leadership",
+      "category": "volunteer-general",
+      "region": "tri-valley",
+      "location": "San Ramon",
+      "eligibility": { "eligible_now": "yes", "reason": "ages 12-17 — both Ridhi (15) and Dhruv (11-12) fit" },
+      "window": { "opens": null, "closes": null, "deadline": null, "confidence": "verified" },
+      "commitment": "event-based, flexible weekends",
+      "pipeline": {
+        "status": "new",
+        "updated_at": "2026-07-21T21:30:00-07:00",
+        "updated_by": "agent",
+        "history": [{ "status": "new", "at": "2026-07-21T21:30:00-07:00" }]
+      },
+      "provenance": { "source_id": "sanramon-teen-service", "first_seen": "2026-07-21", "last_seen": "2026-07-21", "evidence": "seeded from live research 2026-07-21" },
+      "notes": "Closest-to-home service hours; create a SanRamonVolunteers.com account once to see full listings."
+    },
+    {
+      "id": "opp-seed-003",
+      "dedupe_key": "american-red-cross|youth-volunteer|2026",
+      "kid": "ridhi",
+      "title": "Youth Volunteer (incl. blood-drive ambassador roles)",
+      "org": "American Red Cross — Northern California Coastal",
+      "url": "https://www.redcross.org/local/california/northern-california-coastal/volunteer/youth-volunteers.html",
+      "category": "volunteer-general",
+      "region": "bay-area",
+      "location": "varies by opportunity (search by ZIP)",
+      "eligibility": { "eligible_now": "yes", "reason": "youth roles generally 13+ with parental consent — Ridhi (15) qualifies" },
+      "window": { "opens": null, "closes": null, "deadline": null, "confidence": "verified" },
+      "commitment": "varies per listing",
+      "pipeline": {
+        "status": "new",
+        "updated_at": "2026-07-21T21:30:00-07:00",
+        "updated_by": "agent",
+        "history": [{ "status": "new", "at": "2026-07-21T21:30:00-07:00" }]
+      },
+      "provenance": { "source_id": "redcross-volunteer-connection", "first_seen": "2026-07-21", "last_seen": "2026-07-21", "evidence": "seeded from live research 2026-07-21" },
+      "notes": "Blood-drive adjacent without the 16+ gate; also school-based Youth Clubs. Daily ZIP-search scan will surface specific local listings."
+    }
+  ]
+}
