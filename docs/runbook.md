@@ -19,10 +19,8 @@ launchctl kickstart -k gui/$(id -u)/com.nishant.school-intel
 ```
 ⚠ **Full Disk Access (TCC):** the repo lives under ~/Documents, so the first launchd run may hit EPERM (Control Panel's agent died this exact way on this Mac, 2026-07-21). If `logs/launchd.err` shows "Operation not permitted": System Settings → Privacy & Security → Full Disk Access → add `/bin/bash` (or grant when prompted), then kickstart again.
 
-### Slice 2 gates (when the dashboard lands)
-- Gate D: choose Pages project names (no kid full names in URLs).
-- Gate E: create a Cloudflare API token scoped to Pages Edit + Workers KV Edit; store as `security add-generic-password -a cloudflare -s school-intel-cf-token -w '<token>'`.
-- Gate F: pick a long random family code; `npx wrangler pages secret put SYNC_KEY` on the dashboard project; also `security add-generic-password -a family -s school-intel-family-code -w '<code>'`.
+### Slice 2 — DONE 2026-07-22
+- Dashboard LIVE: https://school-compass-anq.pages.dev (project `school-compass`, KV `FAMILY_OPS` 4d1cbb0d…). Gate E dissolved (agent uses the authed API, no CF token). Family code: Keychain `school-intel-family-code` — read it with `security find-generic-password -w -s school-intel-family-code`; enter once per browser/phone.
 
 ## Daily operations
 - Manual run: `bash agent/scan.sh --force`

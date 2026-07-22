@@ -140,13 +140,8 @@ if [ "$MODE" != "full" ]; then
   $PY "$AGENT/merge_results.py" --finalize-only || logln "STEP 8 finalize-only WARN"
 fi
 
-# ---- STEP 9: KV content push (slice 2 — stubbed) --------------------------
-if [ "$KV_ENABLED" = "true" ] && [ "$MODE" = "full" ]; then
-  $PY "$AGENT/push_content.py" --push || logln "STEP 9 kv-push WARN failed"
-  logln "STEP 9 kv-push OK"
-else
-  logln "STEP 9 kv-push SKIP"
-fi
+# ---- STEP 9: (KV push moved after finalize so health reflects THIS run) ---
+logln "STEP 9 kv-push deferred to post-finalize"
 
 # ---- STEP 10: digest ------------------------------------------------------
 DIGEST_MODE="$MODE"
@@ -171,6 +166,15 @@ OK="true"
 $PY "$AGENT/finalize_run.py" --mode "$MODE" --ok "$OK" --duration "$DURATION" \
   --step "email=$EMAIL_OK" --step "mode=$MODE" >/dev/null
 logln "STEP 11 finalize OK mode=$MODE duration=${DURATION}s"
+
+# ---- STEP 11b: KV push (health every run; content only when changed) ------
+if [ "$KV_ENABLED" = "true" ]; then
+  if $PY "$AGENT/push_content.py" --push; then
+    logln "STEP 11b kv-push OK"
+  else
+    logln "STEP 11b kv-push WARN failed (dashboard may show stale)"
+  fi
+fi
 
 # ---- STEP 12: commit state (PII lint gates it) ----------------------------
 if $PY "$REPO/scripts/validate_data.py" >/dev/null 2>&1; then

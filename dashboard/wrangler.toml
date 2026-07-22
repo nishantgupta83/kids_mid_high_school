@@ -1,0 +1,9 @@
+# Parent dashboard — Cloudflare Pages (DIRECT UPLOAD ONLY, never git-connect).
+# Deploy (from this dir): CLOUDFLARE_ACCOUNT_ID=cf4e17207cd036cd992130e86b339e24 npx wrangler pages deploy
+name = "school-compass"
+pages_build_output_dir = "public"
+compatibility_date = "2026-07-01"
+
+[[kv_namespaces]]
+binding = "FAMILY_OPS"
+id = "4d1cbb0da21c46a18b6cfd9a85eb250f"

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>School Compass</title>
+<style>
+:root {
+  --paper:#FBF7EE; --card:#FFFFFF; --ink:#2A2A25; --soft:#6B6B60; --line:#E8E2D4;
+  --sage:#4E7A5C; --teal:#2F6F6A; --coral:#C96F4A; --amber:#B98A2F; --sky:#4A7BA6;
+}
+* { box-sizing:border-box; margin:0; }
+body { background:var(--paper); color:var(--ink); font:15px/1.45 -apple-system,'Helvetica Neue',Arial,sans-serif; }
+.wrap { max-width:680px; margin:0 auto; padding:16px 14px 60px; }
+h1 { font-family:Georgia,serif; color:var(--sage); font-size:22px; }
+.sub { color:var(--soft); font-size:12px; margin-bottom:12px; }
+.tabs { display:flex; gap:6px; margin:10px 0 16px; }
+.tab { flex:1; text-align:center; padding:8px 4px; border:1px solid var(--line); border-radius:10px;
+       background:var(--card); color:var(--soft); font-weight:600; font-size:13px; cursor:pointer; }
+.tab.on { background:var(--sage); border-color:var(--sage); color:#fff; }
+.sec { font-family:Georgia,serif; font-weight:700; font-size:16px; margin:16px 0 6px; }
+.sec.coral{color:var(--coral)} .sec.teal{color:var(--teal)} .sec.sage{color:var(--sage)} .sec.amber{color:var(--amber)}
+.card { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:10px 12px; margin:7px 0; }
+.badge { display:inline-block; color:#fff; border-radius:10px; padding:0 8px; font-size:11px; font-weight:700; vertical-align:1px; }
+.b-ridhi{background:var(--teal)} .b-dhruv{background:var(--amber)} .b-both{background:var(--sage)} .b-family{background:var(--sage)}
+.muted { color:var(--soft); font-size:13px; }
+.due { color:var(--coral); font-weight:700; }
+.col-title { font-weight:700; font-size:13px; margin:14px 0 4px; letter-spacing:.4px; text-transform:uppercase; }
+.statusrow { display:flex; flex-wrap:wrap; gap:5px; margin-top:8px; }
+.sbtn { border:1px solid var(--line); background:var(--paper); border-radius:8px; padding:3px 9px; font-size:12px; cursor:pointer; color:var(--ink); }
+.sbtn.on { background:var(--teal); border-color:var(--teal); color:#fff; }
+.pill { display:inline-block; border:1px solid var(--line); border-radius:10px; padding:0 8px; font-size:11px; color:var(--soft); }
+a { color:var(--teal); }
+footer { position:fixed; bottom:0; left:0; right:0; background:var(--card); border-top:1px solid var(--line);
+         padding:6px 14px; font-size:11px; color:var(--soft); }
+footer.stale { background:var(--coral); color:#fff; }
+#gate { position:fixed; inset:0; background:var(--paper); display:flex; align-items:center; justify-content:center; z-index:10; }
+#gate .card { width:290px; text-align:center; }
+#gate input { width:100%; margin:10px 0; padding:9px; border:1px solid var(--line); border-radius:8px; font-size:15px; }
+#gate button { width:100%; padding:9px; border:0; border-radius:8px; background:var(--sage); color:#fff; font-weight:700; font-size:15px; cursor:pointer; }
+.err { color:var(--coral); font-size:12px; min-height:16px; }
+.hidden { display:none !important; }
+</style>
+</head>
+<body>
+<div id="gate">
+  <div class="card">
+    <h1>School Compass</h1>
+    <p class="muted">Enter the family code</p>
+    <input id="code" type="password" autocomplete="current-password" placeholder="family code">
+    <div class="err" id="gateErr"></div>
+    <button id="enter">Open</button>
+  </div>
+</div>
+
+<div class="wrap hidden" id="app">
+  <h1>School Compass</h1>
+  <div class="sub" id="today"></div>
+  <div class="tabs">
+    <div class="tab on" data-t="tToday">Today</div>
+    <div class="tab" data-t="tPipeline">Pipeline</div>
+    <div class="tab" data-t="tWatch">Watchlist</div>
+  </div>
+  <div id="tToday"></div>
+  <div id="tPipeline" class="hidden"></div>
+  <div id="tWatch" class="hidden"></div>
+</div>
+<footer id="foot"></footer>
+
+<script>
+"use strict";
+const $ = (s) => document.querySelector(s);
+const KEY = "si.code";
+const STATUSES = ["new", "discuss", "applied", "enrolled", "passed"];
+const SLABEL = { new:"New", discuss:"Discuss", applied:"Applied", enrolled:"Enrolled", passed:"Passed" };
+let DATA = null, PIPE = null;
+
+const esc = (s) => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+// Opportunity URLs come from LLM-classified untrusted content — only http(s) may render as links.
+const safeUrl = (u) => { try { const p = new URL(u); return (p.protocol === "https:" || p.protocol === "http:") ? p.href : null; } catch { return null; } };
+const localISO = () => { const d = new Date(); return d.getFullYear() + "-" + String(d.getMonth()+1).padStart(2,"0") + "-" + String(d.getDate()).padStart(2,"0"); };
+const badge = (k) => `<span class="badge b-${esc(k)}">${esc(k[0].toUpperCase()+k.slice(1))}</span>`;
+const fmtD = (d) => new Date(d + "T12:00:00").toLocaleDateString("en-US", {weekday:"short", month:"short", day:"numeric"});
+const daysTo = (d) => Math.round((new Date(d+"T12:00:00") - new Date(new Date().toDateString())) / 864e5);
+
+async function api(path, opts = {}) {
+  const r = await fetch(path, { ...opts, headers: { "x-sync-key": localStorage.getItem(KEY) || "", "Content-Type": "application/json", ...(opts.headers||{}) } });
+  if (r.status === 401) throw new Error("401");
+  if (!r.ok) throw new Error("http " + r.status);
+  return r.json();
+}
+
+async function load() {
+  const [d, p] = await Promise.all([api("/api/data"), api("/api/pipeline")]);
+  DATA = d; PIPE = p;
+  $("#gate").classList.add("hidden");
+  $("#app").classList.remove("hidden");
+  render();
+}
+
+function effStatus(o) {
+  const kv = PIPE?.statuses?.[o.id];
+  if (kv && (kv.updated_at || "") > (o.pipeline?.updated_at || "")) return kv.status;
+  return o.pipeline?.status || "new";
+}
+
+function render() {
+  const c = DATA?.content;
+  $("#today").textContent = new Date().toLocaleDateString("en-US", {weekday:"long", month:"long", day:"numeric"});
+  if (!c) {
+    $("#tToday").innerHTML = '<div class="card muted">No content yet — the next scan will populate this.</div>';
+    renderFoot(); return;
+  }
+  const events = (c.events || []).filter(e => e.status === "active");
+  const todayISO = localISO();
+
+  const actions = events.filter(e => e.action && e.action.due).sort((a,b) => a.action.due < b.action.due ? -1 : 1);
+  const week = events.filter(e => e.date >= todayISO && daysTo(e.date) < 14).sort((a,b) => a.date < b.date ? -1 : 1);
+  $("#tToday").innerHTML =
+    (actions.length ? `<div class="sec coral">Action needed</div>` + actions.map(e =>
+      `<div class="card">${badge(e.kid)} <b>${esc(e.action.what)}</b><div class="muted">${esc(e.title)}</div>` +
+      `<span class="due">due ${fmtD(e.action.due)} (${daysTo(e.action.due)}d)</span></div>`).join("") : "") +
+    `<div class="sec teal">Next two weeks</div>` +
+    (week.length ? week.map(e =>
+      `<div class="card"><span class="muted">${fmtD(e.date)}</span> ${badge(e.kid)} ${esc(e.title)}` +
+      (e.time ? ` <span class="pill">${esc(e.time)}</span>` : "") + `</div>`).join("")
+      : '<div class="card muted">Nothing scheduled.</div>');
+
+  const opps = c.opportunities || [];
+  $("#tPipeline").innerHTML = STATUSES.map(st => {
+    const rows = opps.filter(o => effStatus(o) === st);
+    if (!rows.length && (st === "enrolled" || st === "passed")) return "";
+    return `<div class="col-title">${SLABEL[st]} (${rows.length})</div>` + rows.map(o =>
+      `<div class="card">${badge(o.kid)} <b>${esc(o.title)}</b> — ${esc(o.org)}` +
+      `<div class="muted">${esc(o.eligibility?.reason || "")}${o.notes ? " · " + esc(o.notes) : ""}</div>` +
+      (o.window?.deadline ? `<span class="due">deadline ${fmtD(o.window.deadline)}</span> ` : "") +
+      (safeUrl(o.url) ? `<a href="${esc(safeUrl(o.url))}" target="_blank" rel="noopener">details</a>` : `<span class="pill">from school email</span>`) +
+      `<div class="statusrow">` + STATUSES.map(s =>
+        `<button class="sbtn ${s===st?"on":""}" data-opp="${esc(o.id)}" data-s="${s}">${SLABEL[s]}</button>`).join("") +
+      `</div></div>`).join("");
+  }).join("") || '<div class="card muted">No opportunities yet.</div>';
+
+  const watches = (c.watchlist || []).filter(w => w.state === "waiting" || w.state === "window_open");
+  const proposals = Object.entries(PIPE?.proposals || {});
+  $("#tWatch").innerHTML =
+    watches.map(w => {
+      const d = w.expected_open || w.hard_deadline;
+      return `<div class="card">${badge(w.kid)} <b>${esc(w.title)}</b>` +
+        (d ? `<div><span class="due">${w.hard_deadline && d===w.hard_deadline ? "deadline" : "opens"} ${fmtD(d)} (${daysTo(d)}d)</span></div>` : "") +
+        `<div class="muted">${esc(w.why || "")}</div></div>`;
+    }).join("") +
+    (proposals.length ? `<div class="sec amber">Proposed sources (approve to start scanning)</div>` +
+      proposals.filter(([,v]) => !v.decision || v.decision === "pending").map(([id]) =>
+        `<div class="card"><b>${esc(id)}</b><div class="statusrow">` +
+        `<button class="sbtn" data-prop="${esc(id)}" data-d="approve">Approve</button>` +
+        `<button class="sbtn" data-prop="${esc(id)}" data-d="dismiss">Dismiss</button></div></div>`).join("") : "");
+
+  renderFoot();
+}
+
+function renderFoot() {
+  const h = DATA?.health;
+  const f = $("#foot");
+  if (!h) { f.textContent = "no scan health yet"; return; }
+  const last = h.last_success_at || h.last_attempt_at;
+  const stale = last && (Date.now() - new Date(last)) > 36 * 3600e3;
+  f.className = stale ? "stale" : "";
+  f.textContent = `scan ${h.mode || "?"} · ${last ? new Date(last).toLocaleString() : "never"}` +
+    ` · ${h.emails_scanned ?? "?"} emails · ${h.sources_changed ?? "?"} changed` +
+    (h.sources_failing?.length ? ` · failing: ${h.sources_failing.join(", ")}` : "") + (stale ? " · STALE" : "");
+}
+
+document.addEventListener("click", async (ev) => {
+  const t = ev.target;
+  if (t.classList?.contains("tab")) {
+    document.querySelectorAll(".tab").forEach(x => x.classList.toggle("on", x === t));
+    ["tToday","tPipeline","tWatch"].forEach(id => $("#"+id).classList.toggle("hidden", t.dataset.t !== id));
+  }
+  if (t.dataset?.opp && t.dataset?.s) {
+    try {
+      await api("/api/pipeline", { method:"PUT", body: JSON.stringify({ oppId: t.dataset.opp, status: t.dataset.s }) });
+      PIPE.statuses[t.dataset.opp] = { status: t.dataset.s, updated_at: new Date().toISOString() };
+      render();
+    } catch { alert("save failed — try again"); }
+  }
+  if (t.dataset?.prop && t.dataset?.d) {
+    try {
+      await api("/api/pipeline", { method:"PUT", body: JSON.stringify({ proposalId: t.dataset.prop, decision: t.dataset.d }) });
+      PIPE.proposals[t.dataset.prop] = { decision: t.dataset.d };
+      render();
+    } catch { alert("save failed — try again"); }
+  }
+});
+
+$("#enter").addEventListener("click", async () => {
+  localStorage.setItem(KEY, $("#code").value.trim());
+  $("#gateErr").textContent = "";
+  try { await load(); } catch (e) { $("#gateErr").textContent = e.message === "401" ? "wrong code" : "connection problem"; }
+});
+$("#code").addEventListener("keydown", (e) => { if (e.key === "Enter") $("#enter").click(); });
+
+if (localStorage.getItem(KEY)) load().catch(() => {});
+</script>
+</body>
+</html>
