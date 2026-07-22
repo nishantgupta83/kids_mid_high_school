@@ -240,6 +240,46 @@
         "evidence": "Music director email 2026-06-09 announcing the 2nd Annual Summer Jazz Jams; exact session dates were not in the message excerpt"
       },
       "notes": "summer-fit, optional, free musicianship and social time; check band communications for the remaining session dates"
+    },
+    {
+      "id": "opp-20260722-004",
+      "dedupe_key": "san-ramon-valley-education-foundation-sr|srvef-imagineering-robotics-class|2026",
+      "kid": "dhruv",
+      "title": "SRVEF Imagineering: Robotics class",
+      "org": "San Ramon Valley Education Foundation (SRVEF)",
+      "url": null,
+      "category": "program",
+      "region": "tri-valley",
+      "location": "San Ramon (SRVEF Imagineering)",
+      "eligibility": {
+        "eligible_now": "check",
+        "reason": "Grade range not stated in the July flyers; earlier Imagineering flyers offered 6-12 sections, which would cover Dhruv as a rising 6th grader"
+      },
+      "window": {
+        "opens": null,
+        "closes": null,
+        "deadline": null,
+        "confidence": "estimated"
+      },
+      "commitment": "Enrichment class; schedule not stated in flyer",
+      "pipeline": {
+        "status": "new",
+        "updated_at": "2026-07-22T10:30:07",
+        "updated_by": "agent",
+        "history": [
+          {
+            "status": "new",
+            "at": "2026-07-22T10:30:07"
+          }
+        ]
+      },
+      "provenance": {
+        "source_id": "email-inbox",
+        "first_seen": "2026-07-22",
+        "last_seen": "2026-07-22",
+        "evidence": "Peachjar flyers on 2026-06-29, 2026-07-04, and 2026-07-11 list 'SRVEF Imagineering: Robotics class' with a Register link"
+      },
+      "notes": "Opportunistic STEM find; registration appears open now via the Peachjar flyer board"
     }
   ]
 }

@@ -119,9 +119,17 @@ def validate_opp(o, source_ids) -> list:
 
 
 def fuzzy_match(key: str, existing_keys: list):
-    base = key.rsplit("|", 1)[0]  # compare org|title, ignore cycle year
+    """Token-set Jaccard on org|title (cycle year ignored).
+
+    Sequence ratio falsely merged 'srvef-imagineering-robotics-class' into
+    'srvef-imagineering-first-aid-cpr-class' (long shared prefix, 2026-07-22) —
+    token overlap keeps sibling programs from one org distinct.
+    """
+    base = set(key.rsplit("|", 1)[0].replace("|", "-").split("-"))
     for ek in existing_keys:
-        if difflib.SequenceMatcher(None, base, ek.rsplit("|", 1)[0]).ratio() >= FUZZY_THRESHOLD:
+        other = set(ek.rsplit("|", 1)[0].replace("|", "-").split("-"))
+        union = base | other
+        if union and len(base & other) / len(union) >= FUZZY_THRESHOLD:
             return ek
     return None
 
