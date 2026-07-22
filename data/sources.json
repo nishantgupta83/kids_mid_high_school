@@ -8,12 +8,44 @@
       "kid": "ridhi",
       "category": "volunteer",
       "url": "https://volunteerconnection.redcross.org/?nd=rco_opportunity_browse_list&postal_code=94582",
-      "scan": { "method": "http_diff", "params": { "postal_codes": ["94582", "94583"] }, "region_hint": "opportunity results list", "frequency": "daily", "next_check_date": "2026-07-22", "last_checked": null, "last_hash": null, "etag": null, "last_modified": null, "consecutive_failures": 0 },
-      "eligibility": { "age_min": 13, "age_max": null, "grade_min": null, "grade_max": null, "gpa_min": null, "notes": "youth roles generally 13+, parental consent under 18; varies per listing" },
-      "application_window": { "opens": null, "closes": null, "recurrence": "rolling", "confidence": "verified" },
+      "scan": {
+        "method": "http_diff",
+        "params": {
+          "postal_codes": [
+            "94582",
+            "94583"
+          ]
+        },
+        "region_hint": "opportunity results list",
+        "frequency": "daily",
+        "next_check_date": "2026-07-29",
+        "last_checked": "2026-07-22",
+        "last_hash": "cb74a8c914fdc9395a1a7a44ac2698dffb4bf57f1cea539f71a5368a7e190c20",
+        "etag": null,
+        "last_modified": null,
+        "consecutive_failures": 0
+      },
+      "eligibility": {
+        "age_min": 13,
+        "age_max": null,
+        "grade_min": null,
+        "grade_max": null,
+        "gpa_min": null,
+        "notes": "youth roles generally 13+, parental consent under 18; varies per listing"
+      },
+      "application_window": {
+        "opens": null,
+        "closes": null,
+        "recurrence": "rolling",
+        "confidence": "verified"
+      },
       "priority": 1,
       "status": "active",
-      "provenance": { "added": "2026-07-21", "verified": "2026-07-21", "note": "live-explored; portal query is the best automated target" },
+      "provenance": {
+        "added": "2026-07-21",
+        "verified": "2026-07-21",
+        "note": "live-explored; portal query is the best automated target"
+      },
       "notes": "Blood-drive ambassador and youth roles; also Youth Clubs (school-based)."
     },
     {
@@ -22,12 +54,39 @@
       "kid": "ridhi",
       "category": "volunteer",
       "url": "https://chs.srvusd.net/School-Info/Departments/College-and-Career-Center/Volunteer--Job-Opportunities/index.html",
-      "scan": { "method": "http_diff", "params": {}, "region_hint": "posted opportunities list", "frequency": "daily", "next_check_date": "2026-07-22", "last_checked": null, "last_hash": null, "etag": null, "last_modified": null, "consecutive_failures": 0 },
-      "eligibility": { "age_min": null, "age_max": null, "grade_min": 9, "grade_max": 12, "gpa_min": null, "notes": "counselor-posted local leads for Cal High students" },
-      "application_window": { "opens": null, "closes": null, "recurrence": "rolling", "confidence": "verified" },
+      "scan": {
+        "method": "http_diff",
+        "params": {},
+        "region_hint": "posted opportunities list",
+        "frequency": "daily",
+        "next_check_date": "2026-07-23",
+        "last_checked": "2026-07-22",
+        "last_hash": "dfa705937713fc802363fd28bc37ef7aa72544a4bfee294ecccc12ced8a5d038",
+        "etag": "\"d7581c476618dd1:0\"",
+        "last_modified": "Mon, 20 Jul 2026 16:39:04 GMT",
+        "consecutive_failures": 0
+      },
+      "eligibility": {
+        "age_min": null,
+        "age_max": null,
+        "grade_min": 9,
+        "grade_max": 12,
+        "gpa_min": null,
+        "notes": "counselor-posted local leads for Cal High students"
+      },
+      "application_window": {
+        "opens": null,
+        "closes": null,
+        "recurrence": "rolling",
+        "confidence": "verified"
+      },
       "priority": 1,
       "status": "active",
-      "provenance": { "added": "2026-07-21", "verified": "2026-07-21", "note": "CatapultCMS — JS-render risk; if fetch returns a shell, inspect CMS JSON endpoint once in a browser" },
+      "provenance": {
+        "added": "2026-07-21",
+        "verified": "2026-07-21",
+        "note": "CatapultCMS — JS-render risk; if fetch returns a shell, inspect CMS JSON endpoint once in a browser"
+      },
       "notes": "This is where the San Ramon Regional Medical Center junior-volunteer pipeline is announced (apply via counselor early in school year; selection ~mid-May)."
     },
     {
@@ -36,12 +95,39 @@
       "kid": "ridhi",
       "category": "school-page",
       "url": "https://chs.srvusd.net/StudentsFamilies/PTSA/Upcoming-Cal-High-Events/index.html",
-      "scan": { "method": "http_diff", "params": {}, "region_hint": "events list", "frequency": "weekly", "next_check_date": "2026-07-22", "last_checked": null, "last_hash": null, "etag": null, "last_modified": null, "consecutive_failures": 0 },
-      "eligibility": { "age_min": null, "age_max": null, "grade_min": null, "grade_max": null, "gpa_min": null, "notes": "" },
-      "application_window": { "opens": null, "closes": null, "recurrence": "rolling", "confidence": "verified" },
+      "scan": {
+        "method": "http_diff",
+        "params": {},
+        "region_hint": "events list",
+        "frequency": "weekly",
+        "next_check_date": "2026-07-22",
+        "last_checked": null,
+        "last_hash": null,
+        "etag": null,
+        "last_modified": null,
+        "consecutive_failures": 0
+      },
+      "eligibility": {
+        "age_min": null,
+        "age_max": null,
+        "grade_min": null,
+        "grade_max": null,
+        "gpa_min": null,
+        "notes": ""
+      },
+      "application_window": {
+        "opens": null,
+        "closes": null,
+        "recurrence": "rolling",
+        "confidence": "verified"
+      },
       "priority": 2,
       "status": "active",
-      "provenance": { "added": "2026-07-21", "verified": "2026-07-21", "note": "" },
+      "provenance": {
+        "added": "2026-07-21",
+        "verified": "2026-07-21",
+        "note": ""
+      },
       "notes": "School-life events; email digests usually duplicate this but the page catches non-emailed items."
     },
     {
@@ -50,12 +136,39 @@
       "kid": "ridhi",
       "category": "volunteer",
       "url": "https://www.johnmuirhealth.com/get-involved/volunteer-services.html",
-      "scan": { "method": "http_diff", "params": {}, "region_hint": "high-school / student volunteering section", "frequency": "weekly", "next_check_date": "2026-07-22", "last_checked": null, "last_hash": null, "etag": null, "last_modified": null, "consecutive_failures": 0 },
-      "eligibility": { "age_min": 14.5, "age_max": null, "grade_min": 9, "grade_max": 12, "gpa_min": 3.0, "notes": "14.5+ and second-semester freshman; ~3 hrs/week year-round" },
-      "application_window": { "opens": null, "closes": null, "recurrence": "rolling", "confidence": "estimated" },
+      "scan": {
+        "method": "http_diff",
+        "params": {},
+        "region_hint": "high-school / student volunteering section",
+        "frequency": "weekly",
+        "next_check_date": "2026-07-22",
+        "last_checked": null,
+        "last_hash": null,
+        "etag": null,
+        "last_modified": null,
+        "consecutive_failures": 0
+      },
+      "eligibility": {
+        "age_min": 14.5,
+        "age_max": null,
+        "grade_min": 9,
+        "grade_max": 12,
+        "gpa_min": 3.0,
+        "notes": "14.5+ and second-semester freshman; ~3 hrs/week year-round"
+      },
+      "application_window": {
+        "opens": null,
+        "closes": null,
+        "recurrence": "rolling",
+        "confidence": "estimated"
+      },
       "priority": 1,
       "status": "active",
-      "provenance": { "added": "2026-07-21", "verified": "2026-07-21", "note": "HS-specific deep link 404'd on 2026-07-21 — details from search snippet; verify on hub. Application portal: johnmuir.vsyslive.com (login-gated)" },
+      "provenance": {
+        "added": "2026-07-21",
+        "verified": "2026-07-21",
+        "note": "HS-specific deep link 404'd on 2026-07-21 — details from search snippet; verify on hub. Application portal: johnmuir.vsyslive.com (login-gated)"
+      },
       "notes": "Most accessible hospital program for a current 10th grader. Walnut Creek + Concord sites."
     },
     {
@@ -64,12 +177,39 @@
       "kid": "ridhi",
       "category": "volunteer",
       "url": "https://www.stanfordchildrens.org/en/volunteer/prospective.html",
-      "scan": { "method": "http_diff", "params": {}, "region_hint": "teen registration / program dates", "frequency": "weekly", "next_check_date": "2026-07-22", "last_checked": null, "last_hash": null, "etag": null, "last_modified": null, "consecutive_failures": 0 },
-      "eligibility": { "age_min": 16, "age_max": null, "grade_min": null, "grade_max": null, "gpa_min": null, "notes": "teens 16+; 6-month commitment, 2-3 hr shifts" },
-      "application_window": { "opens": null, "closes": null, "recurrence": "annual", "confidence": "estimated" },
+      "scan": {
+        "method": "http_diff",
+        "params": {},
+        "region_hint": "teen registration / program dates",
+        "frequency": "weekly",
+        "next_check_date": "2026-07-22",
+        "last_checked": null,
+        "last_hash": null,
+        "etag": null,
+        "last_modified": null,
+        "consecutive_failures": 0
+      },
+      "eligibility": {
+        "age_min": 16,
+        "age_max": null,
+        "grade_min": null,
+        "grade_max": null,
+        "gpa_min": null,
+        "notes": "teens 16+; 6-month commitment, 2-3 hr shifts"
+      },
+      "application_window": {
+        "opens": null,
+        "closes": null,
+        "recurrence": "annual",
+        "confidence": "estimated"
+      },
       "priority": 2,
       "status": "watch",
-      "provenance": { "added": "2026-07-21", "verified": "2026-07-21", "note": "registration happens in waves — watch 'Teen registration' dates" },
+      "provenance": {
+        "added": "2026-07-21",
+        "verified": "2026-07-21",
+        "note": "registration happens in waves — watch 'Teen registration' dates"
+      },
       "notes": "~45-min drive; becomes eligible when Ridhi turns 16."
     },
     {
@@ -78,12 +218,39 @@
       "kid": "ridhi",
       "category": "volunteer",
       "url": "https://kpvolunteer.samaritan.com/custom/511/organization_details/636",
-      "scan": { "method": "manual", "params": {}, "region_hint": "", "frequency": "weekly", "next_check_date": "2026-08-01", "last_checked": null, "last_hash": null, "etag": null, "last_modified": null, "consecutive_failures": 0 },
-      "eligibility": { "age_min": 16, "age_max": 17, "grade_min": null, "grade_max": null, "gpa_min": null, "notes": "16-17; 6-mo commitment ~4 hr/week; not all facilities host teens" },
-      "application_window": { "opens": null, "closes": null, "recurrence": "rolling", "confidence": "estimated" },
+      "scan": {
+        "method": "manual",
+        "params": {},
+        "region_hint": "",
+        "frequency": "weekly",
+        "next_check_date": "2026-08-01",
+        "last_checked": null,
+        "last_hash": null,
+        "etag": null,
+        "last_modified": null,
+        "consecutive_failures": 0
+      },
+      "eligibility": {
+        "age_min": 16,
+        "age_max": 17,
+        "grade_min": null,
+        "grade_max": null,
+        "gpa_min": null,
+        "notes": "16-17; 6-mo commitment ~4 hr/week; not all facilities host teens"
+      },
+      "application_window": {
+        "opens": null,
+        "closes": null,
+        "recurrence": "rolling",
+        "confidence": "estimated"
+      },
       "priority": 2,
       "status": "watch",
-      "provenance": { "added": "2026-07-21", "verified": null, "note": "login-gated portal — monthly manual check per runbook; main volunteer site DNS-failed on 2026-07-21" },
+      "provenance": {
+        "added": "2026-07-21",
+        "verified": null,
+        "note": "login-gated portal — monthly manual check per runbook; main volunteer site DNS-failed on 2026-07-21"
+      },
       "notes": "San Ramon medical offices org page exists on the portal. Eligible at 16."
     },
     {
@@ -92,12 +259,39 @@
       "kid": "ridhi",
       "category": "volunteer",
       "url": "https://www.thetech.org/support/volunteer-innovator-program/hs-volunteer-application/",
-      "scan": { "method": "http_diff", "params": {}, "region_hint": "application status / open-close notice", "frequency": "window_only", "next_check_date": "2026-08-10", "last_checked": null, "last_hash": null, "etag": null, "last_modified": null, "consecutive_failures": 0 },
-      "eligibility": { "age_min": 15, "age_max": 17, "grade_min": null, "grade_max": null, "gpa_min": null, "notes": "HS volunteers 15-17 — Ridhi eligible NOW" },
-      "application_window": { "opens": "2026-08-31", "closes": null, "recurrence": "annual", "confidence": "estimated" },
+      "scan": {
+        "method": "http_diff",
+        "params": {},
+        "region_hint": "application status / open-close notice",
+        "frequency": "window_only",
+        "next_check_date": "2026-08-10",
+        "last_checked": null,
+        "last_hash": null,
+        "etag": null,
+        "last_modified": null,
+        "consecutive_failures": 0
+      },
+      "eligibility": {
+        "age_min": 15,
+        "age_max": 17,
+        "grade_min": null,
+        "grade_max": null,
+        "gpa_min": null,
+        "notes": "HS volunteers 15-17 — Ridhi eligible NOW"
+      },
+      "application_window": {
+        "opens": "2026-08-31",
+        "closes": null,
+        "recurrence": "annual",
+        "confidence": "estimated"
+      },
       "priority": 1,
       "status": "active",
-      "provenance": { "added": "2026-07-21", "verified": "2026-07-21", "note": "Summer 2026 teen apps CLOSED as of 2026-07-21; page says check back near end of summer" },
+      "provenance": {
+        "added": "2026-07-21",
+        "verified": "2026-07-21",
+        "note": "Summer 2026 teen apps CLOSED as of 2026-07-21; page says check back near end of summer"
+      },
       "notes": "STEM museum, San Jose. Reopening is imminent — daily checks start 2026-08-10."
     },
     {
@@ -106,12 +300,39 @@
       "kid": "ridhi",
       "category": "program",
       "url": "https://chabotspace.org/education/teen-volunteers-galaxy-explorers/",
-      "scan": { "method": "http_diff", "params": {}, "region_hint": "application dates", "frequency": "window_only", "next_check_date": "2027-01-15", "last_checked": null, "last_hash": null, "etag": null, "last_modified": null, "consecutive_failures": 0 },
-      "eligibility": { "age_min": null, "age_max": null, "grade_min": 9, "grade_max": 12, "gpa_min": null, "notes": "students typically enter the summer before 10th grade and continue through 12th — strong fit" },
-      "application_window": { "opens": "2027-02-01", "closes": "2027-03-31", "recurrence": "annual", "confidence": "verified" },
+      "scan": {
+        "method": "http_diff",
+        "params": {},
+        "region_hint": "application dates",
+        "frequency": "window_only",
+        "next_check_date": "2027-01-15",
+        "last_checked": null,
+        "last_hash": null,
+        "etag": null,
+        "last_modified": null,
+        "consecutive_failures": 0
+      },
+      "eligibility": {
+        "age_min": null,
+        "age_max": null,
+        "grade_min": 9,
+        "grade_max": 12,
+        "gpa_min": null,
+        "notes": "students typically enter the summer before 10th grade and continue through 12th — strong fit"
+      },
+      "application_window": {
+        "opens": "2027-02-01",
+        "closes": "2027-03-31",
+        "recurrence": "annual",
+        "confidence": "verified"
+      },
       "priority": 1,
       "status": "active",
-      "provenance": { "added": "2026-07-21", "verified": "2026-07-21", "note": "also mentions a fall enrollment intake — weekly discovery may catch it" },
+      "provenance": {
+        "added": "2026-07-21",
+        "verified": "2026-07-21",
+        "note": "also mentions a fall enrollment intake — weekly discovery may catch it"
+      },
       "notes": "Year-round, ≥8 hrs/month; tuition ~$1,500/yr with financial aid available (part of Oakland Space Academy)."
     },
     {
@@ -120,12 +341,39 @@
       "kid": "ridhi",
       "category": "volunteer",
       "url": "https://lawrencehallofscience.org/support/volunteer-teen/",
-      "scan": { "method": "http_diff", "params": {}, "region_hint": "teen volunteer application info", "frequency": "weekly", "next_check_date": "2026-07-22", "last_checked": null, "last_hash": null, "etag": null, "last_modified": null, "consecutive_failures": 0 },
-      "eligibility": { "age_min": null, "age_max": null, "grade_min": 9, "grade_max": 12, "gpa_min": null, "notes": "museum-floor volunteering; lower age bar than the 11th-12th internships" },
-      "application_window": { "opens": null, "closes": null, "recurrence": "rolling", "confidence": "estimated" },
+      "scan": {
+        "method": "http_diff",
+        "params": {},
+        "region_hint": "teen volunteer application info",
+        "frequency": "weekly",
+        "next_check_date": "2026-07-22",
+        "last_checked": null,
+        "last_hash": null,
+        "etag": null,
+        "last_modified": null,
+        "consecutive_failures": 0
+      },
+      "eligibility": {
+        "age_min": null,
+        "age_max": null,
+        "grade_min": 9,
+        "grade_max": 12,
+        "gpa_min": null,
+        "notes": "museum-floor volunteering; lower age bar than the 11th-12th internships"
+      },
+      "application_window": {
+        "opens": null,
+        "closes": null,
+        "recurrence": "rolling",
+        "confidence": "estimated"
+      },
       "priority": 2,
       "status": "active",
-      "provenance": { "added": "2026-07-21", "verified": "2026-07-21", "note": "Teen Internship track requires entering 11th/12th — that's Ridhi's summer-2027 cycle; hub: lawrencehallofscience.org/visitors/opportunities-for-teens/" },
+      "provenance": {
+        "added": "2026-07-21",
+        "verified": "2026-07-21",
+        "note": "Teen Internship track requires entering 11th/12th — that's Ridhi's summer-2027 cycle; hub: lawrencehallofscience.org/visitors/opportunities-for-teens/"
+      },
       "notes": "Berkeley; science-museum floor experience now, internship track next year."
     },
     {
@@ -134,12 +382,39 @@
       "kid": "both",
       "category": "volunteer",
       "url": "https://www.sanramon.ca.gov/our_city/departments_and_divisions/parks_community_services/teens/teen_service___leadership",
-      "scan": { "method": "http_diff", "params": {}, "region_hint": "programs and event-volunteer listings", "frequency": "weekly", "next_check_date": "2026-07-22", "last_checked": null, "last_hash": null, "etag": null, "last_modified": null, "consecutive_failures": 0 },
-      "eligibility": { "age_min": 12, "age_max": 17, "grade_min": null, "grade_max": null, "gpa_min": null, "notes": "ages 12-17 — fits BOTH kids" },
-      "application_window": { "opens": null, "closes": null, "recurrence": "rolling", "confidence": "verified" },
+      "scan": {
+        "method": "http_diff",
+        "params": {},
+        "region_hint": "programs and event-volunteer listings",
+        "frequency": "weekly",
+        "next_check_date": "2026-07-22",
+        "last_checked": null,
+        "last_hash": null,
+        "etag": null,
+        "last_modified": null,
+        "consecutive_failures": 0
+      },
+      "eligibility": {
+        "age_min": 12,
+        "age_max": 17,
+        "grade_min": null,
+        "grade_max": null,
+        "gpa_min": null,
+        "notes": "ages 12-17 — fits BOTH kids"
+      },
+      "application_window": {
+        "opens": null,
+        "closes": null,
+        "recurrence": "rolling",
+        "confidence": "verified"
+      },
       "priority": 2,
       "status": "active",
-      "provenance": { "added": "2026-07-21", "verified": "2026-07-21", "note": "full listing behind SanRamonVolunteers.com account — manual signup once, then event-driven" },
+      "provenance": {
+        "added": "2026-07-21",
+        "verified": "2026-07-21",
+        "note": "full listing behind SanRamonVolunteers.com account — manual signup once, then event-driven"
+      },
       "notes": "City events, Forest Home Farms, commission meetings. Closest-to-home service hours."
     },
     {
@@ -148,12 +423,42 @@
       "kid": "both",
       "category": "library",
       "url": "https://ccclib.bibliocommons.com/v2/events",
-      "scan": { "method": "json_api", "params": { "audience": "teens", "location_hint": "San Ramon" }, "region_hint": "events JSON payload", "frequency": "weekly", "next_check_date": "2026-07-22", "last_checked": null, "last_hash": null, "etag": null, "last_modified": null, "consecutive_failures": 0 },
-      "eligibility": { "age_min": null, "age_max": null, "grade_min": null, "grade_max": null, "gpa_min": null, "notes": "Teen Advisory Board meets 1st Thursday monthly; general library volunteering 16+ w/ consent" },
-      "application_window": { "opens": null, "closes": null, "recurrence": "rolling", "confidence": "verified" },
+      "scan": {
+        "method": "json_api",
+        "params": {
+          "audience": "teens",
+          "location_hint": "San Ramon"
+        },
+        "region_hint": "events JSON payload",
+        "frequency": "weekly",
+        "next_check_date": "2026-07-22",
+        "last_checked": null,
+        "last_hash": null,
+        "etag": null,
+        "last_modified": null,
+        "consecutive_failures": 0
+      },
+      "eligibility": {
+        "age_min": null,
+        "age_max": null,
+        "grade_min": null,
+        "grade_max": null,
+        "gpa_min": null,
+        "notes": "Teen Advisory Board meets 1st Thursday monthly; general library volunteering 16+ w/ consent"
+      },
+      "application_window": {
+        "opens": null,
+        "closes": null,
+        "recurrence": "rolling",
+        "confidence": "verified"
+      },
       "priority": 2,
       "status": "active",
-      "provenance": { "added": "2026-07-21", "verified": "2026-07-21", "note": "BiblioCommons exposes structured events JSON — confirm exact endpoint/params at implementation" },
+      "provenance": {
+        "added": "2026-07-21",
+        "verified": "2026-07-21",
+        "note": "BiblioCommons exposes structured events JSON — confirm exact endpoint/params at implementation"
+      },
       "notes": "Best machine-readable local source; TAB + teen programs for both kids."
     },
     {
@@ -162,12 +467,39 @@
       "kid": "ridhi",
       "category": "volunteer",
       "url": "https://www.vitalant.org/Footer-Nav/Engage/Local-Volunteer-Opportunities/Northern-California/",
-      "scan": { "method": "http_diff", "params": {}, "region_hint": "local opportunity list", "frequency": "weekly", "next_check_date": "2026-07-22", "last_checked": null, "last_hash": null, "etag": null, "last_modified": null, "consecutive_failures": 0 },
-      "eligibility": { "age_min": 16, "age_max": null, "grade_min": null, "grade_max": null, "gpa_min": null, "notes": "volunteer minimum commonly 16+; teen-specific NorCal roles unconfirmed. (Blood DONATION is 16+ w/ parental consent in CA — separate from volunteering)" },
-      "application_window": { "opens": null, "closes": null, "recurrence": "rolling", "confidence": "estimated" },
+      "scan": {
+        "method": "http_diff",
+        "params": {},
+        "region_hint": "local opportunity list",
+        "frequency": "weekly",
+        "next_check_date": "2026-07-22",
+        "last_checked": null,
+        "last_hash": null,
+        "etag": null,
+        "last_modified": null,
+        "consecutive_failures": 0
+      },
+      "eligibility": {
+        "age_min": 16,
+        "age_max": null,
+        "grade_min": null,
+        "grade_max": null,
+        "gpa_min": null,
+        "notes": "volunteer minimum commonly 16+; teen-specific NorCal roles unconfirmed. (Blood DONATION is 16+ w/ parental consent in CA — separate from volunteering)"
+      },
+      "application_window": {
+        "opens": null,
+        "closes": null,
+        "recurrence": "rolling",
+        "confidence": "estimated"
+      },
       "priority": 2,
       "status": "watch",
-      "provenance": { "added": "2026-07-21", "verified": null, "note": "main portal (vitalant.volunteerportal.org) is login-gated — public NorCal page only" },
+      "provenance": {
+        "added": "2026-07-21",
+        "verified": null,
+        "note": "main portal (vitalant.volunteerportal.org) is login-gated — public NorCal page only"
+      },
       "notes": "Blood-services org; pairs with Red Cross lane. Eligible at 16."
     },
     {
@@ -176,12 +508,39 @@
       "kid": "ridhi",
       "category": "program",
       "url": "https://med.stanford.edu/genetics/education/GRIPS.html",
-      "scan": { "method": "http_diff", "params": {}, "region_hint": "eligibility + application dates", "frequency": "window_only", "next_check_date": "2026-12-01", "last_checked": null, "last_hash": null, "etag": null, "last_modified": null, "consecutive_failures": 0 },
-      "eligibility": { "age_min": 16, "age_max": null, "grade_min": 10, "grade_max": 12, "gpa_min": 3.0, "notes": "must be 16 by internship start (mid-June); Bay Area counties incl. Contra Costa; some prior bio/chem/CS" },
-      "application_window": { "opens": null, "closes": "2027-02-28", "recurrence": "annual", "confidence": "estimated" },
+      "scan": {
+        "method": "http_diff",
+        "params": {},
+        "region_hint": "eligibility + application dates",
+        "frequency": "window_only",
+        "next_check_date": "2026-12-01",
+        "last_checked": null,
+        "last_hash": null,
+        "etag": null,
+        "last_modified": null,
+        "consecutive_failures": 0
+      },
+      "eligibility": {
+        "age_min": 16,
+        "age_max": null,
+        "grade_min": 10,
+        "grade_max": 12,
+        "gpa_min": 3.0,
+        "notes": "must be 16 by internship start (mid-June); Bay Area counties incl. Contra Costa; some prior bio/chem/CS"
+      },
+      "application_window": {
+        "opens": null,
+        "closes": "2027-02-28",
+        "recurrence": "annual",
+        "confidence": "estimated"
+      },
       "priority": 1,
       "status": "active",
-      "provenance": { "added": "2026-07-21", "verified": "2026-07-21", "note": "2026 cycle was due Feb 28; 2027 dates assumed similar until page updates" },
+      "provenance": {
+        "added": "2026-07-21",
+        "verified": "2026-07-21",
+        "note": "2026 cycle was due Feb 28; 2027 dates assumed similar until page updates"
+      },
       "notes": "Direct genetics/genomics fit — the exact interest area. AGE GATE: confirm Ridhi turns 16 before mid-June 2027; if not, this is the 2028 cycle."
     },
     {
@@ -190,12 +549,39 @@
       "kid": "ridhi",
       "category": "program",
       "url": "https://med.stanford.edu/simr.html",
-      "scan": { "method": "http_diff", "params": {}, "region_hint": "eligibility + application dates", "frequency": "window_only", "next_check_date": "2027-11-01", "last_checked": null, "last_hash": null, "etag": null, "last_modified": null, "consecutive_failures": 0 },
-      "eligibility": { "age_min": 16, "age_max": null, "grade_min": 11, "grade_max": 12, "gpa_min": null, "notes": "current juniors/seniors only, 16+ by start; Bay Area preferred; stipended" },
-      "application_window": { "opens": "2027-12-01", "closes": "2028-02-28", "recurrence": "annual", "confidence": "estimated" },
+      "scan": {
+        "method": "http_diff",
+        "params": {},
+        "region_hint": "eligibility + application dates",
+        "frequency": "window_only",
+        "next_check_date": "2027-11-01",
+        "last_checked": null,
+        "last_hash": null,
+        "etag": null,
+        "last_modified": null,
+        "consecutive_failures": 0
+      },
+      "eligibility": {
+        "age_min": 16,
+        "age_max": null,
+        "grade_min": 11,
+        "grade_max": 12,
+        "gpa_min": null,
+        "notes": "current juniors/seniors only, 16+ by start; Bay Area preferred; stipended"
+      },
+      "application_window": {
+        "opens": "2027-12-01",
+        "closes": "2028-02-28",
+        "recurrence": "annual",
+        "confidence": "estimated"
+      },
       "priority": 1,
       "status": "dormant",
-      "provenance": { "added": "2026-07-21", "verified": "2026-07-21", "note": "not eligible until junior year (2027-28) → applies winter 2027 for summer 2028" },
+      "provenance": {
+        "added": "2026-07-21",
+        "verified": "2026-07-21",
+        "note": "not eligible until junior year (2027-28) → applies winter 2027 for summer 2028"
+      },
       "notes": "8 weeks June-July, stipended, $50 app fee (waivable). Long-game target."
     },
     {
@@ -204,12 +590,39 @@
       "kid": "ridhi",
       "category": "program",
       "url": "https://www.jbei.org/education/iclem/",
-      "scan": { "method": "http_diff", "params": {}, "region_hint": "eligibility + application dates", "frequency": "weekly", "next_check_date": "2026-07-22", "last_checked": null, "last_hash": null, "etag": null, "last_modified": null, "consecutive_failures": 0 },
-      "eligibility": { "age_min": null, "age_max": null, "grade_min": 10, "grade_max": 11, "gpa_min": null, "notes": "aimed at HS sophomores & juniors from Alameda/Contra Costa/SF; income-qualified; stipended" },
-      "application_window": { "opens": null, "closes": null, "recurrence": "annual", "confidence": "estimated" },
+      "scan": {
+        "method": "http_diff",
+        "params": {},
+        "region_hint": "eligibility + application dates",
+        "frequency": "weekly",
+        "next_check_date": "2026-07-22",
+        "last_checked": null,
+        "last_hash": null,
+        "etag": null,
+        "last_modified": null,
+        "consecutive_failures": 0
+      },
+      "eligibility": {
+        "age_min": null,
+        "age_max": null,
+        "grade_min": 10,
+        "grade_max": 11,
+        "gpa_min": null,
+        "notes": "aimed at HS sophomores & juniors from Alameda/Contra Costa/SF; income-qualified; stipended"
+      },
+      "application_window": {
+        "opens": null,
+        "closes": null,
+        "recurrence": "annual",
+        "confidence": "estimated"
+      },
       "priority": 1,
       "status": "watch",
-      "provenance": { "added": "2026-07-21", "verified": null, "note": "URL UNVERIFIED — one of the few explicitly sophomore-eligible wet-lab programs; Sunday discovery should confirm the current host page and income-qualification details" },
+      "provenance": {
+        "added": "2026-07-21",
+        "verified": null,
+        "note": "URL UNVERIFIED — one of the few explicitly sophomore-eligible wet-lab programs; Sunday discovery should confirm the current host page and income-qualification details"
+      },
       "notes": "Rare sophomore-eligible wet-lab option; verify before surfacing to family."
     },
     {
@@ -218,12 +631,39 @@
       "kid": "ridhi",
       "category": "athletics",
       "url": "https://www.maxpreps.com/ca/san-ramon/california-grizzlies/",
-      "scan": { "method": "ical", "params": {}, "region_hint": "per-team schedule pages", "frequency": "weekly", "next_check_date": "2026-08-13", "last_checked": null, "last_hash": null, "etag": null, "last_modified": null, "consecutive_failures": 0 },
-      "eligibility": { "age_min": null, "age_max": null, "grade_min": null, "grade_max": null, "gpa_min": null, "notes": "" },
-      "application_window": { "opens": null, "closes": null, "recurrence": "rolling", "confidence": "verified" },
+      "scan": {
+        "method": "ical",
+        "params": {},
+        "region_hint": "per-team schedule pages",
+        "frequency": "weekly",
+        "next_check_date": "2026-08-13",
+        "last_checked": null,
+        "last_hash": null,
+        "etag": null,
+        "last_modified": null,
+        "consecutive_failures": 0
+      },
+      "eligibility": {
+        "age_min": null,
+        "age_max": null,
+        "grade_min": null,
+        "grade_max": null,
+        "gpa_min": null,
+        "notes": ""
+      },
+      "application_window": {
+        "opens": null,
+        "closes": null,
+        "recurrence": "rolling",
+        "confidence": "verified"
+      },
       "priority": 3,
       "status": "dormant",
-      "provenance": { "added": "2026-07-21", "verified": "2026-07-21", "note": "the school CMS athletic-calendar page is a stub; MaxPreps has per-team iCal export" },
+      "provenance": {
+        "added": "2026-07-21",
+        "verified": "2026-07-21",
+        "note": "the school CMS athletic-calendar page is a stub; MaxPreps has per-team iCal export"
+      },
       "notes": "Activate if/when a kid joins a team roster."
     },
     {
@@ -232,12 +672,41 @@
       "kid": "both",
       "category": "school-page",
       "url": "https://www.srvusd.net/documents/District/Instructional-Calendar/2026-27-Instructional-Calendar-Board-Approved-3-5-24.pdf",
-      "scan": { "method": "http_diff", "params": { "content_type": "pdf" }, "region_hint": "whole document", "frequency": "weekly", "next_check_date": "2026-07-22", "last_checked": null, "last_hash": null, "etag": null, "last_modified": null, "consecutive_failures": 0 },
-      "eligibility": { "age_min": null, "age_max": null, "grade_min": null, "grade_max": null, "gpa_min": null, "notes": "" },
-      "application_window": { "opens": null, "closes": null, "recurrence": "rolling", "confidence": "verified" },
+      "scan": {
+        "method": "http_diff",
+        "params": {
+          "content_type": "pdf"
+        },
+        "region_hint": "whole document",
+        "frequency": "weekly",
+        "next_check_date": "2026-07-22",
+        "last_checked": null,
+        "last_hash": null,
+        "etag": null,
+        "last_modified": null,
+        "consecutive_failures": 0
+      },
+      "eligibility": {
+        "age_min": null,
+        "age_max": null,
+        "grade_min": null,
+        "grade_max": null,
+        "gpa_min": null,
+        "notes": ""
+      },
+      "application_window": {
+        "opens": null,
+        "closes": null,
+        "recurrence": "rolling",
+        "confidence": "verified"
+      },
       "priority": 2,
       "status": "active",
-      "provenance": { "added": "2026-07-21", "verified": "2026-07-21", "note": "stable URL; key dates already seeded into school_year.json — this source only alerts if the district revises the calendar" },
+      "provenance": {
+        "added": "2026-07-21",
+        "verified": "2026-07-21",
+        "note": "stable URL; key dates already seeded into school_year.json — this source only alerts if the district revises the calendar"
+      },
       "notes": ""
     },
     {
@@ -246,12 +715,39 @@
       "kid": "dhruv",
       "category": "school-page",
       "url": "https://pvms.srvusd.net/Calendar/",
-      "scan": { "method": "http_diff", "params": {}, "region_hint": "calendar entries", "frequency": "weekly", "next_check_date": "2026-07-22", "last_checked": null, "last_hash": null, "etag": null, "last_modified": null, "consecutive_failures": 0 },
-      "eligibility": { "age_min": null, "age_max": null, "grade_min": null, "grade_max": null, "gpa_min": null, "notes": "" },
-      "application_window": { "opens": null, "closes": null, "recurrence": "rolling", "confidence": "verified" },
+      "scan": {
+        "method": "http_diff",
+        "params": {},
+        "region_hint": "calendar entries",
+        "frequency": "weekly",
+        "next_check_date": "2026-07-22",
+        "last_checked": null,
+        "last_hash": null,
+        "etag": null,
+        "last_modified": null,
+        "consecutive_failures": 0
+      },
+      "eligibility": {
+        "age_min": null,
+        "age_max": null,
+        "grade_min": null,
+        "grade_max": null,
+        "gpa_min": null,
+        "notes": ""
+      },
+      "application_window": {
+        "opens": null,
+        "closes": null,
+        "recurrence": "rolling",
+        "confidence": "verified"
+      },
       "priority": 2,
       "status": "active",
-      "provenance": { "added": "2026-07-21", "verified": "2026-07-21", "note": "CatapultCMS JS-render risk — anomaly guard applies; ParentSquare email will be the primary PVMS channel once rollout reaches the school" },
+      "provenance": {
+        "added": "2026-07-21",
+        "verified": "2026-07-21",
+        "note": "CatapultCMS JS-render risk — anomaly guard applies; ParentSquare email will be the primary PVMS channel once rollout reaches the school"
+      },
       "notes": "Dhruv starts 6th grade here Aug 13, 2026."
     }
   ]

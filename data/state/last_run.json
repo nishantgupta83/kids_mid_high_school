@@ -1,7 +1,12 @@
 {
-  "run_id": null,
-  "date": null,
-  "mode": null,
-  "steps": {},
-  "note": "no runs yet — seeded 2026-07-21"
+  "run_id": "run-20260722-102258-4da318",
+  "date": "2026-07-22",
+  "at": "2026-07-22T10:22:58",
+  "mode": "degraded-no-llm",
+  "ok": false,
+  "duration_s": 197,
+  "steps": {
+    "email": "1",
+    "mode": "degraded-no-llm"
+  }
 }
