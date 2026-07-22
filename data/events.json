@@ -11,7 +11,11 @@
       "time": null,
       "type": "school",
       "action": null,
-      "source": { "kind": "static", "ref": "school_year.json", "first_seen": "2026-07-21" },
+      "source": {
+        "kind": "static",
+        "ref": "school_year.json",
+        "first_seen": "2026-07-21"
+      },
       "status": "active"
     },
     {
@@ -23,8 +27,16 @@
       "end_date": null,
       "time": null,
       "type": "deadline",
-      "action": { "required": true, "what": "Submit accommodations request via the school if applicable", "due": "2026-08-17" },
-      "source": { "kind": "static", "ref": "school_year.json", "first_seen": "2026-07-21" },
+      "action": {
+        "required": true,
+        "what": "Submit accommodations request via the school if applicable",
+        "due": "2026-08-17"
+      },
+      "source": {
+        "kind": "static",
+        "ref": "school_year.json",
+        "first_seen": "2026-07-21"
+      },
       "status": "active"
     },
     {
@@ -36,8 +48,16 @@
       "end_date": null,
       "time": null,
       "type": "deadline",
-      "action": { "required": true, "what": "Register Ridhi for the PSAT/NMSQT", "due": "2026-09-20" },
-      "source": { "kind": "static", "ref": "school_year.json", "first_seen": "2026-07-21" },
+      "action": {
+        "required": true,
+        "what": "Register Ridhi for the PSAT/NMSQT",
+        "due": "2026-09-20"
+      },
+      "source": {
+        "kind": "static",
+        "ref": "school_year.json",
+        "first_seen": "2026-07-21"
+      },
       "status": "active"
     },
     {
@@ -50,7 +70,11 @@
       "time": "08:00",
       "type": "test",
       "action": null,
-      "source": { "kind": "static", "ref": "school_year.json", "first_seen": "2026-07-21" },
+      "source": {
+        "kind": "static",
+        "ref": "school_year.json",
+        "first_seen": "2026-07-21"
+      },
       "status": "active"
     },
     {
@@ -63,7 +87,11 @@
       "time": null,
       "type": "break",
       "action": null,
-      "source": { "kind": "static", "ref": "school_year.json", "first_seen": "2026-07-21" },
+      "source": {
+        "kind": "static",
+        "ref": "school_year.json",
+        "first_seen": "2026-07-21"
+      },
       "status": "active"
     },
     {
@@ -76,7 +104,11 @@
       "time": null,
       "type": "break",
       "action": null,
-      "source": { "kind": "static", "ref": "school_year.json", "first_seen": "2026-07-21" },
+      "source": {
+        "kind": "static",
+        "ref": "school_year.json",
+        "first_seen": "2026-07-21"
+      },
       "status": "active"
     },
     {
@@ -89,7 +121,11 @@
       "time": null,
       "type": "break",
       "action": null,
-      "source": { "kind": "static", "ref": "school_year.json", "first_seen": "2026-07-21" },
+      "source": {
+        "kind": "static",
+        "ref": "school_year.json",
+        "first_seen": "2026-07-21"
+      },
       "status": "active"
     },
     {
@@ -102,7 +138,28 @@
       "time": null,
       "type": "school",
       "action": null,
-      "source": { "kind": "static", "ref": "school_year.json", "first_seen": "2026-07-21" },
+      "source": {
+        "kind": "static",
+        "ref": "school_year.json",
+        "first_seen": "2026-07-21"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20260722-001",
+      "dedupe_key": "ridhi|2027-04-01|cal-high-band-trip-to-san-diego-wind-ensemble-symphonic-band",
+      "kid": "ridhi",
+      "title": "Cal High band trip to San Diego (Wind Ensemble & Symphonic Band)",
+      "date": "2027-04-01",
+      "end_date": "2027-04-04",
+      "time": null,
+      "type": "school",
+      "action": null,
+      "source": {
+        "kind": "email",
+        "ref": "email:80af709a67ae",
+        "first_seen": "2026-07-22"
+      },
       "status": "active"
     }
   ]

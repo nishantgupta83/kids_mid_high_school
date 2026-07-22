@@ -10,7 +10,11 @@
       "check_from": "2026-08-10",
       "hard_deadline": null,
       "why": "STEM museum volunteer program for 15-17; apps reopen 'end of summer 2026' — one of the few big programs Ridhi is age-eligible for this year",
-      "alert_days_before": [14, 7, 1],
+      "alert_days_before": [
+        14,
+        7,
+        1
+      ],
       "state": "waiting"
     },
     {
@@ -22,7 +26,11 @@
       "check_from": "2026-08-20",
       "hard_deadline": null,
       "why": "Closest hospital program (SRVUSD high-schoolers); onboarded once/year, selection ~mid-May; the route is Ridhi visiting the College & Career Center counselor when school starts",
-      "alert_days_before": [14, 7, 1],
+      "alert_days_before": [
+        14,
+        7,
+        1
+      ],
       "state": "waiting"
     },
     {
@@ -34,7 +42,11 @@
       "check_from": "2027-01-15",
       "hard_deadline": "2027-03-31",
       "why": "Science-center teen program that typically admits at exactly her stage; annual window Feb 1 - Mar 31",
-      "alert_days_before": [14, 7, 1],
+      "alert_days_before": [
+        14,
+        7,
+        1
+      ],
       "state": "waiting"
     },
     {
@@ -46,7 +58,11 @@
       "check_from": "2026-12-01",
       "hard_deadline": "2027-02-28",
       "why": "Genomics research internship, Contra Costa eligible, GPA 3.0 — exact interest fit. AGE GATE: requires 16 by mid-June 2027; confirm Ridhi's birthday clears it, else target the 2028 cycle",
-      "alert_days_before": [14, 7, 1],
+      "alert_days_before": [
+        14,
+        7,
+        1
+      ],
       "state": "waiting"
     },
     {
@@ -58,7 +74,11 @@
       "check_from": "2027-11-01",
       "hard_deadline": "2028-02-28",
       "why": "Stipended medicine summer research, juniors/seniors only — the long-game target after GRIPS",
-      "alert_days_before": [14, 7, 1],
+      "alert_days_before": [
+        14,
+        7,
+        1
+      ],
       "state": "waiting"
     }
   ]

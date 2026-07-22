@@ -11,16 +11,34 @@
       "category": "volunteer-bio",
       "region": "bay-area",
       "location": "Walnut Creek / Concord medical centers",
-      "eligibility": { "eligible_now": "yes", "reason": "requires 14.5+ and past second-semester freshman with GPA >= 3.0 — Ridhi (15, rising 10th) qualifies" },
-      "window": { "opens": null, "closes": null, "deadline": null, "confidence": "estimated" },
+      "eligibility": {
+        "eligible_now": "yes",
+        "reason": "requires 14.5+ and past second-semester freshman with GPA >= 3.0 — Ridhi (15, rising 10th) qualifies"
+      },
+      "window": {
+        "opens": null,
+        "closes": null,
+        "deadline": null,
+        "confidence": "estimated"
+      },
       "commitment": "~3 hrs/week, year-round",
       "pipeline": {
         "status": "new",
         "updated_at": "2026-07-21T21:30:00-07:00",
         "updated_by": "agent",
-        "history": [{ "status": "new", "at": "2026-07-21T21:30:00-07:00" }]
+        "history": [
+          {
+            "status": "new",
+            "at": "2026-07-21T21:30:00-07:00"
+          }
+        ]
       },
-      "provenance": { "source_id": "john-muir-hs-volunteer", "first_seen": "2026-07-21", "last_seen": "2026-07-21", "evidence": "seeded from live research 2026-07-21; HS deep-link 404'd, confirm details on volunteer hub before applying" },
+      "provenance": {
+        "source_id": "john-muir-hs-volunteer",
+        "first_seen": "2026-07-21",
+        "last_seen": "2026-07-21",
+        "evidence": "seeded from live research 2026-07-21; HS deep-link 404'd, confirm details on volunteer hub before applying"
+      },
       "notes": "Hospital setting — strongest currently-eligible bio/med option. Application via johnmuir.vsyslive.com portal."
     },
     {
@@ -33,16 +51,34 @@
       "category": "volunteer-general",
       "region": "tri-valley",
       "location": "San Ramon",
-      "eligibility": { "eligible_now": "yes", "reason": "ages 12-17 — both Ridhi (15) and Dhruv (11-12) fit" },
-      "window": { "opens": null, "closes": null, "deadline": null, "confidence": "verified" },
+      "eligibility": {
+        "eligible_now": "yes",
+        "reason": "ages 12-17 — both Ridhi (15) and Dhruv (11-12) fit"
+      },
+      "window": {
+        "opens": null,
+        "closes": null,
+        "deadline": null,
+        "confidence": "verified"
+      },
       "commitment": "event-based, flexible weekends",
       "pipeline": {
         "status": "new",
         "updated_at": "2026-07-21T21:30:00-07:00",
         "updated_by": "agent",
-        "history": [{ "status": "new", "at": "2026-07-21T21:30:00-07:00" }]
+        "history": [
+          {
+            "status": "new",
+            "at": "2026-07-21T21:30:00-07:00"
+          }
+        ]
       },
-      "provenance": { "source_id": "sanramon-teen-service", "first_seen": "2026-07-21", "last_seen": "2026-07-21", "evidence": "seeded from live research 2026-07-21" },
+      "provenance": {
+        "source_id": "sanramon-teen-service",
+        "first_seen": "2026-07-21",
+        "last_seen": "2026-07-21",
+        "evidence": "seeded from live research 2026-07-21"
+      },
       "notes": "Closest-to-home service hours; create a SanRamonVolunteers.com account once to see full listings."
     },
     {
@@ -55,17 +91,155 @@
       "category": "volunteer-general",
       "region": "bay-area",
       "location": "varies by opportunity (search by ZIP)",
-      "eligibility": { "eligible_now": "yes", "reason": "youth roles generally 13+ with parental consent — Ridhi (15) qualifies" },
-      "window": { "opens": null, "closes": null, "deadline": null, "confidence": "verified" },
+      "eligibility": {
+        "eligible_now": "yes",
+        "reason": "youth roles generally 13+ with parental consent — Ridhi (15) qualifies"
+      },
+      "window": {
+        "opens": null,
+        "closes": null,
+        "deadline": null,
+        "confidence": "verified"
+      },
       "commitment": "varies per listing",
       "pipeline": {
         "status": "new",
         "updated_at": "2026-07-21T21:30:00-07:00",
         "updated_by": "agent",
-        "history": [{ "status": "new", "at": "2026-07-21T21:30:00-07:00" }]
+        "history": [
+          {
+            "status": "new",
+            "at": "2026-07-21T21:30:00-07:00"
+          }
+        ]
       },
-      "provenance": { "source_id": "redcross-volunteer-connection", "first_seen": "2026-07-21", "last_seen": "2026-07-21", "evidence": "seeded from live research 2026-07-21" },
+      "provenance": {
+        "source_id": "redcross-volunteer-connection",
+        "first_seen": "2026-07-21",
+        "last_seen": "2026-07-21",
+        "evidence": "seeded from live research 2026-07-21"
+      },
       "notes": "Blood-drive adjacent without the 16+ gate; also school-based Youth Clubs. Daily ZIP-search scan will surface specific local listings."
+    },
+    {
+      "id": "opp-20260722-001",
+      "dedupe_key": "san-ramon-valley-education-foundation-sr|srvef-imagineering-first-aid-cpr-class|2026",
+      "kid": "ridhi",
+      "title": "SRVEF Imagineering: First Aid / CPR class",
+      "org": "San Ramon Valley Education Foundation (SRVEF)",
+      "url": null,
+      "category": "program",
+      "region": "tri-valley",
+      "location": "San Ramon (SRVEF Imagineering)",
+      "eligibility": {
+        "eligible_now": "check",
+        "reason": "Flyer went to both Cal High and elementary lists without stating a grade range; earlier Imagineering flyers split into 1-5 and 6-12 sections, so Ridhi (10th) is likely eligible but confirm"
+      },
+      "window": {
+        "opens": null,
+        "closes": null,
+        "deadline": null,
+        "confidence": "estimated"
+      },
+      "commitment": "Single enrichment class; schedule not stated in flyer",
+      "pipeline": {
+        "status": "new",
+        "updated_at": "2026-07-22T10:29:13",
+        "updated_by": "agent",
+        "history": [
+          {
+            "status": "new",
+            "at": "2026-07-22T10:29:13"
+          }
+        ]
+      },
+      "provenance": {
+        "source_id": "email-inbox",
+        "first_seen": "2026-07-22",
+        "last_seen": "2026-07-22",
+        "evidence": "Peachjar flyers on 2026-06-29, 2026-07-04, and 2026-07-11 all list 'SRVEF Imagineering: First Aid / CPR class' with a Register link"
+      },
+      "notes": "Strong fit for bio/med interest as practical certification-style skills; registration appears open now via the Peachjar flyer board"
+    },
+    {
+      "id": "opp-20260722-002",
+      "dedupe_key": "san-ramon-valley-unified-school-district|srvusd-2026-27-student-senate|2026",
+      "kid": "both",
+      "title": "SRVUSD 2026-27 Student Senate",
+      "org": "San Ramon Valley Unified School District",
+      "url": null,
+      "category": "program",
+      "region": "tri-valley",
+      "location": "SRVUSD district-wide",
+      "eligibility": {
+        "eligible_now": "check",
+        "reason": "District student leadership body; announcement excerpt doesn't state grade range — Ridhi (10th) is likely eligible, confirm whether middle schoolers like Dhruv (6th) can apply"
+      },
+      "window": {
+        "opens": "2026-06-03",
+        "closes": null,
+        "deadline": null,
+        "confidence": "verified"
+      },
+      "commitment": "School-year leadership commitment",
+      "pipeline": {
+        "status": "new",
+        "updated_at": "2026-07-22T10:29:13",
+        "updated_by": "agent",
+        "history": [
+          {
+            "status": "new",
+            "at": "2026-07-22T10:29:13"
+          }
+        ]
+      },
+      "provenance": {
+        "source_id": "email-inbox",
+        "first_seen": "2026-07-22",
+        "last_seen": "2026-07-22",
+        "evidence": "SRVUSD ParentSquare digest dated 2026-06-03: 'SRVUSD 2026-27 Student Senate Application OPEN'"
+      },
+      "notes": "school-year-fit; leadership and public-speaking overlap with Dhruv's speech-and-debate interest; application deadline not in excerpt — check the district post"
+    },
+    {
+      "id": "opp-20260722-003",
+      "dedupe_key": "cal-high-instrumental-music|summer-jazz-jam-sessions-at-cal-high|2026",
+      "kid": "ridhi",
+      "title": "Summer Jazz Jam Sessions at Cal High",
+      "org": "Cal High Instrumental Music",
+      "url": null,
+      "category": "event",
+      "region": "tri-valley",
+      "location": "Cal High band room, San Ramon",
+      "eligibility": {
+        "eligible_now": "yes",
+        "reason": "Explicitly open to all students of all skill levels, including students from other district schools; Ridhi is in the Cal High music program"
+      },
+      "window": {
+        "opens": null,
+        "closes": null,
+        "deadline": null,
+        "confidence": "estimated"
+      },
+      "commitment": "Three optional sessions spread over June-August",
+      "pipeline": {
+        "status": "new",
+        "updated_at": "2026-07-22T10:29:13",
+        "updated_by": "agent",
+        "history": [
+          {
+            "status": "new",
+            "at": "2026-07-22T10:29:13"
+          }
+        ]
+      },
+      "provenance": {
+        "source_id": "email-inbox",
+        "first_seen": "2026-07-22",
+        "last_seen": "2026-07-22",
+        "evidence": "Music director email 2026-06-09 announcing the 2nd Annual Summer Jazz Jams; exact session dates were not in the message excerpt"
+      },
+      "notes": "summer-fit, optional, free musicianship and social time; check band communications for the remaining session dates"
     }
   ]
 }

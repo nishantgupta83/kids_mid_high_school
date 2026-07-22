@@ -1,6 +1,6 @@
 {
-  "uidvalidity": null,
-  "last_uid": null,
-  "backfill_done": false,
+  "uidvalidity": 3,
+  "last_uid": 406931,
+  "backfill_done": true,
   "backfill_days": 180
 }
