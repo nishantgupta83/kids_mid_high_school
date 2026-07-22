@@ -233,8 +233,8 @@ def main():
     now = datetime.datetime.now()
 
     sent_marker = os.path.join(LOCAL, f"sent-{today.isoformat()}")
-    if os.path.exists(sent_marker) and not args.dry_run:
-        log("send_digest: already sent today, skipping")
+    if os.path.exists(sent_marker) and not args.dry_run and not args.force:
+        log("send_digest: already sent today, skipping (--force for a deliberate resend)")
         return 0
 
     sections = collect(today)
