@@ -1,0 +1,11 @@
+# Decision log
+
+- **D-1 (2026-07-21) WhatsApp out of v1.** No safe API for personal groups; user chose skip over manual-export or ToS-risking bridge. Revisit only if email/calendar lanes show real gaps.
+- **D-2 (2026-07-21) Email-first ingestion.** SRVUSD is mid-rollout on ParentSquare and school comms already land in Gmail (~201 threads/6mo verified). CMS pages are secondary diff targets. IMAP + app password over Gmail API OAuth (no GCP project; fallback documented).
+- **D-3 (2026-07-21) Engine = Mac launchd + headless claude CLI.** User's subscription, no paid API, always-on homelab Mac. Cloud routine considered, deferred (unverified Gmail/deploy access).
+- **D-4 (2026-07-21) Digest every morning** (user chose), short on quiet days; scope includes clubs/seminars/teen events beyond the bio/med volunteer priority. Dhruv lane: badminton, speech, finance clubs + homework reminders (mid-turn addition).
+- **D-5 (2026-07-21) Data behind auth, not deploys.** Dashboard data travels through KV via an authenticated Pages Function; the site deploys only on code changes. Adopted from Codex round-1 review — kills daily-deploy machinery and the public-static-JSON privacy hole.
+- **D-6 (2026-07-21) PII discipline.** Raw email text, snapshots, digests, quarantine are gitignored + pruned; committed state is first-names-only, enforced by a PII regex lint that gates every commit.
+- **D-7 (2026-07-21) LLM emits proposals, merge owns state.** Deterministic dedupe keys recomputed locally; per-item quarantine; transactional checkpoint promotion (cursors advance only after successful merge).
+- **D-8 (2026-07-21) Two sites, shared design system.** Parent dashboard + Ridhi's Class Companion stay separate surfaces (her site carries zero parent-ops content); both reuse the PSAT-Pari scaffold. Codex suggested collapsing to one custom generator — rejected: copy-paste of a proven scaffold is less new code, and surface separation is a user requirement.
+- **D-9 (2026-07-21) Slice 5 roadmap: Dhruv watchOS app** (Apple Watch paired to parent's iPhone) fed by the same KV API — planned after Ridhi's Companion ships.

@@ -1,0 +1,102 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Daily scan LLM output — proposals only, never state",
+  "type": "object",
+  "required": ["new_events", "updated_events", "new_opportunities", "watchlist_updates", "digest_notes"],
+  "additionalProperties": false,
+  "properties": {
+    "new_events": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["kid", "title", "date", "type", "source_ref"],
+        "properties": {
+          "kid": { "enum": ["ridhi", "dhruv", "both", "family"] },
+          "title": { "type": "string", "minLength": 3, "maxLength": 200 },
+          "date": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+          "end_date": { "type": ["string", "null"], "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+          "time": { "type": ["string", "null"] },
+          "type": { "enum": ["school", "deadline", "break", "test", "athletics", "community", "homework"] },
+          "action": {
+            "type": ["object", "null"],
+            "required": ["what"],
+            "properties": {
+              "required": { "type": "boolean" },
+              "what": { "type": "string", "maxLength": 200 },
+              "due": { "type": ["string", "null"], "pattern": "^\\d{4}-\\d{2}-\\d{2}$" }
+            }
+          },
+          "source_ref": { "type": "string", "maxLength": 300 },
+          "summary": { "type": "string", "maxLength": 300 }
+        }
+      }
+    },
+    "updated_events": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "changes", "reason"],
+        "properties": {
+          "id": { "type": "string", "pattern": "^evt-" },
+          "changes": { "type": "object" },
+          "reason": { "type": "string", "maxLength": 300 }
+        }
+      }
+    },
+    "new_opportunities": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["kid", "title", "org", "url", "category", "region", "eligibility", "window", "source_id", "evidence"],
+        "properties": {
+          "kid": { "enum": ["ridhi", "dhruv", "both"] },
+          "title": { "type": "string", "minLength": 3, "maxLength": 200 },
+          "org": { "type": "string", "minLength": 2, "maxLength": 120 },
+          "url": { "type": "string", "pattern": "^https?://" },
+          "category": { "enum": ["volunteer-bio", "volunteer-general", "program", "club", "event"] },
+          "region": { "enum": ["tri-valley", "bay-area", "virtual"] },
+          "location": { "type": "string", "maxLength": 200 },
+          "eligibility": {
+            "type": "object",
+            "required": ["eligible_now", "reason"],
+            "properties": {
+              "eligible_now": { "type": "string", "pattern": "^(yes|no|check|from:\\d{4}-\\d{2}-\\d{2})$" },
+              "reason": { "type": "string", "maxLength": 300 }
+            }
+          },
+          "window": {
+            "type": "object",
+            "properties": {
+              "opens": { "type": ["string", "null"], "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+              "closes": { "type": ["string", "null"], "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+              "deadline": { "type": ["string", "null"], "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+              "confidence": { "enum": ["verified", "estimated"] }
+            }
+          },
+          "commitment": { "type": "string", "maxLength": 200 },
+          "source_id": { "type": "string" },
+          "evidence": { "type": "string", "maxLength": 400 },
+          "notes": { "type": "string", "maxLength": 400 }
+        }
+      }
+    },
+    "watchlist_updates": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "note"],
+        "properties": {
+          "id": { "type": "string", "pattern": "^watch-" },
+          "state": { "enum": ["waiting", "window_open", "converted", "missed"] },
+          "expected_open": { "type": ["string", "null"], "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+          "note": { "type": "string", "maxLength": 300 }
+        }
+      }
+    },
+    "digest_notes": {
+      "type": "array",
+      "maxItems": 5,
+      "items": { "type": "string", "maxLength": 300 }
+    }
+  }
+}

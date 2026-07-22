@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "timezone": "America/Los_Angeles",
+  "recipients": [
+    "nishugupta@gmail.com"
+  ],
+  "smtp": {
+    "host": "smtp.gmail.com",
+    "port": 587,
+    "from": "nishugupta@gmail.com"
+  },
+  "imap": {
+    "host": "imap.gmail.com",
+    "user": "nishugupta@gmail.com",
+    "mailbox": "INBOX",
+    "sender_domains": [
+      "parentsquare.com",
+      "srvusd.net",
+      "students.srvusd.net",
+      "classroom.google.com",
+      "schoology.com",
+      "peachjar.com"
+    ],
+    "max_body_chars": 10000
+  },
+  "caps": {
+    "per_source_chars": 8000,
+    "bundle_chars": 80000
+  },
+  "delivery_window": {
+    "start": "06:00",
+    "end": "21:00"
+  },
+  "features": {
+    "kv_enabled": false,
+    "deploy_enabled": false
+  },
+  "kv_api": {
+    "base_url": null
+  },
+  "digest": {
+    "subject_prefix": "School Intel"
+  },
+  "keychain": {
+    "gmail": "school-intel-gmail",
+    "cf_token": "school-intel-cf-token",
+    "family_code": "school-intel-family-code"
+  },
+  "llm": {
+    "claude_bin": "/Users/nishantgupta/.local/bin/claude",
+    "timeout_seconds": 900,
+    "preflight_timeout_seconds": 90
+  }
+}

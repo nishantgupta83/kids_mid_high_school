@@ -1,0 +1,34 @@
+{
+  "new_events": [],
+  "updated_events": [],
+  "new_opportunities": [
+    {
+      "kid": "ridhi",
+      "title": "Blood Drive Ambassador — San Ramon",
+      "org": "American Red Cross",
+      "url": "https://volunteerconnection.redcross.org/example",
+      "category": "volunteer-bio",
+      "region": "tri-valley",
+      "location": "San Ramon Community Center",
+      "eligibility": { "eligible_now": "yes", "reason": "age 15+ with parental consent; Ridhi is 15" },
+      "window": { "opens": null, "closes": null, "deadline": "2026-12-05", "confidence": "estimated" },
+      "commitment": "one Saturday shift, Dec 12",
+      "source_id": "redcross-volunteer-connection",
+      "evidence": "new listing appeared in ZIP 94582 search results",
+      "notes": "weekend-fit; good first blood-services role"
+    },
+    {
+      "kid": "ridhi",
+      "title": "Mystery opportunity with no org field",
+      "url": "https://example.org/broken",
+      "category": "volunteer-general",
+      "region": "bay-area",
+      "eligibility": { "eligible_now": "check", "reason": "unknown" },
+      "window": { "opens": null, "closes": null, "deadline": null, "confidence": "estimated" },
+      "source_id": "redcross-volunteer-connection",
+      "evidence": "malformed test item — missing required org"
+    }
+  ],
+  "watchlist_updates": [],
+  "digest_notes": ["Red Cross posted a San Ramon blood-drive ambassador role for December."]
+}
