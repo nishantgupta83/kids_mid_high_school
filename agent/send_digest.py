@@ -135,7 +135,8 @@ def render_html(today, sections, health, degraded_raw):
             row(f'{kid_badge(o["kid"])} <b>{html.escape(o["title"])}</b> — {html.escape(o["org"])}'
                 f'<br><span style="color:{C["soft"]}">{html.escape(o["eligibility"]["reason"])}'
                 + (f' · {html.escape(o["notes"])}' if o.get("notes") else "") + "</span>"
-                f'<br><a href="{html.escape(o["url"])}" style="color:{C["teal"]}">details</a>')
+                + (f'<br><a href="{html.escape(o["url"])}" style="color:{C["teal"]}">details</a>'
+                   if o.get("url") else f'<br><span style="color:{C["soft"]}">from a school email</span>'))
             for o in sections["new_discoveries"])))
     if sections["watchlist_alerts"]:
         parts.append(sec("Coming windows", C["amber"], "".join(
@@ -178,7 +179,8 @@ def render_text(today, sections, health, degraded_raw):
         lines += [f"  {e['date']} [{e['kid']}] {e['title']}" for e in sections["this_week"]]
     if sections["new_discoveries"]:
         lines += ["", "NEW FINDS:"]
-        lines += [f"  [{o['kid']}] {o['title']} — {o['org']} ({o['url']})" for o in sections["new_discoveries"]]
+        lines += [f"  [{o['kid']}] {o['title']} — {o['org']} ({o.get('url') or 'from a school email'})"
+                  for o in sections["new_discoveries"]]
     if sections["watchlist_alerts"]:
         lines += ["", "COMING WINDOWS:"]
         lines += [f"  [{a['kid']}] {a['title']} — {a['verb']} {a['date']} ({a['days']}d)"
