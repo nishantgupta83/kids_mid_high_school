@@ -17,6 +17,7 @@ Usage:
 import argparse
 import datetime
 import difflib
+import hashlib
 import json
 import os
 import re
@@ -99,7 +100,8 @@ def validate_opp(o, source_ids) -> list:
     for field in ("title", "org", "evidence"):
         if not isinstance(o.get(field), str) or len(o.get(field) or "") < 2:
             errs.append(f"missing/bad {field}")
-    if not str(o.get("url", "")).startswith("http"):
+    # Email-discovered opportunities often have no link — null is allowed.
+    if o.get("url") is not None and not str(o.get("url", "")).startswith("http"):
         errs.append("bad url")
     if o.get("category") not in OPP_CATEGORY:
         errs.append(f"bad category {o.get('category')!r}")
@@ -251,12 +253,17 @@ def main():
             continue
         eid = next_id("evt", event_ids, today)
         event_ids.add(eid)
+        ref = str(e.get("source_ref", ""))
+        if ref.startswith("email:"):
+            # Never commit raw Message-IDs (they look like addresses and trip the
+            # PII lint); a short hash still lets us find the snapshot if needed.
+            ref = "email:" + hashlib.sha256(ref.encode()).hexdigest()[:12]
         new_event = {
             "id": eid, "dedupe_key": key, "kid": e["kid"], "title": e["title"],
             "date": e["date"], "end_date": e.get("end_date"), "time": e.get("time"),
             "type": e["type"], "action": e.get("action"),
-            "source": {"kind": "email" if str(e.get("source_ref", "")).startswith("email:") else "registry",
-                       "ref": str(e.get("source_ref", ""))[:200], "first_seen": today.isoformat()},
+            "source": {"kind": "email" if ref.startswith("email:") else "registry",
+                       "ref": ref[:200], "first_seen": today.isoformat()},
             "status": "active",
         }
         events.append(new_event)

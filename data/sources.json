@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-07-21",
+  "updated": "2026-07-22",
   "sources": [
     {
       "id": "redcross-volunteer-connection",
@@ -749,6 +749,129 @@
         "note": "CatapultCMS JS-render risk — anomaly guard applies; ParentSquare email will be the primary PVMS channel once rollout reaches the school"
       },
       "notes": "Dhruv starts 6th grade here Aug 13, 2026."
+    },
+    {
+      "id": "email-inbox",
+      "name": "Family inbox (school senders)",
+      "kid": "both",
+      "category": "school-page",
+      "url": "https://mail.google.com/",
+      "scan": {
+        "method": "manual",
+        "params": {},
+        "region_hint": "",
+        "frequency": "daily",
+        "next_check_date": null,
+        "last_checked": null,
+        "last_hash": null,
+        "etag": null,
+        "last_modified": null,
+        "consecutive_failures": 0
+      },
+      "eligibility": {
+        "age_min": null,
+        "age_max": null,
+        "grade_min": null,
+        "grade_max": null,
+        "gpa_min": null,
+        "notes": ""
+      },
+      "application_window": {
+        "opens": null,
+        "closes": null,
+        "recurrence": "rolling",
+        "confidence": "verified"
+      },
+      "priority": 1,
+      "status": "active",
+      "provenance": {
+        "added": "2026-07-22",
+        "verified": "2026-07-22",
+        "note": "pseudo-source: provenance anchor for opportunities discovered in email; fetched by fetch_email.py, never by fetch_sources.py"
+      },
+      "notes": "Not a scraped page — represents the IMAP ingestion lane."
+    },
+    {
+      "id": "srvusd-back-to-school",
+      "name": "SRVUSD Back-to-School hub (Fall site-specific info)",
+      "kid": "both",
+      "category": "school-page",
+      "url": "https://www.srvusd.net/Students-and-Families/Resources/Back-to-School/index.html",
+      "scan": {
+        "method": "http_diff",
+        "params": {},
+        "region_hint": "Fall School Site Specific Information, key dates, schedule pickup / orientation announcements",
+        "frequency": "daily",
+        "next_check_date": "2026-07-22",
+        "last_checked": null,
+        "last_hash": null,
+        "etag": null,
+        "last_modified": null,
+        "consecutive_failures": 0
+      },
+      "eligibility": {
+        "age_min": null,
+        "age_max": null,
+        "grade_min": null,
+        "grade_max": null,
+        "gpa_min": null,
+        "notes": ""
+      },
+      "application_window": {
+        "opens": null,
+        "closes": null,
+        "recurrence": "annual",
+        "confidence": "verified"
+      },
+      "priority": 1,
+      "status": "active",
+      "provenance": {
+        "added": "2026-07-22",
+        "verified": "2026-07-22",
+        "note": "user-supplied URL; serves real HTML (40k chars extracted). Cal High + PVMS fall info lands here"
+      },
+      "notes": "Watch for schedule pickup, orientation, and site-specific back-to-school dates for BOTH schools."
+    },
+    {
+      "id": "pvms-resource-links",
+      "name": "Pine Valley MS — Academics Resource Links",
+      "kid": "dhruv",
+      "category": "school-page",
+      "url": "https://pvms.srvusd.net/Academics/Resources/Resource-Links/index.html",
+      "scan": {
+        "method": "http_diff",
+        "params": {},
+        "region_hint": "resource links, course catalog, homework policy changes",
+        "frequency": "weekly",
+        "next_check_date": "2026-07-22",
+        "last_checked": null,
+        "last_hash": null,
+        "etag": null,
+        "last_modified": null,
+        "consecutive_failures": 0
+      },
+      "eligibility": {
+        "age_min": null,
+        "age_max": null,
+        "grade_min": 6,
+        "grade_max": 8,
+        "gpa_min": null,
+        "notes": ""
+      },
+      "application_window": {
+        "opens": null,
+        "closes": null,
+        "recurrence": "rolling",
+        "confidence": "verified"
+      },
+      "priority": 2,
+      "status": "active",
+      "provenance": {
+        "added": "2026-07-22",
+        "verified": "2026-07-22",
+        "note": "user-supplied URL; serves real HTML (4k). PVMS uses Schoology + Infinite Campus + ClassLink; Peachjar for flyers"
+      },
+      "notes": "Low churn — weekly diff. Key links for Dhruv: Schoology (homework), Middle School Course Catalog, Bell Schedule."
     }
   ]
 }

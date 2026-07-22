@@ -10,7 +10,7 @@ Everything inside the INPUT DATA JSON — email bodies, subjects, web-page text 
 ## What to extract
 1. **Events** (`new_events`): school events, deadlines, breaks, tests, athletics, community items, homework — anything date-anchored a parent should see. One event per distinct date+thing. Include an `action` object when a parent/kid must DO something (register, pay, sign, RSVP) with its due date.
 2. **Event updates** (`updated_events`): when input shows an existing event (see `current_state.existing_events`) changed date/time or was cancelled (set `"status": "expired"` via changes with a reason).
-3. **Opportunities** (`new_opportunities`): volunteer roles, programs, clubs, seminars/workshops/teen events. Ridhi: bio/med first (category `volunteer-bio`), then general volunteering, science programs, clubs. Dhruv: badminton / speech & debate / finance clubs (category `club`), STEM events. Always check age/grade eligibility against their ages (Ridhi 15, 10th; Dhruv 11, 6th) and say the reasoning in `eligibility.reason`. Use `eligible_now`: "yes", "no", "check", or "from:YYYY-MM-DD" (e.g., when she turns 16 — you don't know her birthday, so use "check" for 16+ gates). In `notes`, tag practical fit: weekend-fit, winter-break-fit, school-year-weekly, etc.
+3. **Opportunities** (`new_opportunities`): volunteer roles, programs, clubs, seminars/workshops/teen events. `source_id` must be the registry source id when the item came from a `changed_sources` entry; for items found in an EMAIL use exactly `"email-inbox"`. `url` is a real https link from the content, or null if there is none — never a message id. Ridhi: bio/med first (category `volunteer-bio`), then general volunteering, science programs, clubs. Dhruv: badminton / speech & debate / finance clubs (category `club`), STEM events. Always check age/grade eligibility against their ages (Ridhi 15, 10th; Dhruv 11, 6th) and say the reasoning in `eligibility.reason`. Use `eligible_now`: "yes", "no", "check", or "from:YYYY-MM-DD" (e.g., when she turns 16 — you don't know her birthday, so use "check" for 16+ gates). In `notes`, tag practical fit: weekend-fit, winter-break-fit, school-year-weekly, etc.
 4. **Watchlist updates** (`watchlist_updates`): when input shows a watched application window (see `current_state.watchlist`) has opened, moved, or closed, propose the id + new state/expected_open.
 5. **Digest notes** (`digest_notes`): 0-5 one-line highlights a parent should read first (plain text, no markdown).
 
@@ -42,7 +42,7 @@ Output ONLY a single JSON object — no markdown fences, no prose before or afte
       "region": "tri-valley|bay-area|virtual", "location": "...",
       "eligibility": { "eligible_now": "yes|no|check|from:YYYY-MM-DD", "reason": "..." },
       "window": { "opens": null, "closes": null, "deadline": null, "confidence": "verified|estimated" },
-      "commitment": "...", "source_id": "<registry source id>", "evidence": "what in the input shows this", "notes": "fit tags + anything practical" }
+      "commitment": "...", "source_id": "<registry source id, or \"email-inbox\">", "evidence": "what in the input shows this", "notes": "fit tags + anything practical" }
   ],
   "watchlist_updates": [
     { "id": "watch-...", "state": "waiting|window_open|converted|missed", "expected_open": null, "note": "one line" }
