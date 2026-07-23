@@ -243,7 +243,7 @@ def main():
     quarantined, summary = [], {
         "date": today.isoformat(), "new_events": [], "new_opportunities": [],
         "updated_events": [], "watchlist_updates": [], "reseen": 0,
-        "skipped_past": 0, "digest_notes": [],
+        "skipped_past": 0, "digest_notes": [], "other_items": [],
     }
     now_iso = datetime.datetime.now().isoformat(timespec="seconds")
 
@@ -361,6 +361,13 @@ def main():
             e["status"] = "expired"
 
     summary["digest_notes"] = [str(n)[:300] for n in (out.get("digest_notes") or [])[:5] if isinstance(n, str)]
+    # "Other" bucket: things the scanner noticed but didn't promote — never dropped.
+    for oi in (out.get("other_items") or [])[:40]:
+        if isinstance(oi, dict) and oi.get("title"):
+            summary["other_items"].append({
+                "kid": oi.get("kid") if oi.get("kid") in KID else "family",
+                "title": str(oi["title"])[:240],
+            })
     summary["quarantined"] = len(quarantined)
 
     if args.dry_run:

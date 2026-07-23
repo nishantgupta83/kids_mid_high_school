@@ -126,9 +126,14 @@ function render() {
       `<div class="card">${badge(e.kid)} <b>${esc(e.action.what)}</b><div class="muted">${esc(e.title)}</div>` +
       `<span class="due">due ${fmtD(e.action.due)} (${daysTo(e.action.due)}d)</span></div>`).join("") : "") +
     `<div class="sec teal">Next two weeks</div>` +
-    (week.length ? week.map(e =>
-      `<div class="card"><span class="muted">${fmtD(e.date)}</span> ${badge(e.kid)} ${esc(e.title)}` +
-      (e.time ? ` <span class="pill">${esc(e.time)}</span>` : "") + `</div>`).join("")
+    (week.length ? week.map(e => {
+      const disc = e.source?.kind === "discovery";
+      const u = disc && safeUrl(e.source?.ref);
+      return `<div class="card"><span class="muted">${fmtD(e.date)}</span> ${badge(e.kid)} ${esc(e.title)}` +
+      (e.time ? ` <span class="pill">${esc(e.time)}</span>` : "") +
+      (disc ? ` <span class="pill">unverified</span>` + (u ? ` <a href="${esc(u)}" target="_blank" rel="noopener">check ↗</a>` : "") : "") +
+      `</div>`;
+    }).join("")
       : '<div class="card muted">Nothing scheduled.</div>');
 
   const opps = c.opportunities || [];
@@ -153,7 +158,10 @@ function render() {
   }).join("") || '<div class="card muted">No opportunities yet.</div>';
 
   const watches = (c.watchlist || []).filter(w => w.state === "waiting" || w.state === "window_open");
-  const proposals = Object.entries(PIPE?.proposals || {});
+  // Proposed sources come from the content doc (the list); PIPE.proposals holds any
+  // decision already made this session, so we hide ones already approved/dismissed.
+  const decided = PIPE?.proposals || {};
+  const proposed = (c.proposed_sources || []).filter(p => !decided[p.id]?.decision);
   $("#tWatch").innerHTML =
     watches.map(w => {
       const d = w.expected_open || w.hard_deadline;
@@ -161,11 +169,24 @@ function render() {
         (d ? `<div><span class="due">${w.hard_deadline && d===w.hard_deadline ? "deadline" : "opens"} ${fmtD(d)} (${daysTo(d)}d)</span></div>` : "") +
         `<div class="muted">${esc(w.why || "")}</div></div>`;
     }).join("") +
-    (proposals.length ? `<div class="sec amber">Proposed sources (approve to start scanning)</div>` +
-      proposals.filter(([,v]) => !v.decision || v.decision === "pending").map(([id]) =>
-        `<div class="card"><b>${esc(id)}</b><div class="statusrow">` +
-        `<button class="sbtn" data-prop="${esc(id)}" data-d="approve">Approve</button>` +
-        `<button class="sbtn" data-prop="${esc(id)}" data-d="dismiss">Dismiss</button></div></div>`).join("") : "");
+    (proposed.length ? `<div class="sec amber">New sources to approve</div>` +
+      proposed.map(p => {
+        const u = safeUrl(p.url);
+        return `<div class="card">${badge(p.kid)} <b>${esc(p.name)}</b>` +
+        `<div class="muted">${esc(p.why || "")}</div>` +
+        (u ? `<a class="lbtn" href="${esc(u)}" target="_blank" rel="noopener">Preview site ↗</a>` : "") +
+        `<div class="statusrow">` +
+        `<button class="sbtn" data-prop="${esc(p.id)}" data-d="approve">Approve</button>` +
+        `<button class="sbtn" data-prop="${esc(p.id)}" data-d="dismiss">Dismiss</button></div></div>`;
+      }).join("") : "");
+
+  // "Other" — things the scanner noticed but didn't promote; nothing silently dropped.
+  const other = c.other_items || [];
+  const otherHtml = other.length
+    ? `<div class="sec sage">Other — noticed, worth a glance</div>` +
+      other.map(o => `<div class="card">${badge(o.kid || "family")} <span class="muted">${esc(o.title)}</span></div>`).join("")
+    : "";
+  $("#tToday").innerHTML += otherHtml;
 
   renderFoot();
 }

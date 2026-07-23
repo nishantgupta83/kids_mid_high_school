@@ -42,12 +42,68 @@ def call(cfg, path, method="GET", body=None):
         return json.loads(resp.read())
 
 
+def promote_proposal(p, sources, today):
+    """Approve a proposed source: swap a dead source's URL, or add a new source."""
+    if p.get("replaces_source_id"):
+        for s in sources:
+            if s["id"] == p["replaces_source_id"]:
+                s["url"] = p["url"]
+                s["scan"].update({"last_hash": None, "etag": None, "last_modified": None,
+                                  "consecutive_failures": 0, "next_check_date": today.isoformat()})
+                s["status"] = "active"
+                s.setdefault("provenance", {})["relocated"] = today.isoformat()
+                return True
+        return False
+    if any(s["id"] == p["id"] or s["url"] == p["url"] for s in sources):
+        return False
+    sources.append({
+        "id": p["id"], "name": p["name"], "kid": p["kid"], "category": p["category"], "url": p["url"],
+        "scan": {"method": p["scan_method"], "params": {}, "region_hint": "", "frequency": "weekly",
+                 "next_check_date": today.isoformat(), "last_checked": None, "last_hash": None,
+                 "etag": None, "last_modified": None, "consecutive_failures": 0},
+        "eligibility": {"age_min": None, "age_max": None, "grade_min": None, "grade_max": None,
+                        "gpa_min": None, "notes": p.get("eligibility_note", "")},
+        "application_window": {"opens": None, "closes": None, "recurrence": "rolling", "confidence": "estimated"},
+        "priority": 2, "status": "active",
+        "provenance": {"added": today.isoformat(), "verified": None, "note": "approved from weekly discovery proposal"},
+        "notes": p.get("why", ""),
+    })
+    return True
+
+
+def apply_proposal_decisions(cfg):
+    """Read approve/dismiss decisions from KV and act on pending proposals."""
+    remote = call(cfg, "/api/pipeline")
+    decisions = remote.get("proposals", {})  # {propId: {decision}}
+    if not decisions:
+        return 0
+    today = datetime.date.today()
+    prop_doc = read_json(os.path.join(DATA, "sources_proposed.json"), {"proposals": []})
+    sources_doc = read_json(os.path.join(DATA, "sources.json"))
+    remaining, handled = [], 0
+    for p in prop_doc["proposals"]:
+        d = decisions.get(p["id"], {}).get("decision")
+        if p.get("state", "pending") != "pending" or not d:
+            remaining.append(p)
+            continue
+        if d == "approve" and promote_proposal(p, sources_doc["sources"], today):
+            handled += 1
+            log(f"push_content: promoted proposal {p['id']}")
+        elif d == "dismiss":
+            handled += 1
+            log(f"push_content: dismissed proposal {p['id']}")
+        else:
+            remaining.append(p)  # approve that couldn't resolve → keep for next time
+    if handled:
+        prop_doc["proposals"] = remaining
+        write_json(os.path.join(DATA, "sources.json"), sources_doc)
+        write_json(os.path.join(DATA, "sources_proposed.json"), prop_doc)
+    return handled
+
+
 def pull(cfg):
     remote = call(cfg, "/api/pipeline")
     statuses = remote.get("statuses", {})
-    if not statuses:
-        log("push_content: pull — no dashboard statuses")
-        return 0
     doc = read_json(os.path.join(DATA, "opportunities.json"))
     changed = 0
     for o in doc["opportunities"]:
@@ -63,7 +119,8 @@ def pull(cfg):
             changed += 1
     if changed:
         write_json(os.path.join(DATA, "opportunities.json"), doc)
-    log(f"push_content: pull — {changed} status change(s) folded in")
+    promoted = apply_proposal_decisions(cfg)
+    log(f"push_content: pull — {changed} status change(s), {promoted} proposal decision(s) applied")
     return 0
 
 
@@ -71,7 +128,12 @@ def push(cfg):
     events = read_json(os.path.join(DATA, "events.json"), {"events": []})["events"]
     opps = read_json(os.path.join(DATA, "opportunities.json"), {"opportunities": []})["opportunities"]
     watch = read_json(os.path.join(DATA, "watchlist.json"), {"watchlist": []})["watchlist"]
+    proposed = [p for p in read_json(os.path.join(DATA, "sources_proposed.json"), {"proposals": []})["proposals"]
+                if p.get("state", "pending") == "pending"]
     last_run = read_json(os.path.join(DATA, "state", "last_run.json"), {})
+    today = datetime.date.today().isoformat()
+    ms = read_json(os.path.join(LOCAL, "merge_summary.json"), {})
+    other = ms.get("other_items", []) if ms.get("date") == today else []
 
     content = {
         "generated_at": datetime.datetime.now().isoformat(timespec="seconds"),
@@ -79,6 +141,9 @@ def push(cfg):
         "events": [e for e in events if e["status"] != "expired"],
         "opportunities": opps,
         "watchlist": watch,
+        "proposed_sources": [{"id": p["id"], "name": p["name"], "kid": p["kid"], "why": p.get("why", ""),
+                              "url": p["url"], "category": p["category"]} for p in proposed],
+        "other_items": other,
     }
     # Hash excludes generated_at so quiet days don't push identical content.
     hashable = json.dumps({k: v for k, v in content.items() if k != "generated_at"}, sort_keys=True)

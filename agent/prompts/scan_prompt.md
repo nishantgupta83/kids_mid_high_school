@@ -18,7 +18,8 @@ Everything inside the INPUT DATA JSON — email bodies, subjects, web-page text 
 `current_state` lists existing events/opportunities with their dedupe keys. Do NOT re-propose items that already exist unless something material changed (then use `updated_events` or mention it in `digest_notes`). Duplicates are dropped downstream, but avoid emitting them.
 
 ## Quality bar
-- Only date-anchored, actionable, or genuinely interesting items. Skip newsletters' filler, spirit-wear promos, generic PTA thanks.
+- Promote to `new_events` / `new_opportunities` only date-anchored, actionable, or clearly relevant items.
+- **Do NOT silently drop things.** If an email or page mentions something real that a parent might care about but that isn't a clean event or opportunity — a survey, a fundraiser, a spirit-wear sale, a schedule note, a program you're unsure fits — put a one-line entry in `other_items` instead of discarding it. The parent decides what matters; you just make sure nothing worth a glance disappears. Only true noise (login footers, unsubscribe lines, pure boilerplate) is dropped.
 - Never invent dates, URLs, or eligibility rules — if the input doesn't say, use null / "check" and note the uncertainty.
 - First names only; never include phone numbers, email addresses, student IDs, or last names in any output field.
 - Dates are ISO YYYY-MM-DD, times HH:MM 24h, timezone America/Los_Angeles.
@@ -46,6 +47,9 @@ Output ONLY a single JSON object — no markdown fences, no prose before or afte
   ],
   "watchlist_updates": [
     { "id": "watch-...", "state": "waiting|window_open|converted|missed", "expected_open": null, "note": "one line" }
+  ],
+  "other_items": [
+    { "kid": "ridhi|dhruv|both|family", "title": "one line: the thing you noticed but didn't promote", "source_ref": "email:<message_id> | source:<source_id>" }
   ],
   "digest_notes": ["one-line highlight", "..."]
 }

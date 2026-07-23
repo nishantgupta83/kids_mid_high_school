@@ -140,6 +140,31 @@ if [ "$MODE" != "full" ]; then
   $PY "$AGENT/merge_results.py" --finalize-only || logln "STEP 8 finalize-only WARN"
 fi
 
+# ---- STEP 8c: WEEKLY discovery (Sunday, or --weekly) ----------------------
+# Fully isolated from the email scan: web-only LLM call, own schema, proposals only.
+if [ "$WEEKLY" -eq 1 ] || [ "$(date +%u)" = "7" ]; then
+  $PY "$AGENT/build_discovery.py"
+  if $PY "$AGENT/llm_call.py" --mode discovery \
+      --prompt "$AGENT/prompts/discovery_prompt.md" \
+      --input "$LOCAL/discovery_input.json" \
+      --output "$LOCAL/discovery_output.json"; then
+    if $PY "$AGENT/merge_discovery.py" --llm-output "$LOCAL/discovery_output.json"; then
+      if $PY "$REPO/scripts/validate_data.py" >/dev/null 2>&1; then
+        logln "STEP 8c discovery OK"
+      else
+        logln "STEP 8c discovery validate FAIL — rolling back data/"
+        git -C "$REPO" checkout -- data/
+      fi
+    else
+      logln "STEP 8c discovery merge FAIL (skipped)"
+    fi
+  else
+    logln "STEP 8c discovery LLM FAIL (skipped)"
+  fi
+else
+  logln "STEP 8c discovery SKIP (not Sunday)"
+fi
+
 # ---- STEP 9: (KV push moved after finalize so health reflects THIS run) ---
 logln "STEP 9 kv-push deferred to post-finalize"
 

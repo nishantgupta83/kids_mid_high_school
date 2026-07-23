@@ -85,9 +85,15 @@ def collect(today):
         if w.get("check_from") == today.isoformat():
             alerts.append({"title": w["title"], "verb": "watching starts", "date": w["check_from"], "days": 0, "kid": w["kid"]})
 
+    # Proposed sources awaiting the parent's approve/dismiss (weekly discovery output).
+    proposed = [p for p in read_json(os.path.join(DATA, "sources_proposed.json"), {"proposals": []})["proposals"]
+                if p.get("state", "pending") == "pending"]
+
     return {"action_needed": action_needed, "this_week": this_week,
             "new_discoveries": new_discoveries, "watchlist_alerts": alerts,
             "digest_notes": summary.get("digest_notes", []),
+            "other_items": summary.get("other_items", []),
+            "proposed_sources": proposed,
             "quarantined": summary.get("quarantined", 0)}
 
 
@@ -143,6 +149,16 @@ def render_html(today, sections, health, degraded_raw):
             row(f'{kid_badge(a["kid"])} {html.escape(a["title"])} — {a["verb"]} '
                 f'{fmt_date(a["date"])} ({a["days"]}d)')
             for a in sections["watchlist_alerts"])))
+    if sections.get("proposed_sources"):
+        parts.append(sec("New sources to approve", C["sky"], "".join(
+            row(f'{kid_badge(p["kid"])} <b>{html.escape(p["name"])}</b>'
+                f'<br><span style="color:{C["soft"]}">{html.escape(p.get("why",""))}</span>'
+                f'<br><span style="color:{C["soft"]}">Approve or dismiss on the dashboard Watchlist tab.</span>')
+            for p in sections["proposed_sources"])))
+    if sections.get("other_items"):
+        parts.append(sec("Other (noticed, worth a glance)", C["soft"], "".join(
+            row(f'{kid_badge(o.get("kid","family"))} <span style="color:{C["soft"]}">{html.escape(o["title"])}</span>')
+            for o in sections["other_items"])))
     if degraded_raw:
         parts.append(sec("Needs a look (summary unavailable today)", C["coral"], "".join(
             row(html.escape(line)) for line in degraded_raw)))
@@ -185,6 +201,12 @@ def render_text(today, sections, health, degraded_raw):
         lines += ["", "COMING WINDOWS:"]
         lines += [f"  [{a['kid']}] {a['title']} — {a['verb']} {a['date']} ({a['days']}d)"
                   for a in sections["watchlist_alerts"]]
+    if sections.get("proposed_sources"):
+        lines += ["", "NEW SOURCES TO APPROVE (dashboard Watchlist tab):"]
+        lines += [f"  [{p['kid']}] {p['name']} — {p.get('why','')}" for p in sections["proposed_sources"]]
+    if sections.get("other_items"):
+        lines += ["", "OTHER (noticed, worth a glance):"]
+        lines += [f"  [{o.get('kid','family')}] {o['title']}" for o in sections["other_items"]]
     if degraded_raw:
         lines += ["", "NEEDS A LOOK (summary unavailable):"] + [f"  {l}" for l in degraded_raw]
     if len(lines) <= 2:

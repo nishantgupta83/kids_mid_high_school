@@ -168,6 +168,29 @@ def validate_watchlist(doc, source_ids):
             err(f"watchlist.json[{wid}]: source_id {w.get('source_id')!r} not in sources.json")
 
 
+PROP_ID = re.compile(r"^prop-[a-z0-9-]{2,76}$")
+PROP_STATE = {"pending", "approved", "dismissed"}
+PROP_METHOD = {"http_diff", "json_api", "manual"}
+
+
+def validate_proposed(doc, source_ids):
+    props = doc.get("proposals", [])
+    check_unique("sources_proposed.json", "id", [p.get("id") for p in props])
+    for p in props:
+        pid = p.get("id", "<missing-id>")
+        if not PROP_ID.match(str(pid)):
+            err(f"sources_proposed.json[{pid}]: id must match prop-<slug>")
+        check_enum(f"sources_proposed.json[{pid}]", "kid", p.get("kid"), {"ridhi", "dhruv", "both"})
+        check_enum(f"sources_proposed.json[{pid}]", "category", p.get("category"), SOURCE_CATEGORY)
+        check_enum(f"sources_proposed.json[{pid}]", "scan_method", p.get("scan_method"), PROP_METHOD)
+        check_enum(f"sources_proposed.json[{pid}]", "state", p.get("state", "pending"), PROP_STATE)
+        if not str(p.get("url", "")).startswith("http"):
+            err(f"sources_proposed.json[{pid}]: url must be http(s)")
+        rep = p.get("replaces_source_id")
+        if rep is not None and rep not in source_ids:
+            err(f"sources_proposed.json[{pid}]: replaces_source_id {rep!r} not in sources.json")
+
+
 def pii_lint():
     """Scan every COMMITTED data file for PII patterns. Gitignored dirs are exempt."""
     skip_dirs = {"local", "snapshots", "digests"}
@@ -206,7 +229,12 @@ def main():
         validate_watchlist(watch_doc, source_ids)
         counts["watchlist"] = len(watch_doc.get("watchlist", []))
 
-    for name in ("school_year.json", "sources_proposed.json", "state/last_run.json", "state/email_cursor.json"):
+    proposed_doc = load("sources_proposed.json")
+    if proposed_doc:
+        validate_proposed(proposed_doc, source_ids)
+        counts["proposed"] = len(proposed_doc.get("proposals", []))
+
+    for name in ("school_year.json", "state/last_run.json", "state/email_cursor.json"):
         load(name)  # parse check only
 
     pii_lint()

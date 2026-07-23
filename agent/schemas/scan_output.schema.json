@@ -4,6 +4,7 @@
   "type": "object",
   "required": ["new_events", "updated_events", "new_opportunities", "watchlist_updates", "digest_notes"],
   "additionalProperties": false,
+  "$comment": "other_items is optional for backward-compat but consumed when present",
   "properties": {
     "new_events": {
       "type": "array",
@@ -97,6 +98,18 @@
       "type": "array",
       "maxItems": 5,
       "items": { "type": "string", "maxLength": 300 }
+    },
+    "other_items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["title"],
+        "properties": {
+          "kid": { "enum": ["ridhi", "dhruv", "both", "family"] },
+          "title": { "type": "string", "minLength": 2, "maxLength": 240 },
+          "source_ref": { "type": "string", "maxLength": 300 }
+        }
+      }
     }
   }
 }
