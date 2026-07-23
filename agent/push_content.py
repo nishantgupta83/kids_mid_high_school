@@ -87,7 +87,9 @@ def apply_proposal_decisions(cfg):
         # Instance-scope: a decision only applies to the exact proposal it was made on.
         # A stale KV key from an earlier same-id proposal (different found date) is ignored,
         # so a regenerated proposal always needs fresh approval — closes the auto-promote gap.
-        if p.get("state", "pending") != "pending" or not d or dec.get("found") != p.get("found"):
+        # Require a truthy found on BOTH sides so an empty/missing value can never match.
+        if (p.get("state", "pending") != "pending" or not d
+                or not p.get("found") or not dec.get("found") or dec.get("found") != p.get("found")):
             remaining.append(p)
             continue
         if d == "approve" and promote_proposal(p, sources_doc["sources"], today):

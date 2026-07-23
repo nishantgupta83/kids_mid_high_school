@@ -16,6 +16,7 @@ import json
 import os
 import re
 import sys
+import uuid
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from lib.atomicio import read_json, write_json
@@ -78,6 +79,13 @@ def main():
     event_keys = {e["dedupe_key"] for e in events}
     event_ids = {e["id"] for e in events}
 
+    # Per-generation instance token (date prefix + random) so an approval decision
+    # binds to THIS specific proposal instance, not a reusable calendar-day id — a
+    # same-day regeneration gets a fresh token, forcing a new approval. ≤20 chars for
+    # the worker's cap (10 + 1 + 8 = 19).
+    def token():
+        return today.isoformat() + "-" + uuid.uuid4().hex[:8]
+
     added_prop, added_evt, quarantined = 0, 0, []
 
     # Relocations → proposed sources with replaces_source_id
@@ -95,7 +103,7 @@ def main():
         proposed.append({
             "id": pid, "name": f"[relocate] {s['name']}", "kid": rel_kid, "category": s["category"],
             "url": url, "scan_method": s["scan"]["method"], "why": f"Found a live URL for the dead source '{s['name']}'",
-            "eligibility_note": "", "replaces_source_id": sid, "found": today.isoformat(),
+            "eligibility_note": "", "replaces_source_id": sid, "found": token(),
             "confidence": "estimated", "state": "pending", "evidence": str(rel.get("evidence", ""))[:400],
         })
         prop_ids.add(pid); added_prop += 1
@@ -109,7 +117,7 @@ def main():
             "id": p["id"], "name": p["name"][:120], "kid": p["kid"], "category": p["category"],
             "url": p["url"], "scan_method": p["scan_method"], "why": str(p.get("why", ""))[:300],
             "eligibility_note": str(p.get("eligibility_note", ""))[:300], "replaces_source_id": None,
-            "found": today.isoformat(), "confidence": p.get("confidence", "estimated"), "state": "pending",
+            "found": token(), "confidence": p.get("confidence", "estimated"), "state": "pending",
         })
         prop_ids.add(p["id"]); prop_urls.add(p["url"]); added_prop += 1
 
