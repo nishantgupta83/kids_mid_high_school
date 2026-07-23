@@ -1,7 +1,11 @@
 {
   "id": "calc-ab",
   "title": "AP Calculus AB",
-  "exam": { "name": "AP Calculus AB Exam", "window": "May 2027", "note": "Check College Board for your exact date. Format: MCQ (with & without calculator) + free-response. A graphing calculator is required." },
+  "exam": {
+    "name": "AP Calculus AB Exam",
+    "window": "May 2027",
+    "note": "Check College Board for your exact date. Format: MCQ (with & without calculator) + free-response. A graphing calculator is required."
+  },
   "overview": "The calculus of a single variable, in three big movements: limits, derivatives, and integrals — plus the Fundamental Theorem that ties derivatives and integrals together. Success is 20% new ideas and 80% fluent algebra + practice. Keep older skills (factoring, trig, exponents/logs) sharp all year.",
   "how_to_study_course": [
     "Never let algebra be the reason you miss a calculus problem — review factoring, fractions, trig values, and log rules early.",
@@ -10,35 +14,1284 @@
     "Free-response answers need justification — write the reason (sign of the derivative, theorem name), not just the number."
   ],
   "resources": [
-    { "label": "AP Classroom (College Board — Daily Videos, progress checks)", "url": "https://apclassroom.collegeboard.org/" },
-    { "label": "AP Calculus AB Course & Exam Description (official CED)", "url": "https://apcentral.collegeboard.org/courses/ap-calculus-ab" },
-    { "label": "Khan Academy — AP Calculus AB", "url": "https://www.khanacademy.org/math/ap-calculus-ab" },
-    { "label": "The Organic Chemistry Tutor (YouTube — worked calculus problems)", "url": "https://www.youtube.com/@TheOrganicChemistryTutor" }
+    {
+      "label": "AP Classroom (College Board — Daily Videos, progress checks)",
+      "url": "https://apclassroom.collegeboard.org/"
+    },
+    {
+      "label": "AP Calculus AB Course & Exam Description (official CED)",
+      "url": "https://apcentral.collegeboard.org/courses/ap-calculus-ab"
+    },
+    {
+      "label": "Khan Academy — AP Calculus AB",
+      "url": "https://www.khanacademy.org/math/ap-calculus-ab"
+    },
+    {
+      "label": "The Organic Chemistry Tutor (YouTube — worked calculus problems)",
+      "url": "https://www.youtube.com/@TheOrganicChemistryTutor"
+    }
   ],
   "units": [
-    { "id": "u1", "title": "Unit 1 — Limits & Continuity", "typical_when": "Aug–Sep",
-      "topics": ["Limits graphically & numerically", "Algebraic limit techniques", "Continuity", "Intermediate Value Theorem", "Limits at infinity & asymptotes"],
-      "how_to_study": ["Master factoring & conjugate tricks for 0/0 forms", "Understand continuity as a 3-part definition, not a vibe"] },
-    { "id": "u2", "title": "Unit 2 — Differentiation: Definition & Basic Rules", "typical_when": "Sep–Oct",
-      "topics": ["Derivative as a limit", "Derivative as a rate of change & slope", "Power, product, quotient rules", "Derivatives of trig, e^x, ln x"],
-      "how_to_study": ["Do the limit definition by hand a few times before relying on rules", "Memorize the basic derivative table until it's automatic"] },
-    { "id": "u3", "title": "Unit 3 — Differentiation: Composite, Implicit & Inverse", "typical_when": "Oct",
-      "topics": ["Chain rule", "Implicit differentiation", "Derivatives of inverse & inverse trig functions", "Higher-order derivatives"],
-      "how_to_study": ["The chain rule shows up everywhere after this — over-practice it", "Implicit differentiation trips people up: differentiate y as a function of x"] },
-    { "id": "u4", "title": "Unit 4 — Contextual Applications of Differentiation", "typical_when": "Nov",
-      "topics": ["Motion (position, velocity, acceleration)", "Related rates", "Linear approximation", "L'Hôpital's Rule"],
-      "how_to_study": ["Related rates: draw it, name the rates, differentiate with respect to time", "Know when L'Hôpital applies (0/0 or ∞/∞)"] },
-    { "id": "u5", "title": "Unit 5 — Analytical Applications of Differentiation", "typical_when": "Dec–Jan",
-      "topics": ["Mean Value Theorem", "Increasing/decreasing & concavity", "First & second derivative tests", "Optimization", "Curve sketching"],
-      "how_to_study": ["Sign charts for f' and f'' are your main tool — practice reading them", "Optimization = set up a function, find the critical point, justify it's a max/min"] },
-    { "id": "u6", "title": "Unit 6 — Integration & Accumulation of Change", "typical_when": "Jan–Feb",
-      "topics": ["Riemann sums", "Definite integrals", "Fundamental Theorem of Calculus", "u-substitution", "Accumulation functions"],
-      "how_to_study": ["The FTC is the heart of the course — understand both parts", "u-substitution is the reverse chain rule; practice spotting the inner function"] },
-    { "id": "u7", "title": "Unit 7 — Differential Equations", "typical_when": "Feb–Mar",
-      "topics": ["Slope fields", "Separation of variables", "Exponential growth & decay", "Initial value problems"],
-      "how_to_study": ["Separate variables, integrate both sides, then use the initial condition to find C", "Be able to sketch and interpret a slope field"] },
-    { "id": "u8", "title": "Unit 8 — Applications of Integration", "typical_when": "Mar–Apr",
-      "topics": ["Average value of a function", "Area between curves", "Volumes (disc, washer, known cross-sections)", "Motion revisited via integrals"],
-      "how_to_study": ["Draw the region before setting up any area/volume integral", "Keep disc vs. washer straight — is there a gap from the axis?"] }
+    {
+      "id": "u1",
+      "title": "Unit 1 — Limits & Continuity",
+      "typical_when": "Aug–Sep",
+      "topics": [
+        "Limits graphically & numerically",
+        "Algebraic limit techniques",
+        "Continuity",
+        "Intermediate Value Theorem",
+        "Limits at infinity & asymptotes"
+      ],
+      "how_to_study": [
+        "Master factoring & conjugate tricks for 0/0 forms",
+        "Understand continuity as a 3-part definition, not a vibe"
+      ],
+      "concepts": [
+        {
+          "id": "what-a-limit-means",
+          "title": "What a Limit Really Means",
+          "blocks": [
+            {
+              "p": "A limit answers a very specific question: as x gets closer and closer to some number, what value is the output of the function heading toward? Notice the word 'toward.' A limit is not asking what happens exactly at the point. It is asking where the function is aimed as you sneak up on that point. This distinction is the whole idea, and getting comfortable with it now will make everything later feel natural."
+            },
+            {
+              "p": "Here is why we even need this idea. Sometimes a function has a hole, a jump, or a spot where plugging in the number gives you nonsense like 0/0. At those spots we cannot just evaluate the function. But we can still ask, 'What was it approaching right before it got there?' That approaching value is the limit, and it often exists even when the function value does not."
+            },
+            {
+              "formula": "lim(x→a) f(x) = L  means f(x) gets arbitrarily close to L as x gets close to a"
+            },
+            {
+              "p": "You can explore a limit two friendly ways. Numerically, you build a little table of x-values creeping in from both sides and watch the outputs settle. Graphically, you trace the curve with your finger from the left and from the right and see where the two paths point. If the left side and the right side aim at the same height, that height is the limit."
+            },
+            {
+              "note": "The single most common mistake is thinking lim(x→a) f(x) must equal f(a). It does not have to. The limit cares only about the neighborhood around a, never the exact point a itself. The function can even be undefined at a and still have a perfectly good limit there."
+            },
+            {
+              "example": {
+                "prompt": "Estimate lim(x→2) (x²−4)/(x−2) numerically, then confirm it.",
+                "steps": [
+                  "Plugging in x = 2 directly gives (4−4)/(2−2) = 0/0, which is undefined, so we must approach instead.",
+                  "Try x = 1.9: (3.61−4)/(1.9−2) = (−0.39)/(−0.1) = 3.9. Try x = 2.1: (4.41−4)/(2.1−2) = (0.41)/(0.1) = 4.1.",
+                  "The outputs from the left (3.9) and right (4.1) are both closing in on 4, so the limit looks like 4.",
+                  "Confirm algebraically: (x²−4)/(x−2) = ((x−2)(x+2))/(x−2) = x+2 for x ≠ 2, and x+2 → 4 as x → 2."
+                ],
+                "answer": "lim(x→2) (x²−4)/(x−2) = 4"
+              }
+            }
+          ]
+        },
+        {
+          "id": "algebraic-limit-techniques",
+          "title": "Solving Limits by Hand (Factor, Cancel, Conjugate)",
+          "blocks": [
+            {
+              "p": "Your first move for any limit should always be the easy one: just plug the number in. If you get a clean number, you are done, because most functions you meet are continuous where they are defined. The interesting work only begins when direct substitution gives you the indeterminate form 0/0. That form is a signal, not a dead end. It means numerator and denominator share a hidden common factor that is causing a fake zero."
+            },
+            {
+              "p": "The strategy is to rewrite the expression into an equivalent one where the trouble cancels. For polynomials and fractions, that usually means factoring the top and bottom and canceling the matching piece. For expressions with square roots, the trick is to multiply by the conjugate, which uses the pattern (a−b)(a+b) = a²−b² to clear the root out of the way."
+            },
+            {
+              "note": "0/0 is called an indeterminate form because it does not tell you the answer by itself. Depending on the function it could work out to 5, or 0, or infinity. Never write 'the limit is 0/0' as a final answer. It only means 'keep simplifying.'"
+            },
+            {
+              "formula": "conjugate trick:  (√A − B) · (√A + B) = A − B²"
+            },
+            {
+              "example": {
+                "prompt": "Find lim(x→0) (√(x+4) − 2)/x.",
+                "steps": [
+                  "Direct substitution gives (√4 − 2)/0 = (2−2)/0 = 0/0, indeterminate, so we work harder.",
+                  "Multiply top and bottom by the conjugate (√(x+4) + 2): the numerator becomes (x+4) − 4 = x, so the expression is x / (x·(√(x+4) + 2)).",
+                  "Cancel the common factor x (valid since x ≠ 0 as we approach): this leaves 1/(√(x+4) + 2).",
+                  "Now substitute x = 0: 1/(√4 + 2) = 1/(2 + 2) = 1/4."
+                ],
+                "answer": "lim(x→0) (√(x+4) − 2)/x = 1/4"
+              }
+            }
+          ]
+        },
+        {
+          "id": "continuity",
+          "title": "Continuity: Drawing Without Lifting Your Pen",
+          "blocks": [
+            {
+              "p": "Intuitively, a function is continuous if you can draw its graph without lifting your pen off the paper. No holes, no sudden jumps, no vertical blowups. That casual picture is exactly right, and calculus just makes it precise so we can test it reliably."
+            },
+            {
+              "p": "To be continuous at a single point a, three things must all be true, and they build on each other. First, the function must actually have a value there, so f(a) exists. Second, the limit must exist, meaning the left and right sides agree. Third, and this is the punchline, those two numbers must match each other."
+            },
+            {
+              "formula": "f is continuous at a  ⇔  lim(x→a) f(x) = f(a)"
+            },
+            {
+              "p": "When one of those conditions fails you get a specific flavor of discontinuity. A hole where the limit exists but the value is missing or misplaced is a removable discontinuity. A clean step where the left and right limits disagree is a jump discontinuity. A vertical asymptote where the function shoots to infinity is an infinite discontinuity."
+            },
+            {
+              "note": "A removable discontinuity is 'removable' because you could patch the single missing point and fix it. A jump can never be patched by redefining one point, since the two sides genuinely head to different heights."
+            },
+            {
+              "example": {
+                "prompt": "The function f(x) = (x²−1)/(x−1) for x ≠ 1, and f(1) = c. What value of c makes f continuous at x = 1?",
+                "steps": [
+                  "Find the limit as x → 1: factor the top as (x−1)(x+1), so (x²−1)/(x−1) = x+1 for x ≠ 1.",
+                  "Then lim(x→1) f(x) = lim(x→1) (x+1) = 1 + 1 = 2.",
+                  "For continuity we need f(1) to equal that limit, so we need c = 2."
+                ],
+                "answer": "c = 2 makes f continuous at x = 1"
+              }
+            }
+          ]
+        },
+        {
+          "id": "intermediate-value-theorem",
+          "title": "The Intermediate Value Theorem",
+          "blocks": [
+            {
+              "p": "The Intermediate Value Theorem, or IVT, captures a fact so obvious it is easy to overlook: a continuous curve cannot get from one height to another without passing through every height in between. If you are at 40 feet and later at 60 feet, at some moment you were at exactly 50 feet, because you could not teleport past it."
+            },
+            {
+              "p": "Made formal: if f is continuous on a closed interval [a, b], then for any target value N sitting between f(a) and f(b), there is guaranteed to be at least one input c in the interval where f(c) = N. The most useful special case is when N = 0, because it lets you prove an equation has a solution without ever solving it."
+            },
+            {
+              "formula": "If f is continuous on [a, b] and N is between f(a) and f(b), then f(c) = N for some c in [a, b]"
+            },
+            {
+              "note": "IVT only promises that a solution exists; it does not tell you where it is or how many there are. Also, the continuity requirement is not optional. A function with a jump can skip right over the value you wanted, so always confirm continuity first."
+            },
+            {
+              "example": {
+                "prompt": "Show that x³ + x − 1 = 0 has a solution somewhere between x = 0 and x = 1.",
+                "steps": [
+                  "Let f(x) = x³ + x − 1. It is a polynomial, so it is continuous everywhere, including on [0, 1].",
+                  "Evaluate the endpoints: f(0) = 0 + 0 − 1 = −1, which is negative, and f(1) = 1 + 1 − 1 = 1, which is positive.",
+                  "Since f is continuous and 0 lies between f(0) = −1 and f(1) = 1, the IVT guarantees some c in (0, 1) with f(c) = 0."
+                ],
+                "answer": "By IVT, x³ + x − 1 has at least one root between 0 and 1"
+              }
+            }
+          ]
+        },
+        {
+          "id": "limits-at-infinity",
+          "title": "Limits at Infinity and Horizontal Asymptotes",
+          "blocks": [
+            {
+              "p": "So far we have zoomed in on a specific point. Now we zoom out and ask a different question: what does the function do in the long run, as x marches off toward positive or negative infinity? The answer describes the function's end behavior, and it tells us whether the graph flattens out toward a horizontal line called a horizontal asymptote."
+            },
+            {
+              "p": "For rational functions (a polynomial over a polynomial), there is a clean trick. Divide every term, top and bottom, by the highest power of x that appears in the denominator. Any term like 5/x or 1/x² then heads to 0 as x grows huge, because a fixed number split among an enormous quantity vanishes. Whatever survives that cleanup is your limit."
+            },
+            {
+              "formula": "For any fixed number k and positive power n:  lim(x→∞) k/xⁿ = 0"
+            },
+            {
+              "p": "A useful shortcut for rational functions is to compare the leading powers. If the top and bottom have the same degree, the horizontal asymptote is the ratio of the leading coefficients. If the bottom wins (higher degree), the whole thing shrinks to 0. If the top wins, there is no horizontal asymptote because the function grows without bound."
+            },
+            {
+              "note": "Watch out: 1/x tends to 0, but 1/x² also tends to 0. When you divide, apply the same top power to every single term, including constant terms, or your bookkeeping will drift and the answer will be wrong."
+            },
+            {
+              "example": {
+                "prompt": "Find lim(x→∞) (3x² + 5)/(2x² − x) and name the horizontal asymptote.",
+                "steps": [
+                  "The highest power in the denominator is x², so divide every term by x²: the top becomes 3 + 5/x² and the bottom becomes 2 − 1/x.",
+                  "As x → ∞, the shrinking terms vanish: 5/x² → 0 and 1/x → 0.",
+                  "So the expression approaches (3 + 0)/(2 − 0) = 3/2, matching the leading-coefficient ratio 3/2."
+                ],
+                "answer": "The limit is 3/2, so y = 3/2 is the horizontal asymptote"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u2",
+      "title": "Unit 2 — Differentiation: Definition & Basic Rules",
+      "typical_when": "Sep–Oct",
+      "topics": [
+        "Derivative as a limit",
+        "Derivative as a rate of change & slope",
+        "Power, product, quotient rules",
+        "Derivatives of trig, e^x, ln x"
+      ],
+      "how_to_study": [
+        "Do the limit definition by hand a few times before relying on rules",
+        "Memorize the basic derivative table until it's automatic"
+      ],
+      "concepts": [
+        {
+          "id": "derivative-as-a-limit",
+          "title": "The Derivative as a Limit",
+          "blocks": [
+            {
+              "p": "The derivative is the single most important idea in this course, and underneath all the shortcuts it is just a limit. Here is the picture. Pick a point on a curve. Draw a straight line through that point and a second nearby point; that line is called a secant, and its slope is the average rate of change between the two points. Now slide the second point closer and closer to the first. The secant lines swing and settle onto one special line that just grazes the curve: the tangent line. Its slope is the derivative."
+            },
+            {
+              "p": "To capture that sliding-closer process with algebra, we use a small step called h. The two points are x and x+h, and the slope of the secant between them is the rise over the run. Then we take the limit as h shrinks to 0, which is the mathematical version of sliding the second point in until it touches the first."
+            },
+            {
+              "formula": "f′(x) = lim(h→0) (f(x+h) − f(x))/h"
+            },
+            {
+              "note": "You cannot just set h = 0 at the start; that gives 0/0. The whole method works because you first simplify the fraction algebraically so the h in the denominator cancels, and only then let h go to 0."
+            },
+            {
+              "example": {
+                "prompt": "Use the limit definition to find the derivative of f(x) = x².",
+                "steps": [
+                  "Set up the quotient: f′(x) = lim(h→0) ((x+h)² − x²)/h.",
+                  "Expand the numerator: (x² + 2xh + h²) − x² = 2xh + h².",
+                  "The fraction becomes (2xh + h²)/h = 2x + h after canceling h from every term.",
+                  "Now let h → 0: 2x + h → 2x."
+                ],
+                "answer": "f′(x) = 2x"
+              }
+            }
+          ]
+        },
+        {
+          "id": "derivative-as-slope-and-rate",
+          "title": "Slope, Rate of Change, and the Tangent Line",
+          "blocks": [
+            {
+              "p": "Once you have a derivative function f′(x), it is a machine that reports the slope of the original curve at any x you feed it. Two readings of the same idea help here. Geometrically, f′(a) is the steepness of the tangent line at x = a. Physically, f′(a) is the instantaneous rate of change of the quantity at that instant, how fast it is changing right now rather than on average."
+            },
+            {
+              "p": "Because the tangent line touches the curve at (a, f(a)) and has slope f′(a), you can write its equation immediately using point-slope form. This tangent line is also the best straight-line stand-in for the curve near that point, an idea you will lean on again when you study linear approximation."
+            },
+            {
+              "formula": "tangent line at x = a:  y − f(a) = f′(a)·(x − a)"
+            },
+            {
+              "note": "Keep the two roles straight. f(a) is the height of the curve; f′(a) is the slope of the curve. Students often plug the slope in where the height belongs. The point on the line uses f(a); the slope uses f′(a)."
+            },
+            {
+              "example": {
+                "prompt": "For f(x) = x², find the slope at x = 3 and the equation of the tangent line there.",
+                "steps": [
+                  "We already know f′(x) = 2x, so the slope at x = 3 is f′(3) = 2·3 = 6.",
+                  "The point on the curve is (3, f(3)) = (3, 9).",
+                  "Point-slope form: y − 9 = 6(x − 3), which simplifies to y = 6x − 18 + 9 = 6x − 9."
+                ],
+                "answer": "Slope is 6; tangent line is y = 6x − 9"
+              }
+            }
+          ]
+        },
+        {
+          "id": "power-rule",
+          "title": "The Power Rule and Building-Block Rules",
+          "blocks": [
+            {
+              "p": "Using the limit definition every time would be exhausting, so we prove shortcuts once and reuse them forever. The most fundamental is the power rule: to differentiate x raised to a power, bring the exponent down in front as a multiplier and then subtract one from the exponent. It works for any real exponent, positive, negative, or fractional."
+            },
+            {
+              "formula": "d/dx [xⁿ] = n·xⁿ⁻¹"
+            },
+            {
+              "p": "Two companion rules let you handle whole expressions. The constant-multiple rule says a number multiplying a function just rides along untouched, so you differentiate the function and keep the number. The sum rule says you can differentiate a sum term by term. Together these mean you can attack any polynomial one piece at a time. Also remember that the derivative of a plain constant is 0, because a constant never changes."
+            },
+            {
+              "note": "A frequent slip is forgetting to reduce the exponent, or mishandling the constant term. The derivative of 7 is 0, not 7. And the derivative of 5x is 5, because 5x is 5·x¹ and the exponent drops to x⁰ = 1."
+            },
+            {
+              "example": {
+                "prompt": "Differentiate f(x) = 3x⁴ − 5x² + 7.",
+                "steps": [
+                  "Term 3x⁴: bring down the 4 to get 3·4·x³ = 12x³.",
+                  "Term −5x²: bring down the 2 to get −5·2·x¹ = −10x.",
+                  "Term +7: the derivative of a constant is 0.",
+                  "Add the pieces together: 12x³ − 10x + 0."
+                ],
+                "answer": "f′(x) = 12x³ − 10x"
+              }
+            }
+          ]
+        },
+        {
+          "id": "product-and-quotient-rules",
+          "title": "Product and Quotient Rules",
+          "blocks": [
+            {
+              "p": "A tempting mistake is to guess that the derivative of a product is the product of the derivatives. It is not, and it is worth pausing on why. When two quantities both change, the total change comes from each one changing while the other holds steady, added together. That insight is exactly the product rule: derivative of the first times the second, plus the first times the derivative of the second."
+            },
+            {
+              "formula": "(u·v)′ = u′·v + u·v′"
+            },
+            {
+              "p": "The quotient rule handles a fraction of two functions. The pattern is 'low d-high minus high d-low, over low squared,' which is a chant many students use. In symbols, the derivative of the top times the bottom, minus the top times the derivative of the bottom, all divided by the bottom squared. The order of subtraction matters here, unlike in the product rule."
+            },
+            {
+              "formula": "(u/v)′ = (u′·v − u·v′)/v²"
+            },
+            {
+              "note": "In the quotient rule the minus sign makes order matter: it is always (derivative of top)·(bottom) first. Swapping the two terms flips the sign of your whole answer. If you ever forget the rule, you can rewrite the quotient as a product with a negative exponent and use the product rule instead."
+            },
+            {
+              "example": {
+                "prompt": "Differentiate f(x) = (2x + 1)(x² − 3) with the product rule.",
+                "steps": [
+                  "Let u = 2x + 1 so u′ = 2, and v = x² − 3 so v′ = 2x.",
+                  "Apply the rule: f′ = u′·v + u·v′ = 2·(x² − 3) + (2x + 1)·(2x).",
+                  "Expand: 2x² − 6 + 4x² + 2x.",
+                  "Combine like terms: 6x² + 2x − 6."
+                ],
+                "answer": "f′(x) = 6x² + 2x − 6"
+              }
+            }
+          ]
+        },
+        {
+          "id": "derivatives-trig-exp-log",
+          "title": "Derivatives of Trig, eˣ, and ln x",
+          "blocks": [
+            {
+              "p": "Some functions come with derivatives worth memorizing outright, because they show up constantly. The sine and cosine trade places, with a sign that flips for cosine. The natural exponential eˣ is the superstar of calculus: it is its own derivative, meaning its rate of growth at every point equals its own height. The natural logarithm ln x has the surprisingly simple derivative 1/x."
+            },
+            {
+              "formula": "d/dx sin x = cos x,   d/dx cos x = −sin x,   d/dx eˣ = eˣ,   d/dx ln x = 1/x"
+            },
+            {
+              "p": "These combine with the constant-multiple and sum rules exactly like polynomial terms do. You differentiate each piece with its own rule and keep any number coefficients along for the ride. The point of memorizing this short list is that nearly every harder problem later is built by combining these basic derivatives with the product, quotient, and chain rules."
+            },
+            {
+              "note": "Sign care with cosine: the derivative of cos x is negative sin x. Losing that minus sign is one of the most common errors on tests. Also note d/dx ln x = 1/x only for x > 0, since ln x is only defined there."
+            },
+            {
+              "example": {
+                "prompt": "Differentiate f(x) = 5 sin x − 3 ln x + eˣ.",
+                "steps": [
+                  "Term 5 sin x: the derivative of sin x is cos x, so this gives 5 cos x.",
+                  "Term −3 ln x: the derivative of ln x is 1/x, so this gives −3·(1/x) = −3/x.",
+                  "Term eˣ: the derivative of eˣ is eˣ, unchanged.",
+                  "Combine the three results."
+                ],
+                "answer": "f′(x) = 5 cos x − 3/x + eˣ"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u3",
+      "title": "Unit 3 — Differentiation: Composite, Implicit & Inverse",
+      "typical_when": "Oct",
+      "topics": [
+        "Chain rule",
+        "Implicit differentiation",
+        "Derivatives of inverse & inverse trig functions",
+        "Higher-order derivatives"
+      ],
+      "how_to_study": [
+        "The chain rule shows up everywhere after this — over-practice it",
+        "Implicit differentiation trips people up: differentiate y as a function of x"
+      ],
+      "concepts": [
+        {
+          "id": "chain-rule",
+          "title": "The Chain Rule for Composite Functions",
+          "blocks": [
+            {
+              "p": "A composite function is a function tucked inside another function, like sin(x²) or (3x² + 1)⁴. Here something is happening in two layers: an inside operation feeds its result into an outside operation. The chain rule tells you how fast the whole tower changes by multiplying the rates of each layer, the way gears in a machine multiply their turning."
+            },
+            {
+              "p": "The recipe is: differentiate the outer function while leaving the inner part untouched, then multiply by the derivative of the inner part. People call the second factor the 'inside derivative,' and forgetting it is the number one chain-rule error. Peeling from outside in, one layer at a time, keeps you organized."
+            },
+            {
+              "formula": "d/dx [f(g(x))] = f′(g(x)) · g′(x)"
+            },
+            {
+              "note": "The classic mistake is stopping after the outer derivative and forgetting to multiply by the inner derivative. For (3x² + 1)⁴ you must still multiply by the derivative of 3x² + 1. If the inside were just x, that factor would be 1 and you would not notice it is missing; that is why simple cases hide the rule."
+            },
+            {
+              "example": {
+                "prompt": "Differentiate y = (3x² + 1)⁴.",
+                "steps": [
+                  "Identify the layers: the outer function is (something)⁴ and the inner function is 3x² + 1.",
+                  "Differentiate the outer, keeping the inside intact: 4·(3x² + 1)³.",
+                  "Differentiate the inner: d/dx (3x² + 1) = 6x.",
+                  "Multiply the two results: 4·(3x² + 1)³ · 6x = 24x·(3x² + 1)³."
+                ],
+                "answer": "y′ = 24x·(3x² + 1)³"
+              }
+            }
+          ]
+        },
+        {
+          "id": "implicit-differentiation",
+          "title": "Implicit Differentiation",
+          "blocks": [
+            {
+              "p": "Sometimes a curve is defined by an equation that mixes x and y together, like x² + y² = 25 for a circle, and you cannot easily solve for y by itself. Implicit differentiation lets you find the slope dy/dx anyway. The core idea is to treat y as a secret function of x, so every time you differentiate a term containing y, the chain rule tacks on a factor of dy/dx."
+            },
+            {
+              "p": "The steps are steady. Differentiate both sides of the equation with respect to x, remembering that any y term earns a dy/dx by the chain rule. Then gather all the dy/dx terms on one side, factor dy/dx out, and divide to isolate it. Your answer will usually contain both x and y, which is fine and expected."
+            },
+            {
+              "formula": "d/dx [y²] = 2y · (dy/dx)"
+            },
+            {
+              "note": "Differentiating x² gives 2x with no extra factor, but differentiating y² gives 2y·(dy/dx). The dy/dx is the whole point; leaving it off is the defining error of this topic. It is there because y depends on x, so the chain rule applies."
+            },
+            {
+              "example": {
+                "prompt": "For the circle x² + y² = 25, find dy/dx, then the slope at the point (3, 4).",
+                "steps": [
+                  "Differentiate both sides with respect to x: 2x + 2y·(dy/dx) = 0.",
+                  "Isolate the derivative term: 2y·(dy/dx) = −2x, so dy/dx = −x/y.",
+                  "Substitute the point (3, 4): dy/dx = −3/4."
+                ],
+                "answer": "dy/dx = −x/y, which equals −3/4 at (3, 4)"
+              }
+            }
+          ]
+        },
+        {
+          "id": "inverse-and-inverse-trig-derivatives",
+          "title": "Derivatives of Inverse and Inverse-Trig Functions",
+          "blocks": [
+            {
+              "p": "An inverse function undoes what the original did, swapping inputs and outputs. Geometrically, its graph is the mirror image of the original across the line y = x. That mirror relationship leads to a neat fact about slopes: at matching points, the slope of the inverse is the reciprocal of the slope of the original. This lets you find a derivative of an inverse without ever writing a formula for the inverse."
+            },
+            {
+              "formula": "(f⁻¹)′(a) = 1 / f′(f⁻¹(a))"
+            },
+            {
+              "p": "The inverse trigonometric functions have derivatives worth memorizing because they appear so often, especially in integration later. The two headline results are for arcsine and arctangent. Notice that arctan's derivative is a tidy rational function with no square root, which is why it is a favorite in problems."
+            },
+            {
+              "formula": "d/dx arcsin x = 1/√(1 − x²),   d/dx arctan x = 1/(1 + x²)"
+            },
+            {
+              "note": "For the reciprocal-slope formula, be careful which point you evaluate at: you divide by f′ measured at the input of the original function, which is f⁻¹(a), not at a itself. Track your points and this rule is reliable."
+            },
+            {
+              "example": {
+                "prompt": "Let f(x) = x³ + x, so f(1) = 2. Find (f⁻¹)′(2).",
+                "steps": [
+                  "Find f′(x): using the power rule, f′(x) = 3x² + 1.",
+                  "The inverse formula needs f′ at f⁻¹(2). Since f(1) = 2, we have f⁻¹(2) = 1.",
+                  "Evaluate f′(1) = 3·1² + 1 = 4.",
+                  "Take the reciprocal: (f⁻¹)′(2) = 1/f′(1) = 1/4."
+                ],
+                "answer": "(f⁻¹)′(2) = 1/4"
+              }
+            }
+          ]
+        },
+        {
+          "id": "higher-order-derivatives",
+          "title": "Higher-Order Derivatives",
+          "blocks": [
+            {
+              "p": "Once you have a derivative, nothing stops you from differentiating again. The derivative of the derivative is the second derivative, written f″(x), and it measures how the rate of change is itself changing. In physics this is a familiar chain: position leads to velocity (first derivative), and velocity leads to acceleration (second derivative). You can keep going to third, fourth, and higher derivatives as needed."
+            },
+            {
+              "formula": "f′(x) → f″(x) → f‴(x) → …   (each is the derivative of the one before)"
+            },
+            {
+              "p": "The second derivative has a special geometric meaning you will use a lot: it describes concavity, whether the curve bends upward like a cup or downward like a dome. A positive second derivative means concave up; negative means concave down. For now, just get comfortable computing them by differentiating repeatedly, one clean step at a time."
+            },
+            {
+              "note": "Notation can trip you up. f″(x) uses two prime marks, and in Leibniz notation the second derivative is written d²y/dx². The little 2 sits in different places on top and bottom; that is standard, not a typo, and it does not mean squaring."
+            },
+            {
+              "example": {
+                "prompt": "For f(x) = x⁴, find the first three derivatives.",
+                "steps": [
+                  "First derivative by the power rule: f′(x) = 4x³.",
+                  "Differentiate again: f″(x) = 4·3·x² = 12x².",
+                  "Differentiate a third time: f‴(x) = 12·2·x = 24x."
+                ],
+                "answer": "f′(x) = 4x³, f″(x) = 12x², f‴(x) = 24x"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u4",
+      "title": "Unit 4 — Contextual Applications of Differentiation",
+      "typical_when": "Nov",
+      "topics": [
+        "Motion (position, velocity, acceleration)",
+        "Related rates",
+        "Linear approximation",
+        "L'Hôpital's Rule"
+      ],
+      "how_to_study": [
+        "Related rates: draw it, name the rates, differentiate with respect to time",
+        "Know when L'Hôpital applies (0/0 or ∞/∞)"
+      ],
+      "concepts": [
+        {
+          "id": "motion-position-velocity-acceleration",
+          "title": "Motion: Position, Velocity, and Acceleration",
+          "blocks": [
+            {
+              "p": "Straight-line motion is where derivatives feel most alive. If s(t) gives an object's position at time t, then its velocity is the derivative s′(t), the instantaneous rate at which position changes. Differentiate once more and you get acceleration, s″(t), the rate at which velocity changes. So position, velocity, and acceleration form a chain, each one the derivative of the one before."
+            },
+            {
+              "formula": "v(t) = s′(t),   a(t) = v′(t) = s″(t)"
+            },
+            {
+              "p": "Signs carry real meaning here. Velocity's sign tells you direction: positive means moving in the positive direction, negative means moving back the other way, and velocity equal to zero means the object is momentarily at rest, often right before it turns around. Speed is the absolute value of velocity, ignoring direction. The object is speeding up when velocity and acceleration share the same sign, and slowing down when their signs disagree."
+            },
+            {
+              "note": "Do not confuse 'at rest' with 'no acceleration.' At the top of a toss the velocity is zero but acceleration is not; that nonzero acceleration is exactly what turns the motion around. Velocity zero answers 'is it moving?'; acceleration answers 'is its motion changing?'"
+            },
+            {
+              "example": {
+                "prompt": "A particle moves with position s(t) = t³ − 6t² + 9t. Find when it is at rest.",
+                "steps": [
+                  "Velocity is the derivative: v(t) = s′(t) = 3t² − 12t + 9.",
+                  "At rest means v(t) = 0, so solve 3t² − 12t + 9 = 0; divide by 3 to get t² − 4t + 3 = 0.",
+                  "Factor: (t − 1)(t − 3) = 0, giving t = 1 and t = 3.",
+                  "Check with acceleration a(t) = 6t − 12: a(1) = −6 and a(3) = 6, so the particle reverses direction at each of those times."
+                ],
+                "answer": "The particle is at rest at t = 1 and t = 3 seconds"
+              }
+            }
+          ]
+        },
+        {
+          "id": "related-rates",
+          "title": "Related Rates",
+          "blocks": [
+            {
+              "p": "Related rates problems are about quantities that are linked by an equation and are all changing over time together. If you know how fast one is changing, you can find how fast another is changing, because their rates are tied to each other through that equation. The bridge is differentiating the relationship with respect to time t, so every variable picks up a rate like dr/dt or dV/dt by the chain rule."
+            },
+            {
+              "p": "A dependable game plan keeps these from feeling chaotic. First, write an equation connecting the variables using geometry or the given setup. Second, differentiate both sides with respect to t, treating every variable as a function of time. Third, and only now, plug in the specific numbers for that instant and solve for the unknown rate. Substituting numbers too early is the classic trap, because it freezes quantities that are actually still changing."
+            },
+            {
+              "formula": "sphere volume V = (4/3)π r³   →   dV/dt = 4π r² · (dr/dt)"
+            },
+            {
+              "note": "Do not substitute the instant's numbers before you differentiate. If you plug in r = 5 first, you accidentally treat the radius as a constant and its rate disappears. Differentiate with variables, then substitute."
+            },
+            {
+              "example": {
+                "prompt": "Air is pumped into a spherical balloon at 100 cm³ per second. How fast is the radius growing when r = 5 cm?",
+                "steps": [
+                  "Relate the quantities with the volume formula V = (4/3)π r³.",
+                  "Differentiate with respect to time: dV/dt = 4π r² · (dr/dt).",
+                  "Substitute the known values dV/dt = 100 and r = 5: 100 = 4π·(5²)·(dr/dt) = 100π·(dr/dt).",
+                  "Solve: dr/dt = 100/(100π) = 1/π cm per second."
+                ],
+                "answer": "dr/dt = 1/π ≈ 0.318 cm per second"
+              }
+            }
+          ]
+        },
+        {
+          "id": "linear-approximation",
+          "title": "Linear Approximation",
+          "blocks": [
+            {
+              "p": "Near a point, a smooth curve and its tangent line are almost indistinguishable. Linear approximation cashes in on that: to estimate a function value that is hard to compute directly, you ride along the tangent line at a nearby point where everything is easy. It is the same tangent line from earlier, now used as a calculator for values close to the anchor point."
+            },
+            {
+              "p": "You build the approximation, called L(x), from the height and slope at a convenient anchor point a. The height f(a) sets your starting value, and the slope f′(a) tells you how much to adjust as you step away from a. The estimate is excellent when x is close to a and gradually drifts as you move farther, because the real curve slowly peels away from its tangent line."
+            },
+            {
+              "formula": "L(x) = f(a) + f′(a)·(x − a)"
+            },
+            {
+              "note": "Choose the anchor a to be a nearby point where f(a) and f′(a) are easy, like a perfect square when estimating a square root. Whether your estimate is a little high or a little low depends on concavity: a concave-down curve sits below its tangent, so the linear estimate reads slightly high."
+            },
+            {
+              "example": {
+                "prompt": "Use linear approximation to estimate √4.1.",
+                "steps": [
+                  "Let f(x) = √x and anchor at a = 4, since √4 = 2 is easy and 4 is close to 4.1.",
+                  "The derivative is f′(x) = 1/(2√x), so f′(4) = 1/(2·2) = 1/4.",
+                  "Build the line: L(x) = f(4) + f′(4)·(x − 4) = 2 + (1/4)·(x − 4).",
+                  "Plug in x = 4.1: L(4.1) = 2 + (1/4)·(0.1) = 2 + 0.025 = 2.025."
+                ],
+                "answer": "√4.1 ≈ 2.025 (the true value is about 2.0248)"
+              }
+            }
+          ]
+        },
+        {
+          "id": "lhopitals-rule",
+          "title": "L'Hôpital's Rule",
+          "blocks": [
+            {
+              "p": "Back in the limits unit, an answer of 0/0 meant you had to factor or use a conjugate. L'Hôpital's Rule is a powerful new tool for those same indeterminate limits, and it also handles the ∞/∞ case that algebra struggles with. The rule says that if substitution gives you 0/0 or ∞/∞, you may replace the top and bottom with their derivatives separately and try the limit again."
+            },
+            {
+              "formula": "If lim f/g gives 0/0 or ∞/∞, then lim (f/g) = lim (f′/g′)"
+            },
+            {
+              "p": "Two cautions make this reliable. First, you must confirm the limit is genuinely indeterminate before applying the rule; using it on a limit that is not 0/0 or ∞/∞ gives wrong answers. Second, this is not the quotient rule. You differentiate the numerator and the denominator on their own, as two separate functions, and never combine them into one quotient derivative. If the new limit is still indeterminate, you are allowed to apply the rule again."
+            },
+            {
+              "note": "L'Hôpital replaces top and bottom with f′ and g′ independently; it does not use the quotient rule at all. Applying the quotient rule here is the most common and costly mistake with this topic."
+            },
+            {
+              "example": {
+                "prompt": "Evaluate lim(x→0) (sin x)/x.",
+                "steps": [
+                  "Substitute x = 0: (sin 0)/0 = 0/0, which is indeterminate, so L'Hôpital's Rule applies.",
+                  "Differentiate the top and bottom separately: the derivative of sin x is cos x, and the derivative of x is 1.",
+                  "Form the new limit: lim(x→0) (cos x)/1.",
+                  "Substitute x = 0: cos 0 = 1."
+                ],
+                "answer": "lim(x→0) (sin x)/x = 1"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u5",
+      "title": "Unit 5 — Analytical Applications of Differentiation",
+      "typical_when": "Dec–Jan",
+      "topics": [
+        "Mean Value Theorem",
+        "Increasing/decreasing & concavity",
+        "First & second derivative tests",
+        "Optimization",
+        "Curve sketching"
+      ],
+      "how_to_study": [
+        "Sign charts for f' and f'' are your main tool — practice reading them",
+        "Optimization = set up a function, find the critical point, justify it's a max/min"
+      ],
+      "concepts": [
+        {
+          "id": "mean-value-theorem",
+          "title": "The Mean Value Theorem",
+          "blocks": [
+            {
+              "p": "Imagine you drive 120 miles in 2 hours. Your average speed was 60 mph. It feels obvious that at some instant your speedometer must have read exactly 60 mph, even if you sped up and slowed down along the way. The Mean Value Theorem (MVT) is the precise version of that gut feeling: somewhere in the interval, the instantaneous rate of change must equal the average rate of change over the whole interval."
+            },
+            {
+              "p": "The average rate of change from a to b is the slope of the straight line (the secant line) connecting the two endpoints of the graph. The instantaneous rate of change at a point is the slope of the tangent line there, which is f′. The MVT promises that at least one point c between a and b has a tangent line exactly parallel to that secant line."
+            },
+            {
+              "formula": "f′(c) = (f(b) - f(a)) / (b - a),  for some c in (a, b)"
+            },
+            {
+              "p": "For the theorem to apply, two conditions must hold: f must be continuous on the closed interval [a, b] (no breaks or jumps) and differentiable on the open interval (a, b) (no sharp corners or vertical tangents). If either condition fails, the guarantee can fail too."
+            },
+            {
+              "note": "Common mistake: the MVT tells you a point c EXISTS, but c must lie strictly between a and b, never at an endpoint. Also, you may need to reject a solution that falls outside (a, b)."
+            },
+            {
+              "example": {
+                "prompt": "Find the value c guaranteed by the Mean Value Theorem for f(x) = x² on the interval [1, 3].",
+                "steps": [
+                  "First check the conditions: x² is a polynomial, so it is continuous and differentiable everywhere. The MVT applies.",
+                  "Compute the average rate of change: (f(3) - f(1)) / (3 - 1) = (9 - 1) / 2 = 8 / 2 = 4.",
+                  "Find f′(x) = 2x, then set the instantaneous rate equal to the average: 2c = 4.",
+                  "Solve: c = 2. Check that c = 2 lies inside the open interval (1, 3). It does."
+                ],
+                "answer": "c = 2"
+              }
+            }
+          ]
+        },
+        {
+          "id": "increasing-decreasing-first-derivative-test",
+          "title": "Increasing, Decreasing, and the First Derivative Test",
+          "blocks": [
+            {
+              "p": "The first derivative f′ measures the slope of the curve at each point, and slope tells you which way the function is heading. Where f′ is positive the tangent line tilts uphill, so the function is increasing. Where f′ is negative the tangent tilts downhill, so the function is decreasing. This is how derivatives let you read the shape of a graph without plotting hundreds of points."
+            },
+            {
+              "p": "The interesting moments happen where f′ = 0 or f′ is undefined. These are called critical points, and they are the only places where a smooth function can turn around. If the function switches from increasing to decreasing at a critical point, that point is a local (relative) maximum. If it switches from decreasing to increasing, it is a local minimum."
+            },
+            {
+              "formula": "f′(x) > 0 ⇒ increasing;   f′(x) < 0 ⇒ decreasing"
+            },
+            {
+              "note": "A critical point is only a candidate. If f′ does NOT change sign there (for example x = 0 for f(x) = x³), it is neither a max nor a min. Always test the sign on both sides."
+            },
+            {
+              "p": "The First Derivative Test is the organized way to do this: find the critical points, place them on a number line, then pick a test value in each interval and check the sign of f′. The pattern of plus and minus signs tells you exactly where the function rises, falls, and turns."
+            },
+            {
+              "example": {
+                "prompt": "Find the intervals where f(x) = x³ - 3x is increasing or decreasing, and classify its critical points.",
+                "steps": [
+                  "Differentiate: f′(x) = 3x² - 3 = 3(x² - 1) = 3(x - 1)(x + 1). Critical points are x = -1 and x = 1.",
+                  "Test x = -2 (left region): f′(-2) = 3(4) - 3 = 9 > 0, so f is increasing on (-∞, -1).",
+                  "Test x = 0 (middle region): f′(0) = -3 < 0, so f is decreasing on (-1, 1). Test x = 2: f′(2) = 9 > 0, so f is increasing on (1, ∞).",
+                  "At x = -1 the sign goes + to -, a local maximum: f(-1) = -1 + 3 = 2. At x = 1 the sign goes - to +, a local minimum: f(1) = 1 - 3 = -2."
+                ],
+                "answer": "Increasing on (-∞, -1) and (1, ∞); decreasing on (-1, 1). Local max at (-1, 2), local min at (1, -2)."
+              }
+            }
+          ]
+        },
+        {
+          "id": "concavity-inflection-second-derivative-test",
+          "title": "Concavity, Inflection Points, and the Second Derivative Test",
+          "blocks": [
+            {
+              "p": "The first derivative tells you whether a curve is going up or down. The second derivative, f″, tells you how the curve is bending. When f″ is positive the curve bends upward like a cup that could hold water; we call this concave up. When f″ is negative the curve bends downward like an arch or a frown; that is concave down. Concavity is about the curvature, not the direction of travel, so a curve can be increasing while concave down, or decreasing while concave up."
+            },
+            {
+              "formula": "f″(x) > 0 ⇒ concave up;   f″(x) < 0 ⇒ concave down"
+            },
+            {
+              "p": "A point where concavity actually changes from up to down or down to up is called an inflection point. These occur where f″ = 0 or is undefined, but just like critical points, you must confirm the sign of f″ actually flips there. An inflection point is where the curve stops curving one way and starts curving the other."
+            },
+            {
+              "p": "Concavity also gives a quick shortcut for classifying critical points, called the Second Derivative Test. At a critical point where f′ = 0: if f″ is negative, the curve is concave down (a dome), so it is a local maximum; if f″ is positive, the curve is concave up (a bowl), so it is a local minimum."
+            },
+            {
+              "note": "Common mistake: if f″ = 0 at a critical point, the Second Derivative Test is inconclusive, and you must fall back on the First Derivative Test. A zero second derivative does not automatically mean an inflection point either."
+            },
+            {
+              "example": {
+                "prompt": "For f(x) = x³ - 3x, find the concavity, any inflection points, and use the Second Derivative Test to classify the critical points x = -1 and x = 1.",
+                "steps": [
+                  "Differentiate twice: f′(x) = 3x² - 3 and f″(x) = 6x.",
+                  "Set f″(x) = 0: 6x = 0 gives x = 0. For x < 0, f″ < 0 (concave down); for x > 0, f″ > 0 (concave up). The sign flips, so x = 0 is an inflection point: f(0) = 0, point (0, 0).",
+                  "Second Derivative Test at x = -1: f″(-1) = -6 < 0, concave down, so a local maximum.",
+                  "Second Derivative Test at x = 1: f″(1) = 6 > 0, concave up, so a local minimum."
+                ],
+                "answer": "Concave down on (-∞, 0), concave up on (0, ∞); inflection point (0, 0). Local max at x = -1, local min at x = 1."
+              }
+            }
+          ]
+        },
+        {
+          "id": "optimization",
+          "title": "Optimization: Finding the Best Value",
+          "blocks": [
+            {
+              "p": "Optimization is where calculus earns its keep in the real world. The question is always some version of: what choice makes a quantity as large or as small as possible? What dimensions use the least material? What price earns the most profit? Because a smooth function turns around exactly where its derivative is zero, calculus can pinpoint the best value instead of guessing."
+            },
+            {
+              "p": "The reliable recipe has four moves. First, draw a picture and name your variables. Second, write the quantity you want to optimize as a formula (the objective). Third, use any given relationship (the constraint) to rewrite the objective in terms of a single variable. Fourth, take the derivative, set it to zero, solve, and confirm you found a max or a min."
+            },
+            {
+              "formula": "Set the objective's derivative to 0, solve for the variable, then verify with the sign of f′ or f″"
+            },
+            {
+              "note": "Common mistake: forgetting to use the constraint to reduce to one variable, or forgetting to check endpoints and confirm whether your critical point is truly the maximum you wanted, not the minimum."
+            },
+            {
+              "example": {
+                "prompt": "A farmer has 40 meters of fence to build a rectangular pen along a straight river. The river side needs no fence. What dimensions give the largest area?",
+                "steps": [
+                  "Let x be each side perpendicular to the river and y be the side parallel to the river. Fence used covers two x sides and one y side: 2x + y = 40, so y = 40 - 2x.",
+                  "Write the area to maximize: A = x·y = x(40 - 2x) = 40x - 2x².",
+                  "Differentiate and set to zero: A′ = 40 - 4x = 0, so x = 10. Then y = 40 - 2(10) = 20.",
+                  "Confirm it is a maximum: A″ = -4 < 0, so the curve is concave down and x = 10 gives a maximum. Area = 10 · 20 = 200."
+                ],
+                "answer": "Dimensions 10 m by 20 m, giving a maximum area of 200 m²."
+              }
+            }
+          ]
+        },
+        {
+          "id": "curve-sketching",
+          "title": "Curve Sketching: Putting It All Together",
+          "blocks": [
+            {
+              "p": "Curve sketching is the grand summary of the whole unit. Instead of plotting points blindly, you use the first and second derivatives as a diagnostic report to reveal a graph's exact shape. The first derivative tells you where the curve rises and falls and where its peaks and valleys are. The second derivative tells you where it bends up or down and where it changes its bend."
+            },
+            {
+              "p": "A tidy checklist keeps you organized: find the critical points from f′ and mark the intervals of increase and decrease; find where f″ = 0 to locate concavity changes and inflection points; then combine everything, plotting the key points (local maxima, minima, and inflection points) and connecting them so the curve matches your sign analysis."
+            },
+            {
+              "note": "The graphs of f, f′, and f″ are easy to confuse. Remember: a maximum or minimum of f sits where f′ crosses zero, and an inflection point of f sits where f″ crosses zero (which is also where f′ has its own peak or valley)."
+            },
+            {
+              "example": {
+                "prompt": "Analyze f(x) = x³ - 3x² to describe its increasing/decreasing behavior, concavity, and key points.",
+                "steps": [
+                  "First derivative: f′(x) = 3x² - 6x = 3x(x - 2). Critical points x = 0 and x = 2. Testing signs: increasing on (-∞, 0), decreasing on (0, 2), increasing on (2, ∞).",
+                  "Key turning points: f(0) = 0 gives local max (0, 0); f(2) = 8 - 12 = -4 gives local min (2, -4).",
+                  "Second derivative: f″(x) = 6x - 6 = 6(x - 1). Set to zero: x = 1. Concave down on (-∞, 1), concave up on (1, ∞), so inflection point at f(1) = 1 - 3 = -2, point (1, -2).",
+                  "Sketch: rise to the peak (0, 0), fall through the inflection point (1, -2) while bending, reach the valley (2, -4), then rise again."
+                ],
+                "answer": "Local max (0, 0), local min (2, -4), inflection point (1, -2); concave down then up across x = 1."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u6",
+      "title": "Unit 6 — Integration & Accumulation of Change",
+      "typical_when": "Jan–Feb",
+      "topics": [
+        "Riemann sums",
+        "Definite integrals",
+        "Fundamental Theorem of Calculus",
+        "u-substitution",
+        "Accumulation functions"
+      ],
+      "how_to_study": [
+        "The FTC is the heart of the course — understand both parts",
+        "u-substitution is the reverse chain rule; practice spotting the inner function"
+      ],
+      "concepts": [
+        {
+          "id": "riemann-sums",
+          "title": "Riemann Sums: Approximating Area",
+          "blocks": [
+            {
+              "p": "Before we can integrate exactly, we approximate. Suppose you want the area under a curve between two x-values but the region has a curvy top, so no simple area formula fits. The idea of a Riemann sum is to slice the region into thin vertical rectangles, compute each rectangle's area as height times width, and add them all up. The more rectangles you use, the closer the total gets to the true area."
+            },
+            {
+              "p": "Each rectangle has the same width, Δx = (b - a)/n, where n is the number of rectangles. The height comes from the function's value at a chosen point in each slice. If you use the left edge of each slice you get a left Riemann sum; the right edge gives a right sum; the middle gives a midpoint sum. Same idea, different sample point."
+            },
+            {
+              "formula": "Area ≈ Σ f(xᵢ)·Δx,  where Δx = (b - a)/n"
+            },
+            {
+              "note": "For a function that is increasing across the interval, a right Riemann sum overestimates the true area and a left sum underestimates it. Flip that for a decreasing function. Sketching helps you predict over vs under."
+            },
+            {
+              "example": {
+                "prompt": "Estimate the area under f(x) = x² from x = 0 to x = 2 using 4 rectangles and right endpoints.",
+                "steps": [
+                  "Find the width: Δx = (2 - 0)/4 = 0.5. The right endpoints are x = 0.5, 1.0, 1.5, 2.0.",
+                  "Find the heights: f(0.5) = 0.25, f(1.0) = 1, f(1.5) = 2.25, f(2.0) = 4.",
+                  "Add the heights: 0.25 + 1 + 2.25 + 4 = 7.5. Multiply by the width: 7.5 · 0.5 = 3.75.",
+                  "Since x² is increasing on this interval, the right sum overestimates the exact area (which is 8/3 ≈ 2.667)."
+                ],
+                "answer": "Right Riemann sum ≈ 3.75 (an overestimate)"
+              }
+            }
+          ]
+        },
+        {
+          "id": "definite-integral-signed-area",
+          "title": "The Definite Integral as Signed Area",
+          "blocks": [
+            {
+              "p": "A definite integral is what a Riemann sum becomes when you let the number of rectangles grow to infinity and their width shrink to zero. In that limit the staircase of rectangles smooths perfectly onto the curve, and the approximation becomes the exact area. That is why the integral sign ∫ is a stretched letter S: it stands for an endless sum."
+            },
+            {
+              "formula": "∫ from a to b of f(x) dx = the exact signed area between f and the x-axis from a to b"
+            },
+            {
+              "p": "The word signed is important. Area above the x-axis counts as positive; area below the x-axis counts as negative. So a definite integral can come out to zero if equal areas sit above and below, and it can even be negative. This is different from geometric area, which is always positive."
+            },
+            {
+              "note": "When the graph is made of straight lines or circles, you can find a definite integral using basic geometry (triangles, rectangles, semicircles) instead of antiderivatives. Watch the sign for regions below the axis."
+            },
+            {
+              "example": {
+                "prompt": "Evaluate ∫ from 0 to 3 of 2x dx using geometry.",
+                "steps": [
+                  "Graph y = 2x from x = 0 to x = 3. It is a straight line starting at the origin and rising to the point (3, 6).",
+                  "The region under it is a right triangle with base 3 (along the x-axis) and height 6 (the value at x = 3).",
+                  "Area of a triangle = (1/2)(base)(height) = (1/2)(3)(6) = 9.",
+                  "The whole region sits above the x-axis, so the signed area is positive."
+                ],
+                "answer": "∫ from 0 to 3 of 2x dx = 9"
+              }
+            }
+          ]
+        },
+        {
+          "id": "ftc-part-2-evaluating",
+          "title": "The Fundamental Theorem of Calculus, Part 2",
+          "blocks": [
+            {
+              "p": "The Fundamental Theorem of Calculus (FTC) is the bridge between the two big ideas of the course: derivatives and integrals turn out to be reverse operations. Part 2 gives you a shortcut for evaluating a definite integral without ever building a Riemann sum. Instead of summing infinitely many rectangles, you find an antiderivative and subtract two numbers."
+            },
+            {
+              "p": "An antiderivative F of f is any function whose derivative is f. The theorem says: to find the exact area, evaluate the antiderivative at the top limit, evaluate it at the bottom limit, and subtract. All the constants of integration cancel in the subtraction, so you can ignore the + C for definite integrals."
+            },
+            {
+              "formula": "∫ from a to b of f(x) dx = F(b) - F(a),  where F′(x) = f(x)"
+            },
+            {
+              "note": "Order matters: it is always top limit minus bottom limit, F(b) - F(a). Reversing them flips the sign of your answer, a very common slip on tests."
+            },
+            {
+              "example": {
+                "prompt": "Evaluate ∫ from 1 to 3 of 2x dx using the Fundamental Theorem of Calculus.",
+                "steps": [
+                  "Find an antiderivative of 2x: F(x) = x² (since the derivative of x² is 2x).",
+                  "Evaluate at the top limit: F(3) = 3² = 9.",
+                  "Evaluate at the bottom limit: F(1) = 1² = 1.",
+                  "Subtract, top minus bottom: 9 - 1 = 8."
+                ],
+                "answer": "∫ from 1 to 3 of 2x dx = 8"
+              }
+            }
+          ]
+        },
+        {
+          "id": "accumulation-functions-ftc-part-1",
+          "title": "Accumulation Functions (FTC Part 1)",
+          "blocks": [
+            {
+              "p": "Sometimes the integral itself is the function you care about. An accumulation function has the form g(x) = ∫ from a to x of f(t) dt. It measures how much has piled up from a fixed starting point a out to a moving endpoint x. Think of f(t) as a flow rate and g(x) as the total amount collected so far, like water filling a tank as time passes."
+            },
+            {
+              "p": "Part 1 of the Fundamental Theorem reveals something beautiful: if you differentiate an accumulation function, you get back the original integrand, with the variable renamed. The rate at which accumulated area grows is simply the height of the curve at the current endpoint. Integrating then differentiating undoes itself."
+            },
+            {
+              "formula": "d/dx [ ∫ from a to x of f(t) dt ] = f(x)"
+            },
+            {
+              "note": "If the upper limit is a function of x rather than plain x, you must multiply by its derivative (the chain rule): d/dx ∫ from a to g(x) of f(t) dt = f(g(x))·g′(x)."
+            },
+            {
+              "example": {
+                "prompt": "Let F(x) = ∫ from 2 to x of √(t³ + 1) dt. Find F′(x) and F′(3).",
+                "steps": [
+                  "By FTC Part 1, differentiating an accumulation function simply replaces t with x in the integrand.",
+                  "So F′(x) = √(x³ + 1). The lower limit 2 is a constant and plays no role in the derivative.",
+                  "Now evaluate at x = 3: F′(3) = √(3³ + 1) = √(27 + 1) = √28.",
+                  "Simplify √28 = √(4·7) = 2√7."
+                ],
+                "answer": "F′(x) = √(x³ + 1), and F′(3) = 2√7"
+              }
+            }
+          ]
+        },
+        {
+          "id": "u-substitution",
+          "title": "u-Substitution: Reversing the Chain Rule",
+          "blocks": [
+            {
+              "p": "u-substitution is the integration technique that undoes the chain rule. When you differentiate a composite function you multiply by the derivative of the inside; when you integrate, you look for that inside-and-its-derivative pattern and reverse the process. The trick is to rename the messy inside part as a single new variable, u, so the integral collapses into something simple."
+            },
+            {
+              "p": "The strategy: choose u to be the inner function, compute du = u′ dx, and rewrite the entire integral in terms of u only. If your choice is right, the leftover pieces of the original integral turn exactly into du. After integrating in u, substitute the original expression back in."
+            },
+            {
+              "formula": "∫ f(g(x))·g′(x) dx = ∫ f(u) du,  where u = g(x) and du = g′(x) dx"
+            },
+            {
+              "note": "For a definite integral you have two choices: change the limits from x-values to u-values (then never substitute back), or integrate, return to x, and use the original limits. Do not mix an x-limit with a u-antiderivative."
+            },
+            {
+              "example": {
+                "prompt": "Evaluate ∫ 2x·(x² + 1)³ dx.",
+                "steps": [
+                  "Let u be the inside function: u = x² + 1. Then du = 2x dx, which is exactly the other factor present.",
+                  "Rewrite the integral entirely in u: ∫ u³ du.",
+                  "Integrate: u⁴/4 + C.",
+                  "Substitute back u = x² + 1 to return to x."
+                ],
+                "answer": "(x² + 1)⁴ / 4 + C"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u7",
+      "title": "Unit 7 — Differential Equations",
+      "typical_when": "Feb–Mar",
+      "topics": [
+        "Slope fields",
+        "Separation of variables",
+        "Exponential growth & decay",
+        "Initial value problems"
+      ],
+      "how_to_study": [
+        "Separate variables, integrate both sides, then use the initial condition to find C",
+        "Be able to sketch and interpret a slope field"
+      ],
+      "concepts": [
+        {
+          "id": "slope-fields",
+          "title": "Slope Fields: Seeing a Differential Equation",
+          "blocks": [
+            {
+              "p": "A differential equation like dy/dx = something tells you the slope of a solution curve at every point, but not the curve itself. A slope field turns that information into a picture. At a grid of points across the plane you draw a tiny line segment whose slope is whatever the equation gives there. Standing back, those little dashes flow together and reveal the shapes of all the solution curves at once."
+            },
+            {
+              "p": "To read or draw a slope field, you plug each point's coordinates into dy/dx to get a number, then sketch a short segment with that steepness: flat for slope 0, steep uphill for large positive, steep downhill for negative. A particular solution is any smooth curve that stays tangent to the segments as you trace through them."
+            },
+            {
+              "note": "If dy/dx depends only on x, every segment in the same vertical column has the same slope. If it depends only on y, every segment in the same horizontal row matches. Spotting this makes fields fast to sketch and to identify."
+            },
+            {
+              "example": {
+                "prompt": "Describe the slope field for dy/dx = 2x and identify the family of solution curves.",
+                "steps": [
+                  "The slope depends only on x, so along any vertical line the segments all share one slope. At x = 0 the slope is 0 (flat segments), at x = 1 the slope is 2 (uphill), at x = -1 the slope is -2 (downhill).",
+                  "The segments are flat down the y-axis, tilt increasingly uphill to the right, and increasingly downhill to the left, forming a symmetric U-shaped flow.",
+                  "To find the curves, integrate: y = ∫ 2x dx = x² + C.",
+                  "So the solutions are the family of upward parabolas y = x² + C, each a vertical shift of the others, matching the field's shape."
+                ],
+                "answer": "A field of segments depending only on x, whose solution curves are the parabolas y = x² + C"
+              }
+            }
+          ]
+        },
+        {
+          "id": "separation-of-variables",
+          "title": "Separation of Variables",
+          "blocks": [
+            {
+              "p": "Separation of variables is the main algebraic method for solving a differential equation exactly. It works whenever you can rearrange the equation so that everything involving y (including dy) sits on one side and everything involving x (including dx) sits on the other. Once the variables are separated, you can integrate each side independently."
+            },
+            {
+              "p": "The steps are: treat dy/dx like a fraction and split it apart; get all y-terms with dy on the left and all x-terms with dx on the right; integrate both sides; then solve for y if possible. A single constant of integration, C, captures the whole family of solutions, so you only need one + C."
+            },
+            {
+              "formula": "If dy/dx = g(x)·h(y), rewrite as (1/h(y)) dy = g(x) dx, then integrate both sides"
+            },
+            {
+              "note": "Common mistake: forgetting the + C, or adding it to both sides. Add one constant, usually on the x-side, right after integrating. Keep the absolute value from ln when it appears until you solve for y."
+            },
+            {
+              "example": {
+                "prompt": "Solve the differential equation dy/dx = x/y.",
+                "steps": [
+                  "Separate the variables by moving y to the left and x to the right: y dy = x dx.",
+                  "Integrate both sides: ∫ y dy = ∫ x dx, which gives y²/2 = x²/2 + C.",
+                  "Multiply everything by 2 to clear the fractions: y² = x² + 2C.",
+                  "Since 2C is just another arbitrary constant, rename it C₁: y² = x² + C₁."
+                ],
+                "answer": "y² = x² + C₁ (a family of hyperbolas)"
+              }
+            }
+          ]
+        },
+        {
+          "id": "exponential-growth-decay",
+          "title": "Exponential Growth and Decay",
+          "blocks": [
+            {
+              "p": "One differential equation shows up everywhere in science: dP/dt = kP. In words, the rate at which a quantity changes is proportional to how much of it there is right now. Populations, bank balances with continuous interest, and radioactive material all obey this. It makes intuitive sense: twice as many bacteria produce twice as many offspring per minute."
+            },
+            {
+              "p": "Separating variables and integrating this equation always leads to the same shape of answer, an exponential function. The starting amount P₀ is the value at time zero, and k is the growth rate. A positive k means growth; a negative k means decay, such as a substance shrinking by half over a fixed half-life."
+            },
+            {
+              "formula": "dP/dt = kP  solves to  P(t) = P₀·eᵏᵗ"
+            },
+            {
+              "note": "Common mistake: mixing up k and P₀. P₀ is simply the value at t = 0; k comes from the proportionality rate. A positive k grows, a negative k decays. Do not confuse continuous rate k with a percent per year."
+            },
+            {
+              "example": {
+                "prompt": "A bacteria culture grows so that dP/dt = 0.03P, and it starts with 1000 cells. Write P(t) and find the population at t = 10.",
+                "steps": [
+                  "The equation matches dP/dt = kP with k = 0.03 and starting amount P₀ = 1000, so the solution is P(t) = 1000·eᵏᵗ, that is P(t) = 1000·e⁰·⁰³ᵗ.",
+                  "Substitute t = 10 into the exponent: kt = 0.03·10 = 0.3, so P(10) = 1000·e⁰·³.",
+                  "Evaluate e⁰·³ ≈ 1.3499.",
+                  "Multiply: 1000 · 1.3499 ≈ 1349.9, about 1350 cells."
+                ],
+                "answer": "P(t) = 1000·e⁰·⁰³ᵗ; P(10) ≈ 1350 cells"
+              }
+            }
+          ]
+        },
+        {
+          "id": "initial-value-problems",
+          "title": "Initial Value Problems",
+          "blocks": [
+            {
+              "p": "When you solve a differential equation you get a whole family of curves, all differing by the constant C. An initial value problem (IVP) pins down which single curve is the one you want by giving you one known point the solution must pass through, called the initial condition. It is like being told the shape of every possible road and then told exactly which town you start in."
+            },
+            {
+              "p": "The method is a clean two-step: first solve the differential equation in general, keeping the + C; then plug the given point into that general solution and solve for C. Replacing C with its specific number gives the one particular solution that fits the condition."
+            },
+            {
+              "formula": "General solution with + C  →  substitute the initial point  →  solve for C  →  particular solution"
+            },
+            {
+              "note": "Always solve for C only after you have the general antiderivative. Substituting the initial condition too early, before integrating, is a frequent error that produces the wrong constant."
+            },
+            {
+              "example": {
+                "prompt": "Solve the initial value problem dy/dx = 6x² with the initial condition y(1) = 5.",
+                "steps": [
+                  "Integrate to get the general solution: y = ∫ 6x² dx = 2x³ + C.",
+                  "Apply the initial condition y(1) = 5: substitute x = 1 and y = 5 to get 5 = 2(1)³ + C = 2 + C.",
+                  "Solve for the constant: C = 5 - 2 = 3.",
+                  "Write the particular solution: y = 2x³ + 3. Check: at x = 1, y = 2 + 3 = 5. Correct."
+                ],
+                "answer": "y = 2x³ + 3"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u8",
+      "title": "Unit 8 — Applications of Integration",
+      "typical_when": "Mar–Apr",
+      "topics": [
+        "Average value of a function",
+        "Area between curves",
+        "Volumes (disc, washer, known cross-sections)",
+        "Motion revisited via integrals"
+      ],
+      "how_to_study": [
+        "Draw the region before setting up any area/volume integral",
+        "Keep disc vs. washer straight — is there a gap from the axis?"
+      ],
+      "concepts": [
+        {
+          "id": "average-value-of-a-function",
+          "title": "Average Value of a Function",
+          "blocks": [
+            {
+              "p": "You already know how to average a list of numbers: add them and divide by how many there are. But how do you average a function that takes infinitely many values across an interval? Calculus answers this by integrating (an infinite sum of values) and dividing by the length of the interval (the continuous version of how many). The result is the single flat height that would give the same total area."
+            },
+            {
+              "p": "Picture the area under the curve from a to b. The average value is the height of a rectangle spanning the whole interval that has exactly that same area. So average value times width equals the integral. That connection is worth remembering because it makes the formula feel inevitable rather than memorized."
+            },
+            {
+              "formula": "average value = (1 / (b - a)) · ∫ from a to b of f(x) dx"
+            },
+            {
+              "note": "Common mistake: forgetting to divide by (b - a). An integral alone gives total accumulation; the average requires dividing that total by the interval length."
+            },
+            {
+              "example": {
+                "prompt": "Find the average value of f(x) = x² on the interval [0, 3].",
+                "steps": [
+                  "Set up the formula: average = (1/(3 - 0)) · ∫ from 0 to 3 of x² dx.",
+                  "Evaluate the integral: ∫ from 0 to 3 of x² dx = [x³/3] from 0 to 3 = 27/3 - 0 = 9.",
+                  "Divide by the interval length: (1/3) · 9 = 3.",
+                  "So a flat rectangle of height 3 over [0, 3] holds the same area as the curve."
+                ],
+                "answer": "The average value is 3"
+              }
+            }
+          ]
+        },
+        {
+          "id": "area-between-curves",
+          "title": "Area Between Two Curves",
+          "blocks": [
+            {
+              "p": "A single integral finds the area between a curve and the x-axis. To find the area trapped between two curves, you use the same idea with a twist: at each x, the height of the region is the top curve's value minus the bottom curve's value. Adding up all those thin vertical strips (top minus bottom, times a tiny width) gives the enclosed area."
+            },
+            {
+              "p": "The plan is: sketch both curves so you can see which is on top, find where they cross (those intersection x-values become your limits of integration), then integrate the difference top minus bottom across that interval. Because you subtract the lower from the upper, the height is always positive and you never have to worry about signed area here."
+            },
+            {
+              "formula": "Area = ∫ from a to b of [ f(x) - g(x) ] dx,  where f is the upper curve and g is the lower"
+            },
+            {
+              "note": "Common mistake: subtracting in the wrong order. If your answer comes out negative, you likely put the lower curve on top. Always confirm which curve is higher on the interval, by testing a point if needed."
+            },
+            {
+              "example": {
+                "prompt": "Find the area of the region enclosed by y = x and y = x² between their intersection points.",
+                "steps": [
+                  "Find where they meet: x = x² gives x² - x = 0, so x(x - 1) = 0, meaning x = 0 and x = 1. These are the limits.",
+                  "Decide which is on top: test x = 0.5. The line gives 0.5, the parabola gives 0.25, so y = x is the upper curve.",
+                  "Integrate the difference: ∫ from 0 to 1 of (x - x²) dx = [x²/2 - x³/3] from 0 to 1.",
+                  "Evaluate: (1/2 - 1/3) - 0 = 3/6 - 2/6 = 1/6."
+                ],
+                "answer": "The enclosed area is 1/6"
+              }
+            }
+          ]
+        },
+        {
+          "id": "volumes-disc-washer",
+          "title": "Volumes of Revolution: Discs and Washers",
+          "blocks": [
+            {
+              "p": "If you spin a flat region around a line, it sweeps out a solid, like a lump of clay on a potter's wheel. To find that solid's volume, slice it into thin coins perpendicular to the axis of rotation. Each coin is a circle, so its area is π times radius squared, and its tiny thickness is dx. Integrating the coin areas along the axis adds them all into the total volume. This is the disc method."
+            },
+            {
+              "p": "The radius of each disc is just the distance from the axis to the curve, which is the function's value when you revolve around the x-axis. If the region does not touch the axis, each slice has a hole in the middle, making a washer (a coin with a bite out of it). Then you subtract the inner circle's area from the outer circle's area."
+            },
+            {
+              "formula": "Disc: V = π ∫ from a to b of [ R(x) ]² dx"
+            },
+            {
+              "note": "For a washer, use V = π ∫ [ R² - r² ] dx, where R is the outer radius and r is the inner radius. You must square the radii separately, then subtract; squaring the difference (R - r)² is wrong."
+            },
+            {
+              "example": {
+                "prompt": "The region under y = √x from x = 0 to x = 4 is revolved about the x-axis. Find the volume.",
+                "steps": [
+                  "The region touches the axis, so use discs. The radius of each disc is the function value: R(x) = √x.",
+                  "Set up: V = π ∫ from 0 to 4 of (√x)² dx = π ∫ from 0 to 4 of x dx.",
+                  "Integrate: π [x²/2] from 0 to 4 = π (16/2 - 0) = π · 8.",
+                  "So the volume is 8π."
+                ],
+                "answer": "V = 8π cubic units"
+              }
+            }
+          ]
+        },
+        {
+          "id": "volumes-known-cross-sections",
+          "title": "Volumes with Known Cross-Sections",
+          "blocks": [
+            {
+              "p": "Not every solid comes from spinning a region. Sometimes you are handed a flat base region and told that every slice standing up perpendicular to an axis is a particular shape, such as a square, a semicircle, or an equilateral triangle. The strategy is the same as discs: find the area of one representative slice as a function of x, then integrate those areas across the base to add up the volume."
+            },
+            {
+              "p": "The key link is that the side length of each cross-section comes from the base. When slices are perpendicular to the x-axis and the base sits between two curves, the side of the slice equals the top curve minus the bottom curve at that x. Plug that side length into the area formula for the given shape, then integrate."
+            },
+            {
+              "formula": "V = ∫ from a to b of A(x) dx,  where A(x) is the area of one cross-section"
+            },
+            {
+              "note": "Match the area formula to the shape: square side s gives s², a semicircle of diameter s gives (π/8)s², an equilateral triangle of side s gives (√3/4)s². Read carefully whether s is a side, a radius, or a diameter."
+            },
+            {
+              "example": {
+                "prompt": "A solid has a base bounded by y = x, y = 0, and x = 2. Each cross-section perpendicular to the x-axis is a square. Find the volume.",
+                "steps": [
+                  "At position x, the base runs from y = 0 up to y = x, so the side of the square is s = x.",
+                  "The area of that square cross-section is A(x) = s² = x².",
+                  "Integrate the areas: V = ∫ from 0 to 2 of x² dx = [x³/3] from 0 to 2.",
+                  "Evaluate: 2³/3 - 0 = 8/3."
+                ],
+                "answer": "V = 8/3 cubic units"
+              }
+            }
+          ]
+        },
+        {
+          "id": "motion-via-integrals",
+          "title": "Motion: Position, Velocity, and Distance",
+          "blocks": [
+            {
+              "p": "Motion problems tie the whole course together. Velocity is the derivative of position, and acceleration is the derivative of velocity, so going the other way, integrating velocity recovers position, and integrating acceleration recovers velocity. Because a definite integral of velocity accumulates change, it gives you how far the object's position shifted over a time interval."
+            },
+            {
+              "p": "Here is the subtle part students love to trip over. The definite integral of velocity gives displacement, the net change in position, which counts backward motion as negative and can be zero even after a long trip. To get total distance traveled, you must integrate the absolute value of velocity, so that motion in both directions adds up positively."
+            },
+            {
+              "formula": "Displacement = ∫ from a to b of v(t) dt;   Total distance = ∫ from a to b of | v(t) | dt"
+            },
+            {
+              "note": "To integrate | v(t) |, first find where v(t) = 0, split the integral at those times, integrate each piece, then add the absolute values. Do not just drop a negative sign before integrating."
+            },
+            {
+              "example": {
+                "prompt": "A particle moves along a line with velocity v(t) = 3t² - 6t. Find its displacement and total distance traveled from t = 0 to t = 3.",
+                "steps": [
+                  "Displacement is ∫ from 0 to 3 of (3t² - 6t) dt = [t³ - 3t²] from 0 to 3 = (27 - 27) - (0 - 0) = 0.",
+                  "For total distance, find where v = 0: 3t(t - 2) = 0 gives t = 0 and t = 2. Test signs: v is negative on (0, 2) and positive on (2, 3).",
+                  "Integrate each piece: ∫ from 0 to 2 = [t³ - 3t²] from 0 to 2 = (8 - 12) - 0 = -4; ∫ from 2 to 3 = (27 - 27) - (8 - 12) = 0 - (-4) = 4.",
+                  "Add absolute values: |-4| + |4| = 4 + 4 = 8."
+                ],
+                "answer": "Displacement = 0; total distance traveled = 8"
+              }
+            }
+          ]
+        }
+      ]
+    }
   ]
 }

@@ -44,6 +44,29 @@ ul { margin:0 0 6px 18px; } li { margin:3px 0; }
 .res a { color:var(--teal); }
 .res li { margin:5px 0; }
 .hidden { display:none; }
+/* Concept links under a unit */
+.concepts { margin-top:9px; border-top:1px dashed var(--line); padding-top:8px; }
+.concepts .lbl { font-size:11px; letter-spacing:.4px; text-transform:uppercase; color:var(--soft); }
+.clink { display:block; text-decoration:none; color:var(--ink); background:var(--paper2); border-radius:8px;
+  padding:8px 11px; margin:5px 0; font-weight:600; font-size:14px; }
+.clink:active { background:var(--line); }
+.clink .arw { float:right; color:var(--teal); }
+/* Concept detail page */
+.concept-p { margin:11px 0; }
+.formula { font-family:'Cambria Math','Times New Roman',Georgia,serif; font-size:18px; text-align:center;
+  background:var(--paper2); border-radius:10px; padding:12px 10px; margin:12px 0; overflow-x:auto; white-space:nowrap; }
+.cnote { background:#fff; border-left:4px solid var(--amber); border-radius:8px; padding:9px 12px; margin:12px 0;
+  font-size:14px; color:var(--ink); }
+.cnote::before { content:"Key idea"; display:block; font-size:11px; letter-spacing:.4px; text-transform:uppercase; color:var(--amber); font-weight:700; margin-bottom:3px; }
+.ex { background:#fff; border:1px solid var(--line); border-radius:10px; padding:11px 13px; margin:12px 0; }
+.ex .exq { font-weight:700; }
+.ex .exq::before { content:"Worked example"; display:block; font-size:11px; letter-spacing:.4px; text-transform:uppercase; color:var(--teal); font-weight:700; margin-bottom:3px; }
+.ex ol { margin:8px 0 8px 20px; } .ex ol li { margin:4px 0; }
+.ex .exa { font-weight:700; color:var(--sage); }
+.ex .exa::before { content:"→ "; }
+.cnav { display:flex; justify-content:space-between; margin-top:22px; gap:8px; }
+.cnav a { flex:1; text-align:center; text-decoration:none; border:1px solid var(--line); border-radius:8px; padding:8px; color:var(--teal); font-weight:600; font-size:13px; }
+.cnav a.disabled { color:var(--soft); border-color:var(--paper2); pointer-events:none; }
 footer { margin-top:24px; color:var(--soft); font-size:11px; text-align:center; }
 @media (max-width:520px){ .grid{grid-template-columns:1fr;} }
 </style>
@@ -91,15 +114,29 @@ async function loadCourse(id) {
   return cache[id];
 }
 
-async function route() {
-  const id = location.hash.slice(1);
-  if (!id) { $("#home").classList.remove("hidden"); $("#course").classList.add("hidden"); return; }
-  const loaded = await loadCourse(id);
-  if (!loaded) { location.hash = ""; return; }
-  const { doc } = loaded;
+// Flat list of every concept in a course, with its unit — powers prev/next nav.
+function conceptIndex(doc) {
+  const list = [];
+  for (const u of doc.units) for (const c of (u.concepts || [])) list.push({ unit: u, c });
+  return list;
+}
+
+function renderBlock(b) {
+  if (b.p) return `<p class="concept-p">${esc(b.p)}</p>`;
+  if (b.formula) return `<div class="formula">${esc(b.formula)}</div>`;
+  if (b.note) return `<div class="cnote">${esc(b.note)}</div>`;
+  if (b.example) {
+    const e = b.example;
+    return `<div class="ex"><div class="exq">${esc(e.prompt)}</div>` +
+      (e.steps?.length ? `<ol>` + e.steps.map(s => `<li>${esc(s)}</li>`).join("") + `</ol>` : "") +
+      (e.answer ? `<div class="exa">${esc(e.answer)}</div>` : "") + `</div>`;
+  }
+  return "";
+}
+
+function renderCourse(id, doc) {
   const ex = doc.exam;
-  $("#course").innerHTML =
-    `<a class="back" href="#">← All classes</a>` +
+  return `<a class="back" href="#">← All classes</a>` +
     `<h1 class="ctitle">${esc(doc.title)}</h1>` +
     (ex ? `<div class="exam">${esc(ex.name)} · ${esc(ex.window)}</div>` +
           (ex.note ? `<div class="who">${esc(ex.note)}</div>` : "") : "") +
@@ -112,10 +149,39 @@ async function route() {
         (u.typical_when ? `<span class="when">${esc(u.typical_when)}</span>` : "") + `</div>` +
         `<div>${(u.topics||[]).map(t => `<span class="tag">${esc(t)}</span>`).join("")}</div>` +
         (u.how_to_study?.length ? `<ul style="margin-top:6px">` + u.how_to_study.map(h => `<li>${esc(h)}</li>`).join("") + `</ul>` : "") +
+        ((u.concepts?.length) ? `<div class="concepts"><div class="lbl">Learn the concepts</div>` +
+          u.concepts.map(c => `<a class="clink" href="#${esc(id)}/${esc(c.id)}">${esc(c.title)}<span class="arw">→</span></a>`).join("") +
+          `</div>` : "") +
         `</div>`).join("") +
     `<div class="h2">Resources</div><ul class="res">` +
       doc.resources.filter(r => safeUrl(r.url)).map(r =>
         `<li><a href="${esc(safeUrl(r.url))}" target="_blank" rel="noopener">${esc(r.label)} ↗</a></li>`).join("") + `</ul>`;
+}
+
+function renderConcept(id, doc, conceptId) {
+  const idx = conceptIndex(doc);
+  const pos = idx.findIndex(x => x.c.id === conceptId);
+  if (pos < 0) return renderCourse(id, doc);
+  const { unit, c } = idx[pos];
+  const prev = idx[pos - 1], next = idx[pos + 1];
+  return `<a class="back" href="#${esc(id)}">← ${esc(doc.title)}</a>` +
+    `<div class="who">${esc(unit.title)}</div>` +
+    `<h1 class="ctitle">${esc(c.title)}</h1>` +
+    (c.blocks || []).map(renderBlock).join("") +
+    `<div class="cnav">` +
+    (prev ? `<a href="#${esc(id)}/${esc(prev.c.id)}">← ${esc(prev.c.title)}</a>` : `<a class="disabled">←</a>`) +
+    (next ? `<a href="#${esc(id)}/${esc(next.c.id)}">${esc(next.c.title)} →</a>` : `<a class="disabled">→</a>`) +
+    `</div>`;
+}
+
+async function route() {
+  const hash = location.hash.slice(1);
+  if (!hash) { $("#home").classList.remove("hidden"); $("#course").classList.add("hidden"); return; }
+  const [id, conceptId] = hash.split("/");
+  const loaded = await loadCourse(id);
+  if (!loaded) { location.hash = ""; return; }
+  const { doc } = loaded;
+  $("#course").innerHTML = conceptId ? renderConcept(id, doc, conceptId) : renderCourse(id, doc);
   $("#home").classList.add("hidden");
   $("#course").classList.remove("hidden");
   window.scrollTo(0, 0);

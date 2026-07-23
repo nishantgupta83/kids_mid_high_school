@@ -50,10 +50,23 @@ def main():
                 err(f"{c['file']}: missing {f}")
         if not doc.get("units"):
             err(f"{c['file']}: no units")
+        concept_ids = []
         for u in doc.get("units", []):
             for f in ("id", "title", "topics", "how_to_study"):
                 if f not in u:
                     err(f"{c['file']} unit {u.get('id')}: missing {f}")
+            for cc in u.get("concepts", []):  # concepts are optional
+                for f in ("id", "title", "blocks"):
+                    if f not in cc:
+                        err(f"{c['file']} concept {cc.get('id')}: missing {f}")
+                concept_ids.append(cc.get("id"))
+                for b in cc.get("blocks", []):
+                    if not any(k in b for k in ("p", "formula", "note", "example")):
+                        err(f"{c['file']} concept {cc.get('id')}: block has no known key")
+                    if "example" in b and "prompt" not in b["example"]:
+                        err(f"{c['file']} concept {cc.get('id')}: example missing prompt")
+        if len(concept_ids) != len(set(concept_ids)):
+            err(f"{c['file']}: duplicate concept id (breaks prev/next nav)")
         for r in doc.get("resources", []):
             if not str(r.get("url", "")).startswith("http"):
                 err(f"{c['file']}: resource url not http: {r.get('label')}")
@@ -62,8 +75,10 @@ def main():
     for c in courses:
         p = CUR / c["file"]
         if p.exists():
-            n = len(json.loads(p.read_text()).get("units", []))
-            print(f"    {c['id']}: {n} units")
+            doc = json.loads(p.read_text())
+            n = len(doc.get("units", []))
+            nc = sum(len(u.get("concepts", [])) for u in doc.get("units", []))
+            print(f"    {c['id']}: {n} units, {nc} concepts")
     if errors:
         print(f"\nFAIL — {len(errors)} error(s):")
         for e in errors:
