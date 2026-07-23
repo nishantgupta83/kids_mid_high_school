@@ -58,6 +58,10 @@ ul { margin:0 0 6px 18px; } li { margin:3px 0; }
 .cnote { background:#fff; border-left:4px solid var(--amber); border-radius:8px; padding:9px 12px; margin:12px 0;
   font-size:14px; color:var(--ink); }
 .cnote::before { content:"Key idea"; display:block; font-size:11px; letter-spacing:.4px; text-transform:uppercase; color:var(--amber); font-weight:700; margin-bottom:3px; }
+.trick { background:#F1F6F0; border-left:4px solid var(--sage); border-radius:8px; padding:9px 12px; margin:12px 0; font-size:14px; color:var(--ink); }
+.trick::before { content:"Memory trick"; display:block; font-size:11px; letter-spacing:.4px; text-transform:uppercase; color:var(--sage); font-weight:700; margin-bottom:3px; }
+.viz-wrap { margin:12px 0; text-align:center; }
+.viz { width:100%; max-width:340px; height:auto; background:#fff; border:1px solid var(--line); border-radius:10px; padding:6px; }
 .ex { background:#fff; border:1px solid var(--line); border-radius:10px; padding:11px 13px; margin:12px 0; }
 .ex .exq { font-weight:700; }
 .ex .exq::before { content:"Worked example"; display:block; font-size:11px; letter-spacing:.4px; text-transform:uppercase; color:var(--teal); font-weight:700; margin-bottom:3px; }
@@ -93,6 +97,99 @@ const fmtDate = (d) => new Date(d+"T12:00:00").toLocaleDateString("en-US",{month
 let MANIFEST = null;
 const cache = {};
 
+/* ---- Inline SVG diagram library (self-contained, offline-safe, palette-only).
+   Concepts reference a visual BY NAME; no markup ever comes from JSON data. ---- */
+const VZ = { W:320, H:190, pad:26, curve:"#2F6F6A", accent:"#C96F4A", fill:"rgba(78,122,92,.16)", axis:"#CFC8B6", ink:"#2A2A25", amber:"#B98A2F" };
+function mp(xmin,xmax,ymin,ymax){ const {W,H,pad}=VZ;
+  return { x:v=>pad+(v-xmin)/(xmax-xmin)*(W-2*pad), y:v=>(H-pad)-(v-ymin)/(ymax-ymin)*(H-2*pad) }; }
+function poly(fn,xmin,xmax,m,n=48){ let p=[]; for(let i=0;i<=n;i++){const x=xmin+(xmax-xmin)*i/n; p.push(m.x(x).toFixed(1)+","+m.y(fn(x)).toFixed(1));} return p.join(" "); }
+function ax(m,xmin,xmax,ymin,ymax){ return `<line x1="${m.x(xmin)}" y1="${m.y(0)}" x2="${m.x(xmax)}" y2="${m.y(0)}" stroke="${VZ.axis}"/><line x1="${m.x(0)}" y1="${m.y(ymin)}" x2="${m.x(0)}" y2="${m.y(ymax)}" stroke="${VZ.axis}"/>`; }
+function svg(inner){ return `<svg viewBox="0 0 ${VZ.W} ${VZ.H}" role="img" class="viz">${inner}</svg>`; }
+function tx(x,y,s,fill){ const e=String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;"); return `<text x="${x}" y="${y}" font-size="11" fill="${fill||VZ.ink}" font-family="sans-serif">${e}</text>`; }
+
+const VISUALS = {
+  "limit-hole": () => { const m=mp(-1,4,-1,6), f=x=>x+2;
+    return svg(ax(m,-1,4,-1,6)+`<polyline points="${poly(f,-1,4,m)}" fill="none" stroke="${VZ.curve}" stroke-width="2.5"/>`+
+    `<line x1="${m.x(2)}" y1="${m.y(0)}" x2="${m.x(2)}" y2="${m.y(4)}" stroke="${VZ.accent}" stroke-dasharray="3 3"/>`+
+    `<line x1="${m.x(0)}" y1="${m.y(4)}" x2="${m.x(2)}" y2="${m.y(4)}" stroke="${VZ.accent}" stroke-dasharray="3 3"/>`+
+    `<circle cx="${m.x(2)}" cy="${m.y(4)}" r="4.5" fill="#FBF7EE" stroke="${VZ.curve}" stroke-width="2.5"/>`+
+    tx(m.x(2)-6,m.y(0)+13,"x=2")+tx(6,m.y(4)-4,"limit = 4",VZ.accent)); },
+
+  "secant-to-tangent": () => { const m=mp(0,4,0,7), f=x=>0.45*x*x;
+    const p0=1.4; const sec=(x1)=>`<line x1="${m.x(p0)}" y1="${m.y(f(p0))}" x2="${m.x(x1)}" y2="${m.y(f(x1))}" stroke="${VZ.axis}" stroke-width="1.4"/>`;
+    // tangent slope at p0 is 0.9*p0
+    const s=0.9*p0; const tanY=x=>f(p0)+s*(x-p0);
+    return svg(ax(m,0,4,0,7)+`<polyline points="${poly(f,0,4,m)}" fill="none" stroke="${VZ.curve}" stroke-width="2.5"/>`+
+    sec(3.4)+sec(2.7)+sec(2.1)+`<line x1="${m.x(0.3)}" y1="${m.y(tanY(0.3))}" x2="${m.x(2.6)}" y2="${m.y(tanY(2.6))}" stroke="${VZ.accent}" stroke-width="2"/>`+
+    `<circle cx="${m.x(p0)}" cy="${m.y(f(p0))}" r="3.5" fill="${VZ.accent}"/>`+tx(m.x(2.7)+3,m.y(f(2.7)),"secants",VZ.ink)+tx(6,16,"tangent = limit of secants",VZ.accent)); },
+
+  "tangent-slope": () => { const m=mp(-1,4,0,8), f=x=>0.5*x*x, a=2; const s=a; const tanY=x=>f(a)+s*(x-a);
+    return svg(ax(m,-1,4,0,8)+`<polyline points="${poly(f,-1,4,m)}" fill="none" stroke="${VZ.curve}" stroke-width="2.5"/>`+
+    `<line x1="${m.x(0.4)}" y1="${m.y(tanY(0.4))}" x2="${m.x(3.4)}" y2="${m.y(tanY(3.4))}" stroke="${VZ.accent}" stroke-width="2"/>`+
+    `<circle cx="${m.x(a)}" cy="${m.y(f(a))}" r="3.8" fill="${VZ.accent}"/>`+tx(m.x(a)+6,m.y(f(a))-4,"slope = f′(2)",VZ.accent)); },
+
+  "concavity": () => { const up="M 30 120 Q 80 175 130 120", dn="M 190 100 Q 240 45 290 100";
+    return svg(`<path d="${up}" fill="none" stroke="${VZ.curve}" stroke-width="3"/>`+`<path d="${dn}" fill="none" stroke="${VZ.curve}" stroke-width="3"/>`+
+    tx(52,150,"f″>0 : smile",VZ.curve)+tx(56,163,"concave up → min")+tx(210,150,"f″<0 : frown",VZ.accent)+tx(214,163,"concave down → max")); },
+
+  "mvt": () => { const m=mp(0.5,3.5,0,6), f=x=>-(x-2)*(x-2)+5; const a=1,b=3;
+    // secant slope = (f(b)-f(a))/(b-a); tangent parallel at c=2
+    const ss=(f(b)-f(a))/(b-a), c=2, tanY=x=>f(c)+f2(c)*(x-c); function f2(x){return -2*(x-2);}
+    return svg(ax(m,0.5,3.5,0,6)+`<polyline points="${poly(f,0.5,3.5,m)}" fill="none" stroke="${VZ.curve}" stroke-width="2.5"/>`+
+    `<line x1="${m.x(a)}" y1="${m.y(f(a))}" x2="${m.x(b)}" y2="${m.y(f(b))}" stroke="${VZ.axis}" stroke-width="1.6"/>`+
+    `<line x1="${m.x(1.2)}" y1="${m.y(tanY(1.2))}" x2="${m.x(2.8)}" y2="${m.y(tanY(2.8))}" stroke="${VZ.accent}" stroke-width="2"/>`+
+    `<circle cx="${m.x(c)}" cy="${m.y(f(c))}" r="3.5" fill="${VZ.accent}"/>`+tx(m.x(c)+5,m.y(f(c))-5,"c",VZ.accent)+tx(8,16,"tangent parallel to secant at c",VZ.ink)); },
+
+  "riemann": () => { const m=mp(0,4,0,5), f=x=>0.25*x*x+0.4; let rects=""; const n=4,w=4/n;
+    for(let i=0;i<n;i++){const xr=(i+1)*w, h=f(xr); rects+=`<rect x="${m.x(i*w)}" y="${m.y(h)}" width="${m.x(w)-m.x(0)}" height="${m.y(0)-m.y(h)}" fill="${VZ.fill}" stroke="${VZ.accent}" stroke-width="1"/>`;}
+    return svg(ax(m,0,4,0,5)+rects+`<polyline points="${poly(f,0,4,m)}" fill="none" stroke="${VZ.curve}" stroke-width="2.5"/>`+tx(6,16,"right-endpoint rectangles → area")); },
+
+  "area-under": () => { const m=mp(0,3.4,0,6), f=x=>0.6*x*x+0.3; let pts=poly(f,0,3,m);
+    const region=`M ${m.x(0)} ${m.y(0)} L `+pts.replaceAll(" "," L ")+` L ${m.x(3)} ${m.y(0)} Z`;
+    return svg(ax(m,0,3.4,0,6)+`<path d="${region}" fill="${VZ.fill}" stroke="none"/>`+`<polyline points="${poly(f,0,3.4,m)}" fill="none" stroke="${VZ.curve}" stroke-width="2.5"/>`+tx(m.x(1.2),m.y(1.4),"∫ f dx",VZ.curve)); },
+
+  "area-between": () => { const m=mp(0,1.25,0,1.25), top=x=>x, bot=x=>x*x;
+    let up=poly(top,0,1,m), dn=[]; for(let i=48;i>=0;i--){const x=i/48; dn.push(m.x(x).toFixed(1)+","+m.y(bot(x)).toFixed(1));}
+    const region=`M `+up.replaceAll(" "," L ")+` L `+dn.join(" L ")+` Z`;
+    return svg(ax(m,0,1.25,0,1.25)+`<path d="${region}" fill="${VZ.fill}" stroke="none"/>`+
+    `<polyline points="${poly(top,0,1.2,m)}" fill="none" stroke="${VZ.curve}" stroke-width="2.2"/>`+
+    `<polyline points="${poly(bot,0,1.2,m)}" fill="none" stroke="${VZ.accent}" stroke-width="2.2"/>`+
+    tx(m.x(1.02),m.y(1.15),"y=x",VZ.curve)+tx(m.x(1.02),m.y(0.75),"y=x²",VZ.accent)+tx(m.x(0.5),m.y(0.28),"∫(top−bottom)",VZ.ink)); },
+
+  "disc-method": () => { const m=mp(0,4.3,-1.7,1.7), f=x=>Math.sqrt(x); let pts=poly(f,0,4,m);
+    const region=`M ${m.x(0)} ${m.y(0)} L `+pts.replaceAll(" "," L ")+` L ${m.x(4)} ${m.y(0)} Z`; const xs=2.4, r=f(xs);
+    return svg(ax(m,0,4.3,-1.7,1.7)+`<path d="${region}" fill="${VZ.fill}" stroke="none"/>`+`<polyline points="${poly(f,0,4.3,m)}" fill="none" stroke="${VZ.curve}" stroke-width="2.5"/>`+
+    `<ellipse cx="${m.x(xs)}" cy="${m.y(0)}" rx="9" ry="${(m.y(0)-m.y(r))}" fill="rgba(201,111,74,.18)" stroke="${VZ.accent}" stroke-width="1.8"/>`+
+    `<line x1="${m.x(xs)}" y1="${m.y(0)}" x2="${m.x(xs)}" y2="${m.y(r)}" stroke="${VZ.accent}" stroke-width="1.6"/>`+
+    tx(m.x(xs)+11,m.y(r*0.5),"r = √x",VZ.accent)+tx(6,14,"revolve: each slice is a disc, area π r²")); },
+
+  "slope-field": () => { let seg=""; const m=mp(-2,2,-1,4);
+    for(let gx=-2;gx<=2;gx++) for(let gy=0;gy<=3;gy++){ const s=2*gx; const dx=0.32, dy=s*dx; const L=0.14;
+      const nx=Math.hypot(1,s); const ux=1/nx*L, uy=s/nx*L;
+      seg+=`<line x1="${m.x(gx-ux)}" y1="${m.y(gy-uy)}" x2="${m.x(gx+ux)}" y2="${m.y(gy+uy)}" stroke="#9A9384" stroke-width="1.6"/>`; }
+    const par=x=>x*x;
+    return svg(ax(m,-2,2,-1,4)+seg+`<polyline points="${poly(par,-2,2,m)}" fill="none" stroke="${VZ.accent}" stroke-width="2"/>`+tx(6,16,"dy/dx = 2x, solution y = x²+C",VZ.accent)); },
+
+  "balloon": () => { const cx=140, cy=95;
+    return svg(`<circle cx="${cx}" cy="${cy}" r="38" fill="${VZ.fill}" stroke="${VZ.curve}" stroke-width="2"/>`+
+    `<circle cx="${cx}" cy="${cy}" r="55" fill="none" stroke="${VZ.accent}" stroke-width="2" stroke-dasharray="4 3"/>`+
+    `<line x1="${cx}" y1="${cy}" x2="${cx+55}" y2="${cy}" stroke="${VZ.ink}" stroke-width="1.5"/>`+
+    tx(cx+8,cy-6,"r")+tx(cx+40,cy-10,"dr",VZ.accent)+tx(6,16,"dV/dt = 4π r² · dr/dt")); },
+
+  "fence": () => { const x1=70,x2=250,yr=40,yb=150;
+    return svg(`<line x1="20" y1="${yr}" x2="300" y2="${yr}" stroke="#4A7BA6" stroke-width="3"/>`+tx(24,yr-6,"river (no fence)","#4A7BA6")+
+    `<line x1="${x1}" y1="${yr}" x2="${x1}" y2="${yb}" stroke="${VZ.accent}" stroke-width="3"/>`+
+    `<line x1="${x2}" y1="${yr}" x2="${x2}" y2="${yb}" stroke="${VZ.accent}" stroke-width="3"/>`+
+    `<line x1="${x1}" y1="${yb}" x2="${x2}" y2="${yb}" stroke="${VZ.accent}" stroke-width="3"/>`+
+    `<rect x="${x1}" y="${yr}" width="${x2-x1}" height="${yb-yr}" fill="${VZ.fill}"/>`+
+    tx(x1-14,(yr+yb)/2,"x")+tx(x2+4,(yr+yb)/2,"x")+tx((x1+x2)/2-8,yb+13,"y")+tx((x1+x2)/2-30,(yr+yb)/2,"maximize area")); },
+
+  "inc-dec": () => { const m=mp(-2.3,2.3,-3,3), f=x=>x*x*x-3*x;
+    return svg(ax(m,-2.3,2.3,-3,3)+`<polyline points="${poly(f,-2.1,2.1,m)}" fill="none" stroke="${VZ.curve}" stroke-width="2.5"/>`+
+    `<circle cx="${m.x(-1)}" cy="${m.y(2)}" r="3.5" fill="${VZ.accent}"/>`+`<circle cx="${m.x(1)}" cy="${m.y(-2)}" r="3.5" fill="${VZ.accent}"/>`+
+    tx(m.x(-1)-8,m.y(2)-6,"max",VZ.accent)+tx(m.x(1)-2,m.y(-2)+16,"min",VZ.accent)+tx(6,16,"f′>0 rising, f′<0 falling")); },
+};
+
 async function boot() {
   MANIFEST = await (await fetch("/curriculum/manifest.json")).json();
   $("#who").textContent = `${MANIFEST.student} · ${MANIFEST.grade} · ${MANIFEST.school_year}`;
@@ -117,18 +214,20 @@ async function loadCourse(id) {
 // Flat list of every concept in a course, with its unit — powers prev/next nav.
 function conceptIndex(doc) {
   const list = [];
-  for (const u of doc.units) for (const c of (u.concepts || [])) list.push({ unit: u, c });
+  for (const u of (doc.units || [])) for (const c of (u.concepts || [])) list.push({ unit: u, c });
   return list;
 }
 
 function renderBlock(b) {
   if (b.p) return `<p class="concept-p">${esc(b.p)}</p>`;
   if (b.formula) return `<div class="formula">${esc(b.formula)}</div>`;
+  if (b.visual) { const v = VISUALS[b.visual]; return v ? `<div class="viz-wrap">${v()}</div>` : ""; }
+  if (b.trick) return `<div class="trick">${esc(b.trick)}</div>`;
   if (b.note) return `<div class="cnote">${esc(b.note)}</div>`;
   if (b.example) {
     const e = b.example;
     return `<div class="ex"><div class="exq">${esc(e.prompt)}</div>` +
-      (e.steps?.length ? `<ol>` + e.steps.map(s => `<li>${esc(s)}</li>`).join("") + `</ol>` : "") +
+      (Array.isArray(e.steps) && e.steps.length ? `<ol>` + e.steps.map(s => `<li>${esc(s)}</li>`).join("") + `</ol>` : "") +
       (e.answer ? `<div class="exa">${esc(e.answer)}</div>` : "") + `</div>`;
   }
   return "";
@@ -161,13 +260,13 @@ function renderCourse(id, doc) {
 function renderConcept(id, doc, conceptId) {
   const idx = conceptIndex(doc);
   const pos = idx.findIndex(x => x.c.id === conceptId);
-  if (pos < 0) return renderCourse(id, doc);
+  if (pos < 0) { location.hash = "#" + id; return renderCourse(id, doc); }  // canonicalize a bad concept id
   const { unit, c } = idx[pos];
   const prev = idx[pos - 1], next = idx[pos + 1];
   return `<a class="back" href="#${esc(id)}">← ${esc(doc.title)}</a>` +
     `<div class="who">${esc(unit.title)}</div>` +
     `<h1 class="ctitle">${esc(c.title)}</h1>` +
-    (c.blocks || []).map(renderBlock).join("") +
+    (Array.isArray(c.blocks) ? c.blocks.filter(b => b && typeof b === "object").map(renderBlock).join("") : "") +
     `<div class="cnav">` +
     (prev ? `<a href="#${esc(id)}/${esc(prev.c.id)}">← ${esc(prev.c.title)}</a>` : `<a class="disabled">←</a>`) +
     (next ? `<a href="#${esc(id)}/${esc(next.c.id)}">${esc(next.c.title)} →</a>` : `<a class="disabled">→</a>`) +
@@ -175,10 +274,13 @@ function renderConcept(id, doc, conceptId) {
 }
 
 async function route() {
+  if (!MANIFEST) return;  // boot() hasn't finished; it calls route() when ready
   const hash = location.hash.slice(1);
   if (!hash) { $("#home").classList.remove("hidden"); $("#course").classList.add("hidden"); return; }
   const [id, conceptId] = hash.split("/");
   const loaded = await loadCourse(id);
+  // Route-race guard: if the hash changed while we awaited the fetch, drop this render.
+  if (location.hash.slice(1) !== hash) return;
   if (!loaded) { location.hash = ""; return; }
   const { doc } = loaded;
   $("#course").innerHTML = conceptId ? renderConcept(id, doc, conceptId) : renderCourse(id, doc);

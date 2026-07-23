@@ -61,7 +61,7 @@ def main():
                         err(f"{c['file']} concept {cc.get('id')}: missing {f}")
                 concept_ids.append(cc.get("id"))
                 for b in cc.get("blocks", []):
-                    if not any(k in b for k in ("p", "formula", "note", "example")):
+                    if not any(k in b for k in ("p", "formula", "note", "example", "trick", "visual")):
                         err(f"{c['file']} concept {cc.get('id')}: block has no known key")
                     if "example" in b and "prompt" not in b["example"]:
                         err(f"{c['file']} concept {cc.get('id')}: example missing prompt")

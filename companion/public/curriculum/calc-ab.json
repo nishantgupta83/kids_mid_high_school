@@ -56,6 +56,9 @@
               "p": "A limit answers a very specific question: as x gets closer and closer to some number, what value is the output of the function heading toward? Notice the word 'toward.' A limit is not asking what happens exactly at the point. It is asking where the function is aimed as you sneak up on that point. This distinction is the whole idea, and getting comfortable with it now will make everything later feel natural."
             },
             {
+              "visual": "limit-hole"
+            },
+            {
               "p": "Here is why we even need this idea. Sometimes a function has a hole, a jump, or a spot where plugging in the number gives you nonsense like 0/0. At those spots we cannot just evaluate the function. But we can still ask, 'What was it approaching right before it got there?' That approaching value is the limit, and it often exists even when the function value does not."
             },
             {
@@ -66,6 +69,9 @@
             },
             {
               "note": "The single most common mistake is thinking lim(x→a) f(x) must equal f(a). It does not have to. The limit cares only about the neighborhood around a, never the exact point a itself. The function can even be undefined at a and still have a perfectly good limit there."
+            },
+            {
+              "trick": "A limit asks \"where is the function headed?\" not \"where does it land?\" — cover the exact point with your thumb and read the height both sides are aiming for, since the value at the point never matters."
             },
             {
               "example": {
@@ -96,6 +102,9 @@
             },
             {
               "formula": "conjugate trick:  (√A − B) · (√A + B) = A − B²"
+            },
+            {
+              "trick": "0/0 is a \"keep going\" sign, never a final answer — factor and cancel the fake zero, or multiply by the conjugate to clear a √, then plug the number back in."
             },
             {
               "example": {
@@ -131,6 +140,9 @@
               "note": "A removable discontinuity is 'removable' because you could patch the single missing point and fix it. A jump can never be patched by redefining one point, since the two sides genuinely head to different heights."
             },
             {
+              "trick": "Continuous means no pen-lift, and it must pass all three checks: f(a) exists, the limit exists, and value = limit. Miss any one and it's a break."
+            },
+            {
               "example": {
                 "prompt": "The function f(x) = (x²−1)/(x−1) for x ≠ 1, and f(1) = c. What value of c makes f continuous at x = 1?",
                 "steps": [
@@ -158,6 +170,9 @@
             },
             {
               "note": "IVT only promises that a solution exists; it does not tell you where it is or how many there are. Also, the continuity requirement is not optional. A function with a jump can skip right over the value you wanted, so always confirm continuity first."
+            },
+            {
+              "trick": "A continuous curve can't jump from below your target to above it without crossing it — like hitting exactly 50 ft on the way from 40 to 60. IVT proves a solution exists but never tells you where."
             },
             {
               "example": {
@@ -190,6 +205,9 @@
             },
             {
               "note": "Watch out: 1/x tends to 0, but 1/x² also tends to 0. When you divide, apply the same top power to every single term, including constant terms, or your bookkeeping will drift and the answer will be wrong."
+            },
+            {
+              "trick": "For a polynomial over a polynomial, the biggest power wins: divide every term by the highest power in the bottom and watch each k/xⁿ melt to 0. Same top and bottom degree → the answer is just the ratio of the leading coefficients."
             },
             {
               "example": {
@@ -229,6 +247,9 @@
               "p": "The derivative is the single most important idea in this course, and underneath all the shortcuts it is just a limit. Here is the picture. Pick a point on a curve. Draw a straight line through that point and a second nearby point; that line is called a secant, and its slope is the average rate of change between the two points. Now slide the second point closer and closer to the first. The secant lines swing and settle onto one special line that just grazes the curve: the tangent line. Its slope is the derivative."
             },
             {
+              "visual": "secant-to-tangent"
+            },
+            {
               "p": "To capture that sliding-closer process with algebra, we use a small step called h. The two points are x and x+h, and the slope of the secant between them is the rise over the run. Then we take the limit as h shrinks to 0, which is the mathematical version of sliding the second point in until it touches the first."
             },
             {
@@ -236,6 +257,9 @@
             },
             {
               "note": "You cannot just set h = 0 at the start; that gives 0/0. The whole method works because you first simplify the fraction algebraically so the h in the denominator cancels, and only then let h go to 0."
+            },
+            {
+              "trick": "The derivative is a secant slope caught turning into a tangent as h → 0 — simplify first so the h in the bottom cancels, THEN let h go to 0. Setting h = 0 up front just gives 0/0."
             },
             {
               "example": {
@@ -259,6 +283,9 @@
               "p": "Once you have a derivative function f′(x), it is a machine that reports the slope of the original curve at any x you feed it. Two readings of the same idea help here. Geometrically, f′(a) is the steepness of the tangent line at x = a. Physically, f′(a) is the instantaneous rate of change of the quantity at that instant, how fast it is changing right now rather than on average."
             },
             {
+              "visual": "tangent-slope"
+            },
+            {
               "p": "Because the tangent line touches the curve at (a, f(a)) and has slope f′(a), you can write its equation immediately using point-slope form. This tangent line is also the best straight-line stand-in for the curve near that point, an idea you will lean on again when you study linear approximation."
             },
             {
@@ -266,6 +293,9 @@
             },
             {
               "note": "Keep the two roles straight. f(a) is the height of the curve; f′(a) is the slope of the curve. Students often plug the slope in where the height belongs. The point on the line uses f(a); the slope uses f′(a)."
+            },
+            {
+              "trick": "f(a) is the height, f′(a) is the slope — don't swap them. In y − f(a) = f′(a)(x − a), the height locks the point and the derivative sets the steepness."
             },
             {
               "example": {
@@ -295,6 +325,9 @@
             },
             {
               "note": "A frequent slip is forgetting to reduce the exponent, or mishandling the constant term. The derivative of 7 is 0, not 7. And the derivative of 5x is 5, because 5x is 5·x¹ and the exponent drops to x⁰ = 1."
+            },
+            {
+              "trick": "\"Drop and lower\": bring the exponent down in front, then knock the exponent down by 1. A plain constant has slope 0 (a flat line isn't tilting), so the derivative of 7 is 0, not 7."
             },
             {
               "example": {
@@ -330,6 +363,9 @@
               "note": "In the quotient rule the minus sign makes order matter: it is always (derivative of top)·(bottom) first. Swapping the two terms flips the sign of your whole answer. If you ever forget the rule, you can rewrite the quotient as a product with a negative exponent and use the product rule instead."
             },
             {
+              "trick": "Product = \"d-first times second, plus first times d-second.\" Quotient = \"lo-dee-hi minus hi-dee-lo, over lo-lo\" — the minus makes order matter, so always start with the bottom times the top's derivative first."
+            },
+            {
               "example": {
                 "prompt": "Differentiate f(x) = (2x + 1)(x² − 3) with the product rule.",
                 "steps": [
@@ -358,6 +394,9 @@
             },
             {
               "note": "Sign care with cosine: the derivative of cos x is negative sin x. Losing that minus sign is one of the most common errors on tests. Also note d/dx ln x = 1/x only for x > 0, since ln x is only defined there."
+            },
+            {
+              "trick": "sin and cos swap seats, but cos leaves a minus behind: cos x → −sin x. eˣ is its own derivative, and ln x → 1/x. That dropped minus on cosine is the number-one test slip."
             },
             {
               "example": {
@@ -407,6 +446,9 @@
               "note": "The classic mistake is stopping after the outer derivative and forgetting to multiply by the inner derivative. For (3x² + 1)⁴ you must still multiply by the derivative of 3x² + 1. If the inside were just x, that factor would be 1 and you would not notice it is missing; that is why simple cases hide the rule."
             },
             {
+              "trick": "Derivative of the outside (leave the inside alone), times the derivative of the inside — peel the layers outside-in and never forget that final inside-derivative factor."
+            },
+            {
               "example": {
                 "prompt": "Differentiate y = (3x² + 1)⁴.",
                 "steps": [
@@ -435,6 +477,9 @@
             },
             {
               "note": "Differentiating x² gives 2x with no extra factor, but differentiating y² gives 2y·(dy/dx). The dy/dx is the whole point; leaving it off is the defining error of this topic. It is there because y depends on x, so the chain rule applies."
+            },
+            {
+              "trick": "Every variable is secretly a function of x, so each y earns a dy/dx when you differentiate: x² → 2x, but y² → 2y·(dy/dx). Then gather all the dy/dx terms, factor, and divide."
             },
             {
               "example": {
@@ -469,6 +514,9 @@
               "note": "For the reciprocal-slope formula, be careful which point you evaluate at: you divide by f′ measured at the input of the original function, which is f⁻¹(a), not at a itself. Track your points and this rule is reliable."
             },
             {
+              "trick": "An inverse's slope is the reciprocal of the original's slope, but measured at f⁻¹(a), not at a — flip f′ and check which point you're standing on. Memorize arcsin x → 1/√(1 − x²) and arctan x → 1/(1 + x²)."
+            },
+            {
               "example": {
                 "prompt": "Let f(x) = x³ + x, so f(1) = 2. Find (f⁻¹)′(2).",
                 "steps": [
@@ -497,6 +545,9 @@
             },
             {
               "note": "Notation can trip you up. f″(x) uses two prime marks, and in Leibniz notation the second derivative is written d²y/dx². The little 2 sits in different places on top and bottom; that is standard, not a typo, and it does not mean squaring."
+            },
+            {
+              "trick": "Just keep differentiating: f → f′ → f″ is the same ladder as position → velocity → acceleration. The little 2 in d²y/dx² means \"did it twice,\" not \"squared.\""
             },
             {
               "example": {
@@ -545,6 +596,9 @@
               "note": "Do not confuse 'at rest' with 'no acceleration.' At the top of a toss the velocity is zero but acceleration is not; that nonzero acceleration is exactly what turns the motion around. Velocity zero answers 'is it moving?'; acceleration answers 'is its motion changing?'"
             },
             {
+              "trick": "Position → velocity → acceleration is a derivative chain; velocity's sign is direction and v = 0 means momentarily at rest, not stopped forever. Speeding up when v and a share a sign, slowing down when their signs disagree."
+            },
+            {
               "example": {
                 "prompt": "A particle moves with position s(t) = t³ − 6t² + 9t. Find when it is at rest.",
                 "steps": [
@@ -566,6 +620,9 @@
               "p": "Related rates problems are about quantities that are linked by an equation and are all changing over time together. If you know how fast one is changing, you can find how fast another is changing, because their rates are tied to each other through that equation. The bridge is differentiating the relationship with respect to time t, so every variable picks up a rate like dr/dt or dV/dt by the chain rule."
             },
             {
+              "visual": "balloon"
+            },
+            {
               "p": "A dependable game plan keeps these from feeling chaotic. First, write an equation connecting the variables using geometry or the given setup. Second, differentiate both sides with respect to t, treating every variable as a function of time. Third, and only now, plug in the specific numbers for that instant and solve for the unknown rate. Substituting numbers too early is the classic trap, because it freezes quantities that are actually still changing."
             },
             {
@@ -573,6 +630,9 @@
             },
             {
               "note": "Do not substitute the instant's numbers before you differentiate. If you plug in r = 5 first, you accidentally treat the radius as a constant and its rate disappears. Differentiate with variables, then substitute."
+            },
+            {
+              "trick": "Everything is a function of time, so every variable gets a little dt when you differentiate — and never plug in the instant's numbers until AFTER you differentiate, or you'll freeze a variable that's still moving."
             },
             {
               "example": {
@@ -605,6 +665,9 @@
               "note": "Choose the anchor a to be a nearby point where f(a) and f′(a) are easy, like a perfect square when estimating a square root. Whether your estimate is a little high or a little low depends on concavity: a concave-down curve sits below its tangent, so the linear estimate reads slightly high."
             },
             {
+              "trick": "Ride the tangent line instead of the curve: L(x) = f(a) + f′(a)(x − a), a starting height plus slope times your small step. Anchor at an easy a (a perfect square for a root); concave-down curves read a touch high, concave-up a touch low."
+            },
+            {
               "example": {
                 "prompt": "Use linear approximation to estimate √4.1.",
                 "steps": [
@@ -633,6 +696,9 @@
             },
             {
               "note": "L'Hôpital replaces top and bottom with f′ and g′ independently; it does not use the quotient rule at all. Applying the quotient rule here is the most common and costly mistake with this topic."
+            },
+            {
+              "trick": "Only when substitution gives 0/0 or ∞/∞: differentiate the top and bottom separately (this is NOT the quotient rule) and retry the limit. Confirm it's truly indeterminate first, and repeat the rule if it still is."
             },
             {
               "example": {
@@ -674,6 +740,9 @@
               "p": "Imagine you drive 120 miles in 2 hours. Your average speed was 60 mph. It feels obvious that at some instant your speedometer must have read exactly 60 mph, even if you sped up and slowed down along the way. The Mean Value Theorem (MVT) is the precise version of that gut feeling: somewhere in the interval, the instantaneous rate of change must equal the average rate of change over the whole interval."
             },
             {
+              "visual": "mvt"
+            },
+            {
               "p": "The average rate of change from a to b is the slope of the straight line (the secant line) connecting the two endpoints of the graph. The instantaneous rate of change at a point is the slope of the tangent line there, which is f′. The MVT promises that at least one point c between a and b has a tangent line exactly parallel to that secant line."
             },
             {
@@ -684,6 +753,9 @@
             },
             {
               "note": "Common mistake: the MVT tells you a point c EXISTS, but c must lie strictly between a and b, never at an endpoint. Also, you may need to reject a solution that falls outside (a, b)."
+            },
+            {
+              "trick": "If you average 60 mph on a trip, at some instant the speedometer read exactly 60 — the MVT guarantees one point where the tangent slope equals the secant slope. Set f′(c) = (f(b) − f(a))/(b − a), solve, and keep only the c strictly between a and b."
             },
             {
               "example": {
@@ -707,6 +779,9 @@
               "p": "The first derivative f′ measures the slope of the curve at each point, and slope tells you which way the function is heading. Where f′ is positive the tangent line tilts uphill, so the function is increasing. Where f′ is negative the tangent tilts downhill, so the function is decreasing. This is how derivatives let you read the shape of a graph without plotting hundreds of points."
             },
             {
+              "visual": "inc-dec"
+            },
+            {
               "p": "The interesting moments happen where f′ = 0 or f′ is undefined. These are called critical points, and they are the only places where a smooth function can turn around. If the function switches from increasing to decreasing at a critical point, that point is a local (relative) maximum. If it switches from decreasing to increasing, it is a local minimum."
             },
             {
@@ -717,6 +792,9 @@
             },
             {
               "p": "The First Derivative Test is the organized way to do this: find the critical points, place them on a number line, then pick a test value in each interval and check the sign of f′. The pattern of plus and minus signs tells you exactly where the function rises, falls, and turns."
+            },
+            {
+              "trick": "f′ is the slope, so + means the graph goes uphill (increasing) and − means downhill (decreasing). At a critical point a flip from + to − is a peak (max) and − to + is a valley (min); no sign change means no turn, like x³ at x = 0."
             },
             {
               "example": {
@@ -740,6 +818,9 @@
               "p": "The first derivative tells you whether a curve is going up or down. The second derivative, f″, tells you how the curve is bending. When f″ is positive the curve bends upward like a cup that could hold water; we call this concave up. When f″ is negative the curve bends downward like an arch or a frown; that is concave down. Concavity is about the curvature, not the direction of travel, so a curve can be increasing while concave down, or decreasing while concave up."
             },
             {
+              "visual": "concavity"
+            },
+            {
               "formula": "f″(x) > 0 ⇒ concave up;   f″(x) < 0 ⇒ concave down"
             },
             {
@@ -750,6 +831,9 @@
             },
             {
               "note": "Common mistake: if f″ = 0 at a critical point, the Second Derivative Test is inconclusive, and you must fall back on the First Derivative Test. A zero second derivative does not automatically mean an inflection point either."
+            },
+            {
+              "trick": "Positive f″ is a smile (concave up = holds water = local min), negative f″ is a frown (concave down = dome = local max). An inflection point is where the smile turns into a frown, and if f″ = 0 the test just shrugs — fall back on the First Derivative Test."
             },
             {
               "example": {
@@ -773,6 +857,9 @@
               "p": "Optimization is where calculus earns its keep in the real world. The question is always some version of: what choice makes a quantity as large or as small as possible? What dimensions use the least material? What price earns the most profit? Because a smooth function turns around exactly where its derivative is zero, calculus can pinpoint the best value instead of guessing."
             },
             {
+              "visual": "fence"
+            },
+            {
               "p": "The reliable recipe has four moves. First, draw a picture and name your variables. Second, write the quantity you want to optimize as a formula (the objective). Third, use any given relationship (the constraint) to rewrite the objective in terms of a single variable. Fourth, take the derivative, set it to zero, solve, and confirm you found a max or a min."
             },
             {
@@ -780,6 +867,9 @@
             },
             {
               "note": "Common mistake: forgetting to use the constraint to reduce to one variable, or forgetting to check endpoints and confirm whether your critical point is truly the maximum you wanted, not the minimum."
+            },
+            {
+              "trick": "Turn the word problem into ONE equation: write the quantity to maximize, use the constraint to eliminate the extra variable, then set the derivative to zero. The best value hides where the slope is flat, so confirm it is the max you wanted with f″ < 0 or the endpoints, not the min."
             },
             {
               "example": {
@@ -807,6 +897,9 @@
             },
             {
               "note": "The graphs of f, f′, and f″ are easy to confuse. Remember: a maximum or minimum of f sits where f′ crosses zero, and an inflection point of f sits where f″ crosses zero (which is also where f′ has its own peak or valley)."
+            },
+            {
+              "trick": "Read f′ and f″ as two reports: f′ gives the ups, downs, and turns, while f″ gives the bends and where they switch. Peaks and valleys sit where f′ crosses zero, inflection points where f″ crosses zero — then connect the dots so the curve obeys both sign charts."
             },
             {
               "example": {
@@ -848,6 +941,9 @@
               "p": "Before we can integrate exactly, we approximate. Suppose you want the area under a curve between two x-values but the region has a curvy top, so no simple area formula fits. The idea of a Riemann sum is to slice the region into thin vertical rectangles, compute each rectangle's area as height times width, and add them all up. The more rectangles you use, the closer the total gets to the true area."
             },
             {
+              "visual": "riemann"
+            },
+            {
               "p": "Each rectangle has the same width, Δx = (b - a)/n, where n is the number of rectangles. The height comes from the function's value at a chosen point in each slice. If you use the left edge of each slice you get a left Riemann sum; the right edge gives a right sum; the middle gives a midpoint sum. Same idea, different sample point."
             },
             {
@@ -855,6 +951,9 @@
             },
             {
               "note": "For a function that is increasing across the interval, a right Riemann sum overestimates the true area and a left sum underestimates it. Flip that for a decreasing function. Sketching helps you predict over vs under."
+            },
+            {
+              "trick": "Chop the area into equal-width rectangles, Δx = (b − a)/n, then add height × width. For an increasing function the Right sum Reaches over the top (overestimate) and the Left sum falls short (underestimate); flip that for a decreasing function."
             },
             {
               "example": {
@@ -878,6 +977,9 @@
               "p": "A definite integral is what a Riemann sum becomes when you let the number of rectangles grow to infinity and their width shrink to zero. In that limit the staircase of rectangles smooths perfectly onto the curve, and the approximation becomes the exact area. That is why the integral sign ∫ is a stretched letter S: it stands for an endless sum."
             },
             {
+              "visual": "area-under"
+            },
+            {
               "formula": "∫ from a to b of f(x) dx = the exact signed area between f and the x-axis from a to b"
             },
             {
@@ -885,6 +987,9 @@
             },
             {
               "note": "When the graph is made of straight lines or circles, you can find a definite integral using basic geometry (triangles, rectangles, semicircles) instead of antiderivatives. Watch the sign for regions below the axis."
+            },
+            {
+              "trick": "The integral sign ∫ is a stretched S for sum, and it measures signed area: above the axis counts as +, below counts as −, so it can total zero or even come out negative. When the graph is straight lines or circles, skip antiderivatives and just use triangle, rectangle, and semicircle areas."
             },
             {
               "example": {
@@ -917,6 +1022,9 @@
               "note": "Order matters: it is always top limit minus bottom limit, F(b) - F(a). Reversing them flips the sign of your answer, a very common slip on tests."
             },
             {
+              "trick": "The integral undoes the derivative: find any antiderivative F, plug in the top limit, and subtract the bottom, F(b) − F(a). It is always top minus bottom — reversing them flips your sign — and the + C cancels, so ignore it."
+            },
+            {
               "example": {
                 "prompt": "Evaluate ∫ from 1 to 3 of 2x dx using the Fundamental Theorem of Calculus.",
                 "steps": [
@@ -947,6 +1055,9 @@
               "note": "If the upper limit is a function of x rather than plain x, you must multiply by its derivative (the chain rule): d/dx ∫ from a to g(x) of f(t) dt = f(g(x))·g′(x)."
             },
             {
+              "trick": "Building up area and then differentiating it undoes itself: d/dx of ∫ from a to x of f(t) dt just hands back f(x) with t renamed x, and the lower limit doesn't matter. If the top limit is fancier than plain x, multiply by its derivative (the chain rule)."
+            },
+            {
               "example": {
                 "prompt": "Let F(x) = ∫ from 2 to x of √(t³ + 1) dt. Find F′(x) and F′(3).",
                 "steps": [
@@ -975,6 +1086,9 @@
             },
             {
               "note": "For a definite integral you have two choices: change the limits from x-values to u-values (then never substitute back), or integrate, return to x, and use the original limits. Do not mix an x-limit with a u-antiderivative."
+            },
+            {
+              "trick": "u-substitution is the chain rule run backward: rename the messy inside as u, and if its derivative du is already sitting in the integral, the whole thing collapses to ∫ f(u) du. For a definite integral, either change the limits to u-values or switch back to x first — never mix an x-limit with a u-answer."
             },
             {
               "example": {
@@ -1015,10 +1129,16 @@
               "p": "A differential equation like dy/dx = something tells you the slope of a solution curve at every point, but not the curve itself. A slope field turns that information into a picture. At a grid of points across the plane you draw a tiny line segment whose slope is whatever the equation gives there. Standing back, those little dashes flow together and reveal the shapes of all the solution curves at once."
             },
             {
+              "visual": "slope-field"
+            },
+            {
               "p": "To read or draw a slope field, you plug each point's coordinates into dy/dx to get a number, then sketch a short segment with that steepness: flat for slope 0, steep uphill for large positive, steep downhill for negative. A particular solution is any smooth curve that stays tangent to the segments as you trace through them."
             },
             {
               "note": "If dy/dx depends only on x, every segment in the same vertical column has the same slope. If it depends only on y, every segment in the same horizontal row matches. Spotting this makes fields fast to sketch and to identify."
+            },
+            {
+              "trick": "A slope field is a differential equation drawn as a grid of tiny tangent dashes — plug each point into dy/dx to get its steepness. If dy/dx uses only x, every dash in a vertical column matches; if only y, every dash in a horizontal row matches; a solution curve just surfs along tangent to the dashes."
             },
             {
               "example": {
@@ -1051,6 +1171,9 @@
               "note": "Common mistake: forgetting the + C, or adding it to both sides. Add one constant, usually on the x-side, right after integrating. Keep the absolute value from ln when it appears until you solve for y."
             },
             {
+              "trick": "Treat dy/dx like a real fraction: sweep all the y's (with dy) to one side and all the x's (with dx) to the other, then integrate both sides. Add just ONE + C, usually on the x-side — not one on each side."
+            },
+            {
               "example": {
                 "prompt": "Solve the differential equation dy/dx = x/y.",
                 "steps": [
@@ -1081,6 +1204,9 @@
               "note": "Common mistake: mixing up k and P₀. P₀ is simply the value at t = 0; k comes from the proportionality rate. A positive k grows, a negative k decays. Do not confuse continuous rate k with a percent per year."
             },
             {
+              "trick": "Whenever the rate is proportional to the amount, dP/dt = kP, the answer is always P(t) = P₀·eᵏᵗ. P₀ is simply the starting value at t = 0 and k is the rate — positive k grows, negative k decays."
+            },
+            {
               "example": {
                 "prompt": "A bacteria culture grows so that dP/dt = 0.03P, and it starts with 1000 cells. Write P(t) and find the population at t = 10.",
                 "steps": [
@@ -1109,6 +1235,9 @@
             },
             {
               "note": "Always solve for C only after you have the general antiderivative. Substituting the initial condition too early, before integrating, is a frequent error that produces the wrong constant."
+            },
+            {
+              "trick": "Integrate first and keep the + C, THEN plug in the given point to solve for C — never substitute before you integrate. The initial condition is the single town that picks your one road out of the whole family of curves."
             },
             {
               "example": {
@@ -1158,6 +1287,9 @@
               "note": "Common mistake: forgetting to divide by (b - a). An integral alone gives total accumulation; the average requires dividing that total by the interval length."
             },
             {
+              "trick": "Average value is total area divided by width: (1/(b − a)) · ∫ from a to b of f(x) dx. It is the flat rectangle height that holds the same area as the curve, so don't forget to divide by (b − a) or you only have the integral."
+            },
+            {
               "example": {
                 "prompt": "Find the average value of f(x) = x² on the interval [0, 3].",
                 "steps": [
@@ -1179,6 +1311,9 @@
               "p": "A single integral finds the area between a curve and the x-axis. To find the area trapped between two curves, you use the same idea with a twist: at each x, the height of the region is the top curve's value minus the bottom curve's value. Adding up all those thin vertical strips (top minus bottom, times a tiny width) gives the enclosed area."
             },
             {
+              "visual": "area-between"
+            },
+            {
               "p": "The plan is: sketch both curves so you can see which is on top, find where they cross (those intersection x-values become your limits of integration), then integrate the difference top minus bottom across that interval. Because you subtract the lower from the upper, the height is always positive and you never have to worry about signed area here."
             },
             {
@@ -1186,6 +1321,9 @@
             },
             {
               "note": "Common mistake: subtracting in the wrong order. If your answer comes out negative, you likely put the lower curve on top. Always confirm which curve is higher on the interval, by testing a point if needed."
+            },
+            {
+              "trick": "Top minus bottom, always: at each x the strip height is the upper curve minus the lower curve, so the area is ∫ (top − bottom) dx between the points where they cross. If your answer comes out negative, you subtracted backward."
             },
             {
               "example": {
@@ -1209,6 +1347,9 @@
               "p": "If you spin a flat region around a line, it sweeps out a solid, like a lump of clay on a potter's wheel. To find that solid's volume, slice it into thin coins perpendicular to the axis of rotation. Each coin is a circle, so its area is π times radius squared, and its tiny thickness is dx. Integrating the coin areas along the axis adds them all into the total volume. This is the disc method."
             },
             {
+              "visual": "disc-method"
+            },
+            {
               "p": "The radius of each disc is just the distance from the axis to the curve, which is the function's value when you revolve around the x-axis. If the region does not touch the axis, each slice has a hole in the middle, making a washer (a coin with a bite out of it). Then you subtract the inner circle's area from the outer circle's area."
             },
             {
@@ -1216,6 +1357,9 @@
             },
             {
               "note": "For a washer, use V = π ∫ [ R² - r² ] dx, where R is the outer radius and r is the inner radius. You must square the radii separately, then subtract; squaring the difference (R - r)² is wrong."
+            },
+            {
+              "trick": "Spin a region and slice it into thin coins — each coin is a circle of radius r (the distance from the axis to the curve), so its volume is π r² times its thickness dx. If the region doesn't touch the axis it's a washer: subtract the squares, π(R² − r²), and never square the difference (R − r)²."
             },
             {
               "example": {
@@ -1248,6 +1392,9 @@
               "note": "Match the area formula to the shape: square side s gives s², a semicircle of diameter s gives (π/8)s², an equilateral triangle of side s gives (√3/4)s². Read carefully whether s is a side, a radius, or a diameter."
             },
             {
+              "trick": "No spinning here — just stack slices of a known shape: find one slice's area A(x), whose side is usually top curve minus bottom curve, then integrate ∫ A(x) dx. Match the area formula to the shape and read carefully whether the base gives you a side, a radius, or a diameter."
+            },
+            {
               "example": {
                 "prompt": "A solid has a base bounded by y = x, y = 0, and x = 2. Each cross-section perpendicular to the x-axis is a square. Find the volume.",
                 "steps": [
@@ -1276,6 +1423,9 @@
             },
             {
               "note": "To integrate | v(t) |, first find where v(t) = 0, split the integral at those times, integrate each piece, then add the absolute values. Do not just drop a negative sign before integrating."
+            },
+            {
+              "trick": "Integrating velocity gives displacement, the net change, where backward motion counts as negative and can cancel to zero; integrating | v(t) | gives total distance. For distance, find where v = 0, split the integral at those times, and add the pieces as positives."
             },
             {
               "example": {
