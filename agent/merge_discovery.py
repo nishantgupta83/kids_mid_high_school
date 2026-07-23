@@ -91,8 +91,9 @@ def main():
         if pid in prop_ids:
             continue
         s = src_by_id[sid]
+        rel_kid = s["kid"] if s["kid"] in OPP_KID else "both"  # proposals can't be kid=family
         proposed.append({
-            "id": pid, "name": f"[relocate] {s['name']}", "kid": s["kid"], "category": s["category"],
+            "id": pid, "name": f"[relocate] {s['name']}", "kid": rel_kid, "category": s["category"],
             "url": url, "scan_method": s["scan"]["method"], "why": f"Found a live URL for the dead source '{s['name']}'",
             "eligibility_note": "", "replaces_source_id": sid, "found": today.isoformat(),
             "confidence": "estimated", "state": "pending", "evidence": str(rel.get("evidence", ""))[:400],

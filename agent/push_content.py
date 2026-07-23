@@ -82,8 +82,12 @@ def apply_proposal_decisions(cfg):
     sources_doc = read_json(os.path.join(DATA, "sources.json"))
     remaining, handled = [], 0
     for p in prop_doc["proposals"]:
-        d = decisions.get(p["id"], {}).get("decision")
-        if p.get("state", "pending") != "pending" or not d:
+        dec = decisions.get(p["id"], {})
+        d = dec.get("decision")
+        # Instance-scope: a decision only applies to the exact proposal it was made on.
+        # A stale KV key from an earlier same-id proposal (different found date) is ignored,
+        # so a regenerated proposal always needs fresh approval — closes the auto-promote gap.
+        if p.get("state", "pending") != "pending" or not d or dec.get("found") != p.get("found"):
             remaining.append(p)
             continue
         if d == "approve" and promote_proposal(p, sources_doc["sources"], today):
@@ -142,7 +146,7 @@ def push(cfg):
         "opportunities": opps,
         "watchlist": watch,
         "proposed_sources": [{"id": p["id"], "name": p["name"], "kid": p["kid"], "why": p.get("why", ""),
-                              "url": p["url"], "category": p["category"]} for p in proposed],
+                              "url": p["url"], "category": p["category"], "found": p.get("found", "")} for p in proposed],
         "other_items": other,
     }
     # Hash excludes generated_at so quiet days don't push identical content.

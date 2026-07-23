@@ -161,7 +161,12 @@ function render() {
   // Proposed sources come from the content doc (the list); PIPE.proposals holds any
   // decision already made this session, so we hide ones already approved/dismissed.
   const decided = PIPE?.proposals || {};
-  const proposed = (c.proposed_sources || []).filter(p => !decided[p.id]?.decision);
+  // Hide a proposal only if THIS instance was decided (found date matches) — a stale
+  // decision on an earlier same-id proposal must not hide a freshly regenerated one.
+  const proposed = (c.proposed_sources || []).filter(p => {
+    const dec = decided[p.id];
+    return !(dec?.decision && dec?.found === p.found);
+  });
   $("#tWatch").innerHTML =
     watches.map(w => {
       const d = w.expected_open || w.hard_deadline;
@@ -176,8 +181,8 @@ function render() {
         `<div class="muted">${esc(p.why || "")}</div>` +
         (u ? `<a class="lbtn" href="${esc(u)}" target="_blank" rel="noopener">Preview site ↗</a>` : "") +
         `<div class="statusrow">` +
-        `<button class="sbtn" data-prop="${esc(p.id)}" data-d="approve">Approve</button>` +
-        `<button class="sbtn" data-prop="${esc(p.id)}" data-d="dismiss">Dismiss</button></div></div>`;
+        `<button class="sbtn" data-prop="${esc(p.id)}" data-found="${esc(p.found||'')}" data-d="approve">Approve</button>` +
+        `<button class="sbtn" data-prop="${esc(p.id)}" data-found="${esc(p.found||'')}" data-d="dismiss">Dismiss</button></div></div>`;
       }).join("") : "");
 
   // "Other" — things the scanner noticed but didn't promote; nothing silently dropped.
@@ -218,8 +223,8 @@ document.addEventListener("click", async (ev) => {
   }
   if (t.dataset?.prop && t.dataset?.d) {
     try {
-      await api("/api/pipeline", { method:"PUT", body: JSON.stringify({ proposalId: t.dataset.prop, decision: t.dataset.d }) });
-      PIPE.proposals[t.dataset.prop] = { decision: t.dataset.d };
+      await api("/api/pipeline", { method:"PUT", body: JSON.stringify({ proposalId: t.dataset.prop, decision: t.dataset.d, found: t.dataset.found }) });
+      PIPE.proposals[t.dataset.prop] = { decision: t.dataset.d, found: t.dataset.found };
       render();
     } catch { alert("save failed — try again"); }
   }

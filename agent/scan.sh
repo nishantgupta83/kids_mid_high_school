@@ -142,18 +142,24 @@ fi
 
 # ---- STEP 8c: WEEKLY discovery (Sunday, or --weekly) ----------------------
 # Fully isolated from the email scan: web-only LLM call, own schema, proposals only.
+# On a discovery validation failure we restore ONLY the two files discovery touches
+# (events.json, sources_proposed.json) — never a tree-wide checkout that would wipe
+# the successful daily merge that already ran at step 8.
 if [ "$WEEKLY" -eq 1 ] || [ "$(date +%u)" = "7" ]; then
   $PY "$AGENT/build_discovery.py"
   if $PY "$AGENT/llm_call.py" --mode discovery \
       --prompt "$AGENT/prompts/discovery_prompt.md" \
       --input "$LOCAL/discovery_input.json" \
       --output "$LOCAL/discovery_output.json"; then
+    cp "$REPO/data/events.json" "$LOCAL/events.pre8c.json"
+    cp "$REPO/data/sources_proposed.json" "$LOCAL/proposed.pre8c.json"
     if $PY "$AGENT/merge_discovery.py" --llm-output "$LOCAL/discovery_output.json"; then
       if $PY "$REPO/scripts/validate_data.py" >/dev/null 2>&1; then
         logln "STEP 8c discovery OK"
       else
-        logln "STEP 8c discovery validate FAIL — rolling back data/"
-        git -C "$REPO" checkout -- data/
+        logln "STEP 8c discovery validate FAIL — restoring events.json + sources_proposed.json only"
+        cp "$LOCAL/events.pre8c.json" "$REPO/data/events.json"
+        cp "$LOCAL/proposed.pre8c.json" "$REPO/data/sources_proposed.json"
       fi
     else
       logln "STEP 8c discovery merge FAIL (skipped)"
@@ -188,6 +194,9 @@ DURATION=$(( $(date +%s) - START_TS ))
 OK="true"
 [ "$MODE" = "degraded-no-llm" ] && OK="false"
 [ "$DIGEST_DEFERRED" -eq 1 ] && OK="false"
+# A hard digest failure (rc not 0 or 4) leaves the day not-successful so the noon
+# catch-up trigger re-fires and retries delivery.
+[ "$DIGEST_RC" -ne 0 ] && [ "$DIGEST_RC" -ne 4 ] && OK="false"
 $PY "$AGENT/finalize_run.py" --mode "$MODE" --ok "$OK" --duration "$DURATION" \
   --step "email=$EMAIL_OK" --step "mode=$MODE" >/dev/null
 logln "STEP 11 finalize OK mode=$MODE duration=${DURATION}s"

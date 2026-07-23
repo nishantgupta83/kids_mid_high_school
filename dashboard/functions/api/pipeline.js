@@ -61,7 +61,10 @@ export async function onRequestPut({ request, env }) {
     if (!PROPOSAL_RE.test(body.proposalId) || !DECISIONS.has(body.decision)) {
       return new Response("bad request", { status: 400 });
     }
-    await env.FAMILY_OPS.put(`proposal:${body.proposalId}`, JSON.stringify({ decision: body.decision, updated_at: now, by: "dashboard" }));
+    // `found` scopes the decision to a specific proposal instance so a stale key
+    // can't auto-approve a later regenerated same-id proposal (agent enforces the match).
+    const found = (typeof body.found === "string" && body.found.length <= 20) ? body.found : null;
+    await env.FAMILY_OPS.put(`proposal:${body.proposalId}`, JSON.stringify({ decision: body.decision, found, updated_at: now, by: "dashboard" }));
     return Response.json({ ok: true });
   }
   return new Response("bad request", { status: 400 });

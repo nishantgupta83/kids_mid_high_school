@@ -32,7 +32,8 @@ LOCAL = os.path.join(DATA, "local")
 
 # Palette (no purple): paper/ink + sage/teal/coral/amber
 C = {"paper": "#FBF7EE", "ink": "#2A2A25", "soft": "#6B6B60", "sage": "#4E7A5C",
-     "teal": "#2F6F6A", "coral": "#C96F4A", "amber": "#B98A2F", "card": "#FFFFFF", "line": "#E8E2D4"}
+     "teal": "#2F6F6A", "coral": "#C96F4A", "amber": "#B98A2F", "sky": "#4A7BA6",
+     "card": "#FFFFFF", "line": "#E8E2D4"}
 KID_COLOR = {"ridhi": C["teal"], "dhruv": C["amber"], "both": C["sage"], "family": C["sage"]}
 
 
@@ -259,12 +260,21 @@ def main():
         log("send_digest: already sent today, skipping (--force for a deliberate resend)")
         return 0
 
-    sections = collect(today)
-    health = derive_health(args.mode)
-    raw = degraded_lines(args.mode)
-    html_body = render_html(today, sections, health, raw)
-    text_body = render_text(today, sections, health, raw)
-    subject = subject_line(cfg, today, sections)
+    # A render bug must never silence the family's only alert channel — degrade to a
+    # minimal email rather than crash before SMTP.
+    try:
+        sections = collect(today)
+        health = derive_health(args.mode)
+        raw = degraded_lines(args.mode)
+        html_body = render_html(today, sections, health, raw)
+        text_body = render_text(today, sections, health, raw)
+        subject = subject_line(cfg, today, sections)
+    except Exception as e:
+        log(f"send_digest: RENDER FAILED ({e}) — sending minimal fallback")
+        subject = f"{cfg['digest']['subject_prefix']} · {today.strftime('%a %b %-d')} · digest error"
+        text_body = (f"School Intel could not render today's digest ({e}).\n"
+                     "The scan data is safe; open the dashboard for the full picture.")
+        html_body = f"<body><p>{html.escape(text_body)}</p></body>"
 
     archive = os.path.join(DATA, "digests", f"{today.isoformat()}.html")
     write_text(archive, html_body)
@@ -322,7 +332,14 @@ def main():
         except Exception as e:
             last_err = e
             log(f"send_digest: attempt {attempt} failed: {e}")
-    log(f"send_digest: FAILED after retries: {last_err} — archived at {archive}")
+    # Definite failure after retries: release the day-claim so the next trigger can
+    # retry (the stable Message-ID makes a rare double delivery threadable), and
+    # return 1 so scan.sh marks the day not-successful and the noon run re-fires.
+    try:
+        os.unlink(claim)
+    except OSError:
+        pass
+    log(f"send_digest: FAILED after retries: {last_err} — archived at {archive}, day-claim released for retry")
     return 1
 
 
