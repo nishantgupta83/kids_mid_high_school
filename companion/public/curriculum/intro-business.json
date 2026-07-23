@@ -1,0 +1,38 @@
+{
+  "id": "intro-business",
+  "title": "Introduction to Business",
+  "exam": { "name": "Projects, quizzes & finals", "window": "Ongoing", "note": "Usually assessed through projects (a business plan is common), quizzes, and finals. Often an elective — confirm graded components with the teacher." },
+  "overview": "A survey of how businesses work — from economic basics and business ownership to marketing, finance, and management. It's practical and vocabulary-rich: many units end in an applied project. The through-line is understanding how a business creates value, reaches customers, and stays financially healthy.",
+  "how_to_study_course": [
+    "Keep a running glossary — business is heavy on terms (supply/demand, ROI, gross vs net, market segment).",
+    "Tie every concept to a real company you know; abstract ideas stick when they have a concrete example.",
+    "For project units, start early and iterate — a business plan or marketing pitch is graded on clarity and reasoning, not length.",
+    "Learn to read a simple income statement (revenue − costs = profit); basic finance recurs across units."
+  ],
+  "resources": [
+    { "label": "Khan Academy — Macroeconomics (intro economics)", "url": "https://www.khanacademy.org/economics-finance-domain/macroeconomics" },
+    { "label": "Khan Academy — Personal finance & entrepreneurship", "url": "https://www.khanacademy.org/college-careers-more/personal-finance" },
+    { "label": "Investopedia — business & finance term dictionary", "url": "https://www.investopedia.com/" },
+    { "label": "SBA — how to write a business plan", "url": "https://www.sba.gov/business-guide/plan-your-business/write-your-business-plan" }
+  ],
+  "units": [
+    { "id": "u1", "title": "Unit 1 — Economic Foundations", "typical_when": "Aug–Sep",
+      "topics": ["Needs vs wants & scarcity", "Supply & demand", "Types of economic systems", "Factors of production"],
+      "how_to_study": ["Understand supply/demand as a graph you can move", "Connect scarcity to the trade-offs businesses make"] },
+    { "id": "u2", "title": "Unit 2 — Forms of Business Ownership", "typical_when": "Oct",
+      "topics": ["Sole proprietorship, partnership, corporation, LLC", "Franchises", "Advantages & risks of each", "Liability"],
+      "how_to_study": ["Make a comparison chart of ownership types (control, taxes, liability)", "Match a real business to its ownership form"] },
+    { "id": "u3", "title": "Unit 3 — Marketing", "typical_when": "Nov–Dec",
+      "topics": ["The 4 Ps (Product, Price, Place, Promotion)", "Market research & segmentation", "Branding", "Advertising & social media"],
+      "how_to_study": ["Analyze a product you like with the 4 Ps", "Know your target market before designing any promotion"] },
+    { "id": "u4", "title": "Unit 4 — Business Finance & Accounting", "typical_when": "Jan–Feb",
+      "topics": ["Revenue, costs & profit", "Income statement basics", "Budgeting", "Break-even & pricing", "Credit & investment basics"],
+      "how_to_study": ["Practice the profit equation with real numbers", "Learn to read a simple income statement top to bottom"] },
+    { "id": "u5", "title": "Unit 5 — Management & Operations", "typical_when": "Mar",
+      "topics": ["Functions of management (planning, organizing, leading, controlling)", "Leadership styles", "Human resources", "Production & operations"],
+      "how_to_study": ["Tie management functions to a real team you've been on", "Compare leadership styles with pros/cons"] },
+    { "id": "u6", "title": "Unit 6 — Entrepreneurship & the Business Plan", "typical_when": "Apr–May",
+      "topics": ["Identifying opportunities", "Writing a business plan", "Startup costs & funding", "Pitching an idea"],
+      "how_to_study": ["Start your business-plan project early and revise it", "A good pitch answers: what problem, for whom, how do you make money?"] }
+  ]
+}

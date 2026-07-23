@@ -1,0 +1,5 @@
+# Ridhi's Class Companion — Cloudflare Pages (DIRECT UPLOAD ONLY, never git-connect).
+# Deploy (from this dir): CLOUDFLARE_ACCOUNT_ID=cf4e17207cd036cd992130e86b339e24 npx wrangler pages deploy
+name = "ridhi-class-companion"
+pages_build_output_dir = "public"
+compatibility_date = "2026-07-01"

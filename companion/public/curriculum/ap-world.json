@@ -1,0 +1,47 @@
+{
+  "id": "ap-world",
+  "title": "AP World History: Modern",
+  "exam": { "name": "AP World History Exam", "window": "May 2027", "note": "Digital exam; check College Board for your exact date. Format: 55 MCQ, 3 SAQ, 1 DBQ, 1 long essay." },
+  "overview": "A college-level survey of world history from about 1200 CE to the present, built around six themes and organized into nine units. The skill that matters most all year is historical argument — reading sources, using evidence, and writing thesis-driven essays (SAQ, DBQ, LEQ).",
+  "how_to_study_course": [
+    "Learn the six themes early (Governance; Cultural Developments; Technology & Innovation; Economic Systems; Social Interactions & Organization; Humans & the Environment) — every unit maps to them.",
+    "Practice the writing tasks weekly, not just before the exam: SAQ (short answer), DBQ (document-based question), LEQ (long essay). The rubric points are learnable.",
+    "Make a comparison + causation habit: for any event ask 'what caused it, what changed, what stayed the same, how does it compare across regions?'",
+    "Use a timeline you build yourself — the exam rewards knowing what happened at the same time in different places."
+  ],
+  "resources": [
+    { "label": "AP Classroom (College Board — Daily Videos, progress checks)", "url": "https://apclassroom.collegeboard.org/" },
+    { "label": "AP World Course & Exam Description (official CED PDF)", "url": "https://apcentral.collegeboard.org/courses/ap-world-history-modern" },
+    { "label": "Heimler's History (YouTube — unit reviews aligned to the CED)", "url": "https://www.youtube.com/@heimlershistory" },
+    { "label": "Khan Academy — World History", "url": "https://www.khanacademy.org/humanities/world-history" }
+  ],
+  "units": [
+    { "id": "u1", "title": "Unit 1 — The Global Tapestry (c. 1200–1450)", "typical_when": "Aug–Sep",
+      "topics": ["States in East Asia (Song China)", "Dar al-Islam", "South & Southeast Asia", "Americas (Maya, Aztec, Inca)", "Africa", "Europe (feudalism, Christianity)"],
+      "how_to_study": ["Chart each region's political + religious system side by side", "Know Song China's economy (Grand Canal, paper money) cold — it recurs"] },
+    { "id": "u2", "title": "Unit 2 — Networks of Exchange (c. 1200–1450)", "typical_when": "Sep",
+      "topics": ["Silk Roads", "Mongol Empire", "Indian Ocean trade", "Trans-Saharan routes", "Cultural & biological diffusion"],
+      "how_to_study": ["Trace one trade good and one idea across each network", "The Mongols connect everything — know their effect on trade & disease"] },
+    { "id": "u3", "title": "Unit 3 — Land-Based Empires (c. 1450–1750)", "typical_when": "Oct",
+      "topics": ["Ottoman, Safavid, Mughal (gunpowder empires)", "Ming/Qing China", "Methods of administration & legitimizing power"],
+      "how_to_study": ["Compare how each empire taxed and justified its rule", "Watch the recurring theme: tax systems + belief systems as control"] },
+    { "id": "u4", "title": "Unit 4 — Transoceanic Interconnections (c. 1450–1750)", "typical_when": "Oct–Nov",
+      "topics": ["Age of Exploration", "Columbian Exchange", "Maritime empires", "Atlantic slave trade", "Mercantilism"],
+      "how_to_study": ["The Columbian Exchange is a DBQ favorite — know demographic, ecological, economic effects", "Distinguish causes vs. effects of European maritime expansion"] },
+    { "id": "u5", "title": "Unit 5 — Revolutions (c. 1750–1900)", "typical_when": "Nov–Dec",
+      "topics": ["Enlightenment", "Political revolutions (American, French, Haitian, Latin American)", "Industrial Revolution", "Reactions to industrialization (capitalism, socialism)"],
+      "how_to_study": ["Connect Enlightenment ideas to each revolution", "Industrialization causation is a common LEQ prompt"] },
+    { "id": "u6", "title": "Unit 6 — Consequences of Industrialization (c. 1750–1900)", "typical_when": "Dec–Jan",
+      "topics": ["Imperialism & the 'Scramble for Africa'", "Economic imperialism", "Migration", "Resistance to imperialism"],
+      "how_to_study": ["Link Unit 5 industrialization to Unit 6 imperialism as cause→effect", "Know examples of resistance, not just conquest"] },
+    { "id": "u7", "title": "Unit 7 — Global Conflict (c. 1900–present)", "typical_when": "Jan–Feb",
+      "topics": ["WWI causes & total war", "Interwar period", "WWII", "Mass atrocities", "Decline of empires"],
+      "how_to_study": ["MAIN causes of WWI (Militarism, Alliances, Imperialism, Nationalism)", "Compare the two world wars' causes and global scope"] },
+    { "id": "u8", "title": "Unit 8 — Cold War & Decolonization (c. 1900–present)", "typical_when": "Feb–Mar",
+      "topics": ["Cold War & spheres of influence", "Decolonization", "Newly independent states", "Global proxy conflicts"],
+      "how_to_study": ["Track decolonization region by region", "Cold War = ideological + economic + military competition, not just US vs USSR"] },
+    { "id": "u9", "title": "Unit 9 — Globalization (c. 1900–present)", "typical_when": "Mar–Apr",
+      "topics": ["Technology & communication", "Global economy & multinational corporations", "Human rights movements", "Environmental change", "Global culture"],
+      "how_to_study": ["Connect back to the six themes for the final review", "This unit supplies modern examples for continuity/change essays"] }
+  ]
+}

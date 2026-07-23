@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "school_year": "2026-27",
+  "student": "Ridhi",
+  "grade": "10th grade · California High School",
+  "courses": [
+    { "id": "ap-world", "title": "AP World History: Modern", "short": "AP World", "accent": "coral", "file": "ap-world.json" },
+    { "id": "calc-ab", "title": "AP Calculus AB", "short": "Calc AB", "accent": "teal", "file": "calc-ab.json" },
+    { "id": "pltw-biomed", "title": "PLTW Principles of Biomedical Science", "short": "Biomed", "accent": "sage", "file": "pltw-biomed.json" },
+    { "id": "english-10", "title": "English 10", "short": "English", "accent": "sky", "file": "english-10.json" },
+    { "id": "chemistry", "title": "Chemistry", "short": "Chem", "accent": "amber", "file": "chemistry.json" },
+    { "id": "intro-business", "title": "Intro to Business", "short": "Business", "accent": "teal", "file": "intro-business.json" }
+  ],
+  "key_dates": [
+    { "date": "2026-08-13", "what": "First day of school" },
+    { "date": "2026-11-23", "what": "Thanksgiving break (through Nov 27)" },
+    { "date": "2026-12-21", "what": "Winter break begins" },
+    { "date": "2027-04-02", "what": "Spring break (through Apr 9)" },
+    { "date": "2027-05-03", "what": "AP exam season begins (exact dates from College Board)" },
+    { "date": "2027-06-03", "what": "Last day of school" }
+  ],
+  "psat_link": { "label": "PSAT prep lives in your study journal", "url": "https://ridhi-study-journal.pages.dev" }
+}

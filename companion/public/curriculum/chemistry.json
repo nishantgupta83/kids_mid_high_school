@@ -1,0 +1,41 @@
+{
+  "id": "chemistry",
+  "title": "Chemistry",
+  "exam": { "name": "Unit tests, labs & finals", "window": "Ongoing", "note": "Assessed through unit tests, lab reports, and semester finals. California courses align to NGSS; unit order varies by teacher — confirm the sequence with yours." },
+  "overview": "The study of matter — what it's made of, how it changes, and the math that describes those changes. Chemistry rewards two habits: understanding the particle-level 'why' behind each rule, and being fluent with the arithmetic (units, moles, balancing). The strand that connects most units is the mole and stoichiometry.",
+  "how_to_study_course": [
+    "Keep units attached to every number and cancel them — unit tracking (dimensional analysis) catches most mistakes.",
+    "Understand the mole early; it's the bridge between the atomic world and grams you can weigh, and it powers most of the course.",
+    "Rework lab and homework problems until the method is automatic — chemistry is learned by doing problems, not rereading notes.",
+    "Draw particle-level pictures (atoms, bonds, collisions) so the abstract rules have a mental image behind them."
+  ],
+  "resources": [
+    { "label": "Khan Academy — Chemistry", "url": "https://www.khanacademy.org/science/chemistry" },
+    { "label": "The Organic Chemistry Tutor (YouTube — general chem too)", "url": "https://www.youtube.com/@TheOrganicChemistryTutor" },
+    { "label": "PhET Interactive Simulations (Chemistry)", "url": "https://phet.colorado.edu/en/simulations/filter?subjects=chemistry" },
+    { "label": "Periodic table & data (PubChem / Ptable)", "url": "https://ptable.com/" }
+  ],
+  "units": [
+    { "id": "u1", "title": "Unit 1 — Matter, Measurement & Lab Safety", "typical_when": "Aug–Sep",
+      "topics": ["States & properties of matter", "Physical vs chemical change", "Units, significant figures & dimensional analysis", "Lab safety & tools"],
+      "how_to_study": ["Nail sig figs and unit conversions now — they're used all year", "Practice classifying changes as physical vs chemical"] },
+    { "id": "u2", "title": "Unit 2 — Atomic Structure & the Periodic Table", "typical_when": "Sep–Oct",
+      "topics": ["Protons, neutrons, electrons & isotopes", "Electron configuration", "Periodic trends (radius, ionization, electronegativity)", "History of atomic models"],
+      "how_to_study": ["Learn to read periodic trends from position, not memorization", "Practice writing electron configurations"] },
+    { "id": "u3", "title": "Unit 3 — Chemical Bonding", "typical_when": "Oct–Nov",
+      "topics": ["Ionic vs covalent bonds", "Lewis structures", "Molecular shapes (VSEPR)", "Polarity", "Naming compounds & writing formulas"],
+      "how_to_study": ["Master naming/formula-writing — it's the vocabulary of the rest of the course", "Draw Lewis structures step by step"] },
+    { "id": "u4", "title": "Unit 4 — The Mole & Stoichiometry", "typical_when": "Nov–Jan",
+      "topics": ["The mole & Avogadro's number", "Molar mass", "Balancing equations", "Mole ratios & stoichiometry", "Limiting reactant & percent yield"],
+      "how_to_study": ["This is the heart of the course — over-practice mole conversions", "Balance first, then use the ratio; keep units on every step"] },
+    { "id": "u5", "title": "Unit 5 — Reactions & Energy", "typical_when": "Feb",
+      "topics": ["Types of reactions", "Endothermic vs exothermic", "Enthalpy basics", "Reaction rates & catalysts"],
+      "how_to_study": ["Learn to predict products by reaction type", "Connect energy diagrams to endo/exothermic"] },
+    { "id": "u6", "title": "Unit 6 — States of Matter & Gas Laws", "typical_when": "Mar",
+      "topics": ["Kinetic molecular theory", "Gas laws (Boyle, Charles, ideal gas PV=nRT)", "Phase changes", "Intermolecular forces"],
+      "how_to_study": ["Keep temperature in Kelvin for every gas-law problem", "Relate boiling points to intermolecular forces"] },
+    { "id": "u7", "title": "Unit 7 — Solutions, Acids & Bases", "typical_when": "Apr–May",
+      "topics": ["Solubility & concentration (molarity)", "Dilution", "Acids, bases & pH", "Neutralization & titration"],
+      "how_to_study": ["Practice molarity and dilution (M1V1 = M2V2)", "Understand pH as a log scale, not just a number"] }
+  ]
+}

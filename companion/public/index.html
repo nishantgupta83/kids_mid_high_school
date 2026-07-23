@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#2F6F6A">
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="apple-touch-icon" href="/icons/icon-192.png">
+<title>Class Companion</title>
+<style>
+:root {
+  --paper:#FBF7EE; --paper2:#F4EEE0; --card:#FFFFFF; --ink:#2A2A25; --soft:#6B6B60; --line:#E8E2D4;
+  --sage:#4E7A5C; --teal:#2F6F6A; --coral:#C96F4A; --amber:#B98A2F; --sky:#4A7BA6;
+}
+* { box-sizing:border-box; margin:0; }
+body { background:var(--paper); color:var(--ink); font:16px/1.5 -apple-system,'Helvetica Neue',Arial,sans-serif;
+  background-image:radial-gradient(circle at 15% 0%, #fff8, transparent 40%); }
+.wrap { max-width:720px; margin:0 auto; padding:18px 16px 70px; }
+.brand { font-family:Georgia,serif; color:var(--sage); font-size:24px; font-weight:700; }
+.who { color:var(--soft); font-size:13px; margin-bottom:16px; }
+.grid { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+.course { display:block; text-decoration:none; color:var(--ink); background:var(--card); border:1px solid var(--line);
+  border-left-width:5px; border-radius:12px; padding:13px 14px; }
+.course b { font-size:16px; display:block; }
+.course span { color:var(--soft); font-size:12px; }
+.acc-coral{border-left-color:var(--coral)} .acc-teal{border-left-color:var(--teal)}
+.acc-sage{border-left-color:var(--sage)} .acc-sky{border-left-color:var(--sky)} .acc-amber{border-left-color:var(--amber)}
+.dates { margin-top:18px; background:var(--paper2); border-radius:12px; padding:12px 14px; }
+.dates h3 { font-family:Georgia,serif; font-size:15px; color:var(--sage); margin-bottom:6px; }
+.dates .row { font-size:13px; color:var(--ink); padding:2px 0; }
+.dates .row span { color:var(--soft); display:inline-block; min-width:110px; }
+.link-note { margin-top:14px; font-size:13px; }
+.back { display:inline-block; margin-bottom:10px; color:var(--teal); text-decoration:none; font-weight:600; }
+h1.ctitle { font-family:Georgia,serif; font-size:22px; margin-bottom:2px; }
+.exam { display:inline-block; background:var(--amber); color:#fff; border-radius:10px; padding:1px 9px; font-size:12px; font-weight:700; margin:6px 0; }
+.overview { color:var(--ink); background:var(--card); border:1px solid var(--line); border-radius:10px; padding:12px; margin:10px 0; }
+.h2 { font-family:Georgia,serif; font-size:17px; color:var(--sage); margin:18px 0 6px; }
+ul { margin:0 0 6px 18px; } li { margin:3px 0; }
+.unit { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:11px 13px; margin:8px 0; }
+.unit .ut { font-weight:700; }
+.unit .when { float:right; color:var(--soft); font-size:12px; font-weight:400; }
+.tag { display:inline-block; background:var(--paper2); border-radius:8px; padding:1px 8px; font-size:12px; color:var(--soft); margin:3px 4px 0 0; }
+.res a { color:var(--teal); }
+.res li { margin:5px 0; }
+.hidden { display:none; }
+footer { margin-top:24px; color:var(--soft); font-size:11px; text-align:center; }
+@media (max-width:520px){ .grid{grid-template-columns:1fr;} }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div id="home">
+    <div class="brand">Class Companion</div>
+    <div class="who" id="who"></div>
+    <div class="grid" id="courseGrid"></div>
+    <div class="dates" id="dates"></div>
+    <div class="link-note" id="psatLink"></div>
+  </div>
+  <div id="course" class="hidden"></div>
+  <footer>Study guides paraphrased from public course frameworks — always follow your teacher's syllabus.</footer>
+</div>
+
+<script>
+"use strict";
+const $ = (s) => document.querySelector(s);
+const esc = (s) => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const safeUrl = (u) => { try { const p = new URL(u); return (p.protocol==="https:"||p.protocol==="http:") ? p.href : null; } catch { return null; } };
+const fmtDate = (d) => new Date(d+"T12:00:00").toLocaleDateString("en-US",{month:"short",day:"numeric",year:"numeric"});
+let MANIFEST = null;
+const cache = {};
+
+async function boot() {
+  MANIFEST = await (await fetch("/curriculum/manifest.json")).json();
+  $("#who").textContent = `${MANIFEST.student} · ${MANIFEST.grade} · ${MANIFEST.school_year}`;
+  $("#courseGrid").innerHTML = MANIFEST.courses.map(c =>
+    `<a class="course acc-${esc(c.accent)}" href="#${esc(c.id)}"><b>${esc(c.short)}</b><span>${esc(c.title)}</span></a>`).join("");
+  $("#dates").innerHTML = `<h3>Key dates ${esc(MANIFEST.school_year)}</h3>` +
+    MANIFEST.key_dates.map(k => `<div class="row"><span>${fmtDate(k.date)}</span>${esc(k.what)}</div>`).join("");
+  const pl = MANIFEST.psat_link;
+  if (pl && safeUrl(pl.url)) $("#psatLink").innerHTML = `<a href="${esc(safeUrl(pl.url))}" style="color:var(--teal)">${esc(pl.label)} ↗</a>`;
+  route();
+}
+
+async function loadCourse(id) {
+  if (cache[id]) return cache[id];
+  const meta = MANIFEST.courses.find(c => c.id === id);
+  if (!meta) return null;
+  const doc = await (await fetch("/curriculum/" + meta.file)).json();
+  cache[id] = { doc, meta };
+  return cache[id];
+}
+
+async function route() {
+  const id = location.hash.slice(1);
+  if (!id) { $("#home").classList.remove("hidden"); $("#course").classList.add("hidden"); return; }
+  const loaded = await loadCourse(id);
+  if (!loaded) { location.hash = ""; return; }
+  const { doc } = loaded;
+  const ex = doc.exam;
+  $("#course").innerHTML =
+    `<a class="back" href="#">← All classes</a>` +
+    `<h1 class="ctitle">${esc(doc.title)}</h1>` +
+    (ex ? `<div class="exam">${esc(ex.name)} · ${esc(ex.window)}</div>` +
+          (ex.note ? `<div class="who">${esc(ex.note)}</div>` : "") : "") +
+    `<div class="overview">${esc(doc.overview)}</div>` +
+    `<div class="h2">How to study this class</div><ul>` +
+      doc.how_to_study_course.map(t => `<li>${esc(t)}</li>`).join("") + `</ul>` +
+    `<div class="h2">Units</div>` +
+      doc.units.map(u =>
+        `<div class="unit"><div class="ut">${esc(u.title)}` +
+        (u.typical_when ? `<span class="when">${esc(u.typical_when)}</span>` : "") + `</div>` +
+        `<div>${(u.topics||[]).map(t => `<span class="tag">${esc(t)}</span>`).join("")}</div>` +
+        (u.how_to_study?.length ? `<ul style="margin-top:6px">` + u.how_to_study.map(h => `<li>${esc(h)}</li>`).join("") + `</ul>` : "") +
+        `</div>`).join("") +
+    `<div class="h2">Resources</div><ul class="res">` +
+      doc.resources.filter(r => safeUrl(r.url)).map(r =>
+        `<li><a href="${esc(safeUrl(r.url))}" target="_blank" rel="noopener">${esc(r.label)} ↗</a></li>`).join("") + `</ul>`;
+  $("#home").classList.add("hidden");
+  $("#course").classList.remove("hidden");
+  window.scrollTo(0, 0);
+}
+
+window.addEventListener("hashchange", route);
+boot();
+</script>
+</body>
+</html>

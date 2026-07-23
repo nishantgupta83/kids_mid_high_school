@@ -1,0 +1,38 @@
+{
+  "id": "english-10",
+  "title": "English 10",
+  "exam": { "name": "Coursework, essays & finals", "window": "Ongoing", "note": "Assessed through essays, reading responses, discussions, and semester finals rather than one exam. Watch for the district writing assessment." },
+  "overview": "A literature-and-composition course: you'll read across genres (novels, drama, poetry, nonfiction) and keep building the core skills — close reading, textual evidence, clear argumentative and analytical writing, and grammar. The specific book list varies by teacher; the skills below are what every unit is really training.",
+  "how_to_study_course": [
+    "Annotate as you read — mark claims, shifts, images, and questions. An annotated text makes every essay easier.",
+    "Build a repeatable essay structure: clear thesis, evidence, analysis that explains WHY the evidence proves the point (not just quote-and-move-on).",
+    "Keep a running vocabulary + literary-terms list (tone, motif, irony, characterization, theme) and use the terms in your writing.",
+    "Revise, don't just write once. Most English grades reward drafting: outline → draft → revise for argument, then proofread for grammar."
+  ],
+  "resources": [
+    { "label": "Purdue OWL — writing, grammar & MLA citation", "url": "https://owl.purdue.edu/owl/purdue_owl.html" },
+    { "label": "Khan Academy — Grammar", "url": "https://www.khanacademy.org/humanities/grammar" },
+    { "label": "CommonLit — reading passages & practice", "url": "https://www.commonlit.org/" },
+    { "label": "SparkNotes / LitCharts — study guides (a companion to reading, not a replacement)", "url": "https://www.litcharts.com/" }
+  ],
+  "units": [
+    { "id": "u1", "title": "Skill — Close Reading & Annotation", "typical_when": "All year",
+      "topics": ["Reading for meaning & structure", "Annotating a text", "Identifying tone & diction", "Author's purpose"],
+      "how_to_study": ["Mark the text every time — margins notes, underlines, questions", "Ask 'what is the author doing here, and why?'"] },
+    { "id": "u2", "title": "Skill — Literary Analysis", "typical_when": "All year",
+      "topics": ["Theme, motif, symbol", "Characterization", "Point of view & narrative structure", "Figurative language"],
+      "how_to_study": ["Distinguish theme (an idea) from plot (what happens)", "Support every claim about a character with a specific line"] },
+    { "id": "u3", "title": "Skill — Argumentative & Analytical Writing", "typical_when": "All year",
+      "topics": ["Thesis statements", "Evidence & commentary", "Essay structure & transitions", "Counterargument"],
+      "how_to_study": ["Write a one-sentence arguable thesis before drafting", "For each quote, add 2+ sentences of your own analysis"] },
+    { "id": "u4", "title": "Genre — Novel & Longer Fiction", "typical_when": "Fall & Spring",
+      "topics": ["Tracking character & theme across a whole book", "Chapter/section reading responses", "Historical & social context"],
+      "how_to_study": ["Keep a chapter log of key events + a page reference", "Notice how the theme develops from beginning to end"] },
+    { "id": "u5", "title": "Genre — Drama & Poetry", "typical_when": "Varies",
+      "topics": ["Reading a play (often Shakespeare in 10th grade)", "Dramatic structure & soliloquy", "Poetic devices, meter & imagery", "Explication"],
+      "how_to_study": ["Read drama aloud or watch a performance to unlock meaning", "For poetry, work line by line — sound and image carry meaning"] },
+    { "id": "u6", "title": "Genre — Nonfiction & Research", "typical_when": "Spring",
+      "topics": ["Analyzing arguments & rhetoric", "Evaluating sources", "Research process & MLA citation", "Synthesis"],
+      "how_to_study": ["Learn to spot a claim vs. evidence in an article", "Cite sources cleanly with the OWL MLA guide"] }
+  ]
+}

@@ -22,6 +22,9 @@ launchctl kickstart -k gui/$(id -u)/com.nishant.school-intel
 ### Slice 2 — DONE 2026-07-22
 - Dashboard LIVE: https://school-compass-anq.pages.dev (project `school-compass`, KV `FAMILY_OPS` 4d1cbb0d…). Gate E dissolved (agent uses the authed API, no CF token). Family code: Keychain `school-intel-family-code` — read it with `security find-generic-password -w -s school-intel-family-code`; enter once per browser/phone.
 
+### Slice 3 — DONE 2026-07-22
+- Class Companion LIVE: https://ridhi-class-companion.pages.dev (project `ridhi-class-companion`). 6 courses, 41 units, skills-first study guides + links out; noindex; PWA-installable (home-screen). NO auth (public but noindex + unguessable + no PII — it's generic study guidance, not personal data). Validator: `scripts/validate_companion.py`. Ridhi-clean verified (word-boundary grep = 0). Content authored from public frameworks — skim English-10 book list + Chem unit order for teacher-specific accuracy.
+
 ## Daily operations
 - Manual run: `bash agent/scan.sh --force`
 - Dry-run the digest: `/usr/bin/python3 agent/send_digest.py --mode full --dry-run`

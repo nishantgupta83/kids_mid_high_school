@@ -1,0 +1,44 @@
+{
+  "id": "calc-ab",
+  "title": "AP Calculus AB",
+  "exam": { "name": "AP Calculus AB Exam", "window": "May 2027", "note": "Check College Board for your exact date. Format: MCQ (with & without calculator) + free-response. A graphing calculator is required." },
+  "overview": "The calculus of a single variable, in three big movements: limits, derivatives, and integrals — plus the Fundamental Theorem that ties derivatives and integrals together. Success is 20% new ideas and 80% fluent algebra + practice. Keep older skills (factoring, trig, exponents/logs) sharp all year.",
+  "how_to_study_course": [
+    "Never let algebra be the reason you miss a calculus problem — review factoring, fractions, trig values, and log rules early.",
+    "For every new rule, do a few by hand slowly, then many quickly. Fluency is the goal, not just understanding.",
+    "Learn calculator skills the exam expects: graph, find zeros, evaluate a derivative at a point, evaluate a definite integral.",
+    "Free-response answers need justification — write the reason (sign of the derivative, theorem name), not just the number."
+  ],
+  "resources": [
+    { "label": "AP Classroom (College Board — Daily Videos, progress checks)", "url": "https://apclassroom.collegeboard.org/" },
+    { "label": "AP Calculus AB Course & Exam Description (official CED)", "url": "https://apcentral.collegeboard.org/courses/ap-calculus-ab" },
+    { "label": "Khan Academy — AP Calculus AB", "url": "https://www.khanacademy.org/math/ap-calculus-ab" },
+    { "label": "The Organic Chemistry Tutor (YouTube — worked calculus problems)", "url": "https://www.youtube.com/@TheOrganicChemistryTutor" }
+  ],
+  "units": [
+    { "id": "u1", "title": "Unit 1 — Limits & Continuity", "typical_when": "Aug–Sep",
+      "topics": ["Limits graphically & numerically", "Algebraic limit techniques", "Continuity", "Intermediate Value Theorem", "Limits at infinity & asymptotes"],
+      "how_to_study": ["Master factoring & conjugate tricks for 0/0 forms", "Understand continuity as a 3-part definition, not a vibe"] },
+    { "id": "u2", "title": "Unit 2 — Differentiation: Definition & Basic Rules", "typical_when": "Sep–Oct",
+      "topics": ["Derivative as a limit", "Derivative as a rate of change & slope", "Power, product, quotient rules", "Derivatives of trig, e^x, ln x"],
+      "how_to_study": ["Do the limit definition by hand a few times before relying on rules", "Memorize the basic derivative table until it's automatic"] },
+    { "id": "u3", "title": "Unit 3 — Differentiation: Composite, Implicit & Inverse", "typical_when": "Oct",
+      "topics": ["Chain rule", "Implicit differentiation", "Derivatives of inverse & inverse trig functions", "Higher-order derivatives"],
+      "how_to_study": ["The chain rule shows up everywhere after this — over-practice it", "Implicit differentiation trips people up: differentiate y as a function of x"] },
+    { "id": "u4", "title": "Unit 4 — Contextual Applications of Differentiation", "typical_when": "Nov",
+      "topics": ["Motion (position, velocity, acceleration)", "Related rates", "Linear approximation", "L'Hôpital's Rule"],
+      "how_to_study": ["Related rates: draw it, name the rates, differentiate with respect to time", "Know when L'Hôpital applies (0/0 or ∞/∞)"] },
+    { "id": "u5", "title": "Unit 5 — Analytical Applications of Differentiation", "typical_when": "Dec–Jan",
+      "topics": ["Mean Value Theorem", "Increasing/decreasing & concavity", "First & second derivative tests", "Optimization", "Curve sketching"],
+      "how_to_study": ["Sign charts for f' and f'' are your main tool — practice reading them", "Optimization = set up a function, find the critical point, justify it's a max/min"] },
+    { "id": "u6", "title": "Unit 6 — Integration & Accumulation of Change", "typical_when": "Jan–Feb",
+      "topics": ["Riemann sums", "Definite integrals", "Fundamental Theorem of Calculus", "u-substitution", "Accumulation functions"],
+      "how_to_study": ["The FTC is the heart of the course — understand both parts", "u-substitution is the reverse chain rule; practice spotting the inner function"] },
+    { "id": "u7", "title": "Unit 7 — Differential Equations", "typical_when": "Feb–Mar",
+      "topics": ["Slope fields", "Separation of variables", "Exponential growth & decay", "Initial value problems"],
+      "how_to_study": ["Separate variables, integrate both sides, then use the initial condition to find C", "Be able to sketch and interpret a slope field"] },
+    { "id": "u8", "title": "Unit 8 — Applications of Integration", "typical_when": "Mar–Apr",
+      "topics": ["Average value of a function", "Area between curves", "Volumes (disc, washer, known cross-sections)", "Motion revisited via integrals"],
+      "how_to_study": ["Draw the region before setting up any area/volume integral", "Keep disc vs. washer straight — is there a gap from the axis?"] }
+  ]
+}

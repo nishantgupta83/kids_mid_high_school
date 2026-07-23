@@ -1,0 +1,35 @@
+{
+  "id": "pltw-biomed",
+  "title": "PLTW Principles of Biomedical Science (PBS)",
+  "exam": { "name": "End-of-Course Assessment", "window": "Spring 2027", "note": "PLTW courses are project- & problem-based; assessment is largely coursework, a portfolio/lab notebook, and an end-of-course assessment rather than a single AP-style test. Confirm specifics with the teacher." },
+  "overview": "The first course in Project Lead The Way's Biomedical Science pathway. It's built around a story — investigating the fictional death of a woman named Anna Garcia — and each unit uncovers a disease or body-system concept while you practice real lab skills. This is a hands-on, notebook-driven course: your documentation and lab technique matter as much as the biology facts.",
+  "how_to_study_course": [
+    "Keep your laboratory notebook meticulously — in PLTW it's a graded, ongoing record, not an afterthought.",
+    "Connect every activity back to the Anna Garcia case: how does this lab help explain what happened to her?",
+    "Learn the lab techniques as transferable skills (measuring, DNA work, documentation) — they carry into the whole pathway (Human Body Systems next).",
+    "Biology vocabulary is heavy; make flashcards for disease mechanisms and body-system terms as you go, not at the end."
+  ],
+  "resources": [
+    { "label": "PLTW Biomedical Science pathway (official overview)", "url": "https://www.pltw.org/our-programs/pltw-biomedical-science-curriculum" },
+    { "label": "Khan Academy — Biology (background for disease & body systems)", "url": "https://www.khanacademy.org/science/biology" },
+    { "label": "Khan Academy — Health & Medicine", "url": "https://www.khanacademy.org/science/health-and-medicine" },
+    { "label": "National Institutes of Health — Genetics Home Reference / MedlinePlus", "url": "https://medlineplus.gov/genetics/" }
+  ],
+  "units": [
+    { "id": "u1", "title": "Unit 1 — The Mystery (investigating a death)", "typical_when": "Aug–Sep",
+      "topics": ["Introduction to the Anna Garcia case", "Crime-scene & evidence analysis", "Reading autopsy & medical data", "Intro to biomedical careers"],
+      "how_to_study": ["Set up your lab notebook the way the teacher expects on day one", "Track the clues — you'll return to them all year"] },
+    { "id": "u2", "title": "Unit 2 — Diabetes", "typical_when": "Oct–Nov",
+      "topics": ["The metabolism of sugar", "Insulin & blood glucose regulation", "Type 1 vs Type 2 diabetes", "Molecules of life: carbohydrates, proteins, lipids", "Testing for glucose"],
+      "how_to_study": ["Understand feedback: how insulin controls blood sugar", "Know how each macromolecule is built and what it does"] },
+    { "id": "u3", "title": "Unit 3 — Sickle Cell Disease", "typical_when": "Dec–Jan",
+      "topics": ["DNA & protein synthesis", "Mutations", "Inheritance & Punnett squares", "Gel electrophoresis", "How a single base change causes disease"],
+      "how_to_study": ["Trace the path DNA → RNA → protein and where sickle cell breaks it", "Practice electrophoresis interpretation — a core biomed skill"] },
+    { "id": "u4", "title": "Unit 4 — Heart Disease", "typical_when": "Feb–Mar",
+      "topics": ["Structure & function of the heart", "Blood pressure & cholesterol", "The circulatory system", "Dissection / heart models", "Risk factors & lifestyle"],
+      "how_to_study": ["Learn blood flow through the heart chambers in order", "Connect cholesterol/blood pressure back to the case evidence"] },
+    { "id": "u5", "title": "Unit 5 — Infectious Disease & Solving the Mystery", "typical_when": "Apr–May",
+      "topics": ["Bacteria, viruses & the immune system", "Antibiotics & resistance", "Diagnostic testing", "Assembling all evidence to determine cause of death", "Presenting conclusions"],
+      "how_to_study": ["Pull every unit's evidence together — this is the payoff", "Be ready to defend a conclusion with data, like a real investigator"] }
+  ]
+}
