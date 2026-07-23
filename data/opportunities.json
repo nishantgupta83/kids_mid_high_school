@@ -23,13 +23,17 @@
       },
       "commitment": "~3 hrs/week, year-round",
       "pipeline": {
-        "status": "new",
-        "updated_at": "2026-07-21T21:30:00-07:00",
-        "updated_by": "agent",
+        "status": "discuss",
+        "updated_at": "2026-07-22T18:05:09.727Z",
+        "updated_by": "dashboard",
         "history": [
           {
             "status": "new",
             "at": "2026-07-21T21:30:00-07:00"
+          },
+          {
+            "status": "discuss",
+            "at": "2026-07-22T18:05:09.727Z"
           }
         ]
       },
