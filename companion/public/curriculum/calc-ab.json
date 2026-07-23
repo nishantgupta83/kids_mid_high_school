@@ -204,7 +204,7 @@
               "p": "A useful shortcut for rational functions is to compare the leading powers. If the top and bottom have the same degree, the horizontal asymptote is the ratio of the leading coefficients. If the bottom wins (higher degree), the whole thing shrinks to 0. If the top wins, there is no horizontal asymptote because the function grows without bound."
             },
             {
-              "note": "Watch out: 1/x tends to 0, but 1/x² also tends to 0. When you divide, apply the same top power to every single term, including constant terms, or your bookkeeping will drift and the answer will be wrong."
+              "note": "Watch out: 1/x tends to 0, but 1/x² also tends to 0. When you divide, apply the same highest power (from the denominator) to every single term, including constant terms, or your bookkeeping will drift and the answer will be wrong."
             },
             {
               "trick": "For a polynomial over a polynomial, the biggest power wins: divide every term by the highest power in the bottom and watch each k/xⁿ melt to 0. Same top and bottom degree → the answer is just the ratio of the leading coefficients."
@@ -232,7 +232,7 @@
         "Derivative as a limit",
         "Derivative as a rate of change & slope",
         "Power, product, quotient rules",
-        "Derivatives of trig, e^x, ln x"
+        "Derivatives of trig, eˣ, ln x"
       ],
       "how_to_study": [
         "Do the limit definition by hand a few times before relying on rules",
@@ -1210,12 +1210,12 @@
               "example": {
                 "prompt": "A bacteria culture grows so that dP/dt = 0.03P, and it starts with 1000 cells. Write P(t) and find the population at t = 10.",
                 "steps": [
-                  "The equation matches dP/dt = kP with k = 0.03 and starting amount P₀ = 1000, so the solution is P(t) = 1000·eᵏᵗ, that is P(t) = 1000·e⁰·⁰³ᵗ.",
-                  "Substitute t = 10 into the exponent: kt = 0.03·10 = 0.3, so P(10) = 1000·e⁰·³.",
-                  "Evaluate e⁰·³ ≈ 1.3499.",
+                  "The equation matches dP/dt = kP with k = 0.03 and starting amount P₀ = 1000, so the solution is P(t) = 1000·eᵏᵗ, that is P(t) = 1000·e^(0.03t).",
+                  "Substitute t = 10 into the exponent: kt = 0.03·10 = 0.3, so P(10) = 1000·e^(0.3).",
+                  "Evaluate e^(0.3) ≈ 1.3499.",
                   "Multiply: 1000 · 1.3499 ≈ 1349.9, about 1350 cells."
                 ],
-                "answer": "P(t) = 1000·e⁰·⁰³ᵗ; P(10) ≈ 1350 cells"
+                "answer": "P(t) = 1000·e^(0.03t); P(10) ≈ 1350 cells"
               }
             }
           ]

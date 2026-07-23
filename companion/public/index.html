@@ -130,15 +130,18 @@ const VISUALS = {
 
   "concavity": () => { const up="M 30 120 Q 80 175 130 120", dn="M 190 100 Q 240 45 290 100";
     return svg(`<path d="${up}" fill="none" stroke="${VZ.curve}" stroke-width="3"/>`+`<path d="${dn}" fill="none" stroke="${VZ.curve}" stroke-width="3"/>`+
-    tx(52,150,"f″>0 : smile",VZ.curve)+tx(56,163,"concave up → min")+tx(210,150,"f″<0 : frown",VZ.accent)+tx(214,163,"concave down → max")); },
+    tx(40,172,"f″>0 : smile",VZ.curve)+tx(44,185,"concave up → min")+tx(196,172,"f″<0 : frown",VZ.accent)+tx(196,185,"concave down → max")); },
 
-  "mvt": () => { const m=mp(0.5,3.5,0,6), f=x=>-(x-2)*(x-2)+5; const a=1,b=3;
-    // secant slope = (f(b)-f(a))/(b-a); tangent parallel at c=2
-    const ss=(f(b)-f(a))/(b-a), c=2, tanY=x=>f(c)+f2(c)*(x-c); function f2(x){return -2*(x-2);}
-    return svg(ax(m,0.5,3.5,0,6)+`<polyline points="${poly(f,0.5,3.5,m)}" fill="none" stroke="${VZ.curve}" stroke-width="2.5"/>`+
+  "mvt": () => { const m=mp(-0.2,3,0,8), f=x=>-(x-3)*(x-3)+7, a=0.5, b=2.5, c=1.5, s=3;
+    // f(a)=0.75, f(b)=6.75 → secant slope 3 (TILTED, not Rolle's case); f′(c)=6−2c=3 at c=1.5
+    const tanY=x=>f(c)+s*(x-c);
+    return svg(ax(m,-0.2,3,0,8)+`<polyline points="${poly(f,0,2.9,m)}" fill="none" stroke="${VZ.curve}" stroke-width="2.5"/>`+
     `<line x1="${m.x(a)}" y1="${m.y(f(a))}" x2="${m.x(b)}" y2="${m.y(f(b))}" stroke="${VZ.axis}" stroke-width="1.6"/>`+
-    `<line x1="${m.x(1.2)}" y1="${m.y(tanY(1.2))}" x2="${m.x(2.8)}" y2="${m.y(tanY(2.8))}" stroke="${VZ.accent}" stroke-width="2"/>`+
-    `<circle cx="${m.x(c)}" cy="${m.y(f(c))}" r="3.5" fill="${VZ.accent}"/>`+tx(m.x(c)+5,m.y(f(c))-5,"c",VZ.accent)+tx(8,16,"tangent parallel to secant at c",VZ.ink)); },
+    `<line x1="${m.x(0.5)}" y1="${m.y(tanY(0.5))}" x2="${m.x(2.5)}" y2="${m.y(tanY(2.5))}" stroke="${VZ.accent}" stroke-width="2"/>`+
+    `<circle cx="${m.x(a)}" cy="${m.y(f(a))}" r="3" fill="${VZ.ink}"/>`+`<circle cx="${m.x(b)}" cy="${m.y(f(b))}" r="3" fill="${VZ.ink}"/>`+
+    `<circle cx="${m.x(c)}" cy="${m.y(f(c))}" r="3.8" fill="${VZ.accent}"/>`+
+    tx(m.x(a)-11,m.y(f(a))+13,"a")+tx(m.x(b)+4,m.y(f(b))-3,"b")+tx(m.x(c)+6,m.y(f(c))-5,"c",VZ.accent)+
+    tx(6,14,"tangent at c is parallel to the secant",VZ.ink)); },
 
   "riemann": () => { const m=mp(0,4,0,5), f=x=>0.25*x*x+0.4; let rects=""; const n=4,w=4/n;
     for(let i=0;i<n;i++){const xr=(i+1)*w, h=f(xr); rects+=`<rect x="${m.x(i*w)}" y="${m.y(h)}" width="${m.x(w)-m.x(0)}" height="${m.y(0)-m.y(h)}" fill="${VZ.fill}" stroke="${VZ.accent}" stroke-width="1"/>`;}
@@ -164,7 +167,7 @@ const VISUALS = {
     tx(m.x(xs)+11,m.y(r*0.5),"r = √x",VZ.accent)+tx(6,14,"revolve: each slice is a disc, area π r²")); },
 
   "slope-field": () => { let seg=""; const m=mp(-2,2,-1,4);
-    for(let gx=-2;gx<=2;gx++) for(let gy=0;gy<=3;gy++){ const s=2*gx; const dx=0.32, dy=s*dx; const L=0.14;
+    for(let gx=-2;gx<=2;gx++) for(let gy=0;gy<=3;gy++){ const s=2*gx; const L=0.14;
       const nx=Math.hypot(1,s); const ux=1/nx*L, uy=s/nx*L;
       seg+=`<line x1="${m.x(gx-ux)}" y1="${m.y(gy-uy)}" x2="${m.x(gx+ux)}" y2="${m.y(gy+uy)}" stroke="#9A9384" stroke-width="1.6"/>`; }
     const par=x=>x*x;
@@ -241,9 +244,9 @@ function renderCourse(id, doc) {
           (ex.note ? `<div class="who">${esc(ex.note)}</div>` : "") : "") +
     `<div class="overview">${esc(doc.overview)}</div>` +
     `<div class="h2">How to study this class</div><ul>` +
-      doc.how_to_study_course.map(t => `<li>${esc(t)}</li>`).join("") + `</ul>` +
+      (doc.how_to_study_course || []).map(t => `<li>${esc(t)}</li>`).join("") + `</ul>` +
     `<div class="h2">Units</div>` +
-      doc.units.map(u =>
+      (doc.units || []).map(u =>
         `<div class="unit"><div class="ut">${esc(u.title)}` +
         (u.typical_when ? `<span class="when">${esc(u.typical_when)}</span>` : "") + `</div>` +
         `<div>${(u.topics||[]).map(t => `<span class="tag">${esc(t)}</span>`).join("")}</div>` +
@@ -253,7 +256,7 @@ function renderCourse(id, doc) {
           `</div>` : "") +
         `</div>`).join("") +
     `<div class="h2">Resources</div><ul class="res">` +
-      doc.resources.filter(r => safeUrl(r.url)).map(r =>
+      (doc.resources || []).filter(r => safeUrl(r.url)).map(r =>
         `<li><a href="${esc(safeUrl(r.url))}" target="_blank" rel="noopener">${esc(r.label)} ↗</a></li>`).join("") + `</ul>`;
 }
 
