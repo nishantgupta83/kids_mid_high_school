@@ -105,7 +105,7 @@ function mp(xmin,xmax,ymin,ymax){ const {W,H,pad}=VZ;
 function poly(fn,xmin,xmax,m,n=48){ let p=[]; for(let i=0;i<=n;i++){const x=xmin+(xmax-xmin)*i/n; p.push(m.x(x).toFixed(1)+","+m.y(fn(x)).toFixed(1));} return p.join(" "); }
 function ax(m,xmin,xmax,ymin,ymax){ return `<line x1="${m.x(xmin)}" y1="${m.y(0)}" x2="${m.x(xmax)}" y2="${m.y(0)}" stroke="${VZ.axis}"/><line x1="${m.x(0)}" y1="${m.y(ymin)}" x2="${m.x(0)}" y2="${m.y(ymax)}" stroke="${VZ.axis}"/>`; }
 function svg(inner){ return `<svg viewBox="0 0 ${VZ.W} ${VZ.H}" role="img" class="viz">${inner}</svg>`; }
-function tx(x,y,s,fill){ const e=String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;"); return `<text x="${x}" y="${y}" font-size="11" fill="${fill||VZ.ink}" font-family="sans-serif">${e}</text>`; }
+function tx(x,y,s,fill){ const e=String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;"); return `<text x="${x}" y="${y}" font-size="11" fill="${fill||VZ.ink}" font-family="sans-serif" stroke="#fff" stroke-width="2.8" paint-order="stroke" stroke-linejoin="round">${e}</text>`; }
 
 const VISUALS = {
   "limit-hole": () => { const m=mp(-1,4,-1,6), f=x=>x+2;
@@ -121,12 +121,12 @@ const VISUALS = {
     const s=0.9*p0; const tanY=x=>f(p0)+s*(x-p0);
     return svg(ax(m,0,4,0,7)+`<polyline points="${poly(f,0,4,m)}" fill="none" stroke="${VZ.curve}" stroke-width="2.5"/>`+
     sec(3.4)+sec(2.7)+sec(2.1)+`<line x1="${m.x(0.3)}" y1="${m.y(tanY(0.3))}" x2="${m.x(2.6)}" y2="${m.y(tanY(2.6))}" stroke="${VZ.accent}" stroke-width="2"/>`+
-    `<circle cx="${m.x(p0)}" cy="${m.y(f(p0))}" r="3.5" fill="${VZ.accent}"/>`+tx(m.x(2.7)+3,m.y(f(2.7)),"secants",VZ.ink)+tx(6,16,"tangent = limit of secants",VZ.accent)); },
+    `<circle cx="${m.x(p0)}" cy="${m.y(f(p0))}" r="3.5" fill="${VZ.accent}"/>`+tx(m.x(2.55),m.y(f(2.55))-16,"secants",VZ.ink)+tx(6,16,"tangent = limit of secants",VZ.accent)); },
 
   "tangent-slope": () => { const m=mp(-1,4,0,8), f=x=>0.5*x*x, a=2; const s=a; const tanY=x=>f(a)+s*(x-a);
     return svg(ax(m,-1,4,0,8)+`<polyline points="${poly(f,-1,4,m)}" fill="none" stroke="${VZ.curve}" stroke-width="2.5"/>`+
     `<line x1="${m.x(0.4)}" y1="${m.y(tanY(0.4))}" x2="${m.x(3.4)}" y2="${m.y(tanY(3.4))}" stroke="${VZ.accent}" stroke-width="2"/>`+
-    `<circle cx="${m.x(a)}" cy="${m.y(f(a))}" r="3.8" fill="${VZ.accent}"/>`+tx(m.x(a)+6,m.y(f(a))-4,"slope = f′(2)",VZ.accent)); },
+    `<circle cx="${m.x(a)}" cy="${m.y(f(a))}" r="3.8" fill="${VZ.accent}"/>`+tx(m.x(a)+10,m.y(f(a))+18,"slope = f′(2)",VZ.accent)); },
 
   "concavity": () => { const up="M 30 120 Q 80 175 130 120", dn="M 190 100 Q 240 45 290 100";
     return svg(`<path d="${up}" fill="none" stroke="${VZ.curve}" stroke-width="3"/>`+`<path d="${dn}" fill="none" stroke="${VZ.curve}" stroke-width="3"/>`+
@@ -176,8 +176,9 @@ const VISUALS = {
   "balloon": () => { const cx=140, cy=95;
     return svg(`<circle cx="${cx}" cy="${cy}" r="38" fill="${VZ.fill}" stroke="${VZ.curve}" stroke-width="2"/>`+
     `<circle cx="${cx}" cy="${cy}" r="55" fill="none" stroke="${VZ.accent}" stroke-width="2" stroke-dasharray="4 3"/>`+
-    `<line x1="${cx}" y1="${cy}" x2="${cx+55}" y2="${cy}" stroke="${VZ.ink}" stroke-width="1.5"/>`+
-    tx(cx+8,cy-6,"r")+tx(cx+40,cy-10,"dr",VZ.accent)+tx(6,16,"dV/dt = 4π r² · dr/dt")); },
+    `<line x1="${cx}" y1="${cy}" x2="${cx+38}" y2="${cy}" stroke="${VZ.ink}" stroke-width="1.5"/>`+
+    `<line x1="${cx+38}" y1="${cy}" x2="${cx+55}" y2="${cy}" stroke="${VZ.accent}" stroke-width="1.5"/>`+
+    tx(cx+15,cy-5,"r")+tx(cx+40,cy-6,"dr",VZ.accent)+tx(6,16,"dV/dt = 4π r² · dr/dt")); },
 
   "fence": () => { const x1=70,x2=250,yr=40,yb=150;
     return svg(`<line x1="20" y1="${yr}" x2="300" y2="${yr}" stroke="#4A7BA6" stroke-width="3"/>`+tx(24,yr-6,"river (no fence)","#4A7BA6")+
