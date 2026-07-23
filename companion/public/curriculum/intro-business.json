@@ -1,7 +1,11 @@
 {
   "id": "intro-business",
   "title": "Introduction to Business",
-  "exam": { "name": "Projects, quizzes & finals", "window": "Ongoing", "note": "Usually assessed through projects (a business plan is common), quizzes, and finals. Often an elective — confirm graded components with the teacher." },
+  "exam": {
+    "name": "Projects, quizzes & finals",
+    "window": "Ongoing",
+    "note": "Usually assessed through projects (a business plan is common), quizzes, and finals. Often an elective — confirm graded components with the teacher."
+  },
   "overview": "A survey of how businesses work — from economic basics and business ownership to marketing, finance, and management. It's practical and vocabulary-rich: many units end in an applied project. The through-line is understanding how a business creates value, reaches customers, and stays financially healthy.",
   "how_to_study_course": [
     "Keep a running glossary — business is heavy on terms (supply/demand, ROI, gross vs net, market segment).",
@@ -10,29 +14,870 @@
     "Learn to read a simple income statement (revenue − costs = profit); basic finance recurs across units."
   ],
   "resources": [
-    { "label": "Khan Academy — Macroeconomics (intro economics)", "url": "https://www.khanacademy.org/economics-finance-domain/macroeconomics" },
-    { "label": "Khan Academy — Personal finance & entrepreneurship", "url": "https://www.khanacademy.org/college-careers-more/personal-finance" },
-    { "label": "Investopedia — business & finance term dictionary", "url": "https://www.investopedia.com/" },
-    { "label": "SBA — how to write a business plan", "url": "https://www.sba.gov/business-guide/plan-your-business/write-your-business-plan" }
+    {
+      "label": "Khan Academy — Macroeconomics (intro economics)",
+      "url": "https://www.khanacademy.org/economics-finance-domain/macroeconomics"
+    },
+    {
+      "label": "Khan Academy — Personal finance & entrepreneurship",
+      "url": "https://www.khanacademy.org/college-careers-more/personal-finance"
+    },
+    {
+      "label": "Investopedia — business & finance term dictionary",
+      "url": "https://www.investopedia.com/"
+    },
+    {
+      "label": "SBA — how to write a business plan",
+      "url": "https://www.sba.gov/business-guide/plan-your-business/write-your-business-plan"
+    }
   ],
   "units": [
-    { "id": "u1", "title": "Unit 1 — Economic Foundations", "typical_when": "Aug–Sep",
-      "topics": ["Needs vs wants & scarcity", "Supply & demand", "Types of economic systems", "Factors of production"],
-      "how_to_study": ["Understand supply/demand as a graph you can move", "Connect scarcity to the trade-offs businesses make"] },
-    { "id": "u2", "title": "Unit 2 — Forms of Business Ownership", "typical_when": "Oct",
-      "topics": ["Sole proprietorship, partnership, corporation, LLC", "Franchises", "Advantages & risks of each", "Liability"],
-      "how_to_study": ["Make a comparison chart of ownership types (control, taxes, liability)", "Match a real business to its ownership form"] },
-    { "id": "u3", "title": "Unit 3 — Marketing", "typical_when": "Nov–Dec",
-      "topics": ["The 4 Ps (Product, Price, Place, Promotion)", "Market research & segmentation", "Branding", "Advertising & social media"],
-      "how_to_study": ["Analyze a product you like with the 4 Ps", "Know your target market before designing any promotion"] },
-    { "id": "u4", "title": "Unit 4 — Business Finance & Accounting", "typical_when": "Jan–Feb",
-      "topics": ["Revenue, costs & profit", "Income statement basics", "Budgeting", "Break-even & pricing", "Credit & investment basics"],
-      "how_to_study": ["Practice the profit equation with real numbers", "Learn to read a simple income statement top to bottom"] },
-    { "id": "u5", "title": "Unit 5 — Management & Operations", "typical_when": "Mar",
-      "topics": ["Functions of management (planning, organizing, leading, controlling)", "Leadership styles", "Human resources", "Production & operations"],
-      "how_to_study": ["Tie management functions to a real team you've been on", "Compare leadership styles with pros/cons"] },
-    { "id": "u6", "title": "Unit 6 — Entrepreneurship & the Business Plan", "typical_when": "Apr–May",
-      "topics": ["Identifying opportunities", "Writing a business plan", "Startup costs & funding", "Pitching an idea"],
-      "how_to_study": ["Start your business-plan project early and revise it", "A good pitch answers: what problem, for whom, how do you make money?"] }
+    {
+      "id": "u1",
+      "title": "Unit 1 — Economic Foundations",
+      "typical_when": "Aug–Sep",
+      "topics": [
+        "Needs vs wants & scarcity",
+        "Supply & demand",
+        "Types of economic systems",
+        "Factors of production"
+      ],
+      "how_to_study": [
+        "Understand supply/demand as a graph you can move",
+        "Connect scarcity to the trade-offs businesses make"
+      ],
+      "concepts": [
+        {
+          "id": "needs-wants-scarcity",
+          "title": "Needs vs. Wants and the Problem of Scarcity",
+          "blocks": [
+            {
+              "p": "Economics starts with one uncomfortable fact: human wants are unlimited, but the resources to satisfy them are limited. That gap is called scarcity, and it is the reason every choice has a cost. A need is something you must have to survive or function, such as food, water, shelter, and basic clothing. A want is something that makes life more enjoyable but is not strictly necessary, such as a Netflix subscription, AirPods, or a Starbucks Frappuccino."
+            },
+            {
+              "p": "Because you cannot have everything, choosing one thing means giving up another. The value of the next-best thing you gave up is called opportunity cost. If you spend $15 on a movie, the opportunity cost is whatever else that $15 (and those two hours) could have bought, maybe a book or gas money."
+            },
+            {
+              "note": "A common mistake is thinking 'need' and 'want' are fixed labels. They shift with context. A phone is a want for entertainment but arguably a need for a delivery driver who runs a DoorDash route. Judge by the situation, not the object."
+            },
+            {
+              "trick": "Remember scarcity with 'TELL': Time, Energy, Land, and money (Legal tender) are always limited. If a resource fits TELL, it can run short, which forces a choice and creates an opportunity cost."
+            },
+            {
+              "example": {
+                "prompt": "You have $50 and want both a concert ticket ($50) and a new video game ($50). What does scarcity force, and what is your opportunity cost if you buy the ticket?",
+                "steps": [
+                  "Identify the limited resource: you have only $50, not $100.",
+                  "Scarcity forces a trade-off, you can pick only one item.",
+                  "You choose the concert ticket, so the game is the next-best option you gave up.",
+                  "Opportunity cost = the video game you did not buy."
+                ],
+                "answer": "Scarcity forces you to choose one; buying the ticket means the opportunity cost is the $50 video game you gave up."
+              }
+            }
+          ]
+        },
+        {
+          "id": "supply-and-demand",
+          "title": "Supply, Demand, and Market Price",
+          "blocks": [
+            {
+              "p": "Demand is how much of a product buyers are willing to purchase at different prices. Generally, when price goes up, quantity demanded goes down, and when price drops, people buy more. Supply is how much sellers are willing to produce at different prices, and it usually moves the opposite way: higher prices make selling more attractive, so producers offer more."
+            },
+            {
+              "visual": "supply-demand"
+            },
+            {
+              "p": "The point where the amount buyers want equals the amount sellers offer is called the equilibrium price, the natural market price. When PlayStation 5 consoles first launched, supply was low and demand was huge, so scalpers resold them far above retail. As Sony produced more units, supply rose, shortages ended, and prices settled back down."
+            },
+            {
+              "note": "Do not confuse a change in price with a change in demand. A price change moves you along the same demand curve. Real demand shifts when something else changes, like a trend, a new competitor, income, or the price of a related good. Beef getting expensive can raise demand for chicken."
+            },
+            {
+              "trick": "Picture the letters: Demand slopes Down (high price, less bought), Supply Slopes up. Match the first letters, D-Down and S-up, and you will never flip the curves on a test."
+            },
+            {
+              "example": {
+                "prompt": "A local boba shop sells 200 drinks a day at $5. It raises the price to $7 and sales fall to 120 drinks. Then a viral TikTok makes boba trendy and, still at $7, sales jump to 260. Which change is a movement along demand, and which is a shift in demand?",
+                "steps": [
+                  "Price rose from $5 to $7 and quantity fell from 200 to 120: only price changed, so this is a movement ALONG the demand curve.",
+                  "The TikTok trend is a new outside factor, not a price change.",
+                  "Sales rose at the same $7 price, meaning buyers want more at every price now.",
+                  "That is a rightward shift of the whole demand curve."
+                ],
+                "answer": "The price hike (200 to 120) is a movement along the curve; the TikTok trend (up to 260 at the same price) is a true shift in demand."
+              }
+            }
+          ]
+        },
+        {
+          "id": "economic-systems",
+          "title": "Economic Systems: Who Answers the Big Three Questions",
+          "blocks": [
+            {
+              "p": "Every society must answer three questions: What should be produced? How should it be produced? And for whom is it produced? Economic systems differ by who makes those decisions. In a market economy, individuals and businesses decide based on supply, demand, and profit, with little government control. In a command economy, the government makes the decisions and owns most resources. In a traditional economy, choices follow custom and are passed down through generations."
+            },
+            {
+              "p": "In reality almost every country runs a mixed economy, blending private markets with some government rules and programs. The United States is mostly market-driven, but the government still runs public schools, sets a minimum wage, and regulates food safety through the FDA. Companies like Apple and Amazon compete freely, yet they must follow federal laws."
+            },
+            {
+              "note": "Students often assume 'market economy' means zero government. Even the freest markets need government to enforce contracts, protect property, and prevent fraud. Without referees, markets break down. Pure command and pure market economies are textbook extremes, not real places."
+            },
+            {
+              "trick": "Use 'MCT = More, Central, Tradition.' Market = More freedom for individuals; Command = Central government control; Traditional = follows Tradition and custom. First letters M-C-T line up with the three system names."
+            },
+            {
+              "example": {
+                "prompt": "A country lets private companies like a local Amazon compete freely, but the government funds public healthcare and bans child labor. What type of economy is this?",
+                "steps": [
+                  "Private companies compete and set prices: that is a market feature.",
+                  "Government funds healthcare and enforces labor laws: those are command-style interventions.",
+                  "Both private freedom and government control are present at once.",
+                  "A system combining both is called mixed."
+                ],
+                "answer": "It is a mixed economy, the most common real-world type, blending market freedom with government involvement."
+              }
+            }
+          ]
+        },
+        {
+          "id": "factors-of-production",
+          "title": "The Four Factors of Production",
+          "blocks": [
+            {
+              "p": "To make any good or service, a business combines four basic resources called the factors of production. Land is all natural resources, such as soil, water, oil, minerals, and physical space. Labor is the human effort and skill of workers. Capital is the tools, machines, buildings, and equipment used to produce, not the money itself but what the money buys. Entrepreneurship is the vision and risk-taking that brings the other three together into a working business."
+            },
+            {
+              "p": "Think about Tesla. Land includes the lithium and the Nevada site of the Gigafactory. Labor is the engineers and assembly workers. Capital is the robotic arms and factory machinery. Entrepreneurship is Elon Musk and the leadership team deciding to bet on electric cars when most doubted them. Remove any one factor and no car gets built."
+            },
+            {
+              "note": "A frequent mix-up: in everyday speech 'capital' means money, but in economics capital means the physical tools and equipment. Money is used to BUY capital; it is not capital itself. Keep that distinction on tests."
+            },
+            {
+              "trick": "Remember the four with 'CELL': Capital, Entrepreneurship, Land, Labor. Every business is built from a CELL of these four resources, just like living things are built from cells."
+            },
+            {
+              "example": {
+                "prompt": "A student opens a lawn-mowing business. Match each item to a factor of production: the grassy yards, the lawnmower, the student's own mowing work, and the student's decision to start and run the business.",
+                "steps": [
+                  "Grassy yards are a natural resource, which is Land.",
+                  "The lawnmower is a tool used to produce, which is Capital.",
+                  "The student's physical mowing effort is Labor.",
+                  "Choosing to start and take the risk is Entrepreneurship."
+                ],
+                "answer": "Yards = Land, lawnmower = Capital, mowing effort = Labor, starting the business = Entrepreneurship."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u2",
+      "title": "Unit 2 — Forms of Business Ownership",
+      "typical_when": "Oct",
+      "topics": [
+        "Sole proprietorship, partnership, corporation, LLC",
+        "Franchises",
+        "Advantages & risks of each",
+        "Liability"
+      ],
+      "how_to_study": [
+        "Make a comparison chart of ownership types (control, taxes, liability)",
+        "Match a real business to its ownership form"
+      ],
+      "concepts": [
+        {
+          "id": "four-ownership-forms",
+          "title": "The Four Main Forms of Business Ownership",
+          "blocks": [
+            {
+              "p": "When starting a business you must choose a legal structure, and there are four common ones. A sole proprietorship is owned by one person; it is the simplest and most common, like a solo photographer or a food-truck owner. A partnership is owned by two or more people who share money, work, and profits. A corporation is a separate legal entity owned by shareholders, like Apple or Coca-Cola, that can raise money by selling stock. An LLC (Limited Liability Company) is a popular hybrid that protects owners like a corporation but is simpler to run."
+            },
+            {
+              "p": "The choice affects taxes, paperwork, how easily you can raise money, and, most importantly, personal liability. Sole proprietorships and partnerships are easy and cheap to start but expose the owners' personal assets. Corporations are complex and more expensive to form but can grow huge and protect their owners."
+            },
+            {
+              "note": "A big misconception is that a corporation is always the 'best' choice. For a teen running a small Etsy shop, a corporation would be expensive overkill. The right structure depends on size, risk, and growth plans, not prestige."
+            },
+            {
+              "trick": "Order them by size and complexity with 'Some People Love Corporations': Sole proprietorship (smallest), Partnership, LLC, Corporation (biggest). The list runs from simplest to most complex."
+            },
+            {
+              "example": {
+                "prompt": "Two friends want to open a coffee cart together, split profits and work equally, and keep paperwork minimal. Which structure fits, and what is one risk they accept?",
+                "steps": [
+                  "Two owners sharing work and profits points to a partnership.",
+                  "Partnerships are cheap and simple to form, which they want.",
+                  "But a partnership offers no liability shield.",
+                  "So each friend could be personally responsible for business debts, even ones the other friend caused."
+                ],
+                "answer": "A partnership fits; the risk is unlimited personal liability, including for a partner's mistakes or debts."
+              }
+            }
+          ]
+        },
+        {
+          "id": "understanding-liability",
+          "title": "Liability: Why It Can Make or Break an Owner",
+          "blocks": [
+            {
+              "p": "Liability means legal responsibility for a business's debts and lawsuits. This is the single most important reason to choose one structure over another. With unlimited liability, there is no legal wall between you and your business, so if the business owes $50,000 or gets sued, creditors can come after your personal car, savings, and even your house. Sole proprietorships and general partnerships carry unlimited liability."
+            },
+            {
+              "p": "With limited liability, the business is legally separate from its owners, so the most you can lose is the money you invested, not your personal belongings. Corporations and LLCs provide this shield. This is exactly why the LLC exploded in popularity: it gives a small-business owner the protection of a corporation without the heavy paperwork."
+            },
+            {
+              "note": "Limited liability is not a magic force field. Owners can still be held personally responsible if they personally guarantee a loan, commit fraud, or mix personal and business money. The shield protects honest business debts, not illegal behavior."
+            },
+            {
+              "trick": "Tie the word to reality: 'Limited liability = Limited loss.' You can only lose what you put in. If a structure has the word 'Limited' (LLC) or is a corporation, your personal stuff is protected."
+            },
+            {
+              "example": {
+                "prompt": "Maya runs a candle business as an LLC. A candle causes a small fire and she is sued for $30,000, but her business only has $8,000. Can the court take her personal savings?",
+                "steps": [
+                  "An LLC provides limited liability, separating personal and business assets.",
+                  "Her maximum exposure is what she invested and what the business owns.",
+                  "The business has $8,000 available.",
+                  "Because the LLC shields personal assets, her personal savings are protected (assuming no fraud or personal guarantee)."
+                ],
+                "answer": "No; thanks to the LLC's limited liability she generally risks only the $8,000 in the business, not her personal savings."
+              }
+            }
+          ]
+        },
+        {
+          "id": "franchises",
+          "title": "Franchises: Buying a Ready-Made Business Model",
+          "blocks": [
+            {
+              "p": "A franchise lets you buy the right to run a business using an established company's name, products, and system. The parent company is the franchisor (like McDonald's or Subway), and the local owner who buys in is the franchisee. When you see a McDonald's, most are not owned by the corporation, they are owned by local business people who pay to use the golden arches and follow the McDonald's playbook exactly."
+            },
+            {
+              "p": "The trade is simple: you get a proven brand, training, national advertising, and a lower risk of failing, but you pay an upfront franchise fee plus ongoing royalties (a percentage of sales), and you lose creative freedom. A Chick-fil-A franchisee cannot decide to sell burgers or invent their own menu; they must follow the corporate rules."
+            },
+            {
+              "note": "Students often think a franchise means 'guaranteed success.' It lowers risk but does not remove it. High fees, strict rules, and a bad location can still sink a franchise. You are buying a better starting position, not a promise."
+            },
+            {
+              "trick": "Franchise = 'Famous name, Fees, Fixed rules.' The three Fs capture the whole deal: you rent a Famous brand, you pay Fees, and you follow Fixed rules."
+            },
+            {
+              "example": {
+                "prompt": "Ravi opens a Subway franchise. He gets the brand and training but must pay 8% of sales as a royalty and cannot change the menu. If he sells $200,000 in a year, how much royalty does he owe, and what is the main freedom he gave up?",
+                "steps": [
+                  "Royalty rate is 8% of sales.",
+                  "Sales = $200,000.",
+                  "Royalty = 0.08 x 200,000 = $16,000.",
+                  "By franchise rules he cannot alter the menu, so he gave up creative control."
+                ],
+                "answer": "He owes $16,000 in royalties, and the freedom he gave up is control over the menu and business decisions."
+              }
+            }
+          ]
+        },
+        {
+          "id": "advantages-risks",
+          "title": "Weighing Advantages Against Risks",
+          "blocks": [
+            {
+              "p": "Every ownership form is a balance of benefits and dangers, and smart founders weigh both. Sole proprietorships offer total control, easy setup, and all profits going to you, but they carry unlimited liability, hard-to-raise money, and the business often ends if you quit. Corporations can raise huge amounts of cash by selling stock and protect owners, but they face heavy regulation, complex taxes, and sometimes 'double taxation,' where profits are taxed once as company income and again as shareholder dividends."
+            },
+            {
+              "p": "Partnerships add more money and shared skills, which is why law firms and medical practices often use them, but partners can disagree, and one partner's bad decision can legally bind the others. There is no perfect structure, only the best fit for your goals, risk tolerance, and growth plans."
+            },
+            {
+              "note": "Do not evaluate a structure only by its advantages. The test question that trips people up asks for a RISK. Always be ready to name the downside: liability, cost, control, taxes, or conflict, for each form."
+            },
+            {
+              "trick": "Judge every form on four levers with 'CLLT': Control, Liability, Longevity, and Taxes. Run any structure through CLLT and you can list its pros and cons instantly."
+            },
+            {
+              "example": {
+                "prompt": "A founder wants to raise millions from investors and protect her personal assets, and she accepts more paperwork and complex taxes. Which structure fits, and name one risk she is accepting?",
+                "steps": [
+                  "Raising millions from many investors points to selling stock, which is a corporation.",
+                  "Wanting personal asset protection matches limited liability, also a corporation.",
+                  "She accepts heavy paperwork and complex taxes, typical of corporations.",
+                  "A key downside is double taxation and regulatory burden."
+                ],
+                "answer": "A corporation fits; a risk she accepts is heavier regulation and possible double taxation of profits."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u3",
+      "title": "Unit 3 — Marketing",
+      "typical_when": "Nov–Dec",
+      "topics": [
+        "The 4 Ps (Product, Price, Place, Promotion)",
+        "Market research & segmentation",
+        "Branding",
+        "Advertising & social media"
+      ],
+      "how_to_study": [
+        "Analyze a product you like with the 4 Ps",
+        "Know your target market before designing any promotion"
+      ],
+      "concepts": [
+        {
+          "id": "the-four-ps",
+          "title": "The Marketing Mix: The 4 Ps",
+          "blocks": [
+            {
+              "p": "The marketing mix is the set of controllable decisions a company makes to sell a product, and it is famously organized into the 4 Ps. Product is what you sell and its features, quality, and design. Price is how much you charge and your pricing strategy. Place is where and how customers can buy it, from stores to websites to apps. Promotion is how you communicate and persuade, through ads, social media, sales, and influencers."
+            },
+            {
+              "visual": "four-ps"
+            },
+            {
+              "p": "Look at the iPhone: the Product is a sleek, feature-rich phone; the Price is premium to signal quality; the Place is Apple Stores, apple.com, and carriers everywhere; the Promotion is polished ads and launch events. Change any one P and the whole strategy shifts. A cheap price would clash with Apple's premium image."
+            },
+            {
+              "note": "A classic error is treating the 4 Ps as separate checkboxes. They must work together. A luxury Product sold at a bargain Price in a dollar store with no Promotion sends mixed signals and confuses buyers. Consistency across all four is the real skill."
+            },
+            {
+              "trick": "Just memorize the four words that all start with P: Product, Price, Place, Promotion. Chant 'the 4 Ps' and picture a product on a Price tag, in a Place, with a Promotion poster."
+            },
+            {
+              "example": {
+                "prompt": "A startup launches a new energy drink. Match each decision to a P: a $3 tag, mango flavor with vitamins, sold in gas stations and on Amazon, and a TikTok influencer campaign.",
+                "steps": [
+                  "The $3 tag is what they charge: Price.",
+                  "Mango flavor with vitamins is the item itself: Product.",
+                  "Gas stations and Amazon are where it is sold: Place.",
+                  "The TikTok influencer campaign spreads the word: Promotion."
+                ],
+                "answer": "$3 tag = Price, mango-vitamin drink = Product, gas stations and Amazon = Place, TikTok campaign = Promotion."
+              }
+            }
+          ]
+        },
+        {
+          "id": "market-research-segmentation",
+          "title": "Market Research and Segmentation",
+          "blocks": [
+            {
+              "p": "Market research is the process of gathering information about customers, competitors, and trends before making business decisions, so you are guessing less and knowing more. Primary research is data you collect yourself, such as surveys, interviews, and focus groups. Secondary research uses data others already gathered, such as government reports, industry articles, and competitor websites. Netflix constantly studies what you watch to decide which shows to greenlight."
+            },
+            {
+              "p": "Once you understand the market, you divide it into segments, groups of customers with shared traits, so you can target them precisely. Segmentation is usually based on demographics (age, income, gender), geographics (location), psychographics (values and lifestyle), and behavior (how they shop). Nike markets running shoes to fitness buyers and Jordan sneakers to style-focused teens, two different segments of the same company."
+            },
+            {
+              "note": "A trap is thinking 'my product is for everyone.' Trying to please everyone usually pleases no one. Even giant brands target specific segments. Focus sharpens your message; 'everyone' waters it down."
+            },
+            {
+              "trick": "Segment types spell 'Big Dogs Play Ball': Behavioral, Demographic, Psychographic, Geographic. Four ways to slice a market, four words to remember them."
+            },
+            {
+              "example": {
+                "prompt": "A new $200 noise-canceling headphone brand wants to find its best customers. Suggest one segmentation base and describe a target segment.",
+                "steps": [
+                  "Consider who values premium audio and can afford $200.",
+                  "Demographics matter: income level is relevant at that price.",
+                  "Behavior matters: frequent travelers and remote workers want noise canceling.",
+                  "Combine them into a specific target segment."
+                ],
+                "answer": "Using demographic and behavioral segmentation, a strong target is higher-income young professionals and frequent travelers who work remotely and value quiet focus."
+              }
+            }
+          ]
+        },
+        {
+          "id": "branding",
+          "title": "Branding: More Than a Logo",
+          "blocks": [
+            {
+              "p": "A brand is the overall identity and reputation of a business, everything customers think and feel when they hear its name. It includes the name, logo, colors, slogan, and the promises the company keeps. Branding is the deliberate work of shaping that identity. When you see the Nike swoosh you instantly think of athletes and 'Just Do It'; that automatic feeling is brand equity, the extra value a strong brand adds."
+            },
+            {
+              "p": "Strong branding lets companies charge more and keep loyal customers. A plain bottle of soda and a Coca-Cola are chemically similar, but the red can, script logo, and decades of happy advertising let Coke command a higher price and fierce loyalty. People are not just buying sugar water; they are buying the feeling the brand created."
+            },
+            {
+              "note": "Beginners equate 'brand' with 'logo.' The logo is only the visible tip. The real brand lives in customer experience, consistency, and trust. A great logo on a product that breaks constantly builds a bad brand."
+            },
+            {
+              "trick": "Remember what a brand is with 'PLANS': Promise, Logo, Attitude, Name, Slogan. A brand is the full PLANS a company makes to be recognized and trusted, not just a picture."
+            },
+            {
+              "example": {
+                "prompt": "Two water bottles cost the same to make, but one sells for $1 and a branded one (say, Liquid Death) sells for $2. Why can the branded one charge double?",
+                "steps": [
+                  "The physical product, water, is nearly identical.",
+                  "The branded bottle has a distinctive identity, edgy name, and loyal following.",
+                  "That identity creates brand equity, extra perceived value.",
+                  "Customers pay more for the feeling and image, not the water itself."
+                ],
+                "answer": "Strong branding creates brand equity, so customers happily pay double for the identity and feeling, even though the water is basically the same."
+              }
+            }
+          ]
+        },
+        {
+          "id": "advertising-social-media",
+          "title": "Advertising and Social Media Marketing",
+          "blocks": [
+            {
+              "p": "Advertising is paid, public communication designed to inform and persuade people to buy. Traditional advertising uses TV, radio, billboards, and print, which reach huge audiences but are expensive and hard to measure. Digital and social media marketing uses platforms like Instagram, TikTok, and YouTube, which are cheaper, highly targeted, and measurable down to each click. A local bakery can now show ads only to people within five miles who like desserts."
+            },
+            {
+              "p": "Social media also unlocked influencer marketing, where brands pay creators to feature products to their followers, and viral content, where a clever post spreads for free. Chipotle and Duolingo built massive followings with funny TikToks that cost far less than a Super Bowl ad. The trade-off is that online trends move fast and a brand must stay authentic or get called out."
+            },
+            {
+              "note": "More views does not equal more sales. A viral video that does not connect to the product can flop commercially. The goal is reaching the RIGHT people with a clear call to action, not just racking up view counts, a metric called a vanity metric."
+            },
+            {
+              "trick": "Judge any ad with 'AIDA': Attention, Interest, Desire, Action. A good ad grabs Attention, builds Interest, creates Desire, and drives Action (the buy). Walk any campaign through AIDA to see if it works."
+            },
+            {
+              "example": {
+                "prompt": "A teen clothing brand has $1,000 to promote a hoodie to 15-to-19-year-olds nationwide. Should it buy one local newspaper ad or run a targeted TikTok influencer campaign, and why?",
+                "steps": [
+                  "Identify the audience: teens aged 15 to 19, who mostly use TikTok, not newspapers.",
+                  "A newspaper ad is untargeted and reaches an older, local crowd.",
+                  "A TikTok influencer campaign can target teens nationwide precisely and cheaply.",
+                  "The targeted digital option reaches the right segment for the same money."
+                ],
+                "answer": "The TikTok influencer campaign, because it precisely targets the teen audience nationwide and stretches $1,000 far further than an untargeted newspaper ad."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u4",
+      "title": "Unit 4 — Business Finance & Accounting",
+      "typical_when": "Jan–Feb",
+      "topics": [
+        "Revenue, costs & profit",
+        "Income statement basics",
+        "Budgeting",
+        "Break-even & pricing",
+        "Credit & investment basics"
+      ],
+      "how_to_study": [
+        "Practice the profit equation with real numbers",
+        "Learn to read a simple income statement top to bottom"
+      ],
+      "concepts": [
+        {
+          "id": "revenue-costs-profit",
+          "title": "Revenue, Costs, and Profit",
+          "blocks": [
+            {
+              "p": "These three words are the heartbeat of every business. Revenue (also called sales) is the total money coming in from selling products, before any expenses. Costs (or expenses) are all the money going out to run the business, such as materials, rent, wages, and marketing. Profit is what is left after you subtract costs from revenue; it is the reward for running the business well. If costs are bigger than revenue, you have a loss."
+            },
+            {
+              "formula": "Profit = Revenue − Costs"
+            },
+            {
+              "p": "Costs come in two flavors. Fixed costs stay the same no matter how much you sell, like monthly rent or insurance. Variable costs rise and fall with production, like the coffee beans in each latte. A Starbucks pays the same store rent whether it sells 100 or 1,000 drinks (fixed), but uses more cups and beans the more it sells (variable). A budget is simply a plan that maps out expected revenue and costs ahead of time so a business does not overspend."
+            },
+            {
+              "note": "Do not confuse revenue with profit. A business can have millions in revenue and still lose money if its costs are higher. When a company 'made $2 million,' always ask whether that means sales or actual profit. They are very different."
+            },
+            {
+              "trick": "Remember the order with 'Revenue comes in, Costs go out, Profit stays.' Money IN minus money OUT equals what STAYS. IN − OUT = STAYS."
+            },
+            {
+              "example": {
+                "prompt": "A student's phone-case business earns $12,000 in sales in a year. It spends $5,000 on cases to buy, $2,000 on shipping, and $1,500 on ads. What is the profit?",
+                "steps": [
+                  "Revenue = $12,000.",
+                  "Add up all costs: 5,000 + 2,000 + 1,500 = $8,500.",
+                  "Apply the formula: Profit = Revenue − Costs.",
+                  "Profit = 12,000 − 8,500 = $3,500."
+                ],
+                "answer": "The business made a profit of $3,500."
+              }
+            }
+          ]
+        },
+        {
+          "id": "income-statement",
+          "title": "Reading an Income Statement",
+          "blocks": [
+            {
+              "p": "An income statement (also called a profit and loss statement) is a report that shows a company's revenue, costs, and profit over a period of time, such as a quarter or year. It reads top to bottom like a waterfall. You start with total Revenue at the top, subtract the Cost of Goods Sold (COGS, the direct cost of making what you sold) to get Gross Profit, then subtract Operating Expenses (rent, salaries, marketing) to reach Net Income, the true bottom-line profit."
+            },
+            {
+              "formula": "Gross Profit = Revenue − Cost of Goods Sold;  Net Income = Gross Profit − Operating Expenses"
+            },
+            {
+              "p": "This is why profit is called 'the bottom line', it literally sits at the bottom of the statement. When Apple or Coca-Cola reports earnings each quarter, investors scan straight to net income to see if the company actually made money. Gross profit tells you if the product itself is profitable; net income tells you if the whole business is."
+            },
+            {
+              "note": "The most common mix-up is gross vs. net. Gross profit only removes the cost of making the product; net income removes everything, including rent, salaries, and taxes. Net is always smaller than gross. If someone quotes 'gross,' the real take-home is lower."
+            },
+            {
+              "trick": "Gross vs. Net: 'Gross is Gross-ly bigger; Net catches everything in the Net.' Gross is the larger, early number; Net is the final, smaller number after the net has scooped up ALL the expenses."
+            },
+            {
+              "example": {
+                "prompt": "A sneaker reseller has $50,000 in revenue, $20,000 in cost of goods sold, and $18,000 in operating expenses. Find the gross profit and the net income.",
+                "steps": [
+                  "Gross Profit = Revenue − COGS = 50,000 − 20,000 = $30,000.",
+                  "Now subtract operating expenses from gross profit.",
+                  "Net Income = Gross Profit − Operating Expenses = 30,000 − 18,000.",
+                  "Net Income = $12,000."
+                ],
+                "answer": "Gross profit is $30,000 and net income (the bottom line) is $12,000."
+              }
+            }
+          ]
+        },
+        {
+          "id": "break-even-pricing",
+          "title": "Break-Even Analysis and Pricing",
+          "blocks": [
+            {
+              "p": "Before launching, a business needs to know how many units it must sell just to cover its costs, the point where it neither loses nor makes money. That is the break-even point. Below it you lose money; above it you profit. The math relies on the contribution margin, which is the price of one unit minus its variable cost, the amount each sale contributes toward covering fixed costs."
+            },
+            {
+              "visual": "break-even"
+            },
+            {
+              "formula": "Break-Even (units) = Fixed Costs ÷ (Price − Variable Cost per unit)"
+            },
+            {
+              "p": "Pricing is the other half of this coin. Set the price too low and each sale barely helps; too high and customers walk away. A common method is cost-plus (markup) pricing: take what the item costs you and add a percentage. If a hoodie costs $40 to make and you want a 50% markup, you add $20 to sell it at $60. Break-even tells you the floor; markup and customer demand help you find the right price above it."
+            },
+            {
+              "note": "Break-even uses variable cost per unit, not total costs. A frequent error is dividing fixed costs by the full price instead of by the contribution margin (price minus variable cost). Always subtract the variable cost first."
+            },
+            {
+              "trick": "Break-even = 'Fixed over the Gap.' Put Fixed costs on top, and the Gap between price and variable cost on the bottom. Fixed ÷ Gap tells you how many units to cover the fixed costs."
+            },
+            {
+              "example": {
+                "prompt": "A T-shirt business has $6,000 in fixed costs. Each shirt sells for $15 and costs $9 in materials (variable cost). How many shirts must it sell to break even?",
+                "steps": [
+                  "Find the contribution margin: Price − Variable cost = 15 − 9 = $6 per shirt.",
+                  "Apply the formula: Break-Even = Fixed Costs ÷ Contribution Margin.",
+                  "Break-Even = 6,000 ÷ 6.",
+                  "Break-Even = 1,000 shirts."
+                ],
+                "answer": "The business must sell 1,000 shirts to break even; every shirt after that earns $6 of profit."
+              }
+            }
+          ]
+        },
+        {
+          "id": "credit-basics",
+          "title": "Credit Basics: Borrowing and Interest",
+          "blocks": [
+            {
+              "p": "Credit is the ability to borrow money now and pay it back later, usually with an extra charge called interest. Businesses use credit to buy inventory or equipment before they have the cash, and people use credit cards and loans every day. The interest rate, often shown as APR (Annual Percentage Rate), is the yearly price of borrowing, expressed as a percentage of the amount owed. A higher APR means borrowing costs more."
+            },
+            {
+              "formula": "Simple Interest = Principal × Rate × Time"
+            },
+            {
+              "p": "Credit is powerful but risky. Used wisely, it lets a business grow faster than its cash alone would allow, and paying bills on time builds a good credit score, a number lenders use to decide if you are trustworthy. Used carelessly, high-interest debt snowballs. Credit card APRs often exceed 24%, so carrying a balance means paying a lot extra. This is why financial advisors urge paying credit cards in full each month."
+            },
+            {
+              "note": "Do not treat the credit limit as free money. Every dollar borrowed must be repaid plus interest. Making only the 'minimum payment' keeps you in debt for years because interest keeps piling onto the leftover balance. Credit is a tool, not extra income."
+            },
+            {
+              "trick": "Remember APR risk with 'Balance = Bill.' If you carry a Balance on a card, you get a Bill for interest. No balance carried, no interest bill. Pay it off, and credit is basically free."
+            },
+            {
+              "example": {
+                "prompt": "You put $1,000 on a credit card with a 24% APR and carry the full balance for one month without paying anything down. Roughly how much interest do you owe for that month?",
+                "steps": [
+                  "APR is the yearly rate: 24% per year.",
+                  "Find the monthly rate: 24% ÷ 12 months = 2% per month.",
+                  "Apply it to the balance: 2% of $1,000 = 0.02 × 1,000.",
+                  "Interest for the month = $20."
+                ],
+                "answer": "About $20 in interest for one month; carry it all year and that grows to roughly $240, which is why paying in full matters."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u5",
+      "title": "Unit 5 — Management & Operations",
+      "typical_when": "Mar",
+      "topics": [
+        "Functions of management (planning, organizing, leading, controlling)",
+        "Leadership styles",
+        "Human resources",
+        "Production & operations"
+      ],
+      "how_to_study": [
+        "Tie management functions to a real team you've been on",
+        "Compare leadership styles with pros/cons"
+      ],
+      "concepts": [
+        {
+          "id": "functions-of-management",
+          "title": "The Four Functions of Management",
+          "blocks": [
+            {
+              "p": "Management is the work of coordinating people and resources to reach goals, and it breaks into four core functions. Planning is setting goals and deciding how to reach them. Organizing is arranging people, money, and materials to carry out the plan. Leading is motivating and directing employees to do their best work. Controlling is measuring results and making corrections when things drift off track. Good managers cycle through all four constantly."
+            },
+            {
+              "p": "Imagine a manager opening a new Chipotle location. She plans the opening date and sales targets, organizes staff schedules and ingredient deliveries, leads by training and motivating the crew, and controls by checking daily sales against goals and fixing slow spots. Skip any function and the store struggles: no plan means chaos, no control means problems go unnoticed."
+            },
+            {
+              "note": "Students often think managing is just 'bossing people around,' which is only the Leading part. Planning and controlling happen behind the scenes and are just as vital. A manager who only gives orders but never checks results is doing one-fourth of the job."
+            },
+            {
+              "trick": "Remember the four functions with 'POLC' (say it 'poalk'): Planning, Organizing, Leading, Controlling. It is the four-step cycle every manager repeats."
+            },
+            {
+              "example": {
+                "prompt": "A store manager sets a holiday sales goal, builds the staff schedule, pumps up the team with a pep talk, then reviews weekly numbers and adds staff where sales lag. Label each action with a management function.",
+                "steps": [
+                  "Setting the sales goal is deciding what to achieve: Planning.",
+                  "Building the staff schedule arranges resources: Organizing.",
+                  "The pep talk motivates people: Leading.",
+                  "Reviewing numbers and adjusting is Controlling."
+                ],
+                "answer": "Sales goal = Planning, schedule = Organizing, pep talk = Leading, reviewing and adjusting = Controlling (the full POLC cycle)."
+              }
+            }
+          ]
+        },
+        {
+          "id": "leadership-styles",
+          "title": "Leadership Styles",
+          "blocks": [
+            {
+              "p": "Leadership style is how a manager makes decisions and interacts with a team, and different situations call for different styles. An autocratic leader makes decisions alone and expects them followed, which is fast and works in a crisis or with new employees. A democratic leader invites input and decides together, which boosts buy-in and creativity but is slower. A laissez-faire leader (French for 'let it be') gives the team freedom to self-direct, which works with highly skilled, motivated experts but can drift without structure."
+            },
+            {
+              "p": "The best leaders flex their style to the situation. A fire chief must be autocratic during an emergency, but a design team at a company like Pixar thrives under a democratic or hands-off style that welcomes wild ideas. There is no single 'correct' style, only the right style for the people and the moment."
+            },
+            {
+              "note": "A common myth is that autocratic equals 'bad boss' and democratic equals 'good boss.' Not true. Democratic leadership can stall a team that needs a fast decision, and firm autocratic direction can save a crisis. Judge the style by the situation, not by which sounds nicer."
+            },
+            {
+              "trick": "Match style to a phrase: Autocratic = 'Do it My way,' Democratic = 'Let's decide Together,' Laissez-faire = 'Do it Your way.' My, Together, Your maps the three styles from most to least control."
+            },
+            {
+              "example": {
+                "prompt": "A brand-new fast-food crew during a chaotic lunch rush needs decisions fast, while an experienced R&D team invents new products. Which leadership style fits each?",
+                "steps": [
+                  "The new crew is untrained and under time pressure, needing clear, fast direction.",
+                  "That calls for an autocratic style, quick decisions and firm instructions.",
+                  "The R&D experts are skilled and creative, and need freedom to explore.",
+                  "That suits a laissez-faire (or democratic) style with room to self-direct."
+                ],
+                "answer": "Autocratic for the new lunch-rush crew (fast, clear orders) and laissez-faire or democratic for the skilled R&D team (freedom to create)."
+              }
+            }
+          ]
+        },
+        {
+          "id": "human-resources",
+          "title": "Human Resources: Managing People",
+          "blocks": [
+            {
+              "p": "Human Resources (HR) is the department responsible for the people side of a business, from hiring to keeping employees happy and productive. Its core tasks include recruiting and hiring the right people, training and developing their skills, handling pay and benefits (compensation), and managing performance and workplace issues. Because employees are often a company's most valuable and most expensive resource, HR has a direct impact on success."
+            },
+            {
+              "p": "Think about how a company like Google competes for talent: free meals, strong benefits, and career growth are HR strategies designed to attract and keep skilled workers so they do not leave for a rival. When a good employee quits, the company loses knowledge and must spend money to recruit and train a replacement, a hidden cost called turnover."
+            },
+            {
+              "note": "A frequent misunderstanding is that HR only hires and fires. In reality, most HR work is ongoing: training, resolving conflicts, ensuring fair treatment, and keeping people motivated so they stay. Retention is often cheaper than constant rehiring."
+            },
+            {
+              "trick": "Remember HR's job with the 'employee life cycle' in four steps: Recruit, Train, Reward, Retain. From bringing people in to keeping them, R-T-R-R covers HR's whole mission."
+            },
+            {
+              "example": {
+                "prompt": "A café loses three baristas in two months, each costing about $2,000 to recruit and train. HR suggests raising pay and adding schedule flexibility. Explain why this HR move could save money.",
+                "steps": [
+                  "Losing employees triggers turnover cost: 3 × $2,000 = $6,000 already spent.",
+                  "Constant quitting means repeated recruiting and training bills.",
+                  "Better pay and flexibility improve retention, so fewer people leave.",
+                  "Keeping staff avoids future turnover costs, saving money over time."
+                ],
+                "answer": "By improving retention, the café avoids repeated $2,000 turnover costs, so the HR investment in pay and flexibility likely saves money in the long run."
+              }
+            }
+          ]
+        },
+        {
+          "id": "production-operations",
+          "title": "Production and Operations",
+          "blocks": [
+            {
+              "p": "Operations is the part of a business that actually creates and delivers the product or service, turning inputs into outputs. Production takes raw materials, labor, and equipment (inputs) and, through a process, produces finished goods or services (outputs). Operations managers focus on efficiency (doing things without waste) and quality (doing things well), because both directly affect cost and customer satisfaction."
+            },
+            {
+              "p": "Toyota became world-famous for its operations through 'lean production' and just-in-time inventory, receiving parts only as they are needed so money is not tied up in stockpiles sitting in a warehouse. Amazon's operations mastery, its warehouses, robots, and delivery network, is why you can get a package the next day. Great products can still fail if operations are slow, wasteful, or low quality."
+            },
+            {
+              "note": "Efficiency and quality can pull against each other, and chasing only one backfires. Cutting costs to the bone can wreck quality and lose customers, while obsessing over perfection can make a product too slow or expensive to sell. Operations is about balancing both."
+            },
+            {
+              "trick": "Frame operations as 'IPO': Inputs, Process, Outputs. Every operation takes Inputs, runs a Process, and creates Outputs. IPO (like the finance term, but here it is the production flow) keeps the sequence straight."
+            },
+            {
+              "example": {
+                "prompt": "A pizza shop takes 25 minutes to make each pizza and often runs out of dough. An operations consultant suggests prepping dough in advance and reorganizing the kitchen layout. Identify the inputs, process, and output, and the goal of the changes.",
+                "steps": [
+                  "Inputs are the ingredients, oven, and workers.",
+                  "The process is assembling and baking the pizza.",
+                  "The output is the finished pizza delivered to the customer.",
+                  "Prepping dough and improving layout reduce waste and delays, boosting efficiency without hurting quality."
+                ],
+                "answer": "Inputs = ingredients/oven/staff, process = making and baking, output = the pizza; the changes aim to improve efficiency (less waiting, no shortages) while keeping quality."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u6",
+      "title": "Unit 6 — Entrepreneurship & the Business Plan",
+      "typical_when": "Apr–May",
+      "topics": [
+        "Identifying opportunities",
+        "Writing a business plan",
+        "Startup costs & funding",
+        "Pitching an idea"
+      ],
+      "how_to_study": [
+        "Start your business-plan project early and revise it",
+        "A good pitch answers: what problem, for whom, how do you make money?"
+      ],
+      "concepts": [
+        {
+          "id": "identifying-opportunities",
+          "title": "Identifying Business Opportunities",
+          "blocks": [
+            {
+              "p": "Entrepreneurship begins with spotting an opportunity, an unmet need or a problem people will pay to solve. The best business ideas usually start with a frustration: something is missing, too expensive, too slow, or too annoying. Airbnb was born when two roommates could not afford rent and realized travelers would pay to sleep on air mattresses in their apartment. They turned their own problem into a company now worth billions."
+            },
+            {
+              "p": "A real opportunity is more than a cool idea; it must have actual demand, a target customer, and a way to make money. Entrepreneurs test whether people truly want the solution before building it, often by talking to potential customers or making a simple prototype. An idea only 'you' love is a hobby; an idea 'many people will pay for' is a business."
+            },
+            {
+              "note": "A common trap is falling in love with an idea before checking if anyone will pay for it. 'Cool' does not equal 'profitable.' Always validate demand with real potential customers first, or you may build something nobody wants."
+            },
+            {
+              "trick": "Test any idea with the 'PAIN' check: is there a real Problem, an Audience who has it, is your solution Important enough to pay for, and is the Need common? Big PAIN means big opportunity."
+            },
+            {
+              "example": {
+                "prompt": "A student notices classmates constantly forget which assignments are due across five different apps. Is this a business opportunity, and how would you check?",
+                "steps": [
+                  "Identify the problem: scattered assignments cause missed deadlines, a real frustration.",
+                  "Identify the audience: many students share this pain, so demand may be broad.",
+                  "The solution (one unified planner app) is important enough that students might pay or view ads.",
+                  "Validate by surveying classmates and building a simple prototype to test real interest."
+                ],
+                "answer": "Yes, it fits the PAIN test (real problem, wide audience, worth solving); validate it by surveying students and testing a simple prototype before building fully."
+              }
+            }
+          ]
+        },
+        {
+          "id": "writing-business-plan",
+          "title": "Writing a Business Plan",
+          "blocks": [
+            {
+              "p": "A business plan is a written document that describes what your business does, who it serves, and how it will make money. It forces you to think through every part before risking time and cash, and it is what investors and banks read before deciding to fund you. Key sections include the executive summary (a short overview), the company description, market analysis (your customers and competitors), the marketing plan (the 4 Ps), the operations plan, the management team, and the financial plan (projected costs, revenue, and profit)."
+            },
+            {
+              "p": "Think of it as the GPS for a business: it does not guarantee you arrive, but it maps the route and warns of obstacles. A strong plan shows a lender that you understand your market, have realistic numbers, and know how you will beat competitors. Even a small student business benefits from a one-page version to clarify thinking."
+            },
+            {
+              "note": "A business plan is a living document, not a one-time essay you file away. Markets change, so smart entrepreneurs update it. Also, wildly optimistic financial projections hurt credibility; investors trust realistic, well-reasoned numbers far more than hype."
+            },
+            {
+              "trick": "Remember the core sections with 'Every Company Makes Money Or Fails': Executive summary, Company description, Market analysis, Marketing plan, Operations, Financials. The phrase lines up with the plan's backbone."
+            },
+            {
+              "example": {
+                "prompt": "An investor gives a founder five minutes and asks, 'What's in your business plan?' Which sections prove the business can actually make money?",
+                "steps": [
+                  "The market analysis shows there are real customers and beatable competitors.",
+                  "The marketing plan (4 Ps) shows how those customers will be reached.",
+                  "The financial plan shows projected revenue, costs, and profit.",
+                  "Together these prove demand exists, it can be captured, and it will be profitable."
+                ],
+                "answer": "The market analysis, marketing plan, and especially the financial plan (projected revenue minus costs) are the sections that prove the business can make money."
+              }
+            }
+          ]
+        },
+        {
+          "id": "startup-costs-funding",
+          "title": "Startup Costs and Funding",
+          "blocks": [
+            {
+              "p": "Startup costs are the one-time and early expenses needed to launch a business before it earns steady revenue, such as equipment, inventory, licenses, a website, and initial marketing. Because most startups spend money before they make it, entrepreneurs must find funding to cover this gap. Common sources include personal savings, loans from a bank, investors who give money in exchange for ownership (equity), and crowdfunding, where many people each chip in through sites like Kickstarter."
+            },
+            {
+              "p": "Each funding source has a trade-off. A bank loan must be repaid with interest but lets you keep full ownership. An investor gives cash you never repay, but you surrender a slice of your company and future profits, exactly the deals founders strike on Shark Tank. Choosing how to fund a startup is one of an entrepreneur's biggest early decisions."
+            },
+            {
+              "formula": "Total Startup Costs = One-Time Costs + First Months of Operating Costs"
+            },
+            {
+              "note": "A classic mistake is underestimating startup costs and running out of cash before the business becomes profitable, a killer called running out of runway. Smart founders add a cushion (often 20 to 30 percent extra) for surprises, because something always costs more than planned."
+            },
+            {
+              "trick": "Remember funding options with the 'Four Fs and a C': Founder's savings, Family and Friends, Financing (bank loans), and Crowdfunding/investors. When cash is short, run through the Four Fs and a C."
+            },
+            {
+              "example": {
+                "prompt": "A founder needs $8,000 in equipment and expects $2,000 per month in operating costs for the first three months before sales cover expenses. What are the total startup costs, and why add a cushion?",
+                "steps": [
+                  "One-time equipment cost = $8,000.",
+                  "First three months of operating costs = 3 × $2,000 = $6,000.",
+                  "Total = 8,000 + 6,000 = $14,000.",
+                  "Add a cushion (say 25%, about $3,500) for surprises, giving a safer target near $17,500."
+                ],
+                "answer": "Total startup costs are $14,000; adding a roughly 25% cushion (about $3,500) to aim for ~$17,500 protects against running out of cash before profits arrive."
+              }
+            }
+          ]
+        },
+        {
+          "id": "pitching",
+          "title": "Pitching Your Business",
+          "blocks": [
+            {
+              "p": "A pitch is a short, persuasive presentation that convinces someone, an investor, a customer, or a judge, to support your business. The most famous format is the elevator pitch, a 30-to-60-second summary you could deliver in the time of an elevator ride. A great pitch quickly answers: What problem do you solve? Who is your customer? How do you make money? And why are you the right person to win?"
+            },
+            {
+              "p": "Effective pitches lead with the problem and a hook, not a wall of details. On Shark Tank, the founders who win investment tell a clear story, know their numbers cold (costs, price, sales), and show real traction. Confidence and clarity matter as much as the idea itself; investors bet on people they believe can execute, not just on clever concepts."
+            },
+            {
+              "note": "The biggest pitch mistake is drowning listeners in features while forgetting the numbers and the problem. Investors want to know the market size, your costs, and your profit, not every technical detail. Practice until it is tight; a rambling pitch signals a rambling founder."
+            },
+            {
+              "trick": "Structure a pitch with 'PCSA': Problem, Customer, Solution, Ask. State the Problem, name the Customer, present your Solution, and end with a clear Ask (what you want). PCSA keeps a pitch focused and short."
+            },
+            {
+              "example": {
+                "prompt": "A student pitches a study-planner app to investors. Draft a one-line version of each PCSA part.",
+                "steps": [
+                  "Problem: 'Students miss deadlines because assignments are scattered across five apps.'",
+                  "Customer: 'Our users are the 15 million U.S. high schoolers juggling multiple classes.'",
+                  "Solution: 'One app that pulls every due date into a single smart planner.'",
+                  "Ask: 'We're seeking $20,000 to finish the app and reach our first 10,000 users.'"
+                ],
+                "answer": "A tight PCSA pitch: state the scattered-deadline Problem, name high schoolers as the Customer, present the unified planner as the Solution, and close with a clear $20,000 Ask."
+              }
+            }
+          ]
+        }
+      ]
+    }
   ]
 }

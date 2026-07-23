@@ -1,7 +1,11 @@
 {
   "id": "pltw-biomed",
   "title": "PLTW Principles of Biomedical Science (PBS)",
-  "exam": { "name": "End-of-Course Assessment", "window": "Spring 2027", "note": "PLTW courses are project- & problem-based; assessment is largely coursework, a portfolio/lab notebook, and an end-of-course assessment rather than a single AP-style test. Confirm specifics with the teacher." },
+  "exam": {
+    "name": "End-of-Course Assessment",
+    "window": "Spring 2027",
+    "note": "PLTW courses are project- & problem-based; assessment is largely coursework, a portfolio/lab notebook, and an end-of-course assessment rather than a single AP-style test. Confirm specifics with the teacher."
+  },
   "overview": "The first course in Project Lead The Way's Biomedical Science pathway. It's built around a story — investigating the fictional death of a woman named Anna Garcia — and each unit uncovers a disease or body-system concept while you practice real lab skills. This is a hands-on, notebook-driven course: your documentation and lab technique matter as much as the biology facts.",
   "how_to_study_course": [
     "Keep your laboratory notebook meticulously — in PLTW it's a graded, ongoing record, not an afterthought.",
@@ -10,26 +14,728 @@
     "Biology vocabulary is heavy; make flashcards for disease mechanisms and body-system terms as you go, not at the end."
   ],
   "resources": [
-    { "label": "PLTW Biomedical Science pathway (official overview)", "url": "https://www.pltw.org/our-programs/pltw-biomedical-science-curriculum" },
-    { "label": "Khan Academy — Biology (background for disease & body systems)", "url": "https://www.khanacademy.org/science/biology" },
-    { "label": "Khan Academy — Health & Medicine", "url": "https://www.khanacademy.org/science/health-and-medicine" },
-    { "label": "National Institutes of Health — Genetics Home Reference / MedlinePlus", "url": "https://medlineplus.gov/genetics/" }
+    {
+      "label": "PLTW Biomedical Science pathway (official overview)",
+      "url": "https://www.pltw.org/our-programs/pltw-biomedical-science-curriculum"
+    },
+    {
+      "label": "Khan Academy — Biology (background for disease & body systems)",
+      "url": "https://www.khanacademy.org/science/biology"
+    },
+    {
+      "label": "Khan Academy — Health & Medicine",
+      "url": "https://www.khanacademy.org/science/health-and-medicine"
+    },
+    {
+      "label": "National Institutes of Health — Genetics Home Reference / MedlinePlus",
+      "url": "https://medlineplus.gov/genetics/"
+    }
   ],
   "units": [
-    { "id": "u1", "title": "Unit 1 — The Mystery (investigating a death)", "typical_when": "Aug–Sep",
-      "topics": ["Introduction to the Anna Garcia case", "Crime-scene & evidence analysis", "Reading autopsy & medical data", "Intro to biomedical careers"],
-      "how_to_study": ["Set up your lab notebook the way the teacher expects on day one", "Track the clues — you'll return to them all year"] },
-    { "id": "u2", "title": "Unit 2 — Diabetes", "typical_when": "Oct–Nov",
-      "topics": ["The metabolism of sugar", "Insulin & blood glucose regulation", "Type 1 vs Type 2 diabetes", "Molecules of life: carbohydrates, proteins, lipids", "Testing for glucose"],
-      "how_to_study": ["Understand feedback: how insulin controls blood sugar", "Know how each macromolecule is built and what it does"] },
-    { "id": "u3", "title": "Unit 3 — Sickle Cell Disease", "typical_when": "Dec–Jan",
-      "topics": ["DNA & protein synthesis", "Mutations", "Inheritance & Punnett squares", "Gel electrophoresis", "How a single base change causes disease"],
-      "how_to_study": ["Trace the path DNA → RNA → protein and where sickle cell breaks it", "Practice electrophoresis interpretation — a core biomed skill"] },
-    { "id": "u4", "title": "Unit 4 — Heart Disease", "typical_when": "Feb–Mar",
-      "topics": ["Structure & function of the heart", "Blood pressure & cholesterol", "The circulatory system", "Dissection / heart models", "Risk factors & lifestyle"],
-      "how_to_study": ["Learn blood flow through the heart chambers in order", "Connect cholesterol/blood pressure back to the case evidence"] },
-    { "id": "u5", "title": "Unit 5 — Infectious Disease & Solving the Mystery", "typical_when": "Apr–May",
-      "topics": ["Bacteria, viruses & the immune system", "Antibiotics & resistance", "Diagnostic testing", "Assembling all evidence to determine cause of death", "Presenting conclusions"],
-      "how_to_study": ["Pull every unit's evidence together — this is the payoff", "Be ready to defend a conclusion with data, like a real investigator"] }
+    {
+      "id": "u1",
+      "title": "Unit 1 — The Mystery (investigating a death)",
+      "typical_when": "Aug–Sep",
+      "topics": [
+        "Introduction to the Anna Garcia case",
+        "Crime-scene & evidence analysis",
+        "Reading autopsy & medical data",
+        "Intro to biomedical careers"
+      ],
+      "how_to_study": [
+        "Set up your lab notebook the way the teacher expects on day one",
+        "Track the clues — you'll return to them all year"
+      ],
+      "concepts": [
+        {
+          "id": "reading-a-crime-scene",
+          "title": "Reading a Crime Scene: Evidence and Chain of Custody",
+          "blocks": [
+            {
+              "p": "A crime scene is really a frozen snapshot of an event, and every object in it is a potential piece of evidence, something that can help reconstruct what happened, when, and to whom. Investigators divide evidence into two broad kinds: physical evidence (fingerprints, blood, hair, fibers, a weapon) and testimonial evidence (what witnesses say). In PBS you focus on physical evidence because it can be measured and tested in a lab, and unlike a memory it does not change its story."
+            },
+            {
+              "p": "The single most important rule at a scene is to preserve it before you analyze it. That means documenting everything exactly as found with photographs, sketches, and written notes before anything is moved. Once an object is picked up, the scene can never be put back the way it was, so the record you make is permanent and the scene is not."
+            },
+            {
+              "note": "A common mistake is thinking the goal is to find the answer at the scene. It is not. The goal is to collect and preserve evidence without contaminating it. Contamination, such as adding your own fingerprints or DNA, or mixing two samples, can turn good evidence into useless evidence in court."
+            },
+            {
+              "trick": "Remember the scene worker's motto: Document, Don't Disturb. Photograph and sketch first, touch second. If you can still see it in your photos exactly as it was, you did it right."
+            },
+            {
+              "p": "Every piece of evidence must travel with a chain of custody, a signed, dated paper trail listing every single person who handled it from the scene to the courtroom. If there is a gap in that chain, a lawyer can argue the evidence was tampered with, and the whole case can collapse."
+            },
+            {
+              "example": {
+                "prompt": "An investigator finds a coffee mug at a scene, picks it up with a bare hand to look for lipstick, then bags it. Name two things that went wrong.",
+                "steps": [
+                  "Handling with a bare hand can add the investigator's own fingerprints and DNA, contaminating the sample.",
+                  "The mug was moved before it was photographed and sketched in place, so its original position is lost."
+                ],
+                "answer": "The evidence was both contaminated (bare-hand contact) and its context destroyed (moved before documentation), two avoidable errors."
+              }
+            }
+          ]
+        },
+        {
+          "id": "autopsy-cause-vs-manner",
+          "title": "Autopsy Basics: Cause vs. Manner of Death",
+          "blocks": [
+            {
+              "p": "When a death is unexplained, a medical examiner performs an autopsy, a careful internal and external examination of the body to find out what happened. It is essentially a very detailed physical exam combined with lab tests, and it produces medical data: organ weights, tissue samples, blood chemistry, stomach contents, and photographs."
+            },
+            {
+              "p": "Two words sound alike but mean very different things. The cause of death is the specific injury or disease that ended life, for example blood loss from a stab wound or a heart attack. The manner of death is the broader legal category of how it came about: natural, accident, suicide, homicide, or undetermined. One cause can belong to different manners depending on the circumstances."
+            },
+            {
+              "note": "Students constantly mix up cause and manner. Cause is the biological reason the body stopped (what). Manner is the type of event behind it (how it came to be). A drug overdose is a cause; whether the manner is accident or suicide depends on evidence outside the body."
+            },
+            {
+              "trick": "Think Cause is the Culprit, Manner is the Motive-category. The culprit is the physical thing that did the damage; the manner sorts it into natural, accident, suicide, homicide, or undetermined."
+            },
+            {
+              "p": "Time of death is estimated from clues the body itself provides: body temperature cooling (algor mortis), stiffening of the muscles (rigor mortis), and pooling of blood under the skin (livor mortis). These change on a rough schedule, so together they let an examiner estimate a window of time."
+            },
+            {
+              "example": {
+                "prompt": "A body has cool skin, stiff muscles, and purple pooling on the back where it lay. Which post-mortem changes are these, and what do they tell you?",
+                "steps": [
+                  "Cool skin is algor mortis (cooling).",
+                  "Stiff muscles are rigor mortis.",
+                  "Purple pooling is livor mortis, settled on the side the body rested on."
+                ],
+                "answer": "All three mortis changes are present, consistent with several hours since death, and the livor pattern shows the body lay on its back."
+              }
+            }
+          ]
+        },
+        {
+          "id": "biomedical-careers",
+          "title": "Who Works a Case: Biomedical Careers",
+          "blocks": [
+            {
+              "p": "Solving a death is a team sport, and PBS introduces you to the many professionals who each read a different part of the story. A forensic pathologist (medical examiner) performs the autopsy. A forensic scientist analyzes evidence like DNA and toxicology in the lab. A crime scene investigator documents and collects evidence. Each has a defined scope and hands off to the next."
+            },
+            {
+              "p": "Beyond the mystery unit, biomedical science branches widely: physicians diagnose and treat patients, medical laboratory scientists run the blood and tissue tests doctors rely on, epidemiologists track disease across populations, geneticists study inherited conditions, and biomedical engineers design devices like pacemakers. The unifying thread is using science to understand and protect human health."
+            },
+            {
+              "note": "A frequent misconception, fed by TV, is that one person does it all. In real biomedical work, roles are specialized and evidence is handed between experts, which is exactly why documentation and chain of custody matter so much."
+            },
+            {
+              "trick": "Picture a relay race: each professional runs one leg and passes the baton (the evidence and its records) to the next. A dropped baton, such as a missing report or broken chain, loses the race."
+            },
+            {
+              "example": {
+                "prompt": "A case needs someone to determine cause of death from the body, and someone to identify an unknown white powder found nearby. Which professional does each?",
+                "steps": [
+                  "Examining the body to find cause of death is the forensic pathologist's job.",
+                  "Chemically identifying an unknown substance is the forensic scientist's (lab analyst's) job."
+                ],
+                "answer": "The forensic pathologist handles the body, and the forensic scientist identifies the powder, two specialists and two handoffs."
+              }
+            }
+          ]
+        },
+        {
+          "id": "lab-notebook-practice",
+          "title": "Keeping a Trustworthy Lab Notebook",
+          "blocks": [
+            {
+              "p": "A laboratory notebook is the scientific version of chain of custody: a permanent, honest record of exactly what you did and observed, written as you go. In biomedical science your notebook is legal and professional evidence. It can be used to defend a result, repeat an experiment, or even stand up in court, so it is kept in pen, dated, and never erased."
+            },
+            {
+              "p": "Good entries separate observations (what you actually saw or measured) from inferences (what you think it means). The solution turned blue-black is an observation; therefore starch is present is an inference. Keeping them distinct protects you from writing conclusions as if they were facts."
+            },
+            {
+              "note": "The most common notebook error is fixing mistakes by erasing or scribbling them out. The rule is the opposite: cross out an error with a single line so it is still readable, then write the correction next to it. The messy truth is more trustworthy than a suspiciously perfect page."
+            },
+            {
+              "trick": "Use the Stranger Test: could a stranger holding your notebook repeat your experiment tomorrow and get the same result? If yes, your notes are complete enough."
+            },
+            {
+              "example": {
+                "prompt": "You write only Test 3 positive. Why is this a poor notebook entry, and how would you fix it?",
+                "steps": [
+                  "It records a conclusion with no observation, date, method, or amounts, so it cannot be repeated or verified.",
+                  "Rewrite it with the date, which test, what you added, what you observed, and only then the interpretation."
+                ],
+                "answer": "Replace it with something like: July 21, Benedict's test on sample 3, added 2 mL reagent, heated 3 min, solution turned brick-red (observation), so a reducing sugar is present (inference)."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u2",
+      "title": "Unit 2 — Diabetes",
+      "typical_when": "Oct–Nov",
+      "topics": [
+        "The metabolism of sugar",
+        "Insulin & blood glucose regulation",
+        "Type 1 vs Type 2 diabetes",
+        "Molecules of life: carbohydrates, proteins, lipids",
+        "Testing for glucose"
+      ],
+      "how_to_study": [
+        "Understand feedback: how insulin controls blood sugar",
+        "Know how each macromolecule is built and what it does"
+      ],
+      "concepts": [
+        {
+          "id": "macromolecules-of-food",
+          "title": "The Four Macromolecules of Life",
+          "blocks": [
+            {
+              "p": "Almost everything your body is built from and fueled by belongs to one of four families of large molecules called macromolecules: carbohydrates, lipids, proteins, and nucleic acids. Most are polymers, long chains built from smaller repeating units called monomers, the way a train is built from individual cars."
+            },
+            {
+              "p": "Carbohydrates (monomer: monosaccharides like glucose) are the body's quick fuel. Lipids, meaning fats and oils, are the body's dense, long-term energy storage and the material of cell membranes; they are built from fatty acids and glycerol rather than one repeating monomer. Proteins (monomer: amino acids) do the work: enzymes, antibodies, muscle, and the hormone insulin itself are all proteins. Nucleic acids (monomer: nucleotides) store information as DNA and RNA."
+            },
+            {
+              "note": "A classic mix-up is calling all sugars carbs and all carbs bad. In fact glucose, a simple carbohydrate, is the exact fuel your brain and cells prefer. The problem in diabetes is not that sugar is evil but that the body cannot control its level."
+            },
+            {
+              "trick": "Remember the four with CLiP-N: Carbohydrates, Lipids, Proteins, Nucleic acids. Then pair each polymer with its monomer: carbs to sugars, proteins to amino acids, nucleic acids to nucleotides (lipids are the odd one out, with no single monomer)."
+            },
+            {
+              "formula": "glucose = C₆H₁₂O₆ (six carbons, the body's main sugar fuel)"
+            },
+            {
+              "example": {
+                "prompt": "Insulin is a hormone that lowers blood sugar. Which macromolecule family does insulin belong to, and what is its monomer?",
+                "steps": [
+                  "Hormones that are made of chains of amino acids are proteins.",
+                  "The monomer of a protein is the amino acid."
+                ],
+                "answer": "Insulin is a protein, built from amino acids."
+              }
+            }
+          ]
+        },
+        {
+          "id": "sugar-metabolism",
+          "title": "How Your Body Burns Sugar for Energy",
+          "blocks": [
+            {
+              "p": "Metabolism is the sum of all the chemical reactions that keep you alive, and a central one is how you get energy out of sugar. When you eat carbohydrates, digestion breaks them down into glucose, which enters your blood. Glucose is then delivered to your cells, where it is burned in a process called cellular respiration to release the energy stored in its chemical bonds."
+            },
+            {
+              "p": "That energy is captured in a molecule called ATP, the cell's usable energy currency. Think of glucose as cash in the bank and ATP as the coins you actually spend. Cellular respiration uses oxygen and releases carbon dioxide and water as waste, which is one reason you breathe in O₂ and breathe out CO₂."
+            },
+            {
+              "formula": "C₆H₁₂O₆ + 6O₂ → 6CO₂ + 6H₂O + energy (ATP)"
+            },
+            {
+              "note": "A subtle point: eating sugar does not directly give your cells energy. The energy is locked in glucose's bonds and must be released by respiration inside the cell. Diabetes is dangerous partly because glucose can be high in the blood yet unable to get into cells to be used."
+            },
+            {
+              "trick": "Read the respiration equation like a sentence: sugar plus oxygen makes carbon dioxide plus water plus energy. Notice both sides balance, the 6 carbons in glucose come back out as 6 CO₂."
+            },
+            {
+              "example": {
+                "prompt": "Where does the carbon dioxide you exhale ultimately come from, according to the respiration equation?",
+                "steps": [
+                  "Glucose (C₆H₁₂O₆) contains 6 carbon atoms.",
+                  "In respiration those carbons are released as 6 molecules of CO₂."
+                ],
+                "answer": "The carbon in your exhaled CO₂ comes from the glucose (and other food molecules) your cells broke down for energy."
+              }
+            }
+          ]
+        },
+        {
+          "id": "insulin-glucose-regulation",
+          "title": "Insulin, Glucagon, and Blood-Glucose Control",
+          "blocks": [
+            {
+              "p": "Your blood glucose must stay within a narrow healthy range. Too low and your brain starves; too high and it damages blood vessels and nerves. Your body holds it steady using homeostasis, a self-correcting balance run mainly by two hormones from the pancreas, insulin and glucagon, working as opposites."
+            },
+            {
+              "visual": "feedback-loop"
+            },
+            {
+              "p": "After a meal, blood glucose rises. The pancreas senses this and releases insulin, which acts like a key that unlocks body cells so glucose can move out of the blood and into cells to be used or stored. Blood glucose falls back to normal. Between meals, when glucose drops too low, the pancreas releases glucagon, which tells the liver to release stored glucose back into the blood. This push-pull is a negative feedback loop: the response reverses the change that triggered it."
+            },
+            {
+              "note": "Insulin and glucagon are easy to swap by accident. Insulin puts glucose IN cells (lowers blood sugar). Glucagon tells the liver to release Glucose, so think Glucagon means Glucose-goes-up in the blood."
+            },
+            {
+              "trick": "Picture a thermostat: when the room gets too warm the AC cools it back down. Insulin is the AC that cools down high blood sugar; glucagon is the heater that warms up low blood sugar. Together they hold the setpoint."
+            },
+            {
+              "p": "This is where glucose testing comes in. A glucometer measures blood glucose from a tiny drop of blood, usually in mg/dL. A normal fasting level is roughly 70 to 100 mg/dL; a fasting level of 126 mg/dL or higher on repeated tests indicates diabetes. Patients also track long-term control with an HbA1c test, which reflects average glucose over about three months."
+            },
+            {
+              "example": {
+                "prompt": "A person's fasting blood glucose is 180 mg/dL and it barely drops after they take a meal. What is likely failing in the feedback loop?",
+                "steps": [
+                  "Fasting glucose above about 126 mg/dL is abnormally high.",
+                  "Normally insulin would move that glucose into cells and lower it; here it stays high.",
+                  "So either not enough insulin is made, or cells are not responding to it."
+                ],
+                "answer": "The insulin arm of the loop is failing, either too little insulin or cells resisting it, so glucose cannot get into cells and stays high in the blood."
+              }
+            }
+          ]
+        },
+        {
+          "id": "type1-vs-type2",
+          "title": "Type 1 vs. Type 2 Diabetes",
+          "blocks": [
+            {
+              "p": "Diabetes is not one disease but two main forms that share a symptom, high blood glucose, but have different causes. In Type 1 diabetes, the immune system mistakenly destroys the insulin-producing cells of the pancreas, so the body makes little or no insulin. It usually appears in childhood and is not caused by lifestyle. Because there is essentially no insulin, Type 1 patients must take insulin to live."
+            },
+            {
+              "p": "In Type 2 diabetes, the pancreas still makes insulin, but the body's cells stop responding to it properly, a condition called insulin resistance. The lock is fine but the key no longer turns easily, so glucose builds up in the blood. Type 2 develops more gradually, is strongly linked to factors like body weight, diet, and activity, and can often be managed with lifestyle changes and medication, sometimes plus insulin."
+            },
+            {
+              "note": "The key contrast to memorize: Type 1 is a problem of insulin SUPPLY (little or none made); Type 2 is a problem of insulin RESPONSE (made, but cells resist it). Both end in high blood glucose, but the broken step is different."
+            },
+            {
+              "trick": "Type 1 = None (no insulin); Type 2 = Too much to respond to. Or picture it as: in Type 1 the factory is shut down, in Type 2 the workers ignore the memo."
+            },
+            {
+              "example": {
+                "prompt": "A patient still produces normal amounts of insulin, yet their blood glucose stays high. Which type of diabetes is this, and why does it happen?",
+                "steps": [
+                  "Insulin is present, so the pancreas is still making it, which rules out Type 1.",
+                  "High glucose despite insulin means the cells are not responding to it, which is insulin resistance."
+                ],
+                "answer": "This is Type 2 diabetes, caused by insulin resistance: the insulin is there, but the cells fail to respond, so glucose stays in the blood."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u3",
+      "title": "Unit 3 — Sickle Cell Disease",
+      "typical_when": "Dec–Jan",
+      "topics": [
+        "DNA & protein synthesis",
+        "Mutations",
+        "Inheritance & Punnett squares",
+        "Gel electrophoresis",
+        "How a single base change causes disease"
+      ],
+      "how_to_study": [
+        "Trace the path DNA → RNA → protein and where sickle cell breaks it",
+        "Practice electrophoresis interpretation — a core biomed skill"
+      ],
+      "concepts": [
+        {
+          "id": "dna-to-protein",
+          "title": "The Central Dogma: DNA to RNA to Protein",
+          "blocks": [
+            {
+              "p": "Your DNA is an instruction manual for building proteins, and proteins do almost all the work in your body. The flow of that information runs in one direction so reliably it is called the central dogma: DNA is transcribed into RNA, and RNA is translated into protein. DNA stays safe in the nucleus like a master cookbook; RNA is the photocopy of one recipe carried out to the kitchen."
+            },
+            {
+              "visual": "dna-to-protein"
+            },
+            {
+              "formula": "DNA → RNA → protein (transcription, then translation)"
+            },
+            {
+              "p": "The letters of DNA are four bases: A, T, C, G (RNA uses U instead of T). During translation, the RNA is read three letters at a time; each three-letter group is a codon, and each codon specifies one amino acid. Amino acids link into a chain that folds into a working protein. So the order of bases in DNA ultimately decides the order of amino acids in a protein, and the protein's shape, set by that order, determines what it can do."
+            },
+            {
+              "note": "A common confusion is thinking one base equals one amino acid. It takes three bases (a codon) to code for one amino acid. This three-at-a-time rule is why a single wrong base can change, or sometimes not change, an amino acid depending on where it falls."
+            },
+            {
+              "trick": "Remember DRP: DNA Reads to Protein, in order D to R to P. And for the codon rule, remember 3 letters equal 1 amino acid, like a 3-letter airport code standing for one city."
+            },
+            {
+              "example": {
+                "prompt": "An mRNA strand reads GUG. How many amino acids does it code for, and how do you know?",
+                "steps": [
+                  "Amino acids are coded by codons of three bases.",
+                  "GUG is three bases, so it is exactly one codon."
+                ],
+                "answer": "One amino acid, because GUG is a single codon (it happens to code for valine)."
+              }
+            }
+          ]
+        },
+        {
+          "id": "mutations-and-sickle-cell",
+          "title": "How One Base Change Causes Sickle Cell Disease",
+          "blocks": [
+            {
+              "p": "A mutation is a change in the DNA sequence. The smallest kind is a point mutation, where a single base is swapped for another. Sometimes this changes nothing meaningful, sometimes it changes one amino acid, and occasionally that one change is enough to alter a protein's shape and break its function. Sickle cell disease is the textbook example of how tiny a mutation can be and how large its effect."
+            },
+            {
+              "p": "Hemoglobin is the protein in red blood cells that carries oxygen. In sickle cell disease, one single base in the gene for hemoglobin's beta chain is changed: the DNA triplet GAG becomes GTG, so the mRNA codon GAG becomes GUG. That swaps the 6th amino acid from glutamic acid to valine. This one substitution makes hemoglobin molecules clump into stiff rods when oxygen is low, which warps the round red blood cell into a rigid crescent, or sickle, shape."
+            },
+            {
+              "note": "Do not overcomplicate this: the entire disease traces to ONE base change out of billions, altering ONE amino acid. That is the headline of the whole unit, the power and the fragility packed into a single letter of the code."
+            },
+            {
+              "trick": "Remember the swap as Glu to Val at position 6: the 6th amino acid glutamic acid becomes valine. Mnemonic: Valine makes the cell a Valley-shaped sickle."
+            },
+            {
+              "p": "The sickled cells cause the disease in two ways: they are fragile and break apart (causing anemia, a shortage of red blood cells), and their crescent shape snags in narrow blood vessels, blocking flow and causing intense pain and organ damage. All of it flows from that one substituted amino acid changing the protein's shape."
+            },
+            {
+              "example": {
+                "prompt": "The normal codon is GAG (glutamic acid) and the sickle codon is GUG (valine). What kind of mutation is this, and why does such a small change matter so much?",
+                "steps": [
+                  "Only one base changed (A to U in the mRNA), so it is a point substitution.",
+                  "That one change swaps one amino acid, glutamic acid for valine.",
+                  "The new amino acid changes hemoglobin's shape so it clumps and deforms the cell."
+                ],
+                "answer": "It is a single-base point mutation; it matters because changing even one amino acid can change a protein's 3-D shape, and shape determines function."
+              }
+            }
+          ]
+        },
+        {
+          "id": "inheritance-punnett",
+          "title": "Inheritance and Punnett Squares",
+          "blocks": [
+            {
+              "p": "Sickle cell disease is inherited, meaning it is passed from parents to children through genes. You carry two copies of each gene, one from each parent. For the hemoglobin gene we can write the normal allele as A and the sickle allele as S. A person with two normal alleles (AA) is unaffected; a person with two sickle alleles (SS) has sickle cell disease; a person with one of each (AS) is a carrier with sickle cell trait, usually healthy but able to pass the S allele on."
+            },
+            {
+              "visual": "punnett"
+            },
+            {
+              "p": "A Punnett square predicts the probability of each combination in a child. You put one parent's alleles across the top and the other parent's down the side, then fill each box with one allele from each. The four boxes show the possible genotypes and their ratios, which are probabilities, not guarantees, for each child."
+            },
+            {
+              "note": "The most common Punnett error is treating the ratio as a promise. A 1:2:1 result means each child independently has a 25% chance of being SS, not that exactly one of four children will be affected. Each pregnancy is a fresh 25% roll."
+            },
+            {
+              "trick": "Top and side are the parents, inside are the kids. Bring the column letter straight down and the row letter straight across into each box, and you can never mismatch the alleles."
+            },
+            {
+              "p": "Consider two carrier parents, AS by AS. Across the top: A and S. Down the side: A and S. The four boxes come out AA, AS, AS, SS. That is a 1 AA : 2 AS : 1 SS ratio, which means a 25% chance of an unaffected child, a 50% chance of a carrier, and a 25% chance of a child with sickle cell disease."
+            },
+            {
+              "example": {
+                "prompt": "One parent is a carrier (AS) and the other is unaffected with two normal alleles (AA). What is the chance their child has sickle cell disease (SS)?",
+                "steps": [
+                  "Top (AA parent): A and A. Side (AS parent): A and S.",
+                  "The four boxes are AA, AS, AA, AS.",
+                  "No box is SS, so the chance of the disease is 0%; half the children are carriers (AS)."
+                ],
+                "answer": "There is a 0% chance of having sickle cell disease, though 50% of children would be carriers (AS)."
+              }
+            }
+          ]
+        },
+        {
+          "id": "gel-electrophoresis",
+          "title": "Gel Electrophoresis: Sorting DNA by Size",
+          "blocks": [
+            {
+              "p": "Gel electrophoresis is a lab technique that sorts DNA fragments by size, and it is a key tool for detecting the sickle cell mutation and for DNA fingerprinting in the mystery unit. DNA samples are loaded into small wells in a slab of gel, and an electric current is run across it. Because DNA's phosphate backbone is negatively charged, every fragment is pulled toward the positive end of the gel."
+            },
+            {
+              "p": "The gel is a mesh, so smaller fragments slip through easily and travel farther, while larger fragments get tangled and stay near the wells. After running, the fragments spread into a pattern of bands, a kind of size ladder, that you can compare between samples. Fragments of the same size line up at the same distance."
+            },
+            {
+              "note": "Remember the direction and the size order together: DNA runs toward the POSITIVE electrode (because it is negative), and SMALLER fragments go FARTHER. Students often reverse the size rule. Small is fast, big is slow, like sand versus gravel passing through a sieve."
+            },
+            {
+              "trick": "Runs to the Red (positive), and the small ones sprint ahead. Negatively charged DNA is attracted to the positive (often red) electrode, and the little fragments win the race down the gel."
+            },
+            {
+              "p": "To test for sickle cell, a restriction enzyme is used to cut the hemoglobin DNA at a specific sequence. The single sickle mutation removes one of the enzyme's cut sites, so the sickle DNA is cut into different-sized pieces than normal DNA. On the gel, a healthy person, a carrier, and an affected person each show a distinct band pattern, letting you read the genotype directly."
+            },
+            {
+              "example": {
+                "prompt": "On a gel, fragment X ended up near the bottom, far from the wells, and fragment Y stayed near the top. Which fragment is larger?",
+                "steps": [
+                  "DNA moves from the wells toward the positive end; how far it travels depends on size.",
+                  "Smaller fragments travel farther (near the bottom); larger fragments stay near the wells (top)."
+                ],
+                "answer": "Fragment Y, near the top, is larger; fragment X traveled farther because it is smaller."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u4",
+      "title": "Unit 4 — Heart Disease",
+      "typical_when": "Feb–Mar",
+      "topics": [
+        "Structure & function of the heart",
+        "Blood pressure & cholesterol",
+        "The circulatory system",
+        "Dissection / heart models",
+        "Risk factors & lifestyle"
+      ],
+      "how_to_study": [
+        "Learn blood flow through the heart chambers in order",
+        "Connect cholesterol/blood pressure back to the case evidence"
+      ],
+      "concepts": [
+        {
+          "id": "heart-structure-function",
+          "title": "Heart Structure and Function",
+          "blocks": [
+            {
+              "p": "The heart is a muscular double pump about the size of your fist, and its job is to push blood through your entire body without stopping. It has four chambers: two upper atria that receive blood and two lower ventricles that pump it out. A thick wall down the middle keeps the right side and left side separate so that oxygen-poor and oxygen-rich blood never mix."
+            },
+            {
+              "visual": "heart-flow"
+            },
+            {
+              "p": "Four valves keep blood flowing in one direction only, snapping shut to prevent backflow. The lub-dub of a heartbeat is the sound of valves closing. The right side receives oxygen-poor blood from the body and pumps it a short distance to the lungs; the left side receives oxygen-rich blood from the lungs and pumps it to the whole body. That longer journey is why the left ventricle has the thickest, strongest wall."
+            },
+            {
+              "note": "A frequent mistake is thinking the left ventricle is stronger because it is more important. Both sides pump the same amount of blood; the left wall is thicker only because it must push blood much farther (the whole body) against more resistance than the right, which only reaches the nearby lungs."
+            },
+            {
+              "trick": "Atria are the Attic (top, receiving), and Ventricles Vent it out (bottom, pumping). Then remember right side to lungs, left side to the rest of the body."
+            },
+            {
+              "example": {
+                "prompt": "Why does the left ventricle have a much thicker muscular wall than the right ventricle?",
+                "steps": [
+                  "The right ventricle pumps blood only to the nearby lungs, a short trip with low resistance.",
+                  "The left ventricle pumps blood to the entire body, a long trip with high resistance.",
+                  "More force is needed for the longer, higher-pressure journey, so the muscle is thicker."
+                ],
+                "answer": "Because the left ventricle must generate much higher pressure to push blood through the whole body, while the right only sends it to the lungs."
+              }
+            }
+          ]
+        },
+        {
+          "id": "circulatory-system",
+          "title": "The Circulatory System: Two Loops of Delivery",
+          "blocks": [
+            {
+              "p": "The circulatory system is the body's delivery network: the heart is the pump, blood vessels are the roads, and blood is the cargo carrier, bringing oxygen and nutrients to cells and hauling away carbon dioxide and waste. It runs as two connected loops. The pulmonary circuit sends blood from the heart to the lungs and back to pick up oxygen; the systemic circuit sends oxygen-rich blood from the heart out to the whole body and back."
+            },
+            {
+              "p": "There are three kinds of vessels. Arteries carry blood away from the heart and have thick, muscular walls to withstand high pressure. Veins carry blood back to the heart at lower pressure and have valves to stop backflow. Capillaries are microscopic, thin-walled vessels where the actual exchange happens: oxygen and nutrients pass out to the cells and waste passes in."
+            },
+            {
+              "note": "The usual rule that arteries carry oxygen-rich blood has a famous exception. The pulmonary artery carries oxygen-POOR blood to the lungs, and the pulmonary veins carry oxygen-RICH blood back. The true definition is by direction: arteries lead away from the heart, veins lead toward it, regardless of oxygen."
+            },
+            {
+              "trick": "Arteries go Away, veins go toward. Define vessels by DIRECTION, not by oxygen, and the pulmonary exception stops being confusing."
+            },
+            {
+              "example": {
+                "prompt": "Is the pulmonary artery carrying oxygen-rich or oxygen-poor blood, and does that break the definition of an artery?",
+                "steps": [
+                  "The pulmonary artery leads from the heart's right side to the lungs.",
+                  "Blood going to the lungs has not been oxygenated yet, so it is oxygen-poor.",
+                  "Arteries are defined by carrying blood away from the heart, which this does."
+                ],
+                "answer": "It carries oxygen-poor blood, and it is still correctly an artery, because artery means away from the heart, not oxygen-rich."
+              }
+            }
+          ]
+        },
+        {
+          "id": "blood-pressure-cholesterol",
+          "title": "Blood Pressure and Cholesterol",
+          "blocks": [
+            {
+              "p": "Blood pressure is the force blood pushes against artery walls, and it is written as two numbers, like 120/80. The top number (systolic) is the pressure when the heart contracts and pushes; the bottom number (diastolic) is the pressure when the heart relaxes between beats. Healthy is around 120/80 or below; consistently high pressure, called hypertension, forces the heart to work harder and slowly damages arteries."
+            },
+            {
+              "p": "Cholesterol is a waxy lipid your body needs in small amounts, carried in the blood by two kinds of packages. LDL is the bad carrier because excess LDL deposits cholesterol in artery walls, building up plaque that narrows them. HDL is the good carrier because it removes cholesterol from the blood and returns it to the liver. Too much LDL and too little HDL raise the risk of clogged arteries."
+            },
+            {
+              "note": "Do not read high blood pressure as the heart being strong. Chronically high pressure is harmful; it strains the heart and injures the vessel lining, inviting plaque. And remember cholesterol itself is not poison; the problem is the balance and amount, especially high LDL."
+            },
+            {
+              "trick": "LDL is Lousy because it Lodges in arteries; HDL is Healthy because it Hauls cholesterol away. The L in LDL doubles as Lousy and Lodges."
+            },
+            {
+              "example": {
+                "prompt": "A patient has an LDL of 190 (high) and an HDL of 30 (low). Why does this combination raise heart-disease risk?",
+                "steps": [
+                  "High LDL deposits more cholesterol into artery walls, building plaque.",
+                  "Low HDL means less cholesterol is being hauled back to the liver.",
+                  "More deposited and less removed means arteries narrow faster."
+                ],
+                "answer": "The high-LDL, low-HDL combination speeds plaque buildup, since more cholesterol is lodged in arteries and less is cleared, narrowing vessels and raising heart-disease risk."
+              }
+            }
+          ]
+        },
+        {
+          "id": "heart-disease-risk-factors",
+          "title": "Heart Disease and Its Risk Factors",
+          "blocks": [
+            {
+              "p": "Heart disease usually develops from atherosclerosis, the gradual buildup of fatty plaque inside arteries that narrows them and stiffens their walls. If a plaque ruptures and a clot blocks a coronary artery feeding the heart muscle, that region is starved of oxygen and a heart attack occurs. The same process in vessels to the brain can cause a stroke. Understanding risk factors is about slowing or preventing that buildup."
+            },
+            {
+              "p": "Risk factors come in two kinds. Controllable factors are ones you can change: smoking, a diet high in saturated fat, physical inactivity, obesity, high blood pressure, and high LDL cholesterol. Uncontrollable factors are ones you cannot change: age, biological sex, and family history (genetics). Managing the controllable ones is the core of prevention, especially since they add up."
+            },
+            {
+              "note": "A key insight is that risk factors compound rather than simply add. Someone who smokes and has high blood pressure and high LDL faces far more than three times the baseline risk. That is also why changing even one controllable factor meaningfully lowers overall risk."
+            },
+            {
+              "trick": "Sort every risk factor with one question: can I change it? Yes means controllable (lifestyle); no means uncontrollable (age, sex, family history). Prevention lives entirely in the Yes column."
+            },
+            {
+              "example": {
+                "prompt": "From this list, which risk factors could a patient actually reduce: age, smoking, family history, physical inactivity?",
+                "steps": [
+                  "Age and family history cannot be changed, so they are uncontrollable.",
+                  "Smoking and physical inactivity are lifestyle choices, so they are controllable."
+                ],
+                "answer": "Smoking and physical inactivity are controllable and could be reduced; age and family history are uncontrollable."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u5",
+      "title": "Unit 5 — Infectious Disease & Solving the Mystery",
+      "typical_when": "Apr–May",
+      "topics": [
+        "Bacteria, viruses & the immune system",
+        "Antibiotics & resistance",
+        "Diagnostic testing",
+        "Assembling all evidence to determine cause of death",
+        "Presenting conclusions"
+      ],
+      "how_to_study": [
+        "Pull every unit's evidence together — this is the payoff",
+        "Be ready to defend a conclusion with data, like a real investigator"
+      ],
+      "concepts": [
+        {
+          "id": "bacteria-vs-viruses",
+          "title": "Bacteria vs. Viruses: What Makes You Sick",
+          "blocks": [
+            {
+              "p": "Infectious diseases are caused by pathogens, organisms or particles that invade the body and cause harm. Two of the most important are bacteria and viruses, and although both can make you sick, they are profoundly different. Bacteria are living, single-celled organisms that can grow and reproduce on their own, sometimes releasing toxins that damage tissue. Viruses are not even full cells; they are tiny packages of genetic material in a protein coat that cannot reproduce by themselves."
+            },
+            {
+              "p": "A virus must hijack one of your cells: it injects its genetic instructions, forces the cell to build thousands of copies of the virus, and often destroys the cell in the process. This single difference, that bacteria are self-sufficient cells while viruses are non-living hijackers, explains why they are treated so differently and why the mystery unit's diagnostics work hard to tell them apart."
+            },
+            {
+              "note": "The crucial consequence: antibiotics kill bacteria but do NOTHING to viruses, because antibiotics target cell structures that a virus does not have. Taking antibiotics for a cold, which is a virus, cannot help and actually fuels resistance."
+            },
+            {
+              "trick": "Bacteria are Bugs that are alive; Viruses are Vandals that need a house to wreck. A vandal (virus) can only cause damage inside someone else's building (your cell)."
+            },
+            {
+              "example": {
+                "prompt": "A patient has a viral infection but is prescribed antibiotics. Why will this not cure the infection?",
+                "steps": [
+                  "Antibiotics work by attacking structures found in bacterial cells.",
+                  "A virus is not a cell and lacks those structures.",
+                  "So antibiotics have nothing to act on in a virus."
+                ],
+                "answer": "Antibiotics cannot cure a virus because they target bacterial cell features that viruses do not have, so the drug has no effect on the virus."
+              }
+            }
+          ]
+        },
+        {
+          "id": "immune-system",
+          "title": "The Immune System: Antigens, Antibodies, and Memory",
+          "blocks": [
+            {
+              "p": "Your immune system is a layered defense force that detects and destroys pathogens. The first layer is innate (nonspecific) immunity: barriers like skin and stomach acid, plus general-purpose white blood cells that attack anything foreign. It is fast but does not target specific germs. The second layer is adaptive (specific) immunity, which learns the identity of a particular pathogen and mounts a precise attack against it."
+            },
+            {
+              "p": "Adaptive immunity works by recognizing antigens, the unique molecules on a pathogen's surface, like an ID badge. Specialized white blood cells produce antibodies, proteins shaped to lock onto one specific antigen and mark that pathogen for destruction. After an infection, the body keeps memory cells, so if the same pathogen returns, the response is faster and stronger, which is exactly how vaccines protect you without your ever getting sick."
+            },
+            {
+              "note": "Keep antigen and antibody straight: the ANTIGEN is the foreign marker ON the germ; the ANTIBODY is the defender YOUR body makes to match it. They fit like a lock and key, but the antigen is the intruder and the antibody is the guard."
+            },
+            {
+              "trick": "Antigen belongs to the enemy (it is generated by the invader); antibody is the Body's answer that your Body builds. Antigen in, antibody by you."
+            },
+            {
+              "p": "A vaccine takes advantage of memory cells: it shows your immune system a harmless piece or weakened form of a pathogen's antigen, so you build antibodies and memory cells in advance. Then the real pathogen meets a prepared defense and is defeated before it can cause disease."
+            },
+            {
+              "example": {
+                "prompt": "Why can a vaccine protect you from a disease you have never had?",
+                "steps": [
+                  "A vaccine exposes you to a harmless version of the pathogen's antigen.",
+                  "Your adaptive immune system makes antibodies and memory cells against it.",
+                  "If the real pathogen appears later, memory cells respond fast and stop it early."
+                ],
+                "answer": "The vaccine trains your adaptive immunity in advance, building memory cells so a future infection is recognized and destroyed quickly."
+              }
+            }
+          ]
+        },
+        {
+          "id": "antibiotics-resistance",
+          "title": "Antibiotics and the Rise of Resistance",
+          "blocks": [
+            {
+              "p": "Antibiotics are medicines that kill bacteria or stop them from reproducing, and they revolutionized medicine. But bacteria fight back through evolution. In any large population of bacteria, a few individuals carry random mutations that happen to make them resistant to a given antibiotic. When the antibiotic is applied, it kills the vulnerable bacteria but the resistant few survive."
+            },
+            {
+              "p": "Those survivors reproduce, passing on their resistance, until the whole population is resistant and the drug no longer works. This is natural selection happening in fast-forward: the antibiotic is the selective pressure, and survival of the fittest here means survival of the resistant. Misusing antibiotics, such as taking them for viruses or not finishing a prescription, speeds this up by giving resistant bacteria more chances to be selected."
+            },
+            {
+              "note": "A subtle but important point: antibiotics do not CREATE resistance, and bacteria do not learn to resist on demand. The resistant mutations already exist by chance; the antibiotic simply selects for them by removing the competition. This is evolution, not the germ deciding to adapt."
+            },
+            {
+              "trick": "Antibiotics don't teach, they filter. Picture a sieve that removes the susceptible bacteria and leaves the resistant ones behind to multiply, which is selection, not instruction."
+            },
+            {
+              "p": "This is why doctors urge people to take antibiotics only when truly needed and to finish the full course. Stopping early leaves behind the hardier bacteria that survived the first days, precisely the ones most likely to be resistant, letting them rebound and spread."
+            },
+            {
+              "example": {
+                "prompt": "Why does not finishing a full course of antibiotics contribute to resistance?",
+                "steps": [
+                  "The most susceptible bacteria die first, in the early days of treatment.",
+                  "Stopping early leaves the hardier, partly resistant survivors alive.",
+                  "Those survivors reproduce, so the surviving population is more resistant."
+                ],
+                "answer": "Quitting early spares the toughest bacteria, the ones most likely to be resistant, allowing them to multiply and spread resistance."
+              }
+            }
+          ]
+        },
+        {
+          "id": "diagnostics-solving-mystery",
+          "title": "Diagnostics: Assembling the Evidence",
+          "blocks": [
+            {
+              "p": "Diagnostics are the tests that identify what is making a patient sick, and they are how the mystery unit finally gets solved. Different pathogens leave different clues, so different tests are used: a culture grows bacteria from a sample to see what appears, a gram stain colors bacteria to sort them by cell-wall type, an antibody or antigen test detects the immune response or the pathogen's markers, and DNA-based tests can identify a pathogen by its genetic sequence."
+            },
+            {
+              "p": "Solving a biomedical mystery means assembling many independent pieces of evidence into one consistent explanation. No single test proves everything; instead, the autopsy data, the lab results, the patient's symptoms and history, and the diagnostic tests must all point the same way. When several different lines of evidence converge on one conclusion, confidence is high, the same logic that governed the crime scene back in Unit 1."
+            },
+            {
+              "note": "The big-picture insight of the whole course: strong conclusions come from convergence, not from a single dramatic clue. One test can be wrong or ambiguous, but several independent tests agreeing is what makes a diagnosis, or a case, solid."
+            },
+            {
+              "trick": "Think triangulation: one clue points a direction, but it takes several clues crossing at the same spot to pin down the location. Multiple tests agreeing is the crossing point, and that is your answer."
+            },
+            {
+              "example": {
+                "prompt": "A patient's symptoms fit either a bacterial or viral infection. A culture grows bacteria and a gram stain shows a matching type. How does combining tests strengthen the diagnosis?",
+                "steps": [
+                  "Symptoms alone are ambiguous between bacteria and viruses.",
+                  "The culture growing bacteria points to a bacterial cause.",
+                  "The gram stain identifying the same bacterium confirms and specifies it."
+                ],
+                "answer": "Each test alone is only suggestive, but the culture and gram stain converging on the same bacterium turns a guess into a confident, specific diagnosis."
+              }
+            }
+          ]
+        }
+      ]
+    }
   ]
 }

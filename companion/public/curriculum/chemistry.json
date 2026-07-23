@@ -1,7 +1,11 @@
 {
   "id": "chemistry",
   "title": "Chemistry",
-  "exam": { "name": "Unit tests, labs & finals", "window": "Ongoing", "note": "Assessed through unit tests, lab reports, and semester finals. California courses align to NGSS; unit order varies by teacher — confirm the sequence with yours." },
+  "exam": {
+    "name": "Unit tests, labs & finals",
+    "window": "Ongoing",
+    "note": "Assessed through unit tests, lab reports, and semester finals. California courses align to NGSS; unit order varies by teacher — confirm the sequence with yours."
+  },
   "overview": "The study of matter — what it's made of, how it changes, and the math that describes those changes. Chemistry rewards two habits: understanding the particle-level 'why' behind each rule, and being fluent with the arithmetic (units, moles, balancing). The strand that connects most units is the mole and stoichiometry.",
   "how_to_study_course": [
     "Keep units attached to every number and cancel them — unit tracking (dimensional analysis) catches most mistakes.",
@@ -10,32 +14,1150 @@
     "Draw particle-level pictures (atoms, bonds, collisions) so the abstract rules have a mental image behind them."
   ],
   "resources": [
-    { "label": "Khan Academy — Chemistry", "url": "https://www.khanacademy.org/science/chemistry" },
-    { "label": "The Organic Chemistry Tutor (YouTube — general chem too)", "url": "https://www.youtube.com/@TheOrganicChemistryTutor" },
-    { "label": "PhET Interactive Simulations (Chemistry)", "url": "https://phet.colorado.edu/en/simulations/filter?subjects=chemistry" },
-    { "label": "Periodic table & data (PubChem / Ptable)", "url": "https://ptable.com/" }
+    {
+      "label": "Khan Academy — Chemistry",
+      "url": "https://www.khanacademy.org/science/chemistry"
+    },
+    {
+      "label": "The Organic Chemistry Tutor (YouTube — general chem too)",
+      "url": "https://www.youtube.com/@TheOrganicChemistryTutor"
+    },
+    {
+      "label": "PhET Interactive Simulations (Chemistry)",
+      "url": "https://phet.colorado.edu/en/simulations/filter?subjects=chemistry"
+    },
+    {
+      "label": "Periodic table & data (PubChem / Ptable)",
+      "url": "https://ptable.com/"
+    }
   ],
   "units": [
-    { "id": "u1", "title": "Unit 1 — Matter, Measurement & Lab Safety", "typical_when": "Aug–Sep",
-      "topics": ["States & properties of matter", "Physical vs chemical change", "Units, significant figures & dimensional analysis", "Lab safety & tools"],
-      "how_to_study": ["Nail sig figs and unit conversions now — they're used all year", "Practice classifying changes as physical vs chemical"] },
-    { "id": "u2", "title": "Unit 2 — Atomic Structure & the Periodic Table", "typical_when": "Sep–Oct",
-      "topics": ["Protons, neutrons, electrons & isotopes", "Electron configuration", "Periodic trends (radius, ionization, electronegativity)", "History of atomic models"],
-      "how_to_study": ["Learn to read periodic trends from position, not memorization", "Practice writing electron configurations"] },
-    { "id": "u3", "title": "Unit 3 — Chemical Bonding", "typical_when": "Oct–Nov",
-      "topics": ["Ionic vs covalent bonds", "Lewis structures", "Molecular shapes (VSEPR)", "Polarity", "Naming compounds & writing formulas"],
-      "how_to_study": ["Master naming/formula-writing — it's the vocabulary of the rest of the course", "Draw Lewis structures step by step"] },
-    { "id": "u4", "title": "Unit 4 — The Mole & Stoichiometry", "typical_when": "Nov–Jan",
-      "topics": ["The mole & Avogadro's number", "Molar mass", "Balancing equations", "Mole ratios & stoichiometry", "Limiting reactant & percent yield"],
-      "how_to_study": ["This is the heart of the course — over-practice mole conversions", "Balance first, then use the ratio; keep units on every step"] },
-    { "id": "u5", "title": "Unit 5 — Reactions & Energy", "typical_when": "Feb",
-      "topics": ["Types of reactions", "Endothermic vs exothermic", "Enthalpy basics", "Reaction rates & catalysts"],
-      "how_to_study": ["Learn to predict products by reaction type", "Connect energy diagrams to endo/exothermic"] },
-    { "id": "u6", "title": "Unit 6 — States of Matter & Gas Laws", "typical_when": "Mar",
-      "topics": ["Kinetic molecular theory", "Gas laws (Boyle, Charles, ideal gas PV=nRT)", "Phase changes", "Intermolecular forces"],
-      "how_to_study": ["Keep temperature in Kelvin for every gas-law problem", "Relate boiling points to intermolecular forces"] },
-    { "id": "u7", "title": "Unit 7 — Solutions, Acids & Bases", "typical_when": "Apr–May",
-      "topics": ["Solubility & concentration (molarity)", "Dilution", "Acids, bases & pH", "Neutralization & titration"],
-      "how_to_study": ["Practice molarity and dilution (M1V1 = M2V2)", "Understand pH as a log scale, not just a number"] }
+    {
+      "id": "u1",
+      "title": "Unit 1 — Matter, Measurement & Lab Safety",
+      "typical_when": "Aug–Sep",
+      "topics": [
+        "States & properties of matter",
+        "Physical vs chemical change",
+        "Units, significant figures & dimensional analysis",
+        "Lab safety & tools"
+      ],
+      "how_to_study": [
+        "Nail sig figs and unit conversions now — they're used all year",
+        "Practice classifying changes as physical vs chemical"
+      ],
+      "concepts": [
+        {
+          "id": "states-and-properties-of-matter",
+          "title": "States of Matter and Properties",
+          "blocks": [
+            {
+              "p": "Everything you can touch, taste, or trip over is matter: it has mass and takes up space. The big idea is that the same tiny particles can behave in very different ways depending on how much energy they carry. Picture people in a room. In a solid, they are packed shoulder to shoulder, locked in place, only vibrating. In a liquid, they still touch but can slide past one another, like a crowd shuffling out of a stadium. In a gas, they have broken free and are zooming around the whole room, barely noticing each other."
+            },
+            {
+              "p": "That single picture explains almost everything about the three common states. A solid holds its shape and volume because the particles cannot move past each other. A liquid keeps its volume but takes the shape of its container because particles slide but stay close. A gas fills any container completely and is easy to squash because the particles are far apart with mostly empty space between them."
+            },
+            {
+              "p": "Scientists also sort the qualities of matter into two kinds. A physical property can be observed without changing what the substance is: color, density, melting point, boiling point, hardness. An intensive property (like density or temperature) does not depend on how much you have, while an extensive property (like mass or volume) does. A drop of water and an ocean have the same density but very different masses."
+            },
+            {
+              "note": "Common mistake: thinking a gas is weightless. Gases have mass; the particles are just spread far apart. A balloon of air really is heavier than an empty one, just barely."
+            },
+            {
+              "trick": "Solid, Liquid, Gas = 'Stuck, Sliding, Set-free.' The three S-words track particle motion from most trapped to most free."
+            },
+            {
+              "example": {
+                "prompt": "A block of aluminum has a mass of 27 g and a volume of 10 cm³. Find its density and state whether density is an intensive or extensive property.",
+                "steps": [
+                  "Density = mass ÷ volume",
+                  "Density = 27 g ÷ 10 cm³",
+                  "Density = 2.7 g/cm³",
+                  "Density is the same no matter how big the piece is, so it is an intensive property"
+                ],
+                "answer": "2.7 g/cm³ (intensive property)"
+              }
+            }
+          ]
+        },
+        {
+          "id": "physical-vs-chemical-change",
+          "title": "Physical vs Chemical Change",
+          "blocks": [
+            {
+              "p": "A change is physical when the substance is still the same stuff afterward, just in a different form. Ice melting into water is dramatic to watch, but before and after it is still H₂O. Ripping paper, dissolving sugar, boiling water, and bending a wire are all physical changes: you could reverse them or at least you have not made anything new."
+            },
+            {
+              "p": "A change is chemical when the atoms rearrange into brand new substances with new properties. When wood burns, you cannot un-burn it, because the wood has become ash, carbon dioxide, and water vapor. Rusting iron, baking a cake, and digesting food are chemical changes. The clues that a chemical change happened include a color change, a gas bubbling out, a solid forming from two liquids, light or heat given off, or a smell appearing."
+            },
+            {
+              "p": "Here is the key intuition: in a chemical change the atoms themselves are never created or destroyed, they just get reshuffled into new partners. This is the Law of Conservation of Mass. If you carefully seal a reaction so nothing escapes, the total mass before equals the total mass after, every single time."
+            },
+            {
+              "note": "Careful: a color change or bubbles can sometimes fool you. Boiling water bubbles but that is just a physical change (liquid to gas). Look for NEW substances, not just excitement."
+            },
+            {
+              "trick": "Ask 'Can I get the original back easily?' If yes, it is probably PHYSICAL. If you have made something you cannot un-make, it is CHEMICAL."
+            },
+            {
+              "example": {
+                "prompt": "In a sealed flask, 4.0 g of hydrogen gas reacts completely with 32 g of oxygen gas to form water. What mass of water is produced?",
+                "steps": [
+                  "This is a chemical change, so mass is conserved",
+                  "Total mass before = mass of hydrogen + mass of oxygen",
+                  "Total mass before = 4.0 g + 32 g = 36 g",
+                  "Mass of water after must equal mass before = 36 g"
+                ],
+                "answer": "36 g of water"
+              }
+            }
+          ]
+        },
+        {
+          "id": "units-and-significant-figures",
+          "title": "Measurement, Units, and Significant Figures",
+          "blocks": [
+            {
+              "p": "In chemistry a number without a unit is almost meaningless. Saying 'the mass is 5' is like saying 'I live 5 away.' Five what? Grams, kilograms, or tons? The unit tells you the size of the ruler you used. Scientists agree on the metric (SI) system so everyone measures with the same rulers: meters for length, grams for mass, liters for volume, seconds for time."
+            },
+            {
+              "p": "Every measurement also carries a little honesty built into it, called significant figures. They are the digits you actually know for sure, plus one estimated digit. If a scale reads 4.56 g, you are confident about the 4 and the 5, and you are estimating the 6. Reporting 4.5600000 g would be lying about how precise your scale is."
+            },
+            {
+              "p": "Quick rules for counting sig figs: all non-zero digits count; zeros between non-zeros count (the 0 in 405 counts); leading zeros never count (0.0072 has just 2 sig figs, the 7 and 2); trailing zeros after a decimal point count (2.50 has 3). When you multiply or divide, your answer keeps as many sig figs as the least precise number you started with."
+            },
+            {
+              "note": "Common mistake: writing every digit your calculator spits out. If your data had 2 sig figs, an answer of 6.38492 is fake precision. Round it to 6.4."
+            },
+            {
+              "trick": "For counting zeros, use 'Pacific/Atlantic.' If the decimal Point is Present, start counting from the Pacific (left) side at the first non-zero digit. If the decimal is Absent, start from the Atlantic (right) side."
+            },
+            {
+              "example": {
+                "prompt": "Multiply 4.56 × 1.4 and report the answer with the correct number of significant figures.",
+                "steps": [
+                  "Do the raw multiplication: 4.56 × 1.4 = 6.384",
+                  "Count sig figs in each factor: 4.56 has 3, and 1.4 has 2",
+                  "The answer keeps the smaller count, which is 2 sig figs",
+                  "Round 6.384 to 2 sig figs → 6.4"
+                ],
+                "answer": "6.4"
+              }
+            }
+          ]
+        },
+        {
+          "id": "dimensional-analysis-factor-label",
+          "title": "Dimensional Analysis (the Factor-Label Method)",
+          "blocks": [
+            {
+              "p": "Dimensional analysis is the single most useful trick in all of chemistry, and it is really just careful unit-cancelling. The idea: you multiply your starting amount by cleverly chosen fractions that equal 1, so you never change the real quantity, only the units it is written in. A fraction like (60 min)/(1 h) equals 1, because 60 minutes and 1 hour are the same amount of time."
+            },
+            {
+              "p": "The magic is that units behave like numbers in a fraction: if the same unit appears on top and bottom, it cancels. You set up your conversion factors so the unit you want to get rid of cancels, leaving the unit you want. This lets you chain many steps together and never lose track of what you are measuring."
+            },
+            {
+              "formula": "given quantity × (wanted unit)/(given unit) = answer in wanted unit"
+            },
+            {
+              "p": "The whole strategy is to start with what you are given, then ask 'what do I want to cancel next?' and place that unit on the bottom of the next fraction. Keep going until only the target unit is left standing. If the units come out right, the arithmetic almost always comes out right too."
+            },
+            {
+              "note": "Key insight: always write your units in the calculation, not just the numbers. If your units do not cancel to give the answer you want, you have flipped a fraction upside down. The units are a free error-checker."
+            },
+            {
+              "trick": "Say out loud 'cancel the bottom.' Whatever unit you want to eliminate goes on the BOTTOM of the next fraction so it cancels the top of the one before it."
+            },
+            {
+              "example": {
+                "prompt": "How many seconds are there in 2.5 hours?",
+                "steps": [
+                  "Start with the given: 2.5 hours",
+                  "Convert hours to minutes: 2.5 h × (60 min)/(1 h) = 150 min (the 'h' cancels)",
+                  "Convert minutes to seconds: 150 min × (60 s)/(1 min) = 9000 s (the 'min' cancels)",
+                  "Only seconds remain, so the setup is correct"
+                ],
+                "answer": "9000 seconds"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u2",
+      "title": "Unit 2 — Atomic Structure & the Periodic Table",
+      "typical_when": "Sep–Oct",
+      "topics": [
+        "Protons, neutrons, electrons & isotopes",
+        "Electron configuration",
+        "Periodic trends (radius, ionization, electronegativity)",
+        "History of atomic models"
+      ],
+      "how_to_study": [
+        "Learn to read periodic trends from position, not memorization",
+        "Practice writing electron configurations"
+      ],
+      "concepts": [
+        {
+          "id": "subatomic-particles-and-atomic-number",
+          "title": "Protons, Neutrons, Electrons, and Atomic Number",
+          "blocks": [
+            {
+              "p": "An atom is mostly empty space with a tiny, dense center called the nucleus. Inside the nucleus sit protons (positive charge) and neutrons (no charge). Whizzing around the outside, in a cloud, are the electrons (negative charge). If an atom were the size of a football stadium, the nucleus would be a marble at the center, and the electrons would be tiny gnats near the top rows."
+            },
+            {
+              "visual": "atom-shells"
+            },
+            {
+              "p": "The number of protons is an atom's fingerprint. It is called the atomic number, and it alone decides which element you have. Change the proton count and you change the element completely: 6 protons is always carbon, 8 protons is always oxygen. This is why the periodic table is ordered by atomic number."
+            },
+            {
+              "p": "The mass number is the total count of protons plus neutrons, because those two heavy particles carry essentially all the atom's mass (electrons are about 1800 times lighter and barely register). In a neutral atom, the number of electrons equals the number of protons, so the positive and negative charges cancel out perfectly."
+            },
+            {
+              "formula": "mass number = protons + neutrons;   neutrons = mass number − atomic number"
+            },
+            {
+              "note": "Common mistake: mixing up mass number and atomic number. Atomic number = protons only (the identity). Mass number = protons + neutrons (the weight)."
+            },
+            {
+              "trick": "'Protons = Personality.' The proton count is the atom's identity and never changes without changing the element itself."
+            },
+            {
+              "example": {
+                "prompt": "An atom has 17 protons, 18 neutrons, and 17 electrons. What is its mass number, its charge, and which element is it?",
+                "steps": [
+                  "Mass number = protons + neutrons = 17 + 18 = 35",
+                  "Charge: protons (17+) and electrons (17−) are equal, so the atom is neutral",
+                  "The element is set by 17 protons, which is chlorine (Cl)"
+                ],
+                "answer": "Mass number 35, neutral charge, element chlorine (Cl)"
+              }
+            }
+          ]
+        },
+        {
+          "id": "isotopes-and-average-atomic-mass",
+          "title": "Isotopes and Average Atomic Mass",
+          "blocks": [
+            {
+              "p": "Atoms of the same element always have the same number of protons, but they can carry different numbers of neutrons. These different versions are called isotopes. Carbon-12 and carbon-14 are both carbon (6 protons each), but carbon-14 has two extra neutrons. They act the same chemically; they just weigh slightly different amounts."
+            },
+            {
+              "p": "So why does the periodic table list chlorine as 35.45 amu, which is not a whole number? Because that value is a weighted average of all the naturally occurring isotopes. 'Weighted' means the more common isotope counts more, exactly like a class grade where tests matter more than homework. Chlorine is a mix of mostly Cl-35 with some Cl-37, and the average lands in between, closer to 35 because Cl-35 is more abundant."
+            },
+            {
+              "formula": "average atomic mass = (mass₁ × fraction₁) + (mass₂ × fraction₂) + ..."
+            },
+            {
+              "p": "To use the formula, convert each percentage to a decimal fraction (divide by 100), multiply each isotope's mass by its fraction, then add the pieces together. The fractions always add up to 1 (that is 100% of the atoms)."
+            },
+            {
+              "note": "Key insight: the average atomic mass is always closer to the mass of the MORE abundant isotope. Use that to sanity-check your answer."
+            },
+            {
+              "trick": "Think of it like a seesaw. The heavier crowd (the more abundant isotope) pulls the average toward its side."
+            },
+            {
+              "example": {
+                "prompt": "Chlorine is about 75% Cl-35 (mass 35) and 25% Cl-37 (mass 37). Find the average atomic mass.",
+                "steps": [
+                  "Convert percents to fractions: 75% = 0.75 and 25% = 0.25",
+                  "Multiply each mass by its fraction: 35 × 0.75 = 26.25",
+                  "And: 37 × 0.25 = 9.25",
+                  "Add the pieces: 26.25 + 9.25 = 35.50",
+                  "Check: the answer is closer to 35, the more abundant isotope. Good."
+                ],
+                "answer": "35.5 amu"
+              }
+            }
+          ]
+        },
+        {
+          "id": "electron-configuration",
+          "title": "Electron Configuration",
+          "blocks": [
+            {
+              "p": "Electrons are not scattered randomly around the nucleus; they live in organized energy levels, like floors of a hotel. Lower floors (closer to the nucleus) fill first because they are lower in energy and more stable, just as a ball rolls to the lowest spot it can find. Within each floor there are rooms of different shapes called orbitals, labeled s, p, d, and f."
+            },
+            {
+              "p": "Each orbital type holds a fixed number of electrons: an s holds 2, a p holds 6, a d holds 10, and an f holds 14. The electron configuration is just a list of which rooms the electrons occupy, written smallest energy first. The superscript tells you how many electrons are in that orbital. For example, oxygen (8 electrons) is 1s² 2s² 2p⁴."
+            },
+            {
+              "formula": "filling order: 1s → 2s → 2p → 3s → 3p → 4s → 3d → 4p ..."
+            },
+            {
+              "p": "You do not have to memorize that odd order blindly. The periodic table IS the filling order if you read it left to right, top to bottom. The rows tell you the energy level and the blocks (s-block, p-block, d-block) tell you which orbital is filling. The outermost electrons, called valence electrons, are the ones that do all the chemistry, so they matter most."
+            },
+            {
+              "note": "Common mistake: forgetting 4s fills before 3d. Energy levels overlap a little once you reach the fourth row, so the order is not perfectly numerical."
+            },
+            {
+              "trick": "The superscripts must add up to the number of electrons. Always total them as a built-in check: for sulfur they must add to 16."
+            },
+            {
+              "example": {
+                "prompt": "Write the electron configuration for sulfur (atomic number 16).",
+                "steps": [
+                  "Sulfur has 16 electrons to place",
+                  "Fill in energy order: 1s² (2), then 2s² (2 more, total 4), then 2p⁶ (6 more, total 10)",
+                  "Continue: 3s² (total 12), then 3p⁴ (4 more, total 16)",
+                  "Full configuration: 1s² 2s² 2p⁶ 3s² 3p⁴",
+                  "Check: 2 + 2 + 6 + 2 + 4 = 16 ✓"
+                ],
+                "answer": "1s² 2s² 2p⁶ 3s² 3p⁴"
+              }
+            }
+          ]
+        },
+        {
+          "id": "periodic-trends",
+          "title": "Periodic Trends",
+          "blocks": [
+            {
+              "p": "The periodic table is not just a chart, it is a map of patterns. Two forces explain almost every trend. First, more protons in the nucleus pull the electrons in harder (a stronger positive magnet). Second, inner electrons shield the outer ones from that pull, like a crowd blocking you from feeling a fan at the front. Balancing these two ideas predicts how atoms behave."
+            },
+            {
+              "visual": "periodic-trends"
+            },
+            {
+              "p": "Atomic radius (the size of an atom) DECREASES as you go left to right across a period, because each step adds a proton that pulls the same outer shell in tighter. It INCREASES as you go down a group, because each step adds a whole new shell, making the atom bigger. So the biggest atoms are in the bottom-left, and the smallest are in the top-right."
+            },
+            {
+              "p": "Ionization energy (how hard it is to yank off an electron) does the opposite of size. Small atoms hold their electrons tightly, so ionization energy INCREASES left to right and DECREASES down a group. Electronegativity (how strongly an atom pulls on shared electrons in a bond) follows the same pattern as ionization energy, peaking at fluorine in the top-right."
+            },
+            {
+              "note": "Common mistake: thinking more protons always means bigger. More protons actually pull electrons IN, making the atom smaller across a period. Size grows only when you add whole new shells going down."
+            },
+            {
+              "trick": "'Franny is Furious in the top-right.' Fluorine sits top-right and has the highest electronegativity and ionization energy. Trends generally get stronger heading toward Fluorine, and atoms get bigger heading away toward the bottom-left."
+            },
+            {
+              "example": {
+                "prompt": "Rank these three atoms from largest to smallest atomic radius: Na, Mg, Cl (all in period 3).",
+                "steps": [
+                  "All three are in the same row (period 3), so compare left to right",
+                  "Left to right order on the table: Na, then Mg, then Cl",
+                  "Radius shrinks going right, so leftmost Na is largest and rightmost Cl is smallest",
+                  "Therefore: Na > Mg > Cl"
+                ],
+                "answer": "Na > Mg > Cl (sodium largest, chlorine smallest)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u3",
+      "title": "Unit 3 — Chemical Bonding",
+      "typical_when": "Oct–Nov",
+      "topics": [
+        "Ionic vs covalent bonds",
+        "Lewis structures",
+        "Molecular shapes (VSEPR)",
+        "Polarity",
+        "Naming compounds & writing formulas"
+      ],
+      "how_to_study": [
+        "Master naming/formula-writing — it's the vocabulary of the rest of the course",
+        "Draw Lewis structures step by step"
+      ],
+      "concepts": [
+        {
+          "id": "ionic-vs-covalent-bonding",
+          "title": "Ionic vs Covalent Bonding",
+          "blocks": [
+            {
+              "p": "Atoms bond because they are chasing stability, and for most atoms stability means having a full outer shell of 8 valence electrons (the octet rule), like the calm, unreactive noble gases. There are two main ways atoms reach that goal: they can transfer electrons or they can share them. Which one happens depends on how greedy each atom is for electrons."
+            },
+            {
+              "p": "In ionic bonding, one atom is much greedier than the other, so it simply steals electrons. This usually happens between a metal (which gives up electrons easily) and a nonmetal (which grabs them). The metal becomes a positive ion (cation) and the nonmetal becomes a negative ion (anion), and the opposite charges snap together like magnets. Table salt, Na⁺ Cl⁻, is the classic example."
+            },
+            {
+              "p": "In covalent bonding, two atoms are similarly greedy, so instead of one winning, they share electrons in the middle. This happens between two nonmetals. Water (H₂O) and carbon dioxide (CO₂) are held together by shared pairs of electrons. Sharing can be a single bond (one pair), a double bond (two pairs), or a triple bond (three pairs)."
+            },
+            {
+              "formula": "electronegativity difference:  large (about 1.7+) → ionic;  small (about 0.4 to 1.7) → polar covalent;  near 0 → nonpolar covalent"
+            },
+            {
+              "note": "Common mistake: assuming any two atoms that bond must share. Metals and nonmetals usually TRANSFER (ionic); two nonmetals usually SHARE (covalent)."
+            },
+            {
+              "trick": "'Ionic = I own it (transfer/steal). Covalent = Co-owned (share).' The 'co-' in covalent literally means together."
+            },
+            {
+              "example": {
+                "prompt": "Predict the bond type in HCl. (Approximate electronegativities: H = 2.1, Cl = 3.0.)",
+                "steps": [
+                  "Find the electronegativity difference: 3.0 − 2.1 = 0.9",
+                  "A difference of 0.9 falls in the 0.4 to 1.7 range",
+                  "That range means the electrons are shared but pulled unevenly",
+                  "So the bond is polar covalent, not ionic (0.9 is well below 1.7)"
+                ],
+                "answer": "Polar covalent bond"
+              }
+            }
+          ]
+        },
+        {
+          "id": "lewis-structures",
+          "title": "Lewis Structures",
+          "blocks": [
+            {
+              "p": "A Lewis structure is a simple map that shows where the valence electrons live in a molecule. Dots represent lone (unshared) electrons, and lines represent bonds (each line is a shared pair). The goal is to arrange every atom so it is happy, which almost always means surrounded by 8 electrons, except hydrogen, which is full with just 2."
+            },
+            {
+              "p": "The reliable recipe is to count first, then arrange. Add up the valence electrons from every atom to get your total budget. Pick a central atom (usually the one there is only one of, and the least greedy for electrons). Connect the outer atoms to the center with single bonds, then spread the remaining electrons as lone pairs to complete octets."
+            },
+            {
+              "p": "If you run out of electrons before everyone has an octet, you make double or triple bonds by sharing more pairs between atoms that are short. This is exactly what happens in carbon dioxide, where carbon must double-bond to each oxygen to satisfy everyone with the electrons available."
+            },
+            {
+              "formula": "total valence electrons = sum of valence electrons of all atoms"
+            },
+            {
+              "note": "Key insight: hydrogen is the exception to the octet rule. It only wants 2 electrons and can never be the central atom because it forms just one bond."
+            },
+            {
+              "trick": "Count electrons BEFORE you draw. Your total is a strict budget: every dot and every line you draw spends from it, and you must spend it all exactly."
+            },
+            {
+              "example": {
+                "prompt": "How many valence electrons must a Lewis structure of CO₂ account for, and how are they arranged?",
+                "steps": [
+                  "Carbon has 4 valence electrons; each oxygen has 6",
+                  "Total = 4 + 6 + 6 = 16 valence electrons",
+                  "Place carbon in the center with an oxygen on each side",
+                  "Single bonds leave carbon short, so form a double bond to each oxygen: O=C=O",
+                  "Each double bond uses 4 electrons (8 total in bonds), and each oxygen gets 2 lone pairs (8 more) = 16 ✓"
+                ],
+                "answer": "16 valence electrons, arranged as O=C=O with two lone pairs on each oxygen"
+              }
+            }
+          ]
+        },
+        {
+          "id": "vsepr-shapes-and-polarity",
+          "title": "VSEPR Shapes and Polarity",
+          "blocks": [
+            {
+              "p": "Molecules are three-dimensional, and their shape controls how they behave. VSEPR theory (Valence Shell Electron Pair Repulsion) rests on one simple idea: electron groups all repel each other, so they spread out as far apart as possible around the central atom. It is exactly like tying balloons together at a knot; they naturally push into a balanced arrangement."
+            },
+            {
+              "p": "Count the 'electron groups' on the central atom, where a group is any bond (single, double, or triple counts as one) or any lone pair. Two groups spread to a straight line (180°, linear). Three groups spread into a flat triangle (120°, trigonal planar). Four groups spread into a 3D pyramid arrangement (about 109.5°, tetrahedral)."
+            },
+            {
+              "p": "Lone pairs are sneaky: they still push other groups away, but they are invisible in the final named shape, so they bend the molecule. Water has four groups (2 bonds + 2 lone pairs), so the electrons form a tetrahedron, but we only 'see' the two hydrogens, giving water its famous bent shape. Shape then decides polarity: if the pulls on electrons are lopsided and do not cancel, the molecule is polar, with a slightly positive and slightly negative end."
+            },
+            {
+              "note": "Common mistake: ignoring lone pairs when predicting shape. Lone pairs take up space and push bonds closer together, so NH₃ is pyramidal, not flat."
+            },
+            {
+              "trick": "Count the groups, then think 'Two-line, Three-triangle, Four-tetra.' The number of electron groups sets the basic geometry before lone pairs bend it."
+            },
+            {
+              "example": {
+                "prompt": "Predict the molecular shape and polarity of ammonia, NH₃.",
+                "steps": [
+                  "Nitrogen is central with 3 bonds to hydrogen plus 1 lone pair = 4 electron groups",
+                  "Four groups means the electrons arrange tetrahedrally (about 109.5°)",
+                  "One group is a lone pair, so we only see 3 hydrogens: the shape is trigonal pyramidal (angle squeezed to about 107°)",
+                  "The lone pair makes one end electron-rich, so the pulls do not cancel"
+                ],
+                "answer": "Trigonal pyramidal shape, and the molecule is polar"
+              }
+            }
+          ]
+        },
+        {
+          "id": "naming-and-writing-formulas",
+          "title": "Naming Compounds and Writing Formulas",
+          "blocks": [
+            {
+              "p": "Chemical names follow rules so that any chemist in the world reads the same formula the same way. The first fork in the road is the type of compound. Ionic compounds (a metal + a nonmetal) are named plainly: the metal keeps its name, and the nonmetal ending changes to '-ide.' So sodium plus chlorine becomes sodium chloride."
+            },
+            {
+              "p": "To write the formula of an ionic compound, use the fact that the whole thing must be electrically neutral: total positive charge must exactly cancel total negative charge. The fast method is the criss-cross: take each ion's charge number and drop it as the subscript of the other ion, then simplify. This guarantees the charges balance."
+            },
+            {
+              "p": "Covalent (molecular) compounds are two nonmetals, and here you use Greek prefixes to count atoms: mono (1), di (2), tri (3), tetra (4). CO is carbon monoxide; CO₂ is carbon dioxide; N₂O₄ is dinitrogen tetroxide. You never use prefixes for ionic compounds, only for covalent ones."
+            },
+            {
+              "formula": "criss-cross:  the charge of one ion becomes the subscript of the other (then reduce to lowest whole numbers)"
+            },
+            {
+              "note": "Common mistake: leaving a subscript of 1 or forgetting to reduce. We write NaCl, not Na₁Cl₁, and we reduce Ca₂O₂ down to CaO."
+            },
+            {
+              "trick": "For ionic formulas: 'positive first, criss-cross the charges down.' The cation is always written first, and each charge slides down to become the other's subscript."
+            },
+            {
+              "example": {
+                "prompt": "Write the formula for the ionic compound made from aluminum (Al³⁺) and oxygen (O²⁻).",
+                "steps": [
+                  "Write the ions with charges: Al³⁺ and O²⁻",
+                  "Criss-cross: the 3 from aluminum becomes oxygen's subscript, the 2 from oxygen becomes aluminum's subscript",
+                  "This gives Al₂O₃",
+                  "Check neutrality: 2 aluminums = +6 total, 3 oxygens = −6 total, they cancel ✓"
+                ],
+                "answer": "Al₂O₃ (aluminum oxide)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u4",
+      "title": "Unit 4 — The Mole & Stoichiometry",
+      "typical_when": "Nov–Jan",
+      "topics": [
+        "The mole & Avogadro's number",
+        "Molar mass",
+        "Balancing equations",
+        "Mole ratios & stoichiometry",
+        "Limiting reactant & percent yield"
+      ],
+      "how_to_study": [
+        "This is the heart of the course — over-practice mole conversions",
+        "Balance first, then use the ratio; keep units on every step"
+      ],
+      "concepts": [
+        {
+          "id": "the-mole-and-avogadros-number",
+          "title": "The Mole and Avogadro's Number",
+          "blocks": [
+            {
+              "p": "Atoms are so unimaginably tiny that counting them one by one is hopeless. So chemists invented a counting word for a huge, fixed pile of them, just like 'dozen' means 12 no matter what you are counting. That word is the mole, and one mole means 6.02 × 10²³ of something. This number is called Avogadro's number."
+            },
+            {
+              "p": "How big is 6.02 × 10²³? Almost beyond imagining. A mole of marbles would bury the entire Earth many kilometers deep. Chemists use such a gigantic number on purpose, because atoms are so small that even a spoonful of water contains far more than a mole of molecules. The mole is the bridge that lets us weigh out real, handleable amounts and still know how many atoms we have."
+            },
+            {
+              "formula": "number of particles = moles × (6.02 × 10²³ particles / 1 mole)"
+            },
+            {
+              "p": "This equation works in both directions. Multiply moles by Avogadro's number to get the count of particles, or divide a particle count by Avogadro's number to find how many moles you have. The word 'particles' can mean atoms, molecules, or ions, depending on what you are counting."
+            },
+            {
+              "note": "Key insight: the mole is just a number, like 'dozen,' only enormous. It is not a mass or a volume by itself; it is a count."
+            },
+            {
+              "trick": "'A MOLE is a big pile.' One mole = 6.02 × 10²³, always. Whenever you go from moles to actual particles, you multiply by that number."
+            },
+            {
+              "example": {
+                "prompt": "How many atoms are in 2.0 moles of carbon?",
+                "steps": [
+                  "Start with the given: 2.0 moles of carbon",
+                  "Multiply by Avogadro's number: 2.0 mol × (6.02 × 10²³ atoms / 1 mol)",
+                  "The 'mol' unit cancels, leaving atoms",
+                  "2.0 × 6.02 × 10²³ = 1.20 × 10²⁴ atoms"
+                ],
+                "answer": "1.20 × 10²⁴ atoms"
+              }
+            }
+          ]
+        },
+        {
+          "id": "molar-mass-and-mole-conversions",
+          "title": "Molar Mass and Converting Grams to Moles",
+          "blocks": [
+            {
+              "p": "We cannot count atoms in the lab, but we can weigh them, so we need a way to translate grams into moles. That translator is molar mass: the mass in grams of exactly one mole of a substance. The beautiful shortcut is that molar mass is just the atomic mass from the periodic table, read in grams per mole. Carbon's atomic mass is 12, so one mole of carbon weighs 12 g."
+            },
+            {
+              "visual": "mole-bridge"
+            },
+            {
+              "p": "For a compound, you build the molar mass by adding up the molar masses of every atom in the formula. Water, H₂O, has two hydrogens (about 1 g/mol each) and one oxygen (16 g/mol), for a total of 18 g/mol. That means one mole of water molecules weighs 18 grams, which is only about a tablespoon."
+            },
+            {
+              "formula": "moles = mass (g) ÷ molar mass (g/mol)"
+            },
+            {
+              "p": "Molar mass is your conversion factor between the world you can weigh (grams) and the world you count in reactions (moles). To go from grams to moles, divide by molar mass. To go from moles back to grams, multiply by molar mass. Setting it up as a fraction so the units cancel keeps you from flipping it the wrong way."
+            },
+            {
+              "note": "Common mistake: forgetting the subscripts when finding molar mass. In H₂O there are TWO hydrogens, so you add hydrogen twice, not once."
+            },
+            {
+              "trick": "'Grams to moles? Give it a divide.' Both words start with soft sounds; to shrink a big pile of grams into moles, you divide by molar mass."
+            },
+            {
+              "example": {
+                "prompt": "How many moles are in 36 g of water (H₂O)?",
+                "steps": [
+                  "First find molar mass of H₂O: 2 hydrogens × 1.0 = 2.0, plus 1 oxygen × 16.0 = 16.0",
+                  "Molar mass = 2.0 + 16.0 = 18.0 g/mol",
+                  "Use moles = mass ÷ molar mass = 36 g ÷ 18.0 g/mol",
+                  "36 ÷ 18 = 2.0"
+                ],
+                "answer": "2.0 moles of water"
+              }
+            }
+          ]
+        },
+        {
+          "id": "balancing-equations-and-mole-ratios",
+          "title": "Balancing Equations and Mole Ratios",
+          "blocks": [
+            {
+              "p": "A chemical equation is a recipe, and atoms are never created or destroyed in a reaction (conservation of mass). So the same number of each type of atom must appear on both sides of the arrow. When they do not match, we 'balance' the equation by placing big numbers, called coefficients, in front of the formulas. You can change coefficients, but never the subscripts, because changing a subscript would change the actual substance."
+            },
+            {
+              "p": "Think of coefficients as how many of each item the recipe calls for. Balancing is a bit of careful bookkeeping: pick an element, count it on both sides, and adjust coefficients until the totals match, then move to the next element. Saving hydrogen and oxygen for last often makes the puzzle easier."
+            },
+            {
+              "p": "Once an equation is balanced, the coefficients unlock its real power: they give you the mole ratio between any two substances. In N₂ + 3H₂ → 2NH₃, the ratio of hydrogen to ammonia is 3 to 2. That ratio is a conversion factor that lets you predict how much product you will get from a given amount of reactant."
+            },
+            {
+              "formula": "N₂ + 3H₂ → 2NH₃    (ratios: 1 N₂ : 3 H₂ : 2 NH₃)"
+            },
+            {
+              "note": "Common mistake: balancing by changing subscripts. Never do that. Changing H₂O to H₂O₂ makes hydrogen peroxide, a totally different chemical. Only change the coefficients out front."
+            },
+            {
+              "trick": "Balance in the order 'metals, then nonmetals, then hydrogen, then oxygen' (a version of 'save H and O for last'). Leaving the flexible atoms for last saves you from re-doing work."
+            },
+            {
+              "example": {
+                "prompt": "Using the balanced equation N₂ + 3H₂ → 2NH₃, how many moles of ammonia (NH₃) form from 6 moles of hydrogen gas (H₂)?",
+                "steps": [
+                  "Read the mole ratio from the coefficients: 3 H₂ produces 2 NH₃",
+                  "Set up the conversion: 6 mol H₂ × (2 mol NH₃ / 3 mol H₂)",
+                  "The 'mol H₂' cancels, leaving mol NH₃",
+                  "6 × (2/3) = 4"
+                ],
+                "answer": "4 moles of NH₃"
+              }
+            }
+          ]
+        },
+        {
+          "id": "limiting-reactant-and-percent-yield",
+          "title": "Limiting Reactant and Percent Yield",
+          "blocks": [
+            {
+              "p": "Imagine making sandwiches with 10 slices of bread but only 3 slices of cheese. You will run out of cheese first, so cheese limits how many sandwiches you can make, and some bread is left over. In chemistry, the reactant that runs out first is the limiting reactant, and it decides the maximum amount of product possible. The other reactant is in excess and has leftovers."
+            },
+            {
+              "p": "To find the limiting reactant, calculate how much product EACH reactant could make on its own, using the mole ratios from the balanced equation. Whichever reactant produces LESS product is the limiting one, because the reaction stops as soon as it is used up. That smaller amount of product is called the theoretical yield, the perfect-world maximum."
+            },
+            {
+              "p": "In real labs you almost never get the full theoretical yield; some product is lost, spilled, or does not react. The actual yield is what you really collect. Percent yield compares the two, telling you how efficient the reaction was. A percent yield of 80% means you captured 80% of what was theoretically possible."
+            },
+            {
+              "formula": "percent yield = (actual yield ÷ theoretical yield) × 100"
+            },
+            {
+              "note": "Common mistake: assuming the reactant you have LESS of is automatically limiting. You must use the mole ratios, because one reactant may be needed in a bigger proportion. Compare the product each could make, not the raw amounts."
+            },
+            {
+              "trick": "'Least product wins the limit.' Whichever reactant makes the SMALLEST amount of product is the limiting reactant, no matter how much of it you started with."
+            },
+            {
+              "example": {
+                "prompt": "For N₂ + 3H₂ → 2NH₃, you start with 2 mol N₂ and 3 mol H₂. Find the limiting reactant and theoretical yield of NH₃. If you actually collect 1.6 mol NH₃, find the percent yield.",
+                "steps": [
+                  "Product from N₂: 2 mol N₂ × (2 NH₃ / 1 N₂) = 4 mol NH₃ possible",
+                  "Product from H₂: 3 mol H₂ × (2 NH₃ / 3 H₂) = 2 mol NH₃ possible",
+                  "H₂ makes less (2 mol), so H₂ is the limiting reactant and theoretical yield = 2 mol NH₃",
+                  "Percent yield = (actual ÷ theoretical) × 100 = (1.6 ÷ 2.0) × 100 = 80%"
+                ],
+                "answer": "H₂ is limiting; theoretical yield 2 mol NH₃; percent yield 80%"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u5",
+      "title": "Unit 5 — Reactions & Energy",
+      "typical_when": "Feb",
+      "topics": [
+        "Types of reactions",
+        "Endothermic vs exothermic",
+        "Enthalpy basics",
+        "Reaction rates & catalysts"
+      ],
+      "how_to_study": [
+        "Learn to predict products by reaction type",
+        "Connect energy diagrams to endo/exothermic"
+      ],
+      "concepts": [
+        {
+          "id": "types-of-chemical-reactions",
+          "title": "Types of Chemical Reactions",
+          "blocks": [
+            {
+              "p": "Most reactions fall into a handful of recognizable patterns, and spotting the pattern helps you predict the products. In a synthesis (combination) reaction, two or more simple things join into one bigger thing: A + B → AB. In a decomposition reaction, the opposite happens, one compound breaks into smaller pieces: AB → A + B."
+            },
+            {
+              "p": "Replacement reactions are about swapping partners. In single replacement, one lone element kicks another out of a compound and takes its place: A + BC → AC + B, like a new dance partner cutting in. In double replacement, two compounds swap partners with each other: AB + CD → AD + CB, which is how many solids (precipitates) form when two solutions are mixed."
+            },
+            {
+              "p": "Combustion is the dramatic one: a fuel (usually a compound of carbon and hydrogen) reacts rapidly with oxygen, releasing heat and light, and producing carbon dioxide and water. Burning methane, propane, or gasoline are all combustion reactions. Recognizing O₂ as a reactant plus CO₂ and H₂O as products is the tell-tale sign."
+            },
+            {
+              "note": "Common mistake: confusing single and double replacement. Single replacement has a pure ELEMENT on the reactant side; double replacement has TWO COMPOUNDS trading parts, no lone element."
+            },
+            {
+              "trick": "Remember the 5 types with 'See Da Sun Da Combust': Combination, Decomposition, Single replacement, Double replacement, Combustion."
+            },
+            {
+              "example": {
+                "prompt": "Classify and balance: Na + Cl₂ → NaCl.",
+                "steps": [
+                  "Two simple substances (an element and an element) combine into one compound",
+                  "That pattern is a synthesis (combination) reaction",
+                  "Balance chlorine: 2 Cl atoms on the left need 2 NaCl on the right",
+                  "Then balance sodium: 2 Na needed on the left → 2Na + Cl₂ → 2NaCl"
+                ],
+                "answer": "Synthesis reaction; balanced as 2Na + Cl₂ → 2NaCl"
+              }
+            }
+          ]
+        },
+        {
+          "id": "endothermic-vs-exothermic",
+          "title": "Endothermic vs Exothermic Reactions",
+          "blocks": [
+            {
+              "p": "Every chemical reaction involves energy, because breaking bonds costs energy and forming bonds releases energy. The net result of that give-and-take decides whether a reaction warms up its surroundings or cools them down. Think of it as an energy bank account for the chemicals."
+            },
+            {
+              "p": "An exothermic reaction releases energy, usually as heat, to the surroundings, so the surroundings get warmer. Burning fuel and the reaction in a hand warmer are exothermic; you can feel the heat leaving. The products end up with LESS stored energy than the reactants, so we say the energy change ΔH is negative (energy left the chemicals)."
+            },
+            {
+              "p": "An endothermic reaction absorbs energy from its surroundings, so the surroundings get colder. An instant cold pack is endothermic; it pulls heat out of your skin, which is why it feels cold. Here the products store MORE energy than the reactants, so ΔH is positive (energy entered the chemicals)."
+            },
+            {
+              "formula": "ΔH = H(products) − H(reactants);   ΔH negative → exothermic;   ΔH positive → endothermic"
+            },
+            {
+              "note": "Common mistake: thinking 'endothermic feels hot.' It is the opposite. Endothermic reactions pull heat IN, so they feel COLD to you."
+            },
+            {
+              "trick": "'EXO = EXit.' Energy EXits in an EXOthermic reaction (heat comes out, surroundings warm up). ENDO means energy goes 'in.'"
+            },
+            {
+              "example": {
+                "prompt": "A reaction has reactants storing 250 kJ and products storing 150 kJ of energy. Find ΔH and classify the reaction.",
+                "steps": [
+                  "Use ΔH = H(products) − H(reactants)",
+                  "ΔH = 150 kJ − 250 kJ = −100 kJ",
+                  "The sign is negative, meaning energy was released to the surroundings",
+                  "A negative ΔH means the reaction is exothermic"
+                ],
+                "answer": "ΔH = −100 kJ, exothermic"
+              }
+            }
+          ]
+        },
+        {
+          "id": "enthalpy-basics",
+          "title": "Enthalpy Basics",
+          "blocks": [
+            {
+              "p": "Enthalpy (symbol H) is a fancy word for the total heat content stored in a substance at constant pressure. We rarely care about the exact total; what matters is the CHANGE in enthalpy during a reaction, written ΔH (the Δ means 'change in'). ΔH tells you how much heat a reaction gives off or takes in, per amount of substance."
+            },
+            {
+              "p": "A key feature of ΔH is that it scales with the amount of substance. If burning one mole of methane releases 890 kJ, then burning two moles releases twice as much, and burning half a mole releases half as much. This makes ΔH work just like a conversion factor: kilojoules per mole. You multiply the moles by the per-mole heat to find the total heat."
+            },
+            {
+              "formula": "heat released or absorbed = moles × ΔH per mole"
+            },
+            {
+              "p": "ΔH is usually reported for a balanced equation, so always check how many moles the given ΔH refers to. It also connects back to bonds: since exothermic reactions form stronger, more stable bonds than they break, the leftover energy escapes as heat, which is why ΔH is negative for them."
+            },
+            {
+              "note": "Key insight: ΔH depends on amount. Always match the ΔH to the number of moles in the problem before multiplying, and keep the sign (negative = released)."
+            },
+            {
+              "trick": "Treat ΔH like a price tag: 'kJ per mole.' Just as total cost = price × quantity, total heat = ΔH × moles."
+            },
+            {
+              "example": {
+                "prompt": "Burning 1 mole of methane releases 890 kJ. How much heat is released by burning 0.5 mole of methane?",
+                "steps": [
+                  "The heat scales with moles: heat = moles × ΔH per mole",
+                  "heat = 0.5 mol × 890 kJ/mol",
+                  "0.5 × 890 = 445",
+                  "So 445 kJ of heat is released"
+                ],
+                "answer": "445 kJ released"
+              }
+            }
+          ]
+        },
+        {
+          "id": "reaction-rates-and-catalysts",
+          "title": "Reaction Rates and Catalysts",
+          "blocks": [
+            {
+              "p": "Reaction rate is simply how fast a reaction happens. For particles to react, they must actually collide, and collide hard enough and at the right angle to break bonds. This is called collision theory. Anything that makes collisions more frequent or more forceful will speed up the reaction. It is like trying to start a conversation in a crowd: more people bumping into each other means more conversations get started."
+            },
+            {
+              "p": "Four main factors control the rate. Higher temperature makes particles move faster, so they collide more often and harder. Higher concentration packs more particles into the same space, so collisions happen more often. More surface area (grinding a solid into powder) exposes more particles to react. And a catalyst provides an easier pathway for the reaction."
+            },
+            {
+              "p": "A catalyst is special because it speeds up a reaction WITHOUT being used up. It works by lowering the activation energy, the minimum energy hump particles must clear to react. Imagine a mountain pass being lowered so more travelers can cross with the energy they already have. Because the catalyst is regenerated, a tiny amount can keep working over and over. Enzymes in your body are biological catalysts."
+            },
+            {
+              "note": "Common mistake: thinking a catalyst gets consumed or changes the products. It does neither. It only lowers the activation energy and is fully recovered at the end."
+            },
+            {
+              "trick": "Remember the rate boosters as 'Hot, Crowded, Crushed, and Coached': Hot (temperature), Crowded (concentration), Crushed (surface area), Coached (catalyst)."
+            },
+            {
+              "example": {
+                "prompt": "A reaction takes 40 seconds at 20°C. If its rate roughly doubles for every 10°C increase, about how long will it take at 40°C?",
+                "steps": [
+                  "Temperature rises from 20°C to 40°C, a jump of 20°C",
+                  "20°C is two 10°C steps, so the rate doubles twice: 2 × 2 = 4 times faster",
+                  "A 4-times-faster reaction takes one-fourth the time",
+                  "40 s ÷ 4 = 10 s"
+                ],
+                "answer": "About 10 seconds"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u6",
+      "title": "Unit 6 — States of Matter & Gas Laws",
+      "typical_when": "Mar",
+      "topics": [
+        "Kinetic molecular theory",
+        "Gas laws (Boyle, Charles, ideal gas PV=nRT)",
+        "Phase changes",
+        "Intermolecular forces"
+      ],
+      "how_to_study": [
+        "Keep temperature in Kelvin for every gas-law problem",
+        "Relate boiling points to intermolecular forces"
+      ],
+      "concepts": [
+        {
+          "id": "kinetic-molecular-theory",
+          "title": "Kinetic Molecular Theory",
+          "blocks": [
+            {
+              "p": "Kinetic Molecular Theory (KMT) is the mental model that explains gas behavior by imagining what the invisible particles are doing. Its picture: a gas is a swarm of tiny particles in constant, random, high-speed motion, spread so far apart that the empty space between them dwarfs the particles themselves. This is why gases are mostly nothing and can be squished so easily."
+            },
+            {
+              "p": "A few key assumptions make the model work. The particles are in nonstop straight-line motion until they bounce off something. Their collisions are 'elastic,' meaning no energy is lost when they hit each other or the walls. Those countless collisions against the container walls are exactly what we feel as pressure, the drumming of trillions of tiny impacts."
+            },
+            {
+              "p": "The most important link KMT gives us is between temperature and motion. Temperature is a measure of the average kinetic energy (motion energy) of the particles. Hotter means faster-moving particles. Critically, this relationship uses the Kelvin temperature scale, which starts at absolute zero (the point of zero motion), so gas calculations ALWAYS require Kelvin, not Celsius."
+            },
+            {
+              "formula": "Kelvin = °C + 273"
+            },
+            {
+              "note": "Common mistake: doing gas-law math in Celsius. Temperature must be in Kelvin, because only Kelvin is proportional to actual particle energy (0 K truly means zero motion; 0°C does not)."
+            },
+            {
+              "trick": "'Kelvin, always Kelvin' for gases. To get there, just 'add 273' to the Celsius temperature every time before plugging in."
+            },
+            {
+              "example": {
+                "prompt": "Convert 27°C to Kelvin (needed before any gas-law calculation).",
+                "steps": [
+                  "Use the conversion Kelvin = °C + 273",
+                  "Kelvin = 27 + 273",
+                  "27 + 273 = 300"
+                ],
+                "answer": "300 K"
+              }
+            }
+          ]
+        },
+        {
+          "id": "boyles-and-charles-laws",
+          "title": "Boyle's Law and Charles's Law",
+          "blocks": [
+            {
+              "p": "The gas laws describe how pressure, volume, and temperature of a gas trade off against each other. Boyle's Law focuses on pressure and volume at constant temperature. It says they are inversely related: squeeze a gas into a smaller volume and its pressure goes up, because the same number of particles now hit the closer walls more often. Push a syringe closed with your finger over the tip and you feel the pressure fight back."
+            },
+            {
+              "visual": "gas-boyle"
+            },
+            {
+              "formula": "Boyle's Law:  P₁V₁ = P₂V₂    (temperature constant)"
+            },
+            {
+              "p": "Charles's Law focuses on volume and temperature at constant pressure. These two are directly related: heat a gas and its volume expands, because faster particles push the walls out farther. This is why a balloon shrinks in the freezer and puffs back up when warmed. As long as you use Kelvin, doubling the temperature doubles the volume."
+            },
+            {
+              "formula": "Charles's Law:  V₁ / T₁ = V₂ / T₂    (pressure constant, T in Kelvin)"
+            },
+            {
+              "note": "Key insight: watch which quantities move together. Boyle (P and V) are inverse, so as one goes up the other goes down. Charles (V and T) are direct, so they rise and fall together."
+            },
+            {
+              "trick": "'Boyle's is a Battle (inverse), Charles is a Chum (direct).' In Boyle's, P and V fight in opposite directions; in Charles's, V and T move as friends together."
+            },
+            {
+              "example": {
+                "prompt": "A gas occupies 3.0 L at a pressure of 2.0 atm. It is compressed to 1.0 L at constant temperature. What is the new pressure?",
+                "steps": [
+                  "Use Boyle's Law: P₁V₁ = P₂V₂",
+                  "Fill in known values: (2.0 atm)(3.0 L) = P₂ (1.0 L)",
+                  "Solve for P₂: P₂ = (2.0 × 3.0) ÷ 1.0 = 6.0 ÷ 1.0",
+                  "P₂ = 6.0 atm (pressure rose as volume shrank, as expected)"
+                ],
+                "answer": "6.0 atm"
+              }
+            }
+          ]
+        },
+        {
+          "id": "ideal-gas-law",
+          "title": "The Ideal Gas Law (PV = nRT)",
+          "blocks": [
+            {
+              "p": "Boyle's and Charles's laws each hold two things constant. The Ideal Gas Law rolls everything into one master equation that links all four variables at once: pressure (P), volume (V), the amount of gas in moles (n), and temperature (T). It captures the complete story of a gas snapshot in a single line, which is why it is one of the most-used equations in chemistry."
+            },
+            {
+              "formula": "PV = nRT"
+            },
+            {
+              "p": "The letter R is the ideal gas constant, a fixed number that makes the units work out. When pressure is in atmospheres (atm), volume in liters (L), and temperature in Kelvin (K), R = 0.0821 (L·atm)/(mol·K). The trick to using this equation is matching your units to R, so always convert temperature to Kelvin and pressure to atm first."
+            },
+            {
+              "p": "To solve, identify which variable is unknown, rearrange the equation to isolate it, then plug in. For example, to find moles you rewrite it as n = PV/(RT). Keeping every unit attached lets them cancel and confirms your setup is right, since the leftover unit should match what you are solving for."
+            },
+            {
+              "note": "Common mistake: using the wrong R or forgetting Kelvin. If your pressure is in atm and volume in liters, R must be 0.0821 and T must be in Kelvin, or the numbers will be nonsense."
+            },
+            {
+              "trick": "Memorize it as 'PV = nRT,' spoken 'pivot-nert,' and remember R = 0.0821 pairs with atm, L, and K. Match units to R before you compute."
+            },
+            {
+              "example": {
+                "prompt": "How many moles of gas occupy 22.4 L at a pressure of 1.0 atm and a temperature of 273 K? (R = 0.0821 L·atm/mol·K)",
+                "steps": [
+                  "Rearrange PV = nRT to solve for n: n = PV ÷ (RT)",
+                  "Plug in: n = (1.0 atm × 22.4 L) ÷ (0.0821 × 273 K)",
+                  "Bottom first: 0.0821 × 273 = 22.4 (rounded)",
+                  "n = 22.4 ÷ 22.4 = 1.0"
+                ],
+                "answer": "1.0 mole (this is the molar volume of a gas at STP)"
+              }
+            }
+          ]
+        },
+        {
+          "id": "phase-changes-and-intermolecular-forces",
+          "title": "Phase Changes and Intermolecular Forces",
+          "blocks": [
+            {
+              "p": "When a substance melts or boils, the molecules themselves do not break apart; instead the attractions BETWEEN molecules are overcome. These attractions are called intermolecular forces (IMFs), the 'stickiness' between separate molecules. Stronger IMFs mean you need more energy (a higher temperature) to pull the molecules apart, which is why some substances boil at low temperatures and others need intense heat."
+            },
+            {
+              "p": "There are a few kinds of IMFs, from weakest to strongest. London dispersion forces are weak, fleeting attractions present in all molecules. Dipole-dipole forces occur between polar molecules with permanent positive and negative ends. Hydrogen bonding is the strongest, a special strong attraction when hydrogen is bonded to nitrogen, oxygen, or fluorine, which is exactly why water has such a surprisingly high boiling point."
+            },
+            {
+              "p": "During a phase change, something surprising happens to temperature: it holds steady even while you keep adding heat. That energy is not raising the temperature; it is being spent breaking the intermolecular forces to free the molecules into the next state. Only once the change is complete does the temperature start climbing again. This is why ice water stays at 0°C until all the ice has melted."
+            },
+            {
+              "formula": "heat to melt = mass × heat of fusion    (for ice, heat of fusion ≈ 334 J/g)"
+            },
+            {
+              "note": "Common mistake: assuming temperature keeps rising during boiling or melting. It plateaus, because the added energy goes into breaking IMFs, not into speeding up the molecules."
+            },
+            {
+              "trick": "Rank the forces with 'Hydrogen is the Heavyweight': Hydrogen bonding is strongest, dipole-dipole is the middleweight, and London dispersion is the lightweight."
+            },
+            {
+              "example": {
+                "prompt": "How much heat is needed to melt 10 g of ice at 0°C? (Heat of fusion of ice = 334 J/g.)",
+                "steps": [
+                  "Use heat = mass × heat of fusion",
+                  "heat = 10 g × 334 J/g",
+                  "10 × 334 = 3340",
+                  "The units g cancel, leaving joules"
+                ],
+                "answer": "3340 J (about 3.34 kJ)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u7",
+      "title": "Unit 7 — Solutions, Acids & Bases",
+      "typical_when": "Apr–May",
+      "topics": [
+        "Solubility & concentration (molarity)",
+        "Dilution",
+        "Acids, bases & pH",
+        "Neutralization & titration"
+      ],
+      "how_to_study": [
+        "Practice molarity and dilution (M1V1 = M2V2)",
+        "Understand pH as a log scale, not just a number"
+      ],
+      "concepts": [
+        {
+          "id": "solutions-solubility-and-molarity",
+          "title": "Solutions, Solubility, and Molarity",
+          "blocks": [
+            {
+              "p": "A solution is a perfectly even mixture of a solute (the thing being dissolved, like salt or sugar) into a solvent (the thing doing the dissolving, usually water). Once dissolved, the solute particles spread out so evenly that every sip tastes the same. Solubility is how much solute can dissolve in a given amount of solvent before it is 'full' and no more will go in."
+            },
+            {
+              "p": "Chemists need a precise way to say how concentrated a solution is, and the favorite unit is molarity (M). Molarity tells you the moles of solute packed into each liter of solution. A 2 M solution has 2 moles of solute in every liter. This is powerful because moles connect directly to the number of particles reacting, which is what chemistry cares about."
+            },
+            {
+              "formula": "molarity (M) = moles of solute ÷ liters of solution"
+            },
+            {
+              "p": "To find molarity, you often need two steps: first convert the mass of solute into moles using its molar mass, then divide by the volume in liters. Watch your volume units, since concentrations are per LITER, milliliters must be converted (divide mL by 1000) before you use them."
+            },
+            {
+              "note": "Common mistake: forgetting to convert milliliters to liters. 500 mL is 0.5 L. Using 500 in the formula instead of 0.5 gives an answer 1000 times too small."
+            },
+            {
+              "trick": "'Molarity = Moles over Liters.' Both key words start with the sounds in 'M over L', so the unit and the formula spell each other out."
+            },
+            {
+              "example": {
+                "prompt": "What is the molarity of a solution made by dissolving 40 g of NaOH in enough water to make 0.50 L of solution? (Molar mass of NaOH = 40 g/mol.)",
+                "steps": [
+                  "Convert grams to moles: 40 g ÷ 40 g/mol = 1.0 mol NaOH",
+                  "Volume is already in liters: 0.50 L",
+                  "Apply molarity = moles ÷ liters = 1.0 mol ÷ 0.50 L",
+                  "1.0 ÷ 0.50 = 2.0"
+                ],
+                "answer": "2.0 M"
+              }
+            }
+          ]
+        },
+        {
+          "id": "dilution",
+          "title": "Dilution",
+          "blocks": [
+            {
+              "p": "Dilution is what happens when you add more solvent (usually water) to a solution to make it weaker. Here is the crucial insight: adding water does NOT add any more solute. The number of moles of solute stays exactly the same; you have just spread them out over a larger volume. That is why weak coffee and strong coffee can contain the same total amount of coffee, one is just watered down."
+            },
+            {
+              "p": "Because the moles of solute do not change, there is a beautifully simple equation. Since moles = molarity × volume, and the moles before equal the moles after, the concentration times the volume must be the same before and after. This lets you figure out exactly how much concentrated 'stock' solution to start with, or how much water to add."
+            },
+            {
+              "formula": "M₁V₁ = M₂V₂    (1 = before dilution, 2 = after dilution)"
+            },
+            {
+              "p": "To use it, identify the three values you know and solve for the fourth. A common lab task is 'how much stock do I need?', where you solve for V₁. As long as both volumes use the same units (both mL or both L), you do not even have to convert them, because the units cancel on each side."
+            },
+            {
+              "note": "Key insight: only the concentration and volume change during dilution, never the moles of solute. Adding water always makes M smaller and V bigger, so check that your answer moved the right direction."
+            },
+            {
+              "trick": "'M-V equals M-V.' The product of concentration and volume is a constant during dilution, so once you write M₁V₁ = M₂V₂, just solve for the missing letter."
+            },
+            {
+              "example": {
+                "prompt": "You need 300 mL of 2.0 M solution, but you only have 6.0 M stock. What volume of the 6.0 M stock should you use?",
+                "steps": [
+                  "Identify values: M₁ = 6.0 M, V₁ = ?, M₂ = 2.0 M, V₂ = 300 mL",
+                  "Rearrange M₁V₁ = M₂V₂ to solve for V₁: V₁ = (M₂V₂) ÷ M₁",
+                  "V₁ = (2.0 M × 300 mL) ÷ 6.0 M = 600 ÷ 6.0",
+                  "V₁ = 100 mL (then add water up to 300 mL total)"
+                ],
+                "answer": "100 mL of the 6.0 M stock"
+              }
+            }
+          ]
+        },
+        {
+          "id": "acids-bases-and-ph",
+          "title": "Acids, Bases, and pH",
+          "blocks": [
+            {
+              "p": "Acids and bases are two opposite personalities in chemistry. An acid releases hydrogen ions (H⁺) when dissolved in water; think lemon juice, vinegar, and stomach acid, which taste sour. A base releases hydroxide ions (OH⁻); think soap and baking soda, which feel slippery and taste bitter. When you have more H⁺ than OH⁻ the solution is acidic, and when OH⁻ dominates it is basic."
+            },
+            {
+              "visual": "ph-scale"
+            },
+            {
+              "p": "The concentration of H⁺ can range over an enormous span, so chemists use the pH scale to make it manageable. pH runs from 0 to 14: below 7 is acidic, exactly 7 is neutral (pure water), and above 7 is basic. Each whole number is a factor of 10, so pH 3 is ten times more acidic than pH 4, and a hundred times more acidic than pH 5. Small pH changes mean big changes in acidity."
+            },
+            {
+              "formula": "pH = −log[H⁺]    (where [H⁺] is the hydrogen ion concentration in mol/L)"
+            },
+            {
+              "p": "When the hydrogen ion concentration is a clean power of ten, pH is easy: pH is just the exponent made positive. If [H⁺] = 1 × 10⁻³, the pH is 3. The negative in the formula is what flips the negative exponent into a positive pH, so lower pH numbers correspond to higher H⁺ concentration and stronger acids."
+            },
+            {
+              "note": "Common mistake: thinking a higher pH means more acidic. It is the reverse. LOWER pH = more acidic (more H⁺). Higher pH = more basic."
+            },
+            {
+              "trick": "For clean powers of ten, 'pH is the exponent, made positive.' If [H⁺] = 1 × 10⁻⁵, drop the sign and read off pH = 5."
+            },
+            {
+              "example": {
+                "prompt": "A solution has a hydrogen ion concentration [H⁺] of 1 × 10⁻⁵ mol/L. Find the pH and state whether it is acidic or basic.",
+                "steps": [
+                  "Use pH = −log[H⁺] = −log(1 × 10⁻⁵)",
+                  "The log of 1 × 10⁻⁵ is −5",
+                  "pH = −(−5) = 5",
+                  "A pH of 5 is below 7, so the solution is acidic"
+                ],
+                "answer": "pH = 5, acidic"
+              }
+            }
+          ]
+        },
+        {
+          "id": "neutralization-and-titration",
+          "title": "Neutralization and Titration",
+          "blocks": [
+            {
+              "p": "When an acid and a base are mixed, they cancel each other out in a reaction called neutralization. The H⁺ from the acid joins the OH⁻ from the base to form plain water (H₂O), and the leftover ions form a salt. This is why you can treat an acid spill with a base, or soothe acid indigestion with an antacid: the base neutralizes the excess acid."
+            },
+            {
+              "formula": "acid + base → salt + water    (for example: HCl + NaOH → NaCl + H₂O)"
+            },
+            {
+              "p": "Titration is a careful lab technique that uses neutralization to find an unknown concentration. You slowly add a base of known concentration to an acid of unknown concentration (or vice versa) until they exactly cancel, a point called the equivalence point, often signaled by an indicator changing color. By measuring the volumes, you can back-calculate the unknown concentration."
+            },
+            {
+              "formula": "for a 1-to-1 acid-base reaction:  M₁V₁ = M₂V₂    (1 = acid, 2 = base)"
+            },
+            {
+              "p": "That formula works when the acid and base react in a 1-to-1 ratio (one H⁺ for one OH⁻), like HCl and NaOH. You know three of the four values from the titration, so you solve for the fourth, usually the unknown concentration. Just as with dilution, matching volume units lets them cancel cleanly."
+            },
+            {
+              "note": "Key insight: the equivalence point is where moles of acid equal moles of base, NOT necessarily where pH = 7 for every reaction, and not where volumes are equal. It is about equal moles of H⁺ and OH⁻."
+            },
+            {
+              "trick": "'M-V of acid equals M-V of base.' At neutralization in a 1-to-1 reaction, concentration-times-volume of the acid matches concentration-times-volume of the base, so write M₁V₁ = M₂V₂ and solve for the missing piece."
+            },
+            {
+              "example": {
+                "prompt": "It takes 30 mL of 0.10 M NaOH to neutralize 25 mL of HCl. What is the concentration of the HCl?",
+                "steps": [
+                  "HCl and NaOH react 1-to-1, so use M₁V₁ = M₂V₂ with acid = 1 and base = 2",
+                  "Solve for the acid's concentration: M₁ = (M₂V₂) ÷ V₁",
+                  "M₁ = (0.10 M × 30 mL) ÷ 25 mL = 3.0 ÷ 25",
+                  "M₁ = 0.12 M (volume units mL cancel)"
+                ],
+                "answer": "0.12 M HCl"
+              }
+            }
+          ]
+        }
+      ]
+    }
   ]
 }

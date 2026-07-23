@@ -1,7 +1,11 @@
 {
   "id": "english-10",
   "title": "English 10",
-  "exam": { "name": "Coursework, essays & finals", "window": "Ongoing", "note": "Assessed through essays, reading responses, discussions, and semester finals rather than one exam. Watch for the district writing assessment." },
+  "exam": {
+    "name": "Coursework, essays & finals",
+    "window": "Ongoing",
+    "note": "Assessed through essays, reading responses, discussions, and semester finals rather than one exam. Watch for the district writing assessment."
+  },
   "overview": "A literature-and-composition course: you'll read across genres (novels, drama, poetry, nonfiction) and keep building the core skills — close reading, textual evidence, clear argumentative and analytical writing, and grammar. The specific book list varies by teacher; the skills below are what every unit is really training.",
   "how_to_study_course": [
     "Annotate as you read — mark claims, shifts, images, and questions. An annotated text makes every essay easier.",
@@ -10,29 +14,760 @@
     "Revise, don't just write once. Most English grades reward drafting: outline → draft → revise for argument, then proofread for grammar."
   ],
   "resources": [
-    { "label": "Purdue OWL — writing, grammar & MLA citation", "url": "https://owl.purdue.edu/owl/purdue_owl.html" },
-    { "label": "Khan Academy — Grammar", "url": "https://www.khanacademy.org/humanities/grammar" },
-    { "label": "CommonLit — reading passages & practice", "url": "https://www.commonlit.org/" },
-    { "label": "SparkNotes / LitCharts — study guides (a companion to reading, not a replacement)", "url": "https://www.litcharts.com/" }
+    {
+      "label": "Purdue OWL — writing, grammar & MLA citation",
+      "url": "https://owl.purdue.edu/owl/purdue_owl.html"
+    },
+    {
+      "label": "Khan Academy — Grammar",
+      "url": "https://www.khanacademy.org/humanities/grammar"
+    },
+    {
+      "label": "CommonLit — reading passages & practice",
+      "url": "https://www.commonlit.org/"
+    },
+    {
+      "label": "SparkNotes / LitCharts — study guides (a companion to reading, not a replacement)",
+      "url": "https://www.litcharts.com/"
+    }
   ],
   "units": [
-    { "id": "u1", "title": "Skill — Close Reading & Annotation", "typical_when": "All year",
-      "topics": ["Reading for meaning & structure", "Annotating a text", "Identifying tone & diction", "Author's purpose"],
-      "how_to_study": ["Mark the text every time — margins notes, underlines, questions", "Ask 'what is the author doing here, and why?'"] },
-    { "id": "u2", "title": "Skill — Literary Analysis", "typical_when": "All year",
-      "topics": ["Theme, motif, symbol", "Characterization", "Point of view & narrative structure", "Figurative language"],
-      "how_to_study": ["Distinguish theme (an idea) from plot (what happens)", "Support every claim about a character with a specific line"] },
-    { "id": "u3", "title": "Skill — Argumentative & Analytical Writing", "typical_when": "All year",
-      "topics": ["Thesis statements", "Evidence & commentary", "Essay structure & transitions", "Counterargument"],
-      "how_to_study": ["Write a one-sentence arguable thesis before drafting", "For each quote, add 2+ sentences of your own analysis"] },
-    { "id": "u4", "title": "Genre — Novel & Longer Fiction", "typical_when": "Fall & Spring",
-      "topics": ["Tracking character & theme across a whole book", "Chapter/section reading responses", "Historical & social context"],
-      "how_to_study": ["Keep a chapter log of key events + a page reference", "Notice how the theme develops from beginning to end"] },
-    { "id": "u5", "title": "Genre — Drama & Poetry", "typical_when": "Varies",
-      "topics": ["Reading a play (often Shakespeare in 10th grade)", "Dramatic structure & soliloquy", "Poetic devices, meter & imagery", "Explication"],
-      "how_to_study": ["Read drama aloud or watch a performance to unlock meaning", "For poetry, work line by line — sound and image carry meaning"] },
-    { "id": "u6", "title": "Genre — Nonfiction & Research", "typical_when": "Spring",
-      "topics": ["Analyzing arguments & rhetoric", "Evaluating sources", "Research process & MLA citation", "Synthesis"],
-      "how_to_study": ["Learn to spot a claim vs. evidence in an article", "Cite sources cleanly with the OWL MLA guide"] }
+    {
+      "id": "u1",
+      "title": "Skill — Close Reading & Annotation",
+      "typical_when": "All year",
+      "topics": [
+        "Reading for meaning & structure",
+        "Annotating a text",
+        "Identifying tone & diction",
+        "Author's purpose"
+      ],
+      "how_to_study": [
+        "Mark the text every time — margins notes, underlines, questions",
+        "Ask 'what is the author doing here, and why?'"
+      ],
+      "concepts": [
+        {
+          "id": "close-reading-for-meaning",
+          "title": "Close Reading: Slowing Down to See How a Text Works",
+          "blocks": [
+            {
+              "p": "Close reading means moving through a passage slowly and deliberately so you notice not just WHAT happens but HOW the writing creates its effect. Instead of racing to the end of the plot, you zoom in on a few sentences and ask what the author is doing with word choice, sentence length, punctuation, repetition, and order. The goal of English class is rarely to prove you read the book; it is to prove you can explain why a specific choice on the page matters."
+            },
+            {
+              "p": "Structure is part of meaning. Watch for where a text turns: a paragraph that starts with 'But' or 'Then,' a shift from long flowing sentences to short clipped ones, a change in verb tense, or a moment where the narrator suddenly steps back. These structural moves are signals. A writer who breaks a long sentence into three sharp fragments is usually forcing you to slow down and feel weight, tension, or shock."
+            },
+            {
+              "note": "The most common close-reading mistake is retelling the plot ('First she leaves, then she cries') instead of analyzing the craft. If your sentence could appear on the back cover of the book as a summary, it is not yet analysis. Analysis names a technique and its effect."
+            },
+            {
+              "trick": "The Three-Pass Rule. Read any important passage three times, each time asking one question only: Pass 1 = WHAT is literally happening? Pass 2 = HOW is it written (word choice, structure, sound)? Pass 3 = WHY did the author build it this way (what does it make me feel or understand)? Never analyze on the first pass; you can't see the craft until you already know the plot."
+            },
+            {
+              "example": {
+                "prompt": "Do a close reading of the famous opening line of a novel: 'It was the best of times, it was the worst of times.'",
+                "steps": [
+                  "Pass 1 (What): The narrator is describing a time period as both very good and very bad at once.",
+                  "Pass 2 (How): Notice the exact repetition of the sentence frame 'it was the ___ of times,' and the pairing of two opposite words, best and worst, placed side by side.",
+                  "Pass 3 (Why): Ask what that balanced, mirror-image structure does to the reader.",
+                  "Connect the technique to a meaning about the world of the book."
+                ],
+                "answer": "The line uses a balanced, repeating sentence frame to place 'best' directly against 'worst,' and that deliberate contradiction signals a world of extremes and division. The parallel structure makes the two opposites feel equally true at the same moment, preparing the reader for a story built on conflict between opposing sides rather than a single simple mood."
+              }
+            }
+          ]
+        },
+        {
+          "id": "annotating-a-text",
+          "title": "Annotation: Having a Conversation With the Page",
+          "blocks": [
+            {
+              "p": "Annotating means marking a text so your thinking is visible on the page. Good annotation is a conversation, not decoration. You react ('this feels ominous'), question ('why does she lie here?'), connect ('this echoes chapter 2'), and label techniques ('metaphor,' 'shift in tone'). When you come back to write an essay, your annotations become a map that leads you straight to your evidence."
+            },
+            {
+              "note": "Highlighting is not the same as annotating. A page glowing with yellow tells you nothing later, because you never recorded WHY a line mattered. The rule: never highlight without writing at least a few words in the margin next to it. If you can't say why you marked it, don't mark it."
+            },
+            {
+              "trick": "Use a small, consistent symbol key so marking is fast: circle words you don't know, box repeated words or images (they signal a motif), underline lines that feel important or beautiful, a star for a possible theme, and a question mark for anything confusing. Then, on every page, write at least one 'because' in the margin. The margin note is the real annotation; the mark just points to it."
+            },
+            {
+              "example": {
+                "prompt": "Annotate this sentence: 'The house had watched the family for a hundred years, patient and unblinking.'",
+                "steps": [
+                  "Mark the technique: the house is given human abilities (watching, patience, blinking), so label it 'personification.'",
+                  "React in the margin to the feeling it creates.",
+                  "Ask a question that could lead somewhere.",
+                  "Note a possible larger idea (a star for theme)."
+                ],
+                "answer": "Margin notes might read: 'PERSONIFICATION - house watches like a living thing.' Reaction: 'creepy, makes the house feel like a character.' Question: 'Is the house a threat or a witness?' Theme star: 'the past is always watching the present.' Those four quick notes turn one sentence into usable essay evidence."
+              }
+            }
+          ]
+        },
+        {
+          "id": "tone-and-diction",
+          "title": "Tone and Diction: How Word Choice Creates Attitude",
+          "blocks": [
+            {
+              "p": "Diction is an author's word choice; tone is the author's attitude toward the subject, revealed through that word choice. These two ideas are linked: writers build tone one word at a time. Calling a character 'slender' feels admiring; calling the same character 'scrawny' feels critical. The events are identical, but the diction points you toward how you should feel."
+            },
+            {
+              "note": "Do not confuse tone with mood. Tone is the WRITER'S attitude ('mocking,' 'reverent,' 'nostalgic'). Mood is the READER'S feeling, the atmosphere you experience ('tense,' 'peaceful,' 'gloomy'). A writer can use a calm tone to create a disturbing mood. Also avoid the weak, all-purpose words 'happy' and 'sad' when naming tone; reach for precise words like 'wistful,' 'bitter,' 'playful,' or 'detached.'"
+            },
+            {
+              "trick": "The Neutral-Swap Test. To prove that diction is creating the tone, replace a loaded word with a plain, neutral synonym and notice what feeling vanishes. Swap 'the soldiers were slaughtered' for 'the soldiers died,' and the outrage disappears. Whatever emotion drains out with the swap is exactly the tone the author's diction was building."
+            },
+            {
+              "example": {
+                "prompt": "Identify the tone and the diction that creates it: 'He shuffled into the meeting, mumbled an excuse, and slumped into the farthest chair.'",
+                "steps": [
+                  "List the loaded verbs: shuffled, mumbled, slumped.",
+                  "Run the Neutral-Swap: replace them with walked, said, sat.",
+                  "Notice what feeling disappears after the swap.",
+                  "Name the tone precisely, then name the diction that built it."
+                ],
+                "answer": "The tone is defeated and reluctant. The verbs 'shuffled,' 'mumbled,' and 'slumped' all suggest low energy and avoidance. Swapping in the neutral verbs 'walked, said, sat' removes the sense of shame and exhaustion entirely, which proves the tone was created by the writer's deliberate, downbeat diction rather than by the events themselves."
+              }
+            }
+          ]
+        },
+        {
+          "id": "authors-purpose",
+          "title": "Author's Purpose: What the Writer Wants From You",
+          "blocks": [
+            {
+              "p": "Every text is built to do something to its reader: change a belief, deliver information, create pleasure, or express a feeling. Identifying the author's purpose means asking, 'What does this writer want me to think, feel, or do by the end?' Purpose shapes every choice below it, so once you name the purpose, techniques like tone, structure, and diction start to make sense as tools serving that goal."
+            },
+            {
+              "p": "Purpose and audience travel together. A writer chooses different words for a children's picture book than for a political speech because the intended audience is different. When you can name both the target audience and the purpose, you can explain why the author made specific stylistic choices instead of just listing them."
+            },
+            {
+              "trick": "PIE'D. Most purposes fall into four buckets: Persuade, Inform, Entertain, Describe (express). After you guess, confirm it with the follow-up question, 'So what does the author want me to DO or FEEL because of this?' If you can't answer that, you've named a topic, not a purpose."
+            },
+            {
+              "example": {
+                "prompt": "State the likely purpose and audience of a short article titled 'Five Reasons Your Town Should Ban Plastic Bags.'",
+                "steps": [
+                  "Run PIE'D: the numbered reasons and the word 'should' point to Persuade.",
+                  "Ask the follow-up: what does the author want me to DO? Support a ban.",
+                  "Identify the audience: local residents and voters who can influence the decision.",
+                  "State how the purpose shapes the writing."
+                ],
+                "answer": "The purpose is to persuade, and the audience is local residents who could support a plastic-bag ban. The word 'should' and the list of 'reasons' signal an argument aimed at changing readers' minds and prompting action. Recognizing this purpose explains why the author would use forceful diction and stack evidence rather than simply describe plastic bags neutrally."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u2",
+      "title": "Skill — Literary Analysis",
+      "typical_when": "All year",
+      "topics": [
+        "Theme, motif, symbol",
+        "Characterization",
+        "Point of view & narrative structure",
+        "Figurative language"
+      ],
+      "how_to_study": [
+        "Distinguish theme (an idea) from plot (what happens)",
+        "Support every claim about a character with a specific line"
+      ],
+      "concepts": [
+        {
+          "id": "theme-motif-symbol",
+          "title": "Theme, Motif, and Symbol: From a Topic to a Statement",
+          "blocks": [
+            {
+              "p": "A topic is a single word or phrase a text is about, such as 'ambition' or 'friendship.' A theme is a complete statement the text makes about that topic, such as 'unchecked ambition destroys the people we love.' The difference is huge: a topic is a label, but a theme is an argument about life that you must support with evidence. Teachers want themes, not topics."
+            },
+            {
+              "p": "A motif is a concrete element that recurs across a text (an image, object, color, or phrase), and its repetition builds toward the theme. A symbol is a concrete thing that stands for an abstract idea, like a caged bird representing lost freedom. Motifs are about repetition; symbols are about representation. Often a repeated motif becomes a symbol that carries the theme."
+            },
+            {
+              "note": "The number-one theme mistake is writing a single word ('love') and calling it a theme. A one-word answer is a topic. If your theme has no verb and makes no claim, it isn't finished."
+            },
+            {
+              "trick": "Topic + What the Text Says About It = Theme. Take your one-word topic and force it into a full sentence that states a truth about life: 'love' becomes 'love demands sacrifice.' A second helper: the motif is the repeated brick; the theme is the whole house you build with those bricks."
+            },
+            {
+              "example": {
+                "prompt": "Turn the topic 'freedom' into a real theme statement using the caged-bird symbol.",
+                "steps": [
+                  "Start with the topic: freedom.",
+                  "Apply the formula: ask what the text seems to SAY about freedom.",
+                  "Fold in the symbol (the caged bird) as evidence for the claim.",
+                  "Write a full sentence with a verb and a claim, and avoid naming the plot."
+                ],
+                "answer": "Topic: freedom. Theme statement: 'True freedom is impossible to fully suppress, because even a caged creature keeps singing for the sky it cannot reach.' The caged bird works as a symbol of a spirit that longs for liberty, and the recurring image of its song is the motif that carries the theme."
+              }
+            }
+          ]
+        },
+        {
+          "id": "characterization",
+          "title": "Characterization: How Writers Build People",
+          "blocks": [
+            {
+              "p": "Characterization is how an author reveals who a character is. Direct characterization tells you outright ('She was generous'). Indirect characterization shows you through evidence and lets you infer ('She quietly paid for the stranger's groceries and left before anyone could thank her'). Skilled writers rely mostly on indirect characterization, so your job is to read the clues and draw the conclusion yourself."
+            },
+            {
+              "p": "Characters are also classified by depth and change. A round character is complex and multi-sided; a flat character has one or two traits. A dynamic character changes in a meaningful way by the end; a static character stays essentially the same. The character who changes most is usually where the theme lives, because their transformation shows what the story believes about life."
+            },
+            {
+              "trick": "STEAL for indirect characterization: Speech (what they say and how), Thoughts (their inner mind), Effect on others (how people react to them), Actions (what they do, especially under pressure), and Looks (appearance and body language). When you need evidence about a character, run down STEAL and you'll find five kinds of proof."
+            },
+            {
+              "example": {
+                "prompt": "Using STEAL, analyze what this reveals: 'Marcus laughed at the funeral, then apologized to no one in particular and left through a side door.'",
+                "steps": [
+                  "Actions: he laughs at a funeral and slips out a side door, avoiding notice.",
+                  "Speech: he apologizes 'to no one in particular,' so his words are aimed at no real listener.",
+                  "Infer the trait these clues point to rather than stating it directly.",
+                  "Decide whether this suggests a round, complex character."
+                ],
+                "answer": "Through indirect characterization, Marcus comes across as emotionally overwhelmed and socially uneasy rather than cruel. His laughter is an action out of place at a funeral, and apologizing 'to no one in particular' shows discomfort he can't direct. The author never labels him; STEAL lets the reader infer a round character wrestling with grief he doesn't know how to express."
+              }
+            }
+          ]
+        },
+        {
+          "id": "point-of-view-and-structure",
+          "title": "Point of View and Narrative Structure",
+          "blocks": [
+            {
+              "p": "Point of view is the position from which a story is told, and it controls what you are allowed to know. First person ('I') limits you to one character's perspective and can be biased. Third person limited follows one character's thoughts from outside. Third person omniscient knows everyone's minds. The choice is never neutral: a first-person narrator can hide information or lie, which shapes how much you should trust the story."
+            },
+            {
+              "p": "Structure is how events are arranged, which is different from the order in which they happened. A story can open 'in medias res' (in the middle of the action), use flashback to fill in the past, or use a frame (a story inside a story). When the arrangement differs from chronology, ask why the author withheld or delayed information, because that ordering is a deliberate tool for suspense or theme."
+            },
+            {
+              "note": "Never confuse the narrator with the author. The narrator is a voice the author created and may be biased, naive, or deliberately dishonest. An 'unreliable narrator' is one whose account we have reason to doubt, and spotting the gaps between what they claim and what really seems true is a sign of sophisticated reading."
+            },
+            {
+              "trick": "Ask, 'Who is holding the camera, and what can't it see?' Then count the pronouns: I / we means first person, you means second person, and he / she / they means third person. The 'what can't it see' half of the question is what turns POV-spotting into real analysis."
+            },
+            {
+              "example": {
+                "prompt": "Identify the point of view and its effect: 'I told them the fire was an accident. It was, mostly. There was no reason for anyone to check the garage.'",
+                "steps": [
+                  "Count the pronouns: 'I' signals first person.",
+                  "Look for hints the narrator may be hiding something.",
+                  "Notice the hedge words 'mostly' and the odd insistence about the garage.",
+                  "Explain how the POV shapes the reader's trust."
+                ],
+                "answer": "The point of view is first person, and it is likely unreliable. The narrator's hedge, 'It was, mostly,' plus the suspicious reassurance that 'no reason' exists to check the garage, hint that the account is incomplete. Because we only see through this narrator's eyes, the first-person POV lets the author create suspense by making the reader doubt the very story being told."
+              }
+            }
+          ]
+        },
+        {
+          "id": "figurative-language",
+          "title": "Figurative Language and Its Effect",
+          "blocks": [
+            {
+              "p": "Figurative language means words used beyond their literal meaning to create an image or feeling. The core devices are simile (a comparison using like or as), metaphor (a direct comparison stating one thing IS another), personification (giving human qualities to nonhuman things), and hyperbole (deliberate exaggeration). Naming the device is only step one; the real skill is explaining its effect on meaning."
+            },
+            {
+              "p": "The strongest analysis always answers 'so what?' A simile like 'her voice was like a slammed door' does more than compare; it makes the voice feel sudden, final, and unwelcoming. When you write about figurative language, move from label ('this is a metaphor') to effect ('which makes the reader feel...') to meaning ('which supports the idea that...')."
+            },
+            {
+              "trick": "Simile vs. metaphor: a simile has a bridge word, LIKE or AS ('brave as a lion'), while a metaphor removes the bridge and claims identity ('he was a lion'). No bridge word, direct claim = metaphor. And personification is easy to spot: a nonhuman thing performing a human action ('the wind whispered')."
+            },
+            {
+              "example": {
+                "prompt": "Identify the device and analyze its effect: 'The city swallowed him whole.'",
+                "steps": [
+                  "Name the device: the city is given the human/animal action of swallowing, and it's a metaphor comparing the city to a devouring creature.",
+                  "Describe the image it creates.",
+                  "Move to effect: what does 'swallowed whole' make the reader feel?",
+                  "Connect to a possible meaning about the character."
+                ],
+                "answer": "This is a metaphor (with personification) that treats the city as a creature that 'swallowed him whole.' The image makes the city feel enormous, predatory, and impossible to escape, and it makes the character seem small and powerless. The effect supports a meaning that the individual is overwhelmed and consumed by an indifferent urban world."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u3",
+      "title": "Skill — Argumentative & Analytical Writing",
+      "typical_when": "All year",
+      "topics": [
+        "Thesis statements",
+        "Evidence & commentary",
+        "Essay structure & transitions",
+        "Counterargument"
+      ],
+      "how_to_study": [
+        "Write a one-sentence arguable thesis before drafting",
+        "For each quote, add 2+ sentences of your own analysis"
+      ],
+      "concepts": [
+        {
+          "id": "thesis-statements",
+          "title": "Thesis Statements: The Arguable Heart of an Essay",
+          "blocks": [
+            {
+              "p": "A thesis is the single arguable claim your whole essay exists to prove. It must be debatable (a reasonable person could disagree), specific (not vague), and responsive (it directly answers the prompt). A thesis is not a fact ('Romeo and Juliet both die') and not a topic announcement ('This essay is about love'); it is a position you will defend with evidence."
+            },
+            {
+              "note": "The fastest way to test a thesis is the disagreement test: could someone argue the opposite? 'The novel is set in the 1920s' fails, because no one can disagree with a fact. 'The novel uses the glamour of the 1920s to expose the emptiness of chasing wealth' passes, because it makes a claim you must prove."
+            },
+            {
+              "trick": "The Although-Because formula for instant complexity: 'Although X, Y because Z.' Example: 'Although the character seems heroic, he is actually the story's true villain because his choices destroy everyone who trusts him.' The 'although' forces you to acknowledge complexity, and the 'because' forces you to preview your reasoning. A simpler analytical version: 'In [text], [author] uses [technique] to reveal [larger meaning].'"
+            },
+            {
+              "example": {
+                "prompt": "Write a strong literary thesis for the prompt: 'How does the setting shape the mood in a story you read?' (use a haunted-house story as the model).",
+                "steps": [
+                  "Reject the topic version: 'This essay is about the setting.'",
+                  "Reject the fact version: 'The story takes place in an old house.'",
+                  "Apply the analytical formula: name the technique (setting details) and the larger effect (mood/meaning).",
+                  "Make sure it passes the disagreement test."
+                ],
+                "answer": "'In the story, the author uses the decaying, isolated setting of the abandoned house to build a mood of dread that mirrors the narrator's own crumbling sanity.' This is arguable, specific, and directly answers the prompt: it names the technique (setting details), states the effect (a mood of dread), and links it to a deeper meaning (the narrator's mental state)."
+              }
+            }
+          ]
+        },
+        {
+          "id": "evidence-and-commentary",
+          "title": "Evidence and Commentary: Making Quotes Prove Something",
+          "blocks": [
+            {
+              "p": "Evidence is the specific proof from the text (a quotation or precise detail); commentary is your explanation of HOW that evidence proves your point. Beginning writers overload on evidence and skip commentary, but a quote never speaks for itself. The reader cannot see the connection in your head; you must spell out why the evidence supports your claim."
+            },
+            {
+              "note": "Avoid the 'quote bomb': dropping a quotation into a paragraph with no setup and no follow-up. Every quote needs to be introduced (who is speaking and when) and then unpacked. A good rule of thumb is that your commentary should be longer than the quote itself, roughly two sentences of analysis for every quoted line."
+            },
+            {
+              "trick": "The ICE method for using any quote: Introduce it (give context in your own words), Cite it (the exact quotation and citation), then Explain it (your commentary). To push your commentary deeper, ask 'So what?' after each sentence until you reach the theme; the last answer on that ladder is usually your best analysis."
+            },
+            {
+              "example": {
+                "prompt": "Build one body-paragraph chunk arguing that a character values pride over safety, using ICE with the line 'I would rather fall than be carried.'",
+                "steps": [
+                  "Introduce: set up who says it and the situation, in your own words.",
+                  "Cite: quote the line and (in a real essay) add the citation.",
+                  "Explain: run the 'So what?' ladder from the literal meaning to the theme.",
+                  "Check that the commentary is longer than the quote."
+                ],
+                "answer": "When his friends offer to help him escape, the character refuses, insisting, 'I would rather fall than be carried.' The word 'rather' frames falling as a deliberate choice, and pairing 'fall' (failure, even death) against 'be carried' (safety through help) shows he ranks his independence above his survival. So what? It reveals a pride so absolute that he treats accepting help as a worse fate than destruction, which supports the idea that his tragic flaw is a refusal to depend on anyone."
+              }
+            }
+          ]
+        },
+        {
+          "id": "essay-structure-and-transitions",
+          "title": "Essay Structure and Smooth Transitions",
+          "blocks": [
+            {
+              "p": "A standard analytical essay has three parts. The introduction hooks the reader, gives brief context, and ends with the thesis. Each body paragraph develops one point that supports the thesis. The conclusion returns to the thesis, shows what the argument added up to, and widens out to why it matters. Structure is not a cage; it is a way to make your thinking easy for a reader to follow."
+            },
+            {
+              "visual": "essay-structure"
+            },
+            {
+              "p": "Inside each body paragraph, follow a reliable order so no step gets skipped. A topic sentence states the paragraph's one point (and connects to the thesis), then evidence, then commentary, then a link back to the argument. If a paragraph is making two different points, split it in two; one controlling idea per paragraph."
+            },
+            {
+              "trick": "TEAL for body paragraphs: Topic sentence, Evidence, Analysis, Link. For transitions, keep a small bank sorted by job: to ADD (furthermore, in addition), to CONTRAST (however, on the other hand), to SHOW CAUSE (therefore, as a result), and to CONCLUDE (ultimately, in the end). A transition should name the LOGICAL relationship between ideas, not just say 'next.'"
+            },
+            {
+              "example": {
+                "prompt": "Outline a single body paragraph using TEAL to support the thesis that 'ambition blinds the character to danger.'",
+                "steps": [
+                  "Write a Topic sentence that states this paragraph's one point and ties to the thesis.",
+                  "Choose Evidence (a quote or detail) that fits.",
+                  "Plan the Analysis: explain how the evidence proves the topic sentence.",
+                  "Write a Link that connects back and transitions forward."
+                ],
+                "answer": "Topic: 'Early in the story, the character's hunger for success makes him ignore clear warnings.' Evidence: he brushes off a friend's caution with 'Nothing can touch me now.' Analysis: the absolute word 'nothing' shows he believes he is untouchable, which is exactly the blindness ambition creates. Link: 'This overconfidence, planted so early, is what makes his later downfall feel inevitable.' The link both closes the point and transitions toward the next paragraph on the downfall."
+              }
+            }
+          ]
+        },
+        {
+          "id": "counterargument",
+          "title": "Counterargument: Strengthening Your Case by Answering the Other Side",
+          "blocks": [
+            {
+              "p": "A counterargument is the strongest objection someone could raise against your thesis, and addressing it makes your own argument more convincing, not weaker. When you fairly acknowledge the opposing view and then explain why your position still holds, you show the reader you have considered the whole picture. Ignoring the obvious objection leaves a hole any reader will notice."
+            },
+            {
+              "p": "Counterargument has two moves: concede, then refute. First concede what is genuinely true or reasonable about the other side (this earns trust). Then refute by explaining why your interpretation is still stronger, more complete, or better supported by the text. The refutation is where you win the point, so it should be your sharpest reasoning."
+            },
+            {
+              "trick": "The 'Admittedly... however...' hinge. Start the concession with a signal like 'Admittedly,' 'It is true that,' or 'Some might argue,' then pivot with 'however,' 'yet,' or 'even so.' The word after the pivot begins your refutation. A simpler frame is 'They say / I say': first state what they say fairly, then say what you say."
+            },
+            {
+              "example": {
+                "prompt": "Write a counterargument-and-refutation for the thesis 'the character is a coward,' where the obvious objection is that he saves someone at the end.",
+                "steps": [
+                  "State the opposing view fairly, without strawmanning it.",
+                  "Use the 'Admittedly... however...' hinge.",
+                  "Refute by reinterpreting the evidence to support your original thesis.",
+                  "End back on your claim so the paragraph reinforces the thesis."
+                ],
+                "answer": "'Admittedly, the character does rush into the fire to save a stranger, an act that looks undeniably brave. However, he acts only after the crowd is watching and after doing nothing during every earlier private danger. His single public rescue reads less like courage than like a performance for an audience, which actually deepens the case that fear of others' judgment, not bravery, drives him.' The concession earns trust; the refutation turns the opponent's best evidence back into support for the thesis."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u4",
+      "title": "Genre — Novel & Longer Fiction",
+      "typical_when": "Fall & Spring",
+      "topics": [
+        "Tracking character & theme across a whole book",
+        "Chapter/section reading responses",
+        "Historical & social context"
+      ],
+      "how_to_study": [
+        "Keep a chapter log of key events + a page reference",
+        "Notice how the theme develops from beginning to end"
+      ],
+      "concepts": [
+        {
+          "id": "tracking-character-and-theme",
+          "title": "Tracking Character and Theme Across a Whole Book",
+          "blocks": [
+            {
+              "p": "A novel is too long to hold in your head all at once, so strong readers track patterns as they go. A character arc is the path a character travels from who they are at the start to who they become at the end, driven by a catalyst (the event that forces change). Watching this arc chapter by chapter lets you write about growth with real evidence instead of a vague sense that 'they changed.'"
+            },
+            {
+              "p": "Themes rarely announce themselves once; they surface repeatedly in small moments across the book. Keeping a running log, where each time a theme appears you jot the page number and a short quote, means that when the essay comes you already have a trail of evidence spanning the whole novel. This is how you prove a theme develops, not just that it exists."
+            },
+            {
+              "note": "Do not wait until the last page to start noticing. If you only look back after finishing, you'll remember the ending and forget the crucial early moments that make change meaningful. Track as you read, chapter by chapter, even if the notes are short."
+            },
+            {
+              "trick": "The Beginning-Catalyst-End frame for any character: write one sentence for who they are at the start, one for the event that changes them, and one for who they are at the end. If the start and end sentences are the same, the character is static; if they differ, you have found a dynamic arc worth an essay. For theme, keep a two-column log: page number and quote."
+            },
+            {
+              "example": {
+                "prompt": "Set up a character-arc tracker for a shy protagonist who becomes a confident leader over a novel.",
+                "steps": [
+                  "Write the Beginning self in one sentence with a supporting moment.",
+                  "Identify the Catalyst that forces the change.",
+                  "Write the End self in one sentence with a supporting moment.",
+                  "Note the theme this arc reveals."
+                ],
+                "answer": "Beginning: 'She avoids speaking in class and lets others decide for her (ch. 2, she stays silent during the vote).' Catalyst: 'When her friend is treated unfairly and no one else acts, she is forced to step up (ch. 9).' End: 'She organizes the group and speaks first without hesitation (ch. 20, she calls the meeting).' Because the start and end sentences clearly differ, she is a dynamic character, and her arc reveals a theme that courage is built through necessity, not born."
+              }
+            }
+          ]
+        },
+        {
+          "id": "reading-responses",
+          "title": "Reading Responses: Reacting Analytically, Not Just Summarizing",
+          "blocks": [
+            {
+              "p": "A reading response (or reader's journal) asks you to think ON the page about what you are reading, not to retell it. A strong response reacts, questions, connects, and evaluates: you notice something specific, respond to it, and reach toward what it means. The point is to develop the habit of analysis in low-stakes writing so it comes naturally in essays."
+            },
+            {
+              "note": "The trap is summary. 'In this chapter, they travel to the city and meet the uncle' is a plot recap, not a response. A quick test: if a classmate who read the same chapter learns nothing new from your writing, you summarized. A response adds YOUR thinking, question, or judgment to the events."
+            },
+            {
+              "trick": "Sentence stems force you past summary. Keep four on hand and finish them with specifics: 'This shows that...' (interpretation), 'I wonder why...' (question), 'This connects to...' (connection to another text, event, or your life), and 'This surprised me because...' (evaluation). Starting with a stem guarantees the sentence is analysis, not recap."
+            },
+            {
+              "example": {
+                "prompt": "Write an analytical reading-response entry (not a summary) about a chapter where a trusted mentor suddenly lies to the hero.",
+                "steps": [
+                  "Refuse the summary version ('The mentor lied to the hero').",
+                  "Pick a stem, such as 'This surprised me because...'",
+                  "Add a specific reason grounded in the text.",
+                  "Push toward meaning with a second stem, such as 'This shows that...'"
+                ],
+                "answer": "'This surprised me because the mentor has been the one character who always told the truth, so the lie makes me question everything he said earlier. I wonder whether he is protecting the hero or himself. This shows that the book may be building toward an idea that even the people we trust most have private motives, which makes the hero's coming decisions feel more dangerous.' Each sentence adds thinking rather than retelling the plot."
+              }
+            }
+          ]
+        },
+        {
+          "id": "historical-social-context",
+          "title": "Historical and Social Context: Reading the World Behind the Book",
+          "blocks": [
+            {
+              "p": "Context is the set of real-world conditions surrounding a text: when it was written, when and where it is set, and what social forces (laws, wars, class structures, prejudices, technologies) shaped its world. Understanding context turns confusing choices into meaningful ones. A character's inability to leave a marriage, own property, or speak freely may reflect the real constraints of that time and place, not a personal failing."
+            },
+            {
+              "p": "There are two contexts to keep separate: the world INSIDE the story (its setting) and the world of the AUTHOR (when they wrote and what they were reacting to). Sometimes an author writes about the past to comment on their own present. Noticing the gap between the two can reveal what the author is really criticizing or defending."
+            },
+            {
+              "trick": "The Five W's of Context: When was it written? Where and When is it set? What was happening in society then? Who was the intended audience? Why was it written at that moment? Answering these five before you analyze keeps you from judging characters by today's rules instead of theirs."
+            },
+            {
+              "example": {
+                "prompt": "Explain how context changes your reading of a character who cannot get a job and depends entirely on her marriage, in a story set in the 1800s.",
+                "steps": [
+                  "Apply the Five W's, especially the social conditions of the setting.",
+                  "Identify the real constraint that shaped her options.",
+                  "Reinterpret her behavior in light of that constraint, not modern assumptions.",
+                  "State how context deepens the theme."
+                ],
+                "answer": "In the 1800s setting, women were often legally and economically barred from most professions and from owning property, so the character's dependence on marriage reflects a real lack of options rather than laziness or weakness. Reading her through her own era's constraints reframes her choices as survival within a rigid system, which deepens a theme about how social structures, not personal flaws, can trap individuals."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u5",
+      "title": "Genre — Drama & Poetry",
+      "typical_when": "Varies",
+      "topics": [
+        "Reading a play (often Shakespeare in 10th grade)",
+        "Dramatic structure & soliloquy",
+        "Poetic devices, meter & imagery",
+        "Explication"
+      ],
+      "how_to_study": [
+        "Read drama aloud or watch a performance to unlock meaning",
+        "For poetry, work line by line — sound and image carry meaning"
+      ],
+      "concepts": [
+        {
+          "id": "reading-a-play-shakespeare",
+          "title": "Reading a Play and Decoding Shakespeare",
+          "blocks": [
+            {
+              "p": "A play is written to be performed, so reading one means supplying in your imagination what an audience would see and hear. Pay attention to act and scene divisions, stage directions (in italics or brackets), and who is present onstage, because a line means something different when spoken to a crowd versus muttered alone. Shakespeare especially rewards reading aloud, since the rhythm of the lines carries emotion the eye can miss."
+            },
+            {
+              "note": "Do not stop and panic at every unfamiliar word. Shakespeare's plots and feelings are usually clear from context; a running parallel-text (modern translation beside the original) helps, but read for the overall gist first, then go back to unpack the tricky lines. Getting stuck on one archaic word can make you lose the whole scene."
+            },
+            {
+              "trick": "Read any Shakespeare speech twice: once out loud for the rhythm and feeling, then slowly to paraphrase it line by line in your own words. When a line seems scrambled, remember he often flips normal word order for the meter, so hunt for the subject, verb, and object and rearrange them into plain English."
+            },
+            {
+              "example": {
+                "prompt": "Paraphrase the famous line: 'What's in a name? That which we call a rose / By any other name would smell as sweet.'",
+                "steps": [
+                  "Read it aloud once to feel the flow and catch the question-and-answer shape.",
+                  "Find the core statement inside the fancy phrasing.",
+                  "Rewrite it in plain modern English.",
+                  "State what idea the line is really arguing."
+                ],
+                "answer": "Paraphrase: 'Does a name really matter? A rose would smell just as sweet even if we called it something else.' In plain terms, the line argues that names and labels are artificial; the true nature of a thing (or a person) does not change just because of what family or title it carries. Reading it aloud reveals the reasoning move from a rhetorical question to its answer."
+              }
+            }
+          ]
+        },
+        {
+          "id": "dramatic-structure-and-soliloquy",
+          "title": "Dramatic Structure, Soliloquy, and the Speaking Voice",
+          "blocks": [
+            {
+              "p": "Most plays follow a five-part shape often drawn as Freytag's Pyramid: exposition (introduces the world and characters), rising action (conflict builds), climax (the turning point of highest tension), falling action (consequences unfold), and resolution or denouement (the ending settles). Locating where a scene sits on this arc tells you its job. A quiet scene right after the climax is doing 'falling action' work, showing fallout."
+            },
+            {
+              "p": "Playwrights use special speech types to reveal inner life. A soliloquy is a character alone onstage speaking their true, unfiltered thoughts to themselves (and to us). A monologue is a long speech delivered to other characters who are present. An aside is a quick remark to the audience that other characters onstage supposedly can't hear. Each gives the audience a different kind of access to what a character really thinks."
+            },
+            {
+              "trick": "Soliloquy = SOLO. If the character is alone onstage sharing private thoughts, it's a soliloquy and you can usually trust it as honest. If other characters are listening, it's a monologue (and the speaker might be performing). If it's a fast, sneaky comment tossed to the audience mid-scene, it's an aside."
+            },
+            {
+              "example": {
+                "prompt": "A character stands alone on an empty stage and says, 'To act, or to wait, that is what tears me apart.' Identify the speech type and explain what it reveals.",
+                "steps": [
+                  "Check who is onstage: the character is alone.",
+                  "Apply the SOLO rule to name the device.",
+                  "Explain why this device gives the audience special access.",
+                  "Note where this likely sits in the dramatic structure."
+                ],
+                "answer": "This is a soliloquy, because the character is alone and voicing private thoughts. Since no one else is listening, we can take the words as an honest window into inner conflict, here a paralyzing struggle between action and delay. A moment of such intense internal debate often appears near the climax, where the character's central decision reaches its breaking point."
+              }
+            }
+          ]
+        },
+        {
+          "id": "poetic-devices-meter-imagery",
+          "title": "Poetic Devices, Meter, and Imagery",
+          "blocks": [
+            {
+              "p": "Poetry compresses meaning into sound and image. Imagery is language that appeals to the senses (sight, sound, touch, taste, smell) to make an experience vivid. Sound devices shape how a poem feels: alliteration (repeated initial consonants), assonance (repeated vowel sounds), onomatopoeia (words that imitate sounds), and rhyme. Enjambment (a sentence running past the line break without pause) speeds a poem up, while end-stopped lines slow it down."
+            },
+            {
+              "p": "Meter is the pattern of stressed and unstressed syllables. The most common English foot is the iamb, an unstressed syllable followed by a stressed one (da-DUM). Five iambs in a row make iambic pentameter, the backbone of Shakespeare's verse. You don't need to scan every line, but hearing where the beat falls shows you which words a poet is emphasizing."
+            },
+            {
+              "trick": "An iamb sounds like a heartbeat: da-DUM. 'Pentameter' shares 'penta' with pentagon, so it's five beats. Iambic pentameter = five heartbeats per line (da-DUM da-DUM da-DUM da-DUM da-DUM). To scan a line, read it aloud and tap the louder syllables; the taps are the stresses."
+            },
+            {
+              "example": {
+                "prompt": "Scan the meter of this line and name it: 'Shall I compare thee to a summer's day?'",
+                "steps": [
+                  "Read it aloud and tap the stressed syllables.",
+                  "Mark the pattern of unstressed and stressed beats.",
+                  "Count the number of stressed beats.",
+                  "Name the meter using the heartbeat trick."
+                ],
+                "answer": "Reading aloud, the stresses fall as: shall-I / com-PARE / thee-TO / a-SUM / mer's-DAY, giving the pattern da-DUM da-DUM da-DUM da-DUM da-DUM. That is an unstressed-then-stressed foot (an iamb) repeated five times, so the line is written in iambic pentameter, five heartbeats per line, the standard meter of a Shakespearean sonnet."
+              }
+            }
+          ]
+        },
+        {
+          "id": "explication",
+          "title": "Explication: Unpacking a Poem Line by Line",
+          "blocks": [
+            {
+              "p": "Explication is a careful, line-by-line reading that explains how a poem creates its meaning. Rather than giving a general impression, you work through the poem in order, showing how word choice, imagery, sound, and structure build toward a central idea. A good explication always connects technique to meaning: never just 'there is a metaphor here,' but 'this metaphor makes X feel like Y, which supports the poem's idea that Z.'"
+            },
+            {
+              "p": "The most important thing to hunt for is the SHIFT: a place where the poem changes direction, tone, or subject. Shifts are often signaled by words like 'but,' 'yet,' or 'then,' by a stanza break, or by a move from past to present. The turn is usually where the poem's real point lives, so finding it is often the key to the whole explication."
+            },
+            {
+              "trick": "TPCASTT walks you through a poem in order: Title (predict from it), Paraphrase (put each part in plain words), Connotation (loaded words, imagery, devices), Attitude (the tone), Shifts (where it turns), Title again (reread it now that you understand more), Theme (the final statement about life). Working the steps in order keeps an explication organized instead of scattered."
+            },
+            {
+              "example": {
+                "prompt": "Explain how you would begin a TPCASTT explication of a short poem about a road that forks in a wood.",
+                "steps": [
+                  "Title: predict what the poem might be about from its title.",
+                  "Paraphrase: restate the situation plainly (a traveler must choose one of two paths).",
+                  "Connotation: note that the two roads work as a symbol for life choices.",
+                  "Shifts and Theme: look for the turn and state the life-idea it reveals."
+                ],
+                "answer": "Title: a forking road suggests a moment of decision. Paraphrase: a traveler comes to two paths and can only take one. Connotation: the diverging roads function as a symbol for choices in life, and the 'yellow wood' suggests autumn, a time of change. The shift comes when the speaker looks ahead to how they will describe this choice later, revealing a theme that we give our past decisions meaning by the stories we tell about them, even when the choice felt small at the time."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u6",
+      "title": "Genre — Nonfiction & Research",
+      "typical_when": "Spring",
+      "topics": [
+        "Analyzing arguments & rhetoric",
+        "Evaluating sources",
+        "Research process & MLA citation",
+        "Synthesis"
+      ],
+      "how_to_study": [
+        "Learn to spot a claim vs. evidence in an article",
+        "Cite sources cleanly with the OWL MLA guide"
+      ],
+      "concepts": [
+        {
+          "id": "analyzing-arguments-and-rhetoric",
+          "title": "Analyzing Arguments and Rhetorical Appeals",
+          "blocks": [
+            {
+              "p": "Rhetoric is the art of persuasion, and writers persuade using three classic appeals. Ethos appeals to credibility and character ('as a doctor with twenty years of experience...'). Pathos appeals to emotion ('imagine your own child going hungry'). Logos appeals to logic and evidence ('studies show a 40 percent decline'). Most persuasive texts blend all three, and your job is to name which appeal a passage uses and judge how well it works."
+            },
+            {
+              "p": "An argument is more than an opinion; it has parts. A claim is the position being argued, evidence is the support offered, and the reasoning (or warrant) is the unstated logic connecting the evidence to the claim. Strong analysis examines whether the evidence actually supports the claim and whether the hidden reasoning holds up, rather than just agreeing or disagreeing with the conclusion."
+            },
+            {
+              "trick": "Ethos, Pathos, Logos map to three quick questions. Ethos = 'Why should I trust who's talking?' Pathos = 'How does this make me feel?' Logos = 'What facts and logic back this up?' Memory hook: Ethos-ethics (credibility), Pathos-passion (emotion), Logos-logic (facts)."
+            },
+            {
+              "example": {
+                "prompt": "Identify the rhetorical appeal and evaluate it: 'Nine out of ten dentists recommend this toothpaste, and I've been a practicing dentist for thirty years.'",
+                "steps": [
+                  "Break the sentence into its persuasive moves.",
+                  "Match each move to ethos, pathos, or logos.",
+                  "Ask whether the evidence really supports the claim.",
+                  "Give a quick judgment of how convincing it is."
+                ],
+                "answer": "The line uses two appeals: 'Nine out of ten dentists recommend' is logos, an appeal to statistics, and 'I've been a practicing dentist for thirty years' is ethos, an appeal to the speaker's credibility. The logos is only as strong as the unstated details (which dentists, and asked how?), so while the appeals feel convincing, a critical reader should question whether the statistic is real evidence or just a persuasive-sounding number."
+              }
+            }
+          ]
+        },
+        {
+          "id": "evaluating-sources",
+          "title": "Evaluating Sources for Credibility",
+          "blocks": [
+            {
+              "p": "Not all sources deserve equal trust, so before using one you must evaluate it. Ask who wrote it and whether they have relevant expertise, when it was published and whether that still matters, and what the purpose is (to inform, to sell, or to persuade). A primary source is firsthand (an interview, an original document, raw data); a secondary source analyzes or reports on primary material. Both are useful, but you should know which you're holding."
+            },
+            {
+              "note": "A web address ending in .org does not automatically mean a source is unbiased or reliable; anyone can register one, and many advocacy groups use .org to push a viewpoint. Always check the actual author, the date, and whether claims are backed by evidence, instead of trusting the domain."
+            },
+            {
+              "trick": "The CRAAP test gives you five checks: Currency (how recent?), Relevance (does it fit your topic and level?), Authority (who is the author and what are their credentials?), Accuracy (is it supported and verifiable?), and Purpose (why was it made, and is there bias?). Run all five before citing anything."
+            },
+            {
+              "example": {
+                "prompt": "Use the CRAAP test to evaluate an undated blog post titled 'The Truth They Won't Tell You About Sleep' with no listed author.",
+                "steps": [
+                  "Currency: check for a date.",
+                  "Authority: check for a named, qualified author.",
+                  "Accuracy: check for evidence and correct details.",
+                  "Purpose: check the tone and title for bias, then give a verdict."
+                ],
+                "answer": "Currency fails: there is no date, so we can't tell if it's outdated. Authority fails: no author means no way to verify expertise. Accuracy is doubtful, and the misspelled 'Sleep' in the title signals careless editing. Purpose looks biased: 'The Truth They Won't Tell You' is a sensational, conspiratorial frame meant to provoke, not inform. The source fails the CRAAP test and should not be cited."
+              }
+            }
+          ]
+        },
+        {
+          "id": "research-process-and-mla",
+          "title": "The Research Process and MLA Citation",
+          "blocks": [
+            {
+              "p": "Research moves from broad to focused. You start with a wide topic, narrow it to a manageable research question, gather and evaluate sources, take organized notes (keeping track of where each fact came from), and only then draft. Skipping straight to writing usually produces a vague paper; a sharp research question ('How did X affect Y?') keeps your searching and your essay on target."
+            },
+            {
+              "p": "You must give credit for any idea, fact, or wording that is not your own, or you commit plagiarism, even if it was accidental. MLA style handles this with two connected parts: a brief in-text citation right where you use the source, and a full entry on the Works Cited page. The in-text citation points the reader to the matching full entry, so the two must always agree."
+            },
+            {
+              "trick": "MLA in-text = (Author Page), with no comma, like (Smith 42). A Works Cited entry answers, in order, 'Who. What. Where. When.' (author, title, container/source, date). And the safest rule of all: when in doubt, cite. It is never wrong to give credit; it is only wrong to skip it."
+            },
+            {
+              "example": {
+                "prompt": "Show the correct MLA in-text citation and Works Cited entry for a quote on page 42 of a book by Jane Smith titled 'Reading Closely,' published by Beacon Press in 2019.",
+                "steps": [
+                  "Write the in-text citation using (Author Page).",
+                  "Build the Works Cited entry in Who-What-Where-When order.",
+                  "Punctuate the title correctly (books are italicized).",
+                  "Confirm the in-text author matches the Works Cited author."
+                ],
+                "answer": "In-text: '...as one scholar notes, close reading rewards patience (Smith 42).' Works Cited entry: Smith, Jane. Reading Closely. Beacon Press, 2019. The 'Smith' in the parentheses matches the first word of the full entry, so a reader can move from the citation straight to the source, which is exactly what MLA is designed to allow."
+              }
+            }
+          ]
+        },
+        {
+          "id": "synthesis",
+          "title": "Synthesis: Weaving Multiple Sources Into a Conversation",
+          "blocks": [
+            {
+              "p": "Synthesis means combining several sources so they speak to one another around your own point, rather than summarizing each one separately. A synthesized paragraph might show where two authors agree, where a third disagrees, and what you conclude from the tension. The sources become a conversation you are moderating, and your thesis is your own voice within it."
+            },
+            {
+              "note": "The classic synthesis mistake is 'source-by-source' writing: one paragraph summarizing Source A, then one summarizing Source B, with no interaction between them. That is a list of summaries, not synthesis. Real synthesis organizes by IDEA, pulling relevant bits from multiple sources into the same paragraph to build one point."
+            },
+            {
+              "trick": "Think 'They say / They say / I say.' Present what two or more sources say, put them in relationship (agree, disagree, extend, complicate), and then add your own 'I say.' A synthesis matrix helps you prepare: a grid with your key questions down the side and each source across the top, so you can read across a row to see everyone's take on one idea."
+            },
+            {
+              "example": {
+                "prompt": "Write a synthesized sentence combining two sources on homework: Author A says homework builds discipline; Author B says too much homework causes burnout.",
+                "steps": [
+                  "Identify the shared idea both sources address (the value of homework).",
+                  "State what each source says (They say / They say).",
+                  "Put them in relationship, showing the tension.",
+                  "Add your own reasoned conclusion (I say)."
+                ],
+                "answer": "'While Author A argues that homework builds valuable discipline, Author B warns that excessive homework leads to burnout; taken together, these views suggest the issue is not whether homework exists but how much, pointing toward a balanced amount that develops responsibility without exhausting students.' The sentence weaves both sources into one idea and adds the writer's own conclusion, rather than summarizing each source in isolation."
+              }
+            }
+          ]
+        }
+      ]
+    }
   ]
 }
