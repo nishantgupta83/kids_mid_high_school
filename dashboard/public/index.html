@@ -32,6 +32,10 @@ h1 { font-family:Georgia,serif; color:var(--sage); font-size:22px; }
 .sbtn.on { background:var(--teal); border-color:var(--teal); color:#fff; }
 .pill { display:inline-block; border:1px solid var(--line); border-radius:10px; padding:0 8px; font-size:11px; color:var(--soft); }
 a { color:var(--teal); }
+a.tlink { color:var(--ink); text-decoration:none; border-bottom:2px solid var(--teal); }
+.lbtn { display:inline-block; margin-top:6px; margin-right:6px; border:1.5px solid var(--teal); color:var(--teal);
+        border-radius:8px; padding:4px 12px; font-size:13px; font-weight:700; text-decoration:none; }
+.lbtn:active { background:var(--teal); color:#fff; }
 footer { position:fixed; bottom:0; left:0; right:0; background:var(--card); border-top:1px solid var(--line);
          padding:6px 14px; font-size:11px; color:var(--soft); }
 footer.stale { background:var(--coral); color:#fff; }
@@ -131,14 +135,21 @@ function render() {
   $("#tPipeline").innerHTML = STATUSES.map(st => {
     const rows = opps.filter(o => effStatus(o) === st);
     if (!rows.length && (st === "enrolled" || st === "passed")) return "";
-    return `<div class="col-title">${SLABEL[st]} (${rows.length})</div>` + rows.map(o =>
-      `<div class="card">${badge(o.kid)} <b>${esc(o.title)}</b> — ${esc(o.org)}` +
+    return `<div class="col-title">${SLABEL[st]} (${rows.length})</div>` + rows.map(o => {
+      // Every card gets a real destination: the org's site, or (for email-sourced
+      // finds with no link) a Gmail search that opens the original school email.
+      const u = safeUrl(o.url) ||
+        "https://mail.google.com/mail/u/0/#search/" + encodeURIComponent('"' + (o.org || o.title) + '"');
+      const label = safeUrl(o.url) ? "Open site ↗" : "Find the email ↗";
+      return `<div class="card">${badge(o.kid)} ` +
+      `<a class="tlink" href="${esc(u)}" target="_blank" rel="noopener"><b>${esc(o.title)}</b></a> — ${esc(o.org)}` +
       `<div class="muted">${esc(o.eligibility?.reason || "")}${o.notes ? " · " + esc(o.notes) : ""}</div>` +
       (o.window?.deadline ? `<span class="due">deadline ${fmtD(o.window.deadline)}</span> ` : "") +
-      (safeUrl(o.url) ? `<a href="${esc(safeUrl(o.url))}" target="_blank" rel="noopener">details</a>` : `<span class="pill">from school email</span>`) +
+      `<a class="lbtn" href="${esc(u)}" target="_blank" rel="noopener">${label}</a>` +
       `<div class="statusrow">` + STATUSES.map(s =>
         `<button class="sbtn ${s===st?"on":""}" data-opp="${esc(o.id)}" data-s="${s}">${SLABEL[s]}</button>`).join("") +
-      `</div></div>`).join("");
+      `</div></div>`;
+    }).join("");
   }).join("") || '<div class="card muted">No opportunities yet.</div>';
 
   const watches = (c.watchlist || []).filter(w => w.state === "waiting" || w.state === "window_open");
