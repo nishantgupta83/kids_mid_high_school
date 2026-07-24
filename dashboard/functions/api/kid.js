@@ -30,8 +30,9 @@ export async function onRequestGet({ request, env }) {
     }
     cursor = page.list_complete ? undefined : page.cursor;
   } while (cursor);
-  const streak = await env.FAMILY_OPS.get("streak:dhruv");
-  return new Response(JSON.stringify({ homework: map, streak: streak ? JSON.parse(streak) : { count: 0, lastDate: null } }), { headers: H });
+  let streak = { count: 0, lastDate: null };
+  try { const raw = await env.FAMILY_OPS.get("streak:dhruv"); if (raw) streak = JSON.parse(raw); } catch {}
+  return new Response(JSON.stringify({ homework: map, streak }), { headers: H });
 }
 
 export async function onRequestPut({ request, env }) {
@@ -42,8 +43,11 @@ export async function onRequestPut({ request, env }) {
   const now = new Date().toISOString();
 
   if (b.allDone === true) {
-    const raw = await env.FAMILY_OPS.get("streak:dhruv");
-    let s = raw ? JSON.parse(raw) : { count: 0, lastDate: null };
+    // Homework is weekday-only; a tick dated on a weekend can't extend a school-day streak.
+    const wd = new Date(Date.parse(b.date + "T00:00:00Z")).getUTCDay();
+    if (wd === 0 || wd === 6) return new Response(JSON.stringify({ ok: true }), { headers: H });
+    let s = { count: 0, lastDate: null };
+    try { const raw = await env.FAMILY_OPS.get("streak:dhruv"); if (raw) s = JSON.parse(raw); } catch {}
     if (!s.lastDate || dayDiff(b.date, s.lastDate) > 0) {  // ignore same-day + backdated ticks
       if (s.lastDate && interveningAllWeekend(s.lastDate, b.date)) s = { count: s.count + 1, lastDate: b.date }; // consecutive school day
       else s = { count: 1, lastDate: b.date };              // first tick or a missed school day

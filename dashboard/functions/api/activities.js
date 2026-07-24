@@ -9,8 +9,9 @@ const H = { "Content-Type": "application/json", "X-Content-Type-Options": "nosni
 
 export async function onRequestGet({ request, env }) {
   if (!authorized(request, env)) return new Response("unauthorized", { status: 401 });
-  const raw = await env.FAMILY_OPS.get("activities:dhruv");
-  return new Response(JSON.stringify({ activities: raw ? JSON.parse(raw) : [] }), { headers: H });
+  let activities = [];
+  try { const raw = await env.FAMILY_OPS.get("activities:dhruv"); if (raw) activities = JSON.parse(raw); } catch {}
+  return new Response(JSON.stringify({ activities }), { headers: H });
 }
 
 export async function onRequestPut({ request, env }) {
@@ -23,7 +24,7 @@ export async function onRequestPut({ request, env }) {
   for (const a of list) {
     if (!a || typeof a !== "object") return new Response("bad item", { status: 400 });
     if (!ID.test(a.id) || typeof a.name !== "string" || a.name.length > 60) return new Response("bad item", { status: 400 });
-    if (!Array.isArray(a.days) || a.days.some(d => !Number.isInteger(d) || d < 1 || d > 7)) return new Response("bad item", { status: 400 });
+    if (!Array.isArray(a.days) || a.days.length < 1 || a.days.length > 7 || a.days.some(d => !Number.isInteger(d) || d < 1 || d > 7)) return new Response("bad item", { status: 400 });
     if (a.time != null && !TIME.test(a.time)) return new Response("bad item", { status: 400 });
     clean.push({ id: a.id, name: a.name.slice(0, 60), days: a.days, time: a.time ?? null, place: (a.place || "").slice(0, 60) });
   }
