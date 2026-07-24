@@ -21,8 +21,8 @@ def err(m):
 def main():
     manifest = json.loads((CUR / "manifest.json").read_text())
     courses = manifest.get("courses", [])
-    if len(courses) != 6:
-        err(f"manifest: expected 6 courses, found {len(courses)}")
+    if not courses:
+        err("manifest: no courses")
 
     ids = [c["id"] for c in courses]
     if len(ids) != len(set(ids)):

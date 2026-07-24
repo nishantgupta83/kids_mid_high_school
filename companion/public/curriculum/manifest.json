@@ -6,6 +6,7 @@
   "courses": [
     { "id": "ap-world", "title": "AP World History: Modern", "short": "AP World", "accent": "coral", "file": "ap-world.json" },
     { "id": "calc-ab", "title": "AP Calculus AB", "short": "Calc AB", "accent": "teal", "file": "calc-ab.json" },
+    { "id": "precalc-bridge", "title": "Precalc → Calculus AB Bridge", "short": "Precalc Bridge", "accent": "sage", "file": "precalc-bridge.json" },
     { "id": "pltw-biomed", "title": "PLTW Principles of Biomedical Science", "short": "Biomed", "accent": "sage", "file": "pltw-biomed.json" },
     { "id": "english-10", "title": "English 10", "short": "English", "accent": "sky", "file": "english-10.json" },
     { "id": "chemistry", "title": "Chemistry", "short": "Chem", "accent": "amber", "file": "chemistry.json" },

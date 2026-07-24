@@ -21,7 +21,8 @@ body { background:var(--paper); color:var(--ink); font:16px/1.5 -apple-system,'H
 .who { color:var(--soft); font-size:13px; margin-bottom:16px; }
 .grid { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
 .course { display:block; text-decoration:none; color:var(--ink); background:var(--card); border:1px solid var(--line);
-  border-left-width:5px; border-radius:12px; padding:13px 14px; }
+  border-left-width:5px; border-radius:12px; padding:13px 14px; box-shadow:0 2px 7px rgba(42,42,37,.08); transition:transform .08s; }
+.course:active { transform:scale(.98); }
 .course b { font-size:16px; display:block; }
 .course span { color:var(--soft); font-size:12px; }
 .acc-coral{border-left-color:var(--coral)} .acc-teal{border-left-color:var(--teal)}
@@ -37,7 +38,7 @@ h1.ctitle { font-family:Georgia,serif; font-size:22px; margin-bottom:2px; }
 .overview { color:var(--ink); background:var(--card); border:1px solid var(--line); border-radius:10px; padding:12px; margin:10px 0; }
 .h2 { font-family:Georgia,serif; font-size:17px; color:var(--sage); margin:18px 0 6px; }
 ul { margin:0 0 6px 18px; } li { margin:3px 0; }
-.unit { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:11px 13px; margin:8px 0; }
+.unit { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:12px 14px; margin:10px 0; box-shadow:0 2px 7px rgba(42,42,37,.07); }
 .unit .ut { font-weight:700; }
 .unit .when { float:right; color:var(--soft); font-size:12px; font-weight:400; }
 .tag { display:inline-block; background:var(--paper2); border-radius:8px; padding:1px 8px; font-size:12px; color:var(--soft); margin:3px 4px 0 0; }
@@ -52,17 +53,20 @@ ul { margin:0 0 6px 18px; } li { margin:3px 0; }
 .clink:active { background:var(--line); }
 .clink .arw { float:right; color:var(--teal); }
 /* Concept detail page */
-.concept-p { margin:11px 0; }
+.concept-p { margin:13px 2px; }
+/* Elevated cards: each special block reads as a distinct, raised panel with a
+   colored edge + soft shadow so the page has clear visual structure. */
 .formula { font-family:'Cambria Math','Times New Roman',Georgia,serif; font-size:18px; text-align:center;
-  background:var(--paper2); border-radius:10px; padding:12px 10px; margin:12px 0; overflow-x:auto; white-space:nowrap; }
-.cnote { background:#fff; border-left:4px solid var(--amber); border-radius:8px; padding:9px 12px; margin:12px 0;
-  font-size:14px; color:var(--ink); }
-.cnote::before { content:"Key idea"; display:block; font-size:11px; letter-spacing:.4px; text-transform:uppercase; color:var(--amber); font-weight:700; margin-bottom:3px; }
-.trick { background:#F1F6F0; border-left:4px solid var(--sage); border-radius:8px; padding:9px 12px; margin:12px 0; font-size:14px; color:var(--ink); }
-.trick::before { content:"Memory trick"; display:block; font-size:11px; letter-spacing:.4px; text-transform:uppercase; color:var(--sage); font-weight:700; margin-bottom:3px; }
-.viz-wrap { margin:12px 0; text-align:center; }
-.viz { width:100%; max-width:340px; height:auto; background:#fff; border:1px solid var(--line); border-radius:10px; padding:6px; }
-.ex { background:#fff; border:1px solid var(--line); border-radius:10px; padding:11px 13px; margin:12px 0; }
+  background:#fff; border:1px solid var(--line); border-top:3px solid var(--teal); border-radius:10px;
+  padding:13px 10px; margin:14px 0; overflow-x:auto; white-space:nowrap; box-shadow:0 2px 6px rgba(42,42,37,.07); }
+.cnote { background:#fff; border:1px solid var(--line); border-left:5px solid var(--amber); border-radius:10px; padding:11px 14px; margin:14px 0;
+  font-size:14px; color:var(--ink); box-shadow:0 2px 6px rgba(42,42,37,.07); }
+.cnote::before { content:"Key idea"; display:block; font-size:11px; letter-spacing:.5px; text-transform:uppercase; color:var(--amber); font-weight:800; margin-bottom:4px; }
+.trick { background:#F1F6F0; border:1px solid #DBE7DD; border-left:5px solid var(--sage); border-radius:10px; padding:11px 14px; margin:14px 0; font-size:14px; color:var(--ink); box-shadow:0 2px 6px rgba(42,42,37,.07); }
+.trick::before { content:"★ Memory trick"; display:block; font-size:11px; letter-spacing:.5px; text-transform:uppercase; color:var(--sage); font-weight:800; margin-bottom:4px; }
+.viz-wrap { margin:16px 0; text-align:center; }
+.viz { width:100%; max-width:340px; height:auto; background:#fff; border:1px solid var(--line); border-radius:12px; padding:8px; box-shadow:0 3px 10px rgba(42,42,37,.09); }
+.ex { background:#fff; border:1px solid var(--line); border-left:5px solid var(--teal); border-radius:10px; padding:12px 14px; margin:14px 0; box-shadow:0 2px 6px rgba(42,42,37,.07); }
 .ex .exq { font-weight:700; }
 .ex .exq::before { content:"Worked example"; display:block; font-size:11px; letter-spacing:.4px; text-transform:uppercase; color:var(--teal); font-weight:700; margin-bottom:3px; }
 .ex ol { margin:8px 0 8px 20px; } .ex ol li { margin:4px 0; }
@@ -289,6 +293,42 @@ const VISUALS = {
     box(60,106,200,30,"Body ¶: claim → evidence → analysis","#FBEEE6",VZ.accent)+
     box(60,150,200,30,"Conclusion","#EAF1EC",VZ.curve)+
     arr(160,50,160,63)+arr(160,94,160,105)+arr(160,136,160,149)),
+
+  // ---- Precalc → Calculus bridge ----
+  "unit-circle": () => { const cx=105, cy=98, r=68, a=Math.PI/4, px=cx+r*Math.cos(a), py=cy-r*Math.sin(a);
+    return svg(`<line x1="${cx-r-8}" y1="${cy}" x2="${cx+r+10}" y2="${cy}" stroke="${VZ.axis}"/>`+
+    `<line x1="${cx}" y1="${cy-r-10}" x2="${cx}" y2="${cy+r+8}" stroke="${VZ.axis}"/>`+
+    `<circle cx="${cx}" cy="${cy}" r="${r}" fill="none" stroke="${VZ.curve}" stroke-width="2.2"/>`+
+    `<line x1="${cx}" y1="${cy}" x2="${px.toFixed(1)}" y2="${py.toFixed(1)}" stroke="${VZ.accent}" stroke-width="2"/>`+
+    `<line x1="${px.toFixed(1)}" y1="${py.toFixed(1)}" x2="${px.toFixed(1)}" y2="${cy}" stroke="${VZ.axis}" stroke-dasharray="2 2"/>`+
+    `<circle cx="${px.toFixed(1)}" cy="${py.toFixed(1)}" r="3.6" fill="${VZ.accent}"/>`+
+    ctx(cx+22,cy-7,"θ",VZ.ink,12)+tx(px+6,py-4,"(cos θ, sin θ)",VZ.accent)+
+    tx(cx+r-16,cy+14,"(1,0)")+tx(cx+5,cy-r+4,"(0,1)")+tx(6,16,"radius 1 · angle θ in radians",VZ.ink)); },
+
+  "fn-transformation": () => { const m=mp(-3,3,-0.5,6), f=x=>0.5*x*x, g=x=>0.5*x*x+2;
+    return svg(ax(m,-3,3,-0.5,6)+`<polyline points="${poly(f,-3,3,m)}" fill="none" stroke="${VZ.curve}" stroke-width="2.2"/>`+
+    `<polyline points="${poly(g,-3,3,m)}" fill="none" stroke="${VZ.accent}" stroke-width="2.2"/>`+
+    arr(m.x(-1),m.y(f(-1)),m.x(-1),m.y(g(-1)))+
+    tx(m.x(1.5),m.y(f(1.5))+4,"f(x)",VZ.curve)+tx(m.x(1.3),m.y(g(1.3))-4,"f(x) + 2",VZ.accent)+tx(6,16,"add 2 outside → whole graph shifts UP 2",VZ.ink)); },
+
+  "exp-log": () => { const m=mp(-3,4,-3,4), e=x=>Math.exp(x), ln=x=>Math.log(x);
+    return svg(ax(m,-3,4,-3,4)+`<polyline points="${poly(x=>x,-3,4,m)}" fill="none" stroke="${VZ.axis}" stroke-dasharray="3 3"/>`+
+    `<polyline points="${poly(e,-3,1.35,m)}" fill="none" stroke="${VZ.curve}" stroke-width="2.2"/>`+
+    `<polyline points="${poly(ln,0.06,4,m)}" fill="none" stroke="${VZ.accent}" stroke-width="2.2"/>`+
+    tx(m.x(1.05),m.y(e(1.05))-2,"eˣ",VZ.curve)+tx(m.x(3),m.y(ln(3))+4,"ln x",VZ.accent)+tx(m.x(2.6),m.y(3.4),"y = x",VZ.soft||VZ.ink)+tx(6,16,"eˣ and ln x mirror over y=x (inverses)",VZ.ink)); },
+
+  "rational-asymptote": () => { const m=mp(-3,5,-4,4), f=x=>1/(x-1);
+    return svg(ax(m,-3,5,-4,4)+`<line x1="${m.x(1)}" y1="${m.y(-4)}" x2="${m.x(1)}" y2="${m.y(4)}" stroke="${VZ.accent}" stroke-dasharray="4 3"/>`+
+    `<polyline points="${poly(f,-3,0.75,m)}" fill="none" stroke="${VZ.curve}" stroke-width="2.2"/>`+
+    `<polyline points="${poly(f,1.25,5,m)}" fill="none" stroke="${VZ.curve}" stroke-width="2.2"/>`+
+    tx(m.x(1)+4,20,"x = 1 (vertical)",VZ.accent)+tx(m.x(1.8),m.y(0)-5,"y = 0 (horizontal)",VZ.ink)); },
+
+  "composition-machine": () => svg(
+    ctx(22,102,"x",VZ.ink,13)+arr(32,98,52,98)+
+    box(54,80,62,36,"g","#EAF1EC",VZ.curve)+arr(118,98,144,98)+ctx(131,90,"g(x)",VZ.ink,9)+
+    box(146,80,62,36,"f","#FBEEE6",VZ.accent)+arr(210,98,236,98)+
+    ctx(276,102,"f(g(x))",VZ.ink,12)+
+    ctx(160,150,"Composition: do g first, then f — the chain-rule order",VZ.ink,11)),
 };
 
 async function boot() {

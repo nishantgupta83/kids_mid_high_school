@@ -1,0 +1,1509 @@
+{
+  "id": "precalc-bridge",
+  "title": "Precalc → Calculus AB Bridge",
+  "exam": {
+    "name": "Foundations refresher",
+    "window": "Anytime",
+    "note": "Not a graded course — a refresher of the precalculus ideas Calculus AB assumes you already own. Work through these before and alongside Calc AB so the new material rests on solid ground."
+  },
+  "overview": "Calculus AB moves fast and assumes fluency with functions, algebra, exponentials and logs, and trigonometry. This bridge rebuilds those foundations for deep understanding — not just 'how' but 'why' — and points forward to exactly where each idea shows up in calculus (factoring for limits, composition for the chain rule, the difference quotient for derivatives).",
+  "how_to_study_course": [
+    "Don't skim what feels familiar — calculus punishes shaky algebra and trig. Redo the worked examples by hand until they're automatic.",
+    "For every precalc idea, notice the note that says where it reappears in Calc AB — that's the payoff.",
+    "Memorize the unit circle and the basic exponent/log rules cold; they're the vocabulary of calculus.",
+    "Do a few problems from each unit, then revisit the matching Calc AB concept and watch it click."
+  ],
+  "resources": [
+    {
+      "label": "Khan Academy — Precalculus",
+      "url": "https://www.khanacademy.org/math/precalculus"
+    },
+    {
+      "label": "Khan Academy — Trigonometry",
+      "url": "https://www.khanacademy.org/math/trigonometry"
+    },
+    {
+      "label": "Khan Academy — Algebra 2 (functions, exponentials, logs)",
+      "url": "https://www.khanacademy.org/math/algebra2"
+    },
+    {
+      "label": "The Organic Chemistry Tutor — Precalculus (YouTube)",
+      "url": "https://www.youtube.com/@TheOrganicChemistryTutor"
+    }
+  ],
+  "units": [
+    {
+      "id": "u1",
+      "title": "Unit 1 — Functions & Their Graphs",
+      "typical_when": "Start here",
+      "topics": [
+        "What a function is",
+        "Function notation f(x)",
+        "Domain & range",
+        "Piecewise functions",
+        "Even/odd symmetry"
+      ],
+      "how_to_study": [
+        "A derivative is itself a function — get comfortable with f(x) notation now",
+        "Domain restrictions cause the discontinuities calculus studies"
+      ],
+      "concepts": [
+        {
+          "id": "what-is-a-function",
+          "title": "What a Function Really Is",
+          "blocks": [
+            {
+              "p": "Forget the scary word for a second. A function is just a reliable machine: you drop one input in, and it hands you exactly one output back. Press the same button on a vending machine and you always get the same snack. That word exactly is the whole idea. If one input could give you two different outputs, the machine is unreliable, and mathematicians refuse to call it a function."
+            },
+            {
+              "p": "On a graph, this reliability shows up as the vertical line test. A vertical line represents one single input x. If that vertical line ever crosses the graph in two places, then that one input has two outputs, and the picture is not a function."
+            },
+            {
+              "formula": "Function rule: for every input x, there is exactly one output y."
+            },
+            {
+              "note": "Why calculus cares: the derivative you will meet in Calc AB is itself a function, written f'(x). It reads the slope of your curve at each x and returns exactly one slope value. A curve that fails the vertical line test (like a full circle) has no single slope at a given x, so it cannot be handled by one clean f(x). Everything in Calc AB assumes you are working with honest, single-output functions."
+            },
+            {
+              "trick": "One input, one output. A vending machine gives you one snack per button press, never two at once. If the picture ever stacks two outputs above one x, it is not a function."
+            },
+            {
+              "example": {
+                "prompt": "Is the circle x² + y² = 1 a function of x?",
+                "steps": [
+                  "Solve for y to see the outputs: y² = 1 - x², so y = ±√(1 - x²).",
+                  "The ± sign is the warning: pick an input, say x = 0. Then y = ±√(1) = ±1.",
+                  "That one input x = 0 produces two outputs, y = 1 and y = -1. A vertical line at x = 0 hits the circle twice."
+                ],
+                "answer": "No. The circle is not a function of x, because at least one input gives two outputs."
+              }
+            }
+          ]
+        },
+        {
+          "id": "function-notation-fx",
+          "title": "Reading and Using f(x) Notation",
+          "blocks": [
+            {
+              "p": "The symbol f(x) does not mean f times x. It means the output of machine f when you feed it the input x. Think of f( ) as a labeled box with an empty slot. Whatever you write in the slot gets substituted for x everywhere it appears in the rule."
+            },
+            {
+              "formula": "If f(x) = 2x + 3, then f(5) = 2(5) + 3 = 13."
+            },
+            {
+              "p": "The powerful move is that the slot can hold more than a number. You can feed in a whole expression, like x + h. You just substitute the entire expression wherever x used to sit, being careful with parentheses."
+            },
+            {
+              "note": "Why calculus cares: the very first thing you build in Calc AB is the difference quotient, (f(x + h) - f(x))/h, which becomes the derivative. Being fast and error-free at plugging x + h into f is a survival skill. Students who fumble f(x + h) struggle with every derivative from scratch."
+            },
+            {
+              "trick": "f(x) is a label with a slot. Whatever sits inside the parentheses gets copied into every x in the rule. Wrap it in parentheses first so squares and signs behave."
+            },
+            {
+              "example": {
+                "prompt": "For f(x) = x² - 1, find f(x + h).",
+                "steps": [
+                  "Copy the input x + h into every x: f(x + h) = (x + h)² - 1.",
+                  "Expand (x + h)² = x² + 2xh + h².",
+                  "So f(x + h) = x² + 2xh + h² - 1."
+                ],
+                "answer": "f(x + h) = x² + 2xh + h² - 1. In Calc AB you will subtract f(x) = x² - 1 from this and divide by h to build the derivative."
+              }
+            }
+          ]
+        },
+        {
+          "id": "domain-and-range",
+          "title": "Domain and Range: What Is Allowed In, What Comes Out",
+          "blocks": [
+            {
+              "p": "The domain is the set of all inputs the function is allowed to accept. The range is the set of all outputs it actually produces. Domain is about the entrance; range is about the exit. Most of the work is finding the domain, because a couple of operations are illegal and quietly shrink it."
+            },
+            {
+              "p": "There are two main domain killers to guard against. First, you can never divide by zero, so any input that makes a denominator zero is banned. Second, you cannot take an even root (like a square root) of a negative number and stay real, so the inside of a square root must be zero or positive."
+            },
+            {
+              "formula": "√x requires x ≥ 0.   1/x requires x ≠ 0."
+            },
+            {
+              "note": "Why calculus cares: the exact inputs you throw out of the domain are the interesting points in Calc AB. Where a denominator equals zero is precisely where you hunt for vertical asymptotes and discontinuities, and a function can only have a derivative where it is actually defined. Domain analysis is limit analysis in disguise."
+            },
+            {
+              "trick": "Domain is what you are allowed to feed in. Guard the two doors: no zero in a denominator, and nothing negative under a square root. Everything else is welcome."
+            },
+            {
+              "example": {
+                "prompt": "Find the domain of f(x) = √(x - 3) / (x - 5).",
+                "steps": [
+                  "Square root door: the inside must be ≥ 0, so x - 3 ≥ 0, giving x ≥ 3.",
+                  "Denominator door: the bottom cannot be 0, so x - 5 ≠ 0, giving x ≠ 5.",
+                  "Combine both conditions: x is at least 3, but never exactly 5."
+                ],
+                "answer": "Domain: x ≥ 3 and x ≠ 5, written as [3, 5) ∪ (5, ∞)."
+              }
+            }
+          ]
+        },
+        {
+          "id": "piecewise-functions",
+          "title": "Piecewise Functions: Different Rules on Different Turf",
+          "blocks": [
+            {
+              "p": "A piecewise function is one machine with several rules bolted together, each rule valid only on its own stretch of the number line. Before you can compute anything, you must first check which interval your input falls into, then use the matching rule. The condition comes first, the arithmetic second."
+            },
+            {
+              "formula": "f(x) = { x²      if x < 2 ;   3x - 1   if x ≥ 2 }"
+            },
+            {
+              "p": "The boundary point (here x = 2) is where you must be most careful, because the two rules meet there. Read the inequalities closely: x ≥ 2 includes 2, while x < 2 does not, so at x = 2 you use the second rule."
+            },
+            {
+              "note": "Why calculus cares: piecewise functions are the favorite setting for continuity and limit questions on the AP exam. You check whether the two pieces meet at the boundary by comparing the left-hand value to the right-hand value. If they disagree, there is a jump and the limit does not exist there. Piecewise is where limits from the left and from the right earn their keep."
+            },
+            {
+              "trick": "Read the condition first, then pick the rule. It is like choosing which line to stand in based on the ticket in your hand, before you do anything else."
+            },
+            {
+              "example": {
+                "prompt": "For the f above, find f(1), f(2), and f(4).",
+                "steps": [
+                  "f(1): since 1 < 2, use x². So f(1) = 1² = 1.",
+                  "f(2): since 2 ≥ 2, use 3x - 1. So f(2) = 3(2) - 1 = 5.",
+                  "f(4): since 4 ≥ 2, use 3x - 1. So f(4) = 3(4) - 1 = 11.",
+                  "Bonus continuity check at x = 2: the left piece x² approaches 2² = 4, but the right piece gives 5. They disagree, so there is a jump at x = 2."
+                ],
+                "answer": "f(1) = 1, f(2) = 5, f(4) = 11, and there is a jump discontinuity at the boundary x = 2."
+              }
+            }
+          ]
+        },
+        {
+          "id": "even-odd-symmetry",
+          "title": "Even and Odd Symmetry",
+          "blocks": [
+            {
+              "p": "Some functions have built-in symmetry, and spotting it lets you understand a whole graph from just half of it. An even function is a mirror image across the y-axis: folding the graph along the y-axis, the two halves match. An odd function has point symmetry through the origin: spin the graph 180 degrees around (0, 0) and it lands on itself."
+            },
+            {
+              "formula": "Even: f(-x) = f(x).    Odd: f(-x) = -f(x)."
+            },
+            {
+              "p": "To test which one you have, replace every x with -x, simplify, and compare to the original. If you get back the same function, it is even. If you get the exact negative of the original, it is odd. If it is neither, then it is neither, and that is a perfectly valid answer."
+            },
+            {
+              "note": "Why calculus cares: symmetry is a shortcut generator. In Calc AB, the integral of an odd function over a balanced interval from -a to a is automatically 0, and an even function's integral over that interval is just twice the integral over 0 to a. Recognizing even or odd can turn a hard integral into a one-line answer."
+            },
+            {
+              "trick": "For pure power functions the exponent names the type: even powers (x², x⁴, and cosine) give even functions; odd powers (x, x³, and sine) give odd functions. Even exponent, even symmetry."
+            },
+            {
+              "example": {
+                "prompt": "Is f(x) = x³ - 4x even, odd, or neither?",
+                "steps": [
+                  "Replace x with -x: f(-x) = (-x)³ - 4(-x).",
+                  "Simplify: (-x)³ = -x³ and -4(-x) = +4x, so f(-x) = -x³ + 4x.",
+                  "Factor out -1: -x³ + 4x = -(x³ - 4x) = -f(x).",
+                  "Since f(-x) = -f(x), it matches the odd rule."
+                ],
+                "answer": "Odd. It has point symmetry through the origin, which fits because both terms use odd powers of x."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u2",
+      "title": "Unit 2 — Transformations of Functions",
+      "typical_when": "Foundations",
+      "topics": [
+        "Vertical & horizontal shifts",
+        "Stretches & compressions",
+        "Reflections",
+        "Reading a transformed graph"
+      ],
+      "how_to_study": [
+        "Recognizing a shifted parent function speeds up graphing and limits",
+        "Inside the parentheses = horizontal (and backwards); outside = vertical"
+      ],
+      "concepts": [
+        {
+          "id": "vertical-and-horizontal-shifts",
+          "title": "Shifting a Graph Up, Down, Left, and Right",
+          "blocks": [
+            {
+              "p": "A shift, also called a translation, slides a graph without changing its shape. The trick is where the number sits relative to the function. A number added on the outside of f moves the graph up or down, exactly as you would guess. A number added on the inside, next to the x, moves the graph left or right, and here is the twist: it moves the opposite way from what the sign suggests."
+            },
+            {
+              "visual": "fn-transformation"
+            },
+            {
+              "formula": "f(x) + k shifts up k;   f(x) - k shifts down k.   f(x - h) shifts right h;   f(x + h) shifts left h."
+            },
+            {
+              "p": "Why is the inside shift backwards? Because to get the same output as before, you now have to feed the function a different input. If the rule is f(x - 3), then to reach the value f once produced at input 0, you must supply x = 3. Every feature slides 3 to the right, even though you see a minus sign."
+            },
+            {
+              "note": "Why calculus cares: reading a graph fluently is half of Calc AB. Free-response problems constantly show you the graph of a function or its derivative and ask you to reason about a shifted version. Knowing that inside changes act backwards keeps you from flipping the whole analysis the wrong direction."
+            },
+            {
+              "trick": "Outside is obvious: up or down as written. Inside is inside-out: x - 3 moves right, x + 3 moves left. The x is stubborn and does the opposite of its sign."
+            },
+            {
+              "example": {
+                "prompt": "Describe how y = √(x + 2) - 3 is built from the parent y = √x.",
+                "steps": [
+                  "Inside change: x + 2 means shift left 2 (opposite of the plus sign).",
+                  "Outside change: the - 3 means shift down 3.",
+                  "Track the starting corner: the parent starts at (0, 0), which moves to (0 - 2, 0 - 3)."
+                ],
+                "answer": "Shift the square-root graph left 2 and down 3; its corner lands at (-2, -3)."
+              }
+            }
+          ]
+        },
+        {
+          "id": "stretches-and-compressions",
+          "title": "Stretches and Compressions",
+          "blocks": [
+            {
+              "p": "Multiplying changes the size of a graph rather than its position. Multiply on the outside of f and you stretch or squash the graph vertically, pulling every y-value away from or toward the x-axis. Multiply on the inside, next to x, and you stretch or squash horizontally, and once again the inside behaves in a reciprocal, counterintuitive way."
+            },
+            {
+              "formula": "a·f(x): vertical stretch by factor a (when a > 1).   f(b·x): horizontal compression by factor 1/b (when b > 1)."
+            },
+            {
+              "p": "The horizontal factor is the reciprocal of the number you see. In f(2x), the graph is squeezed to half its width, not doubled, because the input reaches its old values twice as fast. If you find that surprising, you are paying attention; it is the same backwards behavior as inside shifts."
+            },
+            {
+              "note": "Why calculus cares: that inside constant b is exactly the extra factor the chain rule spits out. In Calc AB, the derivative of f(bx) is b·f'(bx), and that b is literally the horizontal-scaling number. Understanding scaling now makes the chain rule feel inevitable later."
+            },
+            {
+              "trick": "Outside multiply makes it taller (vertical stretch). Inside multiply makes it skinnier (horizontal compression), and by the reciprocal of the number you see."
+            },
+            {
+              "example": {
+                "prompt": "The point (6, 4) is on y = f(x). Where does it go on y = 2f(x), and on y = f(2x)?",
+                "steps": [
+                  "For 2f(x): the x stays 6, but the output doubles: 2·4 = 8. New point (6, 8).",
+                  "For f(2x): the output stays 4, but you need the inside 2x to equal the original input 6, so 2x = 6 gives x = 3.",
+                  "New point for f(2x): (3, 4)."
+                ],
+                "answer": "On 2f(x) the point becomes (6, 8) (twice as tall); on f(2x) it becomes (3, 4) (half as wide)."
+              }
+            }
+          ]
+        },
+        {
+          "id": "reflections",
+          "title": "Reflections: Flipping Across the Axes",
+          "blocks": [
+            {
+              "p": "A reflection is a flip that produces a mirror image. A negative sign on the outside of f flips the graph upside down over the x-axis, turning every output into its opposite. A negative sign on the inside, attached to x, flips the graph left-to-right over the y-axis, swapping which side of the plane the graph lives on."
+            },
+            {
+              "formula": "-f(x): reflect over the x-axis (up/down flip).   f(-x): reflect over the y-axis (left/right flip)."
+            },
+            {
+              "note": "Why calculus cares: reflections connect straight back to even and odd symmetry. An even function is unchanged by f(-x) because its y-axis reflection lands on itself, and an odd function satisfies f(-x) = -f(x), meaning a y-axis flip equals an x-axis flip. Seeing this equivalence deepens both ideas and helps with symmetry shortcuts in integration."
+            },
+            {
+              "trick": "Minus on the outside flips the vertical world (up/down). Minus on the inside flips the horizontal world (left/right). Outside touches y, inside touches x."
+            },
+            {
+              "example": {
+                "prompt": "Reflect f(x) = √x two ways: as -f(x) and as f(-x). Track the point (4, 2).",
+                "steps": [
+                  "-f(x) = -√x reflects over the x-axis: the point (4, 2) becomes (4, -2), now below the axis.",
+                  "f(-x) = √(-x) reflects over the y-axis: this needs -x ≥ 0, so the domain flips to x ≤ 0.",
+                  "The point (4, 2) becomes (-4, 2), the mirror image across the y-axis."
+                ],
+                "answer": "-f(x) = -√x sends (4, 2) to (4, -2); f(-x) = √(-x) sends (4, 2) to (-4, 2) and lives on the left side."
+              }
+            }
+          ]
+        },
+        {
+          "id": "combining-transformations",
+          "title": "Combining Transformations in the Right Order",
+          "blocks": [
+            {
+              "p": "Real problems stack several transformations at once, written in the general form y = a·f(b(x - h)) + k. Each letter has a job: a is a vertical stretch or flip, b is a horizontal stretch or flip, h is a horizontal shift, and k is a vertical shift. To apply them without tangling yourself up, keep the inside and outside jobs separate."
+            },
+            {
+              "formula": "y = a·f(b(x - h)) + k"
+            },
+            {
+              "p": "Outside the function, a and k act honestly and in the order written: multiply the output by a, then add k. Inside the function, b and h act on the input and behave backwards, so subtracting h moves right and multiplying by b compresses. A safe habit is to handle the input side first (shift and scale x), then the output side (scale and shift y)."
+            },
+            {
+              "note": "Why calculus cares: Calc AB expects you to move fluidly between an equation and its graph. When a problem hands you g(x) = -2f(x - 1) + 3 and asks about its slope or area, you must instantly picture the flip, the stretch, and the shifts. Order errors here quietly corrupt every later step."
+            },
+            {
+              "trick": "a and k are honest; b and h are tricksters. Outside acts as written on y; inside acts backwards on x. Do the input side first, then the output side."
+            },
+            {
+              "example": {
+                "prompt": "The point (2, 3) lies on y = f(x). Find its image on y = -2f(x - 1) + 3.",
+                "steps": [
+                  "Handle the input: the inside is x - 1, so set x - 1 = 2 to reuse the original input, giving x = 3.",
+                  "Handle the output: take the original output 3 and apply -2, giving -6.",
+                  "Then add the outside +3: -6 + 3 = -3.",
+                  "Combine: the new point is (3, -3)."
+                ],
+                "answer": "(2, 3) maps to (3, -3): shifted right 1, flipped and stretched vertically by -2, then raised by 3."
+              }
+            }
+          ]
+        },
+        {
+          "id": "reading-a-transformed-graph",
+          "title": "Reading a Transformed Graph Backward",
+          "blocks": [
+            {
+              "p": "The reverse skill is just as important: given a transformed graph or equation, name the transformations and track a few key points. The cleanest method is a point table. List several anchor points of the parent function, then push each one through the transformations to build the new graph, rather than trying to eyeball the whole curve at once."
+            },
+            {
+              "formula": "Each anchor point (x, y) becomes (x/b + h, a·y + k) under y = a·f(b(x - h)) + k."
+            },
+            {
+              "p": "Anchor points are the memorable spots of the parent function, such as (0, 0), (1, 1), and (4, 2) for the square root, or (-1, 1), (0, 0), (1, 1) for x². Transform each anchor separately and the shape takes care of itself, because transformations preserve the overall form."
+            },
+            {
+              "note": "Why calculus cares: on the free-response section you are frequently given a graph, not a formula, and asked to work with a related transformed graph. A quick point table lets you carry exact coordinates through the transformation so your later slope and area reasoning rests on real numbers, not a rough sketch."
+            },
+            {
+              "trick": "Build a table, not a masterpiece. Move each anchor point one transformation at a time; the shape follows the points, so you never have to freehand the whole curve."
+            },
+            {
+              "example": {
+                "prompt": "Given anchor points (0, 0) and (1, 1) on y = f(x), find their images on y = f(x - 3) + 2.",
+                "steps": [
+                  "Read the transformation: x - 3 shifts right 3, and + 2 shifts up 2. No stretch or flip here.",
+                  "Transform (0, 0): x goes 0 + 3 = 3, y goes 0 + 2 = 2, giving (3, 2).",
+                  "Transform (1, 1): x goes 1 + 3 = 4, y goes 1 + 2 = 3, giving (4, 3)."
+                ],
+                "answer": "The anchors move to (3, 2) and (4, 3); the whole graph slides right 3 and up 2 with its shape unchanged."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u3",
+      "title": "Unit 3 — Composition & Inverse Functions",
+      "typical_when": "Foundations",
+      "topics": [
+        "Composition f(g(x))",
+        "Decomposing a composite function",
+        "Inverse functions",
+        "Reflecting over y = x",
+        "When an inverse exists"
+      ],
+      "how_to_study": [
+        "Decomposing f(g(x)) IS the setup for the chain rule",
+        "Inverses matter for inverse-trig and log derivatives"
+      ],
+      "concepts": [
+        {
+          "id": "composition-fgx",
+          "title": "Composition: Feeding One Function Into Another",
+          "blocks": [
+            {
+              "p": "Composition chains two machines together so the output of one becomes the input of the next. The notation f(g(x)) means: first run x through g, then take whatever g produced and run it through f. The inner function goes first even though f is written on the outside, because you always work from the inside of the parentheses outward."
+            },
+            {
+              "visual": "composition-machine"
+            },
+            {
+              "formula": "(f ∘ g)(x) = f(g(x)) — the inner function g runs first, then f acts on its result."
+            },
+            {
+              "p": "Order matters and usually cannot be swapped. In general f(g(x)) is not the same as g(f(x)), because doing g then f is a different process than doing f then g. Always identify which function is nested inside before you compute."
+            },
+            {
+              "note": "Why calculus cares: the chain rule, one of the three pillars of Calc AB differentiation, is entirely about compositions. To differentiate f(g(x)) you must first recognize it as a composition and see clearly which part is inside and which is outside. If you cannot read composition, the chain rule is impossible."
+            },
+            {
+              "trick": "Inside-out, like getting dressed: g is inside the parentheses, so it goes first, the way socks go on before shoes. You cannot put the outer layer on until the inner one is done."
+            },
+            {
+              "example": {
+                "prompt": "For f(x) = x² + 1 and g(x) = 3x - 2, find f(g(2)) and the general formula f(g(x)).",
+                "steps": [
+                  "Do the inside first: g(2) = 3(2) - 2 = 4.",
+                  "Feed that into f: f(4) = 4² + 1 = 17.",
+                  "For the general formula, substitute g(x) into f: f(g(x)) = (3x - 2)² + 1."
+                ],
+                "answer": "f(g(2)) = 17, and f(g(x)) = (3x - 2)² + 1."
+              }
+            }
+          ]
+        },
+        {
+          "id": "decomposing-a-composite",
+          "title": "Decomposing a Composite: Finding the Inside and Outside",
+          "blocks": [
+            {
+              "p": "Decomposition is composition in reverse. You are handed a tangled expression and must split it into an inner function and an outer function. The reliable question to ask is: if I were computing this by hand for a specific x, what operation would I do last? That last operation is the outer function; everything it acts on is the inner function."
+            },
+            {
+              "formula": "y = (3x + 5)⁴  →  outer f(u) = u⁴, inner u = 3x + 5."
+            },
+            {
+              "p": "Look for what is wrapped up. Whatever sits under a root, inside a set of parentheses, or in an exponent is almost always the inner function. The action performed on that whole package (raising to a power, taking a root, applying sine) is the outer function."
+            },
+            {
+              "note": "Why calculus cares: the chain rule reads derivative-of-outer times derivative-of-inner. If you mislabel which piece is inside, the entire derivative is wrong. Decomposition is the single most important reading skill for the chain rule, so practicing it now pays off directly in Calc AB."
+            },
+            {
+              "trick": "Find the inside first: whatever is under a root, inside parentheses, or up in an exponent is the inner function. The button you would press last on a calculator is the outer function."
+            },
+            {
+              "example": {
+                "prompt": "Decompose h(x) = √(x² + 1) into an outer f and inner u.",
+                "steps": [
+                  "Ask what you would do last when evaluating: you square and add first, then take the square root at the very end.",
+                  "So the outer function is the square root: f(u) = √u.",
+                  "The inner function is what sits under the root: u = x² + 1.",
+                  "Check by recomposing: f(u(x)) = √(x² + 1), which matches."
+                ],
+                "answer": "Inner u = x² + 1, outer f(u) = √u. In Calc AB the chain rule will differentiate the outer √u and multiply by the derivative of the inner x² + 1."
+              }
+            }
+          ]
+        },
+        {
+          "id": "inverse-functions-concept",
+          "title": "Inverse Functions: The Undo Button",
+          "blocks": [
+            {
+              "p": "An inverse function reverses whatever the original function did. If f takes 2 and turns it into 10, then its inverse f⁻¹ takes 10 and turns it back into 2. Inputs and outputs simply swap roles. Because the inverse perfectly undoes the function, composing them in either order returns you to your starting number."
+            },
+            {
+              "formula": "If f(a) = b then f⁻¹(b) = a.   Also f(f⁻¹(x)) = x and f⁻¹(f(x)) = x."
+            },
+            {
+              "note": "Common mistake: f⁻¹ does not mean 1 over f. The little -1 here is an undo label, not an exponent, so f⁻¹(x) is generally not the same as 1/f(x). Mixing these up is one of the most frequent precalculus errors."
+            },
+            {
+              "note": "Why calculus cares: many core Calc AB functions are defined as inverses that undo each other, such as the natural log undoing eˣ, and arcsin undoing sine. The rules for differentiating these inverses all rest on this undo relationship, so the concept resurfaces constantly."
+            },
+            {
+              "trick": "Inverse means rewind. f⁻¹ undoes whatever f did, in reverse order, like untying your shoes before pulling off your socks. The last thing f did is the first thing the inverse undoes."
+            },
+            {
+              "example": {
+                "prompt": "For f(x) = 2x + 6, use the undo idea to find f⁻¹(10).",
+                "steps": [
+                  "Check what f does to some input: f(2) = 2(2) + 6 = 10.",
+                  "Since f sends 2 to 10, the inverse must send 10 back to 2.",
+                  "Therefore f⁻¹(10) = 2."
+                ],
+                "answer": "f⁻¹(10) = 2. In the next concept you will build the full inverse formula and confirm this the algebraic way."
+              }
+            }
+          ]
+        },
+        {
+          "id": "finding-an-inverse-algebraically",
+          "title": "Finding an Inverse and the y = x Mirror",
+          "blocks": [
+            {
+              "p": "To find an inverse formula, use the fact that inputs and outputs trade places. Write the function as y = f(x), swap every x with y and every y with x, and then solve the new equation for y. Rename that result f⁻¹(x). The swap is the whole idea; the algebra is just cleanup."
+            },
+            {
+              "formula": "Steps: write y = f(x) → swap x and y → solve for y → rename it f⁻¹(x)."
+            },
+            {
+              "p": "Graphically, this swap reflects the graph across the line y = x. Every point (a, b) on f becomes the point (b, a) on f⁻¹, which is the mirror image across that diagonal line. A neat consequence is that the domain of f becomes the range of f⁻¹, and vice versa."
+            },
+            {
+              "note": "Why calculus cares: knowing that f and f⁻¹ are reflections across y = x explains a beautiful Calc AB fact, that the slopes of a function and its inverse are reciprocals at corresponding points. The geometry you learn now becomes the inverse-function derivative rule later."
+            },
+            {
+              "trick": "Swap and solve. On the graph, everything flips across the mirror line y = x, so each point (a, b) becomes (b, a). Swap the coordinates, swap the roles."
+            },
+            {
+              "example": {
+                "prompt": "Find the inverse of f(x) = 2x + 6, then check it against f⁻¹(10).",
+                "steps": [
+                  "Write y = 2x + 6.",
+                  "Swap x and y: x = 2y + 6.",
+                  "Solve for y: x - 6 = 2y, so y = (x - 6)/2.",
+                  "Rename: f⁻¹(x) = (x - 6)/2. Check f⁻¹(10) = (10 - 6)/2 = 4/2 = 2."
+                ],
+                "answer": "f⁻¹(x) = (x - 6)/2, and f⁻¹(10) = 2, matching the undo answer from before."
+              }
+            }
+          ]
+        },
+        {
+          "id": "when-an-inverse-exists",
+          "title": "When Does an Inverse Even Exist?",
+          "blocks": [
+            {
+              "p": "Not every function can be inverted. For an inverse to be a function, the original must be one-to-one, meaning every output comes from exactly one input. If two different inputs share an output, then reversing the arrows would force one input to produce two outputs, which breaks the function rule."
+            },
+            {
+              "formula": "Passes the horizontal line test ⇔ one-to-one ⇔ the inverse is itself a function."
+            },
+            {
+              "p": "The test is visual: draw horizontal lines across the graph. If any horizontal line touches the graph more than once, two inputs share that output and the function is not one-to-one. This is the mirror image of the vertical line test, which checked whether something was a function in the first place."
+            },
+            {
+              "note": "Why calculus cares: this is exactly why the Calc AB inverse trig functions have restricted ranges. Sine repeats forever and fails the horizontal line test, so mathematicians chop its domain down to a stretch where it is one-to-one before defining arcsine. The same restrict-then-invert move appears throughout the course."
+            },
+            {
+              "trick": "Horizontal line test for inverses, vertical line test for functions. If any horizontal line hits the graph twice, there is no single inverse until you restrict the domain."
+            },
+            {
+              "example": {
+                "prompt": "Does f(x) = x² have an inverse? If not, how do we fix it?",
+                "steps": [
+                  "Test one-to-one: the horizontal line y = 4 meets the parabola at x = 2 and x = -2, since 2² = 4 and (-2)² = 4.",
+                  "Two inputs share the output 4, so f fails the horizontal line test and is not one-to-one over all real numbers.",
+                  "Fix it by restricting the domain to x ≥ 0, where each output comes from just one input.",
+                  "On that restricted domain the inverse is f⁻¹(x) = √x."
+                ],
+                "answer": "No inverse over all reals, because x² is not one-to-one; restricting to x ≥ 0 gives the inverse √x."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u4",
+      "title": "Unit 4 — Polynomials & Rational Functions",
+      "typical_when": "Foundations",
+      "topics": [
+        "Factoring",
+        "Finding zeros",
+        "End behavior",
+        "Vertical & horizontal asymptotes",
+        "Holes"
+      ],
+      "how_to_study": [
+        "Factoring is how you resolve 0/0 limits",
+        "Asymptotes and holes are limit questions in disguise"
+      ],
+      "concepts": [
+        {
+          "id": "factoring",
+          "title": "Factoring: Rewriting a Polynomial as a Product",
+          "blocks": [
+            {
+              "p": "Factoring rewrites a sum of terms as a product of simpler pieces, and it is the workhorse skill behind almost everything in this unit. A factored polynomial exposes hidden structure: it reveals the zeros at a glance and lets you cancel matching pieces between a top and a bottom. If you can factor quickly, the rest of the unit becomes reading rather than wrestling."
+            },
+            {
+              "formula": "Difference of squares: a² - b² = (a - b)(a + b).   Trinomial: x² - 5x + 6 = (x - 2)(x - 3)."
+            },
+            {
+              "p": "For a basic trinomial x² + bx + c, the fastest route is to find two numbers that multiply to c and add to b. Always check for a greatest common factor first, and always keep an eye out for a difference of squares, since those two patterns cover a huge share of problems."
+            },
+            {
+              "note": "Why calculus cares: the classic Calc AB limit that first gives 0/0 is solved by factoring the top and bottom and canceling the shared factor. You will factor expressions exactly like the ones here to evaluate those limits, so speed and accuracy at factoring translate straight into limit points on the exam."
+            },
+            {
+              "trick": "For x² + bx + c, find two numbers that multiply to c and add to b. Say it as multiply-to-c, add-to-b, and test factor pairs until both conditions hold."
+            },
+            {
+              "example": {
+                "prompt": "Factor x² - x - 12.",
+                "steps": [
+                  "You need two numbers that multiply to -12 and add to -1 (the coefficient of x).",
+                  "Test pairs of -12: the pair -4 and 3 multiplies to -12 and adds to -1.",
+                  "Write the factors: (x - 4)(x + 3).",
+                  "Check by expanding: x² + 3x - 4x - 12 = x² - x - 12."
+                ],
+                "answer": "x² - x - 12 = (x - 4)(x + 3). This same expression reappears in the zeros and holes concepts below."
+              }
+            }
+          ]
+        },
+        {
+          "id": "finding-zeros",
+          "title": "Finding Zeros: Where the Graph Crosses",
+          "blocks": [
+            {
+              "p": "A zero of a polynomial is an input where the output is 0. Graphically, these are the x-intercepts, the spots where the curve crosses or touches the x-axis. Zeros are also called roots. Once a polynomial is factored, its zeros are almost free to read off, because a product equals zero only when one of its factors equals zero."
+            },
+            {
+              "formula": "Zero Product Property: if (x - r) is a factor, then x = r is a zero."
+            },
+            {
+              "p": "The engine here is the zero product property: if several things multiply to give 0, then at least one of them must itself be 0. So you set each factor equal to zero separately and solve. Each factor hands you one zero."
+            },
+            {
+              "note": "Why calculus cares: zeros drive sign charts, which you use in Calc AB to decide where a function is positive or negative, increasing or decreasing. Later, finding where the derivative f'(x) = 0 is literally a zero-finding problem, and those zeros locate the maximums and minimums. The skill never retires."
+            },
+            {
+              "trick": "Set each factor equal to zero and solve, one at a time. A product is zero only if a factor is zero, so every factor gives you exactly one candidate zero."
+            },
+            {
+              "example": {
+                "prompt": "Find the zeros of f(x) = x² - x - 12.",
+                "steps": [
+                  "Factor first: x² - x - 12 = (x - 4)(x + 3).",
+                  "Set each factor to zero: x - 4 = 0 and x + 3 = 0.",
+                  "Solve each: x - 4 = 0 gives x = 4; x + 3 = 0 gives x = -3."
+                ],
+                "answer": "The zeros are x = 4 and x = -3, which are the x-intercepts of the graph."
+              }
+            }
+          ]
+        },
+        {
+          "id": "end-behavior",
+          "title": "End Behavior: What Happens at the Extremes",
+          "blocks": [
+            {
+              "p": "End behavior describes where a polynomial's graph heads as x runs far to the right toward +∞ and far to the left toward -∞. Out at the extremes, the term with the highest power completely dominates every other term, so you can ignore the smaller ones. Just two features of the leading term decide the picture: its degree (even or odd) and the sign of its coefficient."
+            },
+            {
+              "formula": "Leading term axⁿ controls the ends: even n → both ends go the same way; odd n → the ends go opposite ways; the sign of a sets which way."
+            },
+            {
+              "p": "An even degree makes both arms point the same direction, both up if the leading coefficient is positive and both down if it is negative, like a parabola. An odd degree makes the arms point opposite directions, like a line or x³. A negative leading coefficient flips whatever direction you would otherwise get."
+            },
+            {
+              "note": "Why calculus cares: end behavior is your first taste of a limit at infinity. Saying the graph rises to the right is exactly the Calc AB statement that the limit as x approaches ∞ equals ∞. The same leading-term comparison also produces the horizontal asymptotes of rational functions in the next concept."
+            },
+            {
+              "trick": "Only the leading term matters at the extremes. Even degree means the arms move together; odd degree means they split apart, like the graph of x³. A negative out front flips both arms."
+            },
+            {
+              "example": {
+                "prompt": "Describe the end behavior of f(x) = -2x³ + 5x - 1.",
+                "steps": [
+                  "Identify the leading term: -2x³, which has odd degree 3 and a negative coefficient.",
+                  "As x → +∞, x³ → +∞, and -2 times a huge positive is a huge negative, so f → -∞.",
+                  "As x → -∞, x³ → -∞, and -2 times a huge negative is a huge positive, so f → +∞."
+                ],
+                "answer": "The graph falls on the right (to -∞) and rises on the left (to +∞). In limit language, lim as x→∞ of f = -∞ and lim as x→-∞ of f = +∞."
+              }
+            }
+          ]
+        },
+        {
+          "id": "vertical-and-horizontal-asymptotes",
+          "title": "Asymptotes of Rational Functions",
+          "blocks": [
+            {
+              "p": "A rational function is one polynomial divided by another. Its graph often has invisible guide-lines called asymptotes that the curve approaches but never quite reaches. Vertical asymptotes come from the bottom: they occur where the denominator is zero (and the numerator is not), because dividing by something approaching zero sends the output shooting toward ±∞."
+            },
+            {
+              "visual": "rational-asymptote"
+            },
+            {
+              "formula": "Horizontal asymptote rules: deg top < deg bottom → y = 0; degrees equal → y = ratio of leading coefficients; deg top > deg bottom → no horizontal asymptote."
+            },
+            {
+              "p": "Horizontal asymptotes come from comparing the degrees far out where the leading terms dominate. If the bottom outranks the top, the fraction shrinks to 0. If the degrees tie, the graph levels off at the ratio of the leading coefficients. If the top outranks the bottom by one, the graph takes off along a slanted line instead."
+            },
+            {
+              "note": "Why calculus cares: every asymptote is a limit statement in disguise. A vertical asymptote says the limit is ±∞ as x approaches that value, and a horizontal asymptote says the limit as x approaches ∞ equals that height. In Calc AB you will write these exact limits, so learning to spot asymptotes now is limit practice in advance."
+            },
+            {
+              "trick": "Vertical: set the bottom equal to 0 to find the forbidden x-values. Horizontal: compare degrees. Bottom Bigger → zero; degrees Same → leading-coefficient ratio; Top bigger → none, it takes off."
+            },
+            {
+              "example": {
+                "prompt": "Find the vertical and horizontal asymptotes of f(x) = (3x² + 1)/(x² - 4).",
+                "steps": [
+                  "Vertical: set the bottom to 0: x² - 4 = 0 gives x = 2 and x = -2.",
+                  "Confirm these are genuine: the top at x = 2 is 3(4) + 1 = 13, which is not 0, so both are real vertical asymptotes.",
+                  "Horizontal: the top and bottom both have degree 2, so use the ratio of leading coefficients, 3/1 = 3."
+                ],
+                "answer": "Vertical asymptotes at x = 2 and x = -2; horizontal asymptote at y = 3."
+              }
+            }
+          ]
+        },
+        {
+          "id": "holes",
+          "title": "Holes: Removable Gaps and the 0/0 Limit",
+          "blocks": [
+            {
+              "p": "Not every trouble spot in a rational function is a vertical asymptote. Sometimes a factor appears in both the top and the bottom and cancels. When that happens the function is undefined at that x, but it does not blow up to infinity. Instead there is just a single missing point, a hole, where the graph would otherwise be perfectly smooth."
+            },
+            {
+              "formula": "If the factor (x - c) cancels from top and bottom, there is a hole at x = c, not a vertical asymptote."
+            },
+            {
+              "p": "To find the hole's location, cancel the common factor to simplify the function, then plug the missing x-value into the simplified expression. That gives the y-coordinate the graph is reaching for but never actually occupies. A factor left over in the denominator after canceling is a genuine vertical asymptote instead."
+            },
+            {
+              "note": "Why calculus cares: this is the headline Calc AB limit problem. Plug the hole's x-value into the original fraction and you get the indeterminate form 0/0, which looks like a dead end. Factoring, canceling, and then substituting is exactly the technique that rescues the limit and gives its value. Holes are where limits earn their fame."
+            },
+            {
+              "trick": "Cancel first, then decide: a factor that cancels makes a hole; a factor that stays in the bottom makes a wall (vertical asymptote). Cancels means hole, stays means wall."
+            },
+            {
+              "example": {
+                "prompt": "Analyze f(x) = (x² - x - 12)/(x - 4). Where is the hole, and what limit does it foreshadow?",
+                "steps": [
+                  "Factor the top: x² - x - 12 = (x - 4)(x + 3).",
+                  "Cancel the shared (x - 4): f(x) = x + 3 for every x except x = 4.",
+                  "The (x - 4) canceled, so x = 4 is a hole, not an asymptote.",
+                  "Find the hole's height by plugging x = 4 into the simplified x + 3: 4 + 3 = 7."
+                ],
+                "answer": "There is a hole at (4, 7). In Calc AB, substituting x = 4 into the original gives 0/0; factoring and canceling shows the limit as x → 4 equals 7."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u5",
+      "title": "Unit 5 — Exponential & Logarithmic Functions",
+      "typical_when": "Foundations",
+      "topics": [
+        "Exponential growth & decay",
+        "The number e",
+        "Logarithm rules",
+        "Solving exponential & log equations",
+        "Their graphs"
+      ],
+      "how_to_study": [
+        "eˣ is the function that is its own derivative — calculus loves it",
+        "Logs turn multiplication into addition, which simplifies hard derivatives"
+      ],
+      "concepts": [
+        {
+          "id": "exponential-growth-decay",
+          "title": "Exponential Growth and Decay",
+          "blocks": [
+            {
+              "p": "Think about a rumor spreading. On day one one person tells two friends, then each of them tells two more, and so on. The count does not go up by adding a fixed amount each step, it goes up by multiplying. Exponential functions are the math of repeated multiplication: the quantity changes by the same percentage every time period, not the same amount. That is the deep difference between exponential and linear. A linear function adds; an exponential function multiplies."
+            },
+            {
+              "formula": "y = a · bˣ    (a = starting amount, b = growth factor)"
+            },
+            {
+              "p": "If b is bigger than 1 the quantity balloons upward (growth). If b is between 0 and 1 the quantity shrinks toward zero (decay). A real-world version writes the base as (1 + r), where r is the percent change per period written as a decimal."
+            },
+            {
+              "formula": "y = a(1 + r)ᵗ    (r > 0 grows, r < 0 decays)"
+            },
+            {
+              "note": "Exponential change is proportional to how much you already have. That single fact is why calculus loves these functions: the rate of change of an exponential is a constant multiple of the function itself, which makes their derivatives about the cleanest you will ever meet."
+            },
+            {
+              "trick": "Base bigger than 1 balloons up; base below 1 deflates."
+            },
+            {
+              "example": {
+                "prompt": "A colony of 200 bacteria doubles every hour. How many are there after 5 hours?",
+                "steps": [
+                  "Starting amount a = 200, growth factor b = 2 (doubling), time in hours t = 5.",
+                  "Write y = 200 · 2ˣ with x = 5, so y = 200 · 2⁵.",
+                  "2⁵ = 32.",
+                  "y = 200 · 32."
+                ],
+                "answer": "6,400 bacteria"
+              }
+            }
+          ]
+        },
+        {
+          "id": "the-number-e",
+          "title": "The Number e (Natural Growth)",
+          "blocks": [
+            {
+              "p": "Imagine a bank that pays 100% interest a year. Compound it once and 1 dollar becomes 2 dollars. Compound it twice a year and you get 2 dollars and 25 cents. Compound it monthly, daily, every second... the amount keeps climbing but it does not run off to infinity, it closes in on one special number, about 2.71828. That number is e. It is what you get from compounding as often as possible, that is, growing continuously."
+            },
+            {
+              "formula": "e = lim (n→∞) (1 + 1/n)ⁿ ≈ 2.71828"
+            },
+            {
+              "p": "Because e is the base of continuous growth, it shows up any time something grows or decays smoothly rather than in discrete jumps: populations, radioactive decay, cooling coffee, continuously compounded money."
+            },
+            {
+              "formula": "A = P · eʳᵗ    (P = start, r = rate, t = time)"
+            },
+            {
+              "note": "The function eˣ is its own derivative, meaning its rate of change at every point equals its own height. No other function does this so perfectly, which is exactly why e is called the natural base and why it becomes the star of Calculus AB."
+            },
+            {
+              "trick": "e is the interest you would earn if the bank compounded your money every single instant."
+            },
+            {
+              "example": {
+                "prompt": "You invest 1,000 dollars at 5% interest compounded continuously for 3 years. What is it worth?",
+                "steps": [
+                  "Identify P = 1000, r = 0.05, t = 3.",
+                  "Find the exponent r · t = 0.05 · 3 = 0.15.",
+                  "A = 1000 · e raised to 0.15.",
+                  "e raised to 0.15 ≈ 1.1618, so A ≈ 1000 · 1.1618."
+                ],
+                "answer": "≈ 1,161.83 dollars"
+              }
+            }
+          ]
+        },
+        {
+          "id": "logarithm-rules",
+          "title": "Logarithms and Their Rules",
+          "blocks": [
+            {
+              "p": "A logarithm answers one question: what exponent do I need? If 2 to some power equals 8, the logarithm hands you that power, namely 3. So a log is simply the inverse operation of an exponential, the tool that pulls the exponent back out into the open."
+            },
+            {
+              "formula": "logₐ x = y    means    aʸ = x"
+            },
+            {
+              "p": "Logs have three rules that all come from the laws of exponents. Because exponents add when you multiply, logs turn multiplication into addition, division into subtraction, and powers into multiplication."
+            },
+            {
+              "formula": "log(mn) = log m + log n\nlog(m/n) = log m − log n\nlog(mᵖ) = p · log m\nlogₐ x = (ln x)/(ln a)   (change of base)"
+            },
+            {
+              "note": "The special log with base e is the natural log, written ln x. Its derivative is 1/x, the simplest possible, which is why ln appears everywhere in calculus. Also remember logs turn products into sums, and that is exactly the trick that tames messy expressions before you differentiate them."
+            },
+            {
+              "trick": "A logarithm is just an exponent wearing a disguise; strip the disguise off and ask what power it stands for."
+            },
+            {
+              "example": {
+                "prompt": "Expand log((x³ · y)/z) into separate logs.",
+                "steps": [
+                  "The top is a product x³ · y, so split it into a sum: log(x³) + log(y) − log(z).",
+                  "Bring the exponent 3 down front using the power rule: 3 log x.",
+                  "Combine all three pieces."
+                ],
+                "answer": "3 log x + log y − log z"
+              }
+            }
+          ]
+        },
+        {
+          "id": "solving-exp-log-equations",
+          "title": "Solving Exponential and Log Equations",
+          "blocks": [
+            {
+              "p": "Every equation is a lock, and solving it means finding the right key. When the variable is stuck up in an exponent, the key is a logarithm, because a log undoes an exponential. When the variable is trapped inside a log, the key is an exponential, because exponentiating undoes a log. You simply apply the inverse to both sides."
+            },
+            {
+              "formula": "If bˣ = c   then   x = log base b of c = (ln c)/(ln b)\nIf log base b of x = c   then   x = b to the c"
+            },
+            {
+              "p": "With logs there is one extra safety check. The inside of a log must be positive, because you cannot take the log of zero or a negative number. So after solving, throw out any answer that makes an argument zero or negative."
+            },
+            {
+              "note": "Those thrown-out answers are called extraneous solutions. Forgetting to check them is the single most common mistake on log problems, and calculus keeps this domain habit alive whenever you differentiate or integrate ln of an expression."
+            },
+            {
+              "trick": "Whatever is trapping the variable, apply its inverse to both sides, then check the leftovers are legal."
+            },
+            {
+              "example": {
+                "prompt": "Solve log₂ x + log₂ (x − 2) = 3.",
+                "steps": [
+                  "Combine the two logs with the product rule: log₂ (x(x − 2)) = 3.",
+                  "Rewrite in exponential form: x(x − 2) = 2³ = 8.",
+                  "Expand and set to zero: x² − 2x − 8 = 0.",
+                  "Factor: (x − 4)(x + 2) = 0, so x = 4 or x = −2.",
+                  "Reject x = −2 because log₂(−2) is undefined; keep x = 4."
+                ],
+                "answer": "x = 4"
+              }
+            }
+          ]
+        },
+        {
+          "id": "graphs-exp-log",
+          "title": "Graphs of Exponentials and Logs",
+          "blocks": [
+            {
+              "p": "Picture the graph of an exponential like y = 2ˣ. On the left it hugs the x-axis, creeping toward zero but never touching it, and on the right it rockets upward. That flat line it hugs is a horizontal asymptote at y = 0. The log graph is the same curve flipped across the line y = x, so it hugs a vertical asymptote at x = 0 instead."
+            },
+            {
+              "visual": "exp-log"
+            },
+            {
+              "formula": "y = bˣ : asymptote y = 0, passes through (0, 1)\ny = logᵦ... : asymptote x = 0, passes through (1, 0)"
+            },
+            {
+              "p": "Exponential and log functions are inverses, which is why they are mirror images across the line y = x. Whatever point (a, b) sits on the exponential, the flipped point (b, a) sits on the log."
+            },
+            {
+              "note": "Because they are inverses, their domain and range swap. The exponential accepts all real inputs and outputs only positive numbers; the log accepts only positive inputs and outputs all real numbers. Reading those asymptotes now is your first quiet preview of limits at infinity in calculus."
+            },
+            {
+              "trick": "Inverses are mirror twins across the line y = x, so just swap each coordinate pair to jump from one graph to the other."
+            },
+            {
+              "example": {
+                "prompt": "Compare three points on y = 2ˣ with the matching points on y = log₂ x.",
+                "steps": [
+                  "On y = 2ˣ: (0, 1), (1, 2), (3, 8).",
+                  "Swap each pair to land on the inverse graph y = log₂ x.",
+                  "Swapped points: (1, 0), (2, 1), (8, 3)."
+                ],
+                "answer": "The log points are the exponential points with coordinates reversed: (1, 0), (2, 1), (8, 3)."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u6",
+      "title": "Unit 6 — Trigonometry: the Unit Circle & Six Functions",
+      "typical_when": "Foundations",
+      "topics": [
+        "Radians vs degrees",
+        "The unit circle",
+        "sin, cos, tan and reciprocals",
+        "Key angle values"
+      ],
+      "how_to_study": [
+        "Calculus uses RADIANS — get fluent in them",
+        "Know the unit-circle values cold; trig derivatives depend on them"
+      ],
+      "concepts": [
+        {
+          "id": "radians-vs-degrees",
+          "title": "Radians vs Degrees",
+          "blocks": [
+            {
+              "p": "Degrees are a human invention, someone long ago chopped a circle into 360 slices. Radians are nature's own unit: one radian is the angle you sweep out when the arc along a unit circle is exactly as long as the radius. Since the whole way around a unit circle has length 2π, a full circle is 2π radians, and half a circle is π radians."
+            },
+            {
+              "formula": "π radians = 180°\ndegrees → radians: multiply by π/180\nradians → degrees: multiply by 180/π\narc length: s = rθ   (θ in radians)"
+            },
+            {
+              "p": "To convert, you just multiply by the right form of 1. Going to radians you multiply by π over 180; going back to degrees you multiply by 180 over π. The units you do not want cancel out."
+            },
+            {
+              "note": "Calculus uses radians and only radians. The beautiful fact that the derivative of sin x equals cos x is true only when x is measured in radians; in degrees an ugly extra factor appears. A calculator stuck in degree mode is the number one cause of wrong trig answers."
+            },
+            {
+              "trick": "π equals a straight line, 180°, half a pizza; anchor everything to that one fact."
+            },
+            {
+              "example": {
+                "prompt": "Convert 30° to radians, and convert 3π/4 radians to degrees.",
+                "steps": [
+                  "30° · (π/180) = 30π/180.",
+                  "Simplify 30/180 = 1/6, giving π/6.",
+                  "(3π/4) · (180/π) = (3 · 180)/4 = 540/4.",
+                  "540/4 = 135."
+                ],
+                "answer": "30° = π/6 radians, and 3π/4 radians = 135°"
+              }
+            }
+          ]
+        },
+        {
+          "id": "the-unit-circle",
+          "title": "The Unit Circle",
+          "blocks": [
+            {
+              "p": "Draw a circle of radius 1 centered at the origin. Now stand a ray at the positive x-axis and rotate it counterclockwise by an angle θ. Wherever the ray crosses the circle, that single point holds the answer to both cosine and sine at once: its x-coordinate is the cosine and its y-coordinate is the sine. The whole of trigonometry lives on this one circle."
+            },
+            {
+              "visual": "unit-circle"
+            },
+            {
+              "formula": "point on the unit circle = (cos θ, sin θ)\nwith   x² + y² = 1"
+            },
+            {
+              "p": "Because the point can land in any of the four quadrants, cosine and sine each take on positive or negative signs depending on where θ points. In quadrant one both are positive; after that the signs peel off one at a time."
+            },
+            {
+              "note": "Cosine is the horizontal coordinate and sine is the vertical coordinate, never mix them up. A common memory tool for the signs is All Students Take Calculus: in quadrants 1 to 4 respectively, All are positive, then Sine, then Tangent, then Cosine. This circle is the backbone of every trig limit and derivative you will meet."
+            },
+            {
+              "trick": "Cosine is the cozy horizontal x; sine climbs up the y."
+            },
+            {
+              "example": {
+                "prompt": "Find the coordinates of the point at angle θ = π/2 on the unit circle.",
+                "steps": [
+                  "θ = π/2 is a quarter turn, pointing straight up.",
+                  "The x-coordinate is cos(π/2) = 0.",
+                  "The y-coordinate is sin(π/2) = 1."
+                ],
+                "answer": "(0, 1)"
+              }
+            }
+          ]
+        },
+        {
+          "id": "sine-cosine-tangent",
+          "title": "Sine, Cosine, and Tangent",
+          "blocks": [
+            {
+              "p": "In a right triangle, sine, cosine, and tangent are just ratios of side lengths seen from one angle. Sine is the opposite side over the hypotenuse, cosine is the adjacent side over the hypotenuse, and tangent is opposite over adjacent. On the unit circle those same three become the y-coordinate, the x-coordinate, and the slope of the ray."
+            },
+            {
+              "formula": "sin θ = opp/hyp,  cos θ = adj/hyp,  tan θ = opp/adj = sin θ/cos θ"
+            },
+            {
+              "p": "The link tan θ = sin θ / cos θ is worth burning in. Tangent is really the slope of the rotating ray, rise over run, which is why it climbs steeply as the ray tips toward vertical."
+            },
+            {
+              "note": "Tangent is undefined wherever cos θ = 0, for example at θ = π/2, because you would be dividing by zero, the slope of a vertical line. These three functions are exactly the ones whose derivatives you will memorize first in Calculus AB, so knowing their unit-circle meaning pays off immediately."
+            },
+            {
+              "trick": "SOH CAH TOA: Sine is Opp over Hyp, Cosine is Adj over Hyp, Tangent is Opp over Adj."
+            },
+            {
+              "example": {
+                "prompt": "A right triangle has opposite side 3, adjacent side 4, and hypotenuse 5. Find sine, cosine, and tangent of the angle.",
+                "steps": [
+                  "sin θ = opp/hyp = 3/5.",
+                  "cos θ = adj/hyp = 4/5.",
+                  "tan θ = opp/adj = 3/4."
+                ],
+                "answer": "sin θ = 3/5, cos θ = 4/5, tan θ = 3/4"
+              }
+            }
+          ]
+        },
+        {
+          "id": "reciprocal-functions",
+          "title": "The Reciprocal Functions (csc, sec, cot)",
+          "blocks": [
+            {
+              "p": "There are three more trig functions, but they are not new ideas at all, they are simply the reciprocals of the first three, flipped upside down. Cosecant flips sine, secant flips cosine, and cotangent flips tangent."
+            },
+            {
+              "formula": "csc θ = 1/sin θ,   sec θ = 1/cos θ,   cot θ = 1/tan θ = cos θ/sin θ"
+            },
+            {
+              "p": "The pairing feels backward at first, because the co- names do not line up the way you expect. Secant, not cosecant, is the partner of cosine. The clean way to remember the match is to look at the third letter of each reciprocal name."
+            },
+            {
+              "note": "Watch the trap: sec θ = 1/cos θ, not 1/sin θ. Secant and tangent (and their squares) show up constantly in Calculus AB integrals, so getting these reciprocals automatic now saves real time later."
+            },
+            {
+              "trick": "The third letter names the partner: coSecant pairs with Sine, seCant pairs with Cosine, coTangent pairs with Tangent."
+            },
+            {
+              "example": {
+                "prompt": "If sin θ = 1/2, find csc θ. If cos θ = 1/2, find sec θ.",
+                "steps": [
+                  "csc θ = 1/sin θ = 1/(1/2).",
+                  "Dividing by a half means multiply by 2, so csc θ = 2.",
+                  "sec θ = 1/cos θ = 1/(1/2) = 2."
+                ],
+                "answer": "csc θ = 2 and sec θ = 2"
+              }
+            }
+          ]
+        },
+        {
+          "id": "key-angle-values",
+          "title": "Key Angle Values",
+          "blocks": [
+            {
+              "p": "You do not have to memorize the whole circle, just a handful of special angles that come from two famous triangles: the 45-45-90 and the 30-60-90. From those you get the exact sine and cosine of 0, π/6, π/4, π/3, and π/2. Everything else on the circle is a reflection of these."
+            },
+            {
+              "visual": "unit-circle"
+            },
+            {
+              "formula": "for θ = 0, π/6, π/4, π/3, π/2:\nsin θ = √0/2, √1/2, √2/2, √3/2, √4/2  =  0, 1/2, √2/2, √3/2, 1\ncos θ runs the same list in reverse"
+            },
+            {
+              "p": "Notice the gorgeous pattern hiding in the sines. If you write each value as the square root of 0, 1, 2, 3, 4 all divided by 2, the numbers line up perfectly as the angle grows. Cosine is the exact same list read backward, because cosine at an angle equals sine at its complement."
+            },
+            {
+              "note": "Pin down these anchors: sin(π/6) = 1/2, cos(π/3) = 1/2, sin(π/4) = cos(π/4) = √2/2, and sin(π/3) = cos(π/6) = √3/2. You will evaluate trig functions at exactly these angles over and over in calculus, so instant recall matters."
+            },
+            {
+              "trick": "The √n over 2 ladder: sine of 0, 30, 45, 60, 90 is √0/2, √1/2, √2/2, √3/2, √4/2."
+            },
+            {
+              "example": {
+                "prompt": "Evaluate sin(π/3) + cos(π/6) exactly.",
+                "steps": [
+                  "sin(π/3) = √3/2.",
+                  "cos(π/6) = √3/2.",
+                  "Add them: √3/2 + √3/2 = 2·(√3/2)."
+                ],
+                "answer": "√3"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u7",
+      "title": "Unit 7 — Trig Graphs, Identities & Equations",
+      "typical_when": "Foundations",
+      "topics": [
+        "Graphs of sin/cos/tan",
+        "Amplitude & period",
+        "Pythagorean identity",
+        "Solving basic trig equations"
+      ],
+      "how_to_study": [
+        "sin²θ + cos²θ = 1 simplifies countless calculus problems",
+        "Knowing the graphs predicts where derivatives are zero"
+      ],
+      "concepts": [
+        {
+          "id": "graphs-sin-cos",
+          "title": "Graphs of Sine and Cosine",
+          "blocks": [
+            {
+              "p": "As the ray spins around the unit circle, its height traces a smooth wave, that is the sine graph, and its horizontal position traces another wave, the cosine graph. They are the same shape, just shifted: sine starts at 0 and rises, cosine starts at its peak of 1. Both roll on forever, repeating every full turn."
+            },
+            {
+              "formula": "y = A sin(B(x − C)) + D\namplitude = |A|,  period = 2π/B,  phase shift = C,  midline y = D"
+            },
+            {
+              "p": "Two numbers control the shape. The amplitude A is how tall the wave rises above its middle line, and B controls how fast it repeats, giving a period of 2π divided by B. A bigger B squeezes more waves into the same space."
+            },
+            {
+              "note": "Amplitude is measured from the midline to a peak, not from the bottom to the top, so a wave with amplitude 3 spans 6 units total. This preview matters because in calculus the derivative of sine is cosine, meaning the cosine wave literally is the graph of sine's slope at every point."
+            },
+            {
+              "trick": "Amplitude is how far Above the midline it reaches; Period is 2π divided by B."
+            },
+            {
+              "example": {
+                "prompt": "Describe the amplitude and period of y = 3 sin(2x).",
+                "steps": [
+                  "Read A = 3, so the amplitude is 3.",
+                  "Read B = 2, so the period is 2π/2.",
+                  "2π/2 = π."
+                ],
+                "answer": "Amplitude 3 (oscillates between −3 and 3), period π (one full wave every π units)."
+              }
+            }
+          ]
+        },
+        {
+          "id": "graph-tangent",
+          "title": "The Graph of Tangent",
+          "blocks": [
+            {
+              "p": "Tangent behaves nothing like the gentle sine wave, because tangent is sine divided by cosine. Wherever cosine hits zero, you are dividing by zero and the graph shoots off to infinity, leaving a vertical asymptote. Between each pair of asymptotes tangent sweeps from way down low up to way up high."
+            },
+            {
+              "formula": "y = tan x : period π, vertical asymptotes at x = π/2 + πk, passes through (0, 0)"
+            },
+            {
+              "p": "Tangent also repeats faster than sine and cosine. Its period is π, not 2π, because the slope of the ray returns to the same value after only half a trip around the circle."
+            },
+            {
+              "note": "Tangent has no amplitude, its outputs run over all real numbers, so never ask for its height. The classic slip is giving tangent a period of 2π; it is π. Those vertical asymptotes are your first hands-on look at a function racing toward infinity, the exact language of infinite limits in calculus."
+            },
+            {
+              "trick": "Tangent takes the shorter trip, period π, and it rockets to infinity at every odd multiple of π/2."
+            },
+            {
+              "example": {
+                "prompt": "Find the two vertical asymptotes of y = tan x nearest to x = 0.",
+                "steps": [
+                  "Asymptotes occur where cos x = 0.",
+                  "The nearest angles with cosine zero are x = π/2 and x = −π/2."
+                ],
+                "answer": "x = π/2 and x = −π/2"
+              }
+            }
+          ]
+        },
+        {
+          "id": "pythagorean-identity",
+          "title": "The Pythagorean Identity",
+          "blocks": [
+            {
+              "p": "This is the most useful identity in all of trigonometry, and it comes for free from the unit circle. Every point on that circle satisfies x² + y² = 1. Since x is cosine and y is sine, replace them and you instantly get the identity that ties sine and cosine together forever."
+            },
+            {
+              "formula": "sin²θ + cos²θ = 1\ndivide by cos²θ:  tan²θ + 1 = sec²θ\ndivide by sin²θ:  1 + cot²θ = csc²θ"
+            },
+            {
+              "p": "The power of it is that if you know one of sine or cosine, you can always solve for the other, up to a sign you fix by checking the quadrant. The two cousin identities come from dividing the main one through by cos²θ or sin²θ."
+            },
+            {
+              "note": "This identity is just the circle equation x² + y² = 1 wearing trig clothing. In Calculus AB it becomes essential for trig substitution, where swapping sin²θ + cos²θ for 1 is what collapses a scary integral into something you can actually solve."
+            },
+            {
+              "trick": "It is the unit circle x² + y² = 1 in disguise; sine is y, cosine is x, and they always sum in squares to 1."
+            },
+            {
+              "example": {
+                "prompt": "If sin θ = 3/5 and θ is in quadrant one, find cos θ.",
+                "steps": [
+                  "Start from sin²θ + cos²θ = 1.",
+                  "cos²θ = 1 − (3/5)² = 1 − 9/25 = 16/25.",
+                  "cos θ = ±√(16/25) = ±4/5.",
+                  "Quadrant one has positive cosine, so keep the plus."
+                ],
+                "answer": "cos θ = 4/5"
+              }
+            }
+          ]
+        },
+        {
+          "id": "solving-trig-equations",
+          "title": "Solving Basic Trig Equations",
+          "blocks": [
+            {
+              "p": "Solving a trig equation flips the usual question around. Instead of asking what is the sine of this angle, you ask which angles have this sine. Because the circle repeats and is symmetric, a single value almost always comes from two different angles in one trip around, and infinitely many once you keep spinning."
+            },
+            {
+              "formula": "sin θ = 1/2  →  θ = π/6 + 2πk  or  θ = 5π/6 + 2πk   (k any integer)"
+            },
+            {
+              "p": "The method is: find the reference angle from the special values, then use the unit circle's symmetry to find its partner in the other quadrant where the sign matches. If you want every solution, tack on 2πk for sine and cosine, or πk for tangent, to account for full repetitions."
+            },
+            {
+              "note": "The most common mistake is stopping after the first angle and forgetting its twin. Solving equations like f'(x) = 0 for trig functions in calculus depends on catching every angle in the interval, so build the two-angle habit now."
+            },
+            {
+              "trick": "One value, two angles: find the reference angle, then use symmetry to find its twin in the matching-sign quadrant."
+            },
+            {
+              "example": {
+                "prompt": "Solve cos θ = 1/2 on the interval [0, 2π).",
+                "steps": [
+                  "The reference angle whose cosine is 1/2 is π/3.",
+                  "Cosine is positive in quadrants one and four.",
+                  "Quadrant one gives θ = π/3.",
+                  "Quadrant four gives θ = 2π − π/3 = 5π/3."
+                ],
+                "answer": "θ = π/3 and θ = 5π/3"
+              }
+            }
+          ]
+        },
+        {
+          "id": "reading-transformed-waves",
+          "title": "Reading a Transformed Wave",
+          "blocks": [
+            {
+              "p": "Real waves in the world are rarely centered on the x-axis with amplitude 1. They get stretched, lifted, and slid sideways. Two knobs handle the lifting and sliding: the +D at the end raises the whole wave up to a new midline, and the C inside the parentheses shifts it left or right."
+            },
+            {
+              "formula": "y = A sin(B(x − C)) + D\nmidline: y = D,  maximum: D + |A|,  minimum: D − |A|"
+            },
+            {
+              "p": "The midline is the horizontal line the wave oscillates around, sitting at y = D. From there the wave rises by the amplitude to its max and drops by the amplitude to its min. The phase shift C slides the starting point of the wave."
+            },
+            {
+              "note": "The horizontal shift has a sneaky sign: (x − C) moves the graph to the right by C, not left, because you need a bigger x to reach the same spot. This modeling of periodic motion, like a tide or a spring, is where the idea of a rate of change of a wave becomes a calculus question."
+            },
+            {
+              "trick": "D is the up-or-Down midline; C is the Creep sideways, moving right when the sign inside is minus."
+            },
+            {
+              "example": {
+                "prompt": "Find the midline, maximum, and minimum of y = 2 sin(x) + 3.",
+                "steps": [
+                  "Here A = 2 and D = 3.",
+                  "Midline is y = D = 3.",
+                  "Maximum is D + |A| = 3 + 2 = 5.",
+                  "Minimum is D − |A| = 3 − 2 = 1."
+                ],
+                "answer": "Midline y = 3, maximum 5, minimum 1 (amplitude 2, period 2π)."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u8",
+      "title": "Unit 8 — Foundations for Calculus",
+      "typical_when": "On-ramp to Calc AB",
+      "topics": [
+        "Average vs instantaneous rate of change",
+        "The difference quotient",
+        "What 'approaching' a value means",
+        "Continuity in plain language"
+      ],
+      "how_to_study": [
+        "The difference quotient (f(x+h)−f(x))/h becomes the derivative when h → 0",
+        "This unit is the direct bridge into Calc AB Units 1–2"
+      ],
+      "concepts": [
+        {
+          "id": "average-vs-instantaneous-rate",
+          "title": "Average vs Instantaneous Rate of Change",
+          "blocks": [
+            {
+              "p": "Drive from home to school in half an hour and cover 20 miles, and your average speed is 40 miles per hour, even if you were stopped at some lights and speeding at others. That is an average rate of change: total change divided by total time, the slope of the straight line connecting the start and end points. But at any single instant your speedometer shows something else entirely, your instantaneous rate right now."
+            },
+            {
+              "visual": "tangent-slope"
+            },
+            {
+              "formula": "average rate = (f(b) − f(a))/(b − a) = slope of the secant line\ninstantaneous rate = slope of the tangent line at one point"
+            },
+            {
+              "p": "The average rate always needs two points, a start and an end, and it draws a secant line, a line cutting across the curve. The instantaneous rate lives at a single point and touches the curve with a tangent line that just grazes it."
+            },
+            {
+              "note": "The whole of Calculus AB is built on turning the average rate into the instantaneous rate by sliding the two points together until they merge. That instantaneous rate is precisely what the derivative measures."
+            },
+            {
+              "trick": "Average rate is the whole trip read off the odometer; instantaneous rate is the speedometer needle at this very second."
+            },
+            {
+              "example": {
+                "prompt": "For f(x) = x², find the average rate of change from x = 1 to x = 3.",
+                "steps": [
+                  "Compute the endpoints: f(1) = 1 and f(3) = 9.",
+                  "Average rate = (f(3) − f(1))/(3 − 1) = (9 − 1)/(3 − 1).",
+                  "= 8/2."
+                ],
+                "answer": "4"
+              }
+            }
+          ]
+        },
+        {
+          "id": "difference-quotient",
+          "title": "The Difference Quotient",
+          "blocks": [
+            {
+              "p": "The difference quotient is just the slope formula in a clever disguise. Instead of naming two points x and another x, you name them x and x + h, where h is the small gap between them. Then rise over run becomes the change in f divided by h. This little expression is the engine that will build every derivative."
+            },
+            {
+              "visual": "secant-to-tangent"
+            },
+            {
+              "formula": "(f(x + h) − f(x))/h"
+            },
+            {
+              "p": "Read it as: go over by h, see how much the function climbed, and divide the climb by the step h. It is the slope of the secant line between the point at x and the point a distance h away."
+            },
+            {
+              "note": "As h shrinks toward 0, those two points slide together and the secant slope becomes the instantaneous slope. The most common algebra slip is not fully expanding f(x + h), so always substitute carefully. This whole setup is the literal definition of the derivative once you take the limit as h approaches 0."
+            },
+            {
+              "trick": "Plug, subtract, divide: plug in x + h, subtract f(x), then divide the whole thing by h."
+            },
+            {
+              "example": {
+                "prompt": "Compute and simplify the difference quotient for f(x) = x².",
+                "steps": [
+                  "Find f(x + h) = (x + h)² = x² + 2xh + h².",
+                  "Subtract f(x) = x²: (x² + 2xh + h²) − x² = 2xh + h².",
+                  "Divide by h: (2xh + h²)/h = 2x + h.",
+                  "As h approaches 0, this heads toward 2x, the slope at x."
+                ],
+                "answer": "2x + h  (which approaches 2x as h → 0)"
+              }
+            }
+          ]
+        },
+        {
+          "id": "approaching-a-value",
+          "title": "What Approaching a Value Means",
+          "blocks": [
+            {
+              "p": "A limit is about a journey, not a destination. Ask what value f(x) heads toward as x creeps closer and closer to some number a. You care about the trend of the function in the neighborhood around a, not what happens exactly at a. The function might even have a hole at a, and the limit can still exist, because you are watching where the graph is pointing, not where it lands."
+            },
+            {
+              "visual": "limit-hole"
+            },
+            {
+              "formula": "lim (x→a) f(x) = L  means  f(x) gets arbitrarily close to L as x nears a from both sides"
+            },
+            {
+              "p": "You have to sneak up from both directions, from the left and from the right. If both sides aim at the same height L, that height is the limit. If the two sides disagree, the limit does not exist there."
+            },
+            {
+              "note": "The function does not need to be defined at x = a for the limit to exist; the point itself can be missing. This idea of approaching is the foundation of the entire calculus course, because both the derivative and the integral are defined as limits."
+            },
+            {
+              "trick": "Sneak up on x = a from the left and the right; if both paths point at the same height, that height is the limit."
+            },
+            {
+              "example": {
+                "prompt": "Find lim (x→2) (x² − 4)/(x − 2).",
+                "steps": [
+                  "Plugging in x = 2 gives 0/0, which is undefined, so simplify first.",
+                  "Factor the top: x² − 4 = (x − 2)(x + 2).",
+                  "Cancel the (x − 2) factor: (x − 2)(x + 2)/(x − 2) = x + 2 for x ≠ 2.",
+                  "Now let x approach 2: x + 2 → 2 + 2."
+                ],
+                "answer": "4"
+              }
+            }
+          ]
+        },
+        {
+          "id": "continuity-plain-language",
+          "title": "Continuity in Plain Language",
+          "blocks": [
+            {
+              "p": "A function is continuous if you can trace its whole graph without ever lifting your pencil off the paper. No holes to jump over, no sudden vertical jumps, no breaks. If your pencil has to leave the page at some x, the function is discontinuous there."
+            },
+            {
+              "formula": "f is continuous at x = a when all three hold:\n1) f(a) exists\n2) lim (x→a) f(x) exists\n3) lim (x→a) f(x) = f(a)"
+            },
+            {
+              "p": "Those three conditions catch the three ways continuity can break. The first fails at a hole where the point is missing, the second fails at a jump where the two sides disagree, and the third fails when the point exists but sits in the wrong place, apart from where the curve was heading."
+            },
+            {
+              "note": "This matters because differentiation requires continuity, a graph must be unbroken before it can have a tangent line, and major theorems like the Intermediate Value Theorem only work on continuous functions. So continuity is the ticket that lets the rest of calculus run."
+            },
+            {
+              "trick": "No holes, no jumps, no breaks: if the pencil never leaves the paper, the function is continuous."
+            },
+            {
+              "example": {
+                "prompt": "Is f(x) = (x² − 4)/(x − 2) continuous at x = 2?",
+                "steps": [
+                  "Check condition one: f(2) gives 0/0, which is undefined, so f(2) does not exist.",
+                  "The limit as x approaches 2 does exist and equals 4.",
+                  "But since f(2) itself is undefined, condition one already fails."
+                ],
+                "answer": "Not continuous at x = 2; there is a hole (a removable discontinuity), even though the limit is 4."
+              }
+            }
+          ]
+        },
+        {
+          "id": "secant-to-tangent",
+          "title": "From Secant to Tangent: The Big Idea",
+          "blocks": [
+            {
+              "p": "Here is the single move that launches all of calculus. Pick a point on a curve, then pick a second point nearby and draw the secant line through both. Now slide that second point steadily toward the first. The secant line pivots, tilting little by little, until at the instant the two points merge it becomes the tangent line, just kissing the curve at that one spot. Its slope is the answer you were after."
+            },
+            {
+              "visual": "secant-to-tangent"
+            },
+            {
+              "formula": "slope of the tangent at x = lim (h→0) (f(x + h) − f(x))/h"
+            },
+            {
+              "p": "That formula is the difference quotient with a limit wrapped around it. As h, the gap between the two points, shrinks to 0, the secant slope settles onto the tangent slope. Nothing new is invented here, it is average rate of change pushed to its limit."
+            },
+            {
+              "note": "This one limit is the definition of the derivative, written f'(x). It is quite literally the first big result you prove in Calculus AB, and every derivative rule you later memorize is a shortcut for this exact process."
+            },
+            {
+              "trick": "Slide the second point home by letting h → 0, and the secant line snaps into the tangent."
+            },
+            {
+              "example": {
+                "prompt": "Find the slope of the tangent to f(x) = x² at x = 3.",
+                "steps": [
+                  "The difference quotient for x² simplifies to 2x + h.",
+                  "At x = 3 this is 2(3) + h = 6 + h.",
+                  "Let h approach 0: 6 + h → 6."
+                ],
+                "answer": "The tangent slope at x = 3 is 6."
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -66,6 +66,9 @@
               "note": "Comparison you can bank on for the exam: contrast Song China's centralized, merit-based bureaucratic state with European feudalism's decentralized, land-for-loyalty hierarchy. Same era, opposite solutions to the problem of how to govern territory and command loyalty."
             },
             {
+              "trick": "Champa rice is the first domino: fast-ripening Vietnamese rice means two harvests a year, so the population doubles, cities and artisans multiply, and the Song issue the world's first paper money. Pair that with 'exam equals merit, not birth' to nail how the Song bureaucracy out-centralized European feudalism."
+            },
+            {
               "example": {
                 "prompt": "Explain how Confucianism affected the political and social structures of Song China (a typical SAQ-style prompt).",
                 "steps": [
@@ -93,6 +96,9 @@
             },
             {
               "note": "Change-and-continuity tip: use Dar al-Islam to show BOTH at once. The political map changed dramatically between the Abbasid golden age and 1450, but the religious, legal, linguistic, and commercial fabric showed remarkable continuity. Historians reward answers that hold change and continuity together."
+            },
+            {
+              "trick": "Remember 'politically split, culturally knit': the caliphate fractured into Seljuks, Mamluks, and the Delhi Sultanate, yet sharia, Arabic, and trade held it together. Anchor its learning with al-Khwarizmi, whose name gives us 'algorithm' and whose book gives us 'algebra.'"
             },
             {
               "example": {
@@ -124,6 +130,9 @@
               "note": "Governance comparison to memorize as a structure, not a fact: Aztec = indirect rule through tribute; Inca = direct rule through labor obligations (mit'a), relocation, and roads. Both legitimized power through religion tied to the ruler."
             },
             {
+              "trick": "Sort the three by control style: Maya equals many independent city-states, Aztec equals Tribute (indirect and brittle), Inca equals Labor draft (the mit'a, direct roads and terraces). Mnemonic 'Aztecs Ask, Incas Order' captures tribute versus commanded labor."
+            },
+            {
               "example": {
                 "prompt": "Compare the methods of political control used by the Aztec and Inca empires (comparison LEQ practice).",
                 "steps": [
@@ -151,6 +160,9 @@
             },
             {
               "note": "Frame Europe not as backward but as differently organized. The exam rewards analysis of WHY Europe was decentralized (collapse of Roman central authority, need for local defense) rather than a value judgment. Its fragmentation and competition later became engines of change."
+            },
+            {
+              "trick": "Feudalism is 'land for loyalty': a lord grants a fief, a vassal returns military service, and serfs on the manor grow the food. It is the mirror image of Song China, decentralized precisely because Rome's central authority had collapsed."
             },
             {
               "example": {
@@ -200,6 +212,9 @@
               "note": "Exam skill: when a prompt asks about the 'effects' of a trade network, split your answer into three buckets, economic, cultural, and biological. That structure guarantees you cover goods, ideas and religions, and disease, which is exactly what graders look for."
             },
             {
+              "trick": "For any trade-network 'effects' question, use the three-bucket sort: Goods, Gods, and Germs (economic luxuries, religions and ideas, and disease). Because slow camels favor high value per pound, silk and porcelain travel but bulky grain does not."
+            },
+            {
               "example": {
                 "prompt": "Explain the causes of the increased volume of trade on the Silk Roads from about 1200 to 1450 (causation SAQ).",
                 "steps": [
@@ -227,6 +242,9 @@
             },
             {
               "note": "Continuity-and-change insight: the Mongols did not invent the Silk Roads, but they intensified and secured them, accelerating diffusion that was already underway. Use them as your prime example of how a political change (unified empire) transformed the pace of cultural and biological exchange."
+            },
+            {
+              "trick": "Hold two truths at once: Chinggis Khan (from 1206) both destroyed (Baghdad sacked 1258) and connected (the Pax Mongolica). The keyword is the yam relay-station system for how nomads built a communication network, and remember the same open roads later carried the Black Death westward."
             },
             {
               "example": {
@@ -258,6 +276,9 @@
               "note": "Compare the transport economics across networks: camels favor high-value luxuries because carrying capacity is small, while ships allow heavier, bulkier goods. This single principle explains why Indian Ocean trade grew larger than the Silk Roads."
             },
             {
+              "trick": "The monsoon is a metronome: winds blow one direction for half the year and reverse for the other half, forcing merchants to wait months in port, and that waiting is what breeds diaspora communities and the Swahili language (Bantu plus Arabic). Ships beat camels on weight, which is why this network grew larger than the Silk Roads."
+            },
+            {
               "example": {
                 "prompt": "Explain how environmental factors shaped the development of Indian Ocean trade (causation, environment theme).",
                 "steps": [
@@ -285,6 +306,9 @@
             },
             {
               "note": "Notice the recurring engine across all three networks in this unit: a transport technology (camel saddle, dhow and monsoon knowledge, caravanserais) unlocks trade, trade generates wealthy states and cities, and along the same routes a religion, usually Islam, spreads with the merchants. Recognizing the pattern lets you analyze any network fast."
+            },
+            {
+              "trick": "Gold goes north, salt comes south, and salt was so scarce in West Africa it could trade near gold's own weight. Anchor the whole network to Mansa Musa's hajj around 1324, when he handed out so much gold in Cairo that he crashed its value for years and advertised Mali's wealth to the world."
             },
             {
               "example": {
@@ -332,6 +356,9 @@
               "note": "Comparison scaffold to reuse: all three gunpowder empires (1) expanded using gunpowder weapons, (2) governed diverse populations, and (3) used religion to legitimize rule. The key difference is the Sunni-Shia split, with the Safavids' Shia identity creating lasting tension with their Sunni Ottoman neighbors."
             },
             {
+              "trick": "Line them up west to east as 'Old Sultans Move' (Ottoman in Anatolia, Safavid in Persia, Mughal in India), with the Shia Safavids the odd one out wedged between two Sunni neighbors. Date-anchor the gunpowder technology to 1453, when Ottoman siege cannon breach the walls of Constantinople."
+            },
+            {
               "example": {
                 "prompt": "Explain how the use of gunpowder weapons contributed to the expansion of land-based empires from 1450 to 1750 (causation SAQ).",
                 "steps": [
@@ -361,6 +388,9 @@
               "note": "Build a mental menu of legitimization tools you can deploy on any prompt: (1) religion/divine authority, (2) monumental art and architecture, (3) bureaucracy and tax systems, (4) a loyal service elite. A strong essay names the category AND gives a specific example for each."
             },
             {
+              "trick": "Keep a four-tool menu ready, 'God, Gold, Grand buildings, and a Guard': divine authority (divine right, Mandate of Heaven), tax bureaucracies, monumental architecture (Versailles, the Taj Mahal), and a loyal service elite like the Ottoman devshirme janissaries."
+            },
+            {
               "example": {
                 "prompt": "Compare the methods used by two early modern empires to legitimize and consolidate their power (comparison LEQ).",
                 "steps": [
@@ -388,6 +418,9 @@
             },
             {
               "note": "Continuity-and-change insight: across the Yuan, Ming, and Qing, the Confucian bureaucratic system shows remarkable continuity even as the ruling group changed, including twice to non-Chinese conquerors. Foreign rulers kept the Chinese administrative machine because it worked, an example of institutional continuity outlasting political change."
+            },
+            {
+              "trick": "Both dynasties kept the Confucian exam machine even under change: the Ming restored it after the Mongols, and the Manchu Qing preserved it to win over the scholar-gentry. The turning point is the Ming ending Zheng He's treasure voyages (early 1400s) and turning inward just as Europe turned outward."
             },
             {
               "example": {
@@ -437,6 +470,9 @@
               "note": "Structure any 'causes of exploration' answer around three legs: motives (God, gold, glory / bypassing middlemen), means (compass, astrolabe, caravel, cartography), and context (competing centralized states). Graders reward the combination of desire AND capability, not just one."
             },
             {
+              "trick": "Build the answer on three legs, Motive, Means, and Context: 'God, Gold, Glory' for motive, the compass, astrolabe, and caravel for means, and competing centralized states like Portugal and Spain for context. The economic engine is the desire to bypass the Muslim and Italian middlemen who inflated spice prices."
+            },
+            {
               "example": {
                 "prompt": "Explain the causes of European maritime exploration in the period 1450 to 1750 (causation SAQ).",
                 "steps": [
@@ -464,6 +500,9 @@
             },
             {
               "note": "Causation chain to memorize because it links three big topics: Old World diseases cause indigenous demographic collapse, which causes a labor shortage on American plantations, which causes Europeans to expand the Atlantic slave trade. If you can narrate that chain, you can answer a huge range of Unit 4 prompts."
+            },
+            {
+              "trick": "Memorize the causation chain: Old World disease (smallpox) causes indigenous population collapse, which causes a labor shortage, which drives the Atlantic slave trade. Direction check: corn and potatoes travel EAST and feed Afro-Eurasia's population boom, while horses, wheat, and sugar travel WEST."
             },
             {
               "example": {
@@ -495,6 +534,9 @@
               "note": "Do not treat Africans as passive. The exam rewards recognition of agency: African states and merchants participated in and shaped the trade on the African side, and enslaved people in the Americas continually resisted through revolts, escape, and the preservation and blending of cultures. Analyzing agency lifts an answer above a simple victim narrative."
             },
             {
+              "trick": "Picture the triangle: guns and textiles to Africa, enslaved people across the Middle Passage to the Americas, sugar and tobacco back to Europe. Treat it as an economic system born of the Columbian Exchange's labor gap, and always credit African and enslaved agency rather than a pure victim narrative."
+            },
+            {
               "example": {
                 "prompt": "Explain the causes and effects of the Atlantic slave trade (causation SAQ).",
                 "steps": [
@@ -522,6 +564,9 @@
             },
             {
               "note": "Comparison tip: line up the labor systems on a spectrum from most to least coerced, chattel slavery, encomienda/mit'a, indentured servitude, wage labor. The exam often asks you to compare labor systems across regions, and having this spectrum ready makes such prompts quick to answer."
+            },
+            {
+              "trick": "Mercantilism equals 'wealth is a fixed pie, so hoard the bullion,' and colonies exist to enrich the mother country. Pair it with the coercion spectrum from most to least forced: chattel slavery, then encomienda and mit'a, then indentured servitude, then wage labor, with silver (Potosi to China) as the commodity that stitched the first global economy together."
             },
             {
               "example": {
@@ -570,6 +615,9 @@
               "note": "Causation tip: treat the Enlightenment as the ideological CAUSE and the political revolutions as the EFFECT. When a prompt asks why revolutions happened, always connect specific Enlightenment ideas (natural rights, social contract, popular sovereignty) to the specific grievances revolutionaries acted on."
             },
             {
+              "trick": "Match thinker to idea with 'LMR': Locke (natural rights and the social contract), Montesquieu (separation of powers), Rousseau (popular sovereignty). Treat the Enlightenment as the CAUSE and the political revolutions as the EFFECT."
+            },
+            {
               "example": {
                 "prompt": "Explain how Enlightenment ideas contributed to the political revolutions of the period 1750 to 1900 (causation SAQ).",
                 "steps": [
@@ -597,6 +645,9 @@
             },
             {
               "note": "Comparison framework: rank the Atlantic revolutions by how much they changed the SOCIAL order, not just the political one. American and Latin American revolutions largely preserved existing hierarchies; the French went further; the Haitian Revolution alone destroyed slavery and the racial hierarchy. Same ideals, very different outcomes."
+            },
+            {
+              "trick": "Rank them by how much SOCIAL order they overturned, not just political: American (least, kept slavery), then Latin American (creole-led, kept the hierarchy), then French (deeper, then the Terror), then Haitian (most, the only one to abolish slavery and the first nation of former slaves, 1804). Order the starts: America 1775, France 1789, Haiti 1791, Latin America in the 1810s to 1820s."
             },
             {
               "example": {
@@ -628,6 +679,9 @@
               "note": "Environment-and-continuity insight: the Industrial Revolution marks a genuine turning point in humans' relationship to the environment, unlocking fossil-fuel energy on a massive scale. When a prompt asks about change over time in economics or environment, industrialization is your strongest example of a fundamental break with the agrarian past."
             },
             {
+              "trick": "Remember why it was Britain with 'Coal, Capital, Colonies, Cause-free labor': coal and iron to build machines, capital from colonial trade, colonies as raw materials and markets, plus an agricultural revolution and stable government that freed and protected labor. Then trace the social effect, urbanization splitting society into bourgeoisie and proletariat."
+            },
+            {
               "example": {
                 "prompt": "Explain why industrialization began in Britain rather than elsewhere (causation SAQ).",
                 "steps": [
@@ -655,6 +709,9 @@
             },
             {
               "note": "Comparison scaffold: set capitalism and socialism against each other on clear axes, ownership (private vs collective), the role of government (minimal vs active), and how wealth is distributed (by market vs by need). Then place reform movements as a pragmatic middle response. Naming the axes makes any ideology-comparison prompt manageable."
+            },
+            {
+              "trick": "Two thinkers, two poles: Adam Smith's invisible hand (private ownership, free markets) versus Karl Marx's class struggle (collective ownership, proletarian revolution). Reform is the pragmatic middle, where unions, child-labor laws, and the expanding vote softened capitalism without overthrowing it."
             },
             {
               "example": {
@@ -703,6 +760,9 @@
               "p": "It also matters that this was the 'New' Imperialism, which implies an older one to compare it against. Earlier European empires, like the Spanish in the Americas or the early Dutch and British trading companies, often worked through coastal trading posts, private chartered companies, and control of commerce rather than direct administration of vast interiors. The new imperialism was different in scale and in kind: governments themselves took over, they pushed deep inland, and they drew formal borders on maps of entire continents. Recognizing this continuity-and-change relationship is exactly the kind of historical reasoning AP rewards."
             },
             {
+              "trick": "After 1870 industry made empire cheap: steamships, telegraphs, and the Maxim machine gun (plus quinine against malaria) slashed the cost and risk of conquest, while Social Darwinism and the 'civilizing mission' supplied the excuse. Sort every cause into Economic, Political, Ideological, and Technological."
+            },
+            {
               "example": {
                 "prompt": "Evaluate the extent to which the Industrial Revolution was the primary cause of European imperialism between 1750 and 1900.",
                 "steps": [
@@ -730,6 +790,9 @@
             },
             {
               "p": "It is important not to picture Africans as passive. Some rulers negotiated, played rivals against each other, or signed treaties they understood differently than the Europeans did. Others fought, and one won decisively: at the Battle of Adwa in 1896, Emperor Menelik II of Ethiopia, having modernized and armed his forces, crushed an invading Italian army and preserved Ethiopian independence. Adwa became a symbol across Africa and the wider colonized world that European conquest was not inevitable."
+            },
+            {
+              "trick": "The numbers tell it: about 10 percent of Africa was European-held in 1870, about 90 percent by 1914, with only Ethiopia and Liberia free. The Berlin Conference (1884 to 1885) set the rules with NO African leaders present, and its 'effective occupation' principle turned diplomacy into a flag-planting rush; the exception that proves the rule is Ethiopia crushing Italy at Adwa in 1896."
             },
             {
               "example": {
@@ -761,6 +824,9 @@
               "p": "The larger pattern this reveals is the making of a global economic hierarchy. Industrialized 'core' nations produced high-value manufactured goods and financial services, while much of the rest of the world was pushed into supplying raw materials and cash crops. This division of labor was not a natural or neutral outcome; it was structured by the imbalance of power that industrialization created, and it helps explain why so much of the world entered the twentieth century economically dependent even where it was formally free."
             },
             {
+              "trick": "Think 'sovereign on paper, owned in practice': no colonial governor, just foreign control of trade, loans, and ports. The classic case is China after the Opium Wars, kept nominally independent under unequal treaties and spheres of influence; contrast direct rule (the British Raj in India) with this informal economic rule."
+            },
+            {
               "example": {
                 "prompt": "Compare the imperial control Britain exercised over India with the control it exercised over China in the nineteenth century.",
                 "steps": [
@@ -790,6 +856,9 @@
               "p": "Migration also provoked backlash and reshaped host societies. As migrants competed for jobs and settled in new lands, receiving societies often responded with racial hostility and legal restrictions, such as the United States Chinese Exclusion Act of 1882 and similar 'White Australia' policies. Migration was also frequently gendered; because much labor migration was dominated by men, home communities were sometimes left with more women managing households and land, while new migrant communities abroad were often heavily male at first. In these ways the movement of people did not just fill labor gaps; it rearranged families, ethnic geographies, and the politics of belonging across the globe."
             },
             {
+              "trick": "Push and pull, powered by steamships and rail: famine such as the Irish Potato Famine of the 1840s pushed people out, while plantation and railroad labor pulled them in. The bridge concept is that after Britain abolished slavery in the 1830s, INDENTURED workers from India and China replaced enslaved labor, a change in form but a continuity of coerced labor."
+            },
+            {
               "example": {
                 "prompt": "Analyze how the abolition of slavery influenced patterns of global labor migration in the nineteenth century.",
                 "steps": [
@@ -817,6 +886,9 @@
             },
             {
               "p": "Why did most early resistance fail militarily yet still matter historically? The imbalance in industrial weaponry meant that spears and older muskets rarely stood a chance against machine guns and artillery, so most direct uprisings were defeated. But these movements had powerful long-term effects. They forced imperial powers to change how they governed, they created martyrs and shared memories that later nationalist leaders drew on, and they began to forge a sense of common identity among peoples who had not previously seen themselves as a single nation. In this sense the resistance of the nineteenth century laid the groundwork for the successful decolonization of the twentieth."
+            },
+            {
+              "trick": "Sort resistance three ways, Armed, Cultural or religious, and Political-nationalist: the 1857 Indian Rebellion (armed, and it ended Company rule in favor of Crown rule), the Boxer Rebellion of 1899 to 1901, and the founding of the Indian National Congress in 1885. Most uprisings failed militarily against machine guns but forged the shared identities that later won independence."
             },
             {
               "example": {
@@ -866,6 +938,9 @@
               "p": "It also helps to see the deeper structural point. The very things that made these nations powerful, their industry, their nationalism, their empires, were the things that made the war so likely and so destructive. Industrial economies could produce weapons in staggering quantities, mass literacy and nationalist newspapers whipped up public passions, and rigid alliance commitments removed the flexibility that might once have contained a crisis. The war was not an accident that could have been easily avoided; it grew out of the whole structure of early twentieth-century great-power politics."
             },
             {
+              "trick": "MAIN is the dry tinder, Militarism, Alliances, Imperialism, and Nationalism, while the assassination of Franz Ferdinand at Sarajevo in 1914 is only the spark. Always separate the long-term causes (MAIN) from that short-term trigger."
+            },
+            {
               "example": {
                 "prompt": "Evaluate the most significant cause of the outbreak of World War I.",
                 "steps": [
@@ -893,6 +968,9 @@
             },
             {
               "p": "The war also drew on the empires of the combatants, making it truly global. Britain and France mobilized soldiers and laborers from India, Africa, Southeast Asia, and the Caribbean, and the movement of these colonial subjects into the war had lasting effects. Many returned home having seen that Europeans were not invincible and having been promised, or having come to expect, greater rights in exchange for their service. When those expectations were disappointed, the resulting frustration fed the anticolonial and nationalist movements that would gather strength between the wars. In this way total war reached into the colonies and helped sow the seeds of decolonization."
+            },
+            {
+              "trick": "Total war erases the line between battlefield and home front: whole economies mobilize, so whole populations become targets. Link it to three effects, expanded government power, mass propaganda, and women entering the workforce, which helped win suffrage during and just after the war."
             },
             {
               "example": {
@@ -924,6 +1002,9 @@
               "p": "The deep lesson of the interwar years is how economic collapse can corrode political systems. Democracies that could not deliver jobs and stability lost legitimacy, and desperate populations gambled on authoritarian leaders who promised order and greatness. At the same time, the victorious democracies, exhausted and fearful of another war, responded to fascist aggression with appeasement, allowing Hitler to rearm and expand in the hope of avoiding conflict. That gamble failed. The combination of unresolved grievances from World War I, a catastrophic global depression, the rise of aggressive ideologies, and the failure to check aggression early set the stage for the far greater catastrophe of World War II."
             },
             {
+              "trick": "Run the chain: Versailles humiliation (1919) plus the Great Depression (1929 crash) discredit democracy, which lets fascism rise (Mussolini took power in 1922, Hitler became chancellor in 1933). Compare the three rival answers to the modern crisis, fascism, communism, and liberal democracy."
+            },
+            {
               "example": {
                 "prompt": "Analyze the extent to which the Great Depression contributed to the rise of fascism in the interwar period.",
                 "steps": [
@@ -953,6 +1034,9 @@
               "p": "The consequences reshaped the entire world. Europe lay devastated and lost its global dominance, and the two victorious superpowers, the United States and the Soviet Union, emerged with rival ideologies and vast military power, setting up the Cold War. The war's horrors spurred the creation of the United Nations in 1945 and, in 1948, the Universal Declaration of Human Rights, as the world tried to build institutions that might prevent such catastrophe again. And crucially, the war fatally weakened the European colonial empires, both by exhausting the imperial powers and by exposing, once again, that colonized peoples had fought and died for freedoms they were still denied. The stage was set for the great wave of decolonization."
             },
             {
+              "trick": "Compare it to WWI as 'more of everything': more Global, more Ideological and racial, more lethal to civilians, and ending in the Nuclear age (Hiroshima and Nagasaki, 1945). Keep the start dates straight, Japan invades China in 1937, Germany invades Poland in 1939, and Pearl Harbor is December 1941."
+            },
+            {
               "example": {
                 "prompt": "Compare the causes and character of World War I and World War II.",
                 "steps": [
@@ -980,6 +1064,9 @@
             },
             {
               "p": "What ties these atrocities to the broader story of Unit 7 is the dark side of the modern state and modern ideology. The same nationalism that built nations could define some people as outsiders to be eliminated; the same bureaucratic and industrial capacities that produced railroads and mass education could be repurposed to organize deportation and killing; and total war eroded the old restraints that had once, at least in theory, protected civilians. In response, the postwar world tried to build safeguards, the Nuremberg Trials established that individuals could be held accountable for crimes against humanity, the term genocide entered international law, and the United Nations and human rights instruments were created. Whether these safeguards have succeeded is a question the later units continue to explore."
+            },
+            {
+              "trick": "The dark irony is that the SAME modern tools that built nations, bureaucracy, railways, and propaganda, were turned to industrial-scale killing. Sequence the century's genocides: Armenian (from 1915), the Holocaust (during WWII), Cambodia (1970s), and Rwanda (1994); the very word 'genocide' was coined around World War II."
             },
             {
               "example": {
@@ -1028,6 +1115,9 @@
               "p": "To contain the spread of communism without direct war, the United States adopted the strategy of containment, expressed in the Truman Doctrine of 1947, which pledged support to nations resisting communism, and the Marshall Plan, which poured American aid into rebuilding Western Europe partly to make communism less appealing there. The Soviets responded by tightening control over their sphere. This pattern, each side maneuvering for advantage while avoiding direct war, defined the next four decades and shaped nearly every region of the globe, because the superpower rivalry played out precisely in the newly decolonizing world, where both sides competed for allies among emerging nations."
             },
             {
+              "trick": "Think 'bipolar world': two poles and two systems, US capitalist democracy versus Soviet communism, split by Churchill's Iron Curtain. The keyword pair is containment through the Truman Doctrine (1947) and the Marshall Plan (aid to make communism less appealing); it stayed 'cold' because nuclear weapons made direct war suicidal."
+            },
+            {
               "example": {
                 "prompt": "Explain how ideological differences drove the emergence of the Cold War after 1945.",
                 "steps": [
@@ -1055,6 +1145,9 @@
             },
             {
               "p": "Independence, however, was rarely a clean break, and this is a subtle point worth carrying into the next concept. New nations inherited borders drawn by imperial powers, economies structured to serve the former ruler, and in many cases deep ethnic or religious divisions that the colonial system had exploited or created. The moment of freedom was therefore also the beginning of an enormous challenge: building a functioning, unified, prosperous nation out of a territory that had been designed to be a colony. Understanding decolonization means understanding both the triumph of independence and the difficult legacy it left behind."
+            },
+            {
+              "trick": "Compare the two paths, NEGOTIATED and nonviolent (India 1947, Gandhi) versus ARMED struggle (Algeria 1954 to 1962, Vietnam), with the difference often hinging on how many European settlers lived there. World War II is the catalyst, exhausting the empires and exposing European vulnerability."
             },
             {
               "example": {
@@ -1086,6 +1179,9 @@
               "p": "The results were mixed and are still unfolding. Some new nations descended into instability, civil war, or authoritarian rule, as fragile institutions buckled under ethnic tension, economic hardship, and Cold War interference. Others built lasting democracies or achieved significant development. Population growth strained resources in many, spurring efforts like family planning programs. What unites the experience of newly independent states is the enormous difficulty of the task and the way the legacies of colonialism, arbitrary borders, distorted economies, and weak institutions, continued to shape their fortunes long after the imperial flags came down. This is why decolonization must be understood as a beginning, not an ending."
             },
             {
+              "trick": "Remember that independence is the beginning, not the end: new states inherited arbitrary borders, export-dependent economies, and weak institutions. Two keywords carry it, the Non-Aligned Movement (spirit of the Bandung Conference, 1955) to dodge the Cold War, and 'neocolonialism' for political freedom shadowed by continued economic dependence."
+            },
+            {
               "example": {
                 "prompt": "Analyze the challenges newly independent states faced in the second half of the twentieth century.",
                 "steps": [
@@ -1113,6 +1209,9 @@
             },
             {
               "p": "The consequences of proxy wars were severe and revealing. For the countries involved, the human and material costs were devastating, and superpower intervention often prolonged conflicts, propped up unpopular governments, or left societies militarized and unstable long after the Cold War ended. For the superpowers, proxy wars showed the limits of their power; both the United States in Vietnam and the Soviet Union in Afghanistan discovered that overwhelming military strength could not guarantee victory against determined nationalist and guerrilla resistance in someone else's homeland. The Soviet quagmire in Afghanistan even contributed to the strains that helped bring down the Soviet Union in 1991. In this way, the peripheries of the Cold War ended up shaping its center."
+            },
+            {
+              "trick": "The superpowers never fight each other directly; they fund opposite sides in the decolonizing world, so read each war as LAYERED, both local and global. Examples to bank: Korea (1950 to 1953, stalemate), Vietnam (unified under communism in 1975), and Afghanistan (Soviets invade in 1979, a quagmire that helped topple the USSR in 1991)."
             },
             {
               "example": {
@@ -1162,6 +1261,9 @@
               "p": "The deeper significance is that technology did not just connect the world; it made the world's problems and opportunities increasingly shared. A financial panic, a pandemic, a piece of news, or a cultural trend could now spread globally within days. This interconnection is the double edge of globalization: the same networks that spread prosperity, medicine, and ideas can also spread disease, instability, and inequality. Understanding globalization means holding both sides of that edge at once rather than treating it as simply good or simply bad."
             },
             {
+              "trick": "Trace the chain: the Green Revolution's high-yield crops plus vaccines and antibiotics lower death rates, population surges, and pressure on the environment rises. The double edge of a 'shrinking world' is that the same networks (container ships, jets, the internet) spread both prosperity and pandemics."
+            },
+            {
               "example": {
                 "prompt": "Analyze how technological developments contributed to global population growth in the twentieth century.",
                 "steps": [
@@ -1189,6 +1291,9 @@
             },
             {
               "p": "The bigger picture is a genuine shift in how economic power works. In earlier eras, economies were organized primarily around nations and empires; in the globalized economy, production and finance are organized around worldwide networks that no single government fully controls. This raises hard questions that continue to define the present: who benefits and who is left behind, whether nations can protect workers and the environment when capital can simply move elsewhere, and how to manage crises, such as the financial crisis of 2008, that ripple instantly across the entire interconnected system. The global economy delivered enormous growth, but it also concentrated wealth and power in ways that provoked backlash and debate that persist today."
+            },
+            {
+              "trick": "Bretton Woods (1944) built the IMF and World Bank to avoid another Depression, and from the 1980s neoliberalism (free trade, deregulation) let multinationals build global supply chains. Weigh it both ways, growth and poverty reduction (China, India) against rising inequality and corporate power."
             },
             {
               "example": {
@@ -1220,6 +1325,9 @@
               "p": "The larger meaning is a genuine, if incomplete, transformation in what people around the world came to expect and demand. The idea of universal human rights gave the oppressed a shared vocabulary of justice and gave outsiders a reason to care about injustices far away. At the same time, the gap between proclaimed rights and lived reality remained wide, and debates continued over whether human rights were truly universal or a Western imposition, and over how to enforce them against sovereign states. Human rights in the global age is therefore best understood as an unfinished project, a powerful ideal that reshaped the world even as it remained unrealized in many places."
             },
             {
+              "trick": "Anchor the era to 1948, the Universal Declaration of Human Rights, born from the horror of the Holocaust. Compare three movements that borrowed its vocabulary, US civil rights (1960s), anti-apartheid (Mandela freed 1990, democratic elections 1994), and global feminism, and note how globalization amplified them through international boycotts and pressure."
+            },
+            {
               "example": {
                 "prompt": "Explain how globalization contributed to the success of human rights movements in the twentieth century.",
                 "steps": [
@@ -1249,6 +1357,9 @@
               "p": "The global nature of environmental problems also produced a global response, however uneven. Scientific understanding of threats like climate change and ozone depletion grew, environmental movements emerged in many countries, and nations attempted to cooperate through international agreements, since no single country can solve a planetary problem alone. Yet cooperation has been difficult, because reducing environmental harm often conflicts with short-term economic growth, and because developing nations reasonably argue that wealthy nations, which industrialized first and emitted the most, bear greater responsibility. This tension between economic development and environmental protection, and between rich and poor nations, is one of the defining challenges of the globalized world, and it captures perfectly the double-edged nature of modern progress."
             },
             {
+              "trick": "The Anthropocene is the through-line from Unit 5's Industrial Revolution to today: fossil fuels release greenhouse gases that drive climate change. The core tension is development versus environment, and rich early-industrializers versus poor developing nations over who pays, which is exactly why global cooperation is so hard."
+            },
+            {
               "example": {
                 "prompt": "Analyze the relationship between economic development and environmental change in the modern period.",
                 "steps": [
@@ -1276,6 +1387,9 @@
             },
             {
               "p": "The deeper significance is that culture became a genuine arena of the globalized world, where the tension between the global and the local plays out constantly. People today live simultaneously as members of a global culture, watching the same films and using the same platforms, and as members of specific communities with their own languages, faiths, and traditions that they may cling to all the more tightly precisely because the global is so present. This ongoing negotiation between connection and identity, between the world and the home, is one of the most personal and revealing dimensions of globalization, and it ties the grand economic and technological story of Unit 9 directly to the everyday lives of ordinary people."
+            },
+            {
+              "trick": "Resist the easy answer, because it is BOTH: globalization spreads a shared consumer culture AND provokes a backlash. The two keywords are 'glocalization' (global products adapted to local taste) and the resurgence of religious and national identity, with convergence and localization happening at the same time."
             },
             {
               "example": {
