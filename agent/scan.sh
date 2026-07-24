@@ -174,6 +174,11 @@ fi
 # ---- STEP 9: (KV push moved after finalize so health reflects THIS run) ---
 logln "STEP 9 kv-push deferred to post-finalize"
 
+# ---- STEP 9b: Dhruv homework status for the digest (events.json now current) ---
+if [ "$KV_ENABLED" = "true" ]; then
+  $PY "$AGENT/push_content.py" --kidstatus || logln "STEP 9b kidstatus WARN"
+fi
+
 # ---- STEP 10: digest ------------------------------------------------------
 DIGEST_MODE="$MODE"
 [ "$MODE" = "quiet" ] && DIGEST_MODE="quiet"

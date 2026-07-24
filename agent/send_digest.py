@@ -90,11 +90,16 @@ def collect(today):
     proposed = [p for p in read_json(os.path.join(DATA, "sources_proposed.json"), {"proposals": []})["proposals"]
                 if p.get("state", "pending") == "pending"]
 
+    ks = read_json(os.path.join(LOCAL, "kid_status.json"), {})
+    if ks.get("date") != today.isoformat():
+        ks = {}
+
     return {"action_needed": action_needed, "this_week": this_week,
             "new_discoveries": new_discoveries, "watchlist_alerts": alerts,
             "digest_notes": summary.get("digest_notes", []),
             "other_items": summary.get("other_items", []),
             "proposed_sources": proposed,
+            "kid_status": ks,
             "quarantined": summary.get("quarantined", 0)}
 
 
@@ -156,6 +161,11 @@ def render_html(today, sections, health, degraded_raw):
                 f'<br><span style="color:{C["soft"]}">{html.escape(p.get("why",""))}</span>'
                 f'<br><span style="color:{C["soft"]}">Approve or dismiss on the dashboard Watchlist tab.</span>')
             for p in sections["proposed_sources"])))
+    ks = sections.get("kid_status") or {}
+    if ks.get("total"):
+        streak = f' · {ks["streak"]}-day streak' if ks.get("streak") else ""
+        parts.append(sec("Dhruv's homework", C["amber"], row(
+            f'{kid_badge("dhruv")} <b>{ks["done"]}/{ks["total"]} done</b>{streak}')))
     if sections.get("other_items"):
         parts.append(sec("Other (noticed, worth a glance)", C["soft"], "".join(
             row(f'{kid_badge(o.get("kid","family"))} <span style="color:{C["soft"]}">{html.escape(o["title"])}</span>')
@@ -205,6 +215,10 @@ def render_text(today, sections, health, degraded_raw):
     if sections.get("proposed_sources"):
         lines += ["", "NEW SOURCES TO APPROVE (dashboard Watchlist tab):"]
         lines += [f"  [{p['kid']}] {p['name']} — {p.get('why','')}" for p in sections["proposed_sources"]]
+    ks = sections.get("kid_status") or {}
+    if ks.get("total"):
+        streak = f" · {ks['streak']}-day streak" if ks.get("streak") else ""
+        lines += ["", f"DHRUV'S HOMEWORK: {ks['done']}/{ks['total']} done{streak}"]
     if sections.get("other_items"):
         lines += ["", "OTHER (noticed, worth a glance):"]
         lines += [f"  [{o.get('kid','family')}] {o['title']}" for o in sections["other_items"]]

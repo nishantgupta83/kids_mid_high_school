@@ -151,6 +151,17 @@ function render() {
     }).join("")
       : '<div class="card muted">Nothing scheduled.</div>');
 
+  // Dhruv's homework progress today (async, from /api/kid)
+  const dhw = events.filter(e => e.type === "homework" && ["dhruv","both"].includes(e.kid) && e.date === todayISO);
+  if (dhw.length) {
+    api("/api/kid?date=" + todayISO).then(k => {
+      const done = dhw.filter(e => k.homework?.[e.id]?.status === "done").length;
+      const el = document.createElement("div"); el.className = "card";
+      el.innerHTML = `${badge("dhruv")} Homework today: <b>${done}/${dhw.length} done</b>` + (k.streak?.count ? ` · streak ${k.streak.count}` : "");
+      $("#tToday").appendChild(el);
+    }).catch(() => {});
+  }
+
   const opps = c.opportunities || [];
   $("#tPipeline").innerHTML = STATUSES.map(st => {
     const rows = opps.filter(o => effStatus(o) === st);
