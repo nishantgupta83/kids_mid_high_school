@@ -45,3 +45,11 @@ launchctl kickstart -k gui/$(id -u)/com.nishant.school-intel
 - Rotate the Gmail app password: delete at myaccount.google.com/apppasswords, create new, re-run the `security add-generic-password` command with `-U` to update.
 - Quarantined LLM items: review `data/local/quarantine.json` (gitignored; may contain raw email text — never commit).
 - Re-baseline a source after fixing its URL: edit `data/sources.json` — set `scan.last_hash` to null and `next_check_date` to today.
+
+## Slice A — watch backend (LIVE 2026-07-23)
+New authed Pages Functions on school-compass (family code = gupta-family):
+- `GET/PUT /api/activities` — Dhruv's weekly recurring-activity schedule → KV `activities:dhruv`. Parent edits on the dashboard Watchlist tab ("Dhruv's weekly activities").
+- `GET/PUT /api/kid` — homework done/later per-key (`hw:<date>:<id>`); `{allDone:true}` ticks `streak:dhruv` (bridges weekends, resets on a missed school day; ignores weekend + backdated ticks). `GET ?date=YYYY-MM-DD` → `{homework, streak}`.
+- Agent: `push_content.py --kidstatus` (scan STEP 9b, after merge, before digest) writes `data/local/kid_status.json`; the digest + dashboard Today show "Dhruv's homework: N/M done · streak K".
+- Tests: `dashboard/functions/api/_test-{activities,kid}.sh` — run against `wrangler pages dev public` on a FRESH local KV (`rm -rf dashboard/.wrangler/state` first; the kid streak test needs a clean streak:dhruv). Local dev secret: `dashboard/.dev.vars` (SYNC_KEY=gupta-family, gitignored).
+- Slice B (watch/web client) gated on the operator's Slice 0 spike (install + HTTP-200 network probe on Dhruv's Family Setup watch).
