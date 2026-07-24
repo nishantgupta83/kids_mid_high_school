@@ -29,17 +29,41 @@ This gate decides everything downstream. It is manual (needs the operator's Mac,
 
 - [ ] **Step 1: Confirm the watch's watchOS version and model.** On the operator's iPhone: Watch app → General → About. Record `watchOS <version>` and model. This sets the deployment-target floor for every later watchOS API (complications, notifications).
 
-- [ ] **Step 2: Create a minimal standalone watchOS app in Xcode.** File → New → Project → watchOS → App. Product name `HelloDhruv`. **Uncheck** "Include Companion iOS App" (must be standalone — there is no iPhone on Dhruv's side). Interface: SwiftUI. Set the deployment target to the version from Step 1. Replace `ContentView` body with `Text("Hi Dhruv")`.
+- [ ] **Step 2: Create a minimal standalone watchOS app that ALSO probes the network.** File → New → Project → watchOS → App. Product name `HelloDhruv`. **Uncheck** "Include Companion iOS App" (must be standalone — there is no iPhone on Dhruv's side). Interface: SwiftUI. Set the deployment target to the version from Step 1. The gate is not "does it install" but "can this managed child watch reach our API" — a Family Setup watch can install fine yet block outbound network, which would only surface after building B1/B2. So the hello-world makes one real request. Replace `ContentView`:
+
+```swift
+import SwiftUI
+struct ContentView: View {
+    @State private var status = "tap to test"
+    var body: some View {
+        VStack {
+            Text("Hi Dhruv").font(.headline)
+            Text(status).font(.caption).multilineTextAlignment(.center)
+            Button("Test network") {
+                Task {
+                    var r = URLRequest(url: URL(string: "https://school-compass-anq.pages.dev/api/data")!)
+                    r.setValue("gupta-family", forHTTPHeaderField: "x-sync-key")
+                    do { let (_, resp) = try await URLSession.shared.data(for: r)
+                         status = "HTTP \((resp as? HTTPURLResponse)?.statusCode ?? -1)" }   // 200 = reachable+authed
+                    catch { status = "network FAILED: \(error.localizedDescription)" }
+                }
+            }
+        }
+    }
+}
+```
 
 - [ ] **Step 3: Sign it.** Target → Signing & Capabilities → Automatic, Team `ZW6PP4YAN4`.
 
-- [ ] **Step 4: Attempt to install on Dhruv's watch.** With the watch on the charger and near the Mac, select the watch as the run destination in Xcode and Run. If the watch does not appear as a destination, in Xcode → Window → Devices and Simulators, check whether a Family Setup watch under a child Apple ID is listed/pairable for development.
+- [ ] **Step 4: Install + run the probe on Dhruv's watch.** With the watch on the charger and near the Mac, select the watch as the run destination and Run. If the watch isn't a valid destination, check Xcode → Window → Devices and Simulators for the Family-Setup/child-Apple-ID watch. Once launched, tap **Test network** on the watch.
 
-- [ ] **Step 5: Record the outcome in the plan/RESUME.** One of:
-  - **PASS** — the app installs and launches on Dhruv's watch. → Proceed to Slice A, then Slice B-native. Keep the spike project as the seed for Slice B-native.
-  - **FAIL** — the watch won't accept a dev build (not a valid destination, provisioning blocked under the child Apple ID, etc.). → Proceed to Slice A, then **Slice B-web** (skip B-native). Write the exact failure into `docs/superpowers/plans/2026-07-23-dhruv-watch-app.md` under this task so it isn't re-attempted blindly.
+- [ ] **Step 5: Record the outcome (the real gate is the network result).** One of:
+  - **PASS** — installs, launches, AND the probe shows `HTTP 200`. → Slice A, then Slice B-native. Keep this project as the B-native seed.
+  - **INSTALL-ONLY** — installs but the probe fails/hangs (managed-watch network restriction). → Slice A, then **Slice B-web**; the native app couldn't fetch data anyway. Note the exact error.
+  - **NO-INSTALL** — the watch won't accept a dev build (provisioning blocked under the child Apple ID, not a valid destination). → Slice A, then **Slice B-web**. Note the exact failure.
+  - In all failing cases, write the specifics into this task in the plan file so it isn't re-attempted blindly.
 
-**Gate:** Slice A is safe to build regardless of outcome (it serves both clients). The Slice-B branch is chosen here.
+**Gate:** Slice A is safe regardless. Native requires BOTH install and `HTTP 200` from the probe; anything less → web glance.
 
 ---
 
@@ -203,11 +227,16 @@ D=2026-09-01
 echo "bare 401"; test "$(curl -s -o /dev/null -w '%{http_code}' $BASE/api/kid)" = 401
 echo "mark done"; curl -s -X PUT -H "x-sync-key: $CODE" -H 'content-type: application/json' -d "{\"date\":\"$D\",\"homeworkId\":\"evt-hw-1\",\"status\":\"done\"}" $BASE/api/kid | grep -q '"ok":true'
 echo "GET reflects"; curl -s -H "x-sync-key: $CODE" "$BASE/api/kid?date=$D" | grep -q '"evt-hw-1"'
-echo "streak tick"; curl -s -X PUT -H "x-sync-key: $CODE" -H 'content-type: application/json' -d "{\"date\":\"$D\",\"allDone\":true}" $BASE/api/kid | grep -q '"ok":true'
-echo "streak=1"; curl -s -H "x-sync-key: $CODE" "$BASE/api/kid?date=$D" | grep -q '"count":1'
-echo "same-day tick idempotent (still 1)"; curl -s -X PUT -H "x-sync-key: $CODE" -H 'content-type: application/json' -d "{\"date\":\"$D\",\"allDone\":true}" $BASE/api/kid >/dev/null; curl -s -H "x-sync-key: $CODE" "$BASE/api/kid?date=$D" | grep -q '"count":1'
-echo "next-day tick → 2"; curl -s -X PUT -H "x-sync-key: $CODE" -H 'content-type: application/json' -d '{"date":"2026-09-02","allDone":true}' $BASE/api/kid >/dev/null; curl -s -H "x-sync-key: $CODE" "$BASE/api/kid?date=2026-09-02" | grep -q '"count":2'
-echo "gap resets → 1"; curl -s -X PUT -H "x-sync-key: $CODE" -H 'content-type: application/json' -d '{"date":"2026-09-05","allDone":true}' $BASE/api/kid >/dev/null; curl -s -H "x-sync-key: $CODE" "$BASE/api/kid?date=2026-09-05" | grep -q '"count":1'
+# Streak sequence (real weekdays): 09-01 Tue, 09-02 Wed, 09-03 Thu, 09-04 Fri, 09-05 Sat, 09-06 Sun, 09-07 Mon, 09-10 Thu
+tick(){ curl -s -X PUT -H "x-sync-key: $CODE" -H 'content-type: application/json' -d "{\"date\":\"$1\",\"allDone\":true}" $BASE/api/kid >/dev/null; }
+count(){ curl -s -H "x-sync-key: $CODE" "$BASE/api/kid?date=$1" | grep -o '"count":[0-9]*'; }
+echo "first tick → count 1"; tick 2026-09-01; test "$(count 2026-09-01)" = '"count":1'
+echo "same-day idempotent → 1"; tick 2026-09-01; test "$(count 2026-09-01)" = '"count":1'
+echo "consecutive day → 2"; tick 2026-09-02; test "$(count 2026-09-02)" = '"count":2'
+echo "skipped weekday (Thu 09-03) resets → 1"; tick 2026-09-04; test "$(count 2026-09-04)" = '"count":1'
+echo "weekend bridged (Fri→Mon) → 2"; tick 2026-09-07; test "$(count 2026-09-07)" = '"count":2'
+echo "multi-day gap resets → 1"; tick 2026-09-10; test "$(count 2026-09-10)" = '"count":1'
+echo "backdated tick ignored (still 1)"; tick 2026-09-08; test "$(count 2026-09-10)" = '"count":1'
 echo "bad status → 400"; test "$(curl -s -o /dev/null -w '%{http_code}' -X PUT -H "x-sync-key: $CODE" -H 'content-type: application/json' -d "{\"date\":\"$D\",\"homeworkId\":\"x\",\"status\":\"nope\"}" $BASE/api/kid)" = 400
 echo "ALL PASS"
 ```
@@ -224,13 +253,34 @@ function authorized(request, env) {
 }
 const H = { "Content-Type": "application/json", "X-Content-Type-Options": "nosniff", "Cache-Control": "no-store" };
 function dayDiff(a, b) { return Math.round((Date.parse(a + "T00:00:00Z") - Date.parse(b + "T00:00:00Z")) / 86400000); }
+// True iff every calendar day strictly between `from` and `to` is a weekend (Sat/Sun),
+// so a Fri→Mon gap counts as consecutive school days but a skipped weekday does not.
+function interveningAllWeekend(from, to) {
+  for (let d = dayDiff(to, from) - 1; d >= 1; d--) {
+    const day = new Date(Date.parse(from + "T00:00:00Z") + d * 86400000).getUTCDay(); // 0=Sun..6=Sat
+    if (day !== 0 && day !== 6) return false;
+  }
+  return true;
+}
 
 export async function onRequestGet({ request, env }) {
   if (!authorized(request, env)) return new Response("unauthorized", { status: 401 });
   const date = new URL(request.url).searchParams.get("date") || "";
   if (!DATE.test(date)) return new Response("bad date", { status: 400 });
-  const [hw, streak] = await Promise.all([env.FAMILY_OPS.get(`hw:${date}`), env.FAMILY_OPS.get("streak:dhruv")]);
-  return new Response(JSON.stringify({ homework: hw ? JSON.parse(hw) : {}, streak: streak ? JSON.parse(streak) : { count: 0, lastDate: null } }), { headers: H });
+  // Per-key storage (one KV key per homework item) — mirrors pipeline.js so two fast
+  // taps can't lost-update a shared map. GET rebuilds the map by prefix.
+  const prefix = `hw:${date}:`, map = {};
+  let cursor;
+  do {
+    const page = await env.FAMILY_OPS.list({ prefix, cursor });
+    for (const k of page.keys) {
+      const raw = await env.FAMILY_OPS.get(k.name);
+      if (raw) { try { map[k.name.slice(prefix.length)] = JSON.parse(raw); } catch {} }
+    }
+    cursor = page.list_complete ? undefined : page.cursor;
+  } while (cursor);
+  const streak = await env.FAMILY_OPS.get("streak:dhruv");
+  return new Response(JSON.stringify({ homework: map, streak: streak ? JSON.parse(streak) : { count: 0, lastDate: null } }), { headers: H });
 }
 
 export async function onRequestPut({ request, env }) {
@@ -243,18 +293,16 @@ export async function onRequestPut({ request, env }) {
   if (b.allDone === true) {
     const raw = await env.FAMILY_OPS.get("streak:dhruv");
     let s = raw ? JSON.parse(raw) : { count: 0, lastDate: null };
-    if (s.lastDate === b.date) { /* idempotent */ }
-    else if (s.lastDate && dayDiff(b.date, s.lastDate) === 1) s = { count: s.count + 1, lastDate: b.date };
-    else s = { count: 1, lastDate: b.date };
-    await env.FAMILY_OPS.put("streak:dhruv", JSON.stringify(s));
+    if (!s.lastDate || dayDiff(b.date, s.lastDate) > 0) {  // ignore same-day + backdated ticks
+      if (s.lastDate && interveningAllWeekend(s.lastDate, b.date)) s = { count: s.count + 1, lastDate: b.date }; // consecutive school day
+      else s = { count: 1, lastDate: b.date };              // first tick or a missed school day
+      await env.FAMILY_OPS.put("streak:dhruv", JSON.stringify(s));
+    }
     return new Response(JSON.stringify({ ok: true }), { headers: H });
   }
 
   if (!HWID.test(b?.homeworkId || "") || !["done", "later"].includes(b?.status)) return new Response("bad request", { status: 400 });
-  const raw = await env.FAMILY_OPS.get(`hw:${b.date}`);
-  const map = raw ? JSON.parse(raw) : {};
-  map[b.homeworkId] = { status: b.status, at: now };
-  await env.FAMILY_OPS.put(`hw:${b.date}`, JSON.stringify(map));
+  await env.FAMILY_OPS.put(`hw:${b.date}:${b.homeworkId}`, JSON.stringify({ status: b.status, at: now }));
   return new Response(JSON.stringify({ ok: true }), { headers: H });
 }
 ```
@@ -367,7 +415,7 @@ API_BASE = https:/$()/school-compass-anq.pages.dev
 
   (the `$()` splits `//` so xcconfig doesn't treat it as a comment). Set the target's Base Configuration to this file. Add `FAMILY_CODE`/`API_BASE` to Info.plist (`$(FAMILY_CODE)` / `$(API_BASE)`). Append to repo `.gitignore`: `watch/**/Secrets.xcconfig`. Provide a committed `Secrets.xcconfig.example` with placeholder values.
 
-- [ ] **Step 3: Write `Api.swift`** (models + client):
+- [ ] **Step 3: Write `Api.swift`** (models + client). Field-name confirmation (verified against `data/events.json`): each event object uses keys `id`, `title`, `date`, `type`, `kid`, `status` — the client below reads exactly those. If the schema ever changes, this is the one place to update. All timestamps/date math use `America/Los_Angeles` to match the agent (`datetime.date.today()`) and dashboard (`localISO()`), which resolve to LA on the operator's machine — keep the watch on LA so the three never diverge for "today."
 
 ```swift
 import Foundation
@@ -442,7 +490,7 @@ enum Countdowns {
         // next weekend (Saturday)
         if let sat = cal.nextDate(after: today, matching: DateComponents(weekday: 7), matchingPolicy: .nextTime) {
             let d = cal.dateComponents([.day], from: cal.startOfDay(for: today), to: cal.startOfDay(for: sat)).day ?? 0
-            if d > 0 { out.append("Weekend in \(d)d") }
+            if d == 1 { out.append("Weekend tomorrow") } else if d == 2 { out.append("Weekend in 2d") } // only near the weekend, else it's daily noise
         }
         // next break-type event
         let df = DateFormatter(); df.dateFormat = "yyyy-MM-dd"
@@ -592,6 +640,8 @@ git commit -m "feat(watch): Today screen — homework Done/Later, activities, co
 - Consumes: `ApiClient.fetchToday()`.
 - Produces: an `accessoryCircular`/`accessoryInline` complication showing remaining homework count or next activity; two scheduled notifications.
 
+**Ship-independence note:** the complication is the highest-uncertainty piece (Family Setup may not surface third-party complications at all). Tasks B1–B2 + the notifications below are a complete, shippable app *without* it. Treat the complication as a bonus: if it doesn't work on Dhruv's watch, ship app + notifications and record the limitation rather than blocking.
+
 - [ ] **Step 1: Add a WidgetKit complication target** (File → New → Target → Widget Extension, check "Include Complication" if offered; watchOS complications use WidgetKit on the recorded version). TimelineProvider fetches `ApiClient.fetchToday()`; entry text = `"\(remaining) to do"` where `remaining = homework.filter{ $0.status != "done" }.count`, or the next activity if none. Family Setup caveat: **verify on-device that the complication is selectable on Dhruv's watch face** — if Family Setup blocks third-party complications, keep the app-only glance and note it here.
 
 - [ ] **Step 2: `Notifications.swift`** — request authorization on first launch; schedule two repeating `UNCalendarNotificationTrigger`s (07:00 and 15:30 America/Los_Angeles) whose body is built from the last cached `TodayData` (persist a small snapshot to `UserDefaults` on each `fetchToday`). Reschedule on each app open so content stays fresh:
@@ -613,7 +663,7 @@ enum Notifs {
 }
 ```
 
-  Call `Notifs.schedule(...)` from `Store.load()` after data arrives, with `morning = "\(remaining) due today\(nextActivity)"`, `afternoon = "\(tomorrowCount) due tomorrow"` (tomorrowCount from events).
+  Call `Notifs.schedule(...)` from `Store.load()` after data arrives, with `morning = "\(remaining) due today\(nextActivity)"` and — this is how the "Later" items get their after-school reminder without per-item deferral machinery — `afternoon = "\(openToday) still to do\(tomorrowCount>0 ? " · \(tomorrowCount) due tomorrow" : "")"`, where `openToday = homework.filter{ $0.status != "done" }.count` (i.e. anything not Done, including Later'd items, resurfaces at 15:30). **Scope note:** per-item "Later → re-buzz *this specific item*" is intentionally cut for v1 (spec req #3) in favor of this single after-school summary of everything still open; revisit only if it proves insufficient.
 
 - [ ] **Step 3: On-device QA.** Verify: authorization prompt appears once; a notification fires at the set times (test by temporarily setting the trigger a minute ahead); **Schooltime suppresses** the mid-day one if active (confirm with Schooltime on). Complication (if available) shows the count and updates.
 
@@ -663,3 +713,13 @@ git commit -m "feat(watch): Dhruv web glance fallback (Family Setup native insta
 - **Placeholders:** none — every code step shows complete code; `WeekView` is explicitly scoped as a stub-then-polish and named.
 - **Type consistency:** `HW`/`Act`/`TodayData` defined in B1 and used unchanged in B2/B3; `ApiClient.fetchToday/setHomework/tickStreak` signatures match Store's calls; `/api/kid` request/response shapes match between A3 (server) and B1 (client) and A4 (agent).
 - **Open risks carried from spec:** Family Setup dev-install (gated by Slice 0); Family Setup complication support (verified on-device in B3); watchOS version floor (recorded in Task 0 Step 1); homework-granularity of guardian emails (affects row wording — surfaces at B2/W1 QA).
+
+## Independent review disposition (fresh-Claude, Codex unavailable — adjust-first, folded)
+
+- **HIGH — lost-update race (A3):** single `hw:<date>` map replaced with **per-key `hw:<date>:<id>` storage + list-by-prefix on GET**, mirroring `pipeline.js`. No two-tap clobber.
+- **HIGH — streak reset every weekend (A3):** replaced "consecutive calendar day" with `interveningAllWeekend()` — a Fri→Mon gap counts (weekend bridged), a skipped *weekday* resets. Added same-day/backdated-tick guard. Test rewritten with real weekday dates covering bridge + reset + backdate.
+- **HIGH — Slice 0 gated on the wrong thing:** the hello-world now makes a real `URLSession` GET to the API and shows `HTTP 200`; the native/web decision is on **network reachability from the managed watch**, not just install.
+- **MED — "Later" re-buzz:** per-item deferral cut for v1; the 15:30 notification now summarizes **everything still open today** (Later'd + undone), which resurfaces those items. Made explicit.
+- **MED — event field names:** confirmed against `data/events.json` (`id/title/date/type/kid/status`) in B1 Step 3.
+- **LOW folded:** weekend countdown gated to ≤2 days (was daily); timezone standardized on America/LA across watch/agent/dashboard; complication marked ship-optional (app + notifications ship without it).
+- **Verified-correct by the reviewer (kept as-is):** client unwraps the `content` key correctly; `/api/activities` + `/api/kid` request/response shapes match server↔client↔agent; auth-before-parse ordering.
