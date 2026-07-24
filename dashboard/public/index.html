@@ -98,6 +98,7 @@ async function api(path, opts = {}) {
 async function load() {
   const [d, p] = await Promise.all([api("/api/data"), api("/api/pipeline")]);
   DATA = d; PIPE = p;
+  try { window.ACTS = (await api("/api/activities")).activities || []; } catch { window.ACTS = []; }
   $("#gate").classList.add("hidden");
   $("#app").classList.remove("hidden");
   render();
@@ -109,11 +110,25 @@ function effStatus(o) {
   return o.pipeline?.status || "new";
 }
 
+function activitiesHTML() {
+  const DAYS = ["","Mon","Tue","Wed","Thu","Fri","Sat","Sun"];
+  const acts = (window.ACTS || []);
+  return `<div class="sec sage">Dhruv's weekly activities</div>` +
+    acts.map(a => `<div class="card">${esc(a.name)} <span class="muted">${a.days.map(d=>DAYS[d]).join(" ")}${a.time?" · "+esc(a.time):""}${a.place?" · "+esc(a.place):""}</span>` +
+      ` <button class="sbtn" data-actdel="${esc(a.id)}">remove</button></div>`).join("") +
+    `<div class="card"><input id="actName" placeholder="name (e.g. Badminton)" style="width:100%;margin:2px 0;padding:6px;border:1px solid var(--line);border-radius:6px">` +
+    `<input id="actDays" placeholder="days e.g. 2,4 (Mon=1..Sun=7)" style="width:100%;margin:2px 0;padding:6px;border:1px solid var(--line);border-radius:6px">` +
+    `<input id="actTime" placeholder="time HH:MM (optional)" style="width:100%;margin:2px 0;padding:6px;border:1px solid var(--line);border-radius:6px">` +
+    `<input id="actPlace" placeholder="place (optional)" style="width:100%;margin:2px 0;padding:6px;border:1px solid var(--line);border-radius:6px">` +
+    `<button class="sbtn on" id="actAdd">Add activity</button></div>`;
+}
+
 function render() {
   const c = DATA?.content;
   $("#today").textContent = new Date().toLocaleDateString("en-US", {weekday:"long", month:"long", day:"numeric"});
   if (!c) {
     $("#tToday").innerHTML = '<div class="card muted">No content yet — the next scan will populate this.</div>';
+    $("#tWatch").innerHTML = activitiesHTML();  // the activities editor needs no scan content
     renderFoot(); return;
   }
   const events = (c.events || []).filter(e => e.status === "active");
@@ -135,6 +150,17 @@ function render() {
       `</div>`;
     }).join("")
       : '<div class="card muted">Nothing scheduled.</div>');
+
+  // Dhruv's homework progress today (async, from /api/kid)
+  const dhw = events.filter(e => e.type === "homework" && ["dhruv","both"].includes(e.kid) && e.date === todayISO);
+  if (dhw.length) {
+    api("/api/kid?date=" + todayISO).then(k => {
+      const done = dhw.filter(e => k.homework?.[e.id]?.status === "done").length;
+      const el = document.createElement("div"); el.className = "card";
+      el.innerHTML = `${badge("dhruv")} Homework today: <b>${done}/${dhw.length} done</b>` + (k.streak?.count ? ` · streak ${k.streak.count}` : "");
+      $("#tToday").appendChild(el);
+    }).catch(() => {});
+  }
 
   const opps = c.opportunities || [];
   $("#tPipeline").innerHTML = STATUSES.map(st => {
@@ -185,6 +211,9 @@ function render() {
         `<button class="sbtn" data-prop="${esc(p.id)}" data-found="${esc(p.found||'')}" data-d="dismiss">Dismiss</button></div></div>`;
       }).join("") : "");
 
+  // Dhruv's weekly activities editor — appended to whatever the watchlist rendered.
+  $("#tWatch").innerHTML += activitiesHTML();
+
   // "Other" — things the scanner noticed but didn't promote; nothing silently dropped.
   const other = c.other_items || [];
   const otherHtml = other.length
@@ -227,6 +256,22 @@ document.addEventListener("click", async (ev) => {
       PIPE.proposals[t.dataset.prop] = { decision: t.dataset.d, found: t.dataset.found };
       render();
     } catch { alert("save failed — try again"); }
+  }
+  if (t.id === "actAdd") {
+    const name = $("#actName").value.trim();
+    const days = $("#actDays").value.split(",").map(s => parseInt(s.trim(),10)).filter(d => d>=1 && d<=7);
+    const time = $("#actTime").value.trim() || null;
+    const place = $("#actPlace").value.trim();
+    if (!name || !days.length) { alert("need a name and at least one day (1–7)"); return; }
+    const id = "act-" + name.toLowerCase().replace(/[^a-z0-9]+/g,"-").slice(0,30).replace(/-+$/,"");
+    window.ACTS = [...(window.ACTS||[]).filter(a=>a.id!==id), { id, name, days, time, place }];
+    try { await api("/api/activities", { method:"PUT", body: JSON.stringify({ activities: window.ACTS }) }); render(); }
+    catch { alert("save failed"); }
+  }
+  if (t.dataset?.actdel) {
+    window.ACTS = (window.ACTS||[]).filter(a => a.id !== t.dataset.actdel);
+    try { await api("/api/activities", { method:"PUT", body: JSON.stringify({ activities: window.ACTS }) }); render(); }
+    catch { alert("save failed"); }
   }
 });
 

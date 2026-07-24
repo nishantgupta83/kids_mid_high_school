@@ -188,6 +188,26 @@ def push(cfg):
     return 0
 
 
+def kidstatus(cfg):
+    """Fetch Dhruv's homework done-count + streak for today, for the digest."""
+    today = datetime.date.today().isoformat()
+    events = read_json(os.path.join(DATA, "events.json"), {"events": []})["events"]
+    hw = [e for e in events if e.get("type") == "homework" and e.get("kid") in ("dhruv", "both")
+          and e.get("date") == today and e.get("status") == "active"]
+    if not hw:
+        return 0
+    try:
+        k = call(cfg, f"/api/kid?date={today}")
+    except Exception as e:
+        log(f"push_content: kidstatus fetch failed {e}")
+        return 0
+    done = sum(1 for e in hw if (k.get("homework", {}).get(e["id"], {}) or {}).get("status") == "done")
+    write_json(os.path.join(LOCAL, "kid_status.json"),
+               {"date": today, "done": done, "total": len(hw), "streak": (k.get("streak") or {}).get("count", 0)})
+    log(f"push_content: kidstatus — Dhruv {done}/{len(hw)} done")
+    return 0
+
+
 def main():
     with open(os.path.join(REPO, "agent", "config.json")) as f:
         cfg = json.load(f)
@@ -199,7 +219,9 @@ def main():
             return pull(cfg)
         if "--push" in sys.argv:
             return push(cfg)
-        print("usage: push_content.py --pull | --push")
+        if "--kidstatus" in sys.argv:
+            return kidstatus(cfg)
+        print("usage: push_content.py --pull | --push | --kidstatus")
         return 2
     except (urllib.error.URLError, OSError, KeyError) as e:
         log(f"push_content: FAIL {type(e).__name__}: {e}")
