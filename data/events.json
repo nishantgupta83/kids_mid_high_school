@@ -161,6 +161,209 @@
         "first_seen": "2026-07-22"
       },
       "status": "active"
+    },
+    {
+      "id": "evt-20260802-001",
+      "dedupe_key": "both|2026-08-03|caaspp-cast-state-test-scores-post-in-infinite-campus",
+      "kid": "both",
+      "title": "CAASPP / CAST state test scores post in Infinite Campus",
+      "date": "2026-08-03",
+      "end_date": null,
+      "time": null,
+      "type": "school",
+      "action": null,
+      "source": {
+        "kind": "email",
+        "ref": "email:12807002fa8e",
+        "first_seen": "2026-08-02"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20260802-002",
+      "dedupe_key": "dhruv|2026-08-07|pine-valley-web-day-parent-welcome-coffee",
+      "kid": "dhruv",
+      "title": "Pine Valley WEB Day & parent Welcome Coffee",
+      "date": "2026-08-07",
+      "end_date": null,
+      "time": "09:15",
+      "type": "school",
+      "action": null,
+      "source": {
+        "kind": "email",
+        "ref": "email:5069611e9774",
+        "first_seen": "2026-08-02"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20260802-003",
+      "dedupe_key": "both|2026-08-10|srvusd-annual-update-due-infinite-campus-parent-portal",
+      "kid": "both",
+      "title": "SRVUSD Annual Update due (Infinite Campus Parent Portal)",
+      "date": "2026-08-10",
+      "end_date": null,
+      "time": null,
+      "type": "deadline",
+      "action": {
+        "required": true,
+        "what": "Complete the Annual Update for both students, update emergency contacts, and confirm Guardian 1 / Guardian 2 so ParentSquare messages route correctly",
+        "due": "2026-08-10"
+      },
+      "source": {
+        "kind": "email",
+        "ref": "email:44abaf67fab2",
+        "first_seen": "2026-08-02"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20260802-004",
+      "dedupe_key": "ridhi|2026-08-12|cal-high-future-fund-registration-due-asb-yearbook-pe-clothe",
+      "kid": "ridhi",
+      "title": "Cal High Future Fund registration due (ASB/yearbook, PE clothes, planner)",
+      "date": "2026-08-12",
+      "end_date": null,
+      "time": null,
+      "type": "deadline",
+      "action": {
+        "required": true,
+        "what": "Complete Cal High online registration in Future Fund (activity form, ASB/yearbook, PE clothes and planner, optional donations) — her student ID number is needed",
+        "due": "2026-08-12"
+      },
+      "source": {
+        "kind": "email",
+        "ref": "email:572ea99fbbca",
+        "first_seen": "2026-08-02"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20260802-005",
+      "dedupe_key": "both|2026-08-12|class-schedules-released-in-infinite-campus",
+      "kid": "both",
+      "title": "Class schedules released in Infinite Campus",
+      "date": "2026-08-12",
+      "end_date": null,
+      "time": null,
+      "type": "school",
+      "action": null,
+      "source": {
+        "kind": "email",
+        "ref": "email:44abaf67fab2",
+        "first_seen": "2026-08-02"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20260802-006",
+      "dedupe_key": "ridhi|2026-08-20|cal-high-school-pictures-and-student-id-photos",
+      "kid": "ridhi",
+      "title": "Cal High school pictures and student ID photos",
+      "date": "2026-08-20",
+      "end_date": "2026-08-21",
+      "time": "08:30",
+      "type": "school",
+      "action": null,
+      "source": {
+        "kind": "email",
+        "ref": "email:572ea99fbbca",
+        "first_seen": "2026-08-02"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20260802-007",
+      "dedupe_key": "ridhi|2026-08-26|cal-high-back-to-school-night-parents-only",
+      "kid": "ridhi",
+      "title": "Cal High Back to School Night (parents only)",
+      "date": "2026-08-26",
+      "end_date": null,
+      "time": "18:30",
+      "type": "school",
+      "action": null,
+      "source": {
+        "kind": "email",
+        "ref": "email:572ea99fbbca",
+        "first_seen": "2026-08-02"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-disc-20260802-001",
+      "dedupe_key": "ridhi|2026-08-06|san-ramon-library-teen-advisory-board-monthly-meeting",
+      "kid": "ridhi",
+      "title": "San Ramon Library Teen Advisory Board (monthly meeting) (Contra Costa County Library — San Ramon Library",
+      "date": "2026-08-06",
+      "end_date": null,
+      "time": null,
+      "type": "community",
+      "action": null,
+      "source": {
+        "kind": "discovery",
+        "ref": "https://ccclib.bibliocommons.com/v2/events/695ef66b30cbd582eff46ba4",
+        "first_seen": "2026-08-02",
+        "unverified": true,
+        "why": "First Thursday monthly, 4:15-5:15pm; members plan teen programs and earn documented volunteer/community-service hours locally."
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-disc-20260802-002",
+      "dedupe_key": "ridhi|2026-08-08|bay-valley-hacks-2026",
+      "kid": "ridhi",
+      "title": "Bay-Valley Hacks 2026 (Bay-Valley Hacks (student-run, Hack Club circuit",
+      "date": "2026-08-08",
+      "end_date": null,
+      "time": null,
+      "type": "community",
+      "action": null,
+      "source": {
+        "kind": "discovery",
+        "ref": "https://luma.com/6fla5nan",
+        "first_seen": "2026-08-02",
+        "unverified": true,
+        "why": "Free 12-hour hackathon for grades 9-12, 200+ participants, registration currently open — beginner-friendly and no cost."
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-disc-20260802-003",
+      "dedupe_key": "ridhi|2026-08-03|dungeons-dragons-for-teens-weekly-mondays-in-august",
+      "kid": "ridhi",
+      "title": "Dungeons & Dragons for Teens (weekly, Mondays in August) (Contra Costa County Library — San Ramon Library",
+      "date": "2026-08-03",
+      "end_date": null,
+      "time": null,
+      "type": "community",
+      "action": null,
+      "source": {
+        "kind": "discovery",
+        "ref": "https://ccclib.bibliocommons.com/v2/events?locations=25%2C60",
+        "first_seen": "2026-08-02",
+        "unverified": true,
+        "why": "Free drop-in teen social program, 4:00-5:30pm; also recurs 8/10, 8/17, 8/24, 8/31 and is run by the library's teen volunteers."
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-disc-20260802-004",
+      "dedupe_key": "ridhi|2026-09-03|san-ramon-library-teen-advisory-board-september-meeting",
+      "kid": "ridhi",
+      "title": "San Ramon Library Teen Advisory Board (September meeting) (Contra Costa County Library — San Ramon Library",
+      "date": "2026-09-03",
+      "end_date": null,
+      "time": null,
+      "type": "community",
+      "action": null,
+      "source": {
+        "kind": "discovery",
+        "ref": "https://ccclib.bibliocommons.com/v2/events/695ef66b30cbd582eff46ba4",
+        "first_seen": "2026-08-02",
+        "unverified": true,
+        "why": "First meeting of the school year, 4:15-5:15pm — the natural entry point if Ridhi wants a standing volunteer commitment close to home."
+      },
+      "status": "active"
     }
   ]
 }

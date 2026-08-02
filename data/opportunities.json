@@ -284,6 +284,46 @@
         "evidence": "Peachjar flyers on 2026-06-29, 2026-07-04, and 2026-07-11 list 'SRVEF Imagineering: Robotics class' with a Register link"
       },
       "notes": "Opportunistic STEM find; registration appears open now via the Peachjar flyer board"
+    },
+    {
+      "id": "opp-20260802-001",
+      "dedupe_key": "the-lawrence-hall-of-science-uc-berkeley|teen-volunteer-program|2026",
+      "kid": "ridhi",
+      "title": "Teen Volunteer program",
+      "org": "The Lawrence Hall of Science (UC Berkeley)",
+      "url": "https://lawrencehallofscience.org/support/volunteer-teen/",
+      "category": "volunteer-general",
+      "region": "bay-area",
+      "location": "Lawrence Hall of Science, Berkeley",
+      "eligibility": {
+        "eligible_now": "check",
+        "reason": "The tracked page changed but published no new lines, so no age or grade minimum is visible in this input; Ridhi is 15 and in 10th grade, which typically fits teen-volunteer bands, but the requirement must be confirmed on the application page."
+      },
+      "window": {
+        "opens": null,
+        "closes": null,
+        "deadline": null,
+        "confidence": "estimated"
+      },
+      "commitment": "Not stated in the changed content — shift length, minimum term, and training requirements need verification.",
+      "pipeline": {
+        "status": "new",
+        "updated_at": "2026-08-02T07:03:34",
+        "updated_by": "agent",
+        "history": [
+          {
+            "status": "new",
+            "at": "2026-08-02T07:03:34"
+          }
+        ]
+      },
+      "provenance": {
+        "source_id": "lawrence-hall-teen-volunteers",
+        "first_seen": "2026-08-02",
+        "last_seen": "2026-08-02",
+        "evidence": "Registry source 'Lawrence Hall of Science — Teen Volunteers' registered a content change (removals or reordering, no new lines); page header confirms an active teen volunteer and 'Teen Opportunities and Research Programs' track at the science center, open daily 10:00 AM-5:00 PM."
+      },
+      "notes": "weekend-fit, school-year-weekly; science-center STEM floor work rather than clinical bio/med, so treat as secondary to hospital and blood-services goals. About a 45-min drive to Berkeley. Because the diff showed removals, the application may have just closed or been restructured — verify before counting on it."
     }
   ]
 }
