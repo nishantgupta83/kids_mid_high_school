@@ -245,7 +245,7 @@
       "title": "Class schedules released in Infinite Campus",
       "date": "2026-08-12",
       "end_date": null,
-      "time": null,
+      "time": "09:00",
       "type": "school",
       "action": null,
       "source": {
@@ -362,6 +362,91 @@
         "first_seen": "2026-08-02",
         "unverified": true,
         "why": "First meeting of the school year, 4:15-5:15pm — the natural entry point if Ridhi wants a standing volunteer commitment close to home."
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20260803-001",
+      "dedupe_key": "dhruv|2026-08-14|pine-valley-minimum-day-early-dismissal",
+      "kid": "dhruv",
+      "title": "Pine Valley minimum day (early dismissal)",
+      "date": "2026-08-14",
+      "end_date": null,
+      "time": null,
+      "type": "school",
+      "action": null,
+      "source": {
+        "kind": "email",
+        "ref": "email:4ee117b03a4a",
+        "first_seen": "2026-08-03"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20260803-002",
+      "dedupe_key": "dhruv|2026-08-19|pine-valley-pta-meeting",
+      "kid": "dhruv",
+      "title": "Pine Valley PTA meeting",
+      "date": "2026-08-19",
+      "end_date": null,
+      "time": "18:00",
+      "type": "school",
+      "action": null,
+      "source": {
+        "kind": "email",
+        "ref": "email:4ee117b03a4a",
+        "first_seen": "2026-08-03"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20260803-003",
+      "dedupe_key": "dhruv|2026-08-20|pine-valley-back-to-school-night",
+      "kid": "dhruv",
+      "title": "Pine Valley Back to School Night",
+      "date": "2026-08-20",
+      "end_date": null,
+      "time": null,
+      "type": "school",
+      "action": null,
+      "source": {
+        "kind": "email",
+        "ref": "email:4ee117b03a4a",
+        "first_seen": "2026-08-03"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20260803-004",
+      "dedupe_key": "dhruv|2026-08-26|pine-valley-education-fund-meeting",
+      "kid": "dhruv",
+      "title": "Pine Valley Education Fund meeting",
+      "date": "2026-08-26",
+      "end_date": null,
+      "time": "18:30",
+      "type": "school",
+      "action": null,
+      "source": {
+        "kind": "email",
+        "ref": "email:4ee117b03a4a",
+        "first_seen": "2026-08-03"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20260803-005",
+      "dedupe_key": "both|2026-09-07|labor-day-no-school",
+      "kid": "both",
+      "title": "Labor Day — no school",
+      "date": "2026-09-07",
+      "end_date": null,
+      "time": null,
+      "type": "break",
+      "action": null,
+      "source": {
+        "kind": "email",
+        "ref": "email:4ee117b03a4a",
+        "first_seen": "2026-08-03"
       },
       "status": "active"
     }
