@@ -177,7 +177,7 @@
         "ref": "email:12807002fa8e",
         "first_seen": "2026-08-02"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20260802-002",
@@ -344,7 +344,7 @@
         "unverified": true,
         "why": "Free drop-in teen social program, 4:00-5:30pm; also recurs 8/10, 8/17, 8/24, 8/31 and is run by the library's teen volunteers."
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-disc-20260802-004",
@@ -447,6 +447,69 @@
         "kind": "email",
         "ref": "email:4ee117b03a4a",
         "first_seen": "2026-08-03"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20260804-001",
+      "dedupe_key": "ridhi|2026-08-06|summer-course-proof-of-progress-due-cal-high-counseling-goog",
+      "kid": "ridhi",
+      "title": "Summer course proof-of-progress due (Cal High counseling Google Form)",
+      "date": "2026-08-06",
+      "end_date": null,
+      "time": null,
+      "type": "deadline",
+      "action": {
+        "required": true,
+        "what": "Submit the counseling Google Form with a screenshot showing student name, course name, and course progress — required even if transcripts were already sent to the Registrar",
+        "due": "2026-08-06"
+      },
+      "source": {
+        "kind": "email",
+        "ref": "email:22be1fd573fd",
+        "first_seen": "2026-08-04"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20260804-002",
+      "dedupe_key": "ridhi|2026-08-10|summer-course-transcript-deadline-advancement-placement",
+      "kid": "ridhi",
+      "title": "Summer course transcript deadline — advancement placement",
+      "date": "2026-08-10",
+      "end_date": null,
+      "time": null,
+      "type": "deadline",
+      "action": {
+        "required": true,
+        "what": "Submit official transcript to the Cal High Registrar if the summer course is for advancement (course placement depends on it)",
+        "due": "2026-08-10"
+      },
+      "source": {
+        "kind": "email",
+        "ref": "email:22be1fd573fd",
+        "first_seen": "2026-08-04"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20260804-003",
+      "dedupe_key": "ridhi|2026-09-04|summer-course-transcript-deadline-graduation-requirement",
+      "kid": "ridhi",
+      "title": "Summer course transcript deadline — graduation requirement",
+      "date": "2026-09-04",
+      "end_date": null,
+      "time": null,
+      "type": "deadline",
+      "action": {
+        "required": true,
+        "what": "Submit official transcript to the Cal High Registrar if the summer course fills a graduation requirement",
+        "due": "2026-09-04"
+      },
+      "source": {
+        "kind": "email",
+        "ref": "email:22be1fd573fd",
+        "first_seen": "2026-08-04"
       },
       "status": "active"
     }
