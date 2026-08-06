@@ -219,10 +219,10 @@
     },
     {
       "id": "evt-20260802-004",
-      "dedupe_key": "ridhi|2026-08-12|cal-high-future-fund-registration-due-asb-yearbook-pe-clothe",
+      "dedupe_key": "ridhi|2026-08-13|cal-high-future-fund-registration-due-asb-yearbook-pe-clothe",
       "kid": "ridhi",
       "title": "Cal High Future Fund registration due (ASB/yearbook, PE clothes, planner)",
-      "date": "2026-08-12",
+      "date": "2026-08-13",
       "end_date": null,
       "time": null,
       "type": "deadline",
@@ -510,6 +510,95 @@
         "kind": "email",
         "ref": "email:22be1fd573fd",
         "first_seen": "2026-08-04"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20260806-001",
+      "dedupe_key": "ridhi|2026-08-24|cal-high-locker-assignments-sent-week-of-aug-24",
+      "kid": "ridhi",
+      "title": "Cal High locker assignments sent (week of Aug 24)",
+      "date": "2026-08-24",
+      "end_date": null,
+      "time": null,
+      "type": "school",
+      "action": null,
+      "source": {
+        "kind": "email",
+        "ref": "email:57dc83384f17",
+        "first_seen": "2026-08-06"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20260806-002",
+      "dedupe_key": "ridhi|2026-08-17|cal-high-spirit-wear-order-window-closes",
+      "kid": "ridhi",
+      "title": "Cal High spirit wear order window closes",
+      "date": "2026-08-17",
+      "end_date": null,
+      "time": null,
+      "type": "deadline",
+      "action": {
+        "required": true,
+        "what": "Order spirit wear online if wanted (distributed week of Sept 14 at lunch/after school)",
+        "due": "2026-08-17"
+      },
+      "source": {
+        "kind": "email",
+        "ref": "email:57dc83384f17",
+        "first_seen": "2026-08-06"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20260806-003",
+      "dedupe_key": "ridhi|2026-08-21|cal-high-school-pictures-day-2-grades-9-11",
+      "kid": "ridhi",
+      "title": "Cal High school pictures — day 2 (grades 9-11)",
+      "date": "2026-08-21",
+      "end_date": null,
+      "time": "08:30",
+      "type": "school",
+      "action": null,
+      "source": {
+        "kind": "email",
+        "ref": "email:57dc83384f17",
+        "first_seen": "2026-08-06"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20260806-004",
+      "dedupe_key": "ridhi|2026-10-06|cal-high-school-picture-make-up-day",
+      "kid": "ridhi",
+      "title": "Cal High school picture make-up day",
+      "date": "2026-10-06",
+      "end_date": null,
+      "time": null,
+      "type": "school",
+      "action": null,
+      "source": {
+        "kind": "email",
+        "ref": "email:57dc83384f17",
+        "first_seen": "2026-08-06"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20260806-005",
+      "dedupe_key": "ridhi|2026-09-14|spirit-wear-distribution-week-of-sept-14",
+      "kid": "ridhi",
+      "title": "Spirit wear distribution (week of Sept 14)",
+      "date": "2026-09-14",
+      "end_date": null,
+      "time": null,
+      "type": "school",
+      "action": null,
+      "source": {
+        "kind": "email",
+        "ref": "email:57dc83384f17",
+        "first_seen": "2026-08-06"
       },
       "status": "active"
     }
