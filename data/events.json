@@ -306,7 +306,7 @@
         "unverified": true,
         "why": "First Thursday monthly, 4:15-5:15pm; members plan teen programs and earn documented volunteer/community-service hours locally."
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-disc-20260802-002",
@@ -469,7 +469,7 @@
         "ref": "email:22be1fd573fd",
         "first_seen": "2026-08-04"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20260804-002",
