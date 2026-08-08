@@ -194,14 +194,14 @@
         "ref": "email:5069611e9774",
         "first_seen": "2026-08-02"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20260802-003",
-      "dedupe_key": "both|2026-08-10|srvusd-annual-update-due-infinite-campus-parent-portal",
+      "dedupe_key": "both|2026-08-09|srvusd-annual-update-due-infinite-campus-parent-portal",
       "kid": "both",
       "title": "SRVUSD Annual Update due (Infinite Campus Parent Portal)",
-      "date": "2026-08-10",
+      "date": "2026-08-09",
       "end_date": null,
       "time": null,
       "type": "deadline",
@@ -599,6 +599,78 @@
         "kind": "email",
         "ref": "email:57dc83384f17",
         "first_seen": "2026-08-06"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20260808-001",
+      "dedupe_key": "ridhi|2026-08-15|marching-grizzlies-rehearsal-first-after-band-camp",
+      "kid": "ridhi",
+      "title": "Marching Grizzlies rehearsal (first after Band Camp)",
+      "date": "2026-08-15",
+      "end_date": null,
+      "time": "09:00",
+      "type": "school",
+      "action": null,
+      "source": {
+        "kind": "email",
+        "ref": "email:b7a8014a5efc",
+        "first_seen": "2026-08-08"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20260808-002",
+      "dedupe_key": "ridhi|2026-08-08|cal-high-instrumental-music-parent-preview-potluck",
+      "kid": "ridhi",
+      "title": "Cal High Instrumental Music Parent Preview + potluck",
+      "date": "2026-08-08",
+      "end_date": null,
+      "time": "17:00",
+      "type": "school",
+      "action": {
+        "required": true,
+        "what": "Bring a food donation for the 6:00 PM potluck; student wears black Cal High Instrumental Music T-shirt",
+        "due": "2026-08-08"
+      },
+      "source": {
+        "kind": "email",
+        "ref": "email:4fd9cb034e99",
+        "first_seen": "2026-08-08"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20260808-003",
+      "dedupe_key": "ridhi|2026-08-13|first-day-of-school-minimum-day-bell-schedule-cal-high",
+      "kid": "ridhi",
+      "title": "First day of school — minimum day bell schedule (Cal High)",
+      "date": "2026-08-13",
+      "end_date": null,
+      "time": null,
+      "type": "school",
+      "action": null,
+      "source": {
+        "kind": "email",
+        "ref": "email:6dac31124298",
+        "first_seen": "2026-08-08"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20260808-004",
+      "dedupe_key": "dhruv|2026-08-08|little-league-intermediate-50-70-u-s-championship-7-pine-val",
+      "kid": "dhruv",
+      "title": "Little League Intermediate 50/70 U.S. Championship (7 Pine Valley 8th graders)",
+      "date": "2026-08-08",
+      "end_date": null,
+      "time": "17:00",
+      "type": "athletics",
+      "action": null,
+      "source": {
+        "kind": "email",
+        "ref": "email:cf83cb13f430",
+        "first_seen": "2026-08-08"
       },
       "status": "active"
     }
