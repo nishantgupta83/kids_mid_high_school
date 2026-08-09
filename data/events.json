@@ -325,7 +325,7 @@
         "unverified": true,
         "why": "Free 12-hour hackathon for grades 9-12, 200+ participants, registration currently open — beginner-friendly and no cost."
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-disc-20260802-003",
@@ -638,7 +638,7 @@
         "ref": "email:4fd9cb034e99",
         "first_seen": "2026-08-08"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20260808-003",
@@ -671,6 +671,158 @@
         "kind": "email",
         "ref": "email:cf83cb13f430",
         "first_seen": "2026-08-08"
+      },
+      "status": "expired"
+    },
+    {
+      "id": "evt-disc-20260809-001",
+      "dedupe_key": "ridhi|2026-08-11|wonderfest-the-genetics-of-extinction-and-survival-next-gen",
+      "kid": "ridhi",
+      "title": "Wonderfest: The Genetics of Extinction (and Survival) + Next-Gen Meds with Light & Electricity (Wonderfest",
+      "date": "2026-08-11",
+      "end_date": null,
+      "time": null,
+      "type": "community",
+      "action": null,
+      "source": {
+        "kind": "discovery",
+        "ref": "https://wonderfest.org/extinction-next-gen-meds/",
+        "first_seen": "2026-08-09",
+        "unverified": true,
+        "why": "Two short talks — biologist Dr. Stephen Gaughran on extinction genetics, plus next-generation medicine — directly on Ridhi's genetics/medicine interest; free and unticketed, 7:00pm, 90 minutes."
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-disc-20260809-002",
+      "dedupe_key": "ridhi|2026-09-16|marin-science-seminar-from-plant-to-planet-a-journey-from-re",
+      "kid": "ridhi",
+      "title": "Marin Science Seminar: From Plant to Planet — A Journey from Research to Environmental Action (Debbie Raphael) (Marin Science Seminar",
+      "date": "2026-09-16",
+      "end_date": null,
+      "time": null,
+      "type": "community",
+      "action": null,
+      "source": {
+        "kind": "discovery",
+        "ref": "https://marinscienceseminar.com/",
+        "first_seen": "2026-08-09",
+        "unverified": true,
+        "why": "Opening night of the free fall teen science seminar series — a low-cost way to test whether the series is worth the drive before the two biology talks that follow."
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-disc-20260809-003",
+      "dedupe_key": "ridhi|2026-09-23|marin-science-seminar-explore-the-primates-julie-hui-college",
+      "kid": "ridhi",
+      "title": "Marin Science Seminar: Explore the Primates! (Julie Hui, College of Marin) (Marin Science Seminar",
+      "date": "2026-09-23",
+      "end_date": null,
+      "time": null,
+      "type": "community",
+      "action": null,
+      "source": {
+        "kind": "discovery",
+        "ref": "https://marinscienceseminar.com/",
+        "first_seen": "2026-08-09",
+        "unverified": true,
+        "why": "Biological anthropology talk aimed at teens — free, and a Zoom link can be requested if the San Rafael drive doesn't work on a school night."
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-disc-20260809-004",
+      "dedupe_key": "ridhi|2026-09-30|marin-science-seminar-from-beaks-to-cheeks-what-pigeons-can",
+      "kid": "ridhi",
+      "title": "Marin Science Seminar: From Beaks to Cheeks — What Pigeons Can Teach Us About Your Face (Nathan Young, PhD, UCSF) (Marin Science Seminar",
+      "date": "2026-09-30",
+      "end_date": null,
+      "time": null,
+      "type": "community",
+      "action": null,
+      "source": {
+        "kind": "discovery",
+        "ref": "https://marinscienceseminar.com/",
+        "first_seen": "2026-08-09",
+        "unverified": true,
+        "why": "A UCSF researcher on craniofacial development and evolution — the strongest genetics/medicine crossover in the fall lineup, and free."
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-disc-20260809-005",
+      "dedupe_key": "dhruv|2026-09-19|qls-fall-ms-scrimmage-quarry-lane-school-middle-school-speec",
+      "kid": "dhruv",
+      "title": "QLS Fall MS Scrimmage (Quarry Lane School middle school speech & debate scrimmage) (Quarry Lane School",
+      "date": "2026-09-19",
+      "end_date": null,
+      "time": null,
+      "type": "community",
+      "action": null,
+      "source": {
+        "kind": "discovery",
+        "ref": "https://www.tabroom.com/index/tourn/index.mhtml?tourn_id=40607",
+        "first_seen": "2026-08-09",
+        "unverified": true,
+        "why": "A low-stakes middle-school scrimmage 15 minutes away — the natural first competitive outing for a 6th grader starting speech & debate; registration closes Fri Sep 18 at 10:00am PDT."
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-disc-20260809-006",
+      "dedupe_key": "ridhi|2026-09-19|east-bay-spca-rover-recruits-dublin-fall-session-1-3-consecu",
+      "kid": "ridhi",
+      "title": "East Bay SPCA Rover Recruits — Dublin Fall Session 1 (3 consecutive Saturdays) (East Bay SPCA",
+      "date": "2026-09-19",
+      "end_date": null,
+      "time": null,
+      "type": "community",
+      "action": null,
+      "source": {
+        "kind": "discovery",
+        "ref": "https://eastbayspca.org/youth-programs/shelter-scouts-youth-volunteering",
+        "first_seen": "2026-08-09",
+        "unverified": true,
+        "why": "Three-week Saturday animal-care volunteering block (Sep 19, Sep 26, Oct 3) for ages 12-17 — registration is open now and Bay Area teen volunteer sessions fill early. $100 for the session."
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-disc-20260809-007",
+      "dedupe_key": "dhruv|2026-10-31|james-logan-spooktacular-middle-school-forensics-fest-regist",
+      "kid": "dhruv",
+      "title": "James Logan Spooktacular Middle School Forensics Fest — registration opens (James Logan High School",
+      "date": "2026-10-31",
+      "end_date": null,
+      "time": null,
+      "type": "community",
+      "action": null,
+      "source": {
+        "kind": "discovery",
+        "ref": "https://www.tabroom.com/index/tourn/index.mhtml?tourn_id=40845",
+        "first_seen": "2026-08-09",
+        "unverified": true,
+        "why": "Event is Oct 31 but registration opens Sep 8 2026 — the action item lands inside this window, and it's the second local middle-school tournament of the fall after the Dublin scrimmage."
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-disc-20260809-008",
+      "dedupe_key": "family|2026-10-17|bay-area-science-festival-main-festival-day",
+      "kid": "family",
+      "title": "Bay Area Science Festival — main festival day (Bay Area Science Festival / UCSF",
+      "date": "2026-10-17",
+      "end_date": null,
+      "time": null,
+      "type": "community",
+      "action": null,
+      "source": {
+        "kind": "discovery",
+        "ref": "https://bayareasciencefestival.org/",
+        "first_seen": "2026-08-09",
+        "unverified": true,
+        "why": "Free 11am-4pm day with 125+ hands-on experiences, lab tours and science talks — works for both kids in one trip. Slightly beyond the 6-week window but worth blocking the date now."
       },
       "status": "active"
     }
