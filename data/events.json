@@ -215,7 +215,7 @@
         "ref": "email:44abaf67fab2",
         "first_seen": "2026-08-02"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20260802-004",
@@ -490,7 +490,7 @@
         "ref": "email:22be1fd573fd",
         "first_seen": "2026-08-04"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20260804-003",
@@ -823,6 +823,74 @@
         "first_seen": "2026-08-09",
         "unverified": true,
         "why": "Free 11am-4pm day with 125+ hands-on experiences, lab tours and science talks — works for both kids in one trip. Slightly beyond the 6-week window but worth blocking the date now."
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20260811-001",
+      "dedupe_key": "dhruv|2026-10-01|pine-valley-homecoming-parade",
+      "kid": "dhruv",
+      "title": "Pine Valley Homecoming Parade",
+      "date": "2026-10-01",
+      "end_date": null,
+      "time": null,
+      "type": "school",
+      "action": null,
+      "source": {
+        "kind": "email",
+        "ref": "email:525c8478c50d",
+        "first_seen": "2026-08-11"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20260811-002",
+      "dedupe_key": "dhruv|2026-10-02|pine-valley-floating-work-day",
+      "kid": "dhruv",
+      "title": "Pine Valley Floating Work Day",
+      "date": "2026-10-02",
+      "end_date": null,
+      "time": null,
+      "type": "school",
+      "action": null,
+      "source": {
+        "kind": "email",
+        "ref": "email:525c8478c50d",
+        "first_seen": "2026-08-11"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20260811-003",
+      "dedupe_key": "dhruv|2026-10-05|pine-valley-conference-week-12-00-pm-dismissal-on-conference",
+      "kid": "dhruv",
+      "title": "Pine Valley Conference Week (12:00 PM dismissal on conference days)",
+      "date": "2026-10-05",
+      "end_date": "2026-10-09",
+      "time": null,
+      "type": "school",
+      "action": null,
+      "source": {
+        "kind": "email",
+        "ref": "email:525c8478c50d",
+        "first_seen": "2026-08-11"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20260811-004",
+      "dedupe_key": "dhruv|2026-10-09|end-of-quarter-1-pine-valley",
+      "kid": "dhruv",
+      "title": "End of Quarter 1 (Pine Valley)",
+      "date": "2026-10-09",
+      "end_date": null,
+      "time": null,
+      "type": "school",
+      "action": null,
+      "source": {
+        "kind": "email",
+        "ref": "email:525c8478c50d",
+        "first_seen": "2026-08-11"
       },
       "status": "active"
     }
