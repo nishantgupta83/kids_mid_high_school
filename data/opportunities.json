@@ -324,6 +324,46 @@
         "evidence": "Registry source 'Lawrence Hall of Science — Teen Volunteers' registered a content change (removals or reordering, no new lines); page header confirms an active teen volunteer and 'Teen Opportunities and Research Programs' track at the science center, open daily 10:00 AM-5:00 PM."
       },
       "notes": "weekend-fit, school-year-weekly; science-center STEM floor work rather than clinical bio/med, so treat as secondary to hospital and blood-services goals. About a 45-min drive to Berkeley. Because the diff showed removals, the application may have just closed or been restructured — verify before counting on it."
+    },
+    {
+      "id": "opp-20260813-001",
+      "dedupe_key": "california-high-school-college-career-ce|sophomore-only-two-year-placement-listed|2026",
+      "kid": "ridhi",
+      "title": "Sophomore-only two-year placement listed on the Cal High Career Center volunteer/job page (program name not given in the posting)",
+      "org": "California High School College & Career Center (host organization not named in the update)",
+      "url": "https://chs.srvusd.net/School-Info/Departments/College-and-Career-Center/Volunteer--Job-Opportunities/index.html",
+      "category": "volunteer-general",
+      "region": "tri-valley",
+      "location": "Sign-up list held by the Cal High counseling department, San Ramon",
+      "eligibility": {
+        "eligible_now": "yes",
+        "reason": "Posting says positions are open to sophomores; Ridhi is 15 and entering 10th grade in 2026-27, and a two-year term fits 10th-11th grade. No age floor is stated, so confirm there is no 16+ gate when asking to be added to the list."
+      },
+      "window": {
+        "opens": null,
+        "closes": null,
+        "deadline": null,
+        "confidence": "estimated"
+      },
+      "commitment": "Year-round, two-year term; screening includes an application and an essay; fewer than six spots offered to Cal High per year",
+      "pipeline": {
+        "status": "new",
+        "updated_at": "2026-08-13T08:20:06",
+        "updated_by": "agent",
+        "history": [
+          {
+            "status": "new",
+            "at": "2026-08-13T08:20:06"
+          }
+        ]
+      },
+      "provenance": {
+        "source_id": "calhigh-career-center-volunteer",
+        "first_seen": "2026-08-13",
+        "last_seen": "2026-08-13",
+        "evidence": "New line added to the Volunteer & Job Opportunities page: 'Positions are open for sophomores with the expectation of a year-round two-year term. The spots are highly competitive, with less than six total offered to our school per year. Screening includes an application and essay... The list closes February 2027.'"
+      },
+      "notes": "school-year-weekly (term is year-round). Sign-up list closes February 2027 — no exact day given, so treat that as the outside limit and get on the list early since fewer than six spots exist. The page update does not name the program or host organization; ask the counseling department to be added to the list and to identify it. Plausibly the same competitive hospital-style placement tracked as wat"
     }
   ]
 }

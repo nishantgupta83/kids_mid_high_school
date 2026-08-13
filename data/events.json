@@ -253,7 +253,7 @@
         "ref": "email:44abaf67fab2",
         "first_seen": "2026-08-02"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20260802-006",
@@ -691,7 +691,7 @@
         "unverified": true,
         "why": "Two short talks — biologist Dr. Stephen Gaughran on extinction genetics, plus next-generation medicine — directly on Ridhi's genetics/medicine interest; free and unticketed, 7:00pm, 90 minutes."
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-disc-20260809-002",
@@ -891,6 +891,65 @@
         "kind": "email",
         "ref": "email:525c8478c50d",
         "first_seen": "2026-08-11"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20260813-001",
+      "dedupe_key": "dhruv|2026-08-13|pine-valley-6th-grade-exploratory-wheel-first-spoke",
+      "kid": "dhruv",
+      "title": "Pine Valley 6th-grade Exploratory Wheel — first spoke",
+      "date": "2026-08-13",
+      "end_date": "2026-11-06",
+      "time": null,
+      "type": "school",
+      "action": {
+        "required": true,
+        "what": "If Dhruv signed up for wheel as his elective, check the section number on the 4th/5th period course in Infinite Campus to know which class to attend (34 or 39 = art exploratory, 35 or 40 = presentation skills, 36 or 41 = computer exploratory)",
+        "due": "2026-08-13"
+      },
+      "source": {
+        "kind": "email",
+        "ref": "email:581d94be44da",
+        "first_seen": "2026-08-13"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20260813-002",
+      "dedupe_key": "both|2026-09-03|run-for-ed-spirit-day-district-wide",
+      "kid": "both",
+      "title": "Run for Ed Spirit Day (district-wide)",
+      "date": "2026-09-03",
+      "end_date": null,
+      "time": null,
+      "type": "school",
+      "action": null,
+      "source": {
+        "kind": "email",
+        "ref": "email:22201a83fe26",
+        "first_seen": "2026-08-13"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20260813-003",
+      "dedupe_key": "family|2026-10-11|srv-education-foundation-43rd-run-for-education",
+      "kid": "family",
+      "title": "SRV Education Foundation 43rd Run for Education",
+      "date": "2026-10-11",
+      "end_date": null,
+      "time": null,
+      "type": "community",
+      "action": {
+        "required": true,
+        "what": "Register to walk/run at srvef.org/the-run (registration open now; no closing date stated)",
+        "due": "2026-10-11"
+      },
+      "source": {
+        "kind": "email",
+        "ref": "email:22201a83fe26",
+        "first_seen": "2026-08-13"
       },
       "status": "active"
     }
