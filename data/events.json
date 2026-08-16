@@ -617,7 +617,7 @@
         "ref": "email:b7a8014a5efc",
         "first_seen": "2026-08-08"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20260808-002",
@@ -1115,6 +1115,179 @@
         "kind": "email",
         "ref": "email:1988f2e9b174",
         "first_seen": "2026-08-15"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20260816-001",
+      "dedupe_key": "both|2026-08-17|macrame-for-teens-contra-costa-county-library",
+      "kid": "both",
+      "title": "Macrame for Teens (Contra Costa County Library)",
+      "date": "2026-08-17",
+      "end_date": null,
+      "time": "15:30",
+      "type": "community",
+      "action": {
+        "required": true,
+        "what": "Register online for Macrame for Teens — registration closes Aug 16 at 5:00 PM and the listing showed only 1 spot remaining",
+        "due": "2026-08-16"
+      },
+      "source": {
+        "kind": "registry",
+        "ref": "source:ccclib-teen-events",
+        "first_seen": "2026-08-16"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-disc-20260816-001",
+      "dedupe_key": "ridhi|2026-09-01|oakland-zoo-teen-wild-guides-fall-2026-application-deadline",
+      "kid": "ridhi",
+      "title": "Oakland Zoo Teen Wild Guides — Fall 2026 application deadline (5pm) (Oakland Zoo",
+      "date": "2026-09-01",
+      "end_date": null,
+      "time": null,
+      "type": "community",
+      "action": null,
+      "source": {
+        "kind": "discovery",
+        "ref": "https://www.oaklandzoo.org/programs-and-events/teen-wild-guides",
+        "first_seen": "2026-08-16",
+        "unverified": true,
+        "why": "Hard deadline in ~2 weeks for the one animal-science volunteer program Ridhi is already old enough to join; mandatory training follows on 2026-09-26 and 2026-10-04."
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-disc-20260816-002",
+      "dedupe_key": "ridhi|2026-09-03|san-ramon-library-teen-advisory-board-monthly-meeting",
+      "kid": "ridhi",
+      "title": "San Ramon Library Teen Advisory Board — monthly meeting (Contra Costa County Library — San Ramon branch",
+      "date": "2026-09-03",
+      "end_date": null,
+      "time": null,
+      "type": "community",
+      "action": null,
+      "source": {
+        "kind": "discovery",
+        "ref": "https://ccclib.bibliocommons.com/v2/events/695ef66b30cbd582eff46ba4",
+        "first_seen": "2026-08-16",
+        "unverified": true,
+        "why": "Walkable-distance recurring volunteer-hours source (ages 13-18, first Thursday monthly, 4:15-5:15pm); next occurrence after this is 2026-10-01."
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-disc-20260816-003",
+      "dedupe_key": "dhruv|2026-08-29|athens-debate-first-class-of-fall-26-semester-dublin-pleasan",
+      "kid": "dhruv",
+      "title": "Athens Debate — first class of Fall '26 semester (Dublin/Pleasanton) (Athens Debate",
+      "date": "2026-08-29",
+      "end_date": null,
+      "time": null,
+      "type": "community",
+      "action": null,
+      "source": {
+        "kind": "discovery",
+        "ref": "https://www.athensdebate.com/fallregistrationform.html",
+        "first_seen": "2026-08-16",
+        "unverified": true,
+        "why": "If Dhruv is going to start competitive debate this year, registration has to happen before this date — the semester runs through 2027-01-21."
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-disc-20260816-004",
+      "dedupe_key": "ridhi|2026-08-21|cal-hosa-fall-leadership-conference-registration-opens",
+      "kid": "ridhi",
+      "title": "Cal-HOSA Fall Leadership Conference — registration opens (Cal-HOSA (Future Health Professionals",
+      "date": "2026-08-21",
+      "end_date": null,
+      "time": null,
+      "type": "community",
+      "action": null,
+      "source": {
+        "kind": "discovery",
+        "ref": "https://www.cal-hosa.org/",
+        "first_seen": "2026-08-16",
+        "unverified": true,
+        "why": "First date on the Cal-HOSA year for a student aiming at medicine; requires an affiliated school chapter, so this is the moment to find out whether Cal High has one."
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-disc-20260816-005",
+      "dedupe_key": "ridhi|2026-10-03|dublin-hacx-12-hour-high-school-hackathon",
+      "kid": "ridhi",
+      "title": "Dublin Hacx — 12-hour high school hackathon (Dublin Hacx (student-run",
+      "date": "2026-10-03",
+      "end_date": null,
+      "time": null,
+      "type": "community",
+      "action": null,
+      "source": {
+        "kind": "discovery",
+        "ref": "https://www.dublinhacx.com/",
+        "first_seen": "2026-08-16",
+        "unverified": true,
+        "why": "Free, in San Ramon, open to any Bay Area high school student — no CS prerequisite stated, and a low-commitment way into a build/project portfolio."
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-disc-20260816-006",
+      "dedupe_key": "ridhi|2026-08-26|whatever-wednesdays-teen-craft-convention-hosted-by-teen-adv",
+      "kid": "ridhi",
+      "title": "Whatever Wednesdays: Teen Craft Convention (hosted by Teen Advisory Board) (Contra Costa County Library — San Ramon branch",
+      "date": "2026-08-26",
+      "end_date": null,
+      "time": null,
+      "type": "community",
+      "action": null,
+      "source": {
+        "kind": "discovery",
+        "ref": "https://ccclib.bibliocommons.com/v2/events?locations=60%2C25",
+        "first_seen": "2026-08-16",
+        "unverified": true,
+        "why": "Low-stakes way to meet the Teen Advisory Board crowd a week before the 2026-09-03 TAB meeting Ridhi would be joining."
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-disc-20260816-007",
+      "dedupe_key": "family|2026-08-22|all-ages-all-moves-chess-and-more",
+      "kid": "family",
+      "title": "All Ages, All Moves: Chess and More (Contra Costa County Library — Dougherty Station branch",
+      "date": "2026-08-22",
+      "end_date": null,
+      "time": null,
+      "type": "community",
+      "action": null,
+      "source": {
+        "kind": "discovery",
+        "ref": "https://ccclib.bibliocommons.com/v2/events?locations=60%2C25",
+        "first_seen": "2026-08-16",
+        "unverified": true,
+        "why": "Family-friendly drop-in both kids can attend; teen volunteers on hand for chess coaching, and it shows Ridhi what library volunteering looks like in practice."
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-disc-20260816-008",
+      "dedupe_key": "dhruv|2026-09-25|stephen-stewart-memorial-invitational-speech-debate",
+      "kid": "dhruv",
+      "title": "Stephen Stewart Memorial Invitational (speech & debate) (Golden State Academy tournament calendar listing",
+      "date": "2026-09-25",
+      "end_date": null,
+      "time": null,
+      "type": "community",
+      "action": null,
+      "source": {
+        "kind": "discovery",
+        "ref": "https://www.thegoldenstateacademy.com/gsa-tournaments.html",
+        "first_seen": "2026-08-16",
+        "unverified": true,
+        "why": "Nearest in-person fall circuit tournament — useful as a spectator trip even before Dhruv competes."
       },
       "status": "active"
     }
