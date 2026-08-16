@@ -364,6 +364,46 @@
         "evidence": "New line added to the Volunteer & Job Opportunities page: 'Positions are open for sophomores with the expectation of a year-round two-year term. The spots are highly competitive, with less than six total offered to our school per year. Screening includes an application and essay... The list closes February 2027.'"
       },
       "notes": "school-year-weekly (term is year-round). Sign-up list closes February 2027 — no exact day given, so treat that as the outside limit and get on the list early since fewer than six spots exist. The page update does not name the program or host organization; ask the counseling department to be added to the list and to identify it. Plausibly the same competitive hospital-style placement tracked as wat"
+    },
+    {
+      "id": "opp-20260815-001",
+      "dedupe_key": "not-named-in-the-flyer-email-distributed|voice-of-democracy-competition-2026-2027|2026",
+      "kid": "ridhi",
+      "title": "Voice of Democracy Competition 2026-2027",
+      "org": "Not named in the flyer email (distributed to California High via Peachjar)",
+      "url": null,
+      "category": "program",
+      "region": "tri-valley",
+      "location": "Not stated in the email; flyer distributed through SRVUSD Peachjar to California High families",
+      "eligibility": {
+        "eligible_now": "check",
+        "reason": "The email lists only the flyer title with no grade, age, or entry rules; the flyer was sent to California High families, so a 10th grader aged 15 is plausibly in scope, but this must be confirmed on the flyer itself."
+      },
+      "window": {
+        "opens": null,
+        "closes": null,
+        "deadline": null,
+        "confidence": "estimated"
+      },
+      "commitment": "Unknown — the email gives no entry format, length, or time commitment",
+      "pipeline": {
+        "status": "new",
+        "updated_at": "2026-08-15T19:17:06",
+        "updated_by": "agent",
+        "history": [
+          {
+            "status": "new",
+            "at": "2026-08-15T19:17:06"
+          }
+        ]
+      },
+      "provenance": {
+        "source_id": "email-inbox",
+        "first_seen": "2026-08-15",
+        "last_seen": "2026-08-15",
+        "evidence": "Peachjar email '5 New School and Community Flyers for Your Children' lists 'Voice of Democracy Competition 2026-2027' under the School category with a 'Learn More' action, alongside California High as a listed school."
+      },
+      "notes": "Speech/essay-style competition, so a possible fit for Ridhi's writing and public-speaking side; no deadline, link, or grade range in the email — open the flyer in Peachjar before counting on it. Check whether a middle-school division exists for Dhruv."
     }
   ]
 }

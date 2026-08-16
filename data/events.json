@@ -16,7 +16,7 @@
         "ref": "school_year.json",
         "first_seen": "2026-07-21"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-seed-002",
@@ -236,7 +236,7 @@
         "ref": "email:572ea99fbbca",
         "first_seen": "2026-08-02"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20260802-005",
@@ -380,7 +380,7 @@
         "ref": "email:4ee117b03a4a",
         "first_seen": "2026-08-03"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20260803-002",
@@ -655,7 +655,7 @@
         "ref": "email:6dac31124298",
         "first_seen": "2026-08-08"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20260808-004",
@@ -950,6 +950,171 @@
         "kind": "email",
         "ref": "email:22201a83fe26",
         "first_seen": "2026-08-13"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20260815-001",
+      "dedupe_key": "ridhi|2026-08-18|chemistry-0-1-isolating-variables-practice-due",
+      "kid": "ridhi",
+      "title": "Chemistry: 0.1 Isolating Variables Practice due",
+      "date": "2026-08-18",
+      "end_date": null,
+      "time": null,
+      "type": "homework",
+      "action": null,
+      "source": {
+        "kind": "email",
+        "ref": "email:9ab1d708a2d4",
+        "first_seen": "2026-08-15"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20260815-002",
+      "dedupe_key": "ridhi|2026-08-18|chemistry-course-policy-assignment-due-cites-26-27",
+      "kid": "ridhi",
+      "title": "Chemistry: course policy assignment due (CitES 26/27)",
+      "date": "2026-08-18",
+      "end_date": null,
+      "time": null,
+      "type": "homework",
+      "action": null,
+      "source": {
+        "kind": "email",
+        "ref": "email:9ab1d708a2d4",
+        "first_seen": "2026-08-15"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20260815-003",
+      "dedupe_key": "ridhi|2026-08-18|chemistry-student-introduction-survey-due",
+      "kid": "ridhi",
+      "title": "Chemistry: Student Introduction Survey due",
+      "date": "2026-08-18",
+      "end_date": null,
+      "time": null,
+      "type": "homework",
+      "action": null,
+      "source": {
+        "kind": "email",
+        "ref": "email:9ab1d708a2d4",
+        "first_seen": "2026-08-15"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20260815-004",
+      "dedupe_key": "ridhi|2026-08-19|ap-calculus-ab-getting-to-know-you-survey-due-10-points",
+      "kid": "ridhi",
+      "title": "AP Calculus AB: Getting To Know You Survey due (10 points)",
+      "date": "2026-08-19",
+      "end_date": null,
+      "time": null,
+      "type": "homework",
+      "action": null,
+      "source": {
+        "kind": "email",
+        "ref": "email:9ab1d708a2d4",
+        "first_seen": "2026-08-15"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20260815-005",
+      "dedupe_key": "ridhi|2026-08-19|ap-calculus-ab-course-policy-read-with-a-parent-and-submit-b",
+      "kid": "ridhi",
+      "title": "AP Calculus AB: Course Policy — read with a parent and submit both forms (10 points)",
+      "date": "2026-08-19",
+      "end_date": null,
+      "time": null,
+      "type": "homework",
+      "action": {
+        "required": true,
+        "what": "Parent/guardian reads the AP Calculus course policy with Ridhi and both linked forms at the bottom of the policy are completed",
+        "due": "2026-08-19"
+      },
+      "source": {
+        "kind": "email",
+        "ref": "email:9ab1d708a2d4",
+        "first_seen": "2026-08-15"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20260815-006",
+      "dedupe_key": "ridhi|2026-08-20|english-10-cell-phone-pocket-preference-form-due",
+      "kid": "ridhi",
+      "title": "English 10: Cell Phone Pocket Preference form due",
+      "date": "2026-08-20",
+      "end_date": null,
+      "time": null,
+      "type": "homework",
+      "action": null,
+      "source": {
+        "kind": "email",
+        "ref": "email:9ab1d708a2d4",
+        "first_seen": "2026-08-15"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20260815-007",
+      "dedupe_key": "ridhi|2026-08-20|english-10-student-info-form-google-form-with-video-due",
+      "kid": "ridhi",
+      "title": "English 10: Student Info form (Google Form with video) due",
+      "date": "2026-08-20",
+      "end_date": null,
+      "time": null,
+      "type": "homework",
+      "action": null,
+      "source": {
+        "kind": "email",
+        "ref": "email:9ab1d708a2d4",
+        "first_seen": "2026-08-15"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20260815-008",
+      "dedupe_key": "ridhi|2026-08-22|san-diego-band-trip-interest-survey-response-due",
+      "kid": "ridhi",
+      "title": "San Diego band trip interest survey response due",
+      "date": "2026-08-22",
+      "end_date": null,
+      "time": null,
+      "type": "deadline",
+      "action": {
+        "required": true,
+        "what": "Complete the Wind Ensemble/Symphonic Band San Diego trip interest survey (https://forms.gle/7L5EnwSV4BBY6GGu8) — interest only, does not commit Ridhi to attending",
+        "due": "2026-08-22"
+      },
+      "source": {
+        "kind": "email",
+        "ref": "email:4247941a68cb",
+        "first_seen": "2026-08-15"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20260815-009",
+      "dedupe_key": "family|2026-08-21|cal-high-school-site-council-parent-representative-applicati",
+      "kid": "family",
+      "title": "Cal High School Site Council parent representative application due",
+      "date": "2026-08-21",
+      "end_date": null,
+      "time": null,
+      "type": "deadline",
+      "action": {
+        "required": true,
+        "what": "Submit the School Site Council parent representative interest form (Google Form linked in the Grizzly Community Update) if interested — 3 positions open",
+        "due": "2026-08-21"
+      },
+      "source": {
+        "kind": "email",
+        "ref": "email:1988f2e9b174",
+        "first_seen": "2026-08-15"
       },
       "status": "active"
     }
