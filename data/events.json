@@ -1290,6 +1290,61 @@
         "why": "Nearest in-person fall circuit tournament — useful as a spectator trip even before Dhruv competes."
       },
       "status": "active"
+    },
+    {
+      "id": "evt-20260817-001",
+      "dedupe_key": "dhruv|2026-08-17|pine-valley-student-photo-day-and-id-card-distribution",
+      "kid": "dhruv",
+      "title": "Pine Valley student photo day and ID card distribution",
+      "date": "2026-08-17",
+      "end_date": null,
+      "time": null,
+      "type": "school",
+      "action": null,
+      "source": {
+        "kind": "email",
+        "ref": "email:d65d27bcf4db",
+        "first_seen": "2026-08-17"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20260817-002",
+      "dedupe_key": "dhruv|2026-08-24|pine-valley-star-benchmark-assessments-begin",
+      "kid": "dhruv",
+      "title": "Pine Valley STAR benchmark assessments begin",
+      "date": "2026-08-24",
+      "end_date": null,
+      "time": null,
+      "type": "test",
+      "action": null,
+      "source": {
+        "kind": "email",
+        "ref": "email:d65d27bcf4db",
+        "first_seen": "2026-08-17"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20260817-003",
+      "dedupe_key": "family|2026-09-11|srvusd-parcel-tax-oversight-committee-application-deadline",
+      "kid": "family",
+      "title": "SRVUSD Parcel Tax Oversight Committee application deadline",
+      "date": "2026-09-11",
+      "end_date": null,
+      "time": "15:00",
+      "type": "deadline",
+      "action": {
+        "required": true,
+        "what": "Optional — only if a parent wants to serve: submit an application via www.srvusd.net/PTOCrecruit (must live in SRVUSD and be a registered voter; unpaid, 2-year term, meets at least twice a year)",
+        "due": "2026-09-11"
+      },
+      "source": {
+        "kind": "email",
+        "ref": "email:d65d27bcf4db",
+        "first_seen": "2026-08-17"
+      },
+      "status": "active"
     }
   ]
 }
