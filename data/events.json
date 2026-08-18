@@ -37,7 +37,7 @@
         "ref": "school_year.json",
         "first_seen": "2026-07-21"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-seed-003",
@@ -549,7 +549,7 @@
         "ref": "email:57dc83384f17",
         "first_seen": "2026-08-06"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20260806-003",
@@ -1137,7 +1137,7 @@
         "ref": "source:ccclib-teen-events",
         "first_seen": "2026-08-16"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-disc-20260816-001",
@@ -1306,7 +1306,7 @@
         "ref": "email:d65d27bcf4db",
         "first_seen": "2026-08-17"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20260817-002",
