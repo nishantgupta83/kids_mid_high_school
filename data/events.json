@@ -968,7 +968,7 @@
         "ref": "email:9ab1d708a2d4",
         "first_seen": "2026-08-15"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20260815-002",
@@ -985,7 +985,7 @@
         "ref": "email:9ab1d708a2d4",
         "first_seen": "2026-08-15"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20260815-003",
@@ -1002,7 +1002,7 @@
         "ref": "email:9ab1d708a2d4",
         "first_seen": "2026-08-15"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20260815-004",
