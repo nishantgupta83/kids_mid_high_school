@@ -397,7 +397,7 @@
         "ref": "email:4ee117b03a4a",
         "first_seen": "2026-08-03"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20260803-003",
@@ -1019,7 +1019,7 @@
         "ref": "email:9ab1d708a2d4",
         "first_seen": "2026-08-15"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20260815-005",
@@ -1040,7 +1040,7 @@
         "ref": "email:9ab1d708a2d4",
         "first_seen": "2026-08-15"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20260815-006",
@@ -1343,6 +1343,27 @@
         "kind": "email",
         "ref": "email:d65d27bcf4db",
         "first_seen": "2026-08-17"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20260820-001",
+      "dedupe_key": "family|2026-09-04|srvusd-district-committee-applications-close-2026-27-school",
+      "kid": "family",
+      "title": "SRVUSD district committee applications close (2026-27 school year)",
+      "date": "2026-09-04",
+      "end_date": null,
+      "time": null,
+      "type": "deadline",
+      "action": {
+        "required": true,
+        "what": "Submit the SRVUSD district committee application (Arts Advisory, Deep Learning & Innovation, Equity Steering, LCAP, PTOC, SELPA/CAC, Social Emotional Well-Being, or Technology Advisory) via the linked Google Form",
+        "due": "2026-09-04"
+      },
+      "source": {
+        "kind": "email",
+        "ref": "email:25f5f82e77f6",
+        "first_seen": "2026-08-20"
       },
       "status": "active"
     }

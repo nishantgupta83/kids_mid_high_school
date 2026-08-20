@@ -404,6 +404,46 @@
         "evidence": "Peachjar email '5 New School and Community Flyers for Your Children' lists 'Voice of Democracy Competition 2026-2027' under the School category with a 'Learn More' action, alongside California High as a listed school."
       },
       "notes": "Speech/essay-style competition, so a possible fit for Ridhi's writing and public-speaking side; no deadline, link, or grade range in the email — open the flyer in Peachjar before counting on it. Check whether a middle-school division exists for Dhruv."
+    },
+    {
+      "id": "opp-20260820-001",
+      "dedupe_key": "san-ramon-valley-unified-school-district|srvusd-district-committee-student-member|2026",
+      "kid": "ridhi",
+      "title": "SRVUSD district committee — student member (high school students invited)",
+      "org": "San Ramon Valley Unified School District",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSec_0umQj8OHrTD4ooQ88J_5SSEsneBgpaDW60V-LrRtJNhCg/viewform?usp=publish-editor",
+      "category": "program",
+      "region": "tri-valley",
+      "location": "SRVUSD district office / committee meetings (Alamo, Danville, Diablo, San Ramon)",
+      "eligibility": {
+        "eligible_now": "check",
+        "reason": "Email states high school students 'will also be invited to join a committee' — Ridhi is a 10th grader at Cal High so she is a high school student, but the email does not say whether the same application form or a separate student invitation process applies, or whether there is a grade floor."
+      },
+      "window": {
+        "opens": null,
+        "closes": "2026-09-04",
+        "deadline": "2026-09-04",
+        "confidence": "verified"
+      },
+      "commitment": "Varies by committee — meeting schedule and commitment expectations are in the linked committee-descriptions document (not stated in the email)",
+      "pipeline": {
+        "status": "new",
+        "updated_at": "2026-08-20T07:00:54",
+        "updated_by": "agent",
+        "history": [
+          {
+            "status": "new",
+            "at": "2026-08-20T07:00:54"
+          }
+        ]
+      },
+      "provenance": {
+        "source_id": "email-inbox",
+        "first_seen": "2026-08-20",
+        "last_seen": "2026-08-20",
+        "evidence": "SRVUSD ParentSquare digest, Aug 19 2026: 'Help Shape SRVUSD's Future — Apply to Join a District Committee', lists nine committees, notes most applications close September 4, 2026, and says 'High school students will also be invited to join a committee as we believe that student voice is essential.'"
+      },
+      "notes": "school-year-recurring; leadership/civic experience rather than bio-med; Deep Learning & Innovation or Technology Advisory would be the closest science fit. Committee descriptions/meeting dates doc: https://docs.google.com/document/d/16iFKiacasYG9A0DUUfBhzUEIFqKOZANzcX4bu8fFeIQ/edit?usp=sharing"
     }
   ]
 }
