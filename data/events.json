@@ -270,7 +270,7 @@
         "ref": "email:572ea99fbbca",
         "first_seen": "2026-08-02"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20260802-007",
@@ -414,7 +414,7 @@
         "ref": "email:4ee117b03a4a",
         "first_seen": "2026-08-03"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20260803-004",
@@ -566,7 +566,7 @@
         "ref": "email:57dc83384f17",
         "first_seen": "2026-08-06"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20260806-004",
@@ -1057,7 +1057,7 @@
         "ref": "email:9ab1d708a2d4",
         "first_seen": "2026-08-15"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20260815-007",
@@ -1074,7 +1074,7 @@
         "ref": "email:9ab1d708a2d4",
         "first_seen": "2026-08-15"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20260815-008",
@@ -1095,7 +1095,7 @@
         "ref": "email:4247941a68cb",
         "first_seen": "2026-08-15"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20260815-009",
@@ -1116,7 +1116,7 @@
         "ref": "email:1988f2e9b174",
         "first_seen": "2026-08-15"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20260816-001",
@@ -1213,7 +1213,7 @@
         "unverified": true,
         "why": "First date on the Cal-HOSA year for a student aiming at medicine; requires an affiliated school chapter, so this is the moment to find out whether Cal High has one."
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-disc-20260816-005",
@@ -1270,7 +1270,7 @@
         "unverified": true,
         "why": "Family-friendly drop-in both kids can attend; teen volunteers on hand for chess coaching, and it shows Ridhi what library volunteering looks like in practice."
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-disc-20260816-008",
@@ -1364,6 +1364,287 @@
         "kind": "email",
         "ref": "email:25f5f82e77f6",
         "first_seen": "2026-08-20"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20260823-001",
+      "dedupe_key": "ridhi|2026-08-23|cal-high-student-support-sign-ups-due-for-thursday-friday-se",
+      "kid": "ridhi",
+      "title": "Cal High Student Support sign-ups due for Thursday & Friday sessions",
+      "date": "2026-08-23",
+      "end_date": null,
+      "time": null,
+      "type": "deadline",
+      "action": {
+        "required": true,
+        "what": "Student signs up for next week's Thursday and Friday Student Support sessions (Chemistry teacher notes there are two similarly named teachers — pick the right one)",
+        "due": "2026-08-23"
+      },
+      "source": {
+        "kind": "email",
+        "ref": "email:860ecc6ac66f",
+        "first_seen": "2026-08-23"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20260823-002",
+      "dedupe_key": "ridhi|2026-08-25|cal-high-first-evacuation-drill-of-the-year",
+      "kid": "ridhi",
+      "title": "Cal High first evacuation drill of the year",
+      "date": "2026-08-25",
+      "end_date": null,
+      "time": null,
+      "type": "school",
+      "action": null,
+      "source": {
+        "kind": "email",
+        "ref": "email:860ecc6ac66f",
+        "first_seen": "2026-08-23"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20260823-003",
+      "dedupe_key": "ridhi|2026-08-26|coffee-with-the-principal-cal-high",
+      "kid": "ridhi",
+      "title": "Coffee with the Principal (Cal High)",
+      "date": "2026-08-26",
+      "end_date": null,
+      "time": null,
+      "type": "school",
+      "action": null,
+      "source": {
+        "kind": "email",
+        "ref": "email:860ecc6ac66f",
+        "first_seen": "2026-08-23"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20260823-004",
+      "dedupe_key": "ridhi|2026-08-28|marching-grizzlies-perform-at-first-home-football-game",
+      "kid": "ridhi",
+      "title": "Marching Grizzlies perform at first home football game",
+      "date": "2026-08-28",
+      "end_date": null,
+      "time": "17:30",
+      "type": "athletics",
+      "action": {
+        "required": true,
+        "what": "Arrive in uniform (or change at school) with instrument, mouthpiece, reeds, neck strap, lyre, flip folder, water bottle",
+        "due": "2026-08-28"
+      },
+      "source": {
+        "kind": "email",
+        "ref": "email:59d3148112aa",
+        "first_seen": "2026-08-23"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20260823-005",
+      "dedupe_key": "ridhi|2026-08-24|chemistry-0-3-significant-figures-practice-due",
+      "kid": "ridhi",
+      "title": "Chemistry: 0.3 Significant Figures Practice due",
+      "date": "2026-08-24",
+      "end_date": null,
+      "time": null,
+      "type": "homework",
+      "action": null,
+      "source": {
+        "kind": "email",
+        "ref": "email:6444af0462b7",
+        "first_seen": "2026-08-23"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20260823-006",
+      "dedupe_key": "ridhi|2026-09-04|ap-world-history-unit-1-vocabulary-quizlet-due",
+      "kid": "ridhi",
+      "title": "AP World History: Unit 1 Vocabulary (Quizlet) due",
+      "date": "2026-09-04",
+      "end_date": null,
+      "time": null,
+      "type": "homework",
+      "action": null,
+      "source": {
+        "kind": "email",
+        "ref": "email:6444af0462b7",
+        "first_seen": "2026-08-23"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20260823-007",
+      "dedupe_key": "ridhi|2026-10-01|san-ramon-teen-service-leadership-8-week-class-series-begins",
+      "kid": "ridhi",
+      "title": "San Ramon Teen Service & Leadership — 8-week class series begins",
+      "date": "2026-10-01",
+      "end_date": "2026-11-19",
+      "time": null,
+      "type": "community",
+      "action": null,
+      "source": {
+        "kind": "registry",
+        "ref": "source:sanramon-teen-service",
+        "first_seen": "2026-08-23"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20260823-008",
+      "dedupe_key": "dhruv|2026-11-07|srvusd-cogat-exam-optional-in-person",
+      "kid": "dhruv",
+      "title": "SRVUSD CogAT exam (optional, in person)",
+      "date": "2026-11-07",
+      "end_date": null,
+      "time": "08:00",
+      "type": "test",
+      "action": {
+        "required": true,
+        "what": "Register online (optional $75 contribution) — only if he is new to the district and has never tested with SRVUSD; verify eligibility first",
+        "due": "2026-09-27"
+      },
+      "source": {
+        "kind": "email",
+        "ref": "email:7e5cf0d33f52",
+        "first_seen": "2026-08-23"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-disc-20260823-001",
+      "dedupe_key": "ridhi|2026-10-03|dublin-hacx-free-one-day-high-school-hackathon",
+      "kid": "ridhi",
+      "title": "Dublin HacX — free one-day high school hackathon (Emerald Hacking & Coding Club",
+      "date": "2026-10-03",
+      "end_date": null,
+      "time": null,
+      "type": "community",
+      "action": null,
+      "source": {
+        "kind": "discovery",
+        "ref": "https://www.dublinhacx.com/",
+        "first_seen": "2026-08-23",
+        "unverified": true,
+        "why": "Free, in town, open to any Bay Area high schooler at any skill level including first-time coders — lowest-friction STEM event on this list."
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-disc-20260823-002",
+      "dedupe_key": "ridhi|2026-09-30|marin-science-seminar-nathan-young-ucsf-from-beaks-to-cheeks",
+      "kid": "ridhi",
+      "title": "Marin Science Seminar — Nathan Young (UCSF), 'From Beaks to Cheeks: What Pigeons Can Teach Us About Your Face' (Marin Science Seminar",
+      "date": "2026-09-30",
+      "end_date": null,
+      "time": null,
+      "type": "community",
+      "action": null,
+      "source": {
+        "kind": "discovery",
+        "ref": "https://marinscienceseminar.com/",
+        "first_seen": "2026-08-23",
+        "unverified": true,
+        "why": "Developmental biology and craniofacial genetics from a UCSF researcher — the single closest match to Ridhi's genetics interest in the next six weeks."
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-disc-20260823-003",
+      "dedupe_key": "ridhi|2026-09-23|marin-science-seminar-julie-hui-explore-the-primates-lemurs",
+      "kid": "ridhi",
+      "title": "Marin Science Seminar — Julie Hui, 'Explore the Primates: Lemurs, Lorises, Monkeys and Apes (including humans)!' (Marin Science Seminar",
+      "date": "2026-09-23",
+      "end_date": null,
+      "time": null,
+      "type": "community",
+      "action": null,
+      "source": {
+        "kind": "discovery",
+        "ref": "https://marinscienceseminar.com/",
+        "first_seen": "2026-08-23",
+        "unverified": true,
+        "why": "Comparative primate biology; free, teen-targeted, no registration barrier."
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-disc-20260823-004",
+      "dedupe_key": "ridhi|2026-09-16|marin-science-seminar-fall-opener-debbie-raphael-from-plant",
+      "kid": "ridhi",
+      "title": "Marin Science Seminar fall opener — Debbie Raphael, 'From Plant to Planet: A Journey from Research to Environmental Action' (Marin Science Seminar",
+      "date": "2026-09-16",
+      "end_date": null,
+      "time": null,
+      "type": "community",
+      "action": null,
+      "source": {
+        "kind": "discovery",
+        "ref": "https://marinscienceseminar.com/",
+        "first_seen": "2026-08-23",
+        "unverified": true,
+        "why": "First night of the fall season — good one to attend if the family wants to sample the series before committing to the drive."
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-disc-20260823-005",
+      "dedupe_key": "ridhi|2026-10-07|marin-science-seminar-owen-bartolf-my-code-explores-the-moon",
+      "kid": "ridhi",
+      "title": "Marin Science Seminar — Owen Bartolf, 'My Code Explores the Moon, Mars, and Beyond' (Marin Science Seminar",
+      "date": "2026-10-07",
+      "end_date": null,
+      "time": null,
+      "type": "community",
+      "action": null,
+      "source": {
+        "kind": "discovery",
+        "ref": "https://marinscienceseminar.com/",
+        "first_seen": "2026-08-23",
+        "unverified": true,
+        "why": "Space/software rather than bio, and just past the six-week line — listed only so the fall series shows as a block on the calendar."
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-disc-20260823-006",
+      "dedupe_key": "dhruv|2026-09-19|2026-nof-sapphire-invitational-online-speech-debate-middle-s",
+      "kid": "dhruv",
+      "title": "2026 NOF Sapphire Invitational (online speech & debate, middle school division) (National Online Forensics",
+      "date": "2026-09-19",
+      "end_date": null,
+      "time": null,
+      "type": "community",
+      "action": null,
+      "source": {
+        "kind": "discovery",
+        "ref": "https://forensicstournament.net/sapphire/26",
+        "first_seen": "2026-08-23",
+        "unverified": true,
+        "why": "Online middle-school tournament with no travel, a realistic first competitive outing for a 6th grader."
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-disc-20260823-007",
+      "dedupe_key": "dhruv|2026-10-03|2026-nof-oak-async-invitational-asynchronous-middle-school-d",
+      "kid": "dhruv",
+      "title": "2026 NOF Oak Async Invitational (asynchronous, middle school division) (National Online Forensics",
+      "date": "2026-10-03",
+      "end_date": null,
+      "time": null,
+      "type": "community",
+      "action": null,
+      "source": {
+        "kind": "discovery",
+        "ref": "https://forensicstournament.net/oak/26",
+        "first_seen": "2026-08-23",
+        "unverified": true,
+        "why": "Asynchronous format means speeches are recorded on the family's own schedule — the gentlest possible entry into competition."
       },
       "status": "active"
     }

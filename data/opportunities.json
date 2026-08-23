@@ -444,6 +444,46 @@
         "evidence": "SRVUSD ParentSquare digest, Aug 19 2026: 'Help Shape SRVUSD's Future — Apply to Join a District Committee', lists nine committees, notes most applications close September 4, 2026, and says 'High school students will also be invited to join a committee as we believe that student voice is essential.'"
       },
       "notes": "school-year-recurring; leadership/civic experience rather than bio-med; Deep Learning & Innovation or Technology Advisory would be the closest science fit. Committee descriptions/meeting dates doc: https://docs.google.com/document/d/16iFKiacasYG9A0DUUfBhzUEIFqKOZANzcX4bu8fFeIQ/edit?usp=sharing"
+    },
+    {
+      "id": "opp-20260823-001",
+      "dedupe_key": "not-named-in-the-peachjar-flyer-listing|national-math-olympiad-moems-prep-contes|2026",
+      "kid": "dhruv",
+      "title": "National Math Olympiad (MOEMS) Prep & Contest",
+      "org": "Not named in the Peachjar flyer listing",
+      "url": null,
+      "category": "program",
+      "region": "tri-valley",
+      "location": "Not stated in the flyer summary",
+      "eligibility": {
+        "eligible_now": "check",
+        "reason": "MOEMS is generally an elementary/middle-school contest, so a 6th grader would normally fit, but the flyer summary gives no grade range or age gate — confirm on the flyer"
+      },
+      "window": {
+        "opens": null,
+        "closes": null,
+        "deadline": null,
+        "confidence": "estimated"
+      },
+      "commitment": "Not stated — prep sessions plus contest dates unknown",
+      "pipeline": {
+        "status": "new",
+        "updated_at": "2026-08-23T09:36:45",
+        "updated_by": "agent",
+        "history": [
+          {
+            "status": "new",
+            "at": "2026-08-23T09:36:45"
+          }
+        ]
+      },
+      "provenance": {
+        "source_id": "email-inbox",
+        "first_seen": "2026-08-23",
+        "last_seen": "2026-08-23",
+        "evidence": "Peachjar 'New School and Community Flyers' email lists a Community flyer 'National Math Olympiad MOEMS Prep & Contest' with a Sign Up link"
+      },
+      "notes": "STEM-competition fit for Dhruv; flyer link and dates not included in the email text — open the Peachjar flyer to get dates, cost and location before committing"
     }
   ]
 }
