@@ -1386,7 +1386,7 @@
         "ref": "email:860ecc6ac66f",
         "first_seen": "2026-08-23"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20260823-002",
@@ -1645,6 +1645,23 @@
         "first_seen": "2026-08-23",
         "unverified": true,
         "why": "Asynchronous format means speeches are recorded on the family's own schedule — the gentlest possible entry into competition."
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20260824-001",
+      "dedupe_key": "dhruv|2026-09-12|street-smarts-bike-festival",
+      "kid": "dhruv",
+      "title": "Street Smarts Bike Festival",
+      "date": "2026-09-12",
+      "end_date": null,
+      "time": null,
+      "type": "community",
+      "action": null,
+      "source": {
+        "kind": "email",
+        "ref": "email:2851e7e0836e",
+        "first_seen": "2026-08-24"
       },
       "status": "active"
     }
