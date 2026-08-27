@@ -287,7 +287,7 @@
         "ref": "email:572ea99fbbca",
         "first_seen": "2026-08-02"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-disc-20260802-001",
@@ -431,7 +431,7 @@
         "ref": "email:4ee117b03a4a",
         "first_seen": "2026-08-03"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20260803-005",
@@ -1251,7 +1251,7 @@
         "unverified": true,
         "why": "Low-stakes way to meet the Teen Advisory Board crowd a week before the 2026-09-03 TAB meeting Ridhi would be joining."
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-disc-20260816-007",
@@ -1403,7 +1403,7 @@
         "ref": "email:860ecc6ac66f",
         "first_seen": "2026-08-23"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20260823-003",
@@ -1420,7 +1420,7 @@
         "ref": "email:860ecc6ac66f",
         "first_seen": "2026-08-23"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20260823-004",
@@ -1679,6 +1679,27 @@
         "kind": "email",
         "ref": "email:4180f4c56496",
         "first_seen": "2026-08-25"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20260827-001",
+      "dedupe_key": "ridhi|2026-08-28|cal-high-school-site-council-parent-rep-vote-closes-3pm",
+      "kid": "ridhi",
+      "title": "Cal High School Site Council parent rep vote closes (3pm)",
+      "date": "2026-08-28",
+      "end_date": null,
+      "time": "15:00",
+      "type": "deadline",
+      "action": {
+        "required": true,
+        "what": "Review the 12 nominee statements and vote for up to three Site Council parent reps via the Google Form",
+        "due": "2026-08-28"
+      },
+      "source": {
+        "kind": "email",
+        "ref": "email:fec6d71fcc46",
+        "first_seen": "2026-08-27"
       },
       "status": "active"
     }
