@@ -1441,7 +1441,7 @@
         "ref": "email:59d3148112aa",
         "first_seen": "2026-08-23"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20260823-005",
@@ -1700,6 +1700,166 @@
         "kind": "email",
         "ref": "email:fec6d71fcc46",
         "first_seen": "2026-08-27"
+      },
+      "status": "expired"
+    },
+    {
+      "id": "evt-20260829-001",
+      "dedupe_key": "dhruv|2026-09-04|social-studies-6-the-geographer-s-toolbox-notes-packet-due-h",
+      "kid": "dhruv",
+      "title": "Social Studies 6: The Geographer's Toolbox Notes Packet due (hard copy)",
+      "date": "2026-09-04",
+      "end_date": null,
+      "time": null,
+      "type": "homework",
+      "action": {
+        "required": true,
+        "what": "Complete and turn in the hard-copy notes packet for Social Studies 6 (Wigginton)",
+        "due": "2026-09-04"
+      },
+      "source": {
+        "kind": "email",
+        "ref": "email:9453f1c294c6",
+        "first_seen": "2026-08-29"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20260829-002",
+      "dedupe_key": "ridhi|2026-09-01|chemistry-heat-transfer-mini-lab-due",
+      "kid": "ridhi",
+      "title": "Chemistry: Heat Transfer Mini Lab due",
+      "date": "2026-09-01",
+      "end_date": null,
+      "time": null,
+      "type": "homework",
+      "action": {
+        "required": true,
+        "what": "Submit Heat Transfer Mini Lab in Chemistry in the Earth System (Hughes)",
+        "due": "2026-09-01"
+      },
+      "source": {
+        "kind": "email",
+        "ref": "email:bf132fb65f95",
+        "first_seen": "2026-08-29"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20260829-003",
+      "dedupe_key": "ridhi|2026-08-31|ap-calculus-ab-hw-u1-5-apc-mcq-part-b-due",
+      "kid": "ridhi",
+      "title": "AP Calculus AB: HW U1 #5 (APC MCQ Part B) due",
+      "date": "2026-08-31",
+      "end_date": null,
+      "time": null,
+      "type": "homework",
+      "action": {
+        "required": true,
+        "what": "Complete AP Classroom MCQ Part B homework set",
+        "due": "2026-08-31"
+      },
+      "source": {
+        "kind": "email",
+        "ref": "email:bf132fb65f95",
+        "first_seen": "2026-08-29"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20260829-004",
+      "dedupe_key": "ridhi|2026-09-02|ap-calculus-ab-notecard-check-unit-1",
+      "kid": "ridhi",
+      "title": "AP Calculus AB: Notecard Check Unit 1",
+      "date": "2026-09-02",
+      "end_date": null,
+      "time": null,
+      "type": "homework",
+      "action": {
+        "required": true,
+        "what": "Have Unit 1 notecards ready for the check",
+        "due": "2026-09-02"
+      },
+      "source": {
+        "kind": "email",
+        "ref": "email:bf132fb65f95",
+        "first_seen": "2026-08-29"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20260829-005",
+      "dedupe_key": "ridhi|2026-09-04|ap-calculus-ab-unit-1-test-mcq-frq-calculator-and-non-calcul",
+      "kid": "ridhi",
+      "title": "AP Calculus AB: Unit 1 Test (MCQ & FRQ, calculator and non-calculator)",
+      "date": "2026-09-04",
+      "end_date": null,
+      "time": null,
+      "type": "test",
+      "action": null,
+      "source": {
+        "kind": "email",
+        "ref": "email:bf132fb65f95",
+        "first_seen": "2026-08-29"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20260829-006",
+      "dedupe_key": "family|2026-08-30|cal-high-student-support-session-sign-ups-weekly-window-thur",
+      "kid": "family",
+      "title": "Cal High Student Support session sign-ups (weekly window: Thursday open, Sunday close)",
+      "date": "2026-08-30",
+      "end_date": null,
+      "time": null,
+      "type": "school",
+      "action": {
+        "required": true,
+        "what": "Remind Ridhi to sign up for next week's Student Support sessions before the Sunday close",
+        "due": "2026-08-30"
+      },
+      "source": {
+        "kind": "email",
+        "ref": "email:b8545dfa0d7a",
+        "first_seen": "2026-08-29"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20260829-007",
+      "dedupe_key": "ridhi|2026-09-15|asb-package-yearbook-sales-end-price-increases-after-mid-sep",
+      "kid": "ridhi",
+      "title": "ASB package / yearbook sales end (price increases after) — mid-September",
+      "date": "2026-09-15",
+      "end_date": null,
+      "time": null,
+      "type": "deadline",
+      "action": {
+        "required": true,
+        "what": "Purchase 2026-27 yearbook via the ASB package in Future Fund registration before sales close",
+        "due": "2026-09-15"
+      },
+      "source": {
+        "kind": "email",
+        "ref": "email:b8545dfa0d7a",
+        "first_seen": "2026-08-29"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20260829-008",
+      "dedupe_key": "ridhi|2026-09-11|updated-id-cards-with-asb-mark-available-from-counseling-2-w",
+      "kid": "ridhi",
+      "title": "Updated ID cards with ASB mark available from Counseling (~2 weeks out)",
+      "date": "2026-09-11",
+      "end_date": null,
+      "time": null,
+      "type": "school",
+      "action": null,
+      "source": {
+        "kind": "email",
+        "ref": "email:b8545dfa0d7a",
+        "first_seen": "2026-08-29"
       },
       "status": "active"
     }

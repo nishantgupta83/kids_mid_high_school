@@ -484,6 +484,126 @@
         "evidence": "Peachjar 'New School and Community Flyers' email lists a Community flyer 'National Math Olympiad MOEMS Prep & Contest' with a Sign Up link"
       },
       "notes": "STEM-competition fit for Dhruv; flyer link and dates not included in the email text — open the Peachjar flyer to get dates, cost and location before committing"
+    },
+    {
+      "id": "opp-20260829-001",
+      "dedupe_key": "san-ramon-valley-education-foundation-sr|srvef-teamworks-after-school-program-gra|2026",
+      "kid": "dhruv",
+      "title": "SRVEF TeamWorks after-school program (grades 3-5)",
+      "org": "San Ramon Valley Education Foundation (SRVEF)",
+      "url": null,
+      "category": "program",
+      "region": "tri-valley",
+      "location": "SRVUSD schools (flyer distributed via Peachjar)",
+      "eligibility": {
+        "eligible_now": "no",
+        "reason": "Flyer states grades 3-5; Dhruv is in 6th grade (age 11), so he has aged out of the stated range."
+      },
+      "window": {
+        "opens": null,
+        "closes": null,
+        "deadline": null,
+        "confidence": "estimated"
+      },
+      "commitment": "After-school program; schedule not given in the flyer listing",
+      "pipeline": {
+        "status": "new",
+        "updated_at": "2026-08-29T07:01:15",
+        "updated_by": "agent",
+        "history": [
+          {
+            "status": "new",
+            "at": "2026-08-29T07:01:15"
+          }
+        ]
+      },
+      "provenance": {
+        "source_id": "email-inbox",
+        "first_seen": "2026-08-29",
+        "last_seen": "2026-08-29",
+        "evidence": "Peachjar email lists 'SRVEF TeamWorks after school program (3-5 gr)' as a new school flyer."
+      },
+      "notes": "Not a fit this year — logged only so the grade gate is on record; watch for a middle-school equivalent."
+    },
+    {
+      "id": "opp-20260829-002",
+      "dedupe_key": "not-named-in-the-peachjar-flyer-listing|youth-heart-screening|2026",
+      "kid": "both",
+      "title": "Youth Heart Screening",
+      "org": "Not named in the Peachjar flyer listing",
+      "url": null,
+      "category": "event",
+      "region": "tri-valley",
+      "location": "Not stated in the flyer listing",
+      "eligibility": {
+        "eligible_now": "check",
+        "reason": "Flyer headline gives no age range or date; 'youth' screenings commonly target teens but the listing does not say, so eligibility for a 15-year-old and an 11-year-old is unconfirmed."
+      },
+      "window": {
+        "opens": null,
+        "closes": null,
+        "deadline": null,
+        "confidence": "estimated"
+      },
+      "commitment": "One-time screening appointment; registration link in the flyer",
+      "pipeline": {
+        "status": "new",
+        "updated_at": "2026-08-29T07:01:15",
+        "updated_by": "agent",
+        "history": [
+          {
+            "status": "new",
+            "at": "2026-08-29T07:01:15"
+          }
+        ]
+      },
+      "provenance": {
+        "source_id": "email-inbox",
+        "first_seen": "2026-08-29",
+        "last_seen": "2026-08-29",
+        "evidence": "Peachjar email lists 'Youth Heart Screening' with a 'Register' call to action under California High."
+      },
+      "notes": "Bio/med-adjacent and health-relevant for both kids; open the Peachjar flyer for date, venue and age limits before acting."
+    },
+    {
+      "id": "opp-20260829-003",
+      "dedupe_key": "cpc-community-organization-full-name-not|cpc-serve-day-community-service-day|2026",
+      "kid": "ridhi",
+      "title": "CPC Serve Day (community service day)",
+      "org": "CPC (community organization, full name not given in the listing)",
+      "url": null,
+      "category": "volunteer-general",
+      "region": "tri-valley",
+      "location": "Not stated in the flyer listing",
+      "eligibility": {
+        "eligible_now": "check",
+        "reason": "No age or grade requirement given in the flyer headline; most community serve days accept high schoolers, but a 15-year-old may need a parent or waiver — unconfirmed."
+      },
+      "window": {
+        "opens": null,
+        "closes": null,
+        "deadline": null,
+        "confidence": "estimated"
+      },
+      "commitment": "Single-day service event; date not given in the listing",
+      "pipeline": {
+        "status": "new",
+        "updated_at": "2026-08-29T07:01:15",
+        "updated_by": "agent",
+        "history": [
+          {
+            "status": "new",
+            "at": "2026-08-29T07:01:15"
+          }
+        ]
+      },
+      "provenance": {
+        "source_id": "email-inbox",
+        "first_seen": "2026-08-29",
+        "last_seen": "2026-08-29",
+        "evidence": "Peachjar email lists 'CPC Serve Day' under Community flyers with a 'Learn More' link."
+      },
+      "notes": "weekend-fit likely (serve days are usually Saturdays); general volunteering rather than bio/med — check the flyer for date and sign-up."
     }
   ]
 }
