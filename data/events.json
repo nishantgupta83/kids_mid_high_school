@@ -1194,7 +1194,7 @@
         "unverified": true,
         "why": "If Dhruv is going to start competitive debate this year, registration has to happen before this date — the semester runs through 2027-01-21."
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-disc-20260816-004",
@@ -1860,6 +1860,122 @@
         "kind": "email",
         "ref": "email:b8545dfa0d7a",
         "first_seen": "2026-08-29"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20260830-001",
+      "dedupe_key": "both|2026-08-31|plot-and-pot-a-bookish-succulent-workshop-teens-13-18-regist",
+      "kid": "both",
+      "title": "Plot and Pot: A Bookish Succulent Workshop (teens 13-18, registration required)",
+      "date": "2026-08-31",
+      "end_date": null,
+      "time": "16:00",
+      "type": "community",
+      "action": {
+        "required": true,
+        "what": "Register online — 15 spots remaining at time of scrape; library branch not named in the listing",
+        "due": "2026-08-31"
+      },
+      "source": {
+        "kind": "registry",
+        "ref": "source:ccclib-teen-events",
+        "first_seen": "2026-08-30"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-disc-20260830-001",
+      "dedupe_key": "dhruv|2026-09-15|athens-debate-fall-2026-late-registration-deadline-beginner",
+      "kid": "dhruv",
+      "title": "Athens Debate — Fall 2026 late-registration deadline (Beginner Middle School Speech & Debate, grades 6-8) (Athens Debate",
+      "date": "2026-09-15",
+      "end_date": null,
+      "time": null,
+      "type": "community",
+      "action": null,
+      "source": {
+        "kind": "discovery",
+        "ref": "https://www.athensdebate.com/",
+        "first_seen": "2026-08-30",
+        "unverified": true,
+        "why": "Hard cutoff to get Dhruv into a grades 6-8 beginner speech/debate class this fall — classes already started Aug 29, so this is the last window."
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-disc-20260830-002",
+      "dedupe_key": "ridhi|2026-09-23|marin-science-seminar-explore-the-primates-lemurs-lorises-mo",
+      "kid": "ridhi",
+      "title": "Marin Science Seminar — 'Explore the Primates: Lemurs, Lorises, Monkeys and Apes (including humans)!' with Julie Hui, College of Marin (Marin Science Seminar",
+      "date": "2026-09-23",
+      "end_date": null,
+      "time": null,
+      "type": "community",
+      "action": null,
+      "source": {
+        "kind": "discovery",
+        "ref": "https://marinscienceseminar.com/calendar/",
+        "first_seen": "2026-08-30",
+        "unverified": true,
+        "why": "Free biological-anthropology talk pitched at teens — squarely in Ridhi's biology lane, though it's a ~50-mile evening drive from San Ramon."
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-disc-20260830-003",
+      "dedupe_key": "family|2026-10-03|science-stockmen-s-park-free-drop-in-science-day",
+      "kid": "family",
+      "title": "Science@Stockmen's Park — free drop-in science day (Quest Science Center",
+      "date": "2026-10-03",
+      "end_date": null,
+      "time": null,
+      "type": "community",
+      "action": null,
+      "source": {
+        "kind": "discovery",
+        "ref": "https://quest-science.org/science-at-stockmens/",
+        "first_seen": "2026-08-30",
+        "unverified": true,
+        "why": "20+ hands-on science/engineering activities with regional partner orgs, 25 minutes away, free and drop-in — easy for Dhruv, and a way to meet Tri-Valley STEM organizations in person."
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-disc-20260830-004",
+      "dedupe_key": "family|2026-10-17|bay-area-science-festival-13th-edition",
+      "kid": "family",
+      "title": "Bay Area Science Festival (13th edition) (UCSF Science & Health Education Partnership",
+      "date": "2026-10-17",
+      "end_date": null,
+      "time": null,
+      "type": "community",
+      "action": null,
+      "source": {
+        "kind": "discovery",
+        "ref": "https://bayareasciencefestival.org/",
+        "first_seen": "2026-08-30",
+        "unverified": true,
+        "why": "125+ demos, behind-the-scenes lab tours and science talks — the single best day for Ridhi to talk to Bay Area bio/medical labs face to face, and it works for Dhruv too."
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-disc-20260830-005",
+      "dedupe_key": "ridhi|2026-10-10|hyphen-hacks-high-school-hackathon",
+      "kid": "ridhi",
+      "title": "Hyphen Hacks — high school hackathon (Hyphen Hacks (Hack Club network",
+      "date": "2026-10-10",
+      "end_date": null,
+      "time": null,
+      "type": "community",
+      "action": null,
+      "source": {
+        "kind": "discovery",
+        "ref": "https://www.hyphen-hacks.com/",
+        "first_seen": "2026-08-30",
+        "unverified": true,
+        "why": "Second Bay Area high school hackathon within the window if Dublin hacx is a hit."
       },
       "status": "active"
     }
