@@ -1823,7 +1823,7 @@
         "ref": "email:b8545dfa0d7a",
         "first_seen": "2026-08-29"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20260829-007",
@@ -1976,6 +1976,116 @@
         "first_seen": "2026-08-30",
         "unverified": true,
         "why": "Second Bay Area high school hackathon within the window if Dublin hacx is a hit."
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20260831-001",
+      "dedupe_key": "ridhi|2026-09-04|cal-high-football-game-vs-logan-high-marching-grizzlies-perf",
+      "kid": "ridhi",
+      "title": "Cal High football game vs Logan High — Marching Grizzlies perform",
+      "date": "2026-09-04",
+      "end_date": null,
+      "time": "17:30",
+      "type": "athletics",
+      "action": null,
+      "source": {
+        "kind": "email",
+        "ref": "email:5789e8429770",
+        "first_seen": "2026-08-31"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20260831-002",
+      "dedupe_key": "dhruv|2026-09-02|pine-valley-pta-meeting",
+      "kid": "dhruv",
+      "title": "Pine Valley PTA meeting",
+      "date": "2026-09-02",
+      "end_date": null,
+      "time": null,
+      "type": "school",
+      "action": null,
+      "source": {
+        "kind": "email",
+        "ref": "email:fd19aa17a9cc",
+        "first_seen": "2026-08-31"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20260831-003",
+      "dedupe_key": "dhruv|2026-09-08|pine-valley-spirit-week",
+      "kid": "dhruv",
+      "title": "Pine Valley Spirit Week",
+      "date": "2026-09-08",
+      "end_date": "2026-09-11",
+      "time": null,
+      "type": "school",
+      "action": null,
+      "source": {
+        "kind": "email",
+        "ref": "email:fd19aa17a9cc",
+        "first_seen": "2026-08-31"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20260831-004",
+      "dedupe_key": "dhruv|2026-09-16|pvef-registration-closes",
+      "kid": "dhruv",
+      "title": "PVEF registration closes",
+      "date": "2026-09-16",
+      "end_date": null,
+      "time": null,
+      "type": "deadline",
+      "action": {
+        "required": true,
+        "what": "Complete PVEF registration before it closes",
+        "due": "2026-09-16"
+      },
+      "source": {
+        "kind": "email",
+        "ref": "email:fd19aa17a9cc",
+        "first_seen": "2026-08-31"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20260831-005",
+      "dedupe_key": "dhruv|2026-09-30|pine-valley-photo-make-up-day-during-pe-class",
+      "kid": "dhruv",
+      "title": "Pine Valley photo make-up day (during PE class)",
+      "date": "2026-09-30",
+      "end_date": null,
+      "time": null,
+      "type": "school",
+      "action": null,
+      "source": {
+        "kind": "email",
+        "ref": "email:fd19aa17a9cc",
+        "first_seen": "2026-08-31"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20260831-006",
+      "dedupe_key": "family|2026-10-03|citizen-corp-council-youth-heart-screening-clinic-at-srvhs-1",
+      "kid": "family",
+      "title": "Citizen Corp Council youth heart screening clinic at SRVHS ($10)",
+      "date": "2026-10-03",
+      "end_date": null,
+      "time": null,
+      "type": "community",
+      "action": {
+        "required": true,
+        "what": "Register via the flyer link for the $10 heart screening (risk assessment, EKG, doctor review)",
+        "due": null
+      },
+      "source": {
+        "kind": "email",
+        "ref": "email:fd19aa17a9cc",
+        "first_seen": "2026-08-31"
       },
       "status": "active"
     }
