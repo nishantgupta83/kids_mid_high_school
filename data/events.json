@@ -1764,7 +1764,7 @@
         "ref": "email:bf132fb65f95",
         "first_seen": "2026-08-29"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20260829-004",
@@ -1882,7 +1882,7 @@
         "ref": "source:ccclib-teen-events",
         "first_seen": "2026-08-30"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-disc-20260830-001",
@@ -2086,6 +2086,27 @@
         "kind": "email",
         "ref": "email:fd19aa17a9cc",
         "first_seen": "2026-08-31"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20260901-001",
+      "dedupe_key": "ridhi|2026-09-01|star-reading-retest-sign-up-window-student-support-english",
+      "kid": "ridhi",
+      "title": "STAR Reading retest sign-up window — Student Support (English)",
+      "date": "2026-09-01",
+      "end_date": null,
+      "time": null,
+      "type": "school",
+      "action": {
+        "required": true,
+        "what": "If student scored 2 or below on STAR Reading, sign up for Mrs. Pacheco's Student Support session to retest before intervention sessions are assigned (8/31 has passed; 9/1 is the remaining option)",
+        "due": "2026-09-01"
+      },
+      "source": {
+        "kind": "email",
+        "ref": "email:80fbe94204d6",
+        "first_seen": "2026-09-01"
       },
       "status": "active"
     }
