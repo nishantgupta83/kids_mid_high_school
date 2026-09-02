@@ -1156,7 +1156,7 @@
         "unverified": true,
         "why": "Hard deadline in ~2 weeks for the one animal-science volunteer program Ridhi is already old enough to join; mandatory training follows on 2026-09-26 and 2026-10-04."
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-disc-20260816-002",
@@ -1743,7 +1743,7 @@
         "ref": "email:bf132fb65f95",
         "first_seen": "2026-08-29"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20260829-003",
@@ -2107,6 +2107,23 @@
         "kind": "email",
         "ref": "email:80fbe94204d6",
         "first_seen": "2026-09-01"
+      },
+      "status": "expired"
+    },
+    {
+      "id": "evt-20260902-001",
+      "dedupe_key": "ridhi|2026-09-03|ap-calculus-ab-unit-1-test-limits-and-continuity-day-1-of-2",
+      "kid": "ridhi",
+      "title": "AP Calculus AB: Unit 1 Test (Limits and Continuity) — day 1 of 2",
+      "date": "2026-09-03",
+      "end_date": null,
+      "time": null,
+      "type": "test",
+      "action": null,
+      "source": {
+        "kind": "email",
+        "ref": "email:6da062239fa2",
+        "first_seen": "2026-09-02"
       },
       "status": "active"
     }
