@@ -1785,7 +1785,7 @@
         "ref": "email:bf132fb65f95",
         "first_seen": "2026-08-29"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20260829-005",
@@ -2011,7 +2011,7 @@
         "ref": "email:fd19aa17a9cc",
         "first_seen": "2026-08-31"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20260831-003",
@@ -2124,6 +2124,61 @@
         "kind": "email",
         "ref": "email:6da062239fa2",
         "first_seen": "2026-09-02"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20260903-001",
+      "dedupe_key": "dhruv|2026-09-16|last-day-to-register-for-the-2026-27-school-year-pine-valley",
+      "kid": "dhruv",
+      "title": "Last day to register for the 2026-27 school year (Pine Valley)",
+      "date": "2026-09-16",
+      "end_date": null,
+      "time": null,
+      "type": "deadline",
+      "action": {
+        "required": true,
+        "what": "Complete 2026-27 school year registration for Pine Valley if not already done",
+        "due": "2026-09-16"
+      },
+      "source": {
+        "kind": "email",
+        "ref": "email:c8427be5a301",
+        "first_seen": "2026-09-03"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20260903-002",
+      "dedupe_key": "ridhi|2026-09-03|cal-high-club-fair-day-1-special-bell-schedule",
+      "kid": "ridhi",
+      "title": "Cal High Club Fair (day 1) — special bell schedule",
+      "date": "2026-09-03",
+      "end_date": null,
+      "time": null,
+      "type": "school",
+      "action": null,
+      "source": {
+        "kind": "email",
+        "ref": "email:b443e4680021",
+        "first_seen": "2026-09-03"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20260903-003",
+      "dedupe_key": "ridhi|2026-09-04|cal-high-club-fair-day-2-special-bell-schedule",
+      "kid": "ridhi",
+      "title": "Cal High Club Fair (day 2) — special bell schedule",
+      "date": "2026-09-04",
+      "end_date": null,
+      "time": null,
+      "type": "school",
+      "action": null,
+      "source": {
+        "kind": "email",
+        "ref": "email:b443e4680021",
+        "first_seen": "2026-09-03"
       },
       "status": "active"
     }
