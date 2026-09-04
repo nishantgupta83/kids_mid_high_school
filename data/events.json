@@ -363,7 +363,7 @@
         "unverified": true,
         "why": "First meeting of the school year, 4:15-5:15pm — the natural entry point if Ridhi wants a standing volunteer commitment close to home."
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20260803-001",
@@ -930,7 +930,7 @@
         "ref": "email:22201a83fe26",
         "first_seen": "2026-08-13"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20260813-003",
@@ -1175,7 +1175,7 @@
         "unverified": true,
         "why": "Walkable-distance recurring volunteer-hours source (ages 13-18, first Thursday monthly, 4:15-5:15pm); next occurrence after this is 2026-10-01."
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-disc-20260816-003",
@@ -2125,7 +2125,7 @@
         "ref": "email:6da062239fa2",
         "first_seen": "2026-09-02"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20260903-001",
@@ -2163,7 +2163,7 @@
         "ref": "email:b443e4680021",
         "first_seen": "2026-09-03"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20260903-003",
@@ -2179,6 +2179,23 @@
         "kind": "email",
         "ref": "email:b443e4680021",
         "first_seen": "2026-09-03"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20260904-001",
+      "dedupe_key": "dhruv|2026-09-09|dine-with-pine-fundraiser-night",
+      "kid": "dhruv",
+      "title": "Dine With Pine fundraiser night",
+      "date": "2026-09-09",
+      "end_date": null,
+      "time": null,
+      "type": "community",
+      "action": null,
+      "source": {
+        "kind": "email",
+        "ref": "email:a597ef5a808d",
+        "first_seen": "2026-09-04"
       },
       "status": "active"
     }
