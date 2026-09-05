@@ -511,7 +511,7 @@
         "ref": "email:22be1fd573fd",
         "first_seen": "2026-08-04"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20260806-001",
@@ -1365,7 +1365,7 @@
         "ref": "email:25f5f82e77f6",
         "first_seen": "2026-08-20"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20260823-001",
@@ -1475,7 +1475,7 @@
         "ref": "email:6444af0462b7",
         "first_seen": "2026-08-23"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20260823-007",
@@ -1722,7 +1722,7 @@
         "ref": "email:9453f1c294c6",
         "first_seen": "2026-08-29"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20260829-002",
@@ -1802,7 +1802,7 @@
         "ref": "email:bf132fb65f95",
         "first_seen": "2026-08-29"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20260829-006",
@@ -1994,7 +1994,7 @@
         "ref": "email:5789e8429770",
         "first_seen": "2026-08-31"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20260831-002",
@@ -2180,7 +2180,7 @@
         "ref": "email:b443e4680021",
         "first_seen": "2026-09-03"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20260904-001",
@@ -2196,6 +2196,146 @@
         "kind": "email",
         "ref": "email:a597ef5a808d",
         "first_seen": "2026-09-04"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20260905-001",
+      "dedupe_key": "dhruv|2026-09-08|language-arts-6-personal-narrative-topic-due-two-story-ideas",
+      "kid": "dhruv",
+      "title": "Language Arts 6: Personal Narrative - Topic due (two story ideas + peer feedback)",
+      "date": "2026-09-08",
+      "end_date": null,
+      "time": null,
+      "type": "homework",
+      "action": null,
+      "source": {
+        "kind": "email",
+        "ref": "email:a2623d1da43f",
+        "first_seen": "2026-09-05"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20260905-002",
+      "dedupe_key": "ridhi|2026-09-08|chemistry-1a-5a-phet-energy-changes-and-forms-due",
+      "kid": "ridhi",
+      "title": "Chemistry: 1A.5a PhET Energy Changes and Forms due",
+      "date": "2026-09-08",
+      "end_date": null,
+      "time": null,
+      "type": "homework",
+      "action": null,
+      "source": {
+        "kind": "email",
+        "ref": "email:f68164d630e9",
+        "first_seen": "2026-09-05"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20260905-003",
+      "dedupe_key": "ridhi|2026-09-08|chemistry-1a-5b-specific-heat-capacity-practice-due",
+      "kid": "ridhi",
+      "title": "Chemistry: 1A.5b Specific Heat Capacity Practice due",
+      "date": "2026-09-08",
+      "end_date": null,
+      "time": null,
+      "type": "homework",
+      "action": null,
+      "source": {
+        "kind": "email",
+        "ref": "email:f68164d630e9",
+        "first_seen": "2026-09-05"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20260905-004",
+      "dedupe_key": "ridhi|2026-09-09|marching-band-mvt-1-fully-memorized-submit-recording-in-clas",
+      "kid": "ridhi",
+      "title": "Marching Band: Mvt. 1 fully memorized — submit recording in Classroom",
+      "date": "2026-09-09",
+      "end_date": null,
+      "time": null,
+      "type": "homework",
+      "action": null,
+      "source": {
+        "kind": "email",
+        "ref": "email:f68164d630e9",
+        "first_seen": "2026-09-05"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20260905-005",
+      "dedupe_key": "ridhi|2026-09-09|ap-calculus-ab-hw-u2-1-apc-2-1-2-4-tq-due",
+      "kid": "ridhi",
+      "title": "AP Calculus AB: HW U2 #1 (APC 2.1-2.4 TQ) due",
+      "date": "2026-09-09",
+      "end_date": null,
+      "time": null,
+      "type": "homework",
+      "action": null,
+      "source": {
+        "kind": "email",
+        "ref": "email:f68164d630e9",
+        "first_seen": "2026-09-05"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20260905-006",
+      "dedupe_key": "ridhi|2026-09-09|english-10-elements-of-literature-set-3-finish-the-packet",
+      "kid": "ridhi",
+      "title": "English 10: Elements of Literature Set #3 — finish the packet",
+      "date": "2026-09-09",
+      "end_date": null,
+      "time": null,
+      "type": "homework",
+      "action": null,
+      "source": {
+        "kind": "email",
+        "ref": "email:f68164d630e9",
+        "first_seen": "2026-09-05"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20260905-007",
+      "dedupe_key": "ridhi|2026-09-10|chemistry-first-official-test",
+      "kid": "ridhi",
+      "title": "Chemistry: first official test",
+      "date": "2026-09-10",
+      "end_date": null,
+      "time": null,
+      "type": "test",
+      "action": null,
+      "source": {
+        "kind": "email",
+        "ref": "email:f68164d630e9",
+        "first_seen": "2026-09-05"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20260905-008",
+      "dedupe_key": "ridhi|2026-09-15|science-alliance-mentor-application-deadline-cal-high-srvef",
+      "kid": "ridhi",
+      "title": "Science Alliance mentor application deadline (Cal High / SRVEF club)",
+      "date": "2026-09-15",
+      "end_date": null,
+      "time": "23:59",
+      "type": "deadline",
+      "action": {
+        "required": true,
+        "what": "Submit the Science Alliance mentor application (Google Form) if Ridhi wants to mentor 5th graders in science",
+        "due": "2026-09-15"
+      },
+      "source": {
+        "kind": "email",
+        "ref": "email:d723594b3421",
+        "first_seen": "2026-09-05"
       },
       "status": "active"
     }

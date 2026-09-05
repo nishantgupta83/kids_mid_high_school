@@ -604,6 +604,46 @@
         "evidence": "Peachjar email lists 'CPC Serve Day' under Community flyers with a 'Learn More' link."
       },
       "notes": "weekend-fit likely (serve days are usually Saturdays); general volunteering rather than bio/med — check the flyer for date and sign-up."
+    },
+    {
+      "id": "opp-20260905-001",
+      "dedupe_key": "california-high-school-science-alliance|science-alliance-high-school-science-men|2026",
+      "kid": "ridhi",
+      "title": "Science Alliance — high school science mentor for 5th graders",
+      "org": "California High School Science Alliance Club (SRVEF sponsored)",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSdiNeyNe4ncnRuk2YXfWDwzI21I4jxUfHbPHxq_w1NOU21q6w/viewform",
+      "category": "volunteer-general",
+      "region": "tri-valley",
+      "location": "California High School / SRVUSD elementary schools (San Ramon)",
+      "eligibility": {
+        "eligible_now": "yes",
+        "reason": "Open to Cal High students who are passionate about science; Ridhi is a current Cal High 10th grader. No age gate stated."
+      },
+      "window": {
+        "opens": null,
+        "closes": null,
+        "deadline": "2026-09-15",
+        "confidence": "verified"
+      },
+      "commitment": "Not stated; mentors pair with 5th graders to explore science and develop science fair projects, so likely a recurring school-year commitment.",
+      "pipeline": {
+        "status": "new",
+        "updated_at": "2026-09-05T07:02:19",
+        "updated_by": "agent",
+        "history": [
+          {
+            "status": "new",
+            "at": "2026-09-05T07:02:19"
+          }
+        ]
+      },
+      "provenance": {
+        "source_id": "email-inbox",
+        "first_seen": "2026-09-05",
+        "last_seen": "2026-09-05",
+        "evidence": "Grizzly Community Update 'Science Alliance (New)' section: club welcoming new mentors, applications due September 15, 2026 at 11:59 PM, with Google Form link."
+      },
+      "notes": "school-year-weekly (likely); science-mentoring; service-hours-fit; on-campus/local so no transport issue; strong match for Ridhi's science + volunteering priority even though not bio/med specific."
     }
   ]
 }
