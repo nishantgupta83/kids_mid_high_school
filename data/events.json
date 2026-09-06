@@ -2338,6 +2338,82 @@
         "first_seen": "2026-09-05"
       },
       "status": "active"
+    },
+    {
+      "id": "evt-disc-20260906-001",
+      "dedupe_key": "ridhi|2026-10-03|dublin-hacx-free-12-hour-high-school-hackathon",
+      "kid": "ridhi",
+      "title": "Dublin HacX — free 12-hour high school hackathon (Dublin HacX (student-run, Dublin/Emerald HS",
+      "date": "2026-10-03",
+      "end_date": null,
+      "time": null,
+      "type": "community",
+      "action": null,
+      "source": {
+        "kind": "discovery",
+        "ref": "https://www.dublinhacx.com/",
+        "first_seen": "2026-09-06",
+        "unverified": true,
+        "why": "Free, beginner-friendly, in San Ramon itself, open to any Bay Area high schooler — 'first time touching code' is explicitly welcome."
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-disc-20260906-002",
+      "dedupe_key": "both|2026-10-07|marin-science-seminar-my-code-explores-the-moon-mars-and-bey",
+      "kid": "both",
+      "title": "Marin Science Seminar — 'My Code Explores the Moon, Mars, and Beyond' (Owen Bartolf) (Marin Science Seminar",
+      "date": "2026-10-07",
+      "end_date": null,
+      "time": null,
+      "type": "community",
+      "action": null,
+      "source": {
+        "kind": "discovery",
+        "ref": "https://marinscienceseminar.com/calendar/",
+        "first_seen": "2026-09-06",
+        "unverified": true,
+        "why": "Free and open to community, and the coding/space framing is the one seminar in this stretch an 11-year-old would also sit through."
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-disc-20260906-003",
+      "dedupe_key": "ridhi|2026-10-10|hyphen-hacks-annual-12-hour-bay-area-high-school-hackathon",
+      "kid": "ridhi",
+      "title": "Hyphen-Hacks — annual 12-hour Bay Area high school hackathon (Hyphen-Hacks",
+      "date": "2026-10-10",
+      "end_date": null,
+      "time": null,
+      "type": "community",
+      "action": null,
+      "source": {
+        "kind": "discovery",
+        "ref": "https://hackathons.hackclub.com/list-of-hackathons-in-the-bay-area/",
+        "first_seen": "2026-09-06",
+        "unverified": true,
+        "why": "Second beginner-friendly HS hackathon in the window if the Oct 3 San Ramon one is a conflict."
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-disc-20260906-004",
+      "dedupe_key": "dhruv|2026-09-26|regent-legacy-rookie-novice-invitational-online-middle-schoo",
+      "kid": "dhruv",
+      "title": "Regent Legacy Rookie/Novice Invitational (online) — middle school divisions (Regent Legacy / listed on Golden State Academy tournament calendar",
+      "date": "2026-09-26",
+      "end_date": null,
+      "time": null,
+      "type": "community",
+      "action": null,
+      "source": {
+        "kind": "discovery",
+        "ref": "https://www.thegoldenstateacademy.com/gsa-tournaments.html",
+        "first_seen": "2026-09-06",
+        "unverified": true,
+        "why": "An online novice-level tournament with middle school divisions — the lowest-friction first competition for a 6th grader, no travel."
+      },
+      "status": "active"
     }
   ]
 }
