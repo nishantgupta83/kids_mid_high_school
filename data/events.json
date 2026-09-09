@@ -2214,7 +2214,7 @@
         "ref": "email:a2623d1da43f",
         "first_seen": "2026-09-05"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20260905-002",
@@ -2231,7 +2231,7 @@
         "ref": "email:f68164d630e9",
         "first_seen": "2026-09-05"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20260905-003",
@@ -2248,7 +2248,7 @@
         "ref": "email:f68164d630e9",
         "first_seen": "2026-09-05"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20260905-004",
@@ -2412,6 +2412,44 @@
         "first_seen": "2026-09-06",
         "unverified": true,
         "why": "An online novice-level tournament with middle school divisions — the lowest-friction first competition for a 6th grader, no travel."
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20260909-001",
+      "dedupe_key": "ridhi|2026-09-11|8th-grade-night-home-football-game-marching-grizzlies-perfor",
+      "kid": "ridhi",
+      "title": "8th Grade Night home football game — Marching Grizzlies perform (vs Santa Teresa)",
+      "date": "2026-09-11",
+      "end_date": null,
+      "time": "17:30",
+      "type": "school",
+      "action": {
+        "required": true,
+        "what": "Student call time 5:30 PM in the Band Room, in uniform, with instrument/mouthpiece/reeds/neck strap/lyre/flip folder (or Color Guard equipment), water bottle, optional concession money; parent pickup after ~10:00 PM and may run late",
+        "due": "2026-09-11"
+      },
+      "source": {
+        "kind": "email",
+        "ref": "email:58f8638fca4f",
+        "first_seen": "2026-09-09"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20260909-002",
+      "dedupe_key": "dhruv|2026-09-11|cal-high-8th-grade-night-pine-valley-8th-graders-invited-to",
+      "kid": "dhruv",
+      "title": "Cal High 8th Grade Night — Pine Valley 8th graders invited to join the Marching Grizzlies at the game",
+      "date": "2026-09-11",
+      "end_date": null,
+      "time": "19:00",
+      "type": "community",
+      "action": null,
+      "source": {
+        "kind": "email",
+        "ref": "email:58f8638fca4f",
+        "first_seen": "2026-09-09"
       },
       "status": "active"
     }
