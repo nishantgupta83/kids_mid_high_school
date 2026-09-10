@@ -2197,7 +2197,7 @@
         "ref": "email:a597ef5a808d",
         "first_seen": "2026-09-04"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20260905-001",
@@ -2265,7 +2265,7 @@
         "ref": "email:f68164d630e9",
         "first_seen": "2026-09-05"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20260905-005",
@@ -2282,7 +2282,7 @@
         "ref": "email:f68164d630e9",
         "first_seen": "2026-09-05"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20260905-006",
@@ -2299,7 +2299,7 @@
         "ref": "email:f68164d630e9",
         "first_seen": "2026-09-05"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20260905-007",
