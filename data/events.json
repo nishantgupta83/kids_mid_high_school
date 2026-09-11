@@ -2316,7 +2316,7 @@
         "ref": "email:f68164d630e9",
         "first_seen": "2026-09-05"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20260905-008",
@@ -2450,6 +2450,27 @@
         "kind": "email",
         "ref": "email:58f8638fca4f",
         "first_seen": "2026-09-09"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20260911-001",
+      "dedupe_key": "dhruv|2026-09-30|math-olympiad-virtual-pine-valley-first-class-session-3-5-50",
+      "kid": "dhruv",
+      "title": "Math Olympiad (virtual, Pine Valley) — first class, Session 3 (5:50-6:50 PM)",
+      "date": "2026-09-30",
+      "end_date": null,
+      "time": "17:50",
+      "type": "school",
+      "action": {
+        "required": true,
+        "what": "Before the first class, Dhruv accepts the Math Olympiad Google Classroom invitation on his own school Google account (not a parent account), checks that he can log in on the computer he will use, and tries and submits the posted Warm-up Problem",
+        "due": "2026-09-30"
+      },
+      "source": {
+        "kind": "email",
+        "ref": "email:e836ee7367d3",
+        "first_seen": "2026-09-11"
       },
       "status": "active"
     }
