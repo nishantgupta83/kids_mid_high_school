@@ -1344,7 +1344,7 @@
         "ref": "email:d65d27bcf4db",
         "first_seen": "2026-08-17"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20260820-001",
@@ -1861,7 +1861,7 @@
         "ref": "email:b8545dfa0d7a",
         "first_seen": "2026-08-29"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20260830-001",
@@ -2028,7 +2028,7 @@
         "ref": "email:fd19aa17a9cc",
         "first_seen": "2026-08-31"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20260831-004",
@@ -2434,7 +2434,7 @@
         "ref": "email:58f8638fca4f",
         "first_seen": "2026-09-09"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20260909-002",
@@ -2451,7 +2451,7 @@
         "ref": "email:58f8638fca4f",
         "first_seen": "2026-09-09"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20260911-001",
@@ -2471,6 +2471,166 @@
         "kind": "email",
         "ref": "email:e836ee7367d3",
         "first_seen": "2026-09-11"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20260912-001",
+      "dedupe_key": "ridhi|2026-09-15|senior-panoramic-class-photo-on-football-field-seniors-only",
+      "kid": "ridhi",
+      "title": "Senior Panoramic class photo on football field (seniors only)",
+      "date": "2026-09-15",
+      "end_date": null,
+      "time": "10:10",
+      "type": "school",
+      "action": null,
+      "source": {
+        "kind": "email",
+        "ref": "email:503626c80782",
+        "first_seen": "2026-09-12"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20260912-002",
+      "dedupe_key": "family|2026-10-28|state-of-the-school-district-srvusd",
+      "kid": "family",
+      "title": "State of the School District (SRVUSD)",
+      "date": "2026-10-28",
+      "end_date": null,
+      "time": null,
+      "type": "community",
+      "action": null,
+      "source": {
+        "kind": "email",
+        "ref": "email:503626c80782",
+        "first_seen": "2026-09-12"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20260912-003",
+      "dedupe_key": "dhruv|2026-09-30|math-olympiad-warm-up-problem-pv3-due",
+      "kid": "dhruv",
+      "title": "Math Olympiad: Warm up Problem PV3 due",
+      "date": "2026-09-30",
+      "end_date": null,
+      "time": null,
+      "type": "homework",
+      "action": {
+        "required": true,
+        "what": "Complete and submit Warm up Problem PV3 in Pine Valley Math Olympiad classroom",
+        "due": "2026-09-30"
+      },
+      "source": {
+        "kind": "email",
+        "ref": "email:396fcf37971d",
+        "first_seen": "2026-09-12"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20260912-004",
+      "dedupe_key": "ridhi|2026-09-15|ap-calculus-ab-hw-u2-3-2-5-2-10-tq-due",
+      "kid": "ridhi",
+      "title": "AP Calculus AB: HW U2 #3 (2.5-2.10 TQ) due",
+      "date": "2026-09-15",
+      "end_date": null,
+      "time": null,
+      "type": "homework",
+      "action": {
+        "required": true,
+        "what": "Complete AP Calculus AB HW U2 #3 covering sections 2.5-2.10",
+        "due": "2026-09-15"
+      },
+      "source": {
+        "kind": "email",
+        "ref": "email:2882169a3a82",
+        "first_seen": "2026-09-12"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20260912-005",
+      "dedupe_key": "ridhi|2026-09-21|english-10-project-more-than-survival-due",
+      "kid": "ridhi",
+      "title": "English 10: Project — More than Survival due",
+      "date": "2026-09-21",
+      "end_date": null,
+      "time": null,
+      "type": "homework",
+      "action": {
+        "required": true,
+        "what": "Complete the English 10 'More than Survival' project",
+        "due": "2026-09-21"
+      },
+      "source": {
+        "kind": "email",
+        "ref": "email:2882169a3a82",
+        "first_seen": "2026-09-12"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20260912-006",
+      "dedupe_key": "ridhi|2026-09-30|ap-world-history-unit-2-vocabulary-due-unit-2-vocab-quiz-pre",
+      "kid": "ridhi",
+      "title": "AP World History: Unit 2 Vocabulary due (Unit 2 vocab quiz prep)",
+      "date": "2026-09-30",
+      "end_date": null,
+      "time": null,
+      "type": "homework",
+      "action": {
+        "required": true,
+        "what": "Study the Unit 2 Quizlet and submit the Unit 2 Vocabulary assignment",
+        "due": "2026-09-30"
+      },
+      "source": {
+        "kind": "email",
+        "ref": "email:2882169a3a82",
+        "first_seen": "2026-09-12"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20260912-007",
+      "dedupe_key": "ridhi|2026-09-12|marching-band-food-for-competition-form",
+      "kid": "ridhi",
+      "title": "Marching band: food for competition form",
+      "date": "2026-09-12",
+      "end_date": null,
+      "time": null,
+      "type": "school",
+      "action": {
+        "required": true,
+        "what": "Fill out the marching band food-for-competition form (no deadline stated in the post)",
+        "due": "2026-09-12"
+      },
+      "source": {
+        "kind": "email",
+        "ref": "email:2882169a3a82",
+        "first_seen": "2026-09-12"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20260912-008",
+      "dedupe_key": "ridhi|2026-09-12|all-county-band-information-and-sign-up-form-available",
+      "kid": "ridhi",
+      "title": "All-County Band — information and sign-up form available",
+      "date": "2026-09-12",
+      "end_date": null,
+      "time": null,
+      "type": "school",
+      "action": {
+        "required": true,
+        "what": "Fill out the All-County Band form and follow the instructions posted in Wind Ensemble classroom",
+        "due": "2026-09-12"
+      },
+      "source": {
+        "kind": "email",
+        "ref": "email:2882169a3a82",
+        "first_seen": "2026-09-12"
       },
       "status": "active"
     }

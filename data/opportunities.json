@@ -644,6 +644,86 @@
         "evidence": "Grizzly Community Update 'Science Alliance (New)' section: club welcoming new mentors, applications due September 15, 2026 at 11:59 PM, with Google Form link."
       },
       "notes": "school-year-weekly (likely); science-mentoring; service-hours-fit; on-campus/local so no transport issue; strong match for Ridhi's science + volunteering priority even though not bio/med specific."
+    },
+    {
+      "id": "opp-20260912-001",
+      "dedupe_key": "california-high-school-student-club|swing-gives-you-wings-jazz-performance-c|2026",
+      "kid": "ridhi",
+      "title": "Swing Gives You Wings — jazz performance club (no auditions)",
+      "org": "California High School student club",
+      "url": "https://forms.gle/tFpyLCMu33xZ4QXFA",
+      "category": "club",
+      "region": "tri-valley",
+      "location": "California High School, San Ramon",
+      "eligibility": {
+        "eligible_now": "yes",
+        "reason": "Open to any Cal High student with no auditions and all instrument/skill levels welcome, so a 10th grader already in Wind Ensemble qualifies."
+      },
+      "window": {
+        "opens": null,
+        "closes": null,
+        "deadline": null,
+        "confidence": "verified"
+      },
+      "commitment": "Twice-monthly lunch jam sessions during the school year, with occasional outside gigs",
+      "pipeline": {
+        "status": "new",
+        "updated_at": "2026-09-12T07:01:13",
+        "updated_by": "agent",
+        "history": [
+          {
+            "status": "new",
+            "at": "2026-09-12T07:01:13"
+          }
+        ]
+      },
+      "provenance": {
+        "source_id": "email-inbox",
+        "first_seen": "2026-09-12",
+        "last_seen": "2026-09-12",
+        "evidence": "Wind Ensemble Google Classroom announcement posted Sep 8 by Robert Grigas describing the club and linking the interest form."
+      },
+      "notes": "school-year-lunch, low-commitment, no audition; secondary to bio/med priorities but zero schedule cost since it runs during lunch"
+    },
+    {
+      "id": "opp-20260912-002",
+      "dedupe_key": "american-legion-post-246|american-legion-post-246-oratorical-cont|2026",
+      "kid": "dhruv",
+      "title": "American Legion Post 246 Oratorical Contest",
+      "org": "American Legion Post 246",
+      "url": null,
+      "category": "event",
+      "region": "tri-valley",
+      "location": "Not stated in the flyer listing",
+      "eligibility": {
+        "eligible_now": "check",
+        "reason": "Peachjar listing gives no grade or age range; American Legion oratorical contests are typically high-school-only, so a 6th grader at 11 may not qualify — needs verification on the flyer."
+      },
+      "window": {
+        "opens": null,
+        "closes": null,
+        "deadline": null,
+        "confidence": "estimated"
+      },
+      "commitment": "Unknown — contest entry, prepared speech format not described in the listing",
+      "pipeline": {
+        "status": "new",
+        "updated_at": "2026-09-12T07:01:13",
+        "updated_by": "agent",
+        "history": [
+          {
+            "status": "new",
+            "at": "2026-09-12T07:01:13"
+          }
+        ]
+      },
+      "provenance": {
+        "source_id": "email-inbox",
+        "first_seen": "2026-09-12",
+        "last_seen": "2026-09-12",
+        "evidence": "Peachjar digest lists 'American Legion Post 246 Oratorical Contest' under Community flyers for SRVUSD."
+      },
+      "notes": "speech-and-debate fit if eligible; verify grade eligibility before investing time — no date or deadline given in the email"
     }
   ]
 }
