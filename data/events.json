@@ -1663,7 +1663,7 @@
         "ref": "email:2851e7e0836e",
         "first_seen": "2026-08-24"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20260825-001",
@@ -2611,7 +2611,7 @@
         "ref": "email:2882169a3a82",
         "first_seen": "2026-09-12"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20260912-008",
@@ -2631,6 +2631,63 @@
         "kind": "email",
         "ref": "email:2882169a3a82",
         "first_seen": "2026-09-12"
+      },
+      "status": "expired"
+    },
+    {
+      "id": "evt-disc-20260913-001",
+      "dedupe_key": "dhruv|2026-09-25|stephen-stewart-memorial-invitational-speech-debate-tourname",
+      "kid": "dhruv",
+      "title": "Stephen Stewart Memorial Invitational (speech & debate tournament, grades 6 and up) (Milpitas High School Speech & Debate",
+      "date": "2026-09-25",
+      "end_date": null,
+      "time": null,
+      "type": "community",
+      "action": null,
+      "source": {
+        "kind": "discovery",
+        "ref": "https://www.tabroom.com/index/tourn/index.mhtml?tourn_id=39935",
+        "first_seen": "2026-09-13",
+        "unverified": true,
+        "why": "A nearby in-person tournament open to 6th graders. Registration closes 2026-09-18 at 11pm PDT, and entry usually goes through a school or academy team."
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-disc-20260913-002",
+      "dedupe_key": "family|2026-10-11|run-for-education-2026-5k-10k-1-5-mile-walk-run",
+      "kid": "family",
+      "title": "Run for Education 2026 (5K, 10K, 1.5-mile walk/run) (San Ramon Valley Education Foundation",
+      "date": "2026-10-11",
+      "end_date": null,
+      "time": null,
+      "type": "community",
+      "action": null,
+      "source": {
+        "kind": "discovery",
+        "ref": "https://srvef.org/the-run/",
+        "first_seen": "2026-09-13",
+        "unverified": true,
+        "why": "The local district's fundraiser run. Both kids can do the 5K or 1.5-mile, and registration is open at early-bird prices."
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-disc-20260913-003",
+      "dedupe_key": "both|2026-10-17|bay-area-science-festival-free-festival-day",
+      "kid": "both",
+      "title": "Bay Area Science Festival: free festival day (Bay Area Science Festival / UCSF",
+      "date": "2026-10-17",
+      "end_date": null,
+      "time": null,
+      "type": "community",
+      "action": null,
+      "source": {
+        "kind": "discovery",
+        "ref": "https://bayareasciencefestival.org/",
+        "first_seen": "2026-09-13",
+        "unverified": true,
+        "why": "Free, with 125+ hands-on exhibits, lab tours and science talks. Good for Ridhi's biology and medicine interest and fun for Dhruv too."
       },
       "status": "active"
     }

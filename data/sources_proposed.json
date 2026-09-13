@@ -786,6 +786,48 @@
       "found": "2026-09-06-1f365930",
       "confidence": "estimated",
       "state": "pending"
+    },
+    {
+      "id": "prop-sprouting-youth-trivalley-speech-club",
+      "name": "Sprouting Youth: Leadership and Communication Club (Tri-Valley)",
+      "kid": "dhruv",
+      "category": "club",
+      "url": "https://sproutingyouth.org/product/sanramon/",
+      "scan_method": "http_diff",
+      "why": "A public-speaking and leadership club in San Ramon, Dublin and Pleasanton, based on the Toastmasters Gavel Club model. It's a good first step toward speech and debate.",
+      "eligibility_note": "Grades 6-10, so Dhruv qualifies. Listed at $150 with 'Open for Registration', but also marked 'Out of stock'. No meeting dates are posted, so watch for the next group to open.",
+      "replaces_source_id": null,
+      "found": "2026-09-13-cab7e6ab",
+      "confidence": "verified",
+      "state": "pending"
+    },
+    {
+      "id": "prop-young-investors-society-programs",
+      "name": "Young Investors Society: Programs",
+      "kid": "dhruv",
+      "category": "program",
+      "url": "https://yis.org/programs/",
+      "scan_method": "http_diff",
+      "why": "A youth investing and personal-finance group offering school clubs, an online Money Skillz Bootcamp and stock pitch competitions. It fits Dhruv's finance and business interest.",
+      "eligibility_note": "Nothing is listed for 6th grade. The Bootcamp is grades 7-9 and the competitions are high school only, so this is a watchlist item for next year.",
+      "replaces_source_id": null,
+      "found": "2026-09-13-5250f392",
+      "confidence": "verified",
+      "state": "pending"
+    },
+    {
+      "id": "prop-ucsf-meded-high-school-opportunities",
+      "name": "UCSF Medical Education: Opportunities for High School Students (HealthLink)",
+      "kid": "ridhi",
+      "category": "program",
+      "url": "https://meded.ucsf.edu/prospective-students/additional-opportunities-pre-medical-students/opportunities-high-school-students",
+      "scan_method": "http_diff",
+      "why": "UCSF's page of high-school health-career programs. HealthLink is a free year-long mentoring program with monthly Saturday sessions, October 2026 to May 2027, and prefers sophomores.",
+      "eligibility_note": "Strict limits: students must be first-generation college-bound, meet disadvantaged or low-income criteria, and be referred by a partner group or teacher. Ridhi probably doesn't qualify. It's worth tracking only because the page may add other UCSF high-school programs.",
+      "replaces_source_id": null,
+      "found": "2026-09-13-b926356a",
+      "confidence": "verified",
+      "state": "pending"
     }
   ]
 }
