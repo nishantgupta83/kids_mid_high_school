@@ -2690,6 +2690,40 @@
         "why": "Free, with 125+ hands-on exhibits, lab tours and science talks. Good for Ridhi's biology and medicine interest and fun for Dhruv too."
       },
       "status": "active"
+    },
+    {
+      "id": "evt-20260914-001",
+      "dedupe_key": "dhruv|2026-09-15|progress-reports-sent-home-pine-valley",
+      "kid": "dhruv",
+      "title": "Progress reports sent home (Pine Valley)",
+      "date": "2026-09-15",
+      "end_date": null,
+      "time": null,
+      "type": "school",
+      "action": null,
+      "source": {
+        "kind": "email",
+        "ref": "email:4f86b26b1899",
+        "first_seen": "2026-09-14"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20260914-002",
+      "dedupe_key": "dhruv|2026-09-24|dine-with-pine-starbird-night",
+      "kid": "dhruv",
+      "title": "Dine with Pine — Starbird night",
+      "date": "2026-09-24",
+      "end_date": null,
+      "time": null,
+      "type": "community",
+      "action": null,
+      "source": {
+        "kind": "email",
+        "ref": "email:4f86b26b1899",
+        "first_seen": "2026-09-14"
+      },
+      "status": "active"
     }
   ]
 }
