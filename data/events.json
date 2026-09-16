@@ -1844,7 +1844,7 @@
         "ref": "email:b8545dfa0d7a",
         "first_seen": "2026-08-29"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20260829-008",
@@ -1901,7 +1901,7 @@
         "unverified": true,
         "why": "Hard cutoff to get Dhruv into a grades 6-8 beginner speech/debate class this fall — classes already started Aug 29, so this is the last window."
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-disc-20260830-002",
@@ -2337,7 +2337,7 @@
         "ref": "email:d723594b3421",
         "first_seen": "2026-09-05"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-disc-20260906-001",
@@ -2489,7 +2489,7 @@
         "ref": "email:503626c80782",
         "first_seen": "2026-09-12"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20260912-002",
@@ -2548,7 +2548,7 @@
         "ref": "email:2882169a3a82",
         "first_seen": "2026-09-12"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20260912-005",
@@ -2706,7 +2706,7 @@
         "ref": "email:4f86b26b1899",
         "first_seen": "2026-09-14"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20260914-002",
