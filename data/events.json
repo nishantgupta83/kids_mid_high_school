@@ -710,7 +710,7 @@
         "unverified": true,
         "why": "Opening night of the free fall teen science seminar series — a low-cost way to test whether the series is worth the drive before the two biology talks that follow."
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-disc-20260809-003",
@@ -1589,7 +1589,7 @@
         "unverified": true,
         "why": "First night of the fall season — good one to attend if the family wants to sample the series before committing to the drive."
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-disc-20260823-005",
@@ -2049,7 +2049,7 @@
         "ref": "email:fd19aa17a9cc",
         "first_seen": "2026-08-31"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20260831-005",
@@ -2146,7 +2146,7 @@
         "ref": "email:c8427be5a301",
         "first_seen": "2026-09-03"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20260903-002",
