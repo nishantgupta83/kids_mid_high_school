@@ -724,6 +724,46 @@
         "evidence": "Peachjar digest lists 'American Legion Post 246 Oratorical Contest' under Community flyers for SRVUSD."
       },
       "notes": "speech-and-debate fit if eligible; verify grade eligibility before investing time — no date or deadline given in the email"
+    },
+    {
+      "id": "opp-20260921-001",
+      "dedupe_key": "john-muir-health|the-garret-thrift-shop-volunteer-john-mu|2026",
+      "kid": "ridhi",
+      "title": "The Garret Thrift Shop volunteer (John Muir Health)",
+      "org": "John Muir Health",
+      "url": "https://www.johnmuirhealth.com/get-involved/volunteer-services.html",
+      "category": "volunteer-general",
+      "region": "bay-area",
+      "location": "The Garret Thrift Shop (address not given on the page)",
+      "eligibility": {
+        "eligible_now": "check",
+        "reason": "The page says it welcomes new Garret volunteers but gives no minimum age. Confirm whether a 15-year-old can volunteer."
+      },
+      "window": {
+        "opens": null,
+        "closes": null,
+        "deadline": null,
+        "confidence": "verified"
+      },
+      "commitment": "Not stated. The work is retail and shop operations.",
+      "pipeline": {
+        "status": "new",
+        "updated_at": "2026-09-21T07:01:34",
+        "updated_by": "agent",
+        "history": [
+          {
+            "status": "new",
+            "at": "2026-09-21T07:01:34"
+          }
+        ]
+      },
+      "provenance": {
+        "source_id": "john-muir-hs-volunteer",
+        "first_seen": "2026-09-21",
+        "last_seen": "2026-09-21",
+        "evidence": "The John Muir volunteer page says it continues to welcome new volunteers at The Garret Thrift Shop, while its general volunteer applications are closed with no reopen timeline."
+      },
+      "notes": "Not clinical. The page says Garret roles are not a pathway to clinical or patient-care positions, so this is general service hours, not bio/med experience. The page lists an email contact for inquiries. Fit: weekend-fit is possible, but the schedule isn't stated."
     }
   ]
 }

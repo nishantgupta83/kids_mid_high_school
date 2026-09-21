@@ -58,7 +58,7 @@
         "ref": "school_year.json",
         "first_seen": "2026-07-21"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-seed-004",
@@ -767,7 +767,7 @@
         "unverified": true,
         "why": "A low-stakes middle-school scrimmage 15 minutes away — the natural first competitive outing for a 6th grader starting speech & debate; registration closes Fri Sep 18 at 10:00am PDT."
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-disc-20260809-006",
@@ -786,7 +786,7 @@
         "unverified": true,
         "why": "Three-week Saturday animal-care volunteering block (Sep 19, Sep 26, Oct 3) for ages 12-17 — registration is open now and Bay Area teen volunteer sessions fill early. $100 for the session."
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-disc-20260809-007",
@@ -1484,7 +1484,7 @@
       "title": "San Ramon Teen Service & Leadership — 8-week class series begins",
       "date": "2026-10-01",
       "end_date": "2026-11-19",
-      "time": null,
+      "time": "16:30",
       "type": "community",
       "action": null,
       "source": {
@@ -1627,7 +1627,7 @@
         "unverified": true,
         "why": "Online middle-school tournament with no travel, a realistic first competitive outing for a 6th grader."
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-disc-20260823-007",
@@ -2722,6 +2722,133 @@
         "kind": "email",
         "ref": "email:4f86b26b1899",
         "first_seen": "2026-09-14"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20260921-001",
+      "dedupe_key": "dhruv|2026-10-01|language-arts-6-personal-narrative-final-draft-due",
+      "kid": "dhruv",
+      "title": "Language Arts 6: Personal Narrative final draft due",
+      "date": "2026-10-01",
+      "end_date": null,
+      "time": null,
+      "type": "homework",
+      "action": {
+        "required": true,
+        "what": "Attach the personal narrative final draft as a Google Doc in Classroom",
+        "due": "2026-10-01"
+      },
+      "source": {
+        "kind": "email",
+        "ref": "email:b38c32338b00",
+        "first_seen": "2026-09-21"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20260921-002",
+      "dedupe_key": "ridhi|2026-09-21|ap-calculus-ab-hw-u2-5-due-3-khan-academy-assignments-pva-pa",
+      "kid": "ridhi",
+      "title": "AP Calculus AB: HW U2#5 due (3 Khan Academy assignments + PVA packet)",
+      "date": "2026-09-21",
+      "end_date": null,
+      "time": null,
+      "type": "homework",
+      "action": null,
+      "source": {
+        "kind": "email",
+        "ref": "email:446c7d9d4260",
+        "first_seen": "2026-09-21"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20260921-003",
+      "dedupe_key": "ridhi|2026-09-22|chemistry-unscrambling-procedures-practice-due",
+      "kid": "ridhi",
+      "title": "Chemistry: Unscrambling Procedures Practice due",
+      "date": "2026-09-22",
+      "end_date": null,
+      "time": null,
+      "type": "homework",
+      "action": null,
+      "source": {
+        "kind": "email",
+        "ref": "email:446c7d9d4260",
+        "first_seen": "2026-09-21"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20260921-004",
+      "dedupe_key": "ridhi|2026-09-22|chemistry-energy-of-foods-lab-day-1-2-due",
+      "kid": "ridhi",
+      "title": "Chemistry: Energy of Foods Lab (Day 1 & 2) due",
+      "date": "2026-09-22",
+      "end_date": null,
+      "time": null,
+      "type": "homework",
+      "action": null,
+      "source": {
+        "kind": "email",
+        "ref": "email:446c7d9d4260",
+        "first_seen": "2026-09-21"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20260921-005",
+      "dedupe_key": "ridhi|2026-09-28|cal-high-homecoming-week-2026-calchella-begins",
+      "kid": "ridhi",
+      "title": "Cal High Homecoming week 2026 (Calchella) begins",
+      "date": "2026-09-28",
+      "end_date": null,
+      "time": null,
+      "type": "school",
+      "action": null,
+      "source": {
+        "kind": "email",
+        "ref": "email:03018c48d95e",
+        "first_seen": "2026-09-21"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20260921-006",
+      "dedupe_key": "dhruv|2026-10-22|pine-valley-pop-up-book-fair-quirky-crow-book-store",
+      "kid": "dhruv",
+      "title": "Pine Valley Pop-Up Book Fair (Quirky Crow Book Store)",
+      "date": "2026-10-22",
+      "end_date": null,
+      "time": null,
+      "type": "school",
+      "action": null,
+      "source": {
+        "kind": "email",
+        "ref": "email:4dca20e9ae80",
+        "first_seen": "2026-09-21"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20260921-007",
+      "dedupe_key": "dhruv|2026-09-24|pine-valley-school-site-council-parent-interest-form-due",
+      "kid": "dhruv",
+      "title": "Pine Valley School Site Council parent interest form due",
+      "date": "2026-09-24",
+      "end_date": null,
+      "time": null,
+      "type": "deadline",
+      "action": {
+        "required": false,
+        "what": "Fill out the SSC parent interest form if a parent wants to serve on the council",
+        "due": "2026-09-24"
+      },
+      "source": {
+        "kind": "email",
+        "ref": "email:d57e6158ac5b",
+        "first_seen": "2026-09-21"
       },
       "status": "active"
     }
