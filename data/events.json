@@ -729,7 +729,7 @@
         "unverified": true,
         "why": "Biological anthropology talk aimed at teens — free, and a Zoom link can be requested if the San Rafael drive doesn't work on a school night."
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-disc-20260809-004",
@@ -1570,7 +1570,7 @@
         "unverified": true,
         "why": "Comparative primate biology; free, teen-targeted, no registration barrier."
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-disc-20260823-004",
@@ -1920,7 +1920,7 @@
         "unverified": true,
         "why": "Free biological-anthropology talk pitched at teens — squarely in Ridhi's biology lane, though it's a ~50-mile evening drive from San Ramon."
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-disc-20260830-003",
@@ -2849,6 +2849,27 @@
         "kind": "email",
         "ref": "email:d57e6158ac5b",
         "first_seen": "2026-09-21"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20260924-001",
+      "dedupe_key": "ridhi|2026-10-23|ap-exams-first-payment-deadline-join-ap-classroom-pay-via-ap",
+      "kid": "ridhi",
+      "title": "AP Exams first payment deadline (join AP Classroom + pay via APTS)",
+      "date": "2026-10-23",
+      "end_date": null,
+      "time": null,
+      "type": "deadline",
+      "action": {
+        "required": true,
+        "what": "Two steps, both required for the exam to be ordered: (1) join AP Classroom with the teacher-provided join code via the College Board account; (2) pay for each exam in the APTS payment portal.",
+        "due": "2026-10-23"
+      },
+      "source": {
+        "kind": "email",
+        "ref": "email:69d5a4561eae",
+        "first_seen": "2026-09-24"
       },
       "status": "active"
     }
