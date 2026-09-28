@@ -1289,7 +1289,7 @@
         "unverified": true,
         "why": "Nearest in-person fall circuit tournament — useful as a spectator trip even before Dhruv competes."
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20260817-001",
@@ -2413,7 +2413,7 @@
         "unverified": true,
         "why": "An online novice-level tournament with middle school divisions — the lowest-friction first competition for a 6th grader, no travel."
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20260909-001",
@@ -2651,7 +2651,7 @@
         "unverified": true,
         "why": "A nearby in-person tournament open to 6th graders. Registration closes 2026-09-18 at 11pm PDT, and entry usually goes through a school or academy team."
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-disc-20260913-002",
@@ -2723,7 +2723,7 @@
         "ref": "email:4f86b26b1899",
         "first_seen": "2026-09-14"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20260921-001",
@@ -2850,7 +2850,7 @@
         "ref": "email:d57e6158ac5b",
         "first_seen": "2026-09-21"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20260924-001",
@@ -2870,6 +2870,183 @@
         "kind": "email",
         "ref": "email:69d5a4561eae",
         "first_seen": "2026-09-24"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20260928-001",
+      "dedupe_key": "ridhi|2026-09-28|chemistry-1b-2-dynamic-earth-web-quest-due",
+      "kid": "ridhi",
+      "title": "Chemistry: 1B.2 Dynamic Earth Web Quest due",
+      "date": "2026-09-28",
+      "end_date": null,
+      "time": null,
+      "type": "homework",
+      "action": {
+        "required": true,
+        "what": "Submit web quest",
+        "due": "2026-09-28"
+      },
+      "source": {
+        "kind": "email",
+        "ref": "email:465919a9e5b4",
+        "first_seen": "2026-09-28"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20260928-002",
+      "dedupe_key": "ridhi|2026-10-01|cal-high-homecoming-parade-marching-band-call-time-12-00-pm",
+      "kid": "ridhi",
+      "title": "Cal High Homecoming Parade (Marching Band call time 12:00 PM, parade starts 1:30 PM at Athan Downs)",
+      "date": "2026-10-01",
+      "end_date": null,
+      "time": "12:00",
+      "type": "school",
+      "action": {
+        "required": true,
+        "what": "Band members: report to band room with instrument/attire by call time",
+        "due": "2026-10-01"
+      },
+      "source": {
+        "kind": "email",
+        "ref": "email:845cf400bdbe",
+        "first_seen": "2026-09-28"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20260928-003",
+      "dedupe_key": "ridhi|2026-10-02|cal-high-homecoming-football-game-vs-dublin-marching-band-pe",
+      "kid": "ridhi",
+      "title": "Cal High Homecoming Football Game vs Dublin (Marching Band performs, Pink Out)",
+      "date": "2026-10-02",
+      "end_date": null,
+      "time": "17:30",
+      "type": "athletics",
+      "action": {
+        "required": true,
+        "what": "Band call time 5:30 PM in band room; bring instrument and all equipment",
+        "due": "2026-10-02"
+      },
+      "source": {
+        "kind": "email",
+        "ref": "email:6b598084ac27",
+        "first_seen": "2026-09-28"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20260928-004",
+      "dedupe_key": "ridhi|2026-10-03|cal-high-homecoming-dance",
+      "kid": "ridhi",
+      "title": "Cal High Homecoming Dance",
+      "date": "2026-10-03",
+      "end_date": null,
+      "time": "19:00",
+      "type": "community",
+      "action": {
+        "required": true,
+        "what": "Buy tickets on Cal High Webstore ($32 with ASB / $37 without) — sales window closes today",
+        "due": "2026-09-28"
+      },
+      "source": {
+        "kind": "email",
+        "ref": "email:845cf400bdbe",
+        "first_seen": "2026-09-28"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20260928-005",
+      "dedupe_key": "ridhi|2026-10-04|marching-band-trip-permission-forms-due-foothill-halloween-p",
+      "kid": "ridhi",
+      "title": "Marching Band trip permission forms due (Foothill & Halloween Parade competitions)",
+      "date": "2026-10-04",
+      "end_date": null,
+      "time": null,
+      "type": "deadline",
+      "action": {
+        "required": true,
+        "what": "Complete School Trip Permission Google Form for each competition, noting transportation type",
+        "due": "2026-10-04"
+      },
+      "source": {
+        "kind": "email",
+        "ref": "email:1dfeceae68e9",
+        "first_seen": "2026-09-28"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20260928-006",
+      "dedupe_key": "ridhi|2026-10-24|marching-band-foothill-competition-private-vehicle-transport",
+      "kid": "ridhi",
+      "title": "Marching Band — Foothill Competition (private-vehicle transport, no buses)",
+      "date": "2026-10-24",
+      "end_date": null,
+      "time": null,
+      "type": "athletics",
+      "action": null,
+      "source": {
+        "kind": "email",
+        "ref": "email:1dfeceae68e9",
+        "first_seen": "2026-09-28"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20260928-007",
+      "dedupe_key": "ridhi|2026-10-30|marching-band-halloween-parade-private-vehicle-transport-via",
+      "kid": "ridhi",
+      "title": "Marching Band — Halloween Parade (private-vehicle transport via cleared volunteer drivers)",
+      "date": "2026-10-30",
+      "end_date": null,
+      "time": null,
+      "type": "community",
+      "action": null,
+      "source": {
+        "kind": "email",
+        "ref": "email:1dfeceae68e9",
+        "first_seen": "2026-09-28"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20260928-008",
+      "dedupe_key": "dhruv|2026-10-15|amc-8-math-challenge-pine-valley-registration-form-due",
+      "kid": "dhruv",
+      "title": "AMC 8 Math Challenge (Pine Valley) — registration form due",
+      "date": "2026-10-15",
+      "end_date": null,
+      "time": null,
+      "type": "deadline",
+      "action": {
+        "required": true,
+        "what": "Fill out Google Form to confirm participation (school pays registration fee)",
+        "due": "2026-10-15"
+      },
+      "source": {
+        "kind": "email",
+        "ref": "email:5415c37d601c",
+        "first_seen": "2026-09-28"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20260928-009",
+      "dedupe_key": "dhruv|2027-01-26|amc-8-math-challenge-pine-valley-multi-purpose-room",
+      "kid": "dhruv",
+      "title": "AMC 8 Math Challenge (Pine Valley, Multi-Purpose Room)",
+      "date": "2027-01-26",
+      "end_date": null,
+      "time": null,
+      "type": "test",
+      "action": null,
+      "source": {
+        "kind": "email",
+        "ref": "email:5415c37d601c",
+        "first_seen": "2026-09-28"
       },
       "status": "active"
     }

@@ -764,6 +764,46 @@
         "evidence": "The John Muir volunteer page says it continues to welcome new volunteers at The Garret Thrift Shop, while its general volunteer applications are closed with no reopen timeline."
       },
       "notes": "Not clinical. The page says Garret roles are not a pathway to clinical or patient-care positions, so this is general service hours, not bio/med experience. The page lists an email contact for inquiries. Fit: weekend-fit is possible, but the schedule isn't stated."
+    },
+    {
+      "id": "opp-20260928-001",
+      "dedupe_key": "contra-costa-county-library|teen-drop-in-maker-space-crafts-movies-h|2026",
+      "kid": "both",
+      "title": "Teen Drop-In (Maker Space crafts, movies, homework hangout)",
+      "org": "Contra Costa County Library",
+      "url": "https://ccclib.bibliocommons.com/v2/events",
+      "category": "club",
+      "region": "bay-area",
+      "location": "Concord Library (Maker Space)",
+      "eligibility": {
+        "eligible_now": "yes",
+        "reason": "Open to 6th–12th grade; fits both Dhruv (6th) and Ridhi (10th)"
+      },
+      "window": {
+        "opens": null,
+        "closes": null,
+        "deadline": null,
+        "confidence": "estimated"
+      },
+      "commitment": "Drop-in, no signup; every 4th Monday during the school year, 2:45–3:45 PM",
+      "pipeline": {
+        "status": "new",
+        "updated_at": "2026-09-28T07:02:39",
+        "updated_by": "agent",
+        "history": [
+          {
+            "status": "new",
+            "at": "2026-09-28T07:02:39"
+          }
+        ]
+      },
+      "provenance": {
+        "source_id": "ccclib-teen-events",
+        "first_seen": "2026-09-28",
+        "last_seen": "2026-09-28",
+        "evidence": "'Teen Drop-In ... pop-up crafts, movies and more in the Maker Space after school ... For teens 6th to 12th grade. Every 4th Monday of the month during the school year.'"
+      },
+      "notes": "school-year-weekly (monthly cadence); low-commitment, casual — good filler option, not a priority match for either kid's main interests"
     }
   ]
 }
