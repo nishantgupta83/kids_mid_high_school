@@ -2812,7 +2812,7 @@
         "ref": "email:03018c48d95e",
         "first_seen": "2026-09-21"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20260921-006",
@@ -2892,7 +2892,7 @@
         "ref": "email:465919a9e5b4",
         "first_seen": "2026-09-28"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20260928-002",
