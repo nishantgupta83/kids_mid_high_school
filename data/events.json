@@ -858,7 +858,7 @@
         "ref": "email:525c8478c50d",
         "first_seen": "2026-08-11"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20260811-003",
@@ -2934,7 +2934,7 @@
         "ref": "email:6b598084ac27",
         "first_seen": "2026-09-28"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20260928-004",
@@ -3081,6 +3081,86 @@
         "kind": "email",
         "ref": "email:1583840525bf",
         "first_seen": "2026-10-01"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20261003-001",
+      "dedupe_key": "dhruv|2026-10-07|math-olympiad-challenge-problem-ms-pv3-due",
+      "kid": "dhruv",
+      "title": "Math Olympiad: Challenge Problem MS PV3 due",
+      "date": "2026-10-07",
+      "end_date": null,
+      "time": null,
+      "type": "homework",
+      "action": {
+        "required": true,
+        "what": "Complete and submit Challenge Problem MS PV3 in Classroom",
+        "due": "2026-10-07"
+      },
+      "source": {
+        "kind": "email",
+        "ref": "email:85f6d6ef26b6",
+        "first_seen": "2026-10-03"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20261003-002",
+      "dedupe_key": "dhruv|2026-10-07|math-olympiad-set-9-homework-due-olympiad-1",
+      "kid": "dhruv",
+      "title": "Math Olympiad: Set 9 homework due (Olympiad 1)",
+      "date": "2026-10-07",
+      "end_date": null,
+      "time": null,
+      "type": "homework",
+      "action": {
+        "required": true,
+        "what": "Finish Set 9 homework (Olympiad 1), per the Problem of the Week post",
+        "due": "2026-10-07"
+      },
+      "source": {
+        "kind": "email",
+        "ref": "email:85f6d6ef26b6",
+        "first_seen": "2026-10-03"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20261003-003",
+      "dedupe_key": "ridhi|2026-10-05|ap-calculus-hw-u2-9-related-rates-review-packet-due",
+      "kid": "ridhi",
+      "title": "AP Calculus: HW U2#9 Related Rates Review Packet due",
+      "date": "2026-10-05",
+      "end_date": null,
+      "time": null,
+      "type": "homework",
+      "action": {
+        "required": true,
+        "what": "Complete the Related Rates Review Packet (Ms. Jain's class)",
+        "due": "2026-10-05"
+      },
+      "source": {
+        "kind": "email",
+        "ref": "email:129cfabb6574",
+        "first_seen": "2026-10-03"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20261003-004",
+      "dedupe_key": "ridhi|2026-10-03|marching-grizzlies-rehearsal-shortened-9am-12pm",
+      "kid": "ridhi",
+      "title": "Marching Grizzlies rehearsal (shortened, 9am-12pm)",
+      "date": "2026-10-03",
+      "end_date": null,
+      "time": "09:00",
+      "type": "school",
+      "action": null,
+      "source": {
+        "kind": "email",
+        "ref": "email:46787ec0c2c8",
+        "first_seen": "2026-10-03"
       },
       "status": "active"
     }
