@@ -1232,7 +1232,7 @@
         "unverified": true,
         "why": "Free, in San Ramon, open to any Bay Area high school student — no CS prerequisite stated, and a low-commitment way into a build/project portfolio."
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-disc-20260816-006",
@@ -1532,7 +1532,7 @@
         "unverified": true,
         "why": "Free, in town, open to any Bay Area high schooler at any skill level including first-time coders — lowest-friction STEM event on this list."
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-disc-20260823-002",
@@ -1646,7 +1646,7 @@
         "unverified": true,
         "why": "Asynchronous format means speeches are recorded on the family's own schedule — the gentlest possible entry into competition."
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20260824-001",
@@ -1939,7 +1939,7 @@
         "unverified": true,
         "why": "20+ hands-on science/engineering activities with regional partner orgs, 25 minutes away, free and drop-in — easy for Dhruv, and a way to meet Tri-Valley STEM organizations in person."
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-disc-20260830-004",
@@ -2087,7 +2087,7 @@
         "ref": "email:fd19aa17a9cc",
         "first_seen": "2026-08-31"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20260901-001",
@@ -2356,7 +2356,7 @@
         "unverified": true,
         "why": "Free, beginner-friendly, in San Ramon itself, open to any Bay Area high schooler — 'first time touching code' is explicitly welcome."
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-disc-20260906-002",
@@ -2955,7 +2955,7 @@
         "ref": "email:845cf400bdbe",
         "first_seen": "2026-09-28"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20260928-005",
@@ -3161,6 +3161,82 @@
         "kind": "email",
         "ref": "email:46787ec0c2c8",
         "first_seen": "2026-10-03"
+      },
+      "status": "expired"
+    },
+    {
+      "id": "evt-disc-20261004-001",
+      "dedupe_key": "family|2026-10-11|43rd-run-for-education-5k-10k-mini-run-volunteers-needed",
+      "kid": "family",
+      "title": "43rd Run for Education (5K/10K/Mini Run) — volunteers needed (San Ramon Valley Education Foundation (SRVEF",
+      "date": "2026-10-11",
+      "end_date": null,
+      "time": null,
+      "type": "community",
+      "action": null,
+      "source": {
+        "kind": "discovery",
+        "ref": "https://srvef.org/the-run/",
+        "first_seen": "2026-10-04",
+        "unverified": true,
+        "why": "Large local community event expecting ~5,000 runners/volunteers; good family volunteering or fun-run option, confirmed via SRVEF site, RaceRoster, and local news coverage"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-disc-20261004-002",
+      "dedupe_key": "family|2026-10-17|bay-area-science-festival-discovery-day",
+      "kid": "family",
+      "title": "Bay Area Science Festival — Discovery Day (Bay Area Science Festival",
+      "date": "2026-10-17",
+      "end_date": null,
+      "time": null,
+      "type": "community",
+      "action": null,
+      "source": {
+        "kind": "discovery",
+        "ref": "https://bayareasciencefestival.org/",
+        "first_seen": "2026-10-04",
+        "unverified": true,
+        "why": "Free, open-to-public science fair with 125+ hands-on exhibits/talks — good STEM exposure for both kids"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-disc-20261004-003",
+      "dedupe_key": "ridhi|2026-11-18|marin-science-seminar-why-become-a-doctor-in-the-era-of-a-i",
+      "kid": "ridhi",
+      "title": "Marin Science Seminar: \"Why Become a Doctor in the Era of A.I.?\" — Romain Pirracchio, MD PhD (UCSF) (Marin Science Seminar",
+      "date": "2026-11-18",
+      "end_date": null,
+      "time": null,
+      "type": "community",
+      "action": null,
+      "source": {
+        "kind": "discovery",
+        "ref": "https://marinscienceseminar.com/",
+        "first_seen": "2026-10-04",
+        "unverified": true,
+        "why": "Free evening talk explicitly on medicine/AI, open to all high schoolers (not just Marin residents) — direct match for Ridhi's bio/medicine interest; worth the drive for a school-night talk"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-disc-20261004-004",
+      "dedupe_key": "dhruv|2026-11-14|dvc-viking-middle-and-high-school-speech-invitational",
+      "kid": "dhruv",
+      "title": "DVC Viking Middle and High School Speech Invitational (Diablo Valley College Speech & Debate",
+      "date": "2026-11-14",
+      "end_date": null,
+      "time": null,
+      "type": "community",
+      "action": null,
+      "source": {
+        "kind": "discovery",
+        "ref": "https://www.tabroom.com/index/tourn/index.mhtml?tourn_id=41206",
+        "first_seen": "2026-10-04",
+        "unverified": true,
+        "why": "Middle-school-inclusive speech tournament (novice extemp, prose/poetry, oral interp) close by in Contra Costa County — fits Dhruv's speech & debate interest"
       },
       "status": "active"
     }
