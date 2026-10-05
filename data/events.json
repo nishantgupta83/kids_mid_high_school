@@ -2976,7 +2976,7 @@
         "ref": "email:1dfeceae68e9",
         "first_seen": "2026-09-28"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20260928-006",
@@ -3237,6 +3237,61 @@
         "first_seen": "2026-10-04",
         "unverified": true,
         "why": "Middle-school-inclusive speech tournament (novice extemp, prose/poetry, oral interp) close by in Contra Costa County — fits Dhruv's speech & debate interest"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20261005-001",
+      "dedupe_key": "ridhi|2026-10-11|cal-high-band-performs-at-run-for-education-meet-7-45am-bish",
+      "kid": "ridhi",
+      "title": "Cal High Band performs at Run for Education (meet 7:45am, Bishop Ranch 15)",
+      "date": "2026-10-11",
+      "end_date": null,
+      "time": "07:45",
+      "type": "school",
+      "action": {
+        "required": true,
+        "what": "Guardian must submit participation form if Ridhi is performing with the band at the Run",
+        "due": "2026-10-11"
+      },
+      "source": {
+        "kind": "email",
+        "ref": "email:22e151f0f084",
+        "first_seen": "2026-10-05"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20261005-002",
+      "dedupe_key": "dhruv|2026-10-26|red-ribbon-week-pine-valley",
+      "kid": "dhruv",
+      "title": "Red Ribbon Week (Pine Valley)",
+      "date": "2026-10-26",
+      "end_date": "2026-10-30",
+      "time": null,
+      "type": "school",
+      "action": null,
+      "source": {
+        "kind": "email",
+        "ref": "email:8edb451d37f7",
+        "first_seen": "2026-10-05"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20261005-003",
+      "dedupe_key": "family|2026-11-11|veteran-s-day-no-school",
+      "kid": "family",
+      "title": "Veteran's Day (no school)",
+      "date": "2026-11-11",
+      "end_date": null,
+      "time": null,
+      "type": "break",
+      "action": null,
+      "source": {
+        "kind": "email",
+        "ref": "email:8edb451d37f7",
+        "first_seen": "2026-10-05"
       },
       "status": "active"
     }
