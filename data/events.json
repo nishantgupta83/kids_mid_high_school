@@ -3145,7 +3145,7 @@
         "ref": "email:129cfabb6574",
         "first_seen": "2026-10-03"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20261003-004",
@@ -3292,6 +3292,23 @@
         "kind": "email",
         "ref": "email:8edb451d37f7",
         "first_seen": "2026-10-05"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20261006-001",
+      "dedupe_key": "ridhi|2026-10-09|marching-band-football-senior-night-vs-monte-vista-first-hal",
+      "kid": "ridhi",
+      "title": "Marching Band — Football Senior Night vs. Monte Vista (first half only, early release)",
+      "date": "2026-10-09",
+      "end_date": null,
+      "time": "17:30",
+      "type": "athletics",
+      "action": null,
+      "source": {
+        "kind": "email",
+        "ref": "email:7bb48f42aa2e",
+        "first_seen": "2026-10-06"
       },
       "status": "active"
     }
