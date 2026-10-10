@@ -875,7 +875,7 @@
         "ref": "email:525c8478c50d",
         "first_seen": "2026-08-11"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20260811-004",
@@ -892,7 +892,7 @@
         "ref": "email:525c8478c50d",
         "first_seen": "2026-08-11"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20260813-001",
@@ -1608,7 +1608,7 @@
         "unverified": true,
         "why": "Space/software rather than bio, and just past the six-week line — listed only so the fall series shows as a block on the calendar."
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-disc-20260823-006",
@@ -2375,7 +2375,7 @@
         "unverified": true,
         "why": "Free and open to community, and the coding/space framing is the one seminar in this stretch an 11-year-old would also sit through."
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-disc-20260906-003",
@@ -3103,7 +3103,7 @@
         "ref": "email:85f6d6ef26b6",
         "first_seen": "2026-10-03"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20261003-002",
@@ -3124,7 +3124,7 @@
         "ref": "email:85f6d6ef26b6",
         "first_seen": "2026-10-03"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20261003-003",
@@ -3309,6 +3309,90 @@
         "kind": "email",
         "ref": "email:7bb48f42aa2e",
         "first_seen": "2026-10-06"
+      },
+      "status": "expired"
+    },
+    {
+      "id": "evt-20261010-001",
+      "dedupe_key": "dhruv|2026-10-12|social-studies-cultural-hearth-project-due",
+      "kid": "dhruv",
+      "title": "Social Studies: Cultural Hearth Project due",
+      "date": "2026-10-12",
+      "end_date": null,
+      "time": null,
+      "type": "homework",
+      "action": {
+        "required": true,
+        "what": "Finish and turn in the Cultural Hearth Project (Social Studies 6)",
+        "due": "2026-10-12"
+      },
+      "source": {
+        "kind": "email",
+        "ref": "email:666286f1a03c",
+        "first_seen": "2026-10-10"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20261010-002",
+      "dedupe_key": "dhruv|2026-10-14|math-olympiad-challenge-problem-2-ms-pv3-due",
+      "kid": "dhruv",
+      "title": "Math Olympiad: Challenge Problem 2 (MS PV3) due",
+      "date": "2026-10-14",
+      "end_date": null,
+      "time": null,
+      "type": "homework",
+      "action": {
+        "required": true,
+        "what": "Submit Challenge Problem 2 MS PV3 in Classroom",
+        "due": "2026-10-14"
+      },
+      "source": {
+        "kind": "email",
+        "ref": "email:666286f1a03c",
+        "first_seen": "2026-10-10"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20261010-003",
+      "dedupe_key": "dhruv|2026-10-14|math-olympiad-problem-of-the-week-logic-pv3-set-9-olympiad-2",
+      "kid": "dhruv",
+      "title": "Math Olympiad: Problem of the Week (logic PV3) / Set 9 Olympiad 2 homework due",
+      "date": "2026-10-14",
+      "end_date": null,
+      "time": null,
+      "type": "homework",
+      "action": {
+        "required": true,
+        "what": "Complete Set 9 Olympiad 2 homework and the logic Problem of the Week",
+        "due": "2026-10-14"
+      },
+      "source": {
+        "kind": "email",
+        "ref": "email:666286f1a03c",
+        "first_seen": "2026-10-10"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20261010-004",
+      "dedupe_key": "ridhi|2026-10-13|fall-band-concert-wind-ensemble-call-time-5-30-pm-in-the-ban",
+      "kid": "ridhi",
+      "title": "Fall Band Concert (Wind Ensemble), call time 5:30 pm in the band room",
+      "date": "2026-10-13",
+      "end_date": null,
+      "time": "17:30",
+      "type": "school",
+      "action": {
+        "required": true,
+        "what": "Attend the mandatory concert in concert attire with music and instrument. Absences need advance written notice to the director.",
+        "due": "2026-10-13"
+      },
+      "source": {
+        "kind": "email",
+        "ref": "email:f998c9a2c885",
+        "first_seen": "2026-10-10"
       },
       "status": "active"
     }
