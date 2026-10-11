@@ -1977,7 +1977,7 @@
         "unverified": true,
         "why": "Second Bay Area high school hackathon within the window if Dublin hacx is a hit."
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20260831-001",
@@ -2394,7 +2394,7 @@
         "unverified": true,
         "why": "Second beginner-friendly HS hackathon in the window if the Oct 3 San Ramon one is a conflict."
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-disc-20260906-004",
@@ -3393,6 +3393,118 @@
         "kind": "email",
         "ref": "email:f998c9a2c885",
         "first_seen": "2026-10-10"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20261011-001",
+      "dedupe_key": "family|2026-10-12|lawrence-hall-of-science-open-for-indigenous-peoples-day",
+      "kid": "family",
+      "title": "Lawrence Hall of Science open for Indigenous Peoples' Day",
+      "date": "2026-10-12",
+      "end_date": null,
+      "time": "10:00",
+      "type": "community",
+      "action": null,
+      "source": {
+        "kind": "registry",
+        "ref": "source:lawrence-hall-teen-volunteers",
+        "first_seen": "2026-10-11"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-disc-20261011-001",
+      "dedupe_key": "family|2026-10-17|bay-area-science-festival-free-festival-day-125-hands-on-exp",
+      "kid": "family",
+      "title": "Bay Area Science Festival — free festival day (125+ hands-on experiences, lab tours, science talks) (Bay Area Science Festival / UCSF",
+      "date": "2026-10-17",
+      "end_date": null,
+      "time": null,
+      "type": "community",
+      "action": null,
+      "source": {
+        "kind": "discovery",
+        "ref": "https://www.bayareasciencefestival.org/",
+        "first_seen": "2026-10-11",
+        "unverified": true,
+        "why": "Free, 11am-4pm, and the one event in this window that genuinely serves a 15-year-old and an 11-year-old on the same ticket — including behind-the-scenes lab tours for Ridhi."
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-disc-20261011-002",
+      "dedupe_key": "both|2026-11-04|marin-science-seminar-return-to-the-moon-the-best-is-yet-to",
+      "kid": "both",
+      "title": "Marin Science Seminar — 'Return to the Moon: The Best is Yet to Come' (Jay Trimble, space science) (Marin Science Seminar",
+      "date": "2026-11-04",
+      "end_date": null,
+      "time": null,
+      "type": "community",
+      "action": null,
+      "source": {
+        "kind": "discovery",
+        "ref": "https://marinscienceseminar.com/calendar/",
+        "first_seen": "2026-10-11",
+        "unverified": true,
+        "why": "Free teen-aimed science talk, 7:30-8:30pm, no RSVP listed — easy opportunistic STEM for Dhruv alongside Ridhi."
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-disc-20261011-003",
+      "dedupe_key": "dhruv|2026-11-07|norcalfll-bioglow-qualifying-tournament-san-ramon",
+      "kid": "dhruv",
+      "title": "NorCalFLL BIOGLOW Qualifying Tournament — San Ramon (Playing At Learning (NorCalFLL / FIRST LEGO League Challenge",
+      "date": "2026-11-07",
+      "end_date": null,
+      "time": null,
+      "type": "community",
+      "action": null,
+      "source": {
+        "kind": "discovery",
+        "ref": "https://www.playingatlearning.org/events/",
+        "first_seen": "2026-10-11",
+        "unverified": true,
+        "why": "A grades 4-8 robotics qualifier held in San Ramon itself — the cheapest possible way for Dhruv to see what FLL is before committing to a team next season."
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-disc-20261011-004",
+      "dedupe_key": "dhruv|2026-11-14|norcalfll-bioglow-qualifying-tournament-dublin",
+      "kid": "dhruv",
+      "title": "NorCalFLL BIOGLOW Qualifying Tournament — Dublin (Playing At Learning (NorCalFLL / FIRST LEGO League Challenge",
+      "date": "2026-11-14",
+      "end_date": null,
+      "time": null,
+      "type": "community",
+      "action": null,
+      "source": {
+        "kind": "discovery",
+        "ref": "https://www.playingatlearning.org/events/",
+        "first_seen": "2026-10-11",
+        "unverified": true,
+        "why": "Backup date to the San Ramon qualifier, still inside the Tri-Valley."
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-disc-20261011-005",
+      "dedupe_key": "ridhi|2026-11-20|snowglobe-hack-club-all-girls-high-school-hackathon",
+      "kid": "ridhi",
+      "title": "Snowglobe — Hack Club all-girls high school hackathon (Hack Club",
+      "date": "2026-11-20",
+      "end_date": null,
+      "time": null,
+      "type": "community",
+      "action": null,
+      "source": {
+        "kind": "discovery",
+        "ref": "https://snowglobe.hackclub.com/",
+        "first_seen": "2026-10-11",
+        "unverified": true,
+        "why": "Free weekend hackathon with travel stipends, pitched at 13-18 year olds — a real build-something credential, not a lecture."
       },
       "status": "active"
     }

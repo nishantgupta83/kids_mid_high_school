@@ -828,6 +828,76 @@
       "found": "2026-09-13-b926356a",
       "confidence": "verified",
       "state": "pending"
+    },
+    {
+      "id": "prop-norcalfll-playing-at-learning-events",
+      "name": "Playing At Learning / NorCalFLL — FIRST LEGO League & FTC event list (Northern California)",
+      "kid": "dhruv",
+      "category": "event",
+      "url": "https://www.playingatlearning.org/events/",
+      "scan_method": "http_diff",
+      "why": "Playing At Learning runs all FIRST robotics programs for Northern California and this page publishes every dated qualifier — including ones at Dorris-Eaton in San Ramon and BASIS Dublin.",
+      "eligibility_note": "FLL Challenge is grades 4-8 (ages 9-14) in teams up to 10 — exactly Dhruv's bracket; FLL Explore is K-4 and FIRST Tech Challenge is grades 7-12, so the same page keeps working as he ages up. Competing requires joining a registered team; the 2026-27 BIOGLOW tournament-preference window already closed",
+      "replaces_source_id": null,
+      "found": "2026-10-11-f6ef84ba",
+      "confidence": "verified",
+      "state": "pending"
+    },
+    {
+      "id": "prop-san-ramon-open-gym-badminton",
+      "name": "City of San Ramon — Open Gym (badminton at Iron Horse Gymnasium)",
+      "kid": "dhruv",
+      "category": "athletics",
+      "url": "https://sanramon.ca.gov/our_city/departments_and_divisions/parks_community_services/sports_fitness/open_gym",
+      "scan_method": "http_diff",
+      "why": "Lowest-friction local badminton: drop-in city sessions a few minutes from home, no academy enrollment or season commitment.",
+      "eligibility_note": "Page does not state a minimum age or any youth/teen rule, and badminton day/time is not in the page text (prices appear only inside an image) — confirm whether an 11-year-old may play and whether an adult must accompany him before relying on it. Paid per-entry or multi-entry pass.",
+      "replaces_source_id": null,
+      "found": "2026-10-11-ff966a91",
+      "confidence": "verified",
+      "state": "pending"
+    },
+    {
+      "id": "prop-bay-badminton-training-academy",
+      "name": "Bay Badminton Training Academy — academy classes and monthly schedule",
+      "kid": "dhruv",
+      "category": "athletics",
+      "url": "https://badmintonfoundation.org/",
+      "scan_method": "manual",
+      "why": "Nonprofit youth badminton academy with a graded ladder (Beginner through Elite) and a monthly schedule PDF, i.e. a real coaching pathway rather than drop-in play.",
+      "eligibility_note": "Class descriptions list Beginner / Intermediate / Advanced as ages 6-19 (Dhruv fits), 'High School' as 13-19, and a Special Class at 8-19. LOCATION IS UNVERIFIED: a third-party nonprofit directory lists a Dublin CA address, but the academy's own site states no city and points to a partner facility (",
+      "replaces_source_id": null,
+      "found": "2026-10-11-a0f0c90f",
+      "confidence": "estimated",
+      "state": "pending"
+    },
+    {
+      "id": "prop-acton-childrens-business-fair",
+      "name": "Acton Children's Business Fair — young-entrepreneur marketplace network",
+      "kid": "dhruv",
+      "category": "program",
+      "url": "https://www.childrensbusinessfair.org/",
+      "scan_method": "manual",
+      "why": "A one-day real market where a kid builds a product, prices it and sells it — the most hands-on version of Dhruv's finance/business interest, and age-appropriate in a way most entrepreneurship programs are not.",
+      "eligibility_note": "Ages 6-17, so Dhruv is squarely eligible. Fairs are city-hosted: the national site links only San Francisco and Los Angeles for California, and the Bay Area fairs that surfaced in search (Concord, and Dublin at Emerald Glen Park) came from third-party calendars with conflicting dates and nothing con",
+      "replaces_source_id": null,
+      "found": "2026-10-11-b1ba64e3",
+      "confidence": "verified",
+      "state": "pending"
+    },
+    {
+      "id": "prop-washington-health-hs-volunteer",
+      "name": "Washington Health (Washington Hospital, Fremont) — High School Volunteer Program",
+      "kid": "ridhi",
+      "category": "volunteer",
+      "url": "https://www.washingtonhealth.com/volunteering/",
+      "scan_method": "http_diff",
+      "why": "An actual in-hospital teen volunteer pipeline in the East Bay that is not yet on the list, and the page publishes concrete waitlist open/close dates worth diffing.",
+      "eligibility_note": "16+ with age verification — Ridhi is 15, so this is a WATCHLIST item, not an apply-now. Seniors are told not to apply (long onboarding). Process is join-the-waitlist by email, then invitation to a Prospective Volunteer Information Session as hospital need allows; the page states the high-school wait",
+      "replaces_source_id": null,
+      "found": "2026-10-11-eab67369",
+      "confidence": "verified",
+      "state": "pending"
     }
   ]
 }
