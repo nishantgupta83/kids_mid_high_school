@@ -951,7 +951,7 @@
         "ref": "email:22201a83fe26",
         "first_seen": "2026-08-13"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20260815-001",
@@ -2670,7 +2670,7 @@
         "unverified": true,
         "why": "The local district's fundraiser run. Both kids can do the 5K or 1.5-mile, and registration is open at early-bird prices."
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-disc-20260913-003",
@@ -3181,7 +3181,7 @@
         "unverified": true,
         "why": "Large local community event expecting ~5,000 runners/volunteers; good family volunteering or fun-run option, confirmed via SRVEF site, RaceRoster, and local news coverage"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-disc-20261004-002",
@@ -3259,7 +3259,7 @@
         "ref": "email:22e151f0f084",
         "first_seen": "2026-10-05"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20261005-002",
@@ -3505,6 +3505,91 @@
         "first_seen": "2026-10-11",
         "unverified": true,
         "why": "Free weekend hackathon with travel stipends, pitched at 13-18 year olds — a real build-something credential, not a lecture."
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20261012-001",
+      "dedupe_key": "dhruv|2026-10-13|quarter-1-report-cards-available-in-parent-portal-pine-valle",
+      "kid": "dhruv",
+      "title": "Quarter 1 report cards available in Parent Portal (Pine Valley)",
+      "date": "2026-10-13",
+      "end_date": null,
+      "time": null,
+      "type": "school",
+      "action": null,
+      "source": {
+        "kind": "email",
+        "ref": "email:601fd44c4f16",
+        "first_seen": "2026-10-12"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20261012-002",
+      "dedupe_key": "family|2026-10-14|pine-valley-pta-meeting-library",
+      "kid": "family",
+      "title": "Pine Valley PTA Meeting (Library)",
+      "date": "2026-10-14",
+      "end_date": null,
+      "time": "18:00",
+      "type": "school",
+      "action": null,
+      "source": {
+        "kind": "email",
+        "ref": "email:601fd44c4f16",
+        "first_seen": "2026-10-12"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20261012-003",
+      "dedupe_key": "dhruv|2026-10-15|great-american-shakeout-earthquake-drill-evacuation-practice",
+      "kid": "dhruv",
+      "title": "Great American ShakeOut earthquake drill + evacuation practice (Pine Valley)",
+      "date": "2026-10-15",
+      "end_date": null,
+      "time": null,
+      "type": "school",
+      "action": null,
+      "source": {
+        "kind": "email",
+        "ref": "email:601fd44c4f16",
+        "first_seen": "2026-10-12"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20261012-004",
+      "dedupe_key": "dhruv|2026-10-15|superintendent-visit-to-pine-valley-classroom-visits-student",
+      "kid": "dhruv",
+      "title": "Superintendent visit to Pine Valley (classroom visits + student panel)",
+      "date": "2026-10-15",
+      "end_date": null,
+      "time": null,
+      "type": "school",
+      "action": null,
+      "source": {
+        "kind": "email",
+        "ref": "email:601fd44c4f16",
+        "first_seen": "2026-10-12"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20261012-005",
+      "dedupe_key": "dhruv|2026-12-18|semester-1-ends-pine-valley-srvusd",
+      "kid": "dhruv",
+      "title": "Semester 1 ends (Pine Valley / SRVUSD)",
+      "date": "2026-12-18",
+      "end_date": null,
+      "time": null,
+      "type": "school",
+      "action": null,
+      "source": {
+        "kind": "email",
+        "ref": "email:601fd44c4f16",
+        "first_seen": "2026-10-12"
       },
       "status": "active"
     }
