@@ -1,12 +1,12 @@
 {
-  "run_id": "run-20261013-004231-8603e2",
+  "run_id": "run-20261013-071200-bd58c5",
   "date": "2026-10-13",
-  "at": "2026-10-13T00:42:31",
-  "mode": "full",
-  "ok": false,
-  "duration_s": 46,
+  "at": "2026-10-13T07:12:00",
+  "mode": "quiet",
+  "ok": true,
+  "duration_s": 33,
   "steps": {
     "email": "1",
-    "mode": "full"
+    "mode": "quiet"
   }
 }
