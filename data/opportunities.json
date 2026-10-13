@@ -804,6 +804,46 @@
         "evidence": "'Teen Drop-In ... pop-up crafts, movies and more in the Maker Space after school ... For teens 6th to 12th grade. Every 4th Monday of the month during the school year.'"
       },
       "notes": "school-year-weekly (monthly cadence); low-commitment, casual — good filler option, not a priority match for either kid's main interests"
+    },
+    {
+      "id": "opp-20261013-001",
+      "dedupe_key": "cal-high-academic-boosters|academic-booster-club-grant-funding-for|2026",
+      "kid": "ridhi",
+      "title": "Academic Booster Club Grant — funding for academic clubs (entry fees, mentor programs, supplies, research)",
+      "org": "Cal High Academic Boosters",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSduJcNx1Rs4NE9IhXrdVN_k6Bxz1JMMdir9WRttSQw8lYiR9w/viewform",
+      "category": "program",
+      "region": "tri-valley",
+      "location": "California High School, San Ramon",
+      "eligibility": {
+        "eligible_now": "check",
+        "reason": "Open to all Cal High academic enrichment groups in grades 9-12, so Ridhi (15, 10th grade) qualifies by grade — but the grant is awarded to a club, not a student, so she would need to be applying on behalf of a club she is part of (e.g. a science/biomed club). Excludes travel, field trips, transporta"
+      },
+      "window": {
+        "opens": null,
+        "closes": "2026-11-13",
+        "deadline": "2026-11-13",
+        "confidence": "verified"
+      },
+      "commitment": "One-time application form; board review Dec 8, 2026 with results notified between Dec 15, 2026 and Jan 31, 2027",
+      "pipeline": {
+        "status": "new",
+        "updated_at": "2026-10-13T00:42:29",
+        "updated_by": "agent",
+        "history": [
+          {
+            "status": "new",
+            "at": "2026-10-13T00:42:29"
+          }
+        ]
+      },
+      "provenance": {
+        "source_id": "email-inbox",
+        "first_seen": "2026-10-13",
+        "last_seen": "2026-10-13",
+        "evidence": "ParentSquare digest post by Demetrius (Oct 12, 1:00 PM) to 9th-12th grade: 'Cal High Academic Boosters is committed to offering financial assistance to Academic Clubs for entry fees, mentor programs, supplies, research, and club promotional programs' with a Google Form link and deadline Friday, November 13th @ 11:59 pm."
+      },
+      "notes": "Not a volunteer role — a club funding channel. Worth a glance if Ridhi joins a biomed/science club (e.g. PLTW-adjacent or the Science Alliance club already in the registry) that needs supplies or research money; her AP exam fees would NOT be covered. Low time commitment, long decision lag (results as late as Jan 31, 2027)."
     }
   ]
 }

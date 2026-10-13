@@ -3065,7 +3065,7 @@
         "ref": "email:1583840525bf",
         "first_seen": "2026-10-01"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20261001-002",
@@ -3082,7 +3082,7 @@
         "ref": "email:1583840525bf",
         "first_seen": "2026-10-01"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20261003-001",
@@ -3331,7 +3331,7 @@
         "ref": "email:666286f1a03c",
         "first_seen": "2026-10-10"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20261010-002",
@@ -3411,7 +3411,7 @@
         "ref": "source:lawrence-hall-teen-volunteers",
         "first_seen": "2026-10-11"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-disc-20261011-001",
@@ -3590,6 +3590,27 @@
         "kind": "email",
         "ref": "email:601fd44c4f16",
         "first_seen": "2026-10-12"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20261013-001",
+      "dedupe_key": "ridhi|2026-11-13|cal-high-academic-booster-club-grant-application-deadline",
+      "kid": "ridhi",
+      "title": "Cal High Academic Booster Club grant application deadline",
+      "date": "2026-11-13",
+      "end_date": null,
+      "time": "23:59",
+      "type": "deadline",
+      "action": {
+        "required": true,
+        "what": "If Ridhi is in an academic club seeking funding (entry fees, mentor programs, supplies, research, club promotion), submit the Academic Boosters Club Grant Application form",
+        "due": "2026-11-13"
+      },
+      "source": {
+        "kind": "email",
+        "ref": "email:33db2c52a191",
+        "first_seen": "2026-10-13"
       },
       "status": "active"
     }
