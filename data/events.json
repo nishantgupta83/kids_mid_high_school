@@ -3394,7 +3394,7 @@
         "ref": "email:f998c9a2c885",
         "first_seen": "2026-10-10"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20261011-001",
@@ -3523,7 +3523,7 @@
         "ref": "email:601fd44c4f16",
         "first_seen": "2026-10-12"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20261012-002",
