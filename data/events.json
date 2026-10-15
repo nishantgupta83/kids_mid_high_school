@@ -2498,7 +2498,7 @@
       "title": "State of the School District (SRVUSD)",
       "date": "2026-10-28",
       "end_date": null,
-      "time": null,
+      "time": "09:00",
       "type": "community",
       "action": null,
       "source": {
@@ -3352,7 +3352,7 @@
         "ref": "email:666286f1a03c",
         "first_seen": "2026-10-10"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20261010-003",
@@ -3373,7 +3373,7 @@
         "ref": "email:666286f1a03c",
         "first_seen": "2026-10-10"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20261010-004",
@@ -3540,7 +3540,7 @@
         "ref": "email:601fd44c4f16",
         "first_seen": "2026-10-12"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20261012-003",
@@ -3611,6 +3611,23 @@
         "kind": "email",
         "ref": "email:33db2c52a191",
         "first_seen": "2026-10-13"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20261015-001",
+      "dedupe_key": "ridhi|2026-10-21|srvusd-2026-college-fair-90-colleges-military-and-trade-scho",
+      "kid": "ridhi",
+      "title": "SRVUSD 2026 College Fair (90+ colleges, military and trade schools) at Monte Vista High School",
+      "date": "2026-10-21",
+      "end_date": null,
+      "time": "18:00",
+      "type": "community",
+      "action": null,
+      "source": {
+        "kind": "email",
+        "ref": "email:5b4aa1ede59d",
+        "first_seen": "2026-10-15"
       },
       "status": "active"
     }
