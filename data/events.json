@@ -3630,6 +3630,166 @@
         "first_seen": "2026-10-15"
       },
       "status": "active"
+    },
+    {
+      "id": "evt-20261017-001",
+      "dedupe_key": "dhruv|2026-10-21|math-olympiad-challenge-problem-ms-pv3-due-also-set-9-olympi",
+      "kid": "dhruv",
+      "title": "Math Olympiad: Challenge Problem MS PV3 due (also Set 9 / Olympiad 3 homework)",
+      "date": "2026-10-21",
+      "end_date": null,
+      "time": null,
+      "type": "homework",
+      "action": {
+        "required": true,
+        "what": "Submit Challenge Problem MS PV3 in Google Classroom; Set 9 homework is also due Oct 21",
+        "due": "2026-10-21"
+      },
+      "source": {
+        "kind": "email",
+        "ref": "email:a6c0a546b99c",
+        "first_seen": "2026-10-17"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20261017-002",
+      "dedupe_key": "dhruv|2026-10-23|language-arts-q1-survival-theme-brochure-project-due",
+      "kid": "dhruv",
+      "title": "Language Arts: Q1 Survival Theme Brochure Project due",
+      "date": "2026-10-23",
+      "end_date": null,
+      "time": null,
+      "type": "homework",
+      "action": {
+        "required": true,
+        "what": "Finish and submit the Q1 Survival Theme Brochure Project",
+        "due": "2026-10-23"
+      },
+      "source": {
+        "kind": "email",
+        "ref": "email:a6c0a546b99c",
+        "first_seen": "2026-10-17"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20261017-003",
+      "dedupe_key": "dhruv|2026-10-21|science-cell-organelle-quiz-wed-oct-21-or-thu-oct-22-dependi",
+      "kid": "dhruv",
+      "title": "Science cell organelle quiz (Wed Oct 21 or Thu Oct 22, depending on even/odd day)",
+      "date": "2026-10-21",
+      "end_date": "2026-10-22",
+      "time": null,
+      "type": "test",
+      "action": null,
+      "source": {
+        "kind": "email",
+        "ref": "email:a6c0a546b99c",
+        "first_seen": "2026-10-17"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20261017-004",
+      "dedupe_key": "ridhi|2026-10-21|ap-calculus-hw-u3-1-webassign-due",
+      "kid": "ridhi",
+      "title": "AP Calculus: HW U3#1 WebAssign due",
+      "date": "2026-10-21",
+      "end_date": null,
+      "time": null,
+      "type": "homework",
+      "action": {
+        "required": true,
+        "what": "Complete HW U3#1 on WebAssign",
+        "due": "2026-10-21"
+      },
+      "source": {
+        "kind": "email",
+        "ref": "email:b270e5ffd86f",
+        "first_seen": "2026-10-17"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20261017-005",
+      "dedupe_key": "ridhi|2026-10-19|english-10-read-chapter-6",
+      "kid": "ridhi",
+      "title": "English 10: read Chapter 6",
+      "date": "2026-10-19",
+      "end_date": null,
+      "time": null,
+      "type": "homework",
+      "action": {
+        "required": true,
+        "what": "Read Ch 6 (Lord of the Flies)",
+        "due": "2026-10-19"
+      },
+      "source": {
+        "kind": "email",
+        "ref": "email:b270e5ffd86f",
+        "first_seen": "2026-10-17"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20261017-006",
+      "dedupe_key": "ridhi|2026-10-22|english-10-lotf-mask-project-photo-submission-due",
+      "kid": "ridhi",
+      "title": "English 10: LOTF Mask Project — photo submission due",
+      "date": "2026-10-22",
+      "end_date": null,
+      "time": null,
+      "type": "homework",
+      "action": {
+        "required": true,
+        "what": "Submit a photo of the mask project and the symbol/color explanation document in Classroom",
+        "due": "2026-10-22"
+      },
+      "source": {
+        "kind": "email",
+        "ref": "email:b270e5ffd86f",
+        "first_seen": "2026-10-17"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20261017-007",
+      "dedupe_key": "ridhi|2026-10-23|english-10-bring-physical-lotf-mask-project-to-class",
+      "kid": "ridhi",
+      "title": "English 10: bring physical LOTF Mask Project to class",
+      "date": "2026-10-23",
+      "end_date": null,
+      "time": null,
+      "type": "homework",
+      "action": {
+        "required": true,
+        "what": "Bring the physical mask project to class",
+        "due": "2026-10-23"
+      },
+      "source": {
+        "kind": "email",
+        "ref": "email:b270e5ffd86f",
+        "first_seen": "2026-10-17"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20261017-008",
+      "dedupe_key": "ridhi|2026-10-20|ap-calculus-unit-2b-frq-test-makeup-ct-1-engineering-buildin",
+      "kid": "ridhi",
+      "title": "AP Calculus Unit 2B FRQ test makeup (CT-1, Engineering building)",
+      "date": "2026-10-20",
+      "end_date": null,
+      "time": "15:00",
+      "type": "test",
+      "action": null,
+      "source": {
+        "kind": "email",
+        "ref": "email:b270e5ffd86f",
+        "first_seen": "2026-10-17"
+      },
+      "status": "active"
     }
   ]
 }
