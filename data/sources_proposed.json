@@ -898,6 +898,48 @@
       "found": "2026-10-11-eab67369",
       "confidence": "verified",
       "state": "pending"
+    },
+    {
+      "id": "prop-stanford-splash",
+      "name": "Stanford Splash (Stanford ESP) — weekend of student-taught classes, held fall and spring",
+      "kid": "ridhi",
+      "category": "event",
+      "url": "https://stanfordesp.org/",
+      "scan_method": "http_diff",
+      "why": "Twice a year, Stanford students teach short classes on many subjects, including biology and medicine; the homepage banner announces each date.",
+      "eligibility_note": "Grades 8-12, so Ridhi is eligible now and Dhruv will be in 8th grade. Spots are given by lottery (Phase 0).",
+      "replaces_source_id": null,
+      "found": "2026-10-18-b447688d",
+      "confidence": "verified",
+      "state": "pending"
+    },
+    {
+      "id": "prop-berkeley-math-tournament",
+      "name": "Berkeley Math Tournament — BMT (high school) and BmMT (middle school)",
+      "kid": "both",
+      "category": "event",
+      "url": "https://berkeley.mt/",
+      "scan_method": "http_diff",
+      "why": "Student-run UC Berkeley math competitions for teams or solo entrants. BmMT is for middle schoolers, and BMT allows advanced younger students.",
+      "eligibility_note": "BmMT is for grade 8 or below, so it fits Dhruv; in 2026 it ran in April and online in June. BMT is for grade 12 or below with no minimum age.",
+      "replaces_source_id": null,
+      "found": "2026-10-18-a9118735",
+      "confidence": "verified",
+      "state": "pending"
+    },
+    {
+      "id": "prop-nsda-springboard-series",
+      "name": "NSDA Springboard Series — free online speech & debate scrimmages",
+      "kid": "dhruv",
+      "category": "club",
+      "url": "https://www.speechanddebate.org/springboard-series/",
+      "scan_method": "http_diff",
+      "why": "Free online scrimmages roughly weekly, with a 'rising stars' division for middle schoolers and first-year competitors; a low-stakes way for Dhruv to start debating.",
+      "eligibility_note": "Middle schoolers can enter. Students cannot sign up on their own: they must enter under their school, with a coach registering them through Tabroom, so Pine Valley needs a sponsoring teacher or coach.",
+      "replaces_source_id": null,
+      "found": "2026-10-18-a8e1ef32",
+      "confidence": "verified",
+      "state": "pending"
     }
   ]
 }

@@ -75,7 +75,7 @@
         "ref": "school_year.json",
         "first_seen": "2026-07-21"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-seed-005",
@@ -824,7 +824,7 @@
         "unverified": true,
         "why": "Free 11am-4pm day with 125+ hands-on experiences, lab tours and science talks — works for both kids in one trip. Slightly beyond the 6-week window but worth blocking the date now."
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20260811-001",
@@ -1958,7 +1958,7 @@
         "unverified": true,
         "why": "125+ demos, behind-the-scenes lab tours and science talks — the single best day for Ridhi to talk to Bay Area bio/medical labs face to face, and it works for Dhruv too."
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-disc-20260830-005",
@@ -2689,7 +2689,7 @@
         "unverified": true,
         "why": "Free, with 125+ hands-on exhibits, lab tours and science talks. Good for Ridhi's biology and medicine interest and fun for Dhruv too."
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20260914-001",
@@ -3200,7 +3200,7 @@
         "unverified": true,
         "why": "Free, open-to-public science fair with 125+ hands-on exhibits/talks — good STEM exposure for both kids"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-disc-20261004-003",
@@ -3430,7 +3430,7 @@
         "unverified": true,
         "why": "Free, 11am-4pm, and the one event in this window that genuinely serves a 15-year-old and an 11-year-old on the same ticket — including behind-the-scenes lab tours for Ridhi."
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-disc-20261011-002",
@@ -3788,6 +3788,101 @@
         "kind": "email",
         "ref": "email:b270e5ffd86f",
         "first_seen": "2026-10-17"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-disc-20261018-001",
+      "dedupe_key": "dhruv|2026-11-07|2026-yonex-norcal-orc-usa-badminton-junior-regional-tourname",
+      "kid": "dhruv",
+      "title": "2026 YONEX NorCal ORC (USA Badminton junior regional tournament) (USA Badminton / Bintang Badminton",
+      "date": "2026-11-07",
+      "end_date": null,
+      "time": null,
+      "type": "community",
+      "action": null,
+      "source": {
+        "kind": "discovery",
+        "ref": "https://usabadminton.org/athletes/juniors/junior-tournament-schedule/",
+        "first_seen": "2026-10-18",
+        "unverified": true,
+        "why": "The nearest official junior regional tournament; good for seeing competitive U11/U13 play even if Dhruv doesn't enter."
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-disc-20261018-002",
+      "dedupe_key": "dhruv|2026-11-10|nsda-springboard-scrimmage-7-live-online-speech-debate",
+      "kid": "dhruv",
+      "title": "NSDA Springboard Scrimmage #7 (live online speech + debate) (National Speech & Debate Association",
+      "date": "2026-11-10",
+      "end_date": null,
+      "time": null,
+      "type": "community",
+      "action": null,
+      "source": {
+        "kind": "discovery",
+        "ref": "https://www.speechanddebate.org/springboard-series/",
+        "first_seen": "2026-10-18",
+        "unverified": true,
+        "why": "A free first competitive round for a beginner; more scrimmages follow on Nov 17 and Nov 19. Dhruv must be entered through his school's coach."
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-disc-20261018-003",
+      "dedupe_key": "both|2026-11-14|berkeley-math-tournament-2026-in-person",
+      "kid": "both",
+      "title": "Berkeley Math Tournament 2026 (in person) (Berkeley Math Tournament (UC Berkeley",
+      "date": "2026-11-14",
+      "end_date": null,
+      "time": null,
+      "type": "community",
+      "action": null,
+      "source": {
+        "kind": "discovery",
+        "ref": "https://berkeley.mt/events/bmt-2026/",
+        "first_seen": "2026-10-18",
+        "unverified": true,
+        "why": "Same-day competition for teams of up to 6. Late registration runs Oct 19 to Nov 1 at $25 per student, and advanced middle schoolers may compete."
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-disc-20261018-004",
+      "dedupe_key": "ridhi|2026-11-14|stanford-fall-splash-nov-14-15",
+      "kid": "ridhi",
+      "title": "Stanford Fall Splash (Nov 14-15) (Stanford Educational Studies Program",
+      "date": "2026-11-14",
+      "end_date": null,
+      "time": null,
+      "type": "community",
+      "action": null,
+      "source": {
+        "kind": "discovery",
+        "ref": "https://stanfordesp.org/",
+        "first_seen": "2026-10-18",
+        "unverified": true,
+        "why": "A weekend of short classes taught by Stanford students, including bio and medicine topics. Grades 8-12, lottery registration; check whether the lottery is still open."
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-disc-20261018-005",
+      "dedupe_key": "dhruv|2026-11-27|2026-usa-badminton-bay-badminton-championships",
+      "kid": "dhruv",
+      "title": "2026 USA Badminton Bay Badminton Championships (USA Badminton / Bay Badminton Center",
+      "date": "2026-11-27",
+      "end_date": null,
+      "time": null,
+      "type": "community",
+      "action": null,
+      "source": {
+        "kind": "discovery",
+        "ref": "https://usabadminton.org/2026-bay-badminton-championships-prospectus-released/",
+        "first_seen": "2026-10-18",
+        "unverified": true,
+        "why": "A sanctioned tournament over Thanksgiving weekend. Age divisions are only in the prospectus PDF, which couldn't be read, so it's not confirmed there is a junior or U11/U13 event."
       },
       "status": "active"
     }
