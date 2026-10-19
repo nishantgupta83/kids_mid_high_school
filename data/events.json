@@ -3885,6 +3885,23 @@
         "why": "A sanctioned tournament over Thanksgiving weekend. Age divisions are only in the prospectus PDF, which couldn't be read, so it's not confirmed there is a junior or U11/U13 event."
       },
       "status": "active"
+    },
+    {
+      "id": "evt-20261019-001",
+      "dedupe_key": "dhruv|2026-10-22|pine-valley-education-fund-meeting",
+      "kid": "dhruv",
+      "title": "Pine Valley Education Fund meeting",
+      "date": "2026-10-22",
+      "end_date": null,
+      "time": "18:30",
+      "type": "community",
+      "action": null,
+      "source": {
+        "kind": "email",
+        "ref": "email:a8bf18268595",
+        "first_seen": "2026-10-19"
+      },
+      "status": "active"
     }
   ]
 }
