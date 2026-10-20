@@ -3730,7 +3730,7 @@
         "ref": "email:b270e5ffd86f",
         "first_seen": "2026-10-17"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20261017-006",
@@ -3900,6 +3900,27 @@
         "kind": "email",
         "ref": "email:a8bf18268595",
         "first_seen": "2026-10-19"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20261020-001",
+      "dedupe_key": "both|2027-03-19|ets-data-breach-deadline-to-enroll-in-free-identity-protecti",
+      "kid": "both",
+      "title": "ETS data breach — deadline to enroll in free identity-protection services",
+      "date": "2027-03-19",
+      "end_date": null,
+      "time": null,
+      "type": "deadline",
+      "action": {
+        "required": true,
+        "what": "Review the ETS Notice of Data Breach and the CDE FAQ page. If either student's data may be affected, enroll in the free 2-year identity-protection service. A missing ETS letter does not prove a student's data was unaffected.",
+        "due": "2027-03-19"
+      },
+      "source": {
+        "kind": "email",
+        "ref": "email:6fff79d529c3",
+        "first_seen": "2026-10-20"
       },
       "status": "active"
     }
