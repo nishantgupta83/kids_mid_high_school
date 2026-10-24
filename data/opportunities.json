@@ -844,6 +844,126 @@
         "evidence": "ParentSquare digest post by Demetrius (Oct 12, 1:00 PM) to 9th-12th grade: 'Cal High Academic Boosters is committed to offering financial assistance to Academic Clubs for entry fees, mentor programs, supplies, research, and club promotional programs' with a Google Form link and deadline Friday, November 13th @ 11:59 pm."
       },
       "notes": "Not a volunteer role — a club funding channel. Worth a glance if Ridhi joins a biomed/science club (e.g. PLTW-adjacent or the Science Alliance club already in the registry) that needs supplies or research money; her AP exam fees would NOT be covered. Low time commitment, long decision lag (results as late as Jan 31, 2027)."
+    },
+    {
+      "id": "opp-20261024-001",
+      "dedupe_key": "congressional-app-challenge|congressional-app-challenge|2026",
+      "kid": "both",
+      "title": "Congressional App Challenge",
+      "org": "Congressional App Challenge",
+      "url": "https://www.congressionalappchallenge.us/students/student-registration/",
+      "category": "program",
+      "region": "virtual",
+      "location": "Online registration",
+      "eligibility": {
+        "eligible_now": "yes",
+        "reason": "The newsletter says to share it with students in grades 6-12, which covers both Ridhi (10th) and Dhruv (6th)."
+      },
+      "window": {
+        "opens": null,
+        "closes": "2026-10-26",
+        "deadline": "2026-10-26",
+        "confidence": "verified"
+      },
+      "commitment": "App-building challenge; the time commitment isn't stated",
+      "pipeline": {
+        "status": "new",
+        "updated_at": "2026-10-24T14:26:50",
+        "updated_by": "agent",
+        "history": [
+          {
+            "status": "new",
+            "at": "2026-10-24T14:26:50"
+          }
+        ]
+      },
+      "provenance": {
+        "source_id": "email-inbox",
+        "first_seen": "2026-10-24",
+        "last_seen": "2026-10-24",
+        "evidence": "Cal High community newsletter: registration closes October 26th, share with students in grades 6-12."
+      },
+      "notes": "Registration deadline is in 2 days. Good coding fit for both kids. Check the official site for team size and the submission deadline."
+    },
+    {
+      "id": "opp-20261024-002",
+      "dedupe_key": "srvusd|aapi-youth-leadership-conference-aylc|2026",
+      "kid": "ridhi",
+      "title": "AAPI Youth Leadership Conference (AYLC)",
+      "org": "SRVUSD",
+      "url": "https://forms.gle/otumE1Hf8PdZZGyi7",
+      "category": "event",
+      "region": "tri-valley",
+      "location": "DVHS Library, Danville",
+      "eligibility": {
+        "eligible_now": "yes",
+        "reason": "The newsletter says all SRVUSD high schoolers are eligible, and Ridhi is in 10th grade."
+      },
+      "window": {
+        "opens": null,
+        "closes": null,
+        "deadline": null,
+        "confidence": "estimated"
+      },
+      "commitment": "One day, Tue Jan 26 2027, 8:30-14:45 (school day, so it needs a permission slip)",
+      "pipeline": {
+        "status": "new",
+        "updated_at": "2026-10-24T14:26:50",
+        "updated_by": "agent",
+        "history": [
+          {
+            "status": "new",
+            "at": "2026-10-24T14:26:50"
+          }
+        ]
+      },
+      "provenance": {
+        "source_id": "email-inbox",
+        "first_seen": "2026-10-24",
+        "last_seen": "2026-10-24",
+        "evidence": "Newsletter section 'AAPI Youth Leadership Conference (New)'."
+      },
+      "notes": "Registration deadline is not stated. It needs a school trip permission form, emailed to the district contact or brought on the day. It is a school-day event, not a weekend one."
+    },
+    {
+      "id": "opp-20261024-003",
+      "dedupe_key": "cal-high-science-bowl-club|science-bowl-club|2026",
+      "kid": "ridhi",
+      "title": "Science Bowl Club",
+      "org": "Cal High Science Bowl Club",
+      "url": null,
+      "category": "club",
+      "region": "tri-valley",
+      "location": "Cal High (room not stated)",
+      "eligibility": {
+        "eligible_now": "yes",
+        "reason": "Cal High club run by her Chemistry teacher, and Ridhi is a current Chemistry student."
+      },
+      "window": {
+        "opens": null,
+        "closes": null,
+        "deadline": null,
+        "confidence": "estimated"
+      },
+      "commitment": "Meeting Tue Oct 27; ongoing schedule not stated",
+      "pipeline": {
+        "status": "new",
+        "updated_at": "2026-10-24T14:26:50",
+        "updated_by": "agent",
+        "history": [
+          {
+            "status": "new",
+            "at": "2026-10-24T14:26:50"
+          }
+        ]
+      },
+      "provenance": {
+        "source_id": "email-inbox",
+        "first_seen": "2026-10-24",
+        "last_seen": "2026-10-24",
+        "evidence": "A Chemistry Classroom announcement says that on Oct 27 the teacher will host a Science Bowl Club meeting and that signing up is encouraged. The text is cut off."
+      },
+      "notes": "school-year-weekly (probable). A science club that fits her STEM interests. Sign-up details are missing from the truncated text."
     }
   ]
 }

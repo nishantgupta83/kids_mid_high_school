@@ -264,9 +264,9 @@
         "params": {},
         "region_hint": "application status / open-close notice",
         "frequency": "window_only",
-        "next_check_date": "2026-10-24",
-        "last_checked": "2026-10-23",
-        "last_hash": "b132c79b9bdf66230af9f8960bcace2e3cd6887ac5602e67db71859bfa44ebf5",
+        "next_check_date": "2026-10-25",
+        "last_checked": "2026-10-24",
+        "last_hash": "a7e3d8b1009bb0f1265889df40c68246f308436291a88855a2081bc1d1250071",
         "etag": null,
         "last_modified": null,
         "consecutive_failures": 0

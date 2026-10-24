@@ -2871,7 +2871,7 @@
         "ref": "email:69d5a4561eae",
         "first_seen": "2026-09-24"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20260928-001",
@@ -3671,7 +3671,7 @@
         "ref": "email:a6c0a546b99c",
         "first_seen": "2026-10-17"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20261017-003",
@@ -3772,7 +3772,7 @@
         "ref": "email:b270e5ffd86f",
         "first_seen": "2026-10-17"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20261017-008",
@@ -3921,6 +3921,187 @@
         "kind": "email",
         "ref": "email:6fff79d529c3",
         "first_seen": "2026-10-20"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20261024-001",
+      "dedupe_key": "dhruv|2026-10-28|math-olympiad-challenge-problem-ms-pv3-and-set-9-olympiad-4",
+      "kid": "dhruv",
+      "title": "Math Olympiad: Challenge Problem MS PV3 and Set 9 (Olympiad 4) homework due",
+      "date": "2026-10-28",
+      "end_date": null,
+      "time": null,
+      "type": "homework",
+      "action": {
+        "required": true,
+        "what": "Submit Challenge Problem MS PV3 in Classroom and complete Set 9 homework",
+        "due": "2026-10-28"
+      },
+      "source": {
+        "kind": "email",
+        "ref": "email:fdd4a4511031",
+        "first_seen": "2026-10-24"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20261024-002",
+      "dedupe_key": "ridhi|2026-10-26|chemistry-introduction-to-periodic-law-lab-2-4b-and-2-4c-pra",
+      "kid": "ridhi",
+      "title": "Chemistry: Introduction to Periodic Law Lab, 2.4b and 2.4c practice due",
+      "date": "2026-10-26",
+      "end_date": null,
+      "time": null,
+      "type": "homework",
+      "action": {
+        "required": true,
+        "what": "Finish and submit the Periodic Law Lab, 2.4b Graphing Periodic Trends Practice, and 2.4c Analyzing Experiment Data Practice",
+        "due": "2026-10-26"
+      },
+      "source": {
+        "kind": "email",
+        "ref": "email:225ca17f57c0",
+        "first_seen": "2026-10-24"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20261024-003",
+      "dedupe_key": "ridhi|2026-10-26|ap-calculus-hw-u3-4-worksheet-due",
+      "kid": "ridhi",
+      "title": "AP Calculus: HW U3#4 worksheet due",
+      "date": "2026-10-26",
+      "end_date": null,
+      "time": null,
+      "type": "homework",
+      "action": {
+        "required": true,
+        "what": "Submit HW U3#4 WS",
+        "due": "2026-10-26"
+      },
+      "source": {
+        "kind": "email",
+        "ref": "email:225ca17f57c0",
+        "first_seen": "2026-10-24"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20261024-004",
+      "dedupe_key": "ridhi|2026-10-27|ap-calculus-hw-acknowledgement-due",
+      "kid": "ridhi",
+      "title": "AP Calculus: HW Acknowledgement due",
+      "date": "2026-10-27",
+      "end_date": null,
+      "time": null,
+      "type": "homework",
+      "action": {
+        "required": true,
+        "what": "Complete the HW Acknowledgement assignment in Classroom (the posting doesn't say whether a parent must sign)",
+        "due": "2026-10-27"
+      },
+      "source": {
+        "kind": "email",
+        "ref": "email:225ca17f57c0",
+        "first_seen": "2026-10-24"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20261024-005",
+      "dedupe_key": "ridhi|2026-10-26|english-10-embedded-quotes-quote-analysis-ch-7-due",
+      "kid": "ridhi",
+      "title": "English 10: Embedded Quotes (Quote Analysis, Ch 7) due",
+      "date": "2026-10-26",
+      "end_date": null,
+      "time": null,
+      "type": "homework",
+      "action": {
+        "required": true,
+        "what": "Submit Embedded Quotes assignment",
+        "due": "2026-10-26"
+      },
+      "source": {
+        "kind": "email",
+        "ref": "email:225ca17f57c0",
+        "first_seen": "2026-10-24"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20261024-006",
+      "dedupe_key": "ridhi|2026-10-27|science-bowl-club-meeting-replaces-chemistry-student-support",
+      "kid": "ridhi",
+      "title": "Science Bowl Club meeting (replaces Chemistry student support that day)",
+      "date": "2026-10-27",
+      "end_date": null,
+      "time": null,
+      "type": "school",
+      "action": null,
+      "source": {
+        "kind": "email",
+        "ref": "email:225ca17f57c0",
+        "first_seen": "2026-10-24"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20261024-007",
+      "dedupe_key": "both|2026-10-26|congressional-app-challenge-registration-closes",
+      "kid": "both",
+      "title": "Congressional App Challenge registration closes",
+      "date": "2026-10-26",
+      "end_date": null,
+      "time": null,
+      "type": "deadline",
+      "action": {
+        "required": true,
+        "what": "Register for the Congressional App Challenge if interested (open to grades 6-12)",
+        "due": "2026-10-26"
+      },
+      "source": {
+        "kind": "email",
+        "ref": "email:4c29d714849f",
+        "first_seen": "2026-10-24"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20261024-008",
+      "dedupe_key": "ridhi|2026-10-26|d-a-de-los-muertos-community-ofrenda-altar-at-cal-high",
+      "kid": "ridhi",
+      "title": "Día de los Muertos community ofrenda (altar) at Cal High",
+      "date": "2026-10-26",
+      "end_date": null,
+      "time": null,
+      "type": "school",
+      "action": null,
+      "source": {
+        "kind": "email",
+        "ref": "email:ac5c9191210a",
+        "first_seen": "2026-10-24"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20261024-009",
+      "dedupe_key": "ridhi|2027-01-26|aapi-youth-leadership-conference-dvhs-library",
+      "kid": "ridhi",
+      "title": "AAPI Youth Leadership Conference (DVHS Library)",
+      "date": "2027-01-26",
+      "end_date": null,
+      "time": "08:30",
+      "type": "community",
+      "action": {
+        "required": true,
+        "what": "Register via the form and turn in the school trip permission form (registration deadline not stated)",
+        "due": null
+      },
+      "source": {
+        "kind": "email",
+        "ref": "email:ac5c9191210a",
+        "first_seen": "2026-10-24"
       },
       "status": "active"
     }
