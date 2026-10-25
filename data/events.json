@@ -2993,7 +2993,7 @@
         "ref": "email:1dfeceae68e9",
         "first_seen": "2026-09-28"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20260928-007",
@@ -4102,6 +4102,25 @@
         "kind": "email",
         "ref": "email:ac5c9191210a",
         "first_seen": "2026-10-24"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-disc-20261025-001",
+      "dedupe_key": "ridhi|2026-11-03|science-in-action-chemistry-in-action-a-chemist-s-journey-in",
+      "kid": "ridhi",
+      "title": "Science in Action: Chemistry in Action — A Chemist's Journey in Drug Discovery (Dr. Christian Gampe, Genentech) (Skyline College",
+      "date": "2026-11-03",
+      "end_date": null,
+      "time": null,
+      "type": "community",
+      "action": null,
+      "source": {
+        "kind": "discovery",
+        "ref": "https://skylinecollege.edu/scienceinaction/",
+        "first_seen": "2026-10-25",
+        "unverified": true,
+        "why": "A drug-discovery career talk from a Genentech senior director, which fits Ridhi's medicine and biology interest, and it can be attended remotely."
       },
       "status": "active"
     }

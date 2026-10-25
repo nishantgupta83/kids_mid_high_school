@@ -940,6 +940,34 @@
       "found": "2026-10-18-a8e1ef32",
       "confidence": "verified",
       "state": "pending"
+    },
+    {
+      "id": "prop-skyline-science-in-action",
+      "name": "Skyline College — Science in Action seminar series",
+      "kid": "ridhi",
+      "category": "event",
+      "url": "https://skylinecollege.edu/scienceinaction/",
+      "scan_method": "http_diff",
+      "why": "Free science talks from working biomedical, biotech and drug-discovery scientists, with a Zoom option.",
+      "eligibility_note": "Free and open to the public. The page lists no age restriction, and it is aimed at college students. The campus is in San Bruno, so Zoom is the practical way to attend.",
+      "replaces_source_id": null,
+      "found": "2026-10-25-fc00b535",
+      "confidence": "verified",
+      "state": "pending"
+    },
+    {
+      "id": "prop-vitalant-volunteer-portal",
+      "name": "Vitalant — volunteer portal (regional shift listings)",
+      "kid": "ridhi",
+      "category": "volunteer",
+      "url": "https://vitalant.volunteerportal.org/?nd=m_home",
+      "scan_method": "manual",
+      "why": "Open shifts for the Vitalant blood-drive and donor-lounge volunteer roles, searchable by ZIP code.",
+      "eligibility_note": "No minimum age is stated on the Vitalant volunteer page. Confirm it before applying, since blood-drive roles often require 16+. I did not fetch the portal itself, so the URL comes from the Vitalant volunteer page and is unconfirmed.",
+      "replaces_source_id": null,
+      "found": "2026-10-25-4aac213a",
+      "confidence": "estimated",
+      "state": "pending"
     }
   ]
 }
