@@ -4123,6 +4123,74 @@
         "why": "A drug-discovery career talk from a Genentech senior director, which fits Ridhi's medicine and biology interest, and it can be attended remotely."
       },
       "status": "active"
+    },
+    {
+      "id": "evt-20261026-001",
+      "dedupe_key": "dhruv|2026-10-28|dine-with-pine-chipotle-fundraiser-night-pine-valley",
+      "kid": "dhruv",
+      "title": "Dine with Pine — Chipotle fundraiser night (Pine Valley)",
+      "date": "2026-10-28",
+      "end_date": null,
+      "time": "17:00",
+      "type": "community",
+      "action": null,
+      "source": {
+        "kind": "email",
+        "ref": "email:bc8e8adbb3cf",
+        "first_seen": "2026-10-26"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20261026-002",
+      "dedupe_key": "dhruv|2026-10-30|pine-valley-minimum-day",
+      "kid": "dhruv",
+      "title": "Pine Valley Minimum Day",
+      "date": "2026-10-30",
+      "end_date": null,
+      "time": null,
+      "type": "school",
+      "action": null,
+      "source": {
+        "kind": "email",
+        "ref": "email:bc8e8adbb3cf",
+        "first_seen": "2026-10-26"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20261026-003",
+      "dedupe_key": "dhruv|2026-11-16|toy-drive-fundraiser-for-sister-school-pine-valley",
+      "kid": "dhruv",
+      "title": "Toy Drive Fundraiser for Sister school (Pine Valley)",
+      "date": "2026-11-16",
+      "end_date": "2026-12-14",
+      "time": null,
+      "type": "community",
+      "action": null,
+      "source": {
+        "kind": "email",
+        "ref": "email:bc8e8adbb3cf",
+        "first_seen": "2026-10-26"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20261026-004",
+      "dedupe_key": "dhruv|2026-11-17|eec-meeting-at-pine-valley",
+      "kid": "dhruv",
+      "title": "EEC Meeting at Pine Valley",
+      "date": "2026-11-17",
+      "end_date": null,
+      "time": null,
+      "type": "school",
+      "action": null,
+      "source": {
+        "kind": "email",
+        "ref": "email:bc8e8adbb3cf",
+        "first_seen": "2026-10-26"
+      },
+      "status": "active"
     }
   ]
 }
