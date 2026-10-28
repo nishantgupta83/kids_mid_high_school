@@ -4006,7 +4006,7 @@
         "ref": "email:225ca17f57c0",
         "first_seen": "2026-10-24"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20261024-005",
@@ -4044,7 +4044,7 @@
         "ref": "email:225ca17f57c0",
         "first_seen": "2026-10-24"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20261024-007",
@@ -4189,6 +4189,111 @@
         "kind": "email",
         "ref": "email:bc8e8adbb3cf",
         "first_seen": "2026-10-26"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20261028-001",
+      "dedupe_key": "ridhi|2026-10-29|contra-costa-county-honor-band-audition-fee-due",
+      "kid": "ridhi",
+      "title": "Contra Costa County Honor Band — audition fee due",
+      "date": "2026-10-29",
+      "end_date": null,
+      "time": null,
+      "type": "deadline",
+      "action": {
+        "required": true,
+        "what": "Submit $30 CCCHB audition fee (check payable to California High School Booster Program, memo 'CCCHB') in Mr. G's office Music Booster mailbox",
+        "due": "2026-10-29"
+      },
+      "source": {
+        "kind": "email",
+        "ref": "email:1c22fa83d301",
+        "first_seen": "2026-10-28"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20261028-002",
+      "dedupe_key": "ridhi|2026-11-08|contra-costa-county-honor-band-online-audition-submission-de",
+      "kid": "ridhi",
+      "title": "Contra Costa County Honor Band — online audition submission deadline",
+      "date": "2026-11-08",
+      "end_date": null,
+      "time": null,
+      "type": "deadline",
+      "action": {
+        "required": true,
+        "what": "Submit audition online via the CCCHB student-info page",
+        "due": "2026-11-08"
+      },
+      "source": {
+        "kind": "email",
+        "ref": "email:1c22fa83d301",
+        "first_seen": "2026-10-28"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20261028-003",
+      "dedupe_key": "family|2026-11-03|cal-high-college-planning-101-virtual-webinar",
+      "kid": "family",
+      "title": "Cal High College Planning 101 — virtual webinar",
+      "date": "2026-11-03",
+      "end_date": null,
+      "time": "18:00",
+      "type": "community",
+      "action": {
+        "required": true,
+        "what": "Register for the Teams webinar (counseling link)",
+        "due": "2026-11-03"
+      },
+      "source": {
+        "kind": "email",
+        "ref": "email:b548f8a72d13",
+        "first_seen": "2026-10-28"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20261028-004",
+      "dedupe_key": "family|2026-11-05|coffee-with-the-counselors-schoolinks-overview",
+      "kid": "family",
+      "title": "Coffee with the Counselors — SchooLinks overview",
+      "date": "2026-11-05",
+      "end_date": null,
+      "time": "09:00",
+      "type": "community",
+      "action": {
+        "required": true,
+        "what": "Register for the Teams session (counseling link)",
+        "due": "2026-11-05"
+      },
+      "source": {
+        "kind": "email",
+        "ref": "email:b548f8a72d13",
+        "first_seen": "2026-10-28"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20261028-005",
+      "dedupe_key": "ridhi|2026-12-02|why-out-of-state-presentation-college-fair-racc",
+      "kid": "ridhi",
+      "title": "\"Why Out of State?\" presentation + college fair (RACC)",
+      "date": "2026-12-02",
+      "end_date": null,
+      "time": "18:30",
+      "type": "community",
+      "action": {
+        "required": true,
+        "what": "Student registers on SchooLinks to attend",
+        "due": "2026-12-02"
+      },
+      "source": {
+        "kind": "email",
+        "ref": "email:b548f8a72d13",
+        "first_seen": "2026-10-28"
       },
       "status": "active"
     }
