@@ -2506,7 +2506,7 @@
         "ref": "email:503626c80782",
         "first_seen": "2026-09-12"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20260912-003",
@@ -3943,7 +3943,7 @@
         "ref": "email:fdd4a4511031",
         "first_seen": "2026-10-24"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20261024-002",
@@ -4139,7 +4139,7 @@
         "ref": "email:bc8e8adbb3cf",
         "first_seen": "2026-10-26"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20261026-002",
@@ -4294,6 +4294,57 @@
         "kind": "email",
         "ref": "email:b548f8a72d13",
         "first_seen": "2026-10-28"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20261029-001",
+      "dedupe_key": "ridhi|2026-11-04|marching-grizzlies-picture-day-cal-high-theater",
+      "kid": "ridhi",
+      "title": "Marching Grizzlies Picture Day (Cal High Theater)",
+      "date": "2026-11-04",
+      "end_date": null,
+      "time": "16:30",
+      "type": "school",
+      "action": null,
+      "source": {
+        "kind": "email",
+        "ref": "email:1f350119ff3f",
+        "first_seen": "2026-10-29"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20261029-002",
+      "dedupe_key": "ridhi|2026-11-04|marching-grizzlies-friends-and-family-night-cal-high-footbal",
+      "kid": "ridhi",
+      "title": "Marching Grizzlies Friends and Family Night (Cal High football field)",
+      "date": "2026-11-04",
+      "end_date": null,
+      "time": "19:00",
+      "type": "school",
+      "action": null,
+      "source": {
+        "kind": "email",
+        "ref": "email:b100b063c0dc",
+        "first_seen": "2026-10-29"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20261029-003",
+      "dedupe_key": "dhruv|2026-11-04|math-olympiad-moems-test-1-online-during-class",
+      "kid": "dhruv",
+      "title": "Math Olympiad (MOEMS) Test 1 — online during class",
+      "date": "2026-11-04",
+      "end_date": null,
+      "time": null,
+      "type": "test",
+      "action": null,
+      "source": {
+        "kind": "email",
+        "ref": "email:3dcc22fe8d2b",
+        "first_seen": "2026-10-29"
       },
       "status": "active"
     }
