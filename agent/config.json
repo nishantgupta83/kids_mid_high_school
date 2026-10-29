@@ -39,7 +39,43 @@
     "base_url": "https://school-compass-anq.pages.dev"
   },
   "digest": {
-    "subject_prefix": "School Intel"
+    "subject_prefix": "School Intel",
+    "skip": [
+      {
+        "why": "Parent asked on 2026-10-29 to skip Dhruv badminton + speech/debate items.",
+        "kid": "dhruv",
+        "match": [
+          "badminton",
+          "speech",
+          "debate",
+          "forensics",
+          "NSDA",
+          "Stratagem",
+          "oratorical"
+        ],
+        "fields": [
+          "title",
+          "name",
+          "org"
+        ],
+        "surfaces": [
+          "new_discoveries",
+          "proposed_sources",
+          "other_items",
+          "this_week",
+          "action_needed",
+          "watchlist_alerts"
+        ],
+        "notes_match": [
+          "badminton",
+          "forensics",
+          "NSDA",
+          "Stratagem",
+          "Urban Debate"
+        ],
+        "notes_match_why": "Applied to the kid-less 'Highlights' strings. Deliberately excludes bare 'speech', 'debate' and 'oratorical' because those also describe Ridhi's activities."
+      }
+    ]
   },
   "keychain": {
     "gmail": "school-intel-gmail",

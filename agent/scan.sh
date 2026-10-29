@@ -218,7 +218,8 @@ fi
 # ---- STEP 12: commit state (PII lint gates it) ----------------------------
 if $PY "$REPO/scripts/validate_data.py" >/dev/null 2>&1; then
   git -C "$REPO" add data/sources.json data/events.json data/opportunities.json \
-    data/watchlist.json data/sources_proposed.json data/state/last_run.json data/state/email_cursor.json
+    data/watchlist.json data/sources_proposed.json data/summer_apps.json \
+    data/state/last_run.json data/state/email_cursor.json
   if ! git -C "$REPO" diff --cached --quiet; then
     git -C "$REPO" commit -q -m "scan $TODAY mode=$MODE" && logln "STEP 12 commit OK"
   else

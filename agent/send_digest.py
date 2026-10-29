@@ -25,6 +25,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from lib.atomicio import read_json, write_text
 from lib.keychain import get_secret
 from lib.runlog import log
+import summerapps
 
 REPO = "/Users/nishantgupta/Documents/nishant_projects/kids_mid_high_school"
 DATA = os.path.join(REPO, "data")
@@ -35,6 +36,78 @@ C = {"paper": "#FBF7EE", "ink": "#2A2A25", "soft": "#6B6B60", "sage": "#4E7A5C",
      "teal": "#2F6F6A", "coral": "#C96F4A", "amber": "#B98A2F", "sky": "#4A7BA6",
      "card": "#FFFFFF", "line": "#E8E2D4"}
 KID_COLOR = {"ridhi": C["teal"], "dhruv": C["amber"], "both": C["sage"], "family": C["sage"]}
+
+# Sections a skip rule may hide from. Named explicitly so adding a section later does
+# not silently start hiding things nobody asked to hide.
+SKIPPABLE = ("new_discoveries", "proposed_sources", "other_items", "this_week",
+             "action_needed", "watchlist_alerts")
+
+
+def _valid_rules(raw):
+    """Drop malformed rules rather than trusting them.
+
+    An empty string in `match` would match EVERY item ("" in text is always True) and a
+    bare string instead of a list would iterate per character, so either would silently
+    empty the digest. Both are rejected here instead.
+    """
+    rules = []
+    for r in raw if isinstance(raw, list) else []:
+        if not isinstance(r, dict) or not isinstance(r.get("match"), list):
+            continue
+        terms = [t.lower() for t in r["match"] if isinstance(t, str) and t.strip()]
+        if not terms or not isinstance(r.get("kid"), str):
+            continue
+        fields = [f for f in r.get("fields", ["title", "name", "org"]) if isinstance(f, str)]
+        surfaces = [x for x in r.get("surfaces", []) if x in SKIPPABLE]
+        # "Highlights" are free-text strings with no kid field, so a rule cannot be
+        # kid-gated there. Only terms listed in notes_match are applied to them — keep
+        # that list to words that belong to ONE child, or a highlight about the other
+        # child's speech contest would vanish too.
+        notes_terms = [t.lower() for t in r.get("notes_match", [])
+                       if isinstance(t, str) and t.strip()]
+        rules.append({"kid": r["kid"], "terms": terms,
+                      "fields": fields or ["title", "name", "org"],
+                      "surfaces": surfaces or list(SKIPPABLE),
+                      "notes_terms": notes_terms})
+    return rules
+
+
+def _hidden_by(item, rules, surface):
+    """True if a rule hides this item. Exact kid match: 'both' is never 'dhruv'."""
+    if not isinstance(item, dict):
+        return False
+    for r in rules:
+        if surface not in r["surfaces"] or item.get("kid") != r["kid"]:
+            continue
+        # Named fields only — matching whole free text hits "freedom of speech" in an
+        # unrelated essay contest and drops it.
+        hay = " ".join(str(item.get(f, "")) for f in r["fields"]).lower()
+        if any(t in hay for t in r["terms"]):
+            return True
+    return False
+
+
+def apply_skips(sections, cfg):
+    """Filter inside collect() so the subject line (built from section lengths) agrees
+    with the body. Returns the number of items hidden, for the run log."""
+    rules = _valid_rules((cfg or {}).get("digest", {}).get("skip"))
+    if not rules:
+        return 0
+    hidden = 0
+    notes_terms = [t for r in rules for t in r["notes_terms"]]
+    if notes_terms and isinstance(sections.get("digest_notes"), list):
+        kept = [n for n in sections["digest_notes"]
+                if not (isinstance(n, str) and any(t in n.lower() for t in notes_terms))]
+        hidden += len(sections["digest_notes"]) - len(kept)
+        sections["digest_notes"] = kept
+    for surface in SKIPPABLE:
+        items = sections.get(surface)
+        if not isinstance(items, list):
+            continue
+        kept = [i for i in items if not _hidden_by(i, rules, surface)]
+        hidden += len(items) - len(kept)
+        sections[surface] = kept
+    return hidden
 
 
 def kid_badge(kid):
@@ -49,7 +122,7 @@ def within_window(cfg, now):
     return start <= now.time() <= end
 
 
-def collect(today):
+def collect(today, cfg=None):
     events = read_json(os.path.join(DATA, "events.json"), {"events": []})["events"]
     opps = read_json(os.path.join(DATA, "opportunities.json"), {"opportunities": []})["opportunities"]
     watch = read_json(os.path.join(DATA, "watchlist.json"), {"watchlist": []})["watchlist"]
@@ -94,13 +167,21 @@ def collect(today):
     if ks.get("date") != today.isoformat():
         ks = {}
 
-    return {"action_needed": action_needed, "this_week": this_week,
-            "new_discoveries": new_discoveries, "watchlist_alerts": alerts,
-            "digest_notes": summary.get("digest_notes", []),
-            "other_items": summary.get("other_items", []),
-            "proposed_sources": proposed,
-            "kid_status": ks,
-            "quarantined": summary.get("quarantined", 0)}
+    grid, grid_more, grid_stale = summerapps.load_upcoming(today)
+
+    sections = {"action_needed": action_needed, "this_week": this_week,
+                "new_discoveries": new_discoveries, "watchlist_alerts": alerts,
+                "digest_notes": summary.get("digest_notes", []),
+                "other_items": summary.get("other_items", []),
+                "proposed_sources": proposed,
+                "kid_status": ks,
+                "summer_apps": grid, "summer_apps_more": grid_more,
+                "summer_apps_stale": grid_stale,
+                "quarantined": summary.get("quarantined", 0)}
+    hidden = apply_skips(sections, cfg)
+    if hidden:
+        log(f"send_digest: {hidden} item(s) hidden by digest.skip rules")
+    return sections
 
 
 def derive_health(mode):
@@ -115,6 +196,93 @@ def derive_health(mode):
 
 def fmt_date(d):
     return datetime.date.fromisoformat(d).strftime("%a %b %-d")
+
+
+TRACK_LABEL = {"research": "research", "clinical": "clinical", "music": "music",
+               "project": "project"}
+
+
+def _when_parts(r):
+    """(display, tone) for a row's date cell.
+
+    An estimated date is shown as the sheet's own words with no countdown and no colour:
+    colouring a guess coral would read as a real deadline.
+    """
+    if r["rolling"]:
+        return "Rolling", "soft"
+    if r["approx"] or r["days"] is None:
+        return r["window"] or "see sheet", "soft"
+    if r["days"] <= 0:
+        return f'{r["deadline"].strftime("%b %-d")} · today', "coral"
+    tone = "coral" if r["days"] <= 7 else ("amber" if r["days"] <= 30 else "ink")
+    unit = "day" if r["days"] == 1 else "days"
+    return f'{r["deadline"].strftime("%b %-d")} · {r["days"]} {unit}', tone
+
+
+def summer_grid_html(sections):
+    rows = sections.get("summer_apps") or []
+    if not rows:
+        return ""
+    cell = f'padding:7px 10px;border-bottom:1px solid {C["line"]};font-size:13px;vertical-align:top'
+    head = (f'<tr><th align="left" style="{cell};font-size:11px;color:{C["soft"]};'
+            f'text-transform:uppercase;letter-spacing:.5px">When</th>'
+            f'<th align="left" style="{cell};font-size:11px;color:{C["soft"]};'
+            f'text-transform:uppercase;letter-spacing:.5px">Opportunity</th>'
+            f'<th align="left" style="{cell};font-size:11px;color:{C["soft"]};'
+            f'text-transform:uppercase;letter-spacing:.5px">What to do</th></tr>')
+    body = []
+    for r in rows:
+        when, tone = _when_parts(r)
+        weight = "bold" if tone in ("coral", "amber") else "normal"
+        org = f' <span style="color:{C["soft"]}">· {html.escape(r["org"])}</span>' if r["org"] else ""
+        note = (f'<br><span style="color:{C["soft"]};font-size:12px">{html.escape(r["note"])}</span>'
+                if r["note"] else "")
+        verify = (f'<br><span style="color:{C["amber"]};font-size:11px">confirm the date</span>'
+                  if r["verify"] else "")
+        body.append(
+            f'<tr><td style="{cell};color:{C[tone]};font-weight:{weight};white-space:nowrap">'
+            f'{html.escape(when)}</td>'
+            f'<td style="{cell};color:{C["ink"]}"><b>{html.escape(r["title"])}</b>{org}{note}</td>'
+            f'<td style="{cell};color:{C["ink"]}">{html.escape(r["action"])}{verify}</td></tr>')
+    tail = []
+    more = sections.get("summer_apps_more") or 0
+    if more:
+        tail.append(f'{more} more later in the cycle')
+    if sections.get("summer_apps_stale"):
+        tail.append(html.escape(sections["summer_apps_stale"]))
+    tail_html = (f'<div style="font-size:11px;color:{C["soft"]};margin:4px 2px 0">'
+                 f'{" · ".join(tail)}</div>') if tail else ""
+    return (f'<div style="margin:18px 0 6px;font-family:Georgia,serif;font-size:16px;'
+            f'font-weight:bold;color:{C["sky"]}">Summer 2027 applications</div>'
+            f'<div style="background:{C["card"]};border:1px solid {C["line"]};border-radius:8px;'
+            f'overflow:hidden"><table role="presentation" cellpadding="0" cellspacing="0" '
+            f'style="width:100%;border-collapse:collapse">{head}{"".join(body)}</table></div>'
+            f'{tail_html}')
+
+
+def summer_grid_text(sections):
+    rows = sections.get("summer_apps") or []
+    if not rows:
+        return []
+    out = ["", "SUMMER 2027 APPLICATIONS:"]
+    for r in rows:
+        when, _ = _when_parts(r)
+        org = f' ({r["org"]})' if r["org"] else ""
+        line = f'  {when} — {r["title"]}{org} — {r["action"]}'
+        if r["verify"]:
+            line += " [confirm the date]"
+        out.append(line)
+        if r["note"]:                      # the HTML shows this; keep the two in step
+            out.append(f'      {r["note"]}')
+    tail = []
+    more = sections.get("summer_apps_more") or 0
+    if more:
+        tail.append(f"{more} more later in the cycle")
+    if sections.get("summer_apps_stale"):
+        tail.append(sections["summer_apps_stale"])
+    if tail:
+        out.append("  " + " · ".join(tail))
+    return out
 
 
 def render_html(today, sections, health, degraded_raw):
@@ -142,6 +310,7 @@ def render_html(today, sections, health, degraded_raw):
                 f'{kid_badge(e["kid"])} {html.escape(e["title"])}'
                 + (f' <span style="color:{C["soft"]}">{e["time"]}</span>' if e.get("time") else ""))
             for e in sections["this_week"])))
+    grid_pos = len(parts)
     if sections["new_discoveries"]:
         parts.append(sec("New finds", C["sage"], "".join(
             row(f'{kid_badge(o["kid"])} <b>{html.escape(o["title"])}</b> — {html.escape(o["org"])}'
@@ -178,6 +347,9 @@ def render_html(today, sections, health, degraded_raw):
                          f'quarantined for review (see data/local/quarantine.json)</span>'))
     if not parts:
         parts.append(row("Quiet day — nothing new. Full picture is on the dashboard."))
+    grid_html = summer_grid_html(sections)
+    if grid_html:
+        parts.insert(min(grid_pos, len(parts)), grid_html)
 
     failing = ", ".join(health["sources_failing"]) if health["sources_failing"] else "none"
     footer = (f'<div style="margin-top:20px;padding-top:10px;border-top:1px solid {C["line"]};'
@@ -204,6 +376,7 @@ def render_text(today, sections, health, degraded_raw):
     if sections["this_week"]:
         lines += ["", "THIS WEEK:"]
         lines += [f"  {e['date']} [{e['kid']}] {e['title']}" for e in sections["this_week"]]
+    lines += summer_grid_text(sections)
     if sections["new_discoveries"]:
         lines += ["", "NEW FINDS:"]
         lines += [f"  [{o['kid']}] {o['title']} — {o['org']} ({o.get('url') or 'from a school email'})"
@@ -277,7 +450,7 @@ def main():
     # A render bug must never silence the family's only alert channel — degrade to a
     # minimal email rather than crash before SMTP.
     try:
-        sections = collect(today)
+        sections = collect(today, cfg)
         health = derive_health(args.mode)
         raw = degraded_lines(args.mode)
         html_body = render_html(today, sections, health, raw)

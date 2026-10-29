@@ -29,6 +29,9 @@ echo "$OUT"
 echo "$OUT" | grep -q '"new_opportunities": 1' || { echo "SELFTEST FAIL: good item not merged"; FAIL=1; }
 echo "$OUT" | grep -q '"quarantined": 1' || { echo "SELFTEST FAIL: bad item not quarantined"; FAIL=1; }
 
+echo "== 4. digest grid + skip rules =="
+if ! $PY "$REPO/scripts/test_digest.py"; then FAIL=1; fi
+
 if [ "$FAIL" -eq 0 ]; then
   echo "SELFTEST: ALL PASS"
 else
