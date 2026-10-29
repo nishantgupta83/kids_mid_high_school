@@ -495,7 +495,15 @@ def main():
     msg["Subject"] = subject
     msg["From"] = cfg["smtp"]["from"]
     msg["To"] = ", ".join(cfg["recipients"])
-    msg["Message-ID"] = f"<school-intel-{today.strftime('%Y%m%d')}@familydigest.local>"
+    # The date-derived Message-ID is what makes an accidental double delivery thread
+    # together. A DELIBERATE --force resend needs a distinct one instead: a mail server
+    # that already holds this id (Gmail does) may drop the repeat silently, which is the
+    # one thing a manual resend must not do.
+    stable_id = f"<school-intel-{today.strftime('%Y%m%d')}@familydigest.local>"
+    if args.force:
+        stable_id = (f"<school-intel-{today.strftime('%Y%m%d')}-"
+                     f"{int(time.time())}@familydigest.local>")
+    msg["Message-ID"] = stable_id
     msg.attach(MIMEText(text_body, "plain"))
     msg.attach(MIMEText(html_body, "html"))
 
