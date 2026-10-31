@@ -3010,7 +3010,7 @@
         "ref": "email:1dfeceae68e9",
         "first_seen": "2026-09-28"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20260928-008",
@@ -3276,7 +3276,7 @@
         "ref": "email:8edb451d37f7",
         "first_seen": "2026-10-05"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20261005-003",
@@ -4156,7 +4156,7 @@
         "ref": "email:bc8e8adbb3cf",
         "first_seen": "2026-10-26"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20261026-003",
@@ -4211,7 +4211,7 @@
         "ref": "email:1c22fa83d301",
         "first_seen": "2026-10-28"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20261028-002",
@@ -4345,6 +4345,57 @@
         "kind": "email",
         "ref": "email:3dcc22fe8d2b",
         "first_seen": "2026-10-29"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20261031-001",
+      "dedupe_key": "dhruv|2026-11-04|math-olympiad-homework-set-9-olympiad-5",
+      "kid": "dhruv",
+      "title": "Math Olympiad homework: Set 9, Olympiad 5",
+      "date": "2026-11-04",
+      "end_date": null,
+      "time": null,
+      "type": "homework",
+      "action": null,
+      "source": {
+        "kind": "email",
+        "ref": "email:86e8a2500f51",
+        "first_seen": "2026-10-31"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20261031-002",
+      "dedupe_key": "dhruv|2026-11-05|math-olympiad-challenge-problem-ms-pv3-due",
+      "kid": "dhruv",
+      "title": "Math Olympiad: Challenge Problem MS PV3 due",
+      "date": "2026-11-05",
+      "end_date": null,
+      "time": null,
+      "type": "homework",
+      "action": null,
+      "source": {
+        "kind": "email",
+        "ref": "email:86e8a2500f51",
+        "first_seen": "2026-10-31"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20261031-003",
+      "dedupe_key": "dhruv|2026-11-21|reading-book-club-notebook-due",
+      "kid": "dhruv",
+      "title": "Reading: Book Club Notebook due",
+      "date": "2026-11-21",
+      "end_date": null,
+      "time": null,
+      "type": "homework",
+      "action": null,
+      "source": {
+        "kind": "email",
+        "ref": "email:86e8a2500f51",
+        "first_seen": "2026-10-31"
       },
       "status": "active"
     }
