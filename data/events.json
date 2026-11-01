@@ -805,7 +805,7 @@
         "unverified": true,
         "why": "Event is Oct 31 but registration opens Sep 8 2026 — the action item lands inside this window, and it's the second local middle-school tournament of the fall after the Dublin scrimmage."
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-disc-20260809-008",
@@ -4396,6 +4396,272 @@
         "kind": "email",
         "ref": "email:86e8a2500f51",
         "first_seen": "2026-10-31"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-disc-20261101-001",
+      "dedupe_key": "ridhi|2026-11-02|practicing-pediatrics-with-kids-and-parents-in-the-age-of-ai",
+      "kid": "ridhi",
+      "title": "Practicing Pediatrics with Kids and Parents in the Age of AI (Commonwealth Club (Lundberg Institute Lecture",
+      "date": "2026-11-02",
+      "end_date": null,
+      "time": null,
+      "type": "community",
+      "action": null,
+      "source": {
+        "kind": "discovery",
+        "ref": "https://www.bayareascience.org/calendar/index.php?com=detail&eID=41528",
+        "first_seen": "2026-11-01",
+        "unverified": true,
+        "why": "Medicine talk tomorrow, 5:30 PM. Students free, $22 general in person, $4 online; tagged Adults with no age rule stated."
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-disc-20261101-002",
+      "dedupe_key": "both|2026-11-07|falcon-hacks-2026",
+      "kid": "both",
+      "title": "Falcon Hacks 2026 (Falcon Hacks at Foothill High School",
+      "date": "2026-11-07",
+      "end_date": null,
+      "time": null,
+      "type": "community",
+      "action": null,
+      "source": {
+        "kind": "discovery",
+        "ref": "https://falconhacks2026.com",
+        "first_seen": "2026-11-01",
+        "unverified": true,
+        "why": "Free hackathon open to 'all high school students and younger'; registration open. The site says Nov 7, while Hack Club lists Nov 7-8."
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-disc-20261101-003",
+      "dedupe_key": "both|2026-11-08|national-stem-day-free-admission-at-the-tech-interactive",
+      "kid": "both",
+      "title": "National STEM Day: free admission at The Tech Interactive (The Tech Interactive",
+      "date": "2026-11-08",
+      "end_date": null,
+      "time": null,
+      "type": "community",
+      "action": null,
+      "source": {
+        "kind": "discovery",
+        "ref": "https://www.bayareascience.org/calendar/index.php?com=detail&eID=41521",
+        "first_seen": "2026-11-01",
+        "unverified": true,
+        "why": "Free admission and free IMAX films, 11 AM-5 PM; an easy family STEM outing."
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-disc-20261101-004",
+      "dedupe_key": "ridhi|2026-11-14|berkeley-math-tournament-2026",
+      "kid": "ridhi",
+      "title": "Berkeley Math Tournament 2026 (Berkeley Math Tournament",
+      "date": "2026-11-14",
+      "end_date": null,
+      "time": null,
+      "type": "community",
+      "action": null,
+      "source": {
+        "kind": "discovery",
+        "ref": "https://www.berkeley.mt/events/bmt-2026/",
+        "first_seen": "2026-11-01",
+        "unverified": true,
+        "why": "Open to grade 12 and below, teams of up to 6. Late registration ($25) closes today, Nov 1; the page does not say whether seats remain."
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-disc-20261101-005",
+      "dedupe_key": "dhruv|2026-11-14|dvc-viking-middle-and-high-school-invitational",
+      "kid": "dhruv",
+      "title": "DVC Viking Middle and High School Invitational (Diablo Valley College",
+      "date": "2026-11-14",
+      "end_date": null,
+      "time": null,
+      "type": "community",
+      "action": null,
+      "source": {
+        "kind": "discovery",
+        "ref": "https://www.tabroom.com/index/tourn/main.mhtml?tourn_id=41206",
+        "first_seen": "2026-11-01",
+        "unverified": true,
+        "why": "Closest November tournament with middle school in its name. Debate runs Nov 14-15, speech on Nov 15; registration closes Nov 11. No grade rule is stated, so confirm 6th-grade eligibility with the host."
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-disc-20261101-006",
+      "dedupe_key": "ridhi|2026-11-15|asdrp-spring-2027-application-priority-deadline-final-deadli",
+      "kid": "ridhi",
+      "title": "ASDRP Spring 2027 application: priority deadline (final deadline Dec 15) (Aspiring Scholars Directed Research Program",
+      "date": "2026-11-15",
+      "end_date": null,
+      "time": null,
+      "type": "community",
+      "action": null,
+      "source": {
+        "kind": "discovery",
+        "ref": "https://www.asdrp.org/apply",
+        "first_seen": "2026-11-01",
+        "unverified": true,
+        "why": "Research program for grades 9-12 at $1,070 per semester. The deadline is printed without a year; 2026 is inferred from the homepage's Spring 2027 timeline."
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-disc-20261101-007",
+      "dedupe_key": "ridhi|2026-11-17|popping-the-science-bubble-chemistry-neural-communication",
+      "kid": "ridhi",
+      "title": "Popping the Science Bubble: Chemistry & Neural Communication (Listed on BayAreaScience.org",
+      "date": "2026-11-17",
+      "end_date": null,
+      "time": null,
+      "type": "community",
+      "action": null,
+      "source": {
+        "kind": "discovery",
+        "ref": "https://www.bayareascience.org/calendar/index.php?com=detail&eID=41540",
+        "first_seen": "2026-11-01",
+        "unverified": true,
+        "why": "Free neuroscience-chemistry talk, 5:30-7 PM, with Zoom as an option. Tagged Adults with no age rule stated."
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-disc-20261101-008",
+      "dedupe_key": "ridhi|2026-11-18|why-becoming-a-doctor-in-the-era-of-a-i",
+      "kid": "ridhi",
+      "title": "Why Becoming a Doctor in the Era of A.I.? (Marin Science Seminar",
+      "date": "2026-11-18",
+      "end_date": null,
+      "time": null,
+      "type": "community",
+      "action": null,
+      "source": {
+        "kind": "discovery",
+        "ref": "https://www.bayareascience.org/calendar/index.php?com=detail&eID=40963",
+        "first_seen": "2026-11-01",
+        "unverified": true,
+        "why": "Free 7:30 PM talk by a UCSF speaker, tagged for teens and on medicine; the strongest November match for Ridhi despite the school-night drive."
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-disc-20261101-009",
+      "dedupe_key": "both|2026-12-05|bmt-2026-online",
+      "kid": "both",
+      "title": "BMT 2026 Online (Berkeley Math Tournament",
+      "date": "2026-12-05",
+      "end_date": null,
+      "time": null,
+      "type": "community",
+      "action": null,
+      "source": {
+        "kind": "discovery",
+        "ref": "https://www.berkeley.mt/events/bmt-2026-online/",
+        "first_seen": "2026-11-01",
+        "unverified": true,
+        "why": "$8 per student, grade 12 and below, register by Nov 27. Students who compete in another BMT 2026 event are excluded. It has no lower age limit but is run for older students, so it would be a stretch for Dhruv."
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-disc-20261101-010",
+      "dedupe_key": "ridhi|2026-12-05|mango-hacks-2026",
+      "kid": "ridhi",
+      "title": "Mango Hacks 2026 (Mango Hacks",
+      "date": "2026-12-05",
+      "end_date": null,
+      "time": null,
+      "type": "community",
+      "action": null,
+      "source": {
+        "kind": "discovery",
+        "ref": "https://mangohacks.ecily.org",
+        "first_seen": "2026-11-01",
+        "unverified": true,
+        "why": "Free one-day local hackathon for high school and early-college students, 8 AM-8:30 PM; applications open."
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-disc-20261101-011",
+      "dedupe_key": "ridhi|2026-12-07|fed-up-what-evolution-reveals-about-food-diet-health-and-eat",
+      "kid": "ridhi",
+      "title": "Fed Up: What Evolution Reveals about Food, Diet, Health, and Eating Well (Commonwealth Club",
+      "date": "2026-12-07",
+      "end_date": null,
+      "time": null,
+      "type": "community",
+      "action": null,
+      "source": {
+        "kind": "discovery",
+        "ref": "https://www.bayareascience.org/calendar/index.php?com=detail&eID=41458",
+        "first_seen": "2026-11-01",
+        "unverified": true,
+        "why": "Daniel Lieberman of Harvard on evolution and health, 6 PM; tagged for teens and free for students."
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-disc-20261101-012",
+      "dedupe_key": "dhruv|2026-12-12|bentley-school-middle-school-invitational",
+      "kid": "dhruv",
+      "title": "Bentley School Middle School Invitational (Bentley School",
+      "date": "2026-12-12",
+      "end_date": null,
+      "time": null,
+      "type": "community",
+      "action": null,
+      "source": {
+        "kind": "discovery",
+        "ref": "https://www.tabroom.com/index/tourn/main.mhtml?tourn_id=41634",
+        "first_seen": "2026-11-01",
+        "unverified": true,
+        "why": "Explicitly welcomes grades 6-8 in Congress and speech events, close to home; registration closes Dec 7. No fee is shown, and it collects judge information, so ask about independent entry and judge requirements."
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-disc-20261101-013",
+      "dedupe_key": "ridhi|2027-01-23|careers-in-science-igniting-passion-and-purpose",
+      "kid": "ridhi",
+      "title": "Careers in Science: Igniting Passion and Purpose (Stanford Department of Genetics",
+      "date": "2027-01-23",
+      "end_date": null,
+      "time": null,
+      "type": "community",
+      "action": null,
+      "source": {
+        "kind": "discovery",
+        "ref": "https://med.stanford.edu/genetics/events/careers-in-science--igniting-passion-and-purpose.html",
+        "first_seen": "2026-11-01",
+        "unverified": true,
+        "why": "Beyond the 6-week window but a direct genetics and biomedical career match: 10 AM-4 PM, for high school students, ticketed."
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-disc-20261101-014",
+      "dedupe_key": "ridhi|2027-02-27|tri-valley-teen-job-fair",
+      "kid": "ridhi",
+      "title": "Tri-Valley Teen Job Fair (City of Pleasanton and Tri-Valley partners",
+      "date": "2027-02-27",
+      "end_date": null,
+      "time": null,
+      "type": "community",
+      "action": null,
+      "source": {
+        "kind": "discovery",
+        "ref": "https://www.cityofpleasantonca.gov/your-community/recreation/recreation-youth-and-teen-programs/",
+        "first_seen": "2026-11-01",
+        "unverified": true,
+        "why": "Beyond the 6-week window but in San Ramon: free, noon-3 PM, for high school students to meet employers."
       },
       "status": "active"
     }
