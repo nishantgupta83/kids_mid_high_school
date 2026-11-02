@@ -4664,6 +4664,44 @@
         "why": "Beyond the 6-week window but in San Ramon: free, noon-3 PM, for high school students to meet employers."
       },
       "status": "active"
+    },
+    {
+      "id": "evt-20261102-001",
+      "dedupe_key": "ridhi|2026-11-07|grape-bowl-classic-cal-high-instrumental-music",
+      "kid": "ridhi",
+      "title": "Grape Bowl Classic (Cal High Instrumental Music)",
+      "date": "2026-11-07",
+      "end_date": null,
+      "time": null,
+      "type": "school",
+      "action": {
+        "required": true,
+        "what": "Review the itinerary with Ridhi before the event: call time, what to bring, and ride home; keep a parent copy",
+        "due": "2026-11-07"
+      },
+      "source": {
+        "kind": "email",
+        "ref": "email:2f83f1dd92f4",
+        "first_seen": "2026-11-02"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20261102-002",
+      "dedupe_key": "dhruv|2026-11-10|monday-schedule-at-pine-valley",
+      "kid": "dhruv",
+      "title": "Monday schedule at Pine Valley",
+      "date": "2026-11-10",
+      "end_date": null,
+      "time": null,
+      "type": "school",
+      "action": null,
+      "source": {
+        "kind": "email",
+        "ref": "email:d89e4fb928d5",
+        "first_seen": "2026-11-02"
+      },
+      "status": "active"
     }
   ]
 }
