@@ -4122,7 +4122,7 @@
         "unverified": true,
         "why": "A drug-discovery career talk from a Genentech senior director, which fits Ridhi's medicine and biology interest, and it can be attended remotely."
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20261026-001",
@@ -4253,7 +4253,7 @@
         "ref": "email:b548f8a72d13",
         "first_seen": "2026-10-28"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20261028-004",
