@@ -4274,7 +4274,7 @@
         "ref": "email:b548f8a72d13",
         "first_seen": "2026-10-28"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20261028-005",
@@ -4380,7 +4380,7 @@
         "ref": "email:86e8a2500f51",
         "first_seen": "2026-10-31"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20261031-003",
@@ -4700,6 +4700,86 @@
         "kind": "email",
         "ref": "email:d89e4fb928d5",
         "first_seen": "2026-11-02"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20261106-001",
+      "dedupe_key": "dhruv|2026-11-06|model-un-tvmun-check-photo-upload-and-parent-google-form-due",
+      "kid": "dhruv",
+      "title": "Model UN: TVMUN check photo upload and parent Google form due",
+      "date": "2026-11-06",
+      "end_date": null,
+      "time": null,
+      "type": "deadline",
+      "action": {
+        "required": true,
+        "what": "If Dhruv is attending TVMUN: mail the check, upload a photo of it to the shared document under his name, and fill out the Google form with a parent. Without these he cannot attend the conference.",
+        "due": "2026-11-06"
+      },
+      "source": {
+        "kind": "email",
+        "ref": "email:1073023b8ee7",
+        "first_seen": "2026-11-06"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20261106-002",
+      "dedupe_key": "dhruv|2026-11-06|language-arts-argumentative-vocabulary-quiz-electives-due",
+      "kid": "dhruv",
+      "title": "Language Arts: Argumentative Vocabulary Quiz (Electives) due",
+      "date": "2026-11-06",
+      "end_date": null,
+      "time": null,
+      "type": "homework",
+      "action": null,
+      "source": {
+        "kind": "email",
+        "ref": "email:1073023b8ee7",
+        "first_seen": "2026-11-06"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20261106-003",
+      "dedupe_key": "dhruv|2026-11-11|math-olympiad-6-challenge-problem-ms-pv3-due-no-class-nov-11",
+      "kid": "dhruv",
+      "title": "Math Olympiad: 6 - Challenge Problem MS PV3 due (no class Nov 11, legal holiday)",
+      "date": "2026-11-11",
+      "end_date": null,
+      "time": null,
+      "type": "homework",
+      "action": {
+        "required": true,
+        "what": "Submit the Grade 6 Challenge Problem in Google Classroom",
+        "due": "2026-11-11"
+      },
+      "source": {
+        "kind": "email",
+        "ref": "email:1073023b8ee7",
+        "first_seen": "2026-11-06"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20261106-004",
+      "dedupe_key": "dhruv|2026-11-18|math-olympiad-set-10-olympiad-2-homework-due",
+      "kid": "dhruv",
+      "title": "Math Olympiad: Set 10, Olympiad 2 homework due",
+      "date": "2026-11-18",
+      "end_date": null,
+      "time": null,
+      "type": "homework",
+      "action": {
+        "required": true,
+        "what": "Complete Set 10, Olympiad 2 homework (Set 10, Olympiad 1 is optional)",
+        "due": "2026-11-18"
+      },
+      "source": {
+        "kind": "email",
+        "ref": "email:1073023b8ee7",
+        "first_seen": "2026-11-06"
       },
       "status": "active"
     }
