@@ -913,7 +913,7 @@
         "ref": "email:581d94be44da",
         "first_seen": "2026-08-13"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20260813-002",
@@ -4722,7 +4722,7 @@
         "ref": "email:1073023b8ee7",
         "first_seen": "2026-11-06"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20261106-002",
@@ -4739,7 +4739,7 @@
         "ref": "email:1073023b8ee7",
         "first_seen": "2026-11-06"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20261106-003",
@@ -4780,6 +4780,61 @@
         "kind": "email",
         "ref": "email:1073023b8ee7",
         "first_seen": "2026-11-06"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20261107-001",
+      "dedupe_key": "ridhi|2026-11-19|giving-thanks-special-lunch-at-cal-high-parent-staff-volunte",
+      "kid": "ridhi",
+      "title": "Giving Thanks special lunch at Cal High (parent/staff volunteers needed)",
+      "date": "2026-11-19",
+      "end_date": null,
+      "time": null,
+      "type": "school",
+      "action": {
+        "required": false,
+        "what": "Optional: parent volunteers can sign up for a 1-1.5 hour shift on SignUpGenius (srvusdlinks.net/givingthanks); must be cleared through Be A Mentor first",
+        "due": null
+      },
+      "source": {
+        "kind": "email",
+        "ref": "email:8174d1555849",
+        "first_seen": "2026-11-07"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20261107-002",
+      "dedupe_key": "dhruv|2026-11-18|giving-thanks-special-lunch-at-middle-schools-pine-valley",
+      "kid": "dhruv",
+      "title": "Giving Thanks special lunch at middle schools (Pine Valley)",
+      "date": "2026-11-18",
+      "end_date": null,
+      "time": null,
+      "type": "school",
+      "action": null,
+      "source": {
+        "kind": "email",
+        "ref": "email:8174d1555849",
+        "first_seen": "2026-11-07"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20261107-003",
+      "dedupe_key": "ridhi|2026-11-09|cal-high-annual-toy-drive-kicks-off-for-michelle-obama-eleme",
+      "kid": "ridhi",
+      "title": "Cal High annual Toy Drive kicks off (for Michelle Obama Elementary in Richmond)",
+      "date": "2026-11-09",
+      "end_date": null,
+      "time": null,
+      "type": "school",
+      "action": null,
+      "source": {
+        "kind": "email",
+        "ref": "email:8174d1555849",
+        "first_seen": "2026-11-07"
       },
       "status": "active"
     }
