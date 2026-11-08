@@ -1513,7 +1513,7 @@
         "ref": "email:7e5cf0d33f52",
         "first_seen": "2026-08-23"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-disc-20260823-001",
@@ -3468,7 +3468,7 @@
         "unverified": true,
         "why": "A grades 4-8 robotics qualifier held in San Ramon itself — the cheapest possible way for Dhruv to see what FLL is before committing to a team next season."
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-disc-20261011-004",
@@ -3808,7 +3808,7 @@
         "unverified": true,
         "why": "The nearest official junior regional tournament; good for seeing competitive U11/U13 play even if Dhruv doesn't enter."
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-disc-20261018-002",
@@ -4435,7 +4435,7 @@
         "unverified": true,
         "why": "Free hackathon open to 'all high school students and younger'; registration open. The site says Nov 7, while Hack Club lists Nov 7-8."
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-disc-20261101-003",
@@ -4684,7 +4684,7 @@
         "ref": "email:2f83f1dd92f4",
         "first_seen": "2026-11-02"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20261102-002",
