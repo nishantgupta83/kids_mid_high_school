@@ -4232,7 +4232,7 @@
         "ref": "email:1c22fa83d301",
         "first_seen": "2026-10-28"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20261028-003",
@@ -4454,7 +4454,7 @@
         "unverified": true,
         "why": "Free admission and free IMAX films, 11 AM-5 PM; an easy family STEM outing."
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-disc-20261101-004",
@@ -4835,6 +4835,40 @@
         "kind": "email",
         "ref": "email:8174d1555849",
         "first_seen": "2026-11-07"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20261109-001",
+      "dedupe_key": "dhruv|2026-11-09|mid-second-quarter-progress-reports-released-pine-valley",
+      "kid": "dhruv",
+      "title": "Mid-Second Quarter progress reports released (Pine Valley)",
+      "date": "2026-11-09",
+      "end_date": "2026-11-13",
+      "time": null,
+      "type": "school",
+      "action": null,
+      "source": {
+        "kind": "email",
+        "ref": "email:eb49169ccd2f",
+        "first_seen": "2026-11-09"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20261109-002",
+      "dedupe_key": "ridhi|2026-11-14|cal-high-band-final-competition-of-the-season-at-american-ca",
+      "kid": "ridhi",
+      "title": "Cal High band final competition of the season at American Canyon",
+      "date": "2026-11-14",
+      "end_date": null,
+      "time": null,
+      "type": "athletics",
+      "action": null,
+      "source": {
+        "kind": "email",
+        "ref": "email:01498d96e186",
+        "first_seen": "2026-11-09"
       },
       "status": "active"
     }
