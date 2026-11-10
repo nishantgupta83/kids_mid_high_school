@@ -4836,7 +4836,7 @@
         "ref": "email:8174d1555849",
         "first_seen": "2026-11-07"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20261109-001",
@@ -4859,7 +4859,7 @@
       "id": "evt-20261109-002",
       "dedupe_key": "ridhi|2026-11-14|cal-high-band-final-competition-of-the-season-at-american-ca",
       "kid": "ridhi",
-      "title": "Cal High band final competition of the season at American Canyon",
+      "title": "Cal High band final competition of the season at American Canyon High School (Wolf Den Stadium, 3000 Newell Drive, American Canyon)",
       "date": "2026-11-14",
       "end_date": null,
       "time": null,
@@ -4869,6 +4869,44 @@
         "kind": "email",
         "ref": "email:01498d96e186",
         "first_seen": "2026-11-09"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20261110-001",
+      "dedupe_key": "ridhi|2026-11-12|student-meeting-with-srvusd-student-board-member-cal-high-ro",
+      "kid": "ridhi",
+      "title": "Student meeting with SRVUSD Student Board Member (Cal High, room T-3)",
+      "date": "2026-11-12",
+      "end_date": null,
+      "time": "15:00",
+      "type": "school",
+      "action": {
+        "required": true,
+        "what": "RSVP via the Google form if Ridhi plans to attend (no RSVP deadline stated; due date here is the meeting date)",
+        "due": "2026-11-12"
+      },
+      "source": {
+        "kind": "email",
+        "ref": "email:664e69f8f539",
+        "first_seen": "2026-11-10"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20261110-002",
+      "dedupe_key": "ridhi|2026-11-16|cal-high-winter-drumline-parent-info-night-band-room",
+      "kid": "ridhi",
+      "title": "Cal High Winter Drumline parent info night (band room)",
+      "date": "2026-11-16",
+      "end_date": null,
+      "time": "18:00",
+      "type": "school",
+      "action": null,
+      "source": {
+        "kind": "email",
+        "ref": "email:2a5eb502c4f6",
+        "first_seen": "2026-11-10"
       },
       "status": "active"
     }

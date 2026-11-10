@@ -964,6 +964,86 @@
         "evidence": "A Chemistry Classroom announcement says that on Oct 27 the teacher will host a Science Bowl Club meeting and that signing up is encouraged. The text is cut off."
       },
       "notes": "school-year-weekly (probable). A science club that fits her STEM interests. Sign-up details are missing from the truncated text."
+    },
+    {
+      "id": "opp-20261110-001",
+      "dedupe_key": "san-ramon-regional-medical-center|san-ramon-regional-medical-center-studen|2026",
+      "kid": "ridhi",
+      "title": "San Ramon Regional Medical Center student volunteer (sophomore entry, two-year term)",
+      "org": "San Ramon Regional Medical Center",
+      "url": "https://chs.srvusd.net/School-Info/Departments/College-and-Career-Center/Volunteer--Job-Opportunities/index.html",
+      "category": "volunteer-bio",
+      "region": "tri-valley",
+      "location": "San Ramon Regional Medical Center, San Ramon",
+      "eligibility": {
+        "eligible_now": "yes",
+        "reason": "Posting says positions are open for sophomores and Ridhi is a 10th grader. No age minimum is stated on the page; screening 'includes multiple factors' that are not specified, so confirm details with the counseling department."
+      },
+      "window": {
+        "opens": null,
+        "closes": null,
+        "deadline": null,
+        "confidence": "estimated"
+      },
+      "commitment": "Year-round, two-year term expected",
+      "pipeline": {
+        "status": "new",
+        "updated_at": "2026-11-10T07:01:34",
+        "updated_by": "agent",
+        "history": [
+          {
+            "status": "new",
+            "at": "2026-11-10T07:01:34"
+          }
+        ]
+      },
+      "provenance": {
+        "source_id": "calhigh-career-center-volunteer",
+        "first_seen": "2026-11-10",
+        "last_seen": "2026-11-10",
+        "evidence": "New lines on the Cal High Career Center volunteer page: 'San Ramon Regional Medical Center Volunteer Opportunities — positions are open for sophomores with the expectation of a year-round two-year term... only three total offered to our school per year... Talk to [counselor] in the counseling department to be added to the list. The list closes February 2027.'"
+      },
+      "notes": "PRIORITY bio/med fit. school-year-weekly, year-round. Highly competitive (3 spots per school per year). Next step: Ridhi asks the counseling department to add her to the list. The list closes February 2027 — exact day not given, so treat as before the end of January to be safe. Appears to be the now-named version of existing opp-20260813-001 (the unnamed sophomore-only two-year placement) and the "
+    },
+    {
+      "id": "opp-20261110-002",
+      "dedupe_key": "cal-high-instrumental-music|cal-high-winter-drumline-2026|2026",
+      "kid": "ridhi",
+      "title": "Cal High Winter Drumline 2026",
+      "org": "Cal High Instrumental Music",
+      "url": "https://docs.google.com/document/d/1cqEoO6EQVkQlPmwne7V2Dt-8AaRPn49syi3myRuGOJs/edit?usp=drive_link",
+      "category": "program",
+      "region": "tri-valley",
+      "location": "California High School, San Ramon",
+      "eligibility": {
+        "eligible_now": "yes",
+        "reason": "Email says it is open to all students in the music program; Ridhi is in Honors Band and Marching Band. No age or grade restriction stated."
+      },
+      "window": {
+        "opens": null,
+        "closes": null,
+        "deadline": null,
+        "confidence": "estimated"
+      },
+      "commitment": "Not stated in the email — see the info packet and calendar document for rehearsal and competition dates",
+      "pipeline": {
+        "status": "new",
+        "updated_at": "2026-11-10T07:01:34",
+        "updated_by": "agent",
+        "history": [
+          {
+            "status": "new",
+            "at": "2026-11-10T07:01:34"
+          }
+        ]
+      },
+      "provenance": {
+        "source_id": "email-inbox",
+        "first_seen": "2026-11-10",
+        "last_seen": "2026-11-10",
+        "evidence": "Band director email 'Winter Drumline Information Packet 2026' with info packet, calendar and interest form links, plus a parent info night on Monday 11/16/26 at 6:00pm in the band room."
+      },
+      "notes": "winter-season, school-year commitment. No interest form deadline given. Check the calendar document for time load before committing, since it may compete with bio/med volunteering time. Questions go to the percussion instructor, Kishan."
     }
   ]
 }
