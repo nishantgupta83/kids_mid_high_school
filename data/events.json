@@ -3827,7 +3827,7 @@
         "unverified": true,
         "why": "A free first competitive round for a beginner; more scrimmages follow on Nov 17 and Nov 19. Dhruv must be entered through his school's coach."
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-disc-20261018-003",
@@ -4701,7 +4701,7 @@
         "ref": "email:d89e4fb928d5",
         "first_seen": "2026-11-02"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20261106-001",
