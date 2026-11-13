@@ -3293,7 +3293,7 @@
         "ref": "email:8edb451d37f7",
         "first_seen": "2026-10-05"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20261006-001",
@@ -4760,7 +4760,7 @@
         "ref": "email:1073023b8ee7",
         "first_seen": "2026-11-06"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20261106-004",
@@ -4891,7 +4891,7 @@
         "ref": "email:664e69f8f539",
         "first_seen": "2026-11-10"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20261110-002",
