@@ -3612,7 +3612,7 @@
         "ref": "email:33db2c52a191",
         "first_seen": "2026-10-13"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20261015-001",
@@ -4853,7 +4853,7 @@
         "ref": "email:eb49169ccd2f",
         "first_seen": "2026-11-09"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20261109-002",
@@ -4907,6 +4907,95 @@
         "kind": "email",
         "ref": "email:2a5eb502c4f6",
         "first_seen": "2026-11-10"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20261114-001",
+      "dedupe_key": "dhruv|2026-11-18|math-olympiad-challenge-problem-pv3-problem-of-the-week-divi",
+      "kid": "dhruv",
+      "title": "Math Olympiad: Challenge Problem (PV3) + Problem of the Week (Divisibility) due",
+      "date": "2026-11-18",
+      "end_date": null,
+      "time": null,
+      "type": "homework",
+      "action": null,
+      "source": {
+        "kind": "email",
+        "ref": "email:bb1f0ce0c5e2",
+        "first_seen": "2026-11-14"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20261114-002",
+      "dedupe_key": "dhruv|2026-12-02|math-olympiad-set-10-olympiad-3-homework-sat-pv3-due",
+      "kid": "dhruv",
+      "title": "Math Olympiad: Set 10 / Olympiad 3 homework + 'SAT PV3' due",
+      "date": "2026-12-02",
+      "end_date": null,
+      "time": null,
+      "type": "homework",
+      "action": null,
+      "source": {
+        "kind": "email",
+        "ref": "email:bb1f0ce0c5e2",
+        "first_seen": "2026-11-14"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20261114-003",
+      "dedupe_key": "ridhi|2026-11-17|english-10-improved-intro-at-least-two-body-paragraphs-check",
+      "kid": "ridhi",
+      "title": "English 10: improved intro + at least two body paragraphs (Checkpoint #3) due",
+      "date": "2026-11-17",
+      "end_date": null,
+      "time": null,
+      "type": "homework",
+      "action": null,
+      "source": {
+        "kind": "email",
+        "ref": "email:becc3f39b83b",
+        "first_seen": "2026-11-14"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20261114-004",
+      "dedupe_key": "ridhi|2026-11-19|english-10-printed-complete-4-5-paragraph-essay-due-for-peer",
+      "kid": "ridhi",
+      "title": "English 10: PRINTED complete 4-5 paragraph essay due for peer review (Checkpoint #3)",
+      "date": "2026-11-19",
+      "end_date": null,
+      "time": null,
+      "type": "homework",
+      "action": {
+        "required": true,
+        "what": "Print the full essay before class (points come off for a digital-only copy, needing the teacher to print it, or arriving late from printing)",
+        "due": "2026-11-19"
+      },
+      "source": {
+        "kind": "email",
+        "ref": "email:becc3f39b83b",
+        "first_seen": "2026-11-14"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20261114-005",
+      "dedupe_key": "ridhi|2026-11-17|science-bowl-club-meeting-chemistry-teacher-during-student-s",
+      "kid": "ridhi",
+      "title": "Science Bowl Club meeting (chemistry teacher, during Student Support)",
+      "date": "2026-11-17",
+      "end_date": null,
+      "time": null,
+      "type": "school",
+      "action": null,
+      "source": {
+        "kind": "email",
+        "ref": "email:becc3f39b83b",
+        "first_seen": "2026-11-14"
       },
       "status": "active"
     }
