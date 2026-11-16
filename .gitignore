@@ -19,3 +19,12 @@ logs/
 
 # OS noise
 .DS_Store
+dashboard/.dev.vars
+.superpowers/
+.playwright-mcp/
+
+# Roadmap working files (page hashes, model output)
+roadmap/local/
+# Roadmap facts (birthday, visa status, sheet links): local only, never in git.
+# Local sessions read them from disk; push.py publishes them to KV.
+roadmap/data/

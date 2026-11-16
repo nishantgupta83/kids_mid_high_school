@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Ridhi's Roadmap</title>
+<style>
+:root {
+  --paper:#FBF7EE; --card:#FFFFFF; --ink:#2A2A25; --soft:#6B6B60; --line:#E8E2D4;
+  --sage:#4E7A5C; --teal:#2F6F6A; --coral:#C96F4A; --amber:#B98A2F; --sky:#4A7BA6;
+}
+* { box-sizing:border-box; margin:0; }
+body { background:var(--paper); color:var(--ink); font:15px/1.45 -apple-system,'Helvetica Neue',Arial,sans-serif; }
+.wrap { max-width:760px; margin:0 auto; padding:16px 14px 70px; }
+h1 { font-family:Georgia,serif; color:var(--teal); font-size:22px; }
+.sub { color:var(--soft); font-size:12px; margin-bottom:12px; }
+.tabs { display:flex; flex-wrap:wrap; gap:6px; margin:10px 0 16px; }
+.tab { flex:1 1 76px; text-align:center; padding:8px 4px; border:1px solid var(--line); border-radius:10px;
+       background:var(--card); color:var(--soft); font-weight:600; font-size:13px; cursor:pointer; }
+.tab.on { background:var(--teal); border-color:var(--teal); color:#fff; }
+.sec { font-family:Georgia,serif; font-weight:700; font-size:16px; margin:18px 0 6px; }
+.sec.coral{color:var(--coral)} .sec.teal{color:var(--teal)} .sec.sage{color:var(--sage)} .sec.amber{color:var(--amber)} .sec.sky{color:var(--sky)}
+.card { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:10px 12px; margin:7px 0; }
+.card.done { opacity:.62; }
+.muted { color:var(--soft); font-size:13px; }
+.small { font-size:12px; }
+.due { color:var(--coral); font-weight:700; }
+.est { color:var(--amber); font-weight:600; }
+.ok { color:var(--sage); font-weight:600; }
+.pill { display:inline-block; border:1px solid var(--line); border-radius:10px; padding:0 8px; font-size:11px; color:var(--soft); white-space:nowrap; }
+.pill.open { border-color:var(--sage); color:var(--sage); } .pill.verify { border-color:var(--amber); color:var(--amber); }
+.pill.closed { background:var(--line); } .pill.ap { border-color:var(--coral); color:var(--coral); }
+.pill.honors { border-color:var(--sky); color:var(--sky); }
+.row { display:flex; flex-wrap:wrap; gap:6px; align-items:center; margin-top:8px; }
+.sbtn { border:1px solid var(--line); background:var(--paper); border-radius:8px; padding:4px 10px; font-size:12px; cursor:pointer; color:var(--ink); }
+.sbtn.on { background:var(--teal); border-color:var(--teal); color:#fff; }
+select, input[type=text], input[type=date], input[type=url] { border:1px solid var(--line); border-radius:8px; padding:5px 7px; font-size:13px;
+  background:var(--paper); color:var(--ink); max-width:100%; }
+input.note { flex:1 1 180px; min-width:0; }
+a { color:var(--teal); }
+.lbtn { display:inline-block; border:1.5px solid var(--teal); color:var(--teal); border-radius:8px; padding:3px 10px; font-size:12px; font-weight:700; text-decoration:none; }
+table { width:100%; border-collapse:collapse; font-size:13px; }
+td, th { text-align:left; padding:5px 6px; border-top:1px solid var(--line); vertical-align:top; }
+th { color:var(--soft); font-size:11px; text-transform:uppercase; letter-spacing:.4px; border-top:0; }
+.tiles { display:grid; grid-template-columns:repeat(auto-fit,minmax(120px,1fr)); gap:8px; margin:8px 0; }
+.tile { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:10px; text-align:center; }
+.tile b { display:block; font-family:Georgia,serif; font-size:24px; color:var(--teal); }
+.tile span { font-size:12px; color:var(--soft); }
+.barrow { display:flex; align-items:center; gap:8px; font-size:12px; margin:3px 0; }
+.barrow .lab { flex:0 0 118px; color:var(--soft); text-align:right; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.barrow .trk { flex:1; background:var(--paper); border-radius:5px; height:12px; }
+.barrow .fill { height:12px; border-radius:5px; background:var(--sage); }
+.barrow .fill.coral { background:var(--coral); } .barrow .fill.amber { background:var(--amber); } .barrow .fill.sky { background:var(--sky); } .barrow .fill.teal { background:var(--teal); }
+.bar { height:10px; border-radius:5px; background:var(--teal); display:inline-block; vertical-align:middle; }
+label.chk { display:flex; gap:8px; align-items:flex-start; padding:4px 0; cursor:pointer; }
+details > summary { cursor:pointer; color:var(--soft); font-size:13px; margin:8px 0; }
+footer { position:fixed; bottom:0; left:0; right:0; background:var(--card); border-top:1px solid var(--line); padding:6px 14px; font-size:11px; color:var(--soft); }
+#toast { position:fixed; left:50%; transform:translateX(-50%); bottom:38px; background:var(--coral); color:#fff; padding:7px 14px; border-radius:8px; font-size:13px; z-index:5; }
+#gate { position:fixed; inset:0; background:var(--paper); display:flex; align-items:center; justify-content:center; z-index:10; }
+#gate .card { width:290px; text-align:center; }
+#gate input { width:100%; margin:10px 0; padding:9px; font-size:15px; }
+#gate button { width:100%; padding:9px; border:0; border-radius:8px; background:var(--teal); color:#fff; font-weight:700; font-size:15px; cursor:pointer; }
+.err { color:var(--coral); font-size:12px; min-height:16px; }
+.hidden { display:none !important; }
+</style>
+</head>
+<body>
+<div id="gate">
+  <div class="card">
+    <h1>Ridhi's Roadmap</h1>
+    <p class="muted">Enter the family code</p>
+    <input id="code" type="password" autocomplete="current-password" placeholder="family code">
+    <div class="err" id="gateErr"></div>
+    <button id="enter">Open</button>
+  </div>
+</div>
+
+<div class="wrap hidden" id="app">
+  <h1>Ridhi's Roadmap</h1>
+  <div class="sub"><span id="today"></span> · <a href="/">School Compass</a></div>
+  <div class="tabs" id="tabs"></div>
+  <div id="view"></div>
+</div>
+<div id="toast" class="hidden"></div>
+<footer id="foot"></footer>
+
+<script src="/roadmap-lib.js"></script>
+<script>
+"use strict";
+const $ = (s) => document.querySelector(s);
+const KEY = "si.code";
+const TABS = [["start","Start"],["options","Options"],["apply","Applications"],["courses","Courses"],["summers","Summers"],["money","Money"],["status","Status"],["families","Families"],["lists","Lists"],["timeline","Timeline"],["sources","Sources"]];
+const SLABEL = { not_started:"Not started", in_progress:"In progress", submitted:"Submitted", accepted:"Accepted", declined:"Declined", dropped:"Dropped", done:"Done" };
+const DAYNAME = ["","Mon","Tue","Wed","Thu","Fri","Sat","Sun"];
+const LANE = { school:"School", tests:"Tests", summer:"Summer", projects:"Projects", music:"Music", college:"College", canada:"Canada", status:"Status" };
+let C = null, STATE = {}, TAB = "start";
+const UI = { track:"all", hideClosed:false, shortOnly:false, season:null, moneyShort:false, list:null, listF:"all", listQ:"", hideNo:false };
+// Text typed but not yet saved (notes, the add form). The view is rebuilt on every change,
+// so anything typed has to live here or it would be wiped by an unrelated click.
+const DRAFT = {};
+const draft = (k, fallback) => (k in DRAFT ? DRAFT[k] : (fallback ?? ""));
+const noteInput = (key, rec) => `<input class="note" type="text" maxlength="1000" placeholder="note" data-note="${esc(key)}" value="${esc(draft("note:" + key, rec.note))}">`;
+
+// ─────────────────────────────────────────────────────────────────────────────
+// FAMILY JUDGMENT — to be written by Nishant (5–10 lines).
+// How many hours of homework and study a week does one course cost her?
+// `course` looks like { id:"g11-ap-biology", title:"AP Biology", level:"ap" }
+// where level is "ap", "honors", "regular" or "activity".
+// Band rehearsal time (16.75 h) is already counted separately from the schedule,
+// so return only the time OUTSIDE class and rehearsal.
+// Return a number of hours, or null while undecided: the page then says the
+// estimate is not set instead of showing a made-up figure.
+function weeklyLoadHours(course) {
+  // TODO(Nishant): e.g. different hours for "ap" vs "honors" vs "regular",
+  // maybe more for a specific course (course.id) that you know is heavy.
+  return null;
+}
+// ─────────────────────────────────────────────────────────────────────────────
+
+const esc = (s) => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const localISO = () => { const d = new Date(); return d.getFullYear() + "-" + String(d.getMonth()+1).padStart(2,"0") + "-" + String(d.getDate()).padStart(2,"0"); };
+const fmtD = (d, withYear) => new Date(d + "T12:00:00").toLocaleDateString("en-US", {weekday:"short", month:"short", day:"numeric", ...(withYear ? {year:"numeric"} : {})});
+const fmtMonth = (d) => new Date(d + "T12:00:00").toLocaleDateString("en-US", {month:"short", year:"numeric"});
+const fmtTime = (hhmm) => { const [h, m] = hhmm.split(":").map(Number); return ((h % 12) || 12) + ":" + String(m).padStart(2,"0") + (h < 12 ? " am" : " pm"); };
+const st = (kind, id) => STATE[kind + ":" + id] || {};
+
+function toast(msg) { const t = $("#toast"); t.textContent = msg; t.classList.remove("hidden"); setTimeout(() => t.classList.add("hidden"), 3500); }
+
+async function api(path, opts = {}) {
+  const r = await fetch(path, { ...opts, headers: { "x-sync-key": localStorage.getItem(KEY) || "", "Content-Type": "application/json", ...(opts.headers||{}) } });
+  if (r.status === 401) throw new Error("401");
+  if (!r.ok) throw new Error("http " + r.status);
+  return r.json();
+}
+
+// Optimistic save: show the change at once. Saves to the same record go out one at a time,
+// in order, so a slow reply can never overwrite a newer one. If a save is refused, the
+// page re-reads everything from the server rather than guessing what to put back.
+const CHAIN = {}, SEQ = {};
+function save(id, patch, rerender = true) {
+  STATE[id] = { ...(STATE[id] || {}), ...patch };
+  const seq = SEQ[id] = (SEQ[id] || 0) + 1;
+  if (rerender) render();
+  CHAIN[id] = (CHAIN[id] || Promise.resolve()).then(async () => {
+    try {
+      const r = await api("/api/roadmap", { method:"PUT", body: JSON.stringify({ id, patch }) });
+      if (SEQ[id] === seq) STATE[id] = r.record;   // only the newest save's reply is taken as the record
+    } catch (e) {
+      toast(e.message === "401" ? "The family code is no longer accepted. Reload and enter it again." : "Not saved. Check the connection and try again.");
+      try { STATE = (await api("/api/roadmap")).state || {}; } catch { /* offline: keep what is shown */ }
+      render();
+    }
+  });
+  return CHAIN[id];
+}
+
+async function load() {
+  const d = await api("/api/roadmap");
+  C = d.content; STATE = d.state || {};
+  $("#gate").classList.add("hidden");
+  $("#app").classList.remove("hidden");
+  render();
+}
+
+// ---- shared pieces ---------------------------------------------------------
+function dateLine(item, today) {
+  const ds = RM.dateState(item, today);
+  const date = RM.isISO(item.deadline) ? item.deadline : (RM.isISO(item.date) ? item.date : null);
+  const windowText = item.window || item.keep_open || "";
+  if (ds.kind === "rolling") return `<span class="muted">${esc(windowText || "No fixed date")}</span>`;
+  if (ds.kind === "exact") {
+    const cls = ds.passed || ds.days <= 14 ? "due" : "";
+    return `<span class="${cls}">${esc(fmtD(date, true))} · ${esc(RM.fmtDays(ds.days))}</span>` + (ds.passed ? ` <span class="pill">passed</span>` : "");
+  }
+  const label = windowText || (date ? "around " + fmtD(date, true) : "date not set");
+  const tail = ds.passed ? ` <span class="pill">window has closed</span>` : (ds.stale ? ` <span class="pill verify">may have passed, confirm</span>` : "");
+  return `<span class="est">${esc(label)}</span> <span class="pill verify">estimate</span>${tail}`;
+}
+
+function allApplications() {
+  const base = (C.applications || []).map(a => ({ ...a, _key: "app:" + a.id }));
+  const custom = Object.entries(STATE).filter(([k, v]) => k.startsWith("custom:") && v.item && !v.deleted)
+    .map(([k, v]) => ({ id: k.slice(7), title: v.item.title, deadline: v.item.deadline, track: v.item.track || "other", link: v.item.link, _key: k, _custom: true }));
+  return [...base, ...custom];
+}
+const appState = () => { const m = {}; for (const a of allApplications()) m[a.id] = STATE[a._key] || {}; return m; };
+
+function decisionItems() {
+  return (C.start?.decisions || []).map(d => ({ ...d, date: d.by, _made: !RM.isOpenChoice(st("dec", d.id).choice) }));
+}
+
+// ---- Start -----------------------------------------------------------------
+function viewStart(today) {
+  const s = C.start || {};
+  const apps = allApplications();
+  const up = RM.upcoming(apps, appState(), today, 90);
+  const decs = decisionItems();
+  const decState = {}; for (const d of decs) if (d._made) decState[d.id] = { status: "done" };
+  const upDec = RM.upcoming(decs, decState, today, 90);
+  const upMil = RM.upcoming(C.milestones || [], {}, today, 90);
+  const rows = [
+    ...up.soon.map(r => ({ ...r, kind: "Application" })),
+    ...upDec.soon.map(r => ({ ...r, kind: "Decision" })),
+    ...upMil.soon.map(r => ({ ...r, kind: LANE[r.item.lane] || "Date" })),
+  ].sort((a, b) => a.date < b.date ? -1 : a.date > b.date ? 1 : 0);
+  const flags = (s.flags || []);
+  const openFlags = flags.filter(f => !st("flag", f.id).seen), seenFlags = flags.filter(f => st("flag", f.id).seen);
+  const overdue = [...up.overdue.map(r => ({ ...r, kind: "Application" })), ...upDec.overdue.map(r => ({ ...r, kind: "Decision" }))];
+  const stale = [...up.stale.map(r => ({ ...r, kind: "Application" })), ...upDec.stale.map(r => ({ ...r, kind: "Decision" }))];
+
+  let h = `<div class="sec teal">Working assumptions</div><div class="card"><table>` +
+    (s.assumptions || []).map(a => `<tr><td style="width:96px"><b>${esc(a.label || "")}</b></td><td>${esc(a.text)}</td></tr>`).join("") +
+    `</table>${RM.isISO(s.decided_on) ? `<div class="muted small" style="margin-top:6px">Agreed ${esc(fmtD(s.decided_on, true))}.</div>` : ""}</div>`;
+
+  if (openFlags.length || overdue.length || stale.length) {
+    h += `<div class="sec coral">Needs attention</div>`;
+    h += overdue.map(r => `<div class="card"><b>${esc(r.item.title)}</b> <span class="pill">${esc(r.kind)}</span><br><span class="due">${esc(fmtD(r.date, true))} · ${esc(RM.fmtDays(r.ds.days))}</span> <span class="muted">and no status recorded</span></div>`).join("");
+    h += stale.map(r => `<div class="card"><b>${esc(r.item.title)}</b> <span class="pill">${esc(r.kind)}</span><br><span class="est">The estimated date (${esc(r.item.window || "around " + fmtD(r.date, true))}) has gone by.</span> <span class="muted">Confirm the real date, or set a status.</span></div>`).join("");
+    h += openFlags.map(f => `<div class="card">${esc(f.text)}<div class="row"><button class="sbtn" data-flag="${esc(f.id)}">Noted</button></div></div>`).join("");
+  }
+
+  h += `<div class="sec sage">Next 90 days</div>`;
+  h += rows.length ? `<div class="card"><table>` + rows.map(r =>
+      `<tr><td style="width:44%">${dateLine(r.item, today)}</td><td>${esc(r.item.title)} <span class="pill">${esc(r.kind)}</span></td></tr>`).join("") + `</table></div>`
+    : `<div class="card muted">Nothing dated in the next 90 days.</div>`;
+  h += `<div class="muted small">Exact dates count down. Estimates come from the planning sheets and still need confirming.</div>`;
+
+  const open = decs.filter(d => !d._made), made = decs.filter(d => d._made);
+  h += `<div class="sec amber">Open decisions (${open.length})</div>` + open.map(d => decisionCard(d, today)).join("");
+  if (made.length) h += `<details><summary>Decided (${made.length})</summary>${made.map(d => decisionCard(d, today)).join("")}</details>`;
+  if (seenFlags.length) h += `<details><summary>Noted earlier (${seenFlags.length})</summary>${seenFlags.map(f => `<div class="card done">${esc(f.text)} <button class="sbtn" data-unflag="${esc(f.id)}">Bring back</button></div>`).join("")}</details>`;
+  return h;
+}
+
+function decisionCard(d, today) {
+  const rec = st("dec", d.id);
+  return `<div class="card${d._made ? " done" : ""}"><b>${esc(d.title)}</b><br>` +
+    `<span class="small">Decide by ${dateLine({ date: d.by, exact: d.exact }, today)}</span>` +
+    `<div class="muted" style="margin-top:4px">${esc(d.context || "")}</div>` +
+    `<div class="row">${(d.options || []).map(o => `<button class="sbtn${rec.choice === o ? " on" : ""}" data-dec="${esc(d.id)}" data-choice="${esc(o)}">${esc(o)}</button>`).join("")}</div>` +
+    `<div class="row">${noteInput("dec:" + d.id, rec)}</div></div>`;
+}
+
+// ---- Applications ----------------------------------------------------------
+function viewApply(today) {
+  const tracks = ["all","research","clinical","music","project","college","scholarship","other"];
+  let apps = allApplications();
+  const present = new Set(apps.map(a => a.track || "other"));
+  apps = apps.filter(a => UI.track === "all" || (a.track || "other") === UI.track)
+             .filter(a => !UI.hideClosed || !RM.CLOSED.has((STATE[a._key] || {}).status));
+  const dateOf = (a) => RM.isISO(a.deadline) ? a.deadline : "9999";
+  apps.sort((a, b) => dateOf(a) < dateOf(b) ? -1 : dateOf(a) > dateOf(b) ? 1 : a.title.localeCompare(b.title));
+
+  let h = `<div class="row" style="margin-top:0">` + tracks.filter(t => t === "all" || present.has(t)).map(t =>
+      `<button class="sbtn${UI.track === t ? " on" : ""}" data-track="${t}">${t === "all" ? "All" : t[0].toUpperCase() + t.slice(1)}</button>`).join("") +
+    `<button class="sbtn${UI.hideClosed ? " on" : ""}" data-hideclosed="1">Hide finished</button></div>`;
+  if (C.applications_note) h += `<div class="card due">${esc(C.applications_note)}</div>`;
+  h += apps.map(a => {
+    const rec = STATE[a._key] || {};
+    const link = a.link ? RM.safeUrl(a.link) : null;
+    return `<div class="card${RM.CLOSED.has(rec.status) ? " done" : ""}"><b>${esc(a.title)}</b>${a.org ? ` <span class="muted">${esc(a.org)}</span>` : ""} <span class="pill">${esc(a.track || "other")}</span>` +
+      `<br>${dateLine(a, today)}${a.verify && !a._custom ? ` <span class="muted small">confirm the date</span>` : ""}` +
+      (a.action ? `<br>${esc(a.action)}` : "") + (a.note ? `<br><span class="muted">${esc(a.note)}</span>` : "") +
+      (link ? `<br><a href="${esc(link)}" target="_blank" rel="noopener noreferrer">link</a>` : "") +
+      `<div class="row"><select data-status="${esc(a._key)}">` +
+        [["", "No status yet"], ...RM.STATUSES.map(s => [s, SLABEL[s]])].map(([v, l]) => `<option value="${v}"${(rec.status || "") === v ? " selected" : ""}${v === "" && rec.status ? " disabled" : ""}>${l}</option>`).join("") +
+      `</select><select data-owner="${esc(a._key)}">` +
+        [["", "Who"], ["parent", "Parent"], ["ridhi", "Ridhi"], ["both", "Both"]].map(([v, l]) => `<option value="${v}"${(rec.owner || "") === v ? " selected" : ""}>${l}</option>`).join("") +
+      `</select>${noteInput(a._key, rec)}` +
+      (a._custom ? `<button class="sbtn" data-delcustom="${esc(a._key)}">Remove</button>` : "") + `</div></div>`;
+  }).join("") || `<div class="card muted">Nothing matches this filter.</div>`;
+
+  h += `<div class="sec sage">Add an item</div><div class="card"><div class="row" style="margin-top:0">` +
+    `<input class="note" id="addTitle" type="text" maxlength="140" placeholder="what it is" value="${esc(draft("addTitle"))}">` +
+    `<input id="addDate" type="date" value="${esc(draft("addDate"))}"><select id="addTrack">${tracks.slice(1).map(t => `<option value="${t}"${draft("addTrack", "research") === t ? " selected" : ""}>${t}</option>`).join("")}</select>` +
+    `<input class="note" id="addLink" type="url" maxlength="400" placeholder="link (optional)" value="${esc(draft("addLink"))}"><button class="sbtn on" id="addBtn">Add</button></div></div>`;
+  h += `<div class="muted small">The built-in list was copied from the planning sheets${C.applications_synced ? " on " + esc(fmtD(C.applications_synced, true)) : ""}. ` +
+       `Only ${(C.applications || []).filter(a => RM.isISO(a.deadline) && !a.approx).length} of its dates are exact; the rest are estimates.</div>`;
+  return h;
+}
+
+// ---- Courses ---------------------------------------------------------------
+function courseRow(c) {
+  const lv = c.level === "ap" ? `<span class="pill ap">AP</span>` : c.level === "honors" ? `<span class="pill honors">Honors</span>` : c.level === "activity" ? `<span class="pill">Activity</span>` : "";
+  return `${esc(c.title)} ${lv}${c.period ? ` <span class="muted small">period ${esc(c.period)}</span>` : ""}${c.note ? `<br><span class="muted small">${esc(c.note)}</span>` : ""}`;
+}
+function viewCourses(today) {
+  const k = C.courses || {};
+  const pool = [...(k.grade11 || []), ...(k.candidates || [])];
+  const picked = new Set(st("plan", "grade11").courses || (k.grade11 || []).map(c => c.id));
+  const chosen = pool.filter(c => picked.has(c.id));
+  const classes = chosen.filter(c => c.level !== "activity");
+  const seasonNow = RM.isISO(k.season?.ends) ? today <= k.season.ends : false;
+  const inSeason = UI.season === null ? seasonNow : UI.season;
+  const blocks = RM.fixedBlocks(k.commitments, inSeason);
+  const hoursIn = RM.weeklyHours(RM.fixedBlocks(k.commitments, true)), hoursOut = RM.weeklyHours(RM.fixedBlocks(k.commitments, false));
+  const load = RM.loadSummary(classes, blocks, weeklyLoadHours);
+  const nameOf = {}; for (const c of k.commitments || []) nameOf[c.id] = c.title;
+  const byDay = {}; for (const b of blocks) (byDay[b.day] = byDay[b.day] || []).push(b);
+  const blockText = (b) => esc(nameOf[b.of] || "") + (b.start ? ` ${esc(fmtTime(b.start))} to ${esc(fmtTime(b.end))}` : ` ${esc(b.hours)} h, evening`);
+
+  let h = `<div class="sec teal">Grade 10 now</div><div class="card">` + (k.grade10 || []).map(c => `<div>${courseRow(c)}</div>`).join("") +
+    `<div class="muted small" style="margin-top:6px">${esc(k.grade10_note || "")} Source: ${esc(k.grade10_source || "")}.</div></div>`;
+
+  h += `<div class="sec amber">Grade 11: try a combination</div><div class="card">` +
+    pool.map(c => `<label class="chk"><input type="checkbox" data-course="${esc(c.id)}"${picked.has(c.id) ? " checked" : ""}><span>${courseRow(c)}</span></label>`).join("") +
+    `<div class="row"><button class="sbtn" id="resetPlan">Back to the Feb 2026 plan</button></div></div>`;
+
+  const ap = classes.filter(c => c.level === "ap").length, hon = classes.filter(c => c.level === "honors").length;
+  h += `<div class="card"><b>${classes.length} classes</b>: ${ap} AP, ${hon} honors, ${classes.length - ap - hon} regular` +
+    (classes.length > 7 ? ` <span class="due">more than 7 periods</span>` : classes.length === 7 ? ` <span class="est">all 7 periods, no free period</span>` : "") +
+    `<br>Fixed commitments: <b>${hoursIn} hours a week</b> in band season, <b>${hoursOut} hours</b> the rest of the year` +
+    (load.total === null
+      ? `<br><span class="est">Homework estimate not set.</span> <span class="muted">The hours each kind of class costs are a family judgment and have not been entered yet, so no total is shown.</span>`
+      : `<br>Homework and study: <b>${load.estimated} hours</b> · Outside the school day in all: <b>${load.total} hours a week</b> ${inSeason ? "in band season" : "outside band season"}`) + `</div>`;
+
+  h += `<div class="sec sage">The fixed week</div><div class="row" style="margin-top:0">` +
+    `<button class="sbtn${inSeason ? " on" : ""}" data-season="1">In band season</button><button class="sbtn${inSeason ? "" : " on"}" data-season="0">Rest of the year</button>` +
+    `<span class="muted small">${seasonNow ? "Band season is on now" : "Band season is over for this year"}${RM.isISO(k.season?.ends) ? " (ends " + esc(fmtD(k.season.ends)) + ")" : ""}</span></div>` +
+    `<div class="card"><table>` + [1,2,3,4,5,6,7].map(d => {
+      const day = byDay[d] || []; const hrs = RM.weeklyHours(day);
+      return `<tr><td style="width:52px"><b>${DAYNAME[d]}</b></td><td>${day.map(blockText).join("<br>") || `<span class="muted">nothing fixed</span>`}</td>` +
+             `<td style="width:120px">${hrs ? `<span class="bar" style="width:${Math.round(hrs * 14)}px"></span> ${hrs} h` : ""}</td></tr>`;
+    }).join("") + `</table><div class="muted small" style="margin-top:6px">${esc(k.season?.label || "")}. ${esc(k.commitments_note || "")} ${esc(k.school_day_note || "")}</div></div>`;
+
+  h += `<div class="sec sky">Grade 12, as planned</div><div class="card">` + (k.grade12 || []).map(c => `<div>${courseRow(c)}</div>`).join("") +
+    `<div class="muted small" style="margin-top:6px">Source: ${esc(k.plan_source || "")}.</div></div>`;
+  h += `<div class="sec coral">Rules to keep in mind</div><div class="card">` + (k.rules || []).map(r => `<div style="margin:3px 0">${esc(r)}</div>`).join("") + `</div>`;
+  return h;
+}
+
+// ---- Summers ---------------------------------------------------------------
+function viewSummers(today) {
+  const s = C.summers || {};
+  const opts = (s.options || []).filter(o => !UI.shortOnly || st("sum", o.id).shortlist);
+  const card = (o) => {
+    const rec = st("sum", o.id);
+    const ages = o.before_birthday ? `<br><span class="small">Age rule: ${esc(o.age_rule || "")} · before age 16: <b>${esc(o.before_birthday)}</b> · from 16: <b>${esc(o.after_birthday)}</b></span>` : (o.age_rule ? `<br><span class="small">Age rule: ${esc(o.age_rule)}</span>` : "");
+    return `<div class="card"><b>${esc(o.title)}</b> <span class="pill ${esc(o.eligibility)}">${o.eligibility === "open" ? "open to her" : o.eligibility === "verify" ? "check eligibility" : "closed to her"}</span>` +
+      ` <span class="pill">${esc(o.place || "")}</span>${ages}` +
+      (o.how ? `<br>${esc(o.how)}` : "") + (o.note ? `<br><span class="muted">${esc(o.note)}</span>` : "") +
+      (o.keep_open ? `<br><span class="small">To keep it open: ${dateLine({ date: o.keep_open_by, exact: o.exact, keep_open: o.keep_open }, today)}</span>` : "") +
+      (o.eligibility !== "closed" ? `<div class="row"><button class="sbtn${rec.shortlist ? " on" : ""}" data-short="${esc(o.id)}">${rec.shortlist ? "Shortlisted" : "Shortlist"}</button>` +
+        `${noteInput("sum:" + o.id, rec)}</div>` : "") + `</div>`;
+  };
+  let h = `<div class="card">${esc(s.birthday_note || "")}<div class="muted small" style="margin-top:4px">${esc(s.source_note || "")}</div></div>`;
+  h += `<div class="sec teal">Summer 2027: three ways to arrange it</div><div class="card"><table><tr><th>Plan</th><th>When</th><th>What she gets</th><th>Trade-off</th></tr>` +
+    (s.plans_2027 || []).map(p => `<tr><td><b>${esc(p.title)}</b>${p.note ? `<br><span class="muted small">${esc(p.note)}</span>` : ""}</td><td>${esc(p.dates)}</td><td>${esc(p.gets)}</td><td>${esc(p.cost)}</td></tr>`).join("") +
+    `</table>` + (s.unknowns_2027 || []).map(u => `<div class="est small" style="margin-top:4px">${esc(u)}</div>`).join("") + `</div>`;
+  h += `<div class="row"><button class="sbtn${UI.shortOnly ? " on" : ""}" data-shortonly="1">Shortlisted only</button></div>`;
+  for (const year of [2027, 2028]) {
+    const live = opts.filter(o => o.year === year && o.eligibility !== "closed");
+    const closed = opts.filter(o => o.year === year && o.eligibility === "closed");
+    if (!live.length && !closed.length) continue;
+    h += `<div class="sec ${year === 2027 ? "sage" : "sky"}">Summer ${year} options</div>` + live.map(card).join("");
+    if (closed.length) h += `<details><summary>Closed to her (${closed.length})</summary>${closed.map(card).join("")}</details>`;
+  }
+  return h;
+}
+
+// ---- Money -----------------------------------------------------------------
+const CONF = { confirmed: ["open", "confirmed at the source"], partly: ["verify", "partly confirmed"], unconfirmed: ["closed", "not confirmed"] };
+const confPill = (c) => `<span class="pill ${CONF[c]?.[0] || ""}">${esc(CONF[c]?.[1] || c || "")}</span>`;
+const srcLink = (r) => { const u = r.url ? RM.safeUrl(r.url) : null; return u ? ` <a href="${esc(u)}" target="_blank" rel="noopener noreferrer">source</a>` : ""; };
+function viewMoney() {
+  const m = C.money;
+  if (!m) return `<div class="card muted">Scholarships have not been published yet.</div>`;
+  let h = `<div class="card">${esc(m.scope_note || "")}<div class="muted small" style="margin-top:4px">Checked ${RM.isISO(m.checked_on) ? esc(fmtD(m.checked_on, true)) : ""}. Facts with their sources, and questions to ask. Not financial or legal advice.</div></div>`;
+  h += `<div class="sec teal">In short</div><div class="card">` + (m.how_to_read || []).map((t, i) => `<div style="margin:4px 0"><b>${i + 1}.</b> ${esc(t)}</div>`).join("") + `<div class="muted small" style="margin-top:6px">A summary of the rows below. Each row shows how far it was confirmed.</div></div>`;
+  h += `<div class="sec sage">What decides her tuition and aid</div>` + (m.points || []).map(p =>
+    `<div class="card">${esc(p.text)}<br>${confPill(p.confidence)}${srcLink(p)}${p.source ? `<br><span class="muted small">${esc(p.source)}</span>` : ""}</div>`).join("");
+  h += `<div class="sec amber">Ask every college</div><div class="card">` + (m.ask_each_college || []).map(q => `<div style="margin:4px 0">${esc(q)}</div>`).join("") + `</div>`;
+  h += `<div class="row"><button class="sbtn${UI.moneyShort ? " on" : ""}" data-moneyshort="1">Shortlisted only</button></div>`;
+  const groups = {};
+  for (const a of (m.awards || []).filter(a => !UI.moneyShort || st("mon", a.id).shortlist)) (groups[a.group] = groups[a.group] || []).push(a);
+  h += Object.entries(groups).map(([g, rows]) => `<div class="sec sky">${esc(g)}</div>` + rows.map(a => {
+    const rec = st("mon", a.id);
+    return `<div class="card"><b>${esc(a.school)}</b> ${confPill(a.confidence)}<br>${esc(a.award)}` +
+      `<br><b>${esc(a.amount)}</b><br><span class="small">Needs: ${esc(a.needs)}</span>` +
+      (a.note ? `<br><span class="muted">${esc(a.note)}</span>` : "") + srcLink(a) +
+      `<div class="row"><button class="sbtn${rec.shortlist ? " on" : ""}" data-monshort="${esc(a.id)}">${rec.shortlist ? "Shortlisted" : "Shortlist"}</button>${noteInput("mon:" + a.id, rec)}</div></div>`;
+  }).join("")).join("") || `<div class="card muted">Nothing shortlisted yet.</div>`;
+  h += `<div class="sec coral">Not yet checked</div><div class="card">` + (m.not_yet_checked || []).map(t => `<div style="margin:4px 0">${esc(t)}</div>`).join("") + `</div>`;
+  return h;
+}
+
+// ---- Options ---------------------------------------------------------------
+function factLine(f) { return `<div style="margin:5px 0">${esc(f.text)} ${confPill(f.confidence)}${srcLink(f)}</div>`; }
+function viewOptions() {
+  const o = C.options;
+  if (!o) return `<div class="card muted">The options map has not been published yet.</div>`;
+  let h = `<div class="card">${esc(o.note || "")}<div class="muted small" style="margin-top:4px">Checked ${RM.isISO(o.checked_on) ? esc(fmtD(o.checked_on, true)) : ""}.</div></div>`;
+  const order = { active: 0, "": 1, parked: 2 };
+  const routes = [...(o.routes || [])].sort((a, b) => (order[st("opt", a.id).choice || ""] ?? 1) - (order[st("opt", b.id).choice || ""] ?? 1));
+  h += routes.map(r => {
+    const rec = st("opt", r.id), c = rec.choice || "";
+    return `<div class="card${c === "parked" ? " done" : ""}"><b>${esc(r.title)}</b> <span class="pill">${esc(r.place)}</span>${c === "active" ? ` <span class="pill open">active</span>` : c === "parked" ? ` <span class="pill">parked</span>` : ""}` +
+      `<div style="margin-top:4px">${esc(r.summary)}</div><div class="muted" style="margin-top:4px">Leads to: ${esc(r.leads_to)}</div>` +
+      `<div class="col-title" style="font-size:11px;color:var(--soft);margin:8px 0 2px;text-transform:uppercase;letter-spacing:.4px">What is known</div>${(r.facts || []).map(factLine).join("")}` +
+      ((r.watch || []).length ? `<div class="col-title" style="font-size:11px;color:var(--soft);margin:8px 0 2px;text-transform:uppercase;letter-spacing:.4px">Watch</div>${r.watch.map(w => `<div style="margin:4px 0">${esc(w)}</div>`).join("")}` : "") +
+      `<div class="row"><button class="sbtn${c === "active" ? " on" : ""}" data-opt="${esc(r.id)}" data-choice="active">Active</button>` +
+      `<button class="sbtn${c === "parked" ? " on" : ""}" data-opt="${esc(r.id)}" data-choice="parked">Parked</button>${noteInput("opt:" + r.id, rec)}</div></div>`;
+  }).join("");
+  return h;
+}
+
+// ---- Status ----------------------------------------------------------------
+const PD_KEY = "rm.pd";   // the family's own category and date: this browser only, never sent anywhere
+function readPD() { try { const v = JSON.parse(localStorage.getItem(PD_KEY) || "{}"); return (v && typeof v === "object") ? v : {}; } catch { return {}; } }
+function viewStatus(today) {
+  const s = C.status;
+  if (!s) return `<div class="card muted">The status section has not been published yet.</div>`;
+  const b = s.bulletin || {}, rows = b.rows || [], pd = readPD();
+  const row = rows.find(r => r.id === pd.row) || rows[0];
+  const g = row ? RM.gap(row.final_action, pd.date) : null;
+  const inWords = (x) => [x.years ? x.years + (x.years === 1 ? " year" : " years") : "", x.months ? x.months + (x.months === 1 ? " month" : " months") : ""].filter(Boolean).join(" ") || "less than a month";
+  let h = `<div class="card">${esc(s.note || "")}<div class="muted small" style="margin-top:4px">Checked ${RM.isISO(s.checked_on) ? esc(fmtD(s.checked_on, true)) : ""}.</div></div>`;
+
+  h += `<div class="sec teal">Her ages that matter</div><div class="card"><table>` + (s.ages || []).map(a => {
+    const away = RM.gap(today, a.date);
+    return `<tr><td style="width:38%"><b>${esc(a.title)}</b><br><span class="small">${esc(fmtD(a.date, true))}</span></td><td>${esc(a.text)}<br><span class="muted small">${away && !away.current ? "in " + esc(inWords(away)) : "passed"}</span></td></tr>`;
+  }).join("") + `</table></div>`;
+
+  h += `<div class="sec sage">Where the visa chart stands</div><div class="card"><table><tr><th>Category</th><th>Final action</th><th>Dates for filing</th></tr>` +
+    rows.map(r => `<tr><td>${esc(r.label)}</td><td>${esc(fmtD(r.final_action, true))}</td><td>${esc(fmtD(r.filing, true))}</td></tr>`).join("") +
+    `</table><div style="margin-top:6px">${confPill(b.confidence)} <span class="muted small">Bulletin for ${esc(b.month || "")}. ${esc(b.source || "")}</span></div></div>`;
+  h += `<div class="card"><b>Your own date</b> <span class="muted small">kept in this browser only; it is not saved to the site</span>` +
+    `<div class="row"><select id="pdRow">${rows.map(r => `<option value="${esc(r.id)}"${row && row.id === r.id ? " selected" : ""}>${esc(r.label)}</option>`).join("")}</select>` +
+    `<input id="pdDate" type="date" value="${esc(RM.isISO(pd.date) ? pd.date : "")}"><button class="sbtn" id="pdClear">Clear</button></div>` +
+    (g ? `<div style="margin-top:8px">${g.current ? `Your date is earlier than the final action cut-off of ${esc(fmtD(row.final_action, true))}.`
+        : `Your date is <b>${esc(inWords(g))}</b> after the final action cut-off of ${esc(fmtD(row.final_action, true))}.`}` +
+      `<div class="muted small" style="margin-top:4px">The cut-off does not move at a steady pace and can move backwards, so this gap is not a forecast of time.</div></div>`
+      : `<div class="muted small" style="margin-top:8px">Enter your priority date to see how far it sits from the cut-off.</div>`) + `</div>`;
+
+  h += `<div class="sec sky">Rules, with where they are written</div>` + (s.facts || []).map(f =>
+    `<div class="card">${esc(f.text)}<br>${confPill(f.confidence)}${srcLink(f)}${f.source ? `<br><span class="muted small">${esc(f.source)}</span>` : ""}</div>`).join("");
+
+  const groups = {};
+  for (const q of s.questions || []) (groups[q.ask] = groups[q.ask] || []).push(q);
+  h += `<div class="sec amber">Questions to ask</div>` + Object.entries(groups).map(([who, qs]) =>
+    `<div class="col-title" style="font-weight:700;font-size:12px;margin:12px 0 4px;letter-spacing:.4px;text-transform:uppercase;color:var(--soft)">For the ${esc(who)}</div>` + qs.map(q => {
+      const rec = st("q", q.id);
+      return `<div class="card${rec.seen ? " done" : ""}"><label class="chk"><input type="checkbox" data-asked="${esc(q.id)}"${rec.seen ? " checked" : ""}><span>${esc(q.text)}</span></label>` +
+        `<div class="row">${noteInput("q:" + q.id, rec).replace('placeholder="note"', 'placeholder="what they said"')}</div></div>`;
+    }).join("")).join("");
+  return h;
+}
+
+// ---- Families --------------------------------------------------------------
+function viewFamilies() {
+  const f = C.community;
+  if (!f) return `<div class="card muted">This section has not been published yet.</div>`;
+  let h = `<div class="card">${esc(f.note || "")}<div class="muted small" style="margin-top:4px">Checked ${RM.isISO(f.checked_on) ? esc(fmtD(f.checked_on, true)) : ""}.</div></div>`;
+  if (f.gap) h += `<div class="card"><b>What was not found</b><br>${esc(f.gap)}</div>`;
+  h += (f.patterns || []).map(p => {
+    const rec = st("fam", p.id), c = rec.choice || "";
+    return `<div class="card${c === "not relevant" ? " done" : ""}"><b>${esc(p.title)}</b> <span class="pill">${esc(p.kind)}</span> ${confPill(p.confidence)}` +
+      `<div style="margin-top:4px">${esc(p.text)}</div>` +
+      `<div class="small" style="margin-top:4px">${(p.sources || []).map(s => { const u = RM.safeUrl(s.url); return u ? `<a href="${esc(u)}" target="_blank" rel="noopener noreferrer">${esc(s.title)}</a>` : esc(s.title); }).join(" · ")}</div>` +
+      `<div class="row"><button class="sbtn${c === "useful" ? " on" : ""}" data-fam="${esc(p.id)}" data-choice="useful">Useful</button>` +
+      `<button class="sbtn${c === "not relevant" ? " on" : ""}" data-fam="${esc(p.id)}" data-choice="not relevant">Not relevant</button>${noteInput("fam:" + p.id, rec)}</div></div>`;
+  }).join("");
+  return h;
+}
+
+// ---- Lists (stand-alone: reads only /lists/*.json, touches nothing else) ------
+const LISTS = { index: null, notes: {}, docs: {}, error: null, loading: false };
+async function loadLists() {
+  if (LISTS.loading) return;
+  LISTS.loading = true;
+  try {
+    const get = async (p) => { const r = await fetch(p, { cache: "no-store" }); if (!r.ok) throw new Error("http " + r.status); return r.json(); };
+    if (!LISTS.index) LISTS.index = await get("/lists/index.json");
+    try { LISTS.notes = await get("/lists/notes.json"); } catch { LISTS.notes = {}; }
+    const all = LISTS.index.lists || [];
+    if (!UI.list && all.length) UI.list = all[all.length - 1].slug;   // the most recently scanned list opens first
+    const meta = all.find(x => x.slug === UI.list);
+    if (meta && !LISTS.docs[meta.slug] && /^[A-Za-z0-9][A-Za-z0-9._-]*$/.test(meta.file || "")) {
+      const doc = await get("/lists/" + meta.file);
+      if (doc && typeof doc === "object" && Array.isArray(doc.entries)) LISTS.docs[meta.slug] = doc;
+    }
+    // No usable document means an error that is SHOWN. Without this the view would ask
+    // for the list again on every redraw, forever.
+    LISTS.error = (all.length && !LISTS.docs[UI.list]) ? "The list could not be loaded." : null;
+  } catch (e) { LISTS.error = "The list could not be loaded."; }
+  LISTS.loading = false;
+  if (TAB === "lists") render();
+}
+function bars(obj, cls, max) {
+  const rows = Object.entries(obj || {}).slice(0, max || 8), top = Math.max(1, ...rows.map(([, v]) => v));
+  return rows.map(([k, v]) => `<div class="barrow"><span class="lab">${esc(k)}</span><span class="trk"><span class="fill ${cls || ""}" style="display:block;width:${Math.round(v / top * 100)}%"></span></span><span>${esc(v)}</span></div>`).join("");
+}
+const WORD_LABEL = { high_school: "high school", age_rule: "states an age", undergraduate: "undergraduate", citizenship: "citizen or permanent resident", international: "international students", current_year: "this year or next" };
+const AUD = { high_school: ["High school: yes", "open"], college: ["College only", "closed"], graduate: ["Graduate or PhD", "closed"],
+  general: ["General page, not one program", "verify"], teachers: ["For teachers", "closed"], unclear: ["Unclear", "verify"], gone: ["Program not found", "closed"] };
+// Does the stored status text REQUIRE citizenship, permanent residence or US work eligibility?
+// Text that opens by saying there is no such rule ("None stated; ...", "Open to international
+// students ...", "Not required ...") does not count, even if it mentions citizens later.
+const SAYS_NONE = /^\s*(none\b|no\b|not\b|n\/a|page lists no|open to (domestic and )?international)/i;
+const REQUIRES = /citizen|permanent resident|green card|lawful|authori[sz]ed to work|work authori[sz]|eligible to (work|be employed)/i;
+const requiresStatus = (a) => !!a && typeof a.citizenship === "string" && !SAYS_NONE.test(a.citizenship) && REQUIRES.test(a.citizenship);
+function audienceHTML(a) {
+  if (!a || !AUD[a.tag]) return "";
+  const u = a.evidence_url ? RM.safeUrl(a.evidence_url) : null;
+  const facts = [["Minimum age", a.min_age], ["Rules on status", a.citizenship], ["Grades", a.grades], ["Cost or pay", a.cost_or_pay], ["Dates", a.dates]]
+    .filter(([, v]) => typeof v === "string" && v).map(([k, v]) => `${k}: ${esc(v)}`).join(" · ");
+  return `<div class="small" style="margin-top:6px;padding:6px 8px;background:var(--paper);border-radius:8px">` +
+    `<b>Who it is for</b> <span class="pill ${AUD[a.tag][1]}">${esc(AUD[a.tag][0])}</span>` +
+    (a.quote ? `<br><i>“${esc(a.quote)}”</i> <span class="pill ${a.quote_verified === true ? "open" : "verify"}">${a.quote_verified === true ? "exact words on the page" : a.quote_verified === false ? "checker's wording, not found word for word" : "page could not be re-read"}</span>` : "") +
+    (facts ? `<br>${facts}` : "") + (typeof a.citizenship === "string" && a.citizenship && a.citizenship_verified === true ? ` <span class="pill open">status rule: exact words</span>` : "") +
+    (a.notes ? `<br><span class="muted">${esc(a.notes)}</span>` : "") +
+    `<br><span class="muted">Checked ${esc(a.checked_on || "")}${a.pages_read ? `, ${esc(a.pages_read)} pages read` : ""}${u ? ` · <a href="${esc(u)}" target="_blank" rel="noopener noreferrer">where it says so</a>` : ""}</span></div>`;
+}
+const NONCIT = { open: ["Open to non-citizens", "open"], some_tracks: ["Some places open to non-citizens", "verify"],
+  closed: ["Citizenship, residency or US work eligibility required", "closed"], not_stated: ["Non-citizens: not stated", "verify"] };
+const WHO = { any_college: ["Students from any college", "open"], own_students: ["Own students only", "closed"],
+  state_or_region: ["Local students only", "closed"], not_stated: ["Who can apply: not stated", "verify"] };
+const PAY = { stipend: "Stipend", wage: "Hourly pay", unpaid: "Unpaid", student_pays: "Student pays a fee", not_stated: "Pay not stated" };
+const opensToNoncitizens = (f) => !!f && (f.noncitizen === "open" || f.noncitizen === "some_tracks");
+function fitHTML(f) {
+  if (!f || !NONCIT[f.noncitizen]) return "";
+  const u = f.evidence_url ? RM.safeUrl(f.evidence_url) : null, v = (f.verified && typeof f.verified === "object") ? f.verified : {};
+  const quote = (key, field) => typeof f[key] === "string" && f[key] ? `<br><i>“${esc(f[key])}”</i>` +
+    (field ? ` <span class="pill ${v[field] === true ? "open" : "verify"}">${v[field] === true ? "exact words on the page" : v[field] === false ? "checker's wording, not found word for word" : "not re-read"}</span>` : "") : "";
+  return `<div class="small" style="margin-top:6px;padding:6px 8px;background:var(--paper);border-radius:8px">` +
+    `<b>Who can take it</b> <span class="pill ${NONCIT[f.noncitizen][1]}">${esc(NONCIT[f.noncitizen][0])}</span>` +
+    (WHO[f.who] ? ` <span class="pill ${WHO[f.who][1]}">${esc(WHO[f.who][0])}</span>` : "") +
+    (PAY[f.pay] ? ` <span class="pill">${esc(PAY[f.pay])}</span>` : "") +
+    (f.work_auth === true ? ` <span class="pill closed">Asks for US work authorization</span>` : "") +
+    quote("noncitizen_quote", "noncitizen") + quote("who_quote", "who") + quote("pay_quote", "pay") + quote("work_auth_quote", "work_auth") +
+    (typeof f.notes === "string" && f.notes ? `<br><span class="muted">${esc(f.notes)}</span>` : "") +
+    `<br><span class="muted">Checked ${esc(f.checked_on || "")}${u ? ` · <a href="${esc(u)}" target="_blank" rel="noopener noreferrer">where it says so</a>` : ""}</span></div>`;
+}
+const LINK_LABEL = { ok: "link works", gone: "page gone", blocked: "refused the check", error: "did not load", skipped: "not opened" };
+function listRows(doc) {
+  const q = UI.listQ.trim().toLowerCase();
+  const w = (e) => (e.link && e.link.words) || {};
+  const mark = (e) => (STATE["lst:" + e.id] || {}).choice || "";
+  return (doc.entries || []).filter(e => !(UI.hideNo && mark(e) === "not interested")).filter(e =>
+    (UI.listF === "all" || (UI.listF === "live" && e.link?.status === "ok") || (UI.listF === "hs" && w(e).high_school) ||
+     (UI.listF === "ca" && e.state === "CA") || (UI.listF === "near" && e.region === "Bay Area") || (UI.listF === "age" && w(e).age_rule) || (UI.listF === "mine" && mark(e) === "interested") || (UI.listF === "hsyes" && (e.audience || {}).tag === "high_school") ||
+     (UI.listF === "rule" && requiresStatus(e.audience)) || (UI.listF === "norule" && !!e.audience && !["gone", "general"].includes(e.audience.tag) && !requiresStatus(e.audience)) ||
+     (UI.listF === "cit" && w(e).citizenship) || (UI.listF === "intl" && w(e).international) ||
+     (UI.listF === "noncit" && opensToNoncitizens(e.fit)) || (UI.listF === "noncitfree" && opensToNoncitizens(e.fit) && e.fit.work_auth !== true) || (UI.listF === "noncitany" && opensToNoncitizens(e.fit) && e.fit.who === "any_college")) &&
+    (!q || (e.org + " " + e.unit + " " + e.city + " " + e.state + " " + e.desc).toLowerCase().includes(q)));
+}
+function listRowsHTML(doc) {
+  const rows = listRows(doc);
+  return `<div class="muted small" style="margin:6px 0">${rows.length} of ${(doc.entries || []).length} shown</div>` + rows.slice(0, 200).map(e => {
+    const u = RM.safeUrl(e.url), stt = e.link?.status, words = (e.link && e.link.words) || null;
+    const chosen = (STATE["lst:" + e.id] || {}).choice || "";
+    const linkable = u && stt === "ok" && (e.audience || {}).tag !== "gone";
+    return `<div class="card${chosen === "not interested" ? " done" : ""}"><b>${linkable ? `<a href="${esc(u)}" target="_blank" rel="noopener noreferrer">${esc(e.org)}</a>` : esc(e.org)}</b>` +
+      `${e.city ? ` <span class="muted">${esc(e.city)}, ${esc(e.state)}</span>` : ""}${e.region ? ` <span class="pill${e.region === "Bay Area" ? " open" : ""}">${esc(e.region)}</span>` : ""} ${e.listed_year ? `<span class="pill">listed ${esc(e.listed_year)}</span>` : ""}` +
+      (stt ? ` <span class="pill ${stt === "ok" ? "open" : stt === "gone" ? "closed" : "verify"}">${esc(LINK_LABEL[stt] || stt)}</span>` : "") +
+      (e.section ? ` <span class="pill">${esc(e.section)}</span>` : "") +
+      (e.unit ? `<br><span class="muted small">${esc(e.unit)}</span>` : "") + (e.desc ? `<br>${esc(e.desc)}` : "") +
+      (words ? `<br><span class="small muted">Page mentions: ${Object.keys(WORD_LABEL).filter(k => words[k]).map(k => esc(WORD_LABEL[k])).join(", ") || "none of the words checked"}</span>` : "") +
+      Object.entries((e.link && e.link.snippets) || {}).filter(([k, v]) => WORD_LABEL[k] && typeof v === "string").map(([k, v]) =>
+        `<br><span class="small">From the page (${esc(WORD_LABEL[k])}): <i>“${esc(v)}”</i></span>`).join("") +
+      audienceHTML(e.audience) + fitHTML(e.fit) +
+      (e.source ? `<br><span class="muted small">Listed by: ${esc(e.source)}</span>` : "") +
+      (e.id ? (() => { const rec = STATE["lst:" + e.id] || {}, c = rec.choice || "";
+        return `<div class="row"><button class="sbtn${c === "interested" ? " on" : ""}" data-lst="${esc(e.id)}" data-choice="interested">Interested</button>` +
+               `<button class="sbtn${c === "not interested" ? " on" : ""}" data-lst="${esc(e.id)}" data-choice="not interested">Not interested</button>${noteInput("lst:" + e.id, rec)}</div>`; })() : "") + `</div>`;
+  }).join("") + (rows.length > 200 ? `<div class="muted small">Showing the first 200. Narrow the search to see the rest.</div>` : "");
+}
+function noteItem(t) {
+  if (typeof t === "string") return `<div style="margin:6px 0">${esc(t)}</div>`;
+  if (!t || typeof t !== "object") return "";
+  const pts = Array.isArray(t.points) ? t.points.filter(p => typeof p === "string") : [];
+  return `<div style="margin:8px 0">${t.title ? `<b>${esc(t.title)}</b>` : ""}` +
+    (pts.length ? `<ul style="margin:4px 0 0 18px;padding:0">${pts.map(p => `<li>${esc(p)}</li>`).join("")}</ul>` : "") + `</div>`;
+}
+// The college-years facts and questions live in the private content (behind the family code),
+// never in this public page or the public list files.
+function collegeYearsHTML() {
+  const st = C && C.status;
+  if (!st) return "";
+  const facts = (st.facts || []).filter(f => ["opt-one-year", "cpt-one-year", "f1-on-campus"].includes(f.id));
+  const pattern = ((C.community || {}).patterns || []).find(p => p.id === "no-paid-work");
+  const qs = (st.questions || []).filter(q => ["attorney-work", "attorney-opt-clock"].includes(q.id));
+  if (!facts.length && !st.college_years_note) return "";
+  const link = (u) => { const x = u ? RM.safeUrl(u) : null; return x ? ` <a href="${esc(x)}" target="_blank" rel="noopener noreferrer">source</a>` : ""; };
+  return `<div class="sec coral">Before you pick from this list</div><div class="card">` +
+    (typeof st.college_years_note === "string" ? `<div>${esc(st.college_years_note)}</div>` : "") +
+    `<ul style="margin:6px 0 0 18px;padding:0">` +
+    facts.map(f => `<li>${esc(f.text)} <span class="pill ${f.confidence === "confirmed" ? "open" : "verify"}">${esc(f.confidence)}</span>${link(f.url)}</li>`).join("") +
+    (pattern ? `<li>${esc(pattern.text)} <span class="pill verify">advocacy group</span>${link((pattern.sources || [])[0]?.url)}</li>` : "") + `</ul>` +
+    (qs.length ? `<div style="margin-top:6px"><b>Questions to ask first</b><ul style="margin:4px 0 0 18px;padding:0">${qs.map(q => `<li>${esc(q.text)} <span class="muted">(${esc(q.ask)})</span></li>`).join("")}</ul></div>` : "") + `</div>`;
+}
+function viewLists() {
+  if (LISTS.error) return `<div class="card due">${esc(LISTS.error)}</div>`;
+  const all = LISTS.index?.lists || [];
+  const doc = LISTS.docs[UI.list];
+  if (!LISTS.index || (all.length && !doc)) { loadLists(); return `<div class="card muted">Loading the list…</div>`; }
+  if (!all.length) return `<div class="card muted">No list has been scanned yet.</div>`;
+  const s = doc.summary || {}, n = LISTS.notes[doc.slug] || {}, src = RM.safeUrl(doc.source_url);
+  const mention = {}; for (const [k, v] of Object.entries(s.pages_mentioning || {})) mention[WORD_LABEL[k] || k] = v;
+  const linkBars = {}; for (const [k, v] of Object.entries(s.links || {})) linkBars[LINK_LABEL[k] || k] = v;
+  let h = `<div class="card">A separate reading of one public list. It is not connected to the applications, summers or any other section.</div>`;
+  if (all.length > 1) h += `<div class="row" style="margin-top:0">${all.map(x => `<button class="sbtn${x.slug === UI.list ? " on" : ""}" data-list="${esc(x.slug)}">${esc(x.label || x.slug)}</button>`).join("")}</div>`;
+  h += `<div class="sec teal">${esc(doc.label || doc.title || doc.slug)}</div><div class="card">${src ? `<a href="${esc(src)}" target="_blank" rel="noopener noreferrer">Open the original page</a>` : ""}` +
+    `<div class="muted small" style="margin-top:4px">The page was last changed ${RM.isISO(doc.source_last_modified) ? esc(fmtD(doc.source_last_modified, true)) : "on an unknown date"}. Scanned ${RM.isISO(doc.scanned_on) ? esc(fmtD(doc.scanned_on, true)) : ""}.</div></div>`;
+  h += `<div class="tiles"><div class="tile"><b>${esc(s.entries ?? 0)}</b><span>programs listed</span></div>` +
+    `<div class="tile"><b>${esc(s.links?.ok ?? 0)}</b><span>links still work</span></div>` +
+    `<div class="tile"><b>${esc(s.links?.gone ?? 0)}</b><span>pages gone</span></div>` +
+    `<div class="tile"><b>${esc(s.pages_mentioning?.high_school ?? 0)}</b><span>pages mention high school</span></div>` +
+    `<div class="tile"><b>${esc((doc.entries || []).filter(e => (STATE["lst:" + e.id] || {}).choice === "interested").length)}</b><span>you marked interested</span></div></div>`;
+  h += `<div class="card"><b>Do the links still work?</b>${bars(linkBars, "teal")}</div>`;
+  if (s.by_audience && Object.keys(s.by_audience).length) {
+    const aud = {}; for (const [k, v] of Object.entries(s.by_audience)) aud[(AUD[k] || [k])[0]] = v;
+    h += `<div class="card"><b>Who it is for</b> <span class="muted small">checked by reading each program's pages, up to 3 levels deep</span>${bars(aud, "teal", 8)}</div>`;
+  }
+  if (s.by_noncitizen && Object.keys(s.by_noncitizen).length) {
+    const nc = {}; for (const [k, v] of Object.entries(s.by_noncitizen)) nc[(NONCIT[k] || [k])[0]] = v;
+    h += `<div class="card"><b>Can students who are not citizens or permanent residents apply?</b> <span class="muted small">read on each program's own pages</span>${bars(nc, "sage", 6)}</div>`;
+    h += collegeYearsHTML();
+  }
+  if (s.by_section && Object.keys(s.by_section).length) h += `<div class="card"><b>Sections</b>${bars(s.by_section, "sage", 12)}</div>`;
+  if (Object.keys(s.by_listed_year || {}).some(k => k !== "no year")) h += `<div class="card"><b>When the list last touched each entry</b>${bars(s.by_listed_year, "amber")}</div>`;
+  h += `<div class="card"><b>Words found on the ${esc(s.pages_read ?? 0)} pages that loaded</b>${bars(mention, "sky")}<div class="muted small" style="margin-top:4px">Automatic word matches. They show that a page uses the word, not what the program requires.</div></div>`;
+  const regions = s.by_region && Object.keys(s.by_region).length;
+  h += regions ? `<div class="card"><b>Where in California</b>${bars(s.by_region, "", 8)}<div class="muted small" style="margin-top:4px">Grouped by the city the list gives, as travel regions from San Ramon.</div></div>`
+               : `<div class="card"><b>Where the programs are</b>${bars(s.by_state, "", 10)}</div>`;
+  for (const [key, title, cls] of [["what", "What this list is", "sage"], ["useful", "How it could be useful", "teal"], ["limits", "Limits", "coral"]]) {
+    if ((n[key] || []).length) h += `<div class="sec ${cls}">${title}</div><div class="card">${n[key].map(noteItem).join("")}</div>`;
+  }
+  const local = (doc.entries || []).every(e => e.region === "Bay Area");
+  const F = [["all", "All"], ...(s.by_noncitizen ? [["noncit", "Open to non-citizens"], ["noncitany", "Open to non-citizens, any college"], ["noncitfree", "Open to non-citizens, no work permission asked"]] : []),
+    ...(s.by_audience ? [["hsyes", "High school: yes"], ["rule", "Citizenship or residency required"], ["norule", "No such rule found"]] : []), ["mine", "Interested"], ["live", "Link works"], ...(regions && !local ? [["near", "Bay Area"]] : regions ? [] : [["ca", "California"]]), ["hs", "Mentions high school"], ["age", "States an age"], ["cit", "Mentions citizenship"], ["intl", "Mentions international"]];
+  h += `<div class="sec sky">The programs</div><div class="row" style="margin-top:0">${F.map(([k, l]) => `<button class="sbtn${UI.listF === k ? " on" : ""}" data-listf="${k}">${l}</button>`).join("")}` +
+    `<button class="sbtn${UI.hideNo ? " on" : ""}" data-hideno="1">Hide not interested</button>` +
+    `<input class="note" id="listQ" type="text" placeholder="search name, place or topic" value="${esc(UI.listQ)}"></div><div id="listRows">${listRowsHTML(doc)}</div>`;
+  return h;
+}
+
+// ---- Timeline --------------------------------------------------------------
+function viewTimeline(today) {
+  const items = [
+    ...(C.milestones || []).map(m => ({ ...m, _kind: LANE[m.lane] || "Date" })),
+    ...decisionItems().map(d => ({ id: "dec-" + d.id, date: d.by, exact: d.exact, title: "Decide: " + d.title, _kind: "Decision", _made: d._made })),
+  ].filter(i => RM.isISO(i.date)).sort((a, b) => a.date < b.date ? -1 : a.date > b.date ? 1 : 0);
+  const yearOf = (d) => { const y = +d.slice(0, 4), m = +d.slice(5, 7); const s = m >= 8 ? y : y - 1; return s + "-" + String(s + 1).slice(2); };
+  const gradeOf = { "2026-27": "Grade 10", "2027-28": "Grade 11", "2028-29": "Grade 12" };
+  const groups = {};
+  for (const i of items) (groups[yearOf(i.date)] = groups[yearOf(i.date)] || []).push(i);
+  return Object.entries(groups).map(([y, rows]) =>
+    `<div class="sec teal">${esc(gradeOf[y] || "College")} · ${esc(y)}</div><div class="card"><table>` + rows.map(i => {
+      const past = i.date < today;
+      const when = i.exact ? esc(fmtD(i.date, true)) : `<span class="est">${esc(fmtMonth(i.date))}</span> <span class="pill verify">estimate</span>`;
+      return `<tr style="${past || i._made ? "opacity:.55" : ""}"><td style="width:40%">${when}</td><td>${esc(i.title)} <span class="pill">${esc(i._kind)}</span>${i.note ? `<br><span class="muted small">${esc(i.note)}</span>` : ""}</td></tr>`;
+    }).join("") + `</table></div>`).join("") +
+    `<div class="muted small">Application deadlines are on the Applications tab. Estimates show the month only.</div>`;
+}
+
+// ---- Sources ---------------------------------------------------------------
+function viewSources() {
+  const groups = {};
+  for (const s of C.sources || []) (groups[s.group || "Other"] = groups[s.group || "Other"] || []).push(s);
+  return Object.entries(groups).map(([g, rows]) => `<div class="sec teal">${esc(g)}</div>` + rows.map(s => {
+    const u = s.url ? RM.safeUrl(s.url) : null;
+    return `<div class="card"><b>${esc(s.title)}</b> <span class="pill${s.role === "current" ? " open" : s.role === "needs rework" ? " verify" : ""}">${esc(s.role || "")}</span>` +
+      (s.dated ? ` <span class="muted small">${esc(fmtD(s.dated, true))}</span>` : "") + (s.note ? `<br><span class="muted">${esc(s.note)}</span>` : "") +
+      (u ? `<br><a class="lbtn" style="margin-top:6px" href="${esc(u)}" target="_blank" rel="noopener noreferrer">Open</a>` : "") + `</div>`;
+  }).join("")).join("");
+}
+
+function render() {
+  const today = localISO();
+  $("#today").textContent = new Date().toLocaleDateString("en-US", {weekday:"long", month:"long", day:"numeric", year:"numeric"});
+  $("#tabs").innerHTML = TABS.map(([id, label]) => `<div class="tab${TAB === id ? " on" : ""}" data-tab="${id}">${label}</div>`).join("");
+  if (!C) { $("#view").innerHTML = `<div class="card muted">The roadmap has not been published yet.</div>`; $("#foot").textContent = ""; return; }
+  const views = { start: viewStart, apply: viewApply, courses: viewCourses, options: viewOptions, summers: viewSummers, money: viewMoney, status: viewStatus, families: viewFamilies, lists: viewLists, timeline: viewTimeline, sources: viewSources };
+  $("#view").innerHTML = views[TAB](today);
+  $("#foot").textContent = `content published ${C.generated || "?"} · your statuses and notes save as you go`;
+}
+
+// ---- events ----------------------------------------------------------------
+document.addEventListener("click", async (ev) => {
+  const t = ev.target, d = t.dataset || {};
+  if (d.tab) { TAB = d.tab; render(); window.scrollTo(0, 0); return; }
+  if (d.track) { UI.track = d.track; render(); return; }
+  if (d.hideclosed) { UI.hideClosed = !UI.hideClosed; render(); return; }
+  if (d.shortonly) { UI.shortOnly = !UI.shortOnly; render(); return; }
+  if (d.season) { UI.season = d.season === "1"; render(); return; }
+  if (d.moneyshort) { UI.moneyShort = !UI.moneyShort; render(); return; }
+  if (d.monshort) return save("mon:" + d.monshort, { shortlist: !st("mon", d.monshort).shortlist });
+  if (d.opt) return save("opt:" + d.opt, { choice: st("opt", d.opt).choice === d.choice ? "" : d.choice });
+  if (d.fam) return save("fam:" + d.fam, { choice: st("fam", d.fam).choice === d.choice ? "" : d.choice });
+  if (d.listf) { UI.listF = d.listf; render(); return; }
+  if (d.hideno) { UI.hideNo = !UI.hideNo; render(); return; }
+  if (d.lst) return save("lst:" + d.lst, { choice: (STATE["lst:" + d.lst] || {}).choice === d.choice ? "" : d.choice });
+  if (d.list) { UI.list = d.list; UI.listF = "all"; UI.listQ = ""; LISTS.error = null; render(); return; }
+  if (t.id === "pdClear") { localStorage.removeItem(PD_KEY); render(); return; }
+  if (d.flag) return save("flag:" + d.flag, { seen: true });
+  if (d.unflag) return save("flag:" + d.unflag, { seen: false });
+  if (d.dec) return save("dec:" + d.dec, { choice: d.choice });
+  if (d.short) return save("sum:" + d.short, { shortlist: !st("sum", d.short).shortlist });
+  if (d.delcustom) return save(d.delcustom, { deleted: true });
+  if (t.id === "resetPlan") return save("plan:grade11", { courses: (C.courses?.grade11 || []).map(c => c.id) });
+  if (t.id === "addBtn") {
+    const title = $("#addTitle").value.trim(), link = $("#addLink").value.trim();
+    if (!title) return toast("Give the item a name first.");
+    if (link && !RM.safeUrl(link)) return toast("The link needs to start with http:// or https://");
+    const id = "custom:" + Date.now().toString(36) + Math.random().toString(36).slice(2, 6);
+    const item = { title, deadline: $("#addDate").value || "", track: $("#addTrack").value, link };
+    for (const k of ["addTitle", "addDate", "addTrack", "addLink"]) delete DRAFT[k];
+    return save(id, { item });
+  }
+});
+document.addEventListener("input", (ev) => {
+  const t = ev.target;
+  if (t.id === "listQ") {   // only the result rows are redrawn, so the search box keeps its cursor
+    UI.listQ = t.value;
+    const doc = LISTS.docs[UI.list], box = document.getElementById("listRows");
+    if (doc && box) box.innerHTML = listRowsHTML(doc);
+    return;
+  }
+  if (t.dataset?.note) DRAFT["note:" + t.dataset.note] = t.value;
+  else if (["addTitle", "addDate", "addTrack", "addLink"].includes(t.id)) DRAFT[t.id] = t.value;
+});
+document.addEventListener("change", (ev) => {
+  const t = ev.target, d = t.dataset || {};
+  if (t.id === "pdRow" || t.id === "pdDate") {
+    localStorage.setItem(PD_KEY, JSON.stringify({ row: document.getElementById("pdRow").value, date: document.getElementById("pdDate").value }));
+    render(); return;
+  }
+  if (d.asked) return save("q:" + d.asked, { seen: t.checked });
+  if (d.status) { if (t.value) save(d.status, { status: t.value }); return; }
+  if (d.owner) return save(d.owner, { owner: t.value }, false);
+  if (d.note) { delete DRAFT["note:" + d.note]; return save(d.note, { note: t.value }, false); }
+  if (d.course) {
+    const all = [...(C.courses?.grade11 || []), ...(C.courses?.candidates || [])].map(c => c.id);
+    const picked = new Set(st("plan", "grade11").courses || (C.courses?.grade11 || []).map(c => c.id));
+    t.checked ? picked.add(d.course) : picked.delete(d.course);
+    return save("plan:grade11", { courses: all.filter(id => picked.has(id)) });
+  }
+});
+
+$("#enter").addEventListener("click", async () => {
+  localStorage.setItem(KEY, $("#code").value.trim());
+  $("#gateErr").textContent = "";
+  try { await load(); } catch (e) { $("#gateErr").textContent = e.message === "401" ? "wrong code" : "connection problem"; }
+});
+$("#code").addEventListener("keydown", (e) => { if (e.key === "Enter") $("#enter").click(); });
+
+if (localStorage.getItem(KEY)) load().catch(() => {});
+</script>
+</body>
+</html>

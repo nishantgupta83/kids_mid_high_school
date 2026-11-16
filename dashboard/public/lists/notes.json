@@ -1,0 +1,270 @@
+{
+ "bayarea-local": {
+  "what": [
+   {
+    "title": "Where these come from",
+    "points": [
+     "4 programs named on the Cal High College and Career Center summer page.",
+     "Programs listed on Bay Area Teen Science's 'Program listings' page, which UC Berkeley runs and the Cal High page links to.",
+     "10 Contra Costa and Alameda county and hospital programs found by web search."
+    ]
+   },
+   {
+    "title": "What the checks found",
+    "points": [
+     "67 programs; 62 links work.",
+     "Who it is for, read up to three pages deep on each site: 44 take high school students, 13 unclear, 5 general pages, 3 not found, 2 not checked yet.",
+     "Each tag shows whether its quote was found word for word on the page."
+    ]
+   }
+  ],
+  "useful": [
+   {
+    "title": "LLNL Biotechnology Summer Experience, Livermore (closest strong fit)",
+    "points": [
+     "Read on the page: must be 16 or older by the start; students who are 18 at the start must be US citizens; entering grades 11 to 12; GPA 3.3 or higher.",
+     "In 2026 it ran July 13 to 24; the page shows the 2026 cycle and is not taking applications now.",
+     "The page also cites a federal rule that bars citizens of China, Russia, Iran and North Korea without US citizenship or permanent residence from non-public areas."
+    ]
+   },
+   {
+    "title": "Programs that accept high school students, with no status rule found",
+    "points": [
+     "COSMOS (UC campuses): limited to California high school students; materials due February 5, 2027.",
+     "UC Santa Cruz SIP: high school students, ages 14 to 17; some projects need age 16 or older; no status rule stated.",
+     "UC Berkeley ROAR Academy: students entering grades 10 to 12; the 2026 session was for California residents.",
+     "Stanford cardiothoracic surgical skills internship: at least 16 on the first day, with an exception for high school juniors.",
+     "Lawrence Hall of Science teen opportunities: entering grades 10 to 12; several teen programs show as closed for now, and summer 2027 registration is listed as opening Nov 18, 2026 for members and Dec 16, 2026 for everyone.",
+     "Teens in Health: a free year-long biomedical science and lab skills program."
+    ]
+   },
+   {
+    "title": "Close to home, health careers",
+    "points": [
+     "John Muir Health Young Healers: the checker read 'High School Juniors and Seniors with a Minimum 2.5 GPA'; not found word for word.",
+     "John Muir Concord says on its page that it will not take new high school volunteers at Concord this summer.",
+     "Making Waves HealthX: 11th and 12th graders in Contra Costa County; the 2026-27 application has closed.",
+     "Alameda County Public Health placements: open to community members, high school, undergraduate and post-graduate students."
+    ]
+   }
+  ],
+  "limits": [
+   {
+    "title": "Programs that require US citizenship, permanent residence or work eligibility, in the pages' own words",
+    "points": [
+     "UCSF Summer Student Research Program FAQ: applicants must be US citizens or lawful permanent residents and at least 16 by June 1; the 2027 cohort is expected to include college students.",
+     "iCLEM: be a US citizen or permanent resident; also an income limit.",
+     "UC Berkeley Pre-College TRIO: US citizen or permanent resident, and attending a target school.",
+     "Genesys Works: must be able to work in the US (checker's reading)."
+    ]
+   },
+   {
+    "title": "Limited to certain schools or places",
+    "points": [
+     "UCSF High School Intern Program: only students from SFUSD or San Francisco charter schools.",
+     "Crissy Field I-YEL: San Francisco and Marin public school students."
+    ]
+   },
+   {
+    "title": "How to read the tags",
+    "points": [
+     "Tags come from agents reading each program's site up to three pages deep on Nov 11, 2026. Rules quoted from 2026 pages can change for 2027.",
+     "'Exact words on the page' means the quote was re-read and found word for word, in order. Otherwise treat the tag as a lead to confirm."
+    ]
+   }
+  ]
+ },
+ "cstate1-ca": {
+  "what": [
+   {
+    "title": "What this list is",
+    "points": [
+     "The California section of RIT's by-state list: 71 programs (1 based outside California with a California site).",
+     "The page was last changed 2020-08-02; entries were last touched 2017 to 2020.",
+     "19 in the Bay Area, 40 in Southern California.",
+     "43 links work, 18 are gone, 10 could not be checked.",
+     "Who it is for: 3 take high school students, 29 college only, 30 unclear, 8 not found."
+    ]
+   }
+  ],
+  "useful": [
+   {
+    "title": "Few fits here: this list is mostly for college students",
+    "points": [
+     "Tagged 'takes high school students': 3 of 71. For one of them (Santa Monica Mountains) only closed college listings were shown."
+    ]
+   },
+   {
+    "title": "J. Craig Venter Institute, La Jolla",
+    "points": [
+     "The page: internships for high school students 16 and older, undergraduates and graduates.",
+     "The page: no La Jolla internships this year because of a move; applicants must be eligible to work in the US, and JCVI does not sponsor work visas."
+    ]
+   },
+   {
+    "title": "Sandia National Laboratories, Livermore",
+    "points": [
+     "The page: at least 16 years of age; US citizenship for positions that need a security clearance or as stated in each posting."
+    ]
+   },
+   {
+    "title": "Santa Monica Mountains National Recreation Area",
+    "points": [
+     "The page says internships are offered for college and high school students, open to US citizens, permanent residents, or people with valid work permits.",
+     "Only college listings were shown, and they were closed."
+    ]
+   },
+   {
+    "title": "Company and lab job searches",
+    "points": [
+     "Genentech and Cepheid careers pages lead to job searches rather than specific programs.",
+     "Lawrence Livermore's job-search link no longer works; Lawrence Berkeley's entry is an undergraduate program."
+    ]
+   }
+  ],
+  "limits": [
+   {
+    "title": "Status rules found on many college programs",
+    "points": [
+     "Most UC and national-lab summer programs on this list ask for US citizens or permanent residents (shown on each entry where found).",
+     "UC Irvine and UC Santa Barbara also ask for 18 or older."
+    ]
+   },
+   {
+    "title": "Matches that are not about high school applicants",
+    "points": [
+     "California Academy of Sciences: 'post high school'.",
+     "UC Berkeley Amgen: do not list high school research.",
+     "Stanford medicine: a menu link."
+    ]
+   },
+   {
+    "title": "How to read the marks",
+    "points": [
+     "Tags: agents read each program's site up to three pages deep. Quoted words in 'Page mentions' come from one page per program."
+    ]
+   }
+  ]
+ },
+ "bme": {
+  "what": [
+   {
+    "title": "What this list is",
+    "points": [
+     "RIT's 'Co-op/Internships and Summer Research Opportunities in the Life Sciences', biomedical engineering category, kept for that college's own students; it says listings are paid unless marked otherwise.",
+     "126 programs, two of them in Switzerland. Last changed 2021-03-16; entries last touched 2017 to 2020."
+    ]
+   },
+   {
+    "title": "Who it is for, checked by reading each site up to three pages deep (Nov 11, 2026)",
+    "points": [
+     "60 for college students, 2 take high school seniors, 1 graduate-level, 41 unclear, 21 not found, 1 general page."
+    ]
+   },
+   {
+    "title": "Who can take it, checked on each program's own pages (Nov 12, 2026)",
+    "points": [
+     "105 programs checked (the 21 not found were skipped): 6 open to students who are not citizens or permanent residents, 3 open for some places, 37 that require citizenship, permanent residence or US work eligibility, 59 not stated (many pages would not load or say nothing).",
+     "34 say students from any college may apply; none was found limited to its own students."
+    ]
+   }
+  ],
+  "useful": [
+   {
+    "title": "Open to non-citizens (filter 'Open to non-citizens')",
+    "points": [
+     "UT Southwestern: 'U.S. citizens or possess an F1 visa.' Rochester: includes a 'current F1 visa holder at a U.S. college'.",
+     "Stowers: 'Open to domestic and international students.' Notre Dame: will 'assist with the visa process' for accepted international students.",
+     "Some places only: Colorado (positions not paid by the NSF grant), Utah (American Heart Association projects), Wake Forest (limited spots for F-1 or J-1 students).",
+     "Two entries in Switzerland (Lausanne's program, held at EPFL) take international students; they may be the same program listed twice."
+    ]
+   },
+   {
+    "title": "For college years (from 2029), not now",
+    "points": [
+     "About 30 of the 60 college programs require US citizenship, permanent residence or US work eligibility, as the agents read them (filter 'Citizenship or residency required'). Many are NSF-funded REU programs.",
+     "A few of those also accept student visas: UT Southwestern says 'U.S. citizens or possess an F1 visa', and Wake Forest lists international students.",
+     "Stowers Institute for Medical Research, in the page's words: 'Open to domestic and international students.'",
+     "University of Colorado, in the page's words: 'Non-U.S. residents are eligible for YSSRP positions not supported by the NSF REU grant.'",
+     "28 college programs had no such rule found. That does not mean they are open; use the filter 'No such rule found' and check each page."
+    ]
+   },
+   {
+    "title": "The two that take high school students",
+    "points": [
+     "Children's Hospital Colorado: 'Students must be a high school senior over the age of 18.'",
+     "Maine Medical Center (now MaineHealth): 18 at the start and eligible to be employed in the US; the 'graduating seniors' wording came from the agent's summary, not the exact page text."
+    ]
+   }
+  ],
+  "limits": [
+   {
+    "title": "Age of the list",
+    "points": [
+     "21 programs could not be found on their sites; several others show 2019 to 2025 dates.",
+     "The FDA medical device fellowship says it will not support student intern positions."
+    ]
+   },
+   {
+    "title": "How to read the tags",
+    "points": [
+     "The agents' reading tool sometimes summarises. 'Exact words on the page' means the quote was re-read and found word for word, in order; treat the rest as leads to confirm."
+    ]
+   }
+  ]
+ },
+ "premed": {
+  "what": [
+   {
+    "title": "What this list is",
+    "points": [
+     "RIT's list of summer research and internships in biomedical research and for pre-med students, kept for that college's own students; it says listings are paid unless marked otherwise.",
+     "511 programs. Last changed 2020-08-02. 269 links still work, 141 pages are gone, the rest refused or did not load."
+    ]
+   },
+   {
+    "title": "Who can take it, checked on each program's own pages (Nov 12, 2026)",
+    "points": [
+     "Only 81 programs were checked: those whose page mentions citizenship or international students and that are not already on the Biomedical engineering list. The other 430 are not checked.",
+     "Of the 81: 17 open to students who are not citizens or permanent residents, 4 open for some places, 50 that require citizenship, permanent residence or US work eligibility, 10 not stated."
+    ]
+   }
+  ],
+  "useful": [
+   {
+    "title": "Open to non-citizens and to students from any college (filter 'Open to non-citizens, any college')",
+    "points": [
+     "American Physiological Society undergraduate fellowship: 'There are no citizenship requirements for this fellowship.'",
+     "MD Anderson Cancer Center summer program: 'International students may apply if they hold a current visa through the duration of the program.'",
+     "Indiana University School of Medicine ('current F1 Visa'), UConn Health ('international students on F-1 student visas'), University of Washington ('on a student visa'), Mayo Clinic (international students attending a US college full time)."
+    ]
+   },
+   {
+    "title": "Open to non-citizens, page does not say who else may apply (filter 'Open to non-citizens')",
+    "points": [
+     "Houston Methodist: open to 'Foreign Nationals who already hold a legal visa status (F-1, J-1, EADs)'.",
+     "University of South Florida: open to 'Foreign Nationals holding student, exchange, or permanent resident visas, including F1, H1, H1B, PR, TC, or TN visas.' The page still shows 2026 dates.",
+     "UT Health San Antonio: 'Foreign students are eligible to apply but must be enrolled in an undergraduate program in the United States.'"
+    ]
+   },
+   {
+    "title": "Open, but only with work permission arranged by the student's college",
+    "points": [
+     "Pittsburgh asks international applicants for 'evidence of valid CPT or pre-completion OPT'; OHSU says students 'must already be enrolled at a US institution in order to qualify for CPT'.",
+     "Memorial Sloan Kettering, Michigan's Frankel CVC, Mayo, UConn and Washington also say accepted students must be able to work in the US. Van Andel says it does not sponsor visas for interns.",
+     "Some organisations have both an open and a closed program on this list (MD Anderson, UConn Health, Pittsburgh, OHSU); check the program, not the name."
+    ]
+   }
+  ],
+  "limits": [
+   {
+    "title": "How to read this",
+    "points": [
+     "A program that says nothing about citizenship is marked 'not stated', not open.",
+     "Several pages still show the 2026 cycle or older postings; the FDA entry is a 2019 posting.",
+     "'Exact words on the page' means the quote was re-read and found word for word; 198 of 207 quotes were."
+    ]
+   }
+  ]
+ }
+}

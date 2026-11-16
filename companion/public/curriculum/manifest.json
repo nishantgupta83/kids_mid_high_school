@@ -9,8 +9,7 @@
     { "id": "precalc-bridge", "title": "Precalc → Calculus AB Bridge", "short": "Precalc Bridge", "accent": "sage", "file": "precalc-bridge.json" },
     { "id": "pltw-biomed", "title": "PLTW Principles of Biomedical Science", "short": "Biomed", "accent": "sage", "file": "pltw-biomed.json" },
     { "id": "english-10", "title": "English 10", "short": "English", "accent": "sky", "file": "english-10.json" },
-    { "id": "chemistry", "title": "Chemistry", "short": "Chem", "accent": "amber", "file": "chemistry.json" },
-    { "id": "intro-business", "title": "Intro to Business", "short": "Business", "accent": "teal", "file": "intro-business.json" }
+    { "id": "chemistry", "title": "Chemistry", "short": "Chem", "accent": "amber", "file": "chemistry.json" }
   ],
   "key_dates": [
     { "date": "2026-08-13", "what": "First day of school" },

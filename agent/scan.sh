@@ -217,13 +217,42 @@ fi
 
 # ---- STEP 12: commit state (PII lint gates it) ----------------------------
 if $PY "$REPO/scripts/validate_data.py" >/dev/null 2>&1; then
-  git -C "$REPO" add data/sources.json data/events.json data/opportunities.json \
-    data/watchlist.json data/sources_proposed.json data/summer_apps.json \
-    data/state/last_run.json data/state/email_cursor.json
-  if ! git -C "$REPO" diff --cached --quiet; then
-    git -C "$REPO" commit -q -m "scan $TODAY mode=$MODE" && logln "STEP 12 commit OK"
+  STATE_FILES=(data/sources.json data/events.json data/opportunities.json
+    data/watchlist.json data/sources_proposed.json data/summer_apps.json
+    data/state/last_run.json data/state/email_cursor.json)
+  git -C "$REPO" add -- "${STATE_FILES[@]}"
+  # Commit ONLY the state files: anything a human staged elsewhere stays staged
+  # and out of the scan commit (and so out of the automatic push below).
+  if ! git -C "$REPO" diff --cached --quiet -- "${STATE_FILES[@]}"; then
+    if git -C "$REPO" commit -q -m "scan $TODAY mode=$MODE" -- "${STATE_FILES[@]}"; then
+      logln "STEP 12 commit OK"
+    else
+      logln "STEP 12 commit FAIL (git commit error)"
+    fi
   else
     logln "STEP 12 commit SKIP no changes"
+  fi
+  # ---- STEP 12b: push main to GitHub (best effort) --------------------------
+  # The PII lint above covers data/ only; commits made by hand outside data/ are
+  # pushed too, so they must be checked when they are made. Never prompts (launchd
+  # has no terminal); hard 120 s cap so a stall can't hold the lock. A rejected
+  # push (e.g. origin/main moved ahead) does NOT fix itself: the failure count in
+  # data/local/push_fail_count shows how long it has been failing.
+  PUSH_FAILS="$LOCAL/push_fail_count"
+  BRANCH=$(git -C "$REPO" symbolic-ref --short HEAD 2>/dev/null || echo "detached")
+  if ! git -C "$REPO" remote get-url origin >/dev/null 2>&1; then
+    :
+  elif [ "$BRANCH" != "main" ]; then
+    logln "STEP 12b push SKIP — checked out on '$BRANCH', not main"
+  elif GIT_TERMINAL_PROMPT=0 /usr/bin/perl -e 'alarm shift; exec @ARGV' 120 \
+      git -C "$REPO" -c http.lowSpeedLimit=1000 -c http.lowSpeedTime=30 \
+      push -q origin main >>"$REPO/logs/runs/$TODAY.log" 2>&1; then
+    rm -f "$PUSH_FAILS"
+    logln "STEP 12b push OK"
+  else
+    N=$(( $(cat "$PUSH_FAILS" 2>/dev/null || echo 0) + 1 ))
+    echo "$N" > "$PUSH_FAILS.tmp" && mv "$PUSH_FAILS.tmp" "$PUSH_FAILS"
+    logln "STEP 12b push WARN failed ($N run(s) in a row; local commits kept, see log above)"
   fi
 else
   logln "STEP 12 commit BLOCKED — validator/PII lint failed (see $LOCAL/validate_out.txt)"
