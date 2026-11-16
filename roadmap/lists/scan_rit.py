@@ -28,6 +28,7 @@ import concurrent.futures
 import datetime
 import hashlib
 import html
+import http.client
 import ipaddress
 import json
 import os
@@ -262,7 +263,7 @@ def is_public_url(url):
     try:
         infos = socket.getaddrinfo(host, None)
     except OSError:
-        return True   # does not resolve: opening it will simply fail, there is nothing to protect
+        return False   # does not resolve now: a later lookup could answer differently, so refuse
     try:
         return all(ipaddress.ip_address(info[4][0].split("%")[0]).is_global for info in infos)
     except ValueError:
@@ -276,7 +277,51 @@ class _PublicOnlyRedirects(urllib.request.HTTPRedirectHandler):
         return super().redirect_request(req, fp, code, msg, headers, newurl)
 
 
-_OPENER = urllib.request.build_opener(_PublicOnlyRedirects, urllib.request.HTTPSHandler(context=ssl.create_default_context()))
+# is_public_url() checks a lookup made BEFORE connecting; DNS can answer differently a
+# moment later (rebinding). So every connection also checks the address it actually
+# reached, before any request is sent, and drops it if that address is not public.
+def _require_public_peer(sock):
+    try:
+        ok = ipaddress.ip_address(sock.getpeername()[0].split("%")[0]).is_global
+    except (OSError, ValueError):
+        ok = False
+    if not ok:
+        sock.close()
+        raise OSError("connected address is not on the public internet; refused")
+
+
+def _public_create_connection(*args, **kwargs):
+    # Runs right after the TCP connect: before TLS, so a private peer gets no bytes at all.
+    sock = socket.create_connection(*args, **kwargs)
+    _require_public_peer(sock)
+    return sock
+
+
+class _PublicHTTPConnection(http.client.HTTPConnection):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self._create_connection = _public_create_connection
+
+
+class _PublicHTTPSConnection(http.client.HTTPSConnection):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self._create_connection = _public_create_connection
+
+
+class _PublicHTTPHandler(urllib.request.HTTPHandler):
+    def http_open(self, req):
+        return self.do_open(_PublicHTTPConnection, req)
+
+
+class _PublicHTTPSHandler(urllib.request.HTTPSHandler):
+    def https_open(self, req):
+        return self.do_open(_PublicHTTPSConnection, req, context=self._context)
+
+
+# ProxyHandler({}): never use a proxy, or the checked peer would be the proxy, not the site.
+_OPENER = urllib.request.build_opener(urllib.request.ProxyHandler({}), _PublicOnlyRedirects, _PublicHTTPHandler,
+                                      _PublicHTTPSHandler(context=ssl.create_default_context()))
 
 
 def check_link(url, year):

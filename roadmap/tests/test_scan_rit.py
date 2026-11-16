@@ -104,6 +104,26 @@ class ParseTests(unittest.TestCase):
                     "file:///etc/passwd", "javascript:alert(1)", "http:///nohost", "", None):
             self.assertFalse(ok(bad), bad)
 
+    def test_a_name_that_does_not_resolve_is_refused(self):
+        self.assertFalse(scan_rit.is_public_url("http://no-such-host.invalid/page"))
+
+    def test_the_connection_itself_refuses_a_private_peer(self):
+        # Even if the name check is fooled (DNS rebinding), the opened connection is checked.
+        import socket
+        srv = socket.socket()
+        srv.bind(("127.0.0.1", 0))
+        srv.listen(8)   # room for both connects: they are never accepted, only queued
+        port = srv.getsockname()[1]
+        try:
+            with self.assertRaises(Exception) as cm:
+                scan_rit._OPENER.open(f"http://127.0.0.1:{port}/", timeout=3)
+            self.assertIn("not on the public internet", str(cm.exception))
+            with self.assertRaises(Exception) as cm:
+                scan_rit._OPENER.open(f"https://127.0.0.1:{port}/", timeout=3)
+            self.assertIn("not on the public internet", str(cm.exception))   # refused before TLS, not a timeout
+        finally:
+            srv.close()
+
     def test_a_link_to_a_private_address_is_never_opened(self):
         r = scan_rit.check_link("http://127.0.0.1:9/never", 2026)
         self.assertEqual(r, {"status": "skipped", "code": None, "words": None})
