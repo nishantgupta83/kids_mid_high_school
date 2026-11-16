@@ -96,11 +96,11 @@
     },
     {
       "id": "evt-seed-006",
-      "dedupe_key": "both|2026-12-21|winter-break-begins",
+      "dedupe_key": "both|2026-12-21|winter-recess-dec-21-jan-4-classes-resume-jan-5-prime-window",
       "kid": "both",
-      "title": "Winter break begins (end date TBC) — prime window for volunteer commitments",
+      "title": "Winter recess Dec 21 – Jan 4 (classes resume Jan 5) — prime window for volunteer commitments",
       "date": "2026-12-21",
-      "end_date": null,
+      "end_date": "2027-01-04",
       "time": null,
       "type": "break",
       "action": null,
@@ -3238,7 +3238,7 @@
         "unverified": true,
         "why": "Middle-school-inclusive speech tournament (novice extemp, prose/poetry, oral interp) close by in Contra Costa County — fits Dhruv's speech & debate interest"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20261005-001",
@@ -3487,7 +3487,7 @@
         "unverified": true,
         "why": "Backup date to the San Ramon qualifier, still inside the Tri-Valley."
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-disc-20261011-005",
@@ -3846,7 +3846,7 @@
         "unverified": true,
         "why": "Same-day competition for teams of up to 6. Late registration runs Oct 19 to Nov 1 at $25 per student, and advanced middle schoolers may compete."
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-disc-20261018-004",
@@ -3865,7 +3865,7 @@
         "unverified": true,
         "why": "A weekend of short classes taught by Stanford students, including bio and medicine topics. Grades 8-12, lottery registration; check whether the lottery is still open."
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-disc-20261018-005",
@@ -4160,11 +4160,11 @@
     },
     {
       "id": "evt-20261026-003",
-      "dedupe_key": "dhruv|2026-11-16|toy-drive-fundraiser-for-sister-school-pine-valley",
+      "dedupe_key": "dhruv|2026-11-16|holiday-toy-drive-for-sister-school-pine-valley-runs-through",
       "kid": "dhruv",
-      "title": "Toy Drive Fundraiser for Sister school (Pine Valley)",
+      "title": "Holiday Toy Drive for sister school (Pine Valley) — runs through Dec 13",
       "date": "2026-11-16",
-      "end_date": "2026-12-14",
+      "end_date": "2026-12-13",
       "time": null,
       "type": "community",
       "action": null,
@@ -4182,7 +4182,7 @@
       "title": "EEC Meeting at Pine Valley",
       "date": "2026-11-17",
       "end_date": null,
-      "time": null,
+      "time": "14:15",
       "type": "school",
       "action": null,
       "source": {
@@ -4473,7 +4473,7 @@
         "unverified": true,
         "why": "Open to grade 12 and below, teams of up to 6. Late registration ($25) closes today, Nov 1; the page does not say whether seats remain."
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-disc-20261101-005",
@@ -4492,7 +4492,7 @@
         "unverified": true,
         "why": "Closest November tournament with middle school in its name. Debate runs Nov 14-15, speech on Nov 15; registration closes Nov 11. No grade rule is stated, so confirm 6th-grade eligibility with the host."
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-disc-20261101-006",
@@ -4511,7 +4511,7 @@
         "unverified": true,
         "why": "Research program for grades 9-12 at $1,070 per semester. The deadline is printed without a year; 2026 is inferred from the homepage's Spring 2027 timeline."
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-disc-20261101-007",
@@ -4870,7 +4870,7 @@
         "ref": "email:01498d96e186",
         "first_seen": "2026-11-09"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20261110-001",
@@ -4996,6 +4996,57 @@
         "kind": "email",
         "ref": "email:becc3f39b83b",
         "first_seen": "2026-11-14"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20261116-001",
+      "dedupe_key": "dhruv|2026-11-18|dine-with-pine-chingu-suprette",
+      "kid": "dhruv",
+      "title": "Dine with Pine (Chingu Suprette)",
+      "date": "2026-11-18",
+      "end_date": null,
+      "time": null,
+      "type": "community",
+      "action": null,
+      "source": {
+        "kind": "email",
+        "ref": "email:ecd211eaabcb",
+        "first_seen": "2026-11-16"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20261116-002",
+      "dedupe_key": "dhruv|2026-11-18|pv-theater-shows-student-performances",
+      "kid": "dhruv",
+      "title": "PV Theater Shows (student performances)",
+      "date": "2026-11-18",
+      "end_date": "2026-11-19",
+      "time": null,
+      "type": "school",
+      "action": null,
+      "source": {
+        "kind": "email",
+        "ref": "email:ecd211eaabcb",
+        "first_seen": "2026-11-16"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20261116-003",
+      "dedupe_key": "dhruv|2026-12-14|toy-drive-delivery-to-parkside-elementary",
+      "kid": "dhruv",
+      "title": "Toy Drive Delivery to Parkside Elementary",
+      "date": "2026-12-14",
+      "end_date": null,
+      "time": null,
+      "type": "community",
+      "action": null,
+      "source": {
+        "kind": "email",
+        "ref": "email:ecd211eaabcb",
+        "first_seen": "2026-11-16"
       },
       "status": "active"
     }
