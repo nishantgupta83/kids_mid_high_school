@@ -4190,7 +4190,7 @@
         "ref": "email:bc8e8adbb3cf",
         "first_seen": "2026-10-26"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20261028-001",
@@ -4530,7 +4530,7 @@
         "unverified": true,
         "why": "Free neuroscience-chemistry talk, 5:30-7 PM, with Zoom as an option. Tagged Adults with no age rule stated."
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-disc-20261101-008",
@@ -4959,7 +4959,7 @@
         "ref": "email:becc3f39b83b",
         "first_seen": "2026-11-14"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20261114-004",
@@ -4997,7 +4997,7 @@
         "ref": "email:becc3f39b83b",
         "first_seen": "2026-11-14"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20261116-001",
@@ -5047,6 +5047,23 @@
         "kind": "email",
         "ref": "email:ecd211eaabcb",
         "first_seen": "2026-11-16"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20261118-001",
+      "dedupe_key": "ridhi|2026-11-18|cal-high-annual-toy-drive-for-sister-school-michelle-obama-e",
+      "kid": "ridhi",
+      "title": "Cal High Annual Toy Drive for sister school (Michelle Obama Elementary, Richmond)",
+      "date": "2026-11-18",
+      "end_date": "2026-12-02",
+      "time": null,
+      "type": "community",
+      "action": null,
+      "source": {
+        "kind": "email",
+        "ref": "email:e8b4e8854b98",
+        "first_seen": "2026-11-18"
       },
       "status": "active"
     }
