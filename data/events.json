@@ -3219,7 +3219,7 @@
         "unverified": true,
         "why": "Free evening talk explicitly on medicine/AI, open to all high schoolers (not just Marin residents) — direct match for Ridhi's bio/medicine interest; worth the drive for a school-night talk"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-disc-20261004-004",
@@ -4549,7 +4549,7 @@
         "unverified": true,
         "why": "Free 7:30 PM talk by a UCSF speaker, tagged for teens and on medicine; the strongest November match for Ridhi despite the school-night drive."
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-disc-20261101-009",
@@ -4781,7 +4781,7 @@
         "ref": "email:1073023b8ee7",
         "first_seen": "2026-11-06"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20261107-001",
@@ -4819,7 +4819,7 @@
         "ref": "email:8174d1555849",
         "first_seen": "2026-11-07"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20261107-003",
@@ -4925,7 +4925,7 @@
         "ref": "email:bb1f0ce0c5e2",
         "first_seen": "2026-11-14"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20261114-002",
@@ -5014,7 +5014,7 @@
         "ref": "email:ecd211eaabcb",
         "first_seen": "2026-11-16"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20261116-002",
@@ -5064,6 +5064,27 @@
         "kind": "email",
         "ref": "email:e8b4e8854b98",
         "first_seen": "2026-11-18"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20261119-001",
+      "dedupe_key": "ridhi|2027-02-26|ap-exam-late-registration-closes-cal-high",
+      "kid": "ridhi",
+      "title": "AP exam late registration closes (Cal High)",
+      "date": "2027-02-26",
+      "end_date": null,
+      "time": null,
+      "type": "deadline",
+      "action": {
+        "required": true,
+        "what": "Check whether Ridhi is registered for the AP World History and AP Calculus AB exams. If not, register during the late registration window (opened 2026-11-16) and read the school's letter for details.",
+        "due": "2027-02-26"
+      },
+      "source": {
+        "kind": "email",
+        "ref": "email:bc590073678a",
+        "first_seen": "2026-11-19"
       },
       "status": "active"
     }
