@@ -1492,7 +1492,7 @@
         "ref": "source:sanramon-teen-service",
         "first_seen": "2026-08-23"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20260823-008",
@@ -3506,7 +3506,7 @@
         "unverified": true,
         "why": "Free weekend hackathon with travel stipends, pitched at 13-18 year olds — a real build-something credential, not a lecture."
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20261012-001",
@@ -4802,7 +4802,7 @@
         "ref": "email:8174d1555849",
         "first_seen": "2026-11-07"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20261107-002",
@@ -4929,9 +4929,9 @@
     },
     {
       "id": "evt-20261114-002",
-      "dedupe_key": "dhruv|2026-12-02|math-olympiad-set-10-olympiad-3-homework-sat-pv3-due",
+      "dedupe_key": "dhruv|2026-12-02|math-olympiad-2-sat-problem-of-the-week-magic-square-challen",
       "kid": "dhruv",
-      "title": "Math Olympiad: Set 10 / Olympiad 3 homework + 'SAT PV3' due",
+      "title": "Math Olympiad: '2 - SAT', Problem of the Week (Magic Square) + Challenge Problem due",
       "date": "2026-12-02",
       "end_date": null,
       "time": null,
@@ -4965,7 +4965,7 @@
       "id": "evt-20261114-004",
       "dedupe_key": "ridhi|2026-11-19|english-10-printed-complete-4-5-paragraph-essay-due-for-peer",
       "kid": "ridhi",
-      "title": "English 10: PRINTED complete 4-5 paragraph essay due for peer review (Checkpoint #3)",
+      "title": "English 10: PRINTED complete 4-5 paragraph essay due for peer review (Checkpoint #4)",
       "date": "2026-11-19",
       "end_date": null,
       "time": null,
@@ -4980,7 +4980,7 @@
         "ref": "email:becc3f39b83b",
         "first_seen": "2026-11-14"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20261114-005",
@@ -5031,7 +5031,7 @@
         "ref": "email:ecd211eaabcb",
         "first_seen": "2026-11-16"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-20261116-003",
@@ -5085,6 +5085,78 @@
         "kind": "email",
         "ref": "email:bc590073678a",
         "first_seen": "2026-11-19"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20261121-001",
+      "dedupe_key": "ridhi|2026-12-07|academic-pressures-student-panel-srvusd-student-senate",
+      "kid": "ridhi",
+      "title": "Academic Pressures Student Panel (SRVUSD Student Senate)",
+      "date": "2026-12-07",
+      "end_date": null,
+      "time": "17:00",
+      "type": "community",
+      "action": {
+        "required": true,
+        "what": "RSVP via the Student Senate Google Form linked in the Cal High update (no RSVP deadline given)",
+        "due": null
+      },
+      "source": {
+        "kind": "email",
+        "ref": "email:9930d6b1f8f4",
+        "first_seen": "2026-11-21"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20261121-002",
+      "dedupe_key": "ridhi|2026-11-30|ap-calculus-ab-hw-u4-3-apc-ced-6-due",
+      "kid": "ridhi",
+      "title": "AP Calculus AB: HW U4#3 APC CED 6 due",
+      "date": "2026-11-30",
+      "end_date": null,
+      "time": null,
+      "type": "homework",
+      "action": null,
+      "source": {
+        "kind": "email",
+        "ref": "email:663f883223d5",
+        "first_seen": "2026-11-21"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20261121-003",
+      "dedupe_key": "dhruv|2026-12-16|science-6-body-systems-unit-project-due",
+      "kid": "dhruv",
+      "title": "Science 6: Body systems unit project due",
+      "date": "2026-12-16",
+      "end_date": null,
+      "time": null,
+      "type": "homework",
+      "action": null,
+      "source": {
+        "kind": "email",
+        "ref": "email:1728cf3c7ec3",
+        "first_seen": "2026-11-21"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-20261121-004",
+      "dedupe_key": "dhruv|2026-12-09|math-olympiad-homework-set-10-olympiad-4-due",
+      "kid": "dhruv",
+      "title": "Math Olympiad: homework Set 10 / Olympiad 4 due",
+      "date": "2026-12-09",
+      "end_date": null,
+      "time": null,
+      "type": "homework",
+      "action": null,
+      "source": {
+        "kind": "email",
+        "ref": "email:1728cf3c7ec3",
+        "first_seen": "2026-11-21"
       },
       "status": "active"
     }
