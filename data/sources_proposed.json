@@ -1052,6 +1052,48 @@
       "found": "2026-11-01-0b60b15b",
       "confidence": "verified",
       "state": "pending"
+    },
+    {
+      "id": "prop-ucdavis-health-equity-academy",
+      "name": "UC Davis Office of Medical Pathways — K-12 Outreach (Health Equity Academy)",
+      "kid": "ridhi",
+      "category": "program",
+      "url": "https://health.ucdavis.edu/med-pathways/k12_outreach.html",
+      "scan_method": "http_diff",
+      "why": "Free health-careers pathway program at UC Davis School of Medicine with posted spring and summer application windows.",
+      "eligibility_note": "Current CA high school student and CA resident, no grade limit stated. Applicants must commit to serving underserved areas of California and attend all six in-person Saturdays at the Sacramento campus (about 1.5 hr drive; families arrange transport). Sacramento-area students are encouraged to apply.",
+      "replaces_source_id": null,
+      "found": "2026-11-22-6818f34c",
+      "confidence": "verified",
+      "state": "pending"
+    },
+    {
+      "id": "prop-dair-catalyst-dublin",
+      "name": "Dublin AI Research (DAIR) — CATALYST 2027 student project conference",
+      "kid": "both",
+      "category": "event",
+      "url": "https://luma.com/bh71a7f5",
+      "scan_method": "http_diff",
+      "why": "Free Tri-Valley (Dublin) conference where Bay Area middle and high school students present AI and tech projects, with prizes. Run by a student group at Dublin High.",
+      "eligibility_note": "Presenters must be Bay Area middle or high school students, so both kids qualify. Anyone may attend. Presenter applications open in January 2027. Event date and venue are still TBA.",
+      "replaces_source_id": null,
+      "found": "2026-11-22-33933f05",
+      "confidence": "verified",
+      "state": "pending"
+    },
+    {
+      "id": "prop-teens-in-health",
+      "name": "Teens in Health — research fellowship, article writing and webinars",
+      "kid": "ridhi",
+      "category": "program",
+      "url": "https://teensinhealth.org/",
+      "scan_method": "manual",
+      "why": "Teen-led nonprofit focused on science research and medical advocacy. Offers a Research Fellowship, publications and webinars, and co-hosted a Bay Area Youth Medical Summit at UC Berkeley.",
+      "eligibility_note": "Aimed at teens. The site does not state grade or region limits. The webinars page (teensinhealth.org/webinars) was last updated in August 2026, so posting is irregular.",
+      "replaces_source_id": null,
+      "found": "2026-11-22-d420c870",
+      "confidence": "verified",
+      "state": "pending"
     }
   ]
 }

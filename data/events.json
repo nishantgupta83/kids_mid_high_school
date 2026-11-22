@@ -4397,7 +4397,7 @@
         "ref": "email:86e8a2500f51",
         "first_seen": "2026-10-31"
       },
-      "status": "active"
+      "status": "expired"
     },
     {
       "id": "evt-disc-20261101-001",
@@ -5157,6 +5157,101 @@
         "kind": "email",
         "ref": "email:1728cf3c7ec3",
         "first_seen": "2026-11-21"
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-disc-20261122-001",
+      "dedupe_key": "ridhi|2026-12-05|mango-hacks-2026-free-one-day-high-school-hackathon",
+      "kid": "ridhi",
+      "title": "Mango Hacks 2026 — free one-day high school hackathon (Ecily / MangoEmbedded (listed on Hack Club",
+      "date": "2026-12-05",
+      "end_date": null,
+      "time": null,
+      "type": "community",
+      "action": null,
+      "source": {
+        "kind": "discovery",
+        "ref": "https://mangohacks.ecily.org/",
+        "first_seen": "2026-11-22",
+        "unverified": true,
+        "why": "Free, beginner-friendly local hackathon with a first-timer prize track. Applications are open."
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-disc-20261122-002",
+      "dedupe_key": "family|2026-12-14|cal-high-ptsa-general-meeting-december",
+      "kid": "family",
+      "title": "Cal High PTSA general meeting (December) (Cal High PTSA",
+      "date": "2026-12-14",
+      "end_date": null,
+      "time": null,
+      "type": "community",
+      "action": null,
+      "source": {
+        "kind": "discovery",
+        "ref": "https://chs.srvusd.net/Community-Resources/PTSA/PTSA-Meetings-and-Events/index.html",
+        "first_seen": "2026-11-22",
+        "unverified": true,
+        "why": "Meetings are held on the second Monday of each month. No 2026-27 dates are posted, so this date is based on that pattern."
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-disc-20261122-003",
+      "dedupe_key": "ridhi|2026-12-16|lawrence-hall-of-science-summer-2027-teen-research-programs",
+      "kid": "ridhi",
+      "title": "Lawrence Hall of Science Summer 2027 Teen Research Programs — public registration opens (Lawrence Hall of Science (UC Berkeley",
+      "date": "2026-12-16",
+      "end_date": null,
+      "time": null,
+      "type": "community",
+      "action": null,
+      "source": {
+        "kind": "discovery",
+        "ref": "https://lawrencehallofscience.org/visitors/teen-research-programs/",
+        "first_seen": "2026-11-22",
+        "unverified": true,
+        "why": "Includes 'Biotech Engineering and Innovations in Genetics' for grades 10-12. Member registration opened on Nov 18, so spots may fill quickly."
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-disc-20261122-004",
+      "dedupe_key": "ridhi|2027-01-19|uc-davis-health-equity-academy-spring-2027-application-deadl",
+      "kid": "ridhi",
+      "title": "UC Davis Health Equity Academy (spring 2027) — application deadline (UC Davis Office of Medical Pathways",
+      "date": "2027-01-19",
+      "end_date": null,
+      "time": null,
+      "type": "community",
+      "action": null,
+      "source": {
+        "kind": "discovery",
+        "ref": "https://health.ucdavis.edu/med-pathways/k12_outreach.html",
+        "first_seen": "2026-11-22",
+        "unverified": true,
+        "why": "Free health-careers program for CA high school students. The application opens 2027-01-05 at 7 a.m. and closes 2027-01-19 at noon."
+      },
+      "status": "active"
+    },
+    {
+      "id": "evt-disc-20261122-005",
+      "dedupe_key": "ridhi|2027-01-23|earth-hacks-2027-sustainability-hackathon",
+      "kid": "ridhi",
+      "title": "Earth Hacks 2027 — sustainability hackathon (CodeStarters",
+      "date": "2027-01-23",
+      "end_date": null,
+      "time": null,
+      "type": "community",
+      "action": null,
+      "source": {
+        "kind": "discovery",
+        "ref": "https://earthhacks.dev/",
+        "first_seen": "2026-11-22",
+        "unverified": true,
+        "why": "One-day, beginner-welcome hackathon for about 200 people. It is just past the 6-week window but worth planning for. Age range and cost are not stated yet."
       },
       "status": "active"
     }
